@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Carnet de révision du CAPES externe de mathématiques à affectation locale à Mayotte, session 2027 : planning, cours, exercices corrigés, QCM et Vrai–Faux.">
+<meta name="theme-color" content="#f0d7a6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#050816" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230f1619'/%3E%3Cpath d='M5 9h22v7h-7.5v7h-7v-7H5z' fill='%23f2b33a'/%3E%3C/svg%3E">
+<title>Carnet Mayotte 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Marcellus&family=Spectral:ital,wght@0,400;0,600;1,400&family=VT323&display=swap">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+  svg: { fontCache: 'global' },
+  startup: { typeset: false }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js" async id="mj"></script>
+<style>
+/* Layout : une scène peinte en fond fixe (ruines antiques au soleil couchant ; la nuit, la même scène devient numérique) avec une tour au loin dont les étages s'allument quand un chapitre est maîtrisé. On lit sur des tablettes de pierre, on s'entraîne sur des terminaux. Colonne centrale de 800 px. */
+:root {
+  --sky-top: #6c95b0;
+  --sky-mid: #b8cdcf;
+  --sky-low: #f0d7a6;
+  --haze: #e4c58e;
+  --sun: #fff3d4;
+  --ruin-far: #c3a67d;
+  --ruin-mid: #8f7254;
+  --ruin-near: #4a3a2b;
+  --rim: #ffd27a;
+  --glow: #f2b33a;
+  --stone: #f3ebda;
+  --stone-2: #e9dcc1;
+  --slot: #cdb894;
+  --stone-edge: #c6ae85;
+  --ink: #2a2118;
+  --muted: #65553f;
+  --gold: #8a5e0d;
+  --cyan: #136775;
+  --engrave: rgba(255, 249, 235, .75);
+  --shadow: rgba(60, 40, 15, .30);
+  --grain-op: .35;
+  --term-bg: #0f1619;
+  --term-fg: #d3ebe3;
+  --term-dim: #89a9a1;
+  --term-hi: #6fdbe9;
+  --sig-green: #4c9a4d;
+  --sig-amber: #d29d1f;
+  --sig-red: #c2563b;
+  --ok: #357534;
+  --ko: #a03b27;
+  --f-display: "Marcellus", "Trajan Pro", "Palatino Linotype", Georgia, serif;
+  --f-body: "Spectral", Georgia, "Times New Roman", serif;
+  --f-term: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --f-pixel: "VT323", "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sky-top: #050816; --sky-mid: #0f152b; --sky-low: #272241; --haze: #33283f; --sun: #d8ecff;
+    --ruin-far: #1b1f33; --ruin-mid: #121525; --ruin-near: #080a12; --rim: #4fc6d8; --glow: #67e0ee;
+    --stone: #181a21; --stone-2: #1f222b; --slot: #313646; --stone-edge: #363b48; --ink: #ece3d2; --muted: #a99f8c;
+    --gold: #e2b862; --cyan: #6ad4e4; --engrave: rgba(0, 0, 0, .7); --shadow: rgba(0, 0, 0, .6); --grain-op: .22;
+    --term-bg: #05090b; --term-fg: #c4f1e4; --term-dim: #6f9b92; --term-hi: #7ff0fb;
+    --sig-green: #6acb67; --sig-amber: #f2c14b; --sig-red: #f07c5f; --ok: #82d27c; --ko: #f08e76;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --sky-top: #050816; --sky-mid: #0f152b; --sky-low: #272241; --haze: #33283f; --sun: #d8ecff;
+  --ruin-far: #1b1f33; --ruin-mid: #121525; --ruin-near: #080a12; --rim: #4fc6d8; --glow: #67e0ee;
+  --stone: #181a21; --stone-2: #1f222b; --slot: #313646; --stone-edge: #363b48; --ink: #ece3d2; --muted: #a99f8c;
+  --gold: #e2b862; --cyan: #6ad4e4; --engrave: rgba(0, 0, 0, .7); --shadow: rgba(0, 0, 0, .6); --grain-op: .22;
+  --term-bg: #05090b; --term-fg: #c4f1e4; --term-dim: #6f9b92; --term-hi: #7ff0fb;
+  --sig-green: #6acb67; --sig-amber: #f2c14b; --sig-red: #f07c5f; --ok: #82d27c; --ko: #f08e76;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--sky-low); color: var(--ink); font-family: var(--f-body); font-size: 18px; line-height: 1.6; }
+[hidden] { display: none !important; }
+p { margin: 0; }
+a { color: var(--cyan); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+#scene { position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: 0; display: block; pointer-events: none; }
+.wrap { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding-inline: 16px; padding-block: 0 72px; }
+
+/* En-tête : le titre gravé dans le ciel, les compteurs comme de petits écrans */
+.hero { display: grid; gap: 16px; padding-block: 26px 30px; }
+.hero-top { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.eyebrow { font-family: var(--f-display); text-transform: uppercase; letter-spacing: .14em; font-size: 13px; line-height: 1.45; color: var(--muted); }
+.hero .eyebrow { color: var(--ink); }
+h1 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(42px, 9.5vw, 80px); line-height: .98; letter-spacing: .015em; text-wrap: balance; text-shadow: 0 1px 0 var(--engrave), 0 0 34px var(--sky-low); }
+.motto { font-family: var(--f-display); text-transform: uppercase; letter-spacing: .42em; font-size: 12.5px; color: var(--ink); }
+.readouts { display: flex; flex-wrap: wrap; gap: 10px; }
+.readout b + span { max-width: 22ch; }
+.readout { display: grid; gap: 3px; min-width: 0; padding: 7px 12px 8px; background: var(--term-bg); color: var(--term-fg); border: 1px solid color-mix(in srgb, var(--term-hi) 40%, transparent); border-radius: 3px; box-shadow: 0 0 22px -8px var(--term-hi); }
+.readout b { font-family: var(--f-pixel); font-weight: 400; font-size: 31px; line-height: 1; color: var(--term-hi); font-variant-numeric: tabular-nums; }
+.readout span { font-family: var(--f-term); font-size: 12px; line-height: 1.35; color: var(--term-dim); }
+.readout.warn b { color: var(--sig-amber); }
+.themer { flex: 0 0 auto; font-family: var(--f-pixel); font-size: 20px; line-height: 1; color: var(--term-fg); background: var(--term-bg); border: 1px solid color-mix(in srgb, var(--term-hi) 40%, transparent); border-radius: 3px; padding: 6px 12px; cursor: pointer; }
+.themer:hover { color: var(--term-hi); }
+
+/* Onglets : un bandeau de pierre qui reste en haut */
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin-block: 0 22px; padding: 5px; background: var(--stone); border: 1px solid var(--stone-edge); border-radius: 3px; box-shadow: inset 0 1px 0 var(--engrave), 0 12px 28px -18px var(--shadow); }
+nav.tabs::-webkit-scrollbar { display: none; }
+nav.tabs button { flex: 0 0 auto; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .1em; font-size: 14px; color: var(--muted); background: none; border: 0; border-radius: 2px; padding: 9px 12px; cursor: pointer; white-space: nowrap; }
+nav.tabs button:hover { color: var(--ink); }
+nav.tabs button[aria-selected="true"] { color: var(--ink); background: var(--stone-2); box-shadow: inset 0 -2px 0 var(--gold); }
+
+/* Tablettes de pierre */
+section.panel { display: grid; gap: 20px; }
+.tablet { position: relative; isolation: isolate; display: grid; gap: 14px; min-width: 0; padding: 22px 24px 24px; background: var(--stone); border: 1px solid var(--stone-edge); border-radius: 3px; box-shadow: inset 0 1px 0 var(--engrave), 0 22px 40px -26px var(--shadow); }
+.tablet::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none; opacity: var(--grain-op); mix-blend-mode: soft-light; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .24 0 0 0 1.1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+.head { display: grid; gap: 6px; min-width: 0; }
+h2 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(28px, 5.4vw, 38px); line-height: 1.12; letter-spacing: .01em; text-wrap: balance; text-shadow: 0 1px 0 var(--engrave); }
+h3 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: 23px; line-height: 1.25; text-wrap: balance; }
+.rn { color: var(--gold); margin-right: .4em; }
+.lead { color: var(--muted); max-width: 62ch; }
+.muted { color: var(--muted); font-size: 16px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.btn { font-family: var(--f-display); text-transform: uppercase; letter-spacing: .1em; font-size: 14px; line-height: 1.2; color: var(--stone); background: var(--ink); border: 1px solid var(--ink); border-radius: 2px; padding: 11px 18px; cursor: pointer; }
+.btn:hover { background: var(--gold); border-color: var(--gold); }
+.btn.ghost { color: var(--ink); background: var(--stone); border-color: var(--stone-edge); }
+.btn.ghost:hover { color: var(--gold); border-color: var(--gold); }
+
+/* Cours */
+.toc { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; font-size: 16px; }
+.toc a { color: var(--ink); text-decoration-color: var(--stone-edge); text-underline-offset: 4px; }
+.toc a:hover { color: var(--gold); }
+.notion, .exo { scroll-margin-top: 84px; }
+.box { min-width: 0; overflow-x: auto; padding: 12px 16px; border-radius: 2px; }
+.box .tag { display: block; margin-bottom: 4px; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .12em; font-size: 12.5px; color: var(--gold); }
+.box.def { background: var(--stone-2); border: 1px solid var(--stone-edge); }
+.box.thm { background: var(--stone-2); border-block: 3px double var(--stone-edge); }
+.box.ex { border: 1px dashed var(--stone-edge); }
+table.tv { border-collapse: collapse; margin-top: 8px; font-family: var(--f-term); font-size: 15px; }
+table.tv th, table.tv td { border: 1px solid var(--stone-edge); padding: 3px 14px; text-align: center; }
+table.tv td.f { color: var(--ko); font-weight: 500; }
+
+/* Exercices et sigils */
+.exo-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; }
+.sig { flex: 0 0 auto; width: 46px; height: 46px; overflow: visible; }
+details.sol { border-top: 1px solid var(--stone-edge); padding-top: 10px; }
+details.sol summary { cursor: pointer; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .1em; font-size: 13.5px; color: var(--cyan); }
+details.sol > div { display: grid; gap: 10px; padding-top: 10px; }
+.retenir { padding: 10px 14px; background: var(--stone-2); border-block: 3px double var(--stone-edge); font-style: italic; }
+.retenir b { margin-right: .5em; font-family: var(--f-display); font-style: normal; font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: 13.5px; color: var(--gold); }
+.done { display: inline-flex; align-items: center; gap: 10px; width: fit-content; font-size: 16px; color: var(--muted); cursor: pointer; }
+.done input { width: 20px; height: 20px; margin: 0; accent-color: var(--sig-green); }
+.exo.got .done { color: var(--ink); }
+.pc { fill: var(--slot); transition: fill .4s; }
+.pc.on { fill: var(--sig, var(--sig-green)); filter: url(#sig-glow); }
+.pc.just { animation: collect .7s ease-out; transform-box: fill-box; transform-origin: center; }
+@keyframes collect { 0% { transform: scale(.55); opacity: .1; } 60% { transform: scale(1.12); opacity: 1; } 100% { transform: scale(1); } }
+
+/* La porte du chapitre */
+.gate-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+.tally { display: flex; align-items: center; gap: 8px; font-family: var(--f-pixel); font-size: 30px; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.tally small { font-family: var(--f-display); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.star { width: 28px; height: 28px; overflow: visible; }
+.star path { fill: var(--slot); }
+.star.on path { fill: var(--glow); filter: url(#sig-glow); }
+.doorway { position: relative; display: grid; place-items: center; padding: 22px 14px 20px; background: var(--stone-2); border: 1px solid var(--stone-edge); border-radius: 2px; box-shadow: inset 0 3px 12px var(--shadow); overflow: hidden; }
+.doorway::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .8s; background: radial-gradient(60% 90% at 50% 50%, color-mix(in srgb, var(--glow) 30%, transparent), transparent 70%); }
+.gate-card.open .doorway::after { opacity: 1; }
+svg.gate { display: block; width: 100%; max-width: 460px; height: auto; overflow: visible; }
+.gate .pc { cursor: pointer; }
+.gate .pc:hover { fill: color-mix(in srgb, var(--slot) 70%, var(--sig, var(--sig-green))); }
+.gate .pc.on:hover { fill: var(--sig, var(--sig-green)); }
+.gate .pc:focus-visible { outline: none; stroke: var(--cyan); stroke-width: 2; }
+.open-msg { font-family: var(--f-display); letter-spacing: .04em; color: var(--gold); }
+
+/* L'ascension : le planning comme les étages d'une tour */
+.floors { display: grid; margin: 0; padding: 0; list-style: none; }
+.phase { display: flex; align-items: baseline; gap: 2px; padding: 18px 0 8px; border-bottom: 1px solid var(--stone-edge); font-family: var(--f-display); font-size: 19px; line-height: 1.3; }
+.phase .rn { font-size: 25px; }
+.floor { position: relative; display: grid; grid-template-columns: 52px 126px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 9px 6px 9px 24px; border-bottom: 1px solid color-mix(in srgb, var(--stone-edge) 55%, transparent); font-size: 16.5px; line-height: 1.45; }
+.floor::before { content: ""; position: absolute; left: 6px; top: 50%; width: 9px; height: 9px; margin-top: -4.5px; transform: rotate(45deg); border: 1px solid var(--stone-edge); background: var(--stone); }
+.floor.lit::before { background: var(--glow); border-color: var(--glow); box-shadow: 0 0 8px var(--glow); }
+.floor.now { background: color-mix(in srgb, var(--glow) 13%, transparent); }
+.floor.now::before { background: var(--cyan); border-color: var(--cyan); animation: beacon 2.4s ease-in-out infinite; }
+@keyframes beacon { 50% { box-shadow: 0 0 0 5px color-mix(in srgb, var(--cyan) 25%, transparent); } }
+.floor .w { font-family: var(--f-pixel); font-size: 22px; line-height: 1; color: var(--muted); }
+.floor.now .w { color: var(--ink); }
+.floor .d { font-size: 15px; color: var(--muted); }
+.pill { display: inline-block; margin-left: 4px; padding: 0 8px; border: 1px solid var(--stone-edge); border-radius: 99px; font-family: var(--f-term); font-size: 12px; line-height: 1.7; vertical-align: 2px; white-space: nowrap; color: var(--muted); }
+.pill.live { border-color: var(--cyan); color: var(--cyan); }
+.pill.lit { border-color: var(--gold); color: var(--gold); }
+
+/* Terminaux */
+.term { position: relative; overflow: hidden; min-width: 0; background: var(--term-bg); color: var(--term-fg); font-family: var(--f-term); font-size: 16px; line-height: 1.6; border: 1px solid color-mix(in srgb, var(--term-hi) 35%, transparent); border-radius: 4px; box-shadow: 0 0 34px -12px var(--term-hi), 0 26px 40px -24px var(--shadow); }
+.term::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, color-mix(in srgb, var(--term-fg) 5%, transparent) 0 1px, transparent 1px 3px); }
+.term-bar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; padding: 8px 16px; border-bottom: 1px dashed color-mix(in srgb, var(--term-dim) 60%, transparent); font-family: var(--f-pixel); font-size: 21px; line-height: 1.1; color: var(--term-dim); }
+.term-bar b { font-weight: 400; color: var(--term-hi); }
+.term-body { display: grid; gap: 14px; min-width: 0; padding: 18px 16px 20px; }
+.dim { color: var(--term-dim); }
+.qtext { font-size: 18px; line-height: 1.55; overflow-x: auto; }
+.opts { display: grid; gap: 6px; }
+.opt { display: flex; align-items: baseline; gap: 12px; width: 100%; min-width: 0; padding: 7px 10px; text-align: left; font: inherit; color: var(--term-fg); background: transparent; border: 1px solid transparent; border-radius: 3px; cursor: pointer; }
+.opt .k { flex: 0 0 auto; font-family: var(--f-pixel); font-size: 22px; line-height: 1; color: var(--term-hi); }
+.opt > span:last-child { min-width: 0; overflow-x: auto; }
+.opt:hover:not(:disabled) { border-color: color-mix(in srgb, var(--term-dim) 70%, transparent); background: color-mix(in srgb, var(--term-fg) 6%, transparent); }
+.opt:disabled { cursor: default; }
+.opt.good { border-color: var(--sig-green); background: color-mix(in srgb, var(--sig-green) 20%, transparent); }
+.opt.bad { border-color: var(--sig-red); background: color-mix(in srgb, var(--sig-red) 20%, transparent); }
+.opt.inline { width: auto; padding-inline: 14px; }
+.out { padding-left: 12px; border-left: 2px solid var(--term-hi); overflow-x: auto; }
+.out b { color: var(--term-hi); font-weight: 500; }
+.tbtn { font-family: var(--f-pixel); font-size: 22px; line-height: 1; color: var(--term-hi); background: transparent; border: 1px solid var(--term-hi); border-radius: 3px; padding: 6px 14px; cursor: pointer; }
+.tbtn:hover { background: color-mix(in srgb, var(--term-hi) 16%, transparent); }
+.cursor { display: inline-block; width: .55em; height: 1.05em; margin-left: 8px; vertical-align: -3px; background: var(--term-hi); animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.big { font-family: var(--f-pixel); font-size: 68px; line-height: 1; color: var(--term-hi); }
+.keys { font-size: 15px; color: var(--muted); }
+kbd { font-family: var(--f-term); font-size: 12.5px; padding: 1px 6px; color: var(--ink); background: var(--stone-2); border: 1px solid var(--stone-edge); border-bottom-width: 2px; border-radius: 3px; }
+
+/* Fiche */
+ul.glyphs { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+ul.glyphs li { position: relative; padding-left: 24px; }
+ul.glyphs li::before { content: ""; position: absolute; left: 3px; top: .62em; width: 8px; height: 8px; transform: rotate(45deg); background: var(--gold); }
+
+footer.plate { margin-top: 28px; padding: 12px 16px; font-size: 14.5px; line-height: 1.5; color: var(--muted); background: var(--stone); border: 1px solid var(--stone-edge); border-radius: 3px; }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 20; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); padding: 10px 16px; font-family: var(--f-term); font-size: 15px; color: var(--term-fg); background: var(--term-bg); border: 1px solid var(--term-hi); border-radius: 4px; box-shadow: 0 0 26px -6px var(--term-hi); }
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+
+@media (max-width: 560px) {
+  .tablet { padding: 18px 16px 20px; }
+  .readouts { display: grid; grid-template-columns: 1fr 1fr; }
+  .floor { grid-template-columns: 46px minmax(0, 1fr); }
+  .floor .c { grid-column: 1 / -1; }
+  .term-body { padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="sig-glow" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>
+<canvas id="scene" aria-hidden="true"></canvas>
+<script>
+try { var t0 = localStorage.getItem("carnet-mayotte-2027-theme"); if (t0 === "dark" || t0 === "light") document.documentElement.setAttribute("data-theme", t0); } catch (e) {}
+</script>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-top">
+      <span class="eyebrow">CAPES externe de mathématiques · affectation locale à Mayotte</span>
+      <button class="themer" id="themer" type="button">Nuit</button>
+    </div>
+    <h1>Carnet Mayotte 2027</h1>
+    <p class="motto" title="Par des chemins ardus jusqu’aux étoiles">Per aspera ad astra</p>
+    <div class="readouts" id="readouts"></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections du carnet">
+    <button role="tab" id="tab-accueil" aria-controls="accueil" aria-selected="true">Planning</button>
+    <button role="tab" id="tab-cours" aria-controls="cours" aria-selected="false">Cours</button>
+    <button role="tab" id="tab-exos" aria-controls="exos" aria-selected="false">Exercices</button>
+    <button role="tab" id="tab-qcm" aria-controls="qcm" aria-selected="false">QCM</button>
+    <button role="tab" id="tab-vf" aria-controls="vf" aria-selected="false">Vrai–Faux</button>
+    <button role="tab" id="tab-fiche" aria-controls="fiche" aria-selected="false">Fiche</button>
+  </nav>
+
+  <section class="panel" id="accueil" role="tabpanel" aria-labelledby="tab-accueil"></section>
+  <section class="panel" id="cours" role="tabpanel" aria-labelledby="tab-cours" hidden></section>
+  <section class="panel" id="exos" role="tabpanel" aria-labelledby="tab-exos" hidden></section>
+  <section class="panel" id="qcm" role="tabpanel" aria-labelledby="tab-qcm" hidden></section>
+  <section class="panel" id="vf" role="tabpanel" aria-labelledby="tab-vf" hidden></section>
+  <section class="panel" id="fiche" role="tabpanel" aria-labelledby="tab-fiche" hidden></section>
+
+  <footer class="plate">Sources : sujets et rapports de jury 2021–2026 (capes-math.org, devenirenseignant.gouv.fr). Ta progression est enregistrée dans ce navigateur uniquement.</footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script>
+/* ============ Données ============ */
+const EXAM = new Date(2027, 3, 1);
+const INSCR = new Date(2026, 10, 25, 12);
+const START = new Date(2026, 9, 12);
+
+const PLANNING = [
+  ["Les fondations · Seconde et Première"],
+  [1, "12–18 oct.", "Calcul et logique : implication, quantificateurs, puissances, racines, inégalités", "ch1"],
+  [2, "19–25 oct.", "Second degré : forme canonique, discriminant, signe"],
+  [3, "26 oct.–1er nov.", "Arithmétique 1 : divisibilité, division euclidienne, premiers, PGCD"],
+  [4, "2–8 nov.", "Suites 1 : arithmétiques, géométriques, variations, sommes"],
+  [5, "9–15 nov.", "Dérivation : tangente, dérivées usuelles, variations"],
+  [6, "16–22 nov.", "Fonction exponentielle · point d’étape 1"],
+  [7, "23–29 nov.", "Vecteurs, géométrie repérée, produit scalaire"],
+  [8, "30 nov.–6 déc.", "Probabilités 1 et statistiques"],
+  ["Le programme de Terminale"],
+  [9, "7–13 déc.", "Récurrence et suites 2 : limites, suites monotones"],
+  [10, "14–20 déc.", "Limites, continuité, TVI · point d’étape 2"],
+  [11, "21–27 déc.", "Vacances : reprise des fiches, Vrai–Faux 2021"],
+  [12, "28 déc.–3 janv.", "Convexité et logarithme népérien"],
+  [13, "4–10 janv.", "Primitives et intégrales · début de l’oral"],
+  [14, "11–17 janv.", "Équations différentielles"],
+  [15, "18–24 janv.", "Espace 1 : droites, plans, positions · point d’étape 3"],
+  [16, "25–31 janv.", "Espace 2 : vecteur normal, projeté, distances"],
+  [17, "1er–7 févr.", "Arithmétique 2 : congruences, Bézout, Gauss, diophantiennes"],
+  [18, "8–14 févr.", "Nombres complexes"],
+  ["Les sujets en conditions réelles"],
+  [19, "15–21 févr.", "Probabilités 2 : dénombrement, loi binomiale · point d’étape 4"],
+  [20, "22–28 févr.", "Algorithmique Python, trigonométrie, configurations"],
+  [21, "1er–7 mars", "Sujets officiels 2023 en 5 h"],
+  [22, "8–14 mars", "Sujets 2024"],
+  [23, "15–21 mars", "Sujets 2025"],
+  [24, "22–28 mars", "Sujets 2026, fiches finales"],
+  [25, "29 mars–2 avr.", "Révisions légères · écrits le 1er et le 2 avril"],
+  ["Le sommet : l’oral"],
+  ["26+", "avril–juin", "44 leçons, simulations d’exposé, préparation de l’entretien"]
+];
+
+const CHAPITRES = [{
+  id: "ch1",
+  n: 1,
+  sig: "--sig-green",
+  porte: ["AACCCFFFFJJ", "ABDCEGGHHKJ", "ABDDEGHHIKJ", "BBDEEGIIIKK"],
+  titre: "Calcul et logique",
+  semaine: "Semaine 1",
+  objectif: String.raw`Rédiger une implication, nier une phrase avec quantificateurs, et calculer sans faute sur les fractions, puissances, racines et inégalités.`,
+  notions: [
+    { titre: "Propositions et implication", html: String.raw`
+      <div class="box def"><span class="tag">Définition</span>Une <b>proposition</b> est une phrase mathématique soit vraie, soit fausse. « \(7\) est premier » est vraie ; « \(4 > 5\) » est fausse.</div>
+      <div class="box def"><span class="tag">Définition · implication</span>« \(P \Rightarrow Q\) » (si \(P\), alors \(Q\)) est <b>fausse dans un seul cas</b> : \(P\) vraie et \(Q\) fausse.
+        <table class="tv"><tr><th>P</th><th>Q</th><th>P ⇒ Q</th></tr><tr><td>V</td><td>V</td><td>V</td></tr><tr><td>V</td><td>F</td><td class="f">F</td></tr><tr><td>F</td><td>V</td><td>V</td></tr><tr><td>F</td><td>F</td><td>V</td></tr></table></div>
+      <div class="box ex"><span class="tag">Exemple concret</span>« S’il pleut, je prends mon parapluie. » Je ne mens que s’il pleut <i>et</i> que je n’ai pas de parapluie. S’il ne pleut pas, la promesse tient, quoi que je fasse.</div>
+      <div class="box def"><span class="tag">Réciproque et contraposée</span>La <b>réciproque</b> de \(P \Rightarrow Q\) est \(Q \Rightarrow P\) : aucun lien de vérité. La <b>contraposée</b> est \(\text{non}\,Q \Rightarrow \text{non}\,P\) : toujours équivalente à la phrase de départ.</div>
+      <div class="box ex"><span class="tag">Exemple</span>« Si \(x = 2\), alors \(x^2 = 4\) » est vraie. Sa réciproque est fausse (\(x = -2\)). Sa contraposée « si \(x^2 \neq 4\), alors \(x \neq 2\) » est vraie.</div>` },
+    { titre: "Quantificateurs et négation", html: String.raw`
+      <div class="box def"><span class="tag">Définition</span>\(\forall\) : « pour tout » (chaque élément). \(\exists\) : « il existe » (au moins un élément).</div>
+      <div class="box thm"><span class="tag">Règles de négation</span>
+        non(\(\forall x,\ P(x)\)) ≡ \(\exists x,\ \text{non}\,P(x)\)<br>
+        non(\(\exists x,\ P(x)\)) ≡ \(\forall x,\ \text{non}\,P(x)\)<br>
+        non(\(P\) et \(Q\)) ≡ (non \(P\)) ou (non \(Q\))<br>
+        non(\(P \Rightarrow Q\)) ≡ \(P\) et non \(Q\)<br>
+        non(\(a < b\)) ≡ \(a \geqslant b\)</div>
+      <div class="box ex"><span class="tag">Exemple concret</span>« Tous les élèves ont rendu leur devoir » a pour négation « <i>au moins un</i> élève n’a pas rendu son devoir », et non « aucun élève ne l’a rendu ».</div>
+      <div class="box ex"><span class="tag">L’ordre compte</span>« \(\forall x \in \mathbb{R},\ \exists y \in \mathbb{R},\ y > x\) » est vraie (\(y = x + 1\)). « \(\exists y \in \mathbb{R},\ \forall x \in \mathbb{R},\ y > x\) » est fausse.</div>` },
+    { titre: "Les types de raisonnement", html: String.raw`
+      <div class="box thm"><span class="tag">Méthode · choisir son raisonnement</span>
+        <b>Direct</b> : de \(P\) à \(Q\) par déductions.<br>
+        <b>Contraposée</b> : quand « non \(Q \Rightarrow\) non \(P\) » est plus simple.<br>
+        <b>Absurde</b> : supposer le contraire et trouver une contradiction.<br>
+        <b>Contre-exemple</b> : pour montrer qu’un « pour tout » est faux.<br>
+        <b>Disjonction de cas</b> : pair/impair, \(x \geqslant 0\) ou \(x < 0\)…</div>
+      <div class="box thm"><span class="tag">Théorème · à savoir refaire</span>\(\sqrt{2}\) est irrationnel.<br>
+        <i>Démonstration.</i> Supposons \(\sqrt{2} = \frac{p}{q}\), fraction irréductible. Alors \(p^2 = 2q^2\) : \(p^2\) est pair donc \(p\) est pair, \(p = 2k\). Puis \(4k^2 = 2q^2\), soit \(q^2 = 2k^2\) : \(q\) est pair. \(p\) et \(q\) sont divisibles par \(2\) : contradiction avec l’irréductibilité.</div>` },
+    { titre: "Fractions, puissances, racines", html: String.raw`
+      <div class="box thm"><span class="tag">Règles de calcul</span>\[a^m a^n = a^{m+n},\quad \frac{a^m}{a^n} = a^{m-n},\quad (a^m)^n = a^{mn},\quad a^{-n} = \frac{1}{a^n}\]
+        Pour \(a, b \geqslant 0\) : \(\sqrt{ab} = \sqrt{a}\sqrt{b}\). Pour tout réel \(x\) : \(\sqrt{x^2} = |x|\).</div>
+      <div class="box ex"><span class="tag">Piège classique</span>\(\sqrt{a+b} \neq \sqrt{a} + \sqrt{b}\) : \(\sqrt{9+16} = 5\) mais \(\sqrt{9} + \sqrt{16} = 7\). De même \((a+b)^2 \neq a^2 + b^2\).</div>
+      <div class="box thm"><span class="tag">Identités remarquables</span>\[(a+b)^2 = a^2 + 2ab + b^2,\quad (a-b)^2 = a^2 - 2ab + b^2,\quad (a+b)(a-b) = a^2 - b^2\]</div>` },
+    { titre: "Inégalités et valeur absolue", html: String.raw`
+      <div class="box thm"><span class="tag">Règles · si \(a \leqslant b\)</span>
+        \(a + c \leqslant b + c\).<br>
+        Multiplier par \(c > 0\) conserve le sens ; par \(c < 0\), <b>il change</b>.<br>
+        On additionne deux inégalités de même sens, on ne les soustrait pas.<br>
+        Si \(0 \leqslant a \leqslant b\), alors \(a^2 \leqslant b^2\). Si \(0 < a \leqslant b\), alors \(\frac{1}{a} \geqslant \frac{1}{b}\).</div>
+      <div class="box def"><span class="tag">Valeur absolue</span>\(|x| = x\) si \(x \geqslant 0\), \(|x| = -x\) sinon. \(|x - a|\) est la distance entre \(x\) et \(a\) : \(|x - 3| \leqslant 2 \iff x \in [1;5]\).</div>
+      <div class="box thm"><span class="tag">Méthode · comparer A et B</span>Étudier le signe de \(A - B\) : factoriser, puis tableau de signes.</div>` }
+  ],
+  exercices: [
+    { titre: "Réciproque et contre-exemple", source: "", enonce: String.raw`Dire si chaque phrase est vraie, puis étudier sa réciproque. a) Pour tout réel \(x\), si \(x > 3\) alors \(x^2 > 9\). b) Pour tout entier \(n\), si \(6\) divise \(n\) alors \(3\) divise \(n\).`,
+      corrige: String.raw`a) Vraie : \(x > 3 > 0\) et la fonction carré est croissante sur \([0;+\infty[\), donc \(x^2 > 9\). Réciproque fausse : \(x = -4\) donne \(x^2 = 16 > 9\) mais \(-4 < 3\).<br>b) Vraie : \(n = 6k = 3(2k)\). Réciproque fausse : \(n = 3\).`,
+      retenir: "Une implication vraie peut avoir une réciproque fausse. Un seul contre-exemple suffit." },
+    { titre: "Nier avec deux quantificateurs", source: "Question 4 du diagnostic", enonce: String.raw`Écrire la négation de « pour tout réel \(x\), il existe un entier \(n\) tel que \(n > x\) ». Laquelle est vraie ?`,
+      corrige: String.raw`Phrase : \(\forall x \in \mathbb{R},\ \exists n \in \mathbb{Z},\ n > x\). Négation : \(\exists x \in \mathbb{R},\ \forall n \in \mathbb{Z},\ n \leqslant x\). La phrase de départ est vraie : \(n = \lfloor x \rfloor + 1\) convient. Sa négation est fausse.`,
+      retenir: "On échange ∀ et ∃ sans changer leur ordre, puis on nie la fin : > devient ⩽." },
+    { titre: "Pour tout ou il existe", source: "", enonce: String.raw`Nier, puis dire laquelle est vraie : a) \(\forall n \in \mathbb{N},\ n^2 \geqslant n\). b) \(\exists x \in \mathbb{R},\ x^2 + 1 = 0\).`,
+      corrige: String.raw`a) Négation : \(\exists n \in \mathbb{N},\ n^2 < n\). Le départ est vrai : pour \(n \geqslant 1\), \(n^2 = n \times n \geqslant n\) ; et \(0 \geqslant 0\).<br>b) Négation : \(\forall x,\ x^2 + 1 \neq 0\). C’est elle qui est vraie : \(x^2 + 1 \geqslant 1\).`,
+      retenir: "Un « pour tout » se prouve par un raisonnement général ; un « il existe » par un exemple." },
+    { titre: "n impair ⇒ n² impair", source: "Question 5 du diagnostic", enonce: String.raw`Démontrer que si \(n\) est un entier impair, alors \(n^2\) est impair.`,
+      corrige: String.raw`Il existe \(k \in \mathbb{Z}\) tel que \(n = 2k + 1\). Alors \(n^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\), avec \(2k^2 + 2k\) entier : \(n^2\) est impair.`,
+      retenir: "Pair : n = 2k. Impair : n = 2k + 1, avec « il existe un entier k tel que »." },
+    { titre: "Contraposée", source: "", enonce: String.raw`Démontrer que si \(n^2\) est pair, alors \(n\) est pair.`,
+      corrige: String.raw`Contraposée : « si \(n\) est impair, alors \(n^2\) est impair », démontrée à l’exercice 4. Les deux énoncés sont équivalents.`,
+      retenir: "Quand la conclusion est difficile à atteindre, on retourne la phrase." },
+    { titre: "Disjonction de cas", source: "", enonce: String.raw`Démontrer que pour tout entier \(n\), \(n(n+1)\) est pair.`,
+      corrige: String.raw`Si \(n = 2k\) : \(n(n+1) = 2\,k(2k+1)\). Si \(n = 2k+1\) : \(n + 1 = 2(k+1)\) et \(n(n+1) = 2\,(2k+1)(k+1)\). Dans tous les cas, c’est pair.`,
+      retenir: "De deux entiers consécutifs, l’un est pair." },
+    { titre: "Fractions, puissances, racines", source: "Question 1 du diagnostic", enonce: String.raw`Simplifier \(A = \frac{2}{3} - \frac{3}{4} \times \frac{2}{9}\), \(B = \frac{2^5 \times 6^{-2}}{4^3 \times 3^{-1}}\), \(C = \sqrt{50} - 3\sqrt{8} + \sqrt{18}\).`,
+      corrige: String.raw`\(A = \frac{4}{6} - \frac{1}{6} = \frac{1}{2}\).<br>\(B = \frac{2^5 \cdot 2^{-2} \cdot 3^{-2}}{2^6 \cdot 3^{-1}} = 2^{-3} \cdot 3^{-1} = \frac{1}{24}\).<br>\(C = 5\sqrt{2} - 6\sqrt{2} + 3\sqrt{2} = 2\sqrt{2}\).`,
+      retenir: "Puissances : tout en nombres premiers. Racines : sortir les carrés parfaits." },
+    { titre: "Expression conjuguée", source: "", enonce: String.raw`Écrire \(\frac{1}{\sqrt{3} - 1}\) sans racine au dénominateur.`,
+      corrige: String.raw`\(\frac{1}{\sqrt{3}-1} = \frac{\sqrt{3}+1}{(\sqrt{3}-1)(\sqrt{3}+1)} = \frac{\sqrt{3}+1}{2}\).`,
+      retenir: "(√a − b)(√a + b) = a − b² fait disparaître la racine." },
+    { titre: "Pourcentages successifs", source: "Vrai–Faux 2026, question 1", enonce: String.raw`Un prix augmente de \(20\,\%\) puis baisse de \(20\,\%\) : évolution globale ? Avec \(+19\,\%\) par an pendant 4 ans, a-t-il plus que doublé ?`,
+      corrige: String.raw`\(1{,}2 \times 0{,}8 = 0{,}96\) : baisse de \(4\,\%\).<br>\(1{,}19^2 = 1{,}4161\) et \(1{,}4161^2 \approx 2{,}005 > 2\) : oui, de peu.`,
+      retenir: "Les pourcentages successifs se multiplient." },
+    { titre: "Inégalités piégées", source: "Vrai–Faux 2026, questions 5 et 6", enonce: String.raw`Vrai ou faux ? a) Les réels tels que \(4 \leqslant x^2 \leqslant 9\) sont ceux de \([2;3]\). b) Pour \(a, b\) non nuls, si \(a \geqslant 2b\) alors \(a^2 \geqslant 2ab\).`,
+      corrige: String.raw`a) Faux : \(x = -2{,}5\) convient. L’ensemble est \([-3;-2] \cup [2;3]\).<br>b) Faux : \(a = b = -2\) donne \(a \geqslant 2b\), mais \(a^2 = 4 < 8 = 2ab\). Multiplier par \(a < 0\) change le sens.`,
+      retenir: "Vérifier le signe du multiplicateur. Penser aux négatifs pour un contre-exemple." },
+    { titre: "Un carré est positif", source: "", enonce: String.raw`Démontrer que \(a^2 + b^2 \geqslant 2ab\), puis que \(x + \frac{1}{x} \geqslant 2\) pour \(x > 0\).`,
+      corrige: String.raw`\(a^2 + b^2 - 2ab = (a-b)^2 \geqslant 0\).<br>\(x + \frac{1}{x} - 2 = \frac{(x-1)^2}{x} \geqslant 0\) car \(x > 0\).`,
+      retenir: "Beaucoup d’inégalités viennent d’un carré positif." }
+  ],
+  qcm: [
+    { q: String.raw`\(P \Rightarrow Q\) est fausse lorsque…`, choix: ["P et Q sont fausses", "P est fausse et Q est vraie", "P est vraie et Q est fausse", "P et Q sont vraies"], ok: 2, expl: "C’est le seul cas où une implication est fausse." },
+    { q: String.raw`La contraposée de « si \(x > 2\) alors \(x^2 > 4\) » est…`, choix: [String.raw`si \(x^2 > 4\) alors \(x > 2\)`, String.raw`si \(x^2 \leqslant 4\) alors \(x \leqslant 2\)`, String.raw`si \(x \leqslant 2\) alors \(x^2 \leqslant 4\)`, String.raw`si \(x^2 < 4\) alors \(x < 2\)`], ok: 1, expl: "Contraposée : non Q ⇒ non P. La négation de > est ⩽." },
+    { q: String.raw`La négation de « \(\forall x \in \mathbb{R},\ f(x) > 0\) » est…`, choix: [String.raw`\(\forall x,\ f(x) \leqslant 0\)`, String.raw`\(\exists x,\ f(x) < 0\)`, String.raw`\(\exists x,\ f(x) \leqslant 0\)`, String.raw`\(\forall x,\ f(x) < 0\)`], ok: 2, expl: "∀ devient ∃ et > devient ⩽ (attention au cas d’égalité)." },
+    { q: String.raw`Pour prouver que « pour tout entier \(n\), \(n^2 + n + 41\) est premier » est faux, il suffit…`, choix: ["de vérifier n = 0, 1, 2", "de trouver un seul n qui ne convient pas", "de raisonner par récurrence", "c’est impossible, la phrase est vraie"], ok: 1, expl: String.raw`Un contre-exemple suffit : \(n = 40\) donne \(40^2 + 40 + 41 = 41^2\).` },
+    { q: String.raw`\(\dfrac{2^{10} \times 4^{-3}}{8}\) vaut…`, choix: ["1", "2", "1/2", "4"], ok: 1, expl: String.raw`\(4^{-3} = 2^{-6}\) et \(8 = 2^{3}\), donc \(2^{10} \times 2^{-6} \times 2^{-3} = 2^{1} = 2\).` },
+    { q: String.raw`\(\sqrt{12} + \sqrt{27}\) vaut…`, choix: [String.raw`\(\sqrt{39}\)`, String.raw`\(5\sqrt{3}\)`, String.raw`\(6\sqrt{3}\)`, String.raw`\(13\)`], ok: 1, expl: String.raw`\(2\sqrt{3} + 3\sqrt{3} = 5\sqrt{3}\). On n’additionne jamais sous la racine.` },
+    { q: "Une hausse de 10 % suivie d’une hausse de 10 % donne une hausse de…", choix: ["20 %", "21 %", "19 %", "10 %"], ok: 1, expl: String.raw`\(1{,}1^2 = 1{,}21\).` },
+    { q: String.raw`Si \(-3 \leqslant x \leqslant 1\), alors \(x^2\) est dans…`, choix: [String.raw`\([1;9]\)`, String.raw`\([0;9]\)`, String.raw`\([-9;1]\)`, String.raw`\([0;1]\)`], ok: 1, expl: "La fonction carré n’est pas monotone sur [−3 ; 1] : le minimum 0 est atteint en x = 0, le maximum 9 en x = −3." },
+    { q: String.raw`\(|x - 1| < 3\) équivaut à…`, choix: [String.raw`\(x < 4\)`, String.raw`\(-2 < x < 4\)`, String.raw`\(-4 < x < 2\)`, String.raw`\(x > -2\)`], ok: 1, expl: "x est à distance strictement moins de 3 de 1." },
+    { q: "Pour démontrer « si n² est pair, alors n est pair », le plus simple est…", choix: ["un raisonnement direct", "la contraposée", "un exemple", "la récurrence"], ok: 1, expl: "On montre « n impair ⇒ n² impair », qui se fait en une ligne." }
+  ],
+  vf: [
+    { p: String.raw`La réciproque d’une implication vraie est toujours vraie.`, v: false, j: String.raw`Faux : « si \(x = 2\) alors \(x^2 = 4\) » est vraie, sa réciproque est fausse (\(x = -2\)).` },
+    { p: String.raw`Pour tout réel \(x\), \(\sqrt{x^2} = x\).`, v: false, j: String.raw`Faux : \(\sqrt{(-3)^2} = 3 \neq -3\). On a \(\sqrt{x^2} = |x|\).` },
+    { p: String.raw`Pour tous réels \(a\) et \(b\) positifs, \(\sqrt{a + b} \leqslant \sqrt{a} + \sqrt{b}\).`, v: true, j: String.raw`Vrai : \((\sqrt{a} + \sqrt{b})^2 = a + b + 2\sqrt{ab} \geqslant a + b\), et la racine est croissante.` },
+    { p: String.raw`Si \(a < b\), alors \(\frac{1}{a} > \frac{1}{b}\).`, v: false, j: String.raw`Faux : \(a = -1\), \(b = 2\) donne \(-1 > \frac{1}{2}\), faux. Il faut \(a\) et \(b\) de même signe.` },
+    { p: String.raw`Le produit de deux entiers consécutifs est pair.`, v: true, j: "Vrai : l’un des deux est pair (disjonction de cas)." },
+    { p: String.raw`Une baisse de 50 % suivie d’une hausse de 50 % ramène au prix initial.`, v: false, j: String.raw`Faux : \(0{,}5 \times 1{,}5 = 0{,}75\), soit une baisse de 25 %.` },
+    { p: String.raw`\(\exists x \in \mathbb{R},\ x^2 < x\).`, v: true, j: String.raw`Vrai : \(x = \frac{1}{2}\) donne \(\frac{1}{4} < \frac{1}{2}\).` },
+    { p: String.raw`Les réels vérifiant \(x^2 \geqslant 4\) sont ceux de \([2;+\infty[\).`, v: false, j: String.raw`Faux : \(x = -3\) convient. L’ensemble est \(]-\infty;-2] \cup [2;+\infty[\).` },
+    { p: String.raw`Si \(a \geqslant b\) et \(c \geqslant d\), alors \(a - c \geqslant b - d\).`, v: false, j: String.raw`Faux : \(a = b = 0\), \(c = 5\), \(d = 0\) donne \(-5 \geqslant 0\). On ne soustrait pas les inégalités.` },
+    { p: String.raw`Pour tout réel \(x > 0\), \(x + \frac{1}{x} \geqslant 2\).`, v: true, j: String.raw`Vrai : \(x + \frac{1}{x} - 2 = \frac{(x-1)^2}{x} \geqslant 0\).` },
+    { p: String.raw`\(\frac{1}{\sqrt{2} - 1} = \sqrt{2} + 1\).`, v: true, j: String.raw`Vrai : \((\sqrt{2} - 1)(\sqrt{2} + 1) = 2 - 1 = 1\).` },
+    { p: String.raw`Si \(n^2\) est divisible par \(4\), alors \(n\) est divisible par \(4\).`, v: false, j: String.raw`Faux : \(n = 2\), \(n^2 = 4\).` }
+  ],
+  fiche: [
+    "P ⇒ Q n’est fausse que si P est vraie et Q fausse.",
+    "La contraposée (non Q ⇒ non P) est équivalente ; la réciproque (Q ⇒ P) n’a aucun lien.",
+    "Nier : ∀ ↔ ∃ dans le même ordre, puis nier la fin (< devient ⩾).",
+    "Un contre-exemple suffit à réfuter un « pour tout » ; un exemple ne prouve jamais un « pour tout ».",
+    "Pair : n = 2k ; impair : n = 2k + 1, avec k entier introduit explicitement.",
+    "√2 est irrationnel : preuve par l’absurde avec une fraction irréductible.",
+    "√(a + b) ≠ √a + √b ; √(x²) = |x|.",
+    "Les pourcentages successifs se multiplient : ×(1 + t/100).",
+    "Multiplier une inégalité par un négatif change son sens ; on ne soustrait pas deux inégalités.",
+    "Comparer A et B : étudier le signe de A − B."
+  ]
+}];
+
+/* ============ État local ============ */
+const KEY = "carnet-mayotte-2027";
+let state = { done: {}, qcm: {} };
+try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s) state = Object.assign(state, s); } catch (e) {}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+const $ = (s, r = document) => r.querySelector(s);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const RN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+const ch = CHAPITRES[0];
+const reduceMotion = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+
+function typeset(el) {
+  if (window.MathJax && MathJax.typesetPromise) { MathJax.typesetPromise([el]).catch(() => {}); }
+}
+function daysTo(d) { return Math.ceil((d - new Date()) / 86400000); }
+function currentWeek() { return Math.floor((new Date() - START) / (7 * 86400000)) + 1; }
+function sigilsOf(c) { return c.exercices.filter((_, k) => state.done[c.id + "-" + k]).length; }
+function isOpen(c) { return sigilsOf(c) === c.exercices.length; }
+function hasStar(c) { return (state.qcm[c.id] || 0) >= 9; }
+function plural(n, mot) { return n + " " + mot + (n > 1 ? "s" : ""); }
+function progress() {
+  const lit = Array(25).fill(false);
+  CHAPITRES.forEach(c => { if (isOpen(c)) lit[c.n - 1] = true; });
+  const cw = currentWeek();
+  return { lit, current: clamp(cw < 1 ? 1 : cw, 1, 25) };
+}
+
+/* ============ Scène de fond ============ */
+const Scene = (() => {
+  const cv = document.getElementById("scene");
+  const ctx = cv && cv.getContext ? cv.getContext("2d") : null;
+  if (!ctx) return { setProgress() {} };
+  const darkMq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : { matches: false };
+  const KEYS = ["sky-top", "sky-mid", "sky-low", "haze", "sun", "ruin-far", "ruin-mid", "ruin-near", "rim", "glow"];
+  let W = 0, H = 0, D = 1, T = {}, dark = false, cache = null, motes = [], tower = null;
+  let prog = { lit: [], current: 1 }, raf = 0, last = 0, nextGlitch = 0, glitchEnd = 0, slices = [], pending = 0, lastSize = "";
+
+  const rgba = (hex, a) => {
+    let h = (hex || "#888888").trim().replace("#", "");
+    if (h.length === 3) h = h.replace(/./g, "$&$&");
+    const n = parseInt(h, 16);
+    return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`;
+  };
+  const rng = seed => () => {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+
+  function readTokens() {
+    const cs = getComputedStyle(document.documentElement);
+    KEYS.forEach(k => { T[k] = cs.getPropertyValue("--" + k).trim(); });
+    const a = document.documentElement.getAttribute("data-theme");
+    dark = a ? a === "dark" : darkMq.matches;
+  }
+
+  function sky(c) {
+    const g = c.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, T["sky-top"]); g.addColorStop(0.4, T["sky-mid"]); g.addColorStop(0.68, T["sky-low"]); g.addColorStop(0.86, T.haze); g.addColorStop(1, T.haze);
+    c.fillStyle = g; c.fillRect(0, 0, W, H);
+  }
+  function stars(c, R) {
+    const n = Math.round(W * H / 6500);
+    for (let i = 0; i < n; i++) {
+      const x = R() * W, y = Math.pow(R(), 1.4) * H * 0.66, s = R() < 0.08 ? 2 : 1;
+      c.fillStyle = rgba(T.sun, 0.2 + R() * 0.65); c.fillRect(Math.round(x), Math.round(y), s, s);
+    }
+  }
+  function sun(c) {
+    if (!dark) {
+      const x = W * 0.16, y = H * 0.6, r = clamp(H * 0.036, 18, 40);
+      const g = c.createRadialGradient(x, y, r * 0.5, x, y, H * 0.8);
+      g.addColorStop(0, rgba(T.sun, 0.9)); g.addColorStop(0.22, rgba(T.rim, 0.38)); g.addColorStop(1, rgba(T.rim, 0));
+      c.fillStyle = g; c.fillRect(0, 0, W, H);
+      c.fillStyle = T.sun; c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.fill();
+    } else if (W >= 700) {
+      const x = W * 0.74, y = H * 0.17, r = clamp(H * 0.022, 11, 22);
+      const g = c.createRadialGradient(x, y, r, x, y, r * 9);
+      g.addColorStop(0, rgba(T.sun, 0.25)); g.addColorStop(1, rgba(T.sun, 0));
+      c.fillStyle = g; c.fillRect(x - r * 9, y - r * 9, r * 18, r * 18);
+      c.fillStyle = T.sun; c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.fill();
+      // la lune est une image : quelques lignes de balayage la trahissent
+      c.fillStyle = rgba(T["sky-mid"], 0.35);
+      for (let k = -r; k < r; k += 4) c.fillRect(x - r, y + k, r * 2, 1);
+    }
+  }
+  function hills(c, R, hz) {
+    const p1 = R() * 6, p2 = R() * 6;
+    c.beginPath(); c.moveTo(0, H);
+    for (let x = 0; x <= W + 8; x += 8) {
+      c.lineTo(x, hz - H * 0.012 - H * 0.022 * (Math.sin(x / W * 5.1 + p1) * 0.6 + Math.sin(x / W * 13.7 + p2) * 0.4));
+    }
+    c.lineTo(W, H); c.closePath(); c.fillStyle = T["ruin-far"]; c.fill();
+    const g = c.createLinearGradient(0, hz - H * 0.04, 0, hz + H * 0.06);
+    g.addColorStop(0, rgba(T.haze, 0)); g.addColorStop(1, rgba(T.haze, dark ? 0.25 : 0.55));
+    c.fillStyle = g; c.fillRect(0, hz - H * 0.04, W, H * 0.1);
+  }
+  function temple(c, x, y) {
+    const w = clamp(W * 0.085, 64, 150), h = w * 0.42, n = 6, cw = w / (n * 2 - 1);
+    c.fillStyle = rgba(T["ruin-mid"], dark ? 0.9 : 0.5);
+    c.fillRect(x - w / 2 - w * 0.04, y - h * 0.1, w * 1.08, h * 0.1);
+    for (let i = 0; i < n; i++) { if (i !== 4) c.fillRect(x - w / 2 + i * cw * 2, y - h * 0.82, cw, h * 0.72); }
+    c.fillRect(x - w / 2 - w * 0.03, y - h * 0.94, w * 0.62, h * 0.12);
+    c.beginPath(); c.moveTo(x - w / 2 - w * 0.03, y - h * 0.94); c.lineTo(x, y - h * 1.24); c.lineTo(x + w * 0.08, y - h * 1.12); c.lineTo(x + w * 0.1, y - h * 0.94); c.closePath(); c.fill();
+  }
+  function aqueduct(c, R, base) {
+    const aw = clamp(W * 0.055, 46, 84), ah = aw * 1.25, pier = aw * 0.24, top = base - ah, deck = aw * 0.22, r = (aw - pier) / 2;
+    c.fillStyle = rgba(T["ruin-mid"], dark ? 1 : 0.8);
+    const n = Math.ceil(W / aw) + 1;
+    for (let i = -1; i < n; i++) {
+      const x = i * aw, roll = R();
+      if (roll < 0.1) { const hh = ah * (0.2 + R() * 0.35); c.fillRect(x, base - hh, pier, hh); continue; }
+      const cut = roll < 0.36 ? top + deck + r * (0.4 + R() * 0.5) : top;
+      const sy = top + deck + r;
+      c.beginPath();
+      c.rect(x, cut, aw, base - cut);
+      c.moveTo(x + pier, base); c.lineTo(x + pier, sy); c.arc(x + pier + r, sy, r, Math.PI, 0); c.lineTo(x + aw, base); c.closePath();
+      c.fill("evenodd");
+      if (cut === top) { c.fillStyle = rgba(T.rim, dark ? 0.18 : 0.3); c.fillRect(x, top, aw, 1.2); c.fillStyle = rgba(T["ruin-mid"], dark ? 1 : 0.8); }
+    }
+  }
+  function floorRect(i) {
+    const { x, base, top, bw, tw } = tower;
+    const span = base - top - H * 0.05, step = span / 25, yc = base - H * 0.03 - (i + 0.5) * step;
+    const w = Math.max(2.5, (bw + (tw - bw) * (base - yc) / (base - top)) * 0.16);
+    return { x: x - w / 2, y: yc - step * 0.24, w, h: step * 0.48 };
+  }
+  function drawTower(c) {
+    const x = W * (W < 700 ? 0.86 : 0.885), base = H * 0.9, top = H * 0.12;
+    const bw = clamp(W * 0.03, 30, 56), tw = bw * 0.8;
+    tower = { x, base, top, bw, tw };
+    const crown = top - 8, tip = crown - bw * 1.25;
+    // un rayon de lumière monte de la tour : le but
+    const b1 = c.createLinearGradient(0, 0, 0, tip);
+    b1.addColorStop(0, rgba(T.glow, 0)); b1.addColorStop(1, rgba(T.glow, dark ? 0.4 : 0.26));
+    c.fillStyle = b1; c.fillRect(x - 1.5, 0, 3, tip);
+    const b2 = c.createLinearGradient(0, 0, 0, tip);
+    b2.addColorStop(0, rgba(T.glow, 0)); b2.addColorStop(1, rgba(T.glow, dark ? 0.12 : 0.08));
+    c.fillStyle = b2; c.fillRect(x - 16, 0, 32, tip);
+    c.fillStyle = T["ruin-mid"];
+    c.beginPath(); c.moveTo(x - bw / 2, base); c.lineTo(x - tw / 2, top); c.lineTo(x + tw / 2, top); c.lineTo(x + bw / 2, base); c.closePath(); c.fill();
+    for (let k = 1; k <= 3; k++) { const y = base - (base - top) * k / 4, w = bw + (tw - bw) * k / 4; c.fillRect(x - w * 0.58, y - 3, w * 1.16, 5); }
+    const cw = tw * 1.35, m = 5, mw = cw / (m * 2 - 1);
+    c.fillRect(x - cw / 2, crown, cw, 10);
+    for (let i = 0; i < m; i++) c.fillRect(x - cw / 2 + i * mw * 2, crown - mw * 0.9, mw, mw * 0.9);
+    c.beginPath(); c.moveTo(x - tw * 0.3, crown - mw * 0.9); c.lineTo(x, tip); c.lineTo(x + tw * 0.3, crown - mw * 0.9); c.closePath(); c.fill();
+    c.strokeStyle = rgba(T.rim, dark ? 0.55 : 0.75); c.lineWidth = 1.3;
+    c.beginPath(); c.moveTo(x - bw / 2 + 0.7, base); c.lineTo(x - tw / 2 + 0.7, top); c.stroke();
+    const tg = c.createRadialGradient(x, tip, 0, x, tip, 18);
+    tg.addColorStop(0, rgba(T.glow, 0.95)); tg.addColorStop(1, rgba(T.glow, 0));
+    c.fillStyle = tg; c.fillRect(x - 18, tip - 18, 36, 36);
+    for (let i = 0; i < 25; i++) {
+      const r = floorRect(i);
+      if (prog.lit[i]) { c.save(); c.shadowColor = T.glow; c.shadowBlur = 10; c.fillStyle = T.glow; c.fillRect(r.x, r.y, r.w, r.h); c.restore(); }
+      else { c.fillStyle = rgba(T["ruin-near"], 0.75); c.fillRect(r.x, r.y, r.w, r.h); }
+    }
+  }
+  function ground(c, R, gy) {
+    const p = R() * 6, yAt = x => gy - H * 0.008 * Math.sin(x / W * 9 + p);
+    c.beginPath(); c.moveTo(0, H);
+    for (let x = 0; x <= W + 10; x += 10) c.lineTo(x, yAt(x));
+    c.lineTo(W, H); c.closePath(); c.fillStyle = T["ruin-near"]; c.fill();
+    c.strokeStyle = rgba(T.rim, dark ? 0.25 : 0.35); c.lineWidth = 1; c.beginPath();
+    for (let x = 0; x <= W + 10; x += 10) { if (x) c.lineTo(x, yAt(x)); else c.moveTo(x, yAt(x)); }
+    c.stroke();
+  }
+  function cypress(c, x, base, h) {
+    const w = h * 0.16;
+    c.fillStyle = T["ruin-near"];
+    c.beginPath(); c.moveTo(x, base - h);
+    c.bezierCurveTo(x + w * 0.9, base - h * 0.7, x + w * 0.75, base - h * 0.2, x + w * 0.2, base);
+    c.lineTo(x - w * 0.2, base);
+    c.bezierCurveTo(x - w * 0.75, base - h * 0.2, x - w * 0.9, base - h * 0.7, x, base - h);
+    c.fill();
+  }
+  function columns(c, gy) {
+    const cw = clamp(W * 0.022, 18, 40), sx = W * 0.16;
+    const defs = [{ x: W * 0.035, h: H * 0.6, cap: true }, { x: W * 0.095, h: H * 0.36 }, { x: W * 0.15, h: H * 0.17 }];
+    defs.forEach((d, i) => {
+      const x = d.x, b = gy + 4, t = b - d.h, w = cw * (1 - i * 0.06);
+      c.fillStyle = T["ruin-near"];
+      c.fillRect(x - w * 0.62, b - w * 0.28, w * 1.24, w * 0.28);
+      c.beginPath(); c.moveTo(x - w / 2, b - w * 0.28); c.lineTo(x - w * 0.43, t);
+      if (d.cap) c.lineTo(x + w * 0.43, t);
+      else { c.lineTo(x - w * 0.1, t - w * 0.25); c.lineTo(x + w * 0.12, t + w * 0.1); c.lineTo(x + w * 0.43, t - w * 0.12); }
+      c.lineTo(x + w / 2, b - w * 0.28); c.closePath(); c.fill();
+      if (d.cap) {
+        c.beginPath(); c.moveTo(x - w * 0.45, t); c.lineTo(x - w * 0.62, t - w * 0.22); c.lineTo(x + w * 0.62, t - w * 0.22); c.lineTo(x + w * 0.45, t); c.closePath(); c.fill();
+        c.fillRect(x - w * 0.68, t - w * 0.38, w * 1.36, w * 0.16);
+        c.beginPath(); c.moveTo(x - w * 0.7, t - w * 0.38); c.lineTo(x - w * 0.7, t - w * 0.95); c.lineTo(x + w * 2.2, t - w * 0.95); c.lineTo(x + w * 2.0, t - w * 0.7); c.lineTo(x + w * 2.3, t - w * 0.38); c.closePath(); c.fill();
+      }
+      c.strokeStyle = rgba(T["ruin-mid"], dark ? 0.6 : 0.45); c.lineWidth = 1;
+      for (let k = -1; k <= 1; k++) { c.beginPath(); c.moveTo(x + k * w * 0.2, b - w * 0.32); c.lineTo(x + k * w * 0.18, t + w * 0.25); c.stroke(); }
+      const side = x < sx ? 1 : -1;
+      c.strokeStyle = rgba(T.rim, dark ? 0.5 : 0.8); c.lineWidth = 1.5;
+      c.beginPath(); c.moveTo(x + side * w * 0.5, b - w * 0.3); c.lineTo(x + side * w * 0.43, t + (d.cap ? 0 : w * 0.1)); c.stroke();
+    });
+    const fx = W * 0.2, fw = cw * 1.5;
+    c.fillStyle = T["ruin-near"]; c.fillRect(fx, gy - cw * 0.85, fw, cw * 0.95);
+    c.strokeStyle = rgba(T.rim, dark ? 0.35 : 0.6); c.lineWidth = 1.2;
+    c.beginPath(); c.moveTo(fx, gy - cw * 0.85); c.lineTo(fx + fw, gy - cw * 0.85); c.stroke();
+  }
+  function vignette(c) {
+    const g = c.createRadialGradient(W / 2, H * 0.45, Math.min(W, H) * 0.35, W / 2, H * 0.5, Math.max(W, H) * 0.8);
+    g.addColorStop(0, rgba(T["ruin-near"], 0)); g.addColorStop(1, rgba(T["ruin-near"], dark ? 0.5 : 0.2));
+    c.fillStyle = g; c.fillRect(0, 0, W, H);
+  }
+  function seedMotes() {
+    const n = Math.round(clamp(W * H / 26000, 16, 64)), R = Math.random;
+    motes = Array.from({ length: n }, () => ({ x: R() * W, y: R() * H, r: 0.6 + R() * 1.6, v: 5 + R() * 11, a: 6 + R() * 16, p: R() * 6.28, s: 0.4 + R() * 0.9 }));
+  }
+
+  function build() {
+    W = cv.clientWidth; H = cv.clientHeight;
+    if (!W || !H) return;
+    D = Math.min(window.devicePixelRatio || 1, 1.5);
+    cv.width = Math.round(W * D); cv.height = Math.round(H * D);
+    cache = document.createElement("canvas"); cache.width = cv.width; cache.height = cv.height;
+    const c = cache.getContext("2d"); c.setTransform(D, 0, 0, D, 0, 0);
+    const R = rng(2027), hz = H * 0.74, gy = H * 0.885;
+    sky(c); if (dark) stars(c, R); sun(c);
+    hills(c, R, hz); temple(c, W * 0.37, hz);
+    aqueduct(c, R, H * 0.845);
+    drawTower(c);
+    ground(c, R, gy);
+    cypress(c, W * 0.8, gy + 2, H * 0.27); cypress(c, W * 0.955, gy + 2, H * 0.21); cypress(c, W * 0.245, gy + 2, H * 0.17);
+    columns(c, gy);
+    vignette(c);
+    if (!motes.length) seedMotes();
+  }
+
+  function drawCurrent(c, t) {
+    if (!tower || prog.lit[prog.current - 1]) return;
+    const r = floorRect(prog.current - 1), al = reduceMotion.matches ? 0.75 : 0.35 + 0.45 * (0.5 + 0.5 * Math.sin(t / 600));
+    c.save(); c.shadowColor = T.glow; c.shadowBlur = 12; c.fillStyle = rgba(T.glow, al); c.fillRect(r.x, r.y, r.w, r.h); c.restore();
+  }
+  function drawMotes(c, t, dt) {
+    for (const m of motes) {
+      m.y -= m.v * dt;
+      if (m.y < -10) { m.y = H + 10; m.x = Math.random() * W; }
+      const x = m.x + Math.sin(t / 1000 * m.s + m.p) * m.a, al = 0.25 + 0.45 * (0.5 + 0.5 * Math.sin(t / 700 * m.s + m.p));
+      c.fillStyle = rgba(dark ? T.glow : T.rim, al);
+      if (dark) c.fillRect(x, m.y, m.r + 0.6, m.r + 0.6);
+      else { c.beginPath(); c.arc(x, m.y, m.r, 0, 6.283); c.fill(); }
+    }
+  }
+  function glitch(c, t) {
+    if (!glitchEnd && t > nextGlitch) {
+      glitchEnd = t + 170;
+      slices = Array.from({ length: 3 + (Math.random() * 3 | 0) }, () => ({ y: Math.random() * H, h: 3 + Math.random() * 22, dx: (Math.random() < 0.5 ? -1 : 1) * (4 + Math.random() * 14) }));
+    }
+    if (!glitchEnd) return;
+    if (t > glitchEnd) { glitchEnd = 0; nextGlitch = t + 9000 + Math.random() * 9000; return; }
+    for (const s of slices) {
+      c.drawImage(cache, 0, s.y * D, cache.width, s.h * D, s.dx, s.y, W, s.h);
+      c.fillStyle = rgba(T.glow, 0.1); c.fillRect(0, s.y, W, s.h);
+    }
+  }
+  function paint(t, dt) {
+    if (!cache) return;
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.drawImage(cache, 0, 0);
+    ctx.setTransform(D, 0, 0, D, 0, 0);
+    drawCurrent(ctx, t);
+    if (!reduceMotion.matches) { drawMotes(ctx, t, dt); glitch(ctx, t); }
+  }
+  function loop(t) {
+    raf = requestAnimationFrame(loop);
+    if (t - last < 33) return;
+    const dt = last ? Math.min(0.1, (t - last) / 1000) : 0; last = t;
+    paint(t, dt);
+  }
+  function start() {
+    cancelAnimationFrame(raf); raf = 0; last = 0;
+    if (!reduceMotion.matches && !document.hidden) raf = requestAnimationFrame(loop);
+    else paint(performance.now(), 0);
+  }
+  function rebuild() {
+    if (pending) return;
+    pending = requestAnimationFrame(() => { pending = 0; readTokens(); build(); start(); });
+  }
+  window.addEventListener("resize", () => {
+    const s = cv.clientWidth + "x" + cv.clientHeight;
+    if (s !== lastSize) { lastSize = s; motes = []; rebuild(); }
+  });
+  if (darkMq.addEventListener) darkMq.addEventListener("change", rebuild);
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener("change", start);
+  new MutationObserver(rebuild).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  document.addEventListener("visibilitychange", start);
+  nextGlitch = performance.now() + 6000;
+  return { setProgress(p) { prog = p; rebuild(); } };
+})();
+
+/* ============ Sigils ============ */
+function cellsOf(c, k) {
+  const L = String.fromCharCode(65 + k), out = [];
+  c.porte.forEach((row, r) => [...row].forEach((x, col) => { if (x === L) out.push([r, col]); }));
+  return out;
+}
+function rects(cells, s, g) {
+  const has = (r, c) => cells.some(([a, b]) => a === r && b === c), e = 0.4;
+  let o = "";
+  for (const [r, c] of cells) {
+    o += `<rect x="${c * s + g / 2}" y="${r * s + g / 2}" width="${s - g}" height="${s - g}"/>`;
+    if (has(r, c + 1)) o += `<rect x="${(c + 1) * s - g / 2 - e}" y="${r * s + g / 2}" width="${g + 2 * e}" height="${s - g}"/>`;
+    if (has(r + 1, c)) o += `<rect x="${c * s + g / 2}" y="${(r + 1) * s - g / 2 - e}" width="${s - g}" height="${g + 2 * e}"/>`;
+    if (has(r, c + 1) && has(r + 1, c) && has(r + 1, c + 1)) o += `<rect x="${(c + 1) * s - g / 2 - e}" y="${(r + 1) * s - g / 2 - e}" width="${g + 2 * e}" height="${g + 2 * e}"/>`;
+  }
+  return o;
+}
+function sigilSvg(c, k, on) {
+  const cells = cellsOf(c, k);
+  const r0 = Math.min(...cells.map(x => x[0])), c0 = Math.min(...cells.map(x => x[1]));
+  const norm = cells.map(([r, col]) => [r - r0, col - c0]);
+  const rows = Math.max(...norm.map(x => x[0])) + 1, cols = Math.max(...norm.map(x => x[1])) + 1;
+  const s = 10, g = 2, side = Math.max(rows, cols) * s + 8, ox = (side - cols * s) / 2, oy = (side - rows * s) / 2;
+  return `<svg class="sig" viewBox="0 0 ${side} ${side}" style="--sig: var(${c.sig})" role="img" aria-label="Sigil de l’exercice ${k + 1}, ${on ? "allumé" : "éteint"}"><g transform="translate(${ox} ${oy})"><g class="pc${on ? " on" : ""}" id="sig-${c.id}-${k}">${rects(norm, s, g)}</g></g></svg>`;
+}
+function gateSvg(c) {
+  const s = 26, g = 3, rows = c.porte.length, cols = c.porte[0].length;
+  let o = `<svg class="gate" viewBox="-4 -4 ${cols * s + 8} ${rows * s + 8}" style="--sig: var(${c.sig})" role="group" aria-label="Porte du chapitre : ${sigilsOf(c)} sigils allumés sur ${c.exercices.length}">`;
+  c.exercices.forEach((x, k) => {
+    const on = !!state.done[c.id + "-" + k];
+    o += `<g class="pc${on ? " on" : ""}" data-k="${k}" tabindex="0" role="button" aria-label="Exercice ${k + 1}, ${x.titre}${on ? ", sigil allumé" : ""}"><title>Exercice ${k + 1} · ${x.titre}</title>${rects(cellsOf(c, k), s, g)}</g>`;
+  });
+  return o + `</svg>`;
+}
+function starSvg(on) {
+  return `<svg class="star${on ? " on" : ""}" viewBox="0 0 24 24" role="img" aria-label="${on ? "Étoile obtenue" : "Étoile à gagner : 9/10 au QCM"}"><path d="M12 2.5l2.8 6.1 6.6.7-5 4.5 1.4 6.6L12 17.1l-5.8 3.3 1.4-6.6-5-4.5 6.6-.7z"/></svg>`;
+}
+
+/* ============ En-tête ============ */
+function renderReadouts() {
+  const e = daysTo(EXAM), i = daysTo(INSCR), cw = currentWeek(), lit = CHAPITRES.filter(isOpen).length;
+  $("#readouts").innerHTML = `
+    <div class="readout"><b>J-${Math.max(e, 0)}</b><span>avant les écrits · 1er avril 2027</span></div>
+    <div class="readout${i <= 21 ? " warn" : ""}"><b>${i > 0 ? "J-" + i : "close"}</b><span>pour s’inscrire · 25 nov., 12 h</span></div>
+    <div class="readout"><b>${cw < 1 ? "J-" + daysTo(START) : "S" + String(Math.min(cw, 25)).padStart(2, "0")}</b><span>${cw < 1 ? "avant le départ de la semaine 1" : "semaine en cours, sur 25"}</span></div>
+    <div class="readout"><b>${lit}/25</b><span>étages allumés</span></div>`;
+}
+
+/* ============ Planning ============ */
+function renderAccueil() {
+  const cw = currentWeek(), n = sigilsOf(ch), tot = ch.exercices.length, open = isOpen(ch), star = hasStar(ch);
+  let rows = "", ph = 0;
+  for (const r of PLANNING) {
+    if (r.length === 1) { rows += `<li class="phase"><span class="rn">${RN[ph++]}</span>${r[0]}</li>`; continue; }
+    const [w, d, c, id] = r, chap = CHAPITRES.find(x => x.id === id), lit = !!chap && isOpen(chap);
+    const now = w === cw || (cw < 1 && w === 1);
+    const pill = lit ? `<span class="pill lit">maîtrisé</span>` : chap ? `<span class="pill live">en ligne</span>` : `<span class="pill">à venir</span>`;
+    rows += `<li class="floor${now ? " now" : ""}${lit ? " lit" : ""}"><span class="w">S${typeof w === "number" ? String(w).padStart(2, "0") : w}</span><span class="d">${d}</span><span class="c">${c} ${pill}</span></li>`;
+  }
+  $("#accueil").innerHTML = `
+    <article class="tablet gate-card${open ? " open" : ""}">
+      <div class="gate-head">
+        <div class="head"><span class="eyebrow">Étage ${ch.n} · ${cw < 1 ? "départ lundi 12 octobre" : "semaine " + cw + " en cours"}</span><h2>${ch.titre}</h2></div>
+        <div class="tally" aria-label="${n} sigils allumés sur ${tot}">${n}/${tot}<small>sigils</small>${starSvg(star)}</div>
+      </div>
+      <p class="lead">${ch.objectif}</p>
+      <div class="doorway">${gateSvg(ch)}</div>
+      <p class="${open ? "open-msg" : "muted"}">${open ? "Porte ouverte : l’étage 1 de la tour est allumé, la semaine 2 t’attend." : "Chaque exercice que tu sais refaire sans aide allume un sigil. Les onze ouvrent la porte et allument l’étage 1 de la tour."}${star ? "" : " L’étoile s’obtient avec 9/10 au QCM."}</p>
+      <div class="row"><button class="btn" data-go="cours">Ouvrir le cours</button><button class="btn ghost" data-go="exos">Exercices</button><button class="btn ghost" data-go="qcm">QCM</button><button class="btn ghost" data-go="vf">Vrai–Faux</button></div>
+    </article>
+    <article class="tablet">
+      <div class="head"><span class="eyebrow">25 semaines jusqu’aux écrits, puis l’oral</span><h2>L’ascension</h2></div>
+      <ol class="floors">${rows}</ol>
+    </article>`;
+}
+function goExo(k) {
+  show("exos");
+  const el = document.getElementById("exo-" + k);
+  if (el) el.scrollIntoView({ block: "start", behavior: reduceMotion.matches ? "auto" : "smooth" });
+}
+
+/* ============ Cours ============ */
+function renderCours() {
+  $("#cours").innerHTML = `
+    <article class="tablet">
+      <div class="head"><span class="eyebrow">Semaine ${ch.n} · étage ${ch.n}</span><h2>${ch.titre}</h2></div>
+      <p class="lead">${ch.objectif}</p>
+      <ul class="toc">${ch.notions.map((n, k) => `<li><a href="#notion-${k}" data-notion="${k}"><span class="rn">${RN[k]}</span>${n.titre}</a></li>`).join("")}</ul>
+    </article>
+    ${ch.notions.map((n, k) => `<article class="tablet notion" id="notion-${k}"><h3><span class="rn">${RN[k]}</span>${n.titre}</h3>${n.html}</article>`).join("")}
+    <div class="row"><button class="btn" data-go="exos">Passer aux exercices</button></div>`;
+}
+
+/* ============ Exercices ============ */
+function renderExos() {
+  const n = sigilsOf(ch);
+  $("#exos").innerHTML = `
+    <article class="tablet">
+      <div class="head"><span class="eyebrow">Semaine ${ch.n} · ${ch.exercices.length} exercices corrigés</span><h2>Exercices</h2></div>
+      <p class="lead">Cherche d’abord sur papier, puis ouvre le corrigé. Coche « Je sais le refaire » seulement quand tu le refais sans aide : son sigil s’allume dans la porte du chapitre.</p>
+      <p class="muted" id="exos-count">${plural(n, "sigil")} allumé${n > 1 ? "s" : ""} sur ${ch.exercices.length}</p>
+    </article>
+    ${ch.exercices.map((x, k) => { const on = !!state.done[ch.id + "-" + k]; return `
+      <article class="tablet exo${on ? " got" : ""}" id="exo-${k}">
+        <div class="exo-head"><div class="head"><span class="eyebrow">Exercice ${k + 1}${x.source ? " · " + x.source : ""}</span><h3>${x.titre}</h3></div>${sigilSvg(ch, k, on)}</div>
+        <p>${x.enonce}</p>
+        <details class="sol"><summary>Voir le corrigé</summary><div><p>${x.corrige}</p><p class="retenir"><b>À retenir</b>${x.retenir}</p></div></details>
+        <label class="done"><input type="checkbox" id="done-${ch.id}-${k}" data-k="${k}"${on ? " checked" : ""}> Je sais le refaire</label>
+      </article>`; }).join("")}`;
+  $("#exos").querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => toggleDone(+cb.dataset.k, cb.checked)));
+}
+function toggleDone(k, on) {
+  const wasOpen = isOpen(ch);
+  state.done[ch.id + "-" + k] = on; save();
+  const card = document.getElementById("exo-" + k); card.classList.toggle("got", on);
+  card.querySelector(".sig").setAttribute("aria-label", `Sigil de l’exercice ${k + 1}, ${on ? "allumé" : "éteint"}`);
+  const pc = document.getElementById(`sig-${ch.id}-${k}`);
+  pc.classList.toggle("on", on); pc.classList.remove("just");
+  if (on) { pc.getBoundingClientRect(); pc.classList.add("just"); }
+  const n = sigilsOf(ch);
+  $("#exos-count").textContent = `${plural(n, "sigil")} allumé${n > 1 ? "s" : ""} sur ${ch.exercices.length}`;
+  renderAccueil(); renderReadouts(); typeset($("#accueil"));
+  Scene.setProgress(progress());
+  if (on) toast(isOpen(ch) && !wasOpen ? "Porte ouverte : l’étage 1 de la tour s’allume." : `Sigil allumé · ${n}/${ch.exercices.length}`);
+}
+
+/* ============ QCM ============ */
+let qi = 0, qscore = 0, qanswered = false;
+function qcmHead() {
+  const best = state.qcm[ch.id];
+  return `<article class="tablet">
+      <div class="head"><span class="eyebrow">Semaine ${ch.n} · ${ch.qcm.length} questions</span><h2>QCM</h2></div>
+      <p class="lead">Réponds sans le cours. Avec 9/10 ou plus, l’étoile du chapitre s’allume.</p>
+      <p class="keys">Clavier : <kbd>1</kbd> à <kbd>4</kbd> pour répondre, <kbd>Entrée</kbd> pour continuer.${best != null ? ` Meilleur score : ${best}/${ch.qcm.length}.` : ""}</p>
+    </article>`;
+}
+function renderQcm() {
+  const el = $("#qcm");
+  if (qi >= ch.qcm.length) {
+    const had = hasStar(ch);
+    state.qcm[ch.id] = Math.max(state.qcm[ch.id] || 0, qscore); save();
+    renderAccueil(); typeset($("#accueil"));
+    el.innerHTML = qcmHead() + `<div class="term">
+      <div class="term-bar"><span>QCM · SEMAINE ${ch.n}</span><span>FIN</span></div>
+      <div class="term-body">
+        <p class="dim">&gt; calcul du score</p>
+        <p class="big">${qscore}/${ch.qcm.length}</p>
+        <p>${qscore >= 9 ? "Excellent : l’étoile du chapitre est allumée." : qscore >= 7 ? "Bien. Relis les explications des questions ratées, puis vise 9/10." : qscore >= 5 ? "Correct. Relis les « À retenir » des notions ratées, puis recommence." : "Reprends le cours notion par notion, puis recommence."}</p>
+        <div><button class="tbtn" id="qcm-restart" type="button">Recommencer</button><span class="cursor" aria-hidden="true"></span></div>
+      </div></div>`;
+    $("#qcm-restart").onclick = () => { qi = 0; qscore = 0; renderQcm(); };
+    if (!had && hasStar(ch)) toast("Étoile allumée : 9/10 au QCM.");
+    return;
+  }
+  const q = ch.qcm[qi]; qanswered = false;
+  el.innerHTML = qcmHead() + `<div class="term" role="group" aria-label="Question ${qi + 1} sur ${ch.qcm.length}">
+      <div class="term-bar"><span>QCM · SEMAINE ${ch.n}</span><span>Q ${String(qi + 1).padStart(2, "0")}/${ch.qcm.length} · SCORE <b>${qscore}</b></span></div>
+      <div class="term-body">
+        <p class="dim">&gt; question ${qi + 1}</p>
+        <p class="qtext">${q.q}</p>
+        <div class="opts">${q.choix.map((c, k) => `<button class="opt" type="button" data-k="${k}"><span class="k">[${k + 1}]</span><span>${c}</span></button>`).join("")}</div>
+        <p class="out" id="qcm-expl" hidden></p>
+        <div><button class="tbtn" id="qcm-next" type="button" hidden>${qi + 1 < ch.qcm.length ? "Suite" : "Voir le score"}</button><span class="cursor" aria-hidden="true"></span></div>
+      </div></div>`;
+  el.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    if (qanswered) return; qanswered = true;
+    const k = +b.dataset.k, ok = k === q.ok; if (ok) qscore++;
+    el.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (+x.dataset.k === q.ok) x.classList.add("good"); });
+    if (!ok) b.classList.add("bad");
+    const ex = $("#qcm-expl"); ex.innerHTML = (ok ? "<b>Exact.</b> " : "<b>Non.</b> ") + q.expl; ex.hidden = false; typeset(ex);
+    const nx = $("#qcm-next"); nx.hidden = false; nx.focus({ preventScroll: true });
+  });
+  $("#qcm-next").onclick = () => { qi++; renderQcm(); };
+  typeset(el);
+}
+
+/* ============ Vrai–Faux ============ */
+let vfOrder = [], vfPos = 0, vfScore = 0;
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function startVf() { vfOrder = shuffle(ch.vf.map((_, k) => k)).slice(0, 5); vfPos = 0; vfScore = 0; renderVf(); }
+function vfHead() {
+  return `<article class="tablet">
+      <div class="head"><span class="eyebrow">Le format du problème 1 de la composition 2</span><h2>Vrai–Faux</h2></div>
+      <p class="lead">Au concours, une réponse sans justification ne rapporte rien : dis ta justification à voix haute avant de lire la correction.</p>
+      <p class="keys">Clavier : <kbd>V</kbd> ou <kbd>F</kbd> pour répondre, <kbd>Entrée</kbd> pour continuer. Séries de 5 propositions tirées parmi ${ch.vf.length}.</p>
+    </article>`;
+}
+function renderVf() {
+  const el = $("#vf");
+  if (vfPos >= vfOrder.length) {
+    el.innerHTML = vfHead() + `<div class="term">
+      <div class="term-bar"><span>VRAI–FAUX · SEMAINE ${ch.n}</span><span>FIN</span></div>
+      <div class="term-body">
+        <p class="dim">&gt; série terminée</p>
+        <p class="big">${vfScore}/5</p>
+        <p>${vfScore === 5 ? "Sans faute. Garde le réflexe : un contre-exemple pour « faux », une preuve pour « vrai »." : "Reprends les propositions ratées : pour « faux », cherche un contre-exemple ; pour « vrai », une preuve courte."}</p>
+        <div><button class="tbtn" id="vf-again" type="button">Nouvelle série</button><span class="cursor" aria-hidden="true"></span></div>
+      </div></div>`;
+    $("#vf-again").onclick = startVf;
+    return;
+  }
+  const it = ch.vf[vfOrder[vfPos]];
+  el.innerHTML = vfHead() + `<div class="term" role="group" aria-label="Proposition ${vfPos + 1} sur 5">
+      <div class="term-bar"><span>VRAI–FAUX · SEMAINE ${ch.n}</span><span>P ${vfPos + 1}/5 · SCORE <b>${vfScore}</b></span></div>
+      <div class="term-body">
+        <p class="dim">&gt; proposition ${vfPos + 1}</p>
+        <p class="qtext">${it.p}</p>
+        <div class="row"><button class="opt inline vfb" type="button" data-v="1"><span class="k">[V]</span><span>Vrai</span></button><button class="opt inline vfb" type="button" data-v="0"><span class="k">[F]</span><span>Faux</span></button></div>
+        <p class="out" id="vf-expl" hidden></p>
+        <div><button class="tbtn" id="vf-next" type="button" hidden>Suite</button><span class="cursor" aria-hidden="true"></span></div>
+      </div></div>`;
+  let answered = false;
+  el.querySelectorAll(".vfb").forEach(b => b.onclick = () => {
+    if (answered) return; answered = true;
+    const ok = (b.dataset.v === "1") === it.v; if (ok) vfScore++;
+    el.querySelectorAll(".vfb").forEach(x => { x.disabled = true; if ((x.dataset.v === "1") === it.v) x.classList.add("good"); });
+    if (!ok) b.classList.add("bad");
+    const ex = $("#vf-expl"); ex.innerHTML = it.j; ex.hidden = false; typeset(ex);
+    const nx = $("#vf-next"); nx.hidden = false; nx.focus({ preventScroll: true });
+  });
+  $("#vf-next").onclick = () => { vfPos++; renderVf(); };
+  typeset(el);
+}
+
+/* ============ Fiche ============ */
+function renderFiche() {
+  $("#fiche").innerHTML = `
+    <article class="tablet">
+      <div class="head"><span class="eyebrow">Semaine ${ch.n} · à savoir par cœur</span><h2>Fiche</h2></div>
+      <ul class="glyphs">${ch.fiche.map(f => `<li>${f}</li>`).join("")}</ul>
+    </article>
+    <article class="tablet"><h3>À savoir refaire sans le cours</h3><ul class="glyphs">
+      <li>Réciproque, contraposée et contre-exemple (exercice 1).</li>
+      <li>Négation avec deux quantificateurs (exercice 2).</li>
+      <li>« n impair ⇒ n² impair » et l’irrationalité de √2.</li>
+      <li>Simplifier puissances et racines, rationaliser (exercices 7 et 8).</li>
+      <li>Une inégalité sans erreur de signe (exercice 10).</li></ul>
+    </article>`;
+}
+
+/* ============ Notifications ============ */
+let toastTimer = 0;
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 3400);
+}
+
+/* ============ Jour / nuit ============ */
+const root = document.documentElement;
+function isDarkNow() { const a = root.getAttribute("data-theme"); return a ? a === "dark" : !!(window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches); }
+function paintThemer() {
+  const d = isDarkNow(), b = $("#themer");
+  b.textContent = d ? "Jour" : "Nuit";
+  b.setAttribute("aria-label", d ? "Passer en mode jour" : "Passer en mode nuit");
+}
+$("#themer").onclick = () => {
+  const next = isDarkNow() ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  try { localStorage.setItem(KEY + "-theme", next); } catch (e) {}
+  paintThemer();
+};
+if (window.matchMedia) { const m = matchMedia("(prefers-color-scheme: dark)"); if (m.addEventListener) m.addEventListener("change", paintThemer); }
+new MutationObserver(paintThemer).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+
+/* ============ Onglets et navigation ============ */
+const TABS = ["accueil", "cours", "exos", "qcm", "vf", "fiche"];
+function show(id, scroll) {
+  TABS.forEach(t => {
+    $("#" + t).hidden = t !== id;
+    $("#tab-" + t).setAttribute("aria-selected", t === id ? "true" : "false");
+  });
+  try { localStorage.setItem(KEY + "-tab", id); } catch (e) {}
+  typeset($("#" + id));
+  if (scroll) {
+    const nav = $("nav.tabs"), y = $("#" + id).getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 16;
+    if (window.scrollY > y) window.scrollTo({ top: Math.max(0, y) });
+  }
+}
+document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => show(b.getAttribute("aria-controls"), true));
+document.addEventListener("click", e => {
+  const g = e.target.closest("[data-go]"); if (g) { show(g.dataset.go, true); return; }
+  const p = e.target.closest(".gate .pc"); if (p) { goExo(+p.dataset.k); return; }
+  const a = e.target.closest("a[data-notion]");
+  if (a) { e.preventDefault(); document.getElementById("notion-" + a.dataset.notion).scrollIntoView({ block: "start", behavior: reduceMotion.matches ? "auto" : "smooth" }); }
+});
+document.addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input, textarea, select")) return;
+  const k = e.key.toLowerCase(), onControl = e.target.closest("button, summary, a, [role=button]");
+  const p = e.target.closest(".gate .pc");
+  if (p && (k === "enter" || k === " ")) { e.preventDefault(); goExo(+p.dataset.k); return; }
+  if (onControl && (k === "enter" || k === " ")) return;
+  const press = sel => { const b = $(sel); if (b && !b.disabled && !b.hidden) { e.preventDefault(); b.click(); } };
+  const tab = TABS.find(t => !$("#" + t).hidden);
+  if (tab === "qcm") { if (/^[1-4]$/.test(k)) press(`#qcm .opt[data-k="${+k - 1}"]`); else if (k === "enter") press(qi >= ch.qcm.length ? "#qcm-restart" : "#qcm-next"); }
+  if (tab === "vf") { if (k === "v" || k === "f") press(`#vf .vfb[data-v="${k === "v" ? 1 : 0}"]`); else if (k === "enter") press(vfPos >= vfOrder.length ? "#vf-again" : "#vf-next"); }
+});
+
+/* ============ Démarrage ============ */
+renderReadouts(); renderAccueil(); renderCours(); renderExos(); renderFiche(); renderQcm(); startVf(); paintThemer();
+let first = "accueil";
+const h = (location.hash || "").slice(1);
+if (TABS.includes(h)) first = h; else { try { const t = localStorage.getItem(KEY + "-tab"); if (TABS.includes(t)) first = t; } catch (e) {} }
+show(first);
+Scene.setProgress(progress());
+const mj = document.getElementById("mj");
+function typesetAll() { if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise().catch(() => {}); }
+if (window.MathJax && MathJax.typesetPromise) typesetAll();
+else if (mj) mj.addEventListener("load", () => { if (MathJax.startup && MathJax.startup.promise) MathJax.startup.promise.then(typesetAll); else typesetAll(); });
+</script>
+</body>
+</html>
