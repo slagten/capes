@@ -1,0 +1,710 @@
+{
+ "id": "ch4",
+ "titre": "Suites (1)",
+ "introduction": "Zénon soutenait qu'Achille ne rattraperait jamais la tortue ; une suite bien posée dit à quelle seconde il la dépasse. Une suite, c'est le temps découpé en pas : regarde d'abord comment l'on passe d'un terme au suivant. Ajouter toujours le même nombre, c'est la marche arithmétique ; multiplier toujours par le même nombre, c'est la croissance géométrique ; bien des suites plus rebelles se ramènent à l'une ou à l'autre.",
+ "conclusion": "Emporte trois réflexes : reconnaître $u_{n+1} = u_n + r$ ou $u_{n+1} = q\\,u_n$, compter les termes avant de sommer, lire une boucle de seuil tour par tour. Une suite définie par récurrence n'est pas encore une démonstration par récurrence : ce raisonnement-là t'attend plus loin sur le chemin.",
+ "salles": [
+  {
+   "id": "c4r1",
+   "carte": "cramer",
+   "fond": "crepuscule",
+   "nom": "La course d'Achille",
+   "notion": "Suites arithmétiques",
+   "athena": "Une suite arithmétique avance d'un pas constant : repère ce pas $r$, et le terme général s'écrit tout seul, $u_n = u_0 + nr$.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "De la récurrence à la formule",
+       "enonce": "La suite $(u_n)$ est définie par $u_0 = -4$ et, pour tout entier naturel $n$, $u_{n+1} = u_n + 3$. Entrer $u_{100}$.",
+       "reponse": 296,
+       "indice": "On ajoute toujours le même nombre : la suite est arithmétique. Inutile de calculer les cent termes un par un.",
+       "explication": "Pour tout $n$, $u_{n+1} - u_n = 3$ : la suite est arithmétique de raison $3$ et de premier terme $u_0 = -4$. Donc $u_n = -4 + 3n$ pour tout $n$, et $u_{100} = -4 + 300 = 296$.",
+       "retenir": "$u_{n+1} = u_n + r$ pour tout $n$ : suite arithmétique, et alors $u_n = u_0 + nr$ (forme explicite)."
+      },
+      {
+       "titre": "Deux termes connus",
+       "enonce": "La suite $(u_n)$ est arithmétique, avec $u_4 = 11$ et $u_{10} = 32$. Entrer $u_0$.",
+       "reponse": -3,
+       "indice": "Entre $u_4$ et $u_{10}$, il y a $10 - 4 = 6$ pas de raison $r$.",
+       "explication": "$u_{10} - u_4 = 6r$, donc $6r = 21$ et $r = 3{,}5$. Puis $u_0 = u_4 - 4r = 11 - 14 = -3$.",
+       "retenir": "Pour une suite arithmétique, $u_n - u_p = (n - p)\\,r$ : deux termes quelconques suffisent pour trouver la raison."
+      },
+      {
+       "titre": "Compter les termes",
+       "enonce": "La suite $(u_n)_{n \\geqslant 1}$ est arithmétique, de premier terme $u_1 = 5$ et de raison $4$. Entrer le nombre de termes de cette suite compris, au sens large, entre 100 et 2027.",
+       "reponse": 482,
+       "indice": "Écris $u_n$ en fonction de $n$ (attention : le premier terme est $u_1$), puis encadre $n$.",
+       "explication": "$u_n = 5 + 4(n - 1) = 4n + 1$. On veut $100 \\leqslant 4n + 1 \\leqslant 2027$, soit $24{,}75 \\leqslant n \\leqslant 506{,}5$, c'est-à-dire $25 \\leqslant n \\leqslant 506$ pour $n$ entier. Cela fait $506 - 25 + 1 = 482$ termes, de $u_{25} = 101$ à $u_{506} = 2025$.",
+       "retenir": "Il y a $q - p + 1$ entiers de $p$ à $q$ inclus : le « $+1$ » des piquets et des intervalles."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Reconnaître une suite arithmétique",
+       "enonce": "Laquelle de ces suites, définies pour tout entier naturel $n$, est arithmétique ?",
+       "reponse": 3,
+       "choix": [
+        "$u_n = n^2 + 3$",
+        "$u_0 = 1$ et $u_{n+1} = u_n + n$",
+        "$u_n = 7 - 4n$",
+        "$u_0 = 1$ et $u_{n+1} = 3u_n$"
+       ],
+       "indice": "Calcule $u_{n+1} - u_n$ dans chaque cas : il doit être un nombre qui ne dépend pas de $n$.",
+       "explication": "Pour $u_n = 7 - 4n$, $u_{n+1} - u_n = -4$ pour tout $n$ : suite arithmétique de raison $-4$. Pour $u_n = n^2 + 3$, l'écart vaut $2n + 1$ ; pour $u_{n+1} = u_n + n$, il vaut $n$ : ces écarts dépendent de $n$. La suite $u_{n+1} = 3u_n$ est géométrique.",
+       "retenir": "Arithmétique : il existe un réel $r$ tel que, pour tout $n$, $u_{n+1} = u_n + r$. La raison ne dépend pas de $n$ : « ajouter $n$ » n'est pas « ajouter une constante »."
+      },
+      {
+       "titre": "Le prix du forage",
+       "enonce": "Pour creuser un puits à Petite-Terre, le premier mètre coûte 50 € et chaque mètre coûte 8 € de plus que le précédent. Entrer le prix du 20e mètre, en euros.",
+       "reponse": 202,
+       "unite": "€",
+       "indice": "Note $p_1 = 50$ le prix du premier mètre. Combien de hausses de 8 € y a-t-il entre le 1er et le 20e mètre ?",
+       "explication": "Les prix forment une suite arithmétique de premier terme $p_1 = 50$ et de raison $8$, donc $p_n = 50 + 8(n - 1)$. Ainsi $p_{20} = 50 + 19 \\times 8 = 202$ €. Le piège : $50 + 20 \\times 8 = 210$ compte une hausse de trop.",
+       "retenir": "Si le premier terme est $u_1$, alors $u_n = u_1 + (n - 1)\\,r$ : il y a $n - 1$ pas entre le premier et le $n$-ième terme."
+      },
+      {
+       "titre": "La course d'Achille",
+       "enonce": "Achille court à 10 m/s ; la tortue avance à 1 m/s, mais part avec 100 m d'avance. Le programme Python suivant suit leurs positions seconde après seconde. Entrer la valeur affichée.\n\n```\na = 0\nt = 100\nn = 0\nwhile a < t:\n    a = a + 10\n    t = t + 1\n    n = n + 1\nprint(n)\n```",
+       "reponse": 12,
+       "indice": "Après $n$ tours de boucle, $a = 10n$ et $t = 100 + n$. La boucle s'arrête dès que $a \\geqslant t$.",
+       "explication": "Les positions forment deux suites arithmétiques : $a_n = 10n$ et $t_n = 100 + n$. La boucle tourne tant que $10n < 100 + n$, c'est-à-dire $n < \\frac{100}{9} \\approx 11{,}1$. Elle s'arrête au premier $n$ tel que $10n \\geqslant 100 + n$, soit $n = 12$ (alors $a = 120$ et $t = 112$) : le programme affiche 12.",
+       "retenir": "Une boucle « while » s'arrête au premier rang où sa condition devient fausse : le programme affiche ce rang, le plus petit qui convient."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ et $(v_n)$ sont deux suites arithmétiques, alors la suite $(u_n v_n)$ est arithmétique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Essaie avec $u_n = v_n = n$.",
+       "explication": "Faux. Contre-exemple : $u_n = v_n = n$ définissent deux suites arithmétiques (de raison 1), mais $u_n v_n = n^2$ donne $0, 1, 4$ : les écarts $1$ et $3$ ne sont pas égaux.",
+       "retenir": "La somme de deux suites arithmétiques est arithmétique (raison $r + r'$) ; leur produit, en général, ne l'est pas."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Trois réels $a$, $b$, $c$ sont, dans cet ordre, trois termes consécutifs d'une suite arithmétique si et seulement si $2b = a + c$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Traduis « consécutifs » : $b - a = c - b$.",
+       "explication": "Vrai. S'ils sont consécutifs, $b - a = c - b = r$, d'où $2b = a + c$. Réciproquement, si $2b = a + c$, alors $b - a = c - b$ ; avec $r = b - a$, la suite définie par $u_n = a + nr$ est arithmétique et $u_0 = a$, $u_1 = b$, $u_2 = c$.",
+       "retenir": "Dans une suite arithmétique, chaque terme est la moyenne de ses deux voisins : $u_n = \\frac{u_{n-1} + u_{n+1}}{2}$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ est une suite arithmétique, alors la suite $(u_{2n})$, formée de ses termes de rang pair, est arithmétique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $u_{2n}$ à l'aide de $u_0$, de la raison $r$ et de $n$.",
+       "explication": "Vrai. Si $u_n = u_0 + nr$ pour tout $n$, alors $u_{2n} = u_0 + 2nr = u_0 + n(2r)$ : la suite $(u_{2n})$ est arithmétique, de premier terme $u_0$ et de raison $2r$.",
+       "retenir": "Les termes de rang pair d'une suite arithmétique de raison $r$ forment une suite arithmétique de raison $2r$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c4r2",
+   "carte": "archimede",
+   "fond": "nuit",
+   "nom": "Le fleuve d'Héraclite",
+   "notion": "Suites géométriques",
+   "athena": "Une suite géométrique se multiplie à chaque pas par le même facteur $q$ : cherche le quotient de deux termes consécutifs, pas leur différence.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Doubler à chaque pas",
+       "enonce": "La suite $(v_n)$ est définie par $v_0 = 3$ et, pour tout entier naturel $n$, $v_{n+1} = 2v_n$. Entrer $v_6$.",
+       "reponse": 192,
+       "indice": "On multiplie toujours par le même nombre : la suite est géométrique, et $v_n = v_0 \\times q^n$.",
+       "explication": "Pour tout $n$, $v_{n+1} = 2v_n$ : la suite $(v_n)$ est géométrique de raison $2$ et de premier terme $3$. Donc $v_n = 3 \\times 2^n$ et $v_6 = 3 \\times 64 = 192$.",
+       "retenir": "$v_{n+1} = q\\,v_n$ pour tout $n$ : suite géométrique, et alors $v_n = v_0\\,q^n$."
+      },
+      {
+       "titre": "Retrouver le premier terme",
+       "enonce": "La suite $(w_n)$ est géométrique, à termes strictement positifs, avec $w_3 = 5$ et $w_5 = 45$. Entrer $w_0$, sous forme de fraction.",
+       "reponse": "5/27",
+       "indice": "$w_5 = w_3 \\times q^2$. Quelle valeur de $q$ faut-il garder ?",
+       "explication": "$q^2 = \\frac{45}{5} = 9$, donc $q = 3$ ou $q = -3$. Les termes étant positifs, $q = 3$ (avec $q = -3$, on aurait $w_4 = -15$). Puis $w_0 = \\frac{w_3}{q^3} = \\frac{5}{27}$.",
+       "retenir": "Pour une suite géométrique, $w_n = w_p\\,q^{n-p}$. Si l'on obtient $q^2$, les hypothèses servent à choisir le signe de $q$."
+      },
+      {
+       "titre": "Trois termes en progression",
+       "enonce": "Trois réels $a$, $b$, $c$ sont, dans cet ordre, trois termes consécutifs d'une suite géométrique. Leur produit vaut 216 et leur somme vaut 21. Entrer $b$.",
+       "reponse": 6,
+       "indice": "Avec la raison $q$, on a $a = \\frac{b}{q}$ et $c = bq$. Que vaut le produit $abc$ ?",
+       "explication": "Comme $a = \\frac{b}{q}$ et $c = bq$, on a $ac = b^2$, donc $abc = b^3 = 216$ et $b = 6$. La somme n'est pas utile pour $b$ : elle donne $a + c = 15$ et $ac = 36$, d'où les nombres $3, 6, 12$ (ou $12, 6, 3$).",
+       "retenir": "Trois termes consécutifs d'une suite géométrique vérifient $b^2 = ac$ : le terme du milieu est, au signe près, la moyenne géométrique de ses voisins.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Intérêts composés",
+       "enonce": "On place 1 000 € à intérêts composés au taux annuel de 3 %. On note $C_n$ le capital, en euros, au bout de $n$ années. Entrer $C_2$.",
+       "reponse": 1060.9,
+       "unite": "€",
+       "indice": "Chaque année, le capital est multiplié par $1{,}03$.",
+       "explication": "$C_{n+1} = 1{,}03\\,C_n$ : la suite $(C_n)$ est géométrique de raison $1{,}03$, et $C_n = 1000 \\times 1{,}03^n$. Donc $C_2 = 1000 \\times 1{,}0609 = 1060{,}90$ €.",
+       "retenir": "Une évolution de $t\\,\\%$ par période se modélise par une suite géométrique de raison $1 + \\frac{t}{100}$."
+      },
+      {
+       "titre": "Le taux annuel",
+       "enonce": "La population d'un village de Petite-Terre a augmenté de 21 % en deux ans, avec le même taux d'évolution chaque année. Entrer ce taux annuel, en pourcentage.",
+       "reponse": 10,
+       "unite": "%",
+       "indice": "Cherche le coefficient multiplicateur annuel $q$ tel que $q^2 = 1{,}21$.",
+       "explication": "Si $q$ est le coefficient multiplicateur annuel, $q^2 = 1{,}21$, donc $q = 1{,}1$ (car $q > 0$). Le taux annuel est de 10 %, et non de 10,5 % : les taux ne se partagent pas, les coefficients se multiplient.",
+       "retenir": "Taux moyen sur $n$ périodes : le coefficient $q$ vérifie $q^n = 1 + t$ ; ce n'est pas le taux $\\frac{t}{n}$."
+      },
+      {
+       "titre": "Le capital double",
+       "enonce": "Le programme Python suivant modélise un capital placé à 5 % par an. Entrer la valeur affichée.\n\n```\nu = 1000\nn = 0\nwhile u < 2000:\n    u = u * 1.05\n    n = n + 1\nprint(n)\n```",
+       "reponse": 15,
+       "indice": "Le programme cherche le plus petit entier $n$ tel que $1000 \\times 1{,}05^n \\geqslant 2000$. Teste $n = 14$ et $n = 15$ à la calculatrice.",
+       "explication": "Après $n$ tours de boucle, $u = 1000 \\times 1{,}05^n$. La boucle s'arrête au premier $n$ tel que $1{,}05^n \\geqslant 2$. Or $1{,}05^{14} \\approx 1{,}980 < 2$ et $1{,}05^{15} \\approx 2{,}079 \\geqslant 2$ : le programme affiche 15. Le capital double en 15 ans.",
+       "retenir": "Algorithme de seuil : $n$ compte les tours de boucle ; à la sortie, $n$ est le premier rang où la condition du « while » est fausse."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ est une suite géométrique de raison $q > 1$, alors $(u_n)$ est croissante. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Le signe du premier terme compte.",
+       "explication": "Faux. Contre-exemple : $u_0 = -1$ et $q = 2$ donnent $-1, -2, -4, \\dots$ : la suite est décroissante. En effet, $u_{n+1} - u_n = u_0\\,q^n(q - 1)$ a le signe de $u_0$ lorsque $q > 1$.",
+       "retenir": "Sens de variation d'une suite géométrique de raison $q > 0$ : c'est le signe de $u_0(q - 1)$. Ne pas oublier le signe du premier terme."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ et $(v_n)$ sont deux suites géométriques, alors la suite $(u_n v_n)$ est géométrique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $u_{n+1}v_{n+1}$ en fonction de $u_n v_n$.",
+       "explication": "Vrai. Si $u_{n+1} = q\\,u_n$ et $v_{n+1} = q'\\,v_n$ pour tout $n$, alors $u_{n+1}v_{n+1} = (qq')\\,u_n v_n$ pour tout $n$ : la suite produit est géométrique de raison $qq'$.",
+       "retenir": "Le produit de deux suites géométriques est géométrique (raison $qq'$) ; leur somme, en général, ne l'est pas."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ est une suite géométrique, alors la suite des écarts $(u_{n+1} - u_n)$ est géométrique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Factorise $u_{n+1} - u_n$ en écrivant $u_n = u_0\\,q^n$.",
+       "explication": "Vrai. Si $u_n = u_0\\,q^n$ pour tout $n$, alors $w_n = u_{n+1} - u_n = u_0(q - 1)\\,q^n$, donc $w_{n+1} = q\\,w_n$ pour tout $n$ : la suite des écarts est géométrique de raison $q$ et de premier terme $u_0(q - 1)$ (c'est la suite nulle si $q = 1$, qui est bien géométrique).",
+       "retenir": "Les écarts d'une suite géométrique de raison $q$ forment une suite géométrique de même raison $q$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c4r3",
+   "carte": "pascal",
+   "fond": "temple",
+   "nom": "Les atomes de Démocrite",
+   "notion": "Sens de variation d'une suite",
+   "athena": "Pour savoir si une suite monte ou descend, étudie le signe de $u_{n+1} - u_n$ ; si ses termes sont positifs, tu peux aussi comparer $\\frac{u_{n+1}}{u_n}$ à 1.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Une suite définie par récurrence",
+       "enonce": "La suite $(u_n)$ est définie par $u_0 = 5$ et, pour tout entier naturel $n$, $u_{n+1} = u_n - n^2 - 1$. Quel est son sens de variation ?",
+       "reponse": 2,
+       "choix": [
+        "Elle est strictement croissante.",
+        "Elle est strictement décroissante.",
+        "Elle n'est ni croissante ni décroissante.",
+        "On ne peut pas conclure sans exprimer $u_n$ en fonction de $n$."
+       ],
+       "indice": "Calcule $u_{n+1} - u_n$ : son signe suffit, nul besoin d'une formule explicite.",
+       "explication": "Pour tout $n$, $u_{n+1} - u_n = -(n^2 + 1) < 0$. La suite est donc strictement décroissante, sans qu'il soit nécessaire de connaître $u_n$ en fonction de $n$.",
+       "retenir": "Sens de variation : étudier le signe de $u_{n+1} - u_n$ pour tout $n$. Une relation de récurrence le donne souvent directement."
+      },
+      {
+       "titre": "Le plus petit terme",
+       "enonce": "Pour tout entier naturel $n$, on pose $u_n = n^2 - 9n$. Entrer le plus petit terme de la suite $(u_n)$.",
+       "reponse": -20,
+       "indice": "Étudie le signe de $u_{n+1} - u_n$. Attention : le minimum de la fonction $x \\mapsto x^2 - 9x$ n'est pas atteint en un entier.",
+       "explication": "$u_{n+1} - u_n = (n+1)^2 - 9(n+1) - n^2 + 9n = 2n - 8$ : négatif pour $n < 4$, nul pour $n = 4$, positif ensuite. La suite décroît jusqu'à $u_4 = u_5 = -20$, puis croît. Le plus petit terme est $-20$, et non $-20{,}25$, minimum de $x^2 - 9x$ atteint en $4{,}5$, qui n'est pas un entier.",
+       "retenir": "Les termes $u_n = f(n)$ ne « voient » $f$ qu'aux entiers : le minimum de $f$ sur $\\mathbb{R}$ n'est pas forcément un terme de la suite."
+      },
+      {
+       "titre": "Le plus grand terme",
+       "enonce": "Pour tout entier naturel $n$, on pose $u_n = \\frac{3^n}{n!}$, où $n! = 1 \\times 2 \\times \\cdots \\times n$ et $0! = 1$. Ces termes sont strictement positifs. Entrer le plus grand terme de la suite, sous forme de fraction ou de décimal.",
+       "reponse": "9/2",
+       "indice": "Les termes sont positifs : compare $\\frac{u_{n+1}}{u_n}$ à 1.",
+       "explication": "$\\frac{u_{n+1}}{u_n} = \\frac{3^{n+1}}{(n+1)!} \\times \\frac{n!}{3^n} = \\frac{3}{n+1}$. Ce quotient est supérieur à 1 pour $n \\leqslant 1$, égal à 1 pour $n = 2$, inférieur à 1 pour $n \\geqslant 3$. La suite croît jusqu'à $u_2 = u_3 = \\frac{9}{2}$, puis décroît : le plus grand terme est $\\frac{9}{2}$.",
+       "retenir": "Suite à termes strictement positifs : $u_{n+1} \\geqslant u_n$ si et seulement si $\\frac{u_{n+1}}{u_n} \\geqslant 1$. Le quotient est plus commode avec des puissances ou des factorielles."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Une suite qui n'est pas croissante est décroissante. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Une suite peut monter puis descendre, ou osciller.",
+       "explication": "Faux. Contre-exemple : $u_n = (-1)^n$ donne $1, -1, 1, \\dots$ ; elle n'est ni croissante ($u_1 < u_0$) ni décroissante ($u_2 > u_1$). La négation de « croissante » est « il existe $n$ tel que $u_{n+1} < u_n$ », et non « décroissante ».",
+       "retenir": "« Non croissante » ne veut pas dire « décroissante » : une suite peut n'être ni l'une ni l'autre."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction définie sur $[0\\,;+\\infty[$. Si la suite définie par $u_n = f(n)$ est croissante, alors $f$ est croissante sur $[0\\,;+\\infty[$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "La suite ne voit $f$ qu'aux entiers. Entre $0$ et $1$, $f$ peut descendre.",
+       "explication": "Faux. Contre-exemple : $f(x) = \\left(x - \\frac{1}{3}\\right)^2$. La suite $u_n = f(n)$ est croissante, car $f(0) = \\frac{1}{9} < f(1) = \\frac{4}{9}$ et $f$ est croissante sur $\\left[\\frac{1}{3}\\,;+\\infty\\right[$ ; pourtant $f$ est décroissante sur $\\left[0\\,;\\frac{1}{3}\\right]$.",
+       "retenir": "Si $f$ est croissante sur $[0\\,;+\\infty[$, alors la suite $(f(n))$ est croissante ; la réciproque est fausse."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Une suite géométrique de raison $q$, avec $0 < q < 1$, et de premier terme $u_0 < 0$ est croissante. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Factorise $u_{n+1} - u_n$ et étudie le signe de chaque facteur.",
+       "explication": "Vrai. Pour tout $n$, $u_{n+1} - u_n = u_0\\,q^n\\,(q - 1)$. Or $u_0 < 0$, $q^n > 0$ et $q - 1 < 0$ : ce produit est strictement positif. La suite est même strictement croissante, par exemple $-8, -4, -2, -1, \\dots$ pour $u_0 = -8$ et $q = \\frac{1}{2}$.",
+       "retenir": "Une suite géométrique de raison $q$ entre 0 et 1 se rapproche de 0 : elle décroît si $u_0 > 0$, elle croît si $u_0 < 0$."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "Une démonstration trop rapide",
+     "enonce": "La suite $(u_n)$ est définie par $u_0 = 2$ et, pour tout entier naturel $n$, $u_{n+1} = f(u_n)$, où $f(x) = \\frac{1}{2}x + 3$. Un élève écrit : « La fonction $f$ est croissante, donc la suite $(u_n)$ est croissante. » Que penser de sa réponse ?",
+     "reponse": 4,
+     "choix": [
+      "Le raisonnement et la conclusion sont corrects.",
+      "La conclusion est fausse : la suite est décroissante.",
+      "La conclusion est fausse : la suite n'est pas monotone.",
+      "La conclusion est vraie, mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, la suite décroît."
+     ],
+     "indice": "Calcule quelques termes avec $u_0 = 2$, puis avec $u_0 = 8$.",
+     "explication": "Avec $u_0 = 2$ : $u_1 = 4$, $u_2 = 5$, $u_3 = 5{,}5$. La conclusion est vraie : $v_n = u_n - 6$ définit une suite géométrique de raison $\\frac{1}{2}$, d'où $u_n = 6 - 4 \\times 0{,}5^n$ et $u_{n+1} - u_n = 2 \\times 0{,}5^n > 0$. Mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, on obtient $8, 7, 6{,}5, \\dots$, qui décroît. Pour une suite définie par récurrence, $u_{n+1} = f(u_n)$ avec $f$ croissante, le sens de variation se lit en comparant $u_0$ et $u_1$ ; ce résultat général se démontre par un raisonnement par récurrence, vu en Terminale.",
+     "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas, à lui seul, le sens de variation : il faut aussi comparer $u_0$ et $u_1$."
+    }
+   ]
+  },
+  {
+   "id": "c4r4",
+   "carte": "fermat",
+   "fond": "jardin",
+   "nom": "Les Pensées de Marc Aurèle",
+   "notion": "Sommes de termes",
+   "athena": "Avant de sommer, compte les termes. Une somme arithmétique vaut le nombre de termes fois la moyenne du premier et du dernier.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "La somme de Gauss",
+       "enonce": "On pose $S = 1 + 2 + 3 + \\cdots + 200$. Entrer $S$.",
+       "reponse": 20100,
+       "indice": "Écris la somme à l'endroit puis à l'envers, et additionne terme à terme.",
+       "explication": "$1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$, donc $S = \\frac{200 \\times 201}{2} = 20\\,100$. On le voit en écrivant $2S = (1 + 200) + (2 + 199) + \\cdots + (200 + 1) = 200 \\times 201$.",
+       "retenir": "$1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$ : à savoir redémontrer en écrivant la somme dans les deux sens."
+      },
+      {
+       "titre": "Compter avant de sommer",
+       "enonce": "On pose $S = 7 + 11 + 15 + \\cdots + 203$, somme de termes consécutifs d'une suite arithmétique. Entrer $S$.",
+       "reponse": 5250,
+       "indice": "Combien y a-t-il de termes ? Pour quel entier $k$ a-t-on $203 = 7 + 4k$ ?",
+       "explication": "Les termes s'écrivent $7 + 4k$ et $203 = 7 + 4 \\times 49$ : $k$ va de $0$ à $49$, soit 50 termes. Donc $S = 50 \\times \\frac{7 + 203}{2} = 50 \\times 105 = 5250$.",
+       "retenir": "Somme de termes consécutifs d'une suite arithmétique : nombre de termes $\\times \\frac{\\text{premier} + \\text{dernier}}{2}$."
+      },
+      {
+       "titre": "La pyramide de gobelets",
+       "enonce": "Des élèves du collège de Mamoudzou disposent de 2 027 gobelets pour bâtir une pyramide : 1 gobelet sur la rangée du haut, 2 sur la suivante, 3 sur la suivante, et ainsi de suite, chaque rangée étant complète. Entrer le nombre maximal de rangées.",
+       "reponse": 63,
+       "indice": "Avec $n$ rangées, il faut $1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$ gobelets. Cherche le plus grand $n$ tel que $n(n+1) \\leqslant 4054$.",
+       "explication": "Il faut $\\frac{n(n+1)}{2} \\leqslant 2027$, soit $n(n+1) \\leqslant 4054$. Comme $63 \\times 64 = 4032 \\leqslant 4054$ et $64 \\times 65 = 4160 > 4054$, on obtient $n = 63$ : la pyramide utilise $2016$ gobelets et il en reste $11$.",
+       "retenir": "Un seuil sur une somme $\\frac{n(n+1)}{2}$ mène à une inéquation du second degré ; on conclut en testant deux entiers consécutifs."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Les puissances de 2",
+       "enonce": "On pose $S = 1 + 2 + 2^2 + \\cdots + 2^{10}$. Entrer $S$.",
+       "reponse": 2047,
+       "indice": "Utilise $1 + q + \\cdots + q^n = \\frac{q^{n+1} - 1}{q - 1}$ avec $q = 2$. Combien y a-t-il de termes ?",
+       "explication": "Avec $q = 2$ et $n = 10$, soit 11 termes : $S = \\frac{2^{11} - 1}{2 - 1} = 2048 - 1 = 2047$.",
+       "retenir": "Pour $q \\neq 1$, $1 + q + \\cdots + q^n = \\frac{1 - q^{n+1}}{1 - q}$ : il y a $n + 1$ termes, d'où l'exposant $n + 1$."
+      },
+      {
+       "titre": "Des signes alternés",
+       "enonce": "On pose $S = 1 - 2 + 4 - 8 + \\cdots + 1024$, dont les termes sont les puissances successives de $-2$, de $(-2)^0$ à $(-2)^{10}$. Entrer $S$.",
+       "reponse": 683,
+       "indice": "C'est la somme $1 + q + \\cdots + q^{10}$ avec $q = -2$.",
+       "explication": "$S = \\frac{1 - (-2)^{11}}{1 - (-2)} = \\frac{1 + 2048}{3} = \\frac{2049}{3} = 683$. Attention au signe : $(-2)^{11} = -2048$, car l'exposant est impair.",
+       "retenir": "La formule $\\frac{1 - q^{n+1}}{1 - q}$ vaut pour tout $q \\neq 1$, négatif compris : surveiller la parité de l'exposant."
+      },
+      {
+       "titre": "Versements réguliers",
+       "enonce": "Chaque 1er janvier, de 2027 à 2036, on verse 1 000 € sur un compte rémunéré à 2 % par an (intérêts composés, versés chaque 31 décembre). Entrer le capital disponible juste après le versement de 2036, en euros, arrondi au centime.",
+       "reponse": 10949.72,
+       "tolerance": 0.005,
+       "unite": "€",
+       "indice": "Le versement de 2027 a rapporté des intérêts pendant 9 ans, celui de 2028 pendant 8 ans… et celui de 2036 pendant 0 an.",
+       "explication": "Juste après le versement de 2036, le capital vaut $1000\\,(1 + 1{,}02 + \\cdots + 1{,}02^9) = 1000 \\times \\frac{1{,}02^{10} - 1}{0{,}02} \\approx 10\\,949{,}72$ €. Il y a 10 versements, donc 10 termes, de $1{,}02^0$ à $1{,}02^9$.",
+       "retenir": "Des versements réguliers capitalisés conduisent à une somme géométrique : repérer avec soin le premier et le dernier exposant."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n \\geqslant 1$, $1 + 3 + 5 + \\cdots + (2n - 1) = n^2$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "C'est la somme de $n$ termes consécutifs d'une suite arithmétique de raison 2.",
+       "explication": "Vrai. Les $n$ nombres impairs de $1$ à $2n - 1$ sont des termes consécutifs d'une suite arithmétique de raison 2. Leur somme vaut $n \\times \\frac{1 + (2n - 1)}{2} = n \\times n = n^2$.",
+       "retenir": "La somme des $n$ premiers entiers impairs vaut $n^2$ : les carrés emboîtés des pythagoriciens."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $q$ et tout entier naturel $n$, $1 + q + q^2 + \\cdots + q^n = \\frac{1 - q^{n+1}}{1 - q}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Un cas limite rend la formule inutilisable.",
+       "explication": "Faux. Pour $q = 1$, le membre de droite n'est pas défini (division par $0$), alors que la somme vaut $1 + 1 + \\cdots + 1 = n + 1$. La formule n'est valable que pour $q \\neq 1$.",
+       "retenir": "Somme géométrique : traiter à part le cas $q = 1$, où $1 + q + \\cdots + q^n = n + 1$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n \\geqslant 1$, $\\sum_{k=1}^{n} (2k + 1) = 2\\sum_{k=1}^{n} k + 1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste $n = 2$. Combien de fois le $1$ est-il ajouté ?",
+       "explication": "Faux. Contre-exemple : pour $n = 2$, le membre de gauche vaut $3 + 5 = 8$ et celui de droite $2 \\times 3 + 1 = 7$. En fait, $\\sum_{k=1}^{n} (2k + 1) = 2\\sum_{k=1}^{n} k + \\sum_{k=1}^{n} 1 = n(n+1) + n$ : la constante est ajoutée $n$ fois.",
+       "retenir": "Linéarité : $\\sum_{k=1}^{n} (a\\,u_k + b) = a\\sum_{k=1}^{n} u_k + nb$. La constante compte autant de fois qu'il y a de termes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c4b",
+   "carte": "boss-nightingale",
+   "fond": "mer",
+   "nom": "Les lettres de Sénèque",
+   "notion": "Problème : modélisation par une suite, seuil, algorithme",
+   "athena": "Modéliser, c'est traduire une phrase en relation de récurrence ; une suite auxiliaire bien choisie rend ensuite la suite explicite.",
+   "steles": [
+    {
+     "boss": "Méduse la Gorgone",
+     "monstre": "meduse",
+     "contexte": "Une association replante la mangrove d'une baie de Mayotte. En 2025, la baie compte 1 000 jeunes palétuviers. Chaque année, 10 % des palétuviers meurent et l'association en plante 400 nouveaux. On note $u_n$ le nombre de palétuviers l'année $2025 + n$ : ainsi $u_0 = 1000$ et, pour tout entier naturel $n$, $u_{n+1} = 0{,}9\\,u_n + 400$.",
+     "exercices": [
+      {
+       "titre": "Premiers termes",
+       "enonce": "Entrer $u_2$.",
+       "reponse": 1570,
+       "indice": "Calcule d'abord $u_1$ avec la relation de récurrence.",
+       "explication": "$u_1 = 0{,}9 \\times 1000 + 400 = 1300$, puis $u_2 = 0{,}9 \\times 1300 + 400 = 1170 + 400 = 1570$.",
+       "retenir": "Une suite définie par récurrence se calcule de proche en proche : chaque terme exige le précédent."
+      },
+      {
+       "titre": "Arithmétique ou géométrique ?",
+       "enonce": "La suite $(u_n)$ est-elle arithmétique ou géométrique ? On rappelle que $u_0 = 1000$, $u_1 = 1300$ et $u_2 = 1570$.",
+       "reponse": 1,
+       "choix": [
+        "Ni arithmétique ni géométrique.",
+        "Arithmétique de raison 300.",
+        "Géométrique de raison $1{,}3$.",
+        "À la fois arithmétique et géométrique."
+       ],
+       "indice": "Compare $u_1 - u_0$ et $u_2 - u_1$, puis $\\frac{u_1}{u_0}$ et $\\frac{u_2}{u_1}$.",
+       "explication": "$u_1 - u_0 = 300$ mais $u_2 - u_1 = 270$ : la suite n'est pas arithmétique. $\\frac{u_1}{u_0} = 1{,}3$ mais $\\frac{u_2}{u_1} = \\frac{1570}{1300} \\approx 1{,}21$ : elle n'est pas géométrique. Trois termes suffisent pour le prouver ; ils ne suffiraient pas, en revanche, pour prouver qu'une suite est arithmétique.",
+       "retenir": "Pour montrer qu'une suite n'est pas arithmétique (ou géométrique), trois termes consécutifs suffisent ; pour montrer qu'elle l'est, il faut un calcul valable pour tout $n$."
+      },
+      {
+       "titre": "La suite auxiliaire",
+       "enonce": "On pose, pour tout entier naturel $n$, $v_n = u_n - 4000$. Démontrer que la suite $(v_n)$ est géométrique, en déduire $u_n$ en fonction de $n$, puis entrer $u_{10}$ arrondi à l'unité.",
+       "reponse": 2954,
+       "tolerance": 0.01,
+       "indice": "Exprime $v_{n+1} = u_{n+1} - 4000$ à l'aide de $u_n$, puis fais apparaître $u_n - 4000$.",
+       "explication": "$v_{n+1} = 0{,}9\\,u_n + 400 - 4000 = 0{,}9\\,u_n - 3600 = 0{,}9\\,(u_n - 4000) = 0{,}9\\,v_n$ : $(v_n)$ est géométrique de raison $0{,}9$ et de premier terme $v_0 = -3000$. Donc $v_n = -3000 \\times 0{,}9^n$ et $u_n = 4000 - 3000 \\times 0{,}9^n$. Ainsi $u_{10} = 4000 - 3000 \\times 0{,}9^{10} \\approx 2953{,}96$, soit environ 2954 palétuviers.",
+       "retenir": "Méthode de la suite auxiliaire : montrer que $(v_n)$ est géométrique, écrire $v_n$ en fonction de $n$, puis revenir à $u_n$."
+      },
+      {
+       "titre": "Le seuil",
+       "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On considère la fonction Python ci-dessous. Entrer la valeur renvoyée par seuil(3000).\n\n```\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n\n```",
+       "reponse": 11,
+       "indice": "seuil(3000) renvoie le plus petit $n$ tel que $u_n \\geqslant 3000$, c'est-à-dire tel que $0{,}9^n \\leqslant \\frac{1}{3}$.",
+       "explication": "La fonction renvoie le plus petit $n$ tel que $u_n \\geqslant 3000$, soit $3000 \\times 0{,}9^n \\leqslant 1000$, c'est-à-dire $0{,}9^n \\leqslant \\frac{1}{3}$. Or $0{,}9^{10} \\approx 0{,}349 > \\frac{1}{3}$ et $0{,}9^{11} \\approx 0{,}314 \\leqslant \\frac{1}{3}$ : seuil(3000) renvoie 11. La baie comptera au moins 3 000 palétuviers en 2036.",
+       "retenir": "Une fonction de seuil renvoie le premier rang où la condition du « while » devient fausse ; on le retrouve en résolvant une inéquation."
+      },
+      {
+       "titre": "Une boucle sans fin",
+       "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On reprend la fonction Python ci-dessous. Entrer le plus petit entier $s$ pour lequel l'appel seuil(s) ne se termine jamais.\n\n```\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n\n```",
+       "reponse": 4000,
+       "indice": "Les termes $u_n$ peuvent-ils atteindre 4 000 ? Peuvent-ils atteindre 3 999 ?",
+       "explication": "Pour tout $n$, $3000 \\times 0{,}9^n > 0$, donc $u_n < 4000$ : si $s \\geqslant 4000$, la condition $u < s$ reste vraie et la boucle ne s'arrête jamais. Si $s \\leqslant 3999$, il suffit que $3000 \\times 0{,}9^n \\leqslant 1$, ce qui arrive dès $n = 76$ : alors $u_n \\geqslant 3999 \\geqslant s$ et la boucle s'arrête. Le plus petit entier cherché est 4000.",
+       "retenir": "Avant de lancer une boucle de seuil, vérifier que le seuil est atteignable : sinon le programme ne s'arrête jamais."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Le programme Python ci-dessous affiche 5. »\n\n```\nn = 0\ns = 0\nwhile s < 20:\n    n = n + 1\n    s = s + n\nprint(n)\n```",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris les valeurs de $n$ et de $s$ après chaque tour de boucle.",
+       "explication": "Faux. Les valeurs successives de $(n, s)$ sont $(1, 1)$, $(2, 3)$, $(3, 6)$, $(4, 10)$, $(5, 15)$, $(6, 21)$. Avec $s = 15$, on a encore $s < 20$ : la boucle fait un tour de plus. Elle s'arrête à $s = 21$ et le programme affiche 6, le plus petit $n$ tel que $1 + 2 + \\cdots + n \\geqslant 20$.",
+       "retenir": "Pour lire un programme, dresser le tableau des valeurs des variables tour par tour, en testant la condition au début de chaque tour."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $(u_n)$ une suite telle que, pour tout entier naturel $n$, $u_{n+1} = 2u_n + 3$. Alors la suite $(u_n + 3)$ est géométrique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Calcule $u_{n+1} + 3$ et factorise.",
+       "explication": "Vrai. Pour tout $n$, $u_{n+1} + 3 = 2u_n + 6 = 2(u_n + 3)$ : la suite $(u_n + 3)$ est géométrique de raison $2$, quel que soit $u_0$. On en déduit $u_n = (u_0 + 3) \\times 2^n - 3$.",
+       "retenir": "Pour $u_{n+1} = a\\,u_n + b$ avec $a \\neq 1$, chercher le réel $\\ell$ tel que $\\ell = a\\ell + b$ (ici $\\ell = -3$) : la suite $(u_n - \\ell)$ est géométrique de raison $a$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Une suite à la fois arithmétique et géométrique est constante. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $u_{n+1}$ de deux façons, avec la raison $r$ et avec la raison $q$.",
+       "explication": "Vrai. Si $u_{n+1} = u_n + r$ et $u_{n+1} = q\\,u_n$ pour tout $n$, alors $r = (q - 1)\\,u_n$ pour tout $n$. Si $q = 1$, alors $r = 0$ ; sinon, $u_n = \\frac{r}{q - 1}$ pour tout $n$. Dans les deux cas, la suite est constante.",
+       "retenir": "Pour exploiter une relation vraie « pour tout $n$ », isoler $u_n$ : ici $r = (q - 1)\\,u_n$ force la suite à être constante."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c4s",
+   "carte": "sanct-figures",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire d'Archytas",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Ici, une somme cache une équation, une récurrence cache une suite auxiliaire. Et le futur professeur doit savoir dire pourquoi une erreur en est une.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Somme et produit",
+       "enonce": "Trois nombres sont trois termes consécutifs d'une suite arithmétique. Leur somme vaut 15 et leur produit vaut 80. Entrer le plus grand des trois.",
+       "reponse": 8,
+       "indice": "Note-les $b - r$, $b$, $b + r$ : la somme donne $b$ tout de suite.",
+       "explication": "$(b - r) + b + (b + r) = 3b = 15$, donc $b = 5$. Puis $(5 - r) \\times 5 \\times (5 + r) = 5(25 - r^2) = 80$, d'où $r^2 = 9$ et $r = 3$ ou $r = -3$. Les nombres sont $2, 5, 8$ (ou $8, 5, 2$) : le plus grand est $8$.",
+       "retenir": "Trois termes consécutifs d'une suite arithmétique : les noter $b - r$, $b$, $b + r$ ; la symétrie simplifie les calculs."
+      },
+      {
+       "titre": "Arithmétique et géométrique",
+       "enonce": "Soit $q$ un réel différent de 1. Les nombres $1$, $q$ et $q^2$ sont respectivement les termes $a_0$, $a_1$ et $a_3$ d'une suite arithmétique $(a_n)$. Entrer $q$.",
+       "reponse": 2,
+       "indice": "La raison de $(a_n)$ est $q - 1$. Écris $a_3$ de deux façons.",
+       "explication": "La raison est $r = a_1 - a_0 = q - 1$, donc $a_3 = 1 + 3(q - 1) = 3q - 2$. On veut $q^2 = 3q - 2$, soit $q^2 - 3q + 2 = (q - 1)(q - 2) = 0$. Comme $q \\neq 1$, $q = 2$. Vérification : la suite $1, 2, 3, 4, \\dots$ convient, avec $a_3 = 4 = 2^2$.",
+       "retenir": "Traduire « sont des termes d'une suite » en équations sur la raison ; un second degré apparaît souvent, avec une racine à écarter."
+      },
+      {
+       "titre": "Combien de termes ?",
+       "enonce": "On additionne les termes successifs de la suite arithmétique $5, 9, 13, 17, \\dots$ en partant du premier, et l'on obtient exactement 189. Entrer le nombre de termes additionnés.",
+       "reponse": 9,
+       "indice": "Le $n$-ième terme est $4n + 1$ : la somme des $n$ premiers termes vaut $n \\times \\frac{5 + (4n + 1)}{2}$.",
+       "explication": "La somme des $n$ premiers termes vaut $n \\times \\frac{5 + 4n + 1}{2} = n(2n + 3)$. On résout $2n^2 + 3n - 189 = 0$ : $\\Delta = 9 + 1512 = 1521 = 39^2$, d'où $n = \\frac{-3 + 39}{4} = 9$ (l'autre racine, $-10{,}5$, est à rejeter). Vérification : $9 \\times 21 = 189$.",
+       "retenir": "La somme de $n$ termes d'une suite arithmétique est un polynôme du second degré en $n$ : trouver $n$, c'est résoudre une équation du second degré.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une suite homographique",
+       "enonce": "La suite $(u_n)$ est définie par $u_0 = 1$ et, pour tout entier naturel $n$, $u_{n+1} = \\frac{u_n}{1 + u_n}$. On admet que $u_n > 0$ pour tout $n$, et on pose $v_n = \\frac{1}{u_n}$. Entrer $u_{2026}$, sous forme de fraction.",
+       "reponse": "1/2027",
+       "indice": "Calcule $v_{n+1} = \\frac{1}{u_{n+1}}$ et simplifie : quelle est la nature de la suite $(v_n)$ ?",
+       "explication": "$v_{n+1} = \\frac{1 + u_n}{u_n} = \\frac{1}{u_n} + 1 = v_n + 1$ : la suite $(v_n)$ est arithmétique de raison $1$, avec $v_0 = 1$. Donc $v_n = n + 1$ et $u_n = \\frac{1}{n + 1}$, d'où $u_{2026} = \\frac{1}{2027}$.",
+       "retenir": "Une suite auxiliaire bien choisie (ici l'inverse) transforme une récurrence compliquée en suite arithmétique ou géométrique."
+      },
+      {
+       "titre": "Une récurrence qui se télescope",
+       "enonce": "La suite $(u_n)$ est définie par $u_0 = 1$ et, pour tout entier naturel $n$, $u_{n+1} = u_n + 2n + 3$. Entrer $u_{20}$.",
+       "reponse": 441,
+       "indice": "$u_{20} - u_0$ est la somme des écarts $u_{k+1} - u_k = 2k + 3$, pour $k$ allant de $0$ à $19$.",
+       "explication": "$u_{20} = u_0 + \\sum_{k=0}^{19} (2k + 3) = 1 + 2 \\times \\frac{19 \\times 20}{2} + 3 \\times 20 = 1 + 380 + 60 = 441$. Plus généralement, $u_n = 1 + n(n - 1) + 3n = (n + 1)^2$.",
+       "retenir": "Si $u_{k+1} - u_k = d_k$ pour tout $k$, alors $u_n = u_0 + \\sum_{k=0}^{n-1} d_k$ : les termes intermédiaires se télescopent."
+      },
+      {
+       "titre": "Deux propositions de salaire",
+       "enonce": "Contrat A : un salaire annuel de 30 000 € la première année, puis 1 500 € de plus chaque année. Contrat B : 30 000 € la première année, puis une hausse de 4 % par an. Entrer la valeur affichée par le programme Python ci-dessous.\n\n```\na = 30000\nb = 30000\nn = 0\nwhile b <= a:\n    a = a + 1500\n    b = b * 1.04\n    n = n + 1\nprint(n)\n```",
+       "reponse": 12,
+       "indice": "Le programme cherche le plus petit $n \\geqslant 1$ tel que $30\\,000 \\times 1{,}04^n > 30\\,000 + 1500n$. Compare les deux salaires pour $n = 11$ et $n = 12$.",
+       "explication": "Au départ $a = b$, donc on entre dans la boucle. Après $n$ tours, $a = 30\\,000 + 1500n$ (suite arithmétique) et $b = 30\\,000 \\times 1{,}04^n$ (suite géométrique). On a $b \\leqslant a$ pour $n$ de 1 à 11 (pour $n = 11$ : $b \\approx 46\\,184$ et $a = 46\\,500$), puis, pour $n = 12$ : $b \\approx 48\\,031 > a = 48\\,000$. Le programme affiche 12.",
+       "retenir": "Une suite géométrique de raison $q > 1$ et de premier terme strictement positif peut partir plus lentement, mais elle finit par dépasser une suite arithmétique."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Presque géométrique",
+       "enonce": "Un élève affirme : « La suite définie pour tout entier naturel $n$ par $u_n = 3 \\times 2^n + 1$ est géométrique de raison 2, puisqu'on y voit $2^n$. » Quelle est la meilleure réponse du professeur ?",
+       "reponse": 3,
+       "choix": [
+        "Il a raison : on multiplie par 2 à chaque étape.",
+        "Il a raison, mais la raison est 3 et non 2.",
+        "Il a tort : $u_0 = 4$, $u_1 = 7$, $u_2 = 13$ et $\\frac{7}{4} \\neq \\frac{13}{7}$ ; c'est la suite $(u_n - 1)$ qui est géométrique de raison 2.",
+        "Il a tort : la suite est arithmétique de raison 3."
+       ],
+       "indice": "Calcule les trois premiers termes et leurs quotients successifs.",
+       "explication": "$u_0 = 4$, $u_1 = 7$, $u_2 = 13$ : les quotients $\\frac{7}{4}$ et $\\frac{13}{7}$ diffèrent, donc la suite n'est pas géométrique ; elle n'est pas non plus arithmétique ($3 \\neq 6$). En fait $u_{n+1} = 2u_n - 1$ : la constante $+1$ casse la structure. C'est la suite $(u_n - 1)$, égale à $(3 \\times 2^n)$, qui est géométrique de raison 2.",
+       "retenir": "Une suite $u_n = a\\,q^n + b$ avec $b \\neq 0$ n'est en général pas géométrique : c'est $(u_n - b)$ qui l'est."
+      },
+      {
+       "titre": "Convaincre une classe",
+       "enonce": "Une élève affirme : « J'ai vérifié que $u_1 > u_0$, $u_2 > u_1$ et $u_3 > u_2$, donc la suite est croissante. » Quelle suite, définie pour tout entier naturel $n$, choisir comme contre-exemple pour convaincre la classe ?",
+       "reponse": 4,
+       "choix": [
+        "$u_n = n^2$",
+        "$u_n = (-1)^n$",
+        "$u_n = 2^n$",
+        "$u_n = 6n - n^2$"
+       ],
+       "indice": "Il faut une suite qui vérifie les trois inégalités de l'élève, mais qui n'est pas croissante.",
+       "explication": "$u_n = 6n - n^2$ donne $0, 5, 8, 9, 8, 5, \\dots$ : on a bien $u_0 < u_1 < u_2 < u_3$, mais $u_4 < u_3$. Les suites $(n^2)$ et $(2^n)$ sont croissantes, donc ne contredisent rien, et $((-1)^n)$ ne vérifie pas l'hypothèse, puisque $u_1 < u_0$.",
+       "retenir": "Un bon contre-exemple vérifie toutes les hypothèses et contredit la conclusion ; quelques vérifications ne prouvent pas un « pour tout $n$ »."
+      },
+      {
+       "titre": "Du collège au lycée",
+       "enonce": "En classe de Première, quel lien exact entre les suites arithmétiques et les fonctions affines du collège le professeur peut-il énoncer ?",
+       "reponse": 2,
+       "choix": [
+        "Une suite arithmétique traduit toujours une situation de proportionnalité entre $n$ et $u_n$.",
+        "Les points de coordonnées $(n\\,;u_n)$ d'une suite arithmétique de raison $r$ sont alignés sur une droite de coefficient directeur $r$, car $u_n = f(n)$ avec $f(x) = rx + u_0$.",
+        "Les points de coordonnées $(n\\,;u_n)$ d'une suite géométrique sont alignés, sur une droite de coefficient directeur $q$.",
+        "Une suite arithmétique est associée à une fonction affine seulement si sa raison est positive."
+       ],
+       "indice": "Écris $u_n$ en fonction de $n$ et compare avec $f(x) = ax + b$.",
+       "explication": "$u_n = u_0 + nr = f(n)$ avec $f(x) = rx + u_0$ : une suite arithmétique est la restriction aux entiers naturels d'une fonction affine, quelle que soit sa raison. Ses points sont alignés sur une droite de coefficient directeur $r$. Il n'y a proportionnalité que si $u_0 = 0$, et les points d'une suite géométrique non constante ne sont pas alignés.",
+       "retenir": "Suite arithmétique : croissance linéaire (fonction affine) ; suite géométrique : croissance exponentielle. Un lien à faire vivre du collège au lycée."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Il existe une suite géométrique dont les nombres 1, 2 et 3 sont trois termes, pas forcément consécutifs. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Si $u_i = 1$, alors $2 = q^m$ et $3 = q^p$ pour des entiers $m$ et $p$ non nuls. Élimine $q$ en élevant à des puissances.",
+       "explication": "Faux. Par l'absurde, soit $(u_n)$ géométrique de raison $q$, avec $u_i = 1$, $u_j = 2$ et $u_k = 3$.\n1) $q \\neq 0$ : sinon, tous les termes après $u_0$ sont nuls.\n2) Comme $u_j = u_i\\,q^{j-i}$ et $u_k = u_i\\,q^{k-i}$ : $q^m = 2$ et $q^p = 3$, où $m = j - i$ et $p = k - i$ sont des entiers non nuls (indices distincts).\n3) Donc $2^p = (q^m)^p = (q^p)^m = 3^m$.\n4) Si $m > 0$ et $p > 0$ : $2^p$ est pair et $3^m$ impair. Impossible.\n5) Si $m < 0$ et $p < 0$ : $2^{-p} = 3^{-m}$, même contradiction.\n6) Si $m$ et $p$ sont de signes contraires : l'un des nombres $2^p$, $3^m$ est supérieur à 1, l'autre inférieur à 1. Impossible.\nAucune suite géométrique ne contient 1, 2 et 3.",
+       "retenir": "Pour prouver une impossibilité, raisonner par l'absurde jusqu'à une contradiction arithmétique simple : parité, décomposition en facteurs premiers."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $(u_n)$ et $(v_n)$ sont deux suites croissantes, alors la suite $(u_n v_n)$ est croissante. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense à des termes négatifs.",
+       "explication": "Faux. Contre-exemple : $u_n = v_n = n - 3$ définissent deux suites croissantes, mais leur produit $(n - 3)^2$ vaut $9, 4, 1, 0, 1, \\dots$ : il commence par décroître. Le résultat devient vrai si les deux suites sont croissantes et à termes positifs.",
+       "retenir": "La somme de deux suites croissantes est croissante ; leur produit ne l'est à coup sûr que si leurs termes sont positifs."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n \\geqslant 1$, $n$ divise $1 + 2 + \\cdots + n$ si et seulement si $n$ est impair. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "$1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$. Distingue le cas $n$ impair et le cas $n = 2m$.",
+       "explication": "Vrai. Si $n$ est impair, $\\frac{n+1}{2}$ est entier et $\\frac{n(n+1)}{2} = n \\times \\frac{n+1}{2}$ est un multiple de $n$. Si $n = 2m$, la somme vaut $m(2m + 1)$ ; si $2m$ la divisait, on aurait $m(2m + 1) = 2mk$ pour un entier $k$, soit $2m + 1 = 2k$ : impossible, car $2m + 1$ est impair.",
+       "retenir": "Pour une équivalence, démontrer les deux sens ; ici, la disjonction des cas pair et impair fait tout le travail."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,727 @@
+{
+ "id": "ch5",
+ "titre": "Dérivation",
+ "introduction": "Dériver, c'est regarder une courbe de si près qu'elle se confond avec une droite : sa tangente. Le nombre dérivé en donne la pente ; la dérivée, lue sur tout un intervalle, raconte les variations. Cette semaine, tu apprends à lire le mouvement d'une fonction : c'est le cœur de toute étude de fonction aux écrits.",
+ "conclusion": "Emporte le chemin entier : taux d'accroissement, nombre dérivé, tangente, dérivée, signe, variations, extremums. Et garde la prudence du géomètre : une dérivée nulle n'annonce pas toujours un extremum, et une fonction n'est pas toujours dérivable là où elle est définie.",
+ "salles": [
+  {
+   "id": "c5r1",
+   "carte": "stevin",
+   "fond": "jardin",
+   "nom": "L'école d'Épictète",
+   "notion": "Taux d'accroissement, nombre dérivé",
+   "athena": "Le nombre dérivé n'est pas une formule : c'est la limite d'un taux d'accroissement. Quand les règles de calcul se taisent, reviens à la définition.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Pente d'une sécante",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2 - 3x$. Entrer le taux d'accroissement de $f$ entre $1$ et $4$.",
+       "reponse": 2,
+       "indice": "Calcule $\\frac{f(4) - f(1)}{4 - 1}$.",
+       "explication": "$f(4) = 16 - 12 = 4$ et $f(1) = 1 - 3 = -2$, donc $\\frac{f(4) - f(1)}{4 - 1} = \\frac{4 - (-2)}{3} = 2$. C'est le coefficient directeur de la sécante passant par les points de la courbe d'abscisses 1 et 4.",
+       "retenir": "Taux d'accroissement de $f$ entre $a$ et $b$ : $\\frac{f(b) - f(a)}{b - a}$, la pente de la sécante."
+      },
+      {
+       "titre": "De la sécante à la tangente",
+       "enonce": "Soit $f$ la fonction inverse : $f(x) = \\frac{1}{x}$ pour $x \\neq 0$. Pour $h$ réel non nul avec $h > -2$, simplifier le taux d'accroissement $\\frac{f(2+h) - f(2)}{h}$, puis en déduire $f'(2)$. Entrer $f'(2)$, sous forme de fraction ou de décimal.",
+       "reponse": "-1/4",
+       "indice": "Réduis $\\frac{1}{2+h} - \\frac{1}{2}$ au même dénominateur avant de diviser par $h$.",
+       "explication": "$\\frac{1}{2+h} - \\frac{1}{2} = \\frac{2 - (2+h)}{2(2+h)} = \\frac{-h}{2(2+h)}$, donc le taux vaut $\\frac{-1}{2(2+h)}$, qui tend vers $-\\frac{1}{4}$ quand $h$ tend vers 0. Ainsi $f'(2) = -\\frac{1}{4}$, ce que confirme la formule $f'(x) = -\\frac{1}{x^2}$.",
+       "retenir": "$f'(a)$ est la limite, quand $h$ tend vers 0, de $\\frac{f(a+h) - f(a)}{h}$ : on simplifie par $h$ avant de faire tendre $h$ vers 0."
+      },
+      {
+       "titre": "Un encadrement suffit",
+       "enonce": "Une fonction $f$ définie sur $\\mathbb{R}$ vérifie, pour tout réel $h$ : $|f(1+h) - 2 - 4h| \\leq h^2$. On ne sait rien d'autre sur $f$. Démontrer que $f$ est dérivable en 1, puis entrer $f'(1)$.",
+       "reponse": 4,
+       "indice": "Prends d'abord $h = 0$ pour trouver $f(1)$, puis divise l'inégalité par $|h|$ lorsque $h \\neq 0$.",
+       "explication": "Pour $h = 0$ : $|f(1) - 2| \\leq 0$, donc $f(1) = 2$. Pour $h \\neq 0$, en divisant par $|h|$ : $\\left|\\frac{f(1+h) - f(1)}{h} - 4\\right| \\leq |h|$. Le taux d'accroissement tend donc vers 4 quand $h$ tend vers 0 : $f$ est dérivable en 1 et $f'(1) = 4$.",
+       "retenir": "Pour obtenir un nombre dérivé, il suffit d'encadrer le taux d'accroissement : si $|\\tau(h) - \\ell| \\leq |h|$, alors $\\tau(h)$ tend vers $\\ell$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Vitesse instantanée",
+       "enonce": "Sur la plage de Moya, un ballon est lancé verticalement. Son altitude, en mètres, $t$ secondes après le lancer, est $z(t) = 20t - 5t^2$. En calculant la limite du taux d'accroissement de $z$ entre $1$ et $1 + h$, entrer la vitesse instantanée du ballon à l'instant $t = 1$, en m/s.",
+       "reponse": 10,
+       "unite": "m/s",
+       "indice": "Développe $z(1+h) - z(1)$ : tout se factorise par $h$.",
+       "explication": "$z(1) = 15$ et $z(1+h) = 20 + 20h - 5(1 + 2h + h^2) = 15 + 10h - 5h^2$. Le taux vaut $\\frac{10h - 5h^2}{h} = 10 - 5h$, qui tend vers 10 quand $h$ tend vers 0. La vitesse instantanée à $t = 1$ est $z'(1) = 10$ m/s.",
+       "retenir": "La vitesse instantanée est le nombre dérivé de la position : la limite des vitesses moyennes entre $t$ et $t + h$."
+      },
+      {
+       "titre": "Un point anguleux",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = |x - 2|$. Pour $h \\neq 0$, le taux d'accroissement de $f$ entre $2$ et $2 + h$ vaut $\\frac{|h|}{h}$. Quelle conclusion est correcte ?",
+       "reponse": 3,
+       "choix": [
+        "$f$ est dérivable en 2 et $f'(2) = 0$, car $f$ atteint son minimum en 2.",
+        "$f$ est dérivable en 2, car le taux $\\frac{|h|}{h}$ est défini pour tout $h \\neq 0$.",
+        "$f$ n'est pas dérivable en 2 : le taux vaut 1 si $h > 0$ et $-1$ si $h < 0$, il n'a pas de limite en 0.",
+        "$f$ est dérivable en 2 et $f'(2) = 1$, car $\\frac{|h|}{h} = 1$."
+       ],
+       "indice": "Distingue $h > 0$ et $h < 0$ : que vaut $|h|$ dans chaque cas ?",
+       "explication": "Si $h > 0$, $\\frac{|h|}{h} = 1$ ; si $h < 0$, $\\frac{|h|}{h} = -1$. Le taux n'a pas de limite quand $h$ tend vers 0 : $f$ n'est pas dérivable en 2. La courbe présente un point anguleux, avec deux demi-tangentes de pentes 1 et $-1$. Que le taux soit défini pour tout $h \\neq 0$ ne suffit pas, c'est sa limite qui compte ; et un minimum atteint en 2 n'entraîne pas la dérivabilité.",
+       "retenir": "Dérivable en $a$ : le taux d'accroissement a une limite finie quand $h$ tend vers 0. Pour $x \\mapsto |x|$ en 0, il vaut 1 ou $-1$ selon le signe de $h$ : pas de limite."
+      },
+      {
+       "titre": "Un raccord sans angle",
+       "enonce": "Soient $a$ et $b$ deux réels, et $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2$ si $x \\leq 1$, et $f(x) = ax + b$ si $x > 1$. On veut que $f$ soit dérivable en 1. Entrer la valeur de $b$.",
+       "reponse": -1,
+       "indice": "Écris le taux d'accroissement de $f$ en 1 pour $h < 0$, puis pour $h > 0$, sachant que $f(1) = 1$. Pour $h > 0$, un terme en $\\frac{1}{h}$ doit disparaître.",
+       "explication": "Ici $f(1) = 1^2 = 1$. Pour $h < 0$, le taux vaut $\\frac{(1+h)^2 - 1}{h} = 2 + h$, qui tend vers 2. Pour $h > 0$, il vaut $\\frac{a(1+h) + b - 1}{h} = a + \\frac{a + b - 1}{h}$ : il n'a de limite finie que si $a + b - 1 = 0$, et vaut alors $a$. La dérivabilité en 1 impose donc $a + b = 1$ et $a = 2$, d'où $b = -1$ ; réciproquement, pour $a = 2$ et $b = -1$, les deux taux tendent vers 2. La droite $y = 2x - 1$ est la tangente à la parabole au point d'abscisse 1.",
+       "retenir": "Raccord sans « angle » en un point : les taux d'accroissement à gauche et à droite doivent avoir la même limite finie, ce qui raccorde les valeurs, puis les pentes."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si une fonction $f$ est dérivable en un réel $a$, alors $f(a+h)$ tend vers $f(a)$ quand $h$ tend vers 0. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $f(a+h) - f(a) = h \\times \\frac{f(a+h) - f(a)}{h}$ et fais tendre $h$ vers 0.",
+       "explication": "Vrai. Pour $h \\neq 0$, $f(a+h) - f(a) = h \\times \\frac{f(a+h) - f(a)}{h}$. Quand $h$ tend vers 0, le second facteur tend vers $f'(a)$ et le premier vers 0 : le produit tend vers $0 \\times f'(a) = 0$, donc $f(a+h)$ tend vers $f(a)$. La réciproque est fausse : $|0 + h| = |h|$ tend vers $|0| = 0$, mais $x \\mapsto |x|$ n'est pas dérivable en 0.",
+       "retenir": "Si $f$ est dérivable en $a$, alors $f(a+h)$ tend vers $f(a)$ : la courbe n'a pas de saut en $a$. La réciproque est fausse (valeur absolue en 0)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction racine carrée est dérivable sur $[0\\,;+\\infty[$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris le taux d'accroissement de la racine carrée entre 0 et $h > 0$, et simplifie.",
+       "explication": "Faux. Elle n'est pas dérivable en 0 : pour $h > 0$, $\\frac{\\sqrt{h} - \\sqrt{0}}{h} = \\frac{1}{\\sqrt{h}}$, qui tend vers $+\\infty$ quand $h$ tend vers 0. Elle est dérivable sur $]0\\,;+\\infty[$ seulement, avec $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ ; sa courbe admet une tangente verticale à l'origine.",
+       "retenir": "La racine carrée est définie sur $[0\\,;+\\infty[$ mais dérivable seulement sur $]0\\,;+\\infty[$ (tangente verticale en 0)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction $g$ définie sur $[0\\,;+\\infty[$ par $g(x) = x\\sqrt{x}$ est dérivable en 0. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "La formule du produit ne s'applique pas en 0, puisque la racine carrée n'y est pas dérivable : reviens au taux d'accroissement.",
+       "explication": "Vrai. Comme $g$ n'est définie que sur $[0\\,;+\\infty[$, seuls les $h > 0$ interviennent : $\\frac{g(h) - g(0)}{h} = \\frac{h\\sqrt{h}}{h} = \\sqrt{h}$, qui tend vers 0. Donc $g$ est dérivable en 0 et $g'(0) = 0$, bien que la racine carrée ne le soit pas : la formule du produit ne permettait pas de conclure, il fallait revenir à la définition.",
+       "retenir": "En un point où un facteur n'est pas dérivable, les formules ne concluent rien : on revient au taux d'accroissement."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5r2",
+   "carte": "aljabr",
+   "fond": "brumes",
+   "nom": "L'éternité de Plotin",
+   "notion": "Tangente à une courbe",
+   "athena": "La tangente en $a$ passe par le point $(a\\,;f(a))$ et a pour pente $f'(a)$ : $y = f'(a)(x - a) + f(a)$. Deux nombres suffisent à la tracer.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Équation d'une tangente",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2 + 1$. La tangente à sa courbe au point d'abscisse 2 a pour équation réduite $y = mx + p$. Entrer $p$.",
+       "reponse": -3,
+       "indice": "Calcule $f(2)$ et $f'(2)$, puis utilise $y = f'(2)(x - 2) + f(2)$.",
+       "explication": "$f(2) = 5$ et $f'(x) = 2x$, donc $f'(2) = 4$. La tangente a pour équation $y = 4(x - 2) + 5$, soit $y = 4x - 3$. Donc $p = -3$.",
+       "retenir": "Tangente au point d'abscisse $a$ : $y = f'(a)(x - a) + f(a)$, puis on développe pour obtenir l'équation réduite."
+      },
+      {
+       "titre": "La tangente à la racine",
+       "enonce": "Soit $f$ la fonction racine carrée et $T$ la tangente à sa courbe au point d'abscisse 4. Entrer l'abscisse du point d'intersection de $T$ avec l'axe des abscisses.",
+       "reponse": -4,
+       "indice": "Pour $x > 0$, $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$. Écris l'équation de $T$, puis résous $y = 0$.",
+       "explication": "$f(4) = 2$ et $f'(4) = \\frac{1}{2\\sqrt{4}} = \\frac{1}{4}$. Donc $T : y = \\frac{1}{4}(x - 4) + 2$, soit $y = \\frac{1}{4}x + 1$. Pour $y = 0$ : $\\frac{1}{4}x = -1$, d'où $x = -4$.",
+       "retenir": "$(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ pour $x > 0$ ; une droite coupe l'axe des abscisses là où $y = 0$."
+      },
+      {
+       "titre": "Un triangle invariable",
+       "enonce": "Dans un repère orthonormé d'origine $O$, on considère la courbe de $f : x \\mapsto \\frac{3}{x}$ sur $]0\\,;+\\infty[$ et un réel $a > 0$. La tangente à cette courbe au point d'abscisse $a$ coupe l'axe des abscisses en $P$ et l'axe des ordonnées en $Q$. Entrer l'aire du triangle $OPQ$ (elle ne dépend pas de $a$).",
+       "reponse": 6,
+       "indice": "$f'(a) = -\\frac{3}{a^2}$. Écris l'équation réduite de la tangente en gardant $a$ comme paramètre, puis calcule ses points d'intersection avec les axes.",
+       "explication": "La tangente a pour équation $y = -\\frac{3}{a^2}(x - a) + \\frac{3}{a} = -\\frac{3}{a^2}x + \\frac{6}{a}$. Elle coupe l'axe des ordonnées en $Q\\left(0\\,;\\frac{6}{a}\\right)$ et l'axe des abscisses en $P(2a\\,;0)$. Le triangle $OPQ$ est rectangle en $O$, d'aire $\\frac{1}{2} \\times 2a \\times \\frac{6}{a} = 6$, quel que soit $a$.",
+       "retenir": "Pour montrer qu'une quantité « ne dépend pas de $a$ », on calcule avec $a$ quelconque jusqu'au bout : le paramètre doit disparaître.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une direction imposée",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2 - 6x + 1$. En un unique point $A$ de sa courbe, la tangente est parallèle à la droite d'équation $y = 2x + 5$. Entrer l'ordonnée de $A$.",
+       "reponse": -7,
+       "indice": "Deux droites non verticales sont parallèles si et seulement si elles ont le même coefficient directeur : résous $f'(x) = 2$.",
+       "explication": "$f'(x) = 2x - 6$. La condition $f'(x) = 2$ donne $x = 4$, puis $f(4) = 16 - 24 + 1 = -7$. Donc $A(4\\,;-7)$, et la tangente en $A$ a pour équation $y = 2x - 15$.",
+       "retenir": "Tangente parallèle à une droite de coefficient directeur $m$ : résoudre $f'(x) = m$."
+      },
+      {
+       "titre": "Au-dessus ou au-dessous ?",
+       "enonce": "Soit $T$ la tangente à la courbe de $f : x \\mapsto x^3$ au point d'abscisse 1. On admet que $x^3 - 3x + 2 = (x - 1)^2(x + 2)$ pour tout réel $x$. La courbe de $f$ est au-dessus de $T$ (au sens large) exactement sur un intervalle $[m\\,;+\\infty[$. Entrer $m$.",
+       "reponse": -2,
+       "indice": "Écris l'équation réduite de $T$, puis étudie le signe de la différence entre $f(x)$ et l'ordonnée du point de $T$ d'abscisse $x$.",
+       "explication": "$f(1) = 1$ et $f'(1) = 3$ : $T : y = 3(x - 1) + 1 = 3x - 2$. Alors $f(x) - (3x - 2) = x^3 - 3x + 2 = (x - 1)^2(x + 2)$, du signe de $x + 2$ puisque $(x - 1)^2 \\geq 0$. La courbe est au-dessus de $T$ sur $[-2\\,;+\\infty[$ et au-dessous sur $]-\\infty\\,;-2]$ : elle traverse $T$ au point d'abscisse $-2$. Donc $m = -2$.",
+       "retenir": "Position courbe-tangente : étudier le signe de $f(x) - [f'(a)(x - a) + f(a)]$, qui admet $(x - a)^2$ en facteur pour un polynôme."
+      },
+      {
+       "titre": "Deux tangentes issues d'un point",
+       "enonce": "Dans un repère orthonormé, on considère la parabole $\\mathcal{P}$ d'équation $y = x^2$ et le point $A\\left(2\\,;-\\frac{1}{4}\\right)$. Exactement deux tangentes à $\\mathcal{P}$ passent par $A$. Entrer le produit de leurs coefficients directeurs.",
+       "reponse": -1,
+       "indice": "La tangente au point d'abscisse $a$ a pour équation $y = 2ax - a^2$. Écris que $A$ lui appartient : tu obtiens une équation du second degré en $a$. Inutile de la résoudre, pense au produit des racines.",
+       "explication": "La tangente en $a$ est $y = 2a(x - a) + a^2 = 2ax - a^2$. Elle passe par $A$ si $-\\frac{1}{4} = 4a - a^2$, soit $a^2 - 4a - \\frac{1}{4} = 0$. Le discriminant vaut $16 + 1 = 17 > 0$ : deux solutions $a_1$ et $a_2$, de produit $-\\frac{1}{4}$. Les coefficients directeurs $2a_1$ et $2a_2$ ont pour produit $4a_1a_2 = -1$ : les deux tangentes sont perpendiculaires. C'est vrai pour tout point de la droite $y = -\\frac{1}{4}$, directrice de $\\mathcal{P}$.",
+       "retenir": "Dans un repère orthonormé, deux droites de coefficients directeurs $m$ et $m'$ sont perpendiculaires si et seulement si $mm' = -1$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La courbe d'une fonction dérivable sur $\\mathbb{R}$ reste toujours d'un même côté de chacune de ses tangentes. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense à la fonction cube et à sa tangente à l'origine.",
+       "explication": "Faux. Pour $f(x) = x^3$, on a $f(0) = f'(0) = 0$ : la tangente en 0 est l'axe des abscisses, d'équation $y = 0$. Or $x^3 < 0$ pour $x < 0$ et $x^3 > 0$ pour $x > 0$ : la courbe traverse sa tangente à l'origine (point d'inflexion).",
+       "retenir": "Une courbe peut traverser sa tangente (la fonction cube en 0) : la position se démontre par le signe d'une différence."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $a$, la tangente à la parabole d'équation $y = x^2$ au point d'abscisse $a$ coupe l'axe des ordonnées au point d'ordonnée $-a^2$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris l'équation réduite de la tangente avec $a$ quelconque, puis fais $x = 0$.",
+       "explication": "Vrai. La tangente a pour équation $y = 2a(x - a) + a^2 = 2ax - a^2$ ; pour $x = 0$, on obtient $y = -a^2$, et ceci pour tout réel $a$. (Pour $a = 0$, la tangente est l'axe des abscisses et le point est l'origine.)",
+       "retenir": "Pour une proposition « pour tout $a$ », on calcule avec $a$ quelconque : vérifier un exemple numérique ne prouve rien."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Il existe deux points distincts de la parabole d'équation $y = x^2$ en lesquels les tangentes sont parallèles. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Compare les coefficients directeurs des tangentes aux points d'abscisses $a$ et $b$.",
+       "explication": "Faux. Les tangentes aux points d'abscisses $a$ et $b$ ont pour coefficients directeurs $2a$ et $2b$ ; elles sont parallèles si et seulement si $2a = 2b$, c'est-à-dire $a = b$. Deux points distincts de la parabole ont des abscisses distinctes, donc des tangentes non parallèles.",
+       "retenir": "Pour nier « il existe », on démontre un « pour tout » : ici, deux abscisses distinctes donnent toujours deux pentes distinctes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5r3",
+   "carte": "hippase",
+   "fond": "nuit",
+   "nom": "La méthode de Descartes",
+   "notion": "Dérivées usuelles et opérations",
+   "athena": "Avant de dériver, nomme la forme : somme, produit, quotient ou $x \\mapsto g(ax + b)$. La forme reconnue dicte la formule.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Un polynôme",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = 2x^3 - 5x^2 + 4x - 1$. Entrer $f'(2)$.",
+       "reponse": 8,
+       "indice": "Dérive terme à terme, avec $(x^n)' = nx^{n-1}$.",
+       "explication": "$f'(x) = 6x^2 - 10x + 4$, donc $f'(2) = 24 - 20 + 4 = 8$.",
+       "retenir": "$(x^n)' = nx^{n-1}$ ; la dérivée d'une somme est la somme des dérivées, et $(ku)' = ku'$ pour une constante $k$."
+      },
+      {
+       "titre": "Un produit",
+       "enonce": "Soit $f$ la fonction définie sur $]0\\,;+\\infty[$ par $f(x) = (x^2 + 1)\\sqrt{x}$. Entrer $f'(4)$, sous forme de fraction ou de décimal.",
+       "reponse": "81/4",
+       "indice": "$(uv)' = u'v + uv'$, avec $u(x) = x^2 + 1$ et $v(x) = \\sqrt{x}$.",
+       "explication": "$f'(x) = 2x\\sqrt{x} + (x^2 + 1) \\times \\frac{1}{2\\sqrt{x}}$. En 4 : $f'(4) = 2 \\times 4 \\times 2 + \\frac{17}{4} = 16 + \\frac{17}{4} = \\frac{81}{4}$. Piège : le produit des dérivées $u'(4)v'(4) = 8 \\times \\frac{1}{4} = 2$ ne donne pas $f'(4)$.",
+       "retenir": "$(uv)' = u'v + uv'$ : la dérivée d'un produit n'est pas le produit des dérivées."
+      },
+      {
+       "titre": "Le facteur qui s'annule",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (x - 1)(x - 2)(x - 3)(x - 4)$. Sans développer, entrer $f'(1)$.",
+       "reponse": -6,
+       "indice": "Écris $f(x) = (x - 1)g(x)$ avec $g(x) = (x - 2)(x - 3)(x - 4)$, et applique la formule du produit.",
+       "explication": "Avec $f(x) = (x - 1)g(x)$ : $f'(x) = g(x) + (x - 1)g'(x)$, donc $f'(1) = g(1) = (-1)(-2)(-3) = -6$. Développer le polynôme de degré 4 aurait été long et source d'erreurs.",
+       "retenir": "Si $f(x) = (x - a)g(x)$ avec $g$ dérivable, alors $f'(a) = g(a)$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un quotient",
+       "enonce": "Soit $f$ la fonction définie sur $]3\\,;+\\infty[$ par $f(x) = \\frac{2x + 1}{x - 3}$. Entrer $f'(4)$.",
+       "reponse": -7,
+       "indice": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$.",
+       "explication": "$f'(x) = \\frac{2(x - 3) - (2x + 1) \\times 1}{(x - 3)^2} = \\frac{-7}{(x - 3)^2}$, donc $f'(4) = \\frac{-7}{1} = -7$.",
+       "retenir": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ : attention à l'ordre au numérateur, $u'v$ d'abord."
+      },
+      {
+       "titre": "Une racine d'une expression affine",
+       "enonce": "Soit $f$ la fonction définie sur $\\left]-\\infty\\,;\\frac{5}{2}\\right[$ par $f(x) = \\sqrt{5 - 2x}$. Entrer $f'(-2)$, sous forme de fraction.",
+       "reponse": "-1/3",
+       "indice": "Si $f(x) = g(ax + b)$, alors $f'(x) = a\\,g'(ax + b)$ ; ici $g$ est la racine carrée et $a = -2$.",
+       "explication": "Avec $g(X) = \\sqrt{X}$, $a = -2$ et $b = 5$ : $f'(x) = -2 \\times \\frac{1}{2\\sqrt{5 - 2x}} = -\\frac{1}{\\sqrt{5 - 2x}}$. En $-2$ : $\\sqrt{9} = 3$, donc $f'(-2) = -\\frac{1}{3}$. Oublier le facteur $a$ donnerait $\\frac{1}{6}$, une erreur classique.",
+       "retenir": "$(g(ax + b))' = a\\,g'(ax + b)$ : ne pas oublier le facteur $a$, ni son signe."
+      },
+      {
+       "titre": "Une tangente horizontale imposée",
+       "enonce": "Soit $a$ un réel et $f$ la fonction définie sur $\\mathbb{R} \\setminus \\{1\\}$ par $f(x) = \\frac{x^2 + a}{x - 1}$. On veut que la courbe de $f$ admette une tangente horizontale au point d'abscisse 3. Entrer $a$.",
+       "reponse": 3,
+       "indice": "Une tangente horizontale correspond à $f'(3) = 0$ : calcule le numérateur de $f'(x)$ en fonction de $a$.",
+       "explication": "$f'(x) = \\frac{2x(x - 1) - (x^2 + a)}{(x - 1)^2} = \\frac{x^2 - 2x - a}{(x - 1)^2}$. La condition $f'(3) = 0$ donne $9 - 6 - a = 0$, soit $a = 3$. Vérification : $f'(x) = \\frac{(x - 3)(x + 1)}{(x - 1)^2}$ s'annule bien en 3.",
+       "retenir": "Tangente horizontale au point d'abscisse $x_0$ $\\iff$ $f'(x_0) = 0$ ; avec un paramètre, cette condition devient une équation."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si le produit $fg$ de deux fonctions définies sur $\\mathbb{R}$ est dérivable en 0, alors $f$ et $g$ sont dérivables en 0. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche deux fonctions non dérivables en 0 dont le produit est une fonction polynôme.",
+       "explication": "Faux. Avec $f(x) = g(x) = |x|$, aucune des deux n'est dérivable en 0, mais $f(x)g(x) = |x|^2 = x^2$ est dérivable en 0. Le théorème ne marche que dans un sens : si $u$ et $v$ sont dérivables, alors $uv$ l'est, et $(uv)' = u'v + uv'$.",
+       "retenir": "Les théorèmes d'opérations donnent des conditions suffisantes de dérivabilité, pas des conditions nécessaires."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $f$ est une fonction dérivable et impaire sur $\\mathbb{R}$, alors sa dérivée $f'$ est paire. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Dérive les deux membres de l'égalité $f(-x) = -f(x)$.",
+       "explication": "Vrai. Pour tout réel $x$, $f(-x) = -f(x)$. La dérivée de $x \\mapsto f(-x)$ est $x \\mapsto -f'(-x)$ (règle de $g(ax + b)$ avec $a = -1$). En dérivant les deux membres : $-f'(-x) = -f'(x)$, soit $f'(-x) = f'(x)$ pour tout réel $x$ : $f'$ est paire.",
+       "retenir": "La dérivée de $x \\mapsto f(-x)$ est $x \\mapsto -f'(-x)$. La dérivée d'une fonction impaire est paire ; celle d'une fonction paire est impaire."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction $x \\mapsto \\sqrt{4x}$ est dérivable sur $]0\\,;+\\infty[$, de dérivée $x \\mapsto \\frac{1}{\\sqrt{x}}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Simplifie $\\sqrt{4x}$ pour $x > 0$, ou applique la règle de $g(ax + b)$ sans oublier $a$.",
+       "explication": "Vrai. Pour $x > 0$, $\\sqrt{4x} = 2\\sqrt{x}$, de dérivée $2 \\times \\frac{1}{2\\sqrt{x}} = \\frac{1}{\\sqrt{x}}$. On le retrouve avec la règle de $g(ax + b)$ : $4 \\times \\frac{1}{2\\sqrt{4x}} = \\frac{4}{4\\sqrt{x}} = \\frac{1}{\\sqrt{x}}$. La réponse tentante $\\frac{1}{2\\sqrt{4x}}$ oublie le facteur 4.",
+       "retenir": "Avant de dériver, simplifier ($\\sqrt{4x} = 2\\sqrt{x}$) ; et contrôler un résultat par une seconde méthode."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "Une limite déguisée",
+     "enonce": "Déterminer la limite de $\\frac{x^5 - 32}{x - 2}$ quand $x$ tend vers 2 (avec $x \\neq 2$), sans développer ni factoriser, en reconnaissant un objet du cours. Entrer cette limite.",
+     "reponse": 80,
+     "indice": "Écris 32 comme une puissance de 2, et relis la définition du nombre dérivé.",
+     "explication": "Comme $32 = 2^5$, le quotient s'écrit $\\frac{f(x) - f(2)}{x - 2}$ avec $f(x) = x^5$ : c'est le taux d'accroissement de $f$ entre 2 et $x$. Puisque $f$ est dérivable en 2, sa limite est $f'(2) = 5 \\times 2^4 = 80$. La factorisation $x^5 - 32 = (x - 2)(x^4 + 2x^3 + 4x^2 + 8x + 16)$ donne le même résultat, plus laborieusement.",
+     "retenir": "Une limite de la forme $\\frac{f(x) - f(a)}{x - a}$ quand $x$ tend vers $a$ est un nombre dérivé : reconnaître le taux d'accroissement dispense du calcul."
+    }
+   ]
+  },
+  {
+   "id": "c5r4",
+   "carte": "euclide",
+   "fond": "orient",
+   "nom": "Le calcul de Leibniz",
+   "notion": "Variations, extremums",
+   "athena": "Le signe de $f'$ sur un intervalle donne les variations. Cherche les extremums là où $f'$ change de signe, et n'oublie jamais les bornes.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le sens de variation",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = 2x^3 - 3x^2 - 12x + 1$. Elle est croissante sur $]-\\infty\\,;\\alpha]$, décroissante sur $[\\alpha\\,;\\beta]$ et croissante sur $[\\beta\\,;+\\infty[$. Entrer $\\beta$.",
+       "reponse": 2,
+       "indice": "Calcule $f'(x)$, factorise ce trinôme et étudie son signe.",
+       "explication": "$f'(x) = 6x^2 - 6x - 12 = 6(x^2 - x - 2) = 6(x + 1)(x - 2)$. Ce trinôme est positif à l'extérieur de ses racines et négatif entre elles : $f$ est croissante sur $]-\\infty\\,;-1]$, décroissante sur $[-1\\,;2]$, croissante sur $[2\\,;+\\infty[$. Donc $\\beta = 2$.",
+       "retenir": "Sur un intervalle, $f' \\geq 0$ entraîne $f$ croissante et $f' \\leq 0$ entraîne $f$ décroissante : on étudie le signe de $f'$ après factorisation."
+      },
+      {
+       "titre": "Variations d'un quotient",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = \\frac{x + 1}{x^2 + 3}$. Elle est croissante sur un intervalle $[\\alpha\\,;\\beta]$ et décroissante sur $]-\\infty\\,;\\alpha]$ et sur $[\\beta\\,;+\\infty[$. Entrer $\\alpha$.",
+       "reponse": -3,
+       "indice": "Le dénominateur de $f'(x)$ est un carré non nul, donc strictement positif : seul le signe du numérateur compte.",
+       "explication": "$f'(x) = \\frac{(x^2 + 3) - (x + 1) \\times 2x}{(x^2 + 3)^2} = \\frac{-x^2 - 2x + 3}{(x^2 + 3)^2} = \\frac{-(x + 3)(x - 1)}{(x^2 + 3)^2}$. Le numérateur, de coefficient dominant négatif, est positif entre ses racines $-3$ et $1$ : $f$ est croissante sur $[-3\\,;1]$. Donc $\\alpha = -3$.",
+       "retenir": "Pour un quotient, le dénominateur de $f'$ est un carré positif : le signe de $f'$ est celui du numérateur, qu'on factorise."
+      },
+      {
+       "titre": "Croissante partout ?",
+       "enonce": "Soit $a$ un réel et $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^3 - 3ax^2 + 3x + 1$. Entrer le plus grand réel $a$ pour lequel $f$ est croissante sur $\\mathbb{R}$.",
+       "reponse": 1,
+       "indice": "$f$ est croissante sur $\\mathbb{R}$ si et seulement si $f'(x) \\geq 0$ pour tout réel $x$ : regarde le discriminant du trinôme $f'(x)$.",
+       "explication": "$f'(x) = 3x^2 - 6ax + 3 = 3(x^2 - 2ax + 1)$. Ce trinôme est positif ou nul sur $\\mathbb{R}$ si et seulement si son discriminant $4a^2 - 4$ est négatif ou nul, soit $-1 \\leq a \\leq 1$. Si $a > 1$, $f'$ est strictement négative entre ses deux racines et $f$ y décroît. Pour $a = 1$, $f'(x) = 3(x - 1)^2$ s'annule en 1 sans changer de signe : $f$ est même strictement croissante. Le plus grand $a$ est 1.",
+       "retenir": "Sur un intervalle, une dérivée positive qui ne s'annule qu'en des points isolés donne une fonction strictement croissante (exemple : $x \\mapsto x^3$)."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un maximum local",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^3 - 12x$. Entrer la valeur du maximum local de $f$.",
+       "reponse": 16,
+       "indice": "Cherche où $f'$ s'annule en passant du signe $+$ au signe $-$.",
+       "explication": "$f'(x) = 3x^2 - 12 = 3(x - 2)(x + 2)$ : positive sur $]-\\infty\\,;-2[$, négative sur $]-2\\,;2[$, positive sur $]2\\,;+\\infty[$. Le maximum local est atteint en $-2$ : $f(-2) = -8 + 24 = 16$. Ce n'est pas un maximum sur $\\mathbb{R}$, puisque $f(5) = 65$.",
+       "retenir": "Si $f'$ s'annule en $a$ en passant du signe $+$ au signe $-$, alors $f$ admet un maximum local en $a$."
+      },
+      {
+       "titre": "Un bac pour l'eau de pluie",
+       "enonce": "Pour le potager du collège de Mamoudzou, un bac à base carrée, ouvert sur le dessus, doit contenir 32 dm³ d'eau de pluie. On note $x$ le côté de la base, en dm ($x > 0$). On admet que l'aire de tôle nécessaire, en dm², est $S(x) = x^2 + \\frac{128}{x}$. Entrer l'aire minimale de tôle, en dm².",
+       "reponse": 48,
+       "unite": "dm²",
+       "indice": "Calcule $S'(x)$, réduis-la au même dénominateur et étudie son signe sur $]0\\,;+\\infty[$.",
+       "explication": "$S'(x) = 2x - \\frac{128}{x^2} = \\frac{2(x^3 - 64)}{x^2}$, du signe de $x^3 - 64$ : négative sur $]0\\,;4[$, positive sur $]4\\,;+\\infty[$. $S$ est décroissante puis croissante, minimale en $x = 4$ : $S(4) = 16 + 32 = 48$ dm². Le bac a alors une hauteur de $\\frac{32}{16} = 2$ dm.",
+       "retenir": "Optimiser : exprimer la grandeur en fonction d'une seule variable, étudier le signe de la dérivée, conclure avec le tableau de variations."
+      },
+      {
+       "titre": "Une dérivée qui s'annule deux fois",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^4 - 4x^3$. Entrer le nombre d'extremums locaux de $f$ sur $\\mathbb{R}$.",
+       "reponse": 1,
+       "indice": "Factorise $f'(x)$ et dresse son tableau de signes : une racine double change-t-elle le signe ?",
+       "explication": "$f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$. Elle s'annule en 0 et en 3, mais $4x^2 \\geq 0$ : $f'$ est négative sur $]-\\infty\\,;3[$ (nulle en 0) et positive sur $]3\\,;+\\infty[$. Donc $f$ est décroissante sur $]-\\infty\\,;3]$ et croissante sur $[3\\,;+\\infty[$ : un seul extremum local, le minimum $f(3) = -27$. En 0, $f'(0) = 0$ sans extremum.",
+       "retenir": "Un changement de signe de $f'$ en $a$ assure un extremum local en $a$ ; une annulation sans changement de signe (racine double de $f'$) peut n'en donner aucun."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur $\\mathbb{R}$ et $a$ un réel. Si $f'(a) = 0$, alors $f$ admet un extremum local en $a$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense à la fonction cube.",
+       "explication": "Faux. Pour $f(x) = x^3$ et $a = 0$ : $f'(0) = 0$, mais $f(x) < 0$ pour $x < 0$ et $f(x) > 0$ pour $x > 0$, donc $f$ n'admet ni maximum ni minimum local en 0 (elle est strictement croissante sur $\\mathbb{R}$). Pour conclure à un extremum, on vérifie que $f'$ s'annule en changeant de signe.",
+       "retenir": "$f'(a) = 0$ est une condition nécessaire d'extremum local (à l'intérieur d'un intervalle), pas suffisante : contre-exemple $x \\mapsto x^3$ en 0."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur un intervalle ouvert $I$. Si $f$ admet un maximum local en un point $c$ de $I$, alors $f'(c) = 0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Compare les signes du taux d'accroissement en $c$ pour $h > 0$ et pour $h < 0$.",
+       "explication": "Vrai. Pour $h$ assez proche de 0, $f(c + h) \\leq f(c)$. Si $h > 0$, le taux $\\frac{f(c+h) - f(c)}{h}$ est négatif ou nul, donc sa limite vérifie $f'(c) \\leq 0$ ; si $h < 0$, il est positif ou nul, donc $f'(c) \\geq 0$. Ainsi $f'(c) = 0$.",
+       "retenir": "En un extremum local situé à l'intérieur de l'intervalle, la dérivée s'annule : condition nécessaire, pas suffisante."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur $[0\\,;1]$. Si $f$ atteint son maximum sur $[0\\,;1]$ en un réel $c$, alors $f'(c) = 0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Une fonction croissante sur $[0\\,;1]$ atteint son maximum en 1.",
+       "explication": "Faux. La fonction $f : x \\mapsto x$ atteint son maximum sur $[0\\,;1]$ en $c = 1$, mais $f'(1) = 1 \\neq 0$. Le résultat « $f'(c) = 0$ » ne vaut qu'à l'intérieur de l'intervalle : un extremum peut être atteint en une borne.",
+       "retenir": "Pour trouver le maximum sur $[a\\,;b]$, comparer les valeurs aux points où $f'$ s'annule ET aux bornes $a$ et $b$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5b",
+   "carte": "boss-fibonacci",
+   "fond": "crepuscule",
+   "nom": "Le tombeau d'Archimède",
+   "notion": "Problème : optimisation et étude de fonction",
+   "athena": "Un problème d'optimisation se gagne en trois temps : choisir la variable, exprimer la grandeur, étudier le signe de la dérivée.",
+   "steles": [
+    {
+     "boss": "Le Minotaure de Cnossos",
+     "monstre": "minotaure",
+     "contexte": "Cicéron raconte avoir retrouvé à Syracuse le tombeau d'Archimède, orné d'une sphère inscrite dans un cylindre. On fait ici l'inverse : dans une boule de rayon 3 (en mètres), on inscrit un cylindre de révolution de hauteur $h$ et de rayon $r$, avec $0 < h < 6$, dont les deux cercles de base sont sur la sphère. On rappelle que le volume d'un cylindre est $\\pi r^2 h$, son aire latérale $2\\pi r h$, et que le volume d'une boule de rayon $R$ est $\\frac{4}{3}\\pi R^3$.",
+     "exercices": [
+      {
+       "titre": "Le rayon du cylindre",
+       "enonce": "En coupant la figure par un plan contenant l'axe du cylindre, démontrer que $r^2 = 9 - \\frac{h^2}{4}$. Entrer le volume du cylindre de hauteur $h = 2$, divisé par $\\pi$.",
+       "reponse": 16,
+       "indice": "Dans la coupe, le centre de la boule, le centre d'une base et un point du cercle de cette base forment un triangle rectangle d'hypoténuse 3.",
+       "explication": "Le centre $O$ de la boule est le milieu de l'axe du cylindre. Si $C$ est le centre d'une base et $M$ un point de son cercle : $OC = \\frac{h}{2}$, $CM = r$, $OM = 3$, et le théorème de Pythagore donne $r^2 + \\frac{h^2}{4} = 9$. Pour $h = 2$ : $r^2 = 8$, et $V = \\pi \\times 8 \\times 2 = 16\\pi$.",
+       "retenir": "Pour un solide inscrit dans une sphère, une coupe par un plan de symétrie ramène le problème au théorème de Pythagore."
+      },
+      {
+       "titre": "Le point critique",
+       "enonce": "On admet que le volume du cylindre est $V(h) = \\pi\\left(9h - \\frac{h^3}{4}\\right)$ pour $h \\in\\, ]0\\,;6[$. La dérivée $V'$ s'annule en un unique réel $h_0$ de $]0\\,;6[$. Entrer $h_0$, arrondi au centième.",
+       "reponse": 3.46,
+       "tolerance": 0.005,
+       "unite": "m",
+       "indice": "Dérive en gardant $\\pi$ en facteur, puis résous $V'(h) = 0$ en ne gardant que la solution de $]0\\,;6[$.",
+       "explication": "$V'(h) = \\pi\\left(9 - \\frac{3h^2}{4}\\right) = \\frac{3\\pi}{4}(12 - h^2)$. Ainsi $V'(h) = 0 \\iff h^2 = 12 \\iff h = 2\\sqrt{3}$ ou $h = -2\\sqrt{3}$ ; seule $h_0 = 2\\sqrt{3} \\approx 3{,}46$ m est dans $]0\\,;6[$.",
+       "retenir": "Quand une équation donne deux racines opposées, on écarte explicitement celle qui sort de l'intervalle d'étude."
+      },
+      {
+       "titre": "Un maximum bien justifié",
+       "enonce": "On admet que $V'(h) = \\frac{3\\pi}{4}(12 - h^2)$ sur $]0\\,;6[$, et on note $h_0 = 2\\sqrt{3}$. Quel raisonnement établit correctement que $V$ admet en $h_0$ son maximum sur $]0\\,;6[$ ?",
+       "reponse": 2,
+       "choix": [
+        "$V'(h_0) = 0$, donc $V$ admet un extremum en $h_0$ ; c'est un maximum car $V(h_0) > 0$.",
+        "$V'(h) > 0$ sur $]0\\,;h_0[$ et $V'(h) < 0$ sur $]h_0\\,;6[$ : $V$ est croissante puis décroissante, d'où un maximum en $h_0$.",
+        "$V(h_0) > V(3)$ et $V(h_0) > V(4)$, donc $V$ admet un maximum en $h_0$.",
+        "$h_0$ est l'unique solution de $V'(h) = 0$ dans $]0\\,;6[$, c'est donc nécessairement un maximum."
+       ],
+       "indice": "Un seul argument permet de conclure : le comportement du signe de la dérivée de part et d'autre de $h_0$.",
+       "explication": "Seul le deuxième raisonnement est complet : $12 - h^2 > 0$ pour $0 < h < 2\\sqrt{3}$ et $12 - h^2 < 0$ pour $2\\sqrt{3} < h < 6$, donc $V$ croît puis décroît et $V(h) \\leq V(h_0)$ pour tout $h$ de $]0\\,;6[$. L'annulation de $V'$ ne suffit pas (penser à $x \\mapsto x^3$) ; comparer quelques valeurs ne prouve rien pour toutes les autres ; l'unicité du point critique ne dit pas s'il s'agit d'un maximum ou d'un minimum.",
+       "retenir": "Rédaction attendue : signe de la dérivée, tableau de variations, puis seulement la conclusion sur l'extremum."
+      },
+      {
+       "titre": "Le rapport des volumes",
+       "enonce": "On admet que le volume $V(h) = \\pi\\left(9h - \\frac{h^3}{4}\\right)$ du cylindre est maximal pour $h_0 = 2\\sqrt{3}$. Entrer le rapport du volume maximal du cylindre au volume de la boule de rayon 3, arrondi au centième.",
+       "reponse": 0.58,
+       "tolerance": 0.005,
+       "indice": "Calcule d'abord $h_0^3 = (2\\sqrt{3})^3$ en valeur exacte ; le volume de la boule vaut $36\\pi$.",
+       "explication": "$h_0^3 = 8 \\times 3\\sqrt{3} = 24\\sqrt{3}$, donc $V(h_0) = \\pi\\left(18\\sqrt{3} - 6\\sqrt{3}\\right) = 12\\sqrt{3}\\,\\pi$. La boule a pour volume $\\frac{4}{3}\\pi \\times 27 = 36\\pi$. Le rapport vaut $\\frac{12\\sqrt{3}}{36} = \\frac{\\sqrt{3}}{3} \\approx 0{,}58$ : le meilleur cylindre occupe environ 58 % de la boule.",
+       "retenir": "Calculer en valeur exacte et n'arrondir qu'à la toute fin ; $(a\\sqrt{b})^3 = a^3 b\\sqrt{b}$."
+      },
+      {
+       "titre": "La plus grande paroi",
+       "enonce": "On admet que l'aire latérale du cylindre est $A(h) = \\pi h\\sqrt{36 - h^2}$ pour $h \\in\\, ]0\\,;6[$. Entrer la valeur maximale de $A(h)$, divisée par $\\pi$.",
+       "reponse": 18,
+       "indice": "$A(h) > 0$ : $A$ est maximale exactement là où $A(h)^2 = \\pi^2 h^2(36 - h^2)$ l'est. Pose $u = h^2$.",
+       "explication": "Comme $A > 0$ et que la fonction carré est strictement croissante sur $[0\\,;+\\infty[$, $A$ et $A^2$ atteignent leur maximum au même point. Or $A(h)^2 = \\pi^2 u(36 - u)$ avec $u = h^2 \\in\\, ]0\\,;36[$ : ce trinôme en $u$ est maximal en $u = 18$, d'où $h = 3\\sqrt{2}$ et $A = \\pi \\times 3\\sqrt{2} \\times \\sqrt{18} = 18\\pi$. C'est exactement la moitié de l'aire de la sphère, $4\\pi \\times 9 = 36\\pi$.",
+       "retenir": "Pour optimiser une quantité positive contenant une racine carrée, on peut optimiser son carré : l'extremum est atteint au même point."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $f$ est dérivable et strictement croissante sur $\\mathbb{R}$, alors $f'(x) > 0$ pour tout réel $x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense à une fonction strictement croissante dont la courbe admet une tangente horizontale.",
+       "explication": "Faux. La fonction cube est strictement croissante sur $\\mathbb{R}$, mais sa dérivée $x \\mapsto 3x^2$ s'annule en 0. On a seulement $f'(x) \\geq 0$ pour tout réel $x$.",
+       "retenir": "Strictement croissante entraîne $f' \\geq 0$, pas $f' > 0$ : la réciproque de « $f' > 0$ sur $I$ $\\Rightarrow$ $f$ strictement croissante sur $I$ » est fausse."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x \\geq 0$, $x^3 + 16 \\geq 12x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Étudie les variations de $g(x) = x^3 - 12x + 16$ sur $[0\\,;+\\infty[$.",
+       "explication": "Vrai. Soit $g(x) = x^3 - 12x + 16$. $g'(x) = 3(x - 2)(x + 2)$ est négative sur $[0\\,;2]$ et positive sur $[2\\,;+\\infty[$ : sur $[0\\,;+\\infty[$, $g$ atteint son minimum en 2, et $g(2) = 8 - 24 + 16 = 0$. Donc $g(x) \\geq 0$ pour tout $x \\geq 0$. (Autre preuve : $g(x) = (x - 2)^2(x + 4)$.)",
+       "retenir": "Pour démontrer $f(x) \\geq g(x)$ sur un intervalle, étudier $f - g$ et montrer que son minimum est positif ou nul."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur $[0\\,;+\\infty[$ telle que $f(0) = 0$ et $f'(x) \\leq 1$ pour tout $x \\geq 0$. Alors $f(x) \\leq x$ pour tout $x \\geq 0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Étudie le sens de variation de $g(x) = x - f(x)$ sur $[0\\,;+\\infty[$.",
+       "explication": "Vrai. Soit $g(x) = x - f(x)$. Alors $g'(x) = 1 - f'(x) \\geq 0$ : $g$ est croissante sur $[0\\,;+\\infty[$, donc pour tout $x \\geq 0$, $g(x) \\geq g(0) = 0$, c'est-à-dire $f(x) \\leq x$.",
+       "retenir": "Pour comparer deux fonctions qui partent de la même valeur, étudier leur différence à l'aide de sa dérivée."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c5s",
+   "carte": "sanct-nombres",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Spinoza",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Ici, l'étude de fonction devient preuve : un minimum positif démontre une inégalité, et un contre-exemple bien choisi convainc toute une classe.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le rayon du cercle inscrit",
+       "enonce": "D'après CAPES Mayotte 2021. Soit $f$ la fonction définie sur $]0\\,;1[$ par $f(x) = \\frac{x(1 - x)}{1 + x}$ (dans le sujet, elle sert à exprimer le rayon du cercle inscrit dans un triangle rectangle de périmètre 2). Calculer $f'(x)$, puis entrer $f'\\left(\\frac{1}{2}\\right)$ sous forme de fraction.",
+       "reponse": "-1/9",
+       "indice": "Écris $f(x) = \\frac{x - x^2}{1 + x}$ et applique la formule du quotient ; réduis le numérateur avant de remplacer.",
+       "explication": "$f'(x) = \\frac{(1 - 2x)(1 + x) - (x - x^2)}{(1 + x)^2} = \\frac{1 - 2x - x^2}{(1 + x)^2}$. En $\\frac{1}{2}$ : le numérateur vaut $1 - 1 - \\frac{1}{4} = -\\frac{1}{4}$ et le dénominateur $\\frac{9}{4}$, d'où $f'\\left(\\frac{1}{2}\\right) = -\\frac{1}{9}$.",
+       "retenir": "Pour la dérivée d'un quotient, développer et réduire le numérateur : c'est lui qui porte le signe de $f'$."
+      },
+      {
+       "titre": "Le meilleur paramètre",
+       "enonce": "D'après CAPES Mayotte 2021. Soit $f$ la fonction définie sur $]0\\,;1[$ par $f(x) = \\frac{x(1 - x)}{1 + x}$. On admet que $f'(x) = \\frac{1 - 2x - x^2}{(1 + x)^2}$. La fonction $f$ admet un maximum en un réel $x_0$. Entrer $x_0$, arrondi au centième.",
+       "reponse": 0.41,
+       "tolerance": 0.005,
+       "indice": "Résous $1 - 2x - x^2 = 0$ et ne garde que la racine située dans $]0\\,;1[$.",
+       "explication": "$x^2 + 2x - 1 = 0$ a pour discriminant 8 et pour racines $-1 - \\sqrt{2}$ et $-1 + \\sqrt{2}$. Seule $x_0 = \\sqrt{2} - 1 \\approx 0{,}41$ est dans $]0\\,;1[$. Le numérateur $1 - 2x - x^2$ est positif sur $]0\\,;x_0[$ et négatif sur $]x_0\\,;1[$ : $f$ croît puis décroît, d'où le maximum en $x_0$.",
+       "retenir": "Un maximum se justifie par le changement de signe de $f'$ ; seules comptent les racines situées dans l'intervalle d'étude."
+      },
+      {
+       "titre": "Le rayon maximal",
+       "enonce": "D'après CAPES Mayotte 2021. Soit $f$ la fonction définie sur $]0\\,;1[$ par $f(x) = \\frac{x(1 - x)}{1 + x}$. On admet que $f$ atteint son maximum en $x_0 = \\sqrt{2} - 1$, qui vérifie $x_0^2 = 1 - 2x_0$. Calculer la valeur exacte de $f(x_0)$, puis l'entrer arrondie au millième.",
+       "reponse": 0.172,
+       "tolerance": 0.0005,
+       "indice": "Remplace $x_0^2$ par $1 - 2x_0$ dans $x_0 - x_0^2$ : le numérateur devient une expression du premier degré en $x_0$.",
+       "explication": "$f(x_0) = \\frac{x_0 - x_0^2}{1 + x_0} = \\frac{x_0 - 1 + 2x_0}{1 + x_0} = \\frac{3x_0 - 1}{1 + x_0}$. Avec $x_0 = \\sqrt{2} - 1$ : $\\frac{3\\sqrt{2} - 4}{\\sqrt{2}} = 3 - \\frac{4}{\\sqrt{2}} = 3 - 2\\sqrt{2} \\approx 0{,}172$. C'est le rayon du cercle inscrit dans le triangle rectangle isocèle de périmètre 2.",
+       "retenir": "Pour évaluer une expression en une racine $x_0$ d'un trinôme, utiliser l'équation vérifiée par $x_0$ pour abaisser les degrés."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La meilleure constante",
+       "enonce": "Entrer le plus grand réel $k$ tel que, pour tout réel $x$, $x^4 - 4x \\geq k$.",
+       "reponse": -3,
+       "indice": "Le plus grand $k$ qui convient est le minimum de $f : x \\mapsto x^4 - 4x$ sur $\\mathbb{R}$ ; étudie ses variations.",
+       "explication": "$f'(x) = 4x^3 - 4 = 4(x - 1)(x^2 + x + 1)$, et $x^2 + x + 1 > 0$ (discriminant $-3$). Donc $f$ est décroissante sur $]-\\infty\\,;1]$ et croissante sur $[1\\,;+\\infty[$ : son minimum est $f(1) = -3$. L'inégalité est vraie pour $k = -3$, et fausse pour tout $k > -3$ (prendre $x = 1$). Donc $k = -3$.",
+       "retenir": "« Le plus grand $k$ tel que $f(x) \\geq k$ pour tout $x$ » est le minimum de $f$ : prouver que $k$ convient, puis qu'aucun réel plus grand ne convient."
+      },
+      {
+       "titre": "Compter les solutions",
+       "enonce": "Programme de Terminale (théorème des valeurs intermédiaires). Entrer le nombre de solutions réelles de l'équation $x^3 - 3x + 1 = 0$.",
+       "reponse": 3,
+       "indice": "Étudie les variations de $f(x) = x^3 - 3x + 1$ et le signe de ses extremums locaux.",
+       "explication": "$f'(x) = 3(x - 1)(x + 1)$ : $f$ croît sur $]-\\infty\\,;-1]$, décroît sur $[-1\\,;1]$, croît sur $[1\\,;+\\infty[$, avec $f(-1) = 3 > 0$ et $f(1) = -1 < 0$. Comme $f(-2) = -1$ et $f(2) = 3$, le théorème des valeurs intermédiaires, appliqué sur chaque intervalle où $f$ est continue et strictement monotone, donne exactement une solution dans $]-2\\,;-1[$, une dans $]-1\\,;1[$ et une dans $]1\\,;2[$ ; il n'y en a pas d'autre, car $f(x) \\leq -1$ pour $x \\leq -2$ et $f(x) \\geq 3$ pour $x \\geq 2$. Donc 3 solutions.",
+       "retenir": "Compter les solutions de $f(x) = 0$ : tableau de variations, signe des extremums, puis théorème des valeurs intermédiaires sur chaque intervalle de stricte monotonie."
+      },
+      {
+       "titre": "Le point le plus proche",
+       "enonce": "Dans un repère orthonormé, on considère la courbe $\\mathcal{C}$ de la fonction racine carrée et le point $A\\left(\\frac{21}{2}\\,;0\\right)$. Pour $x \\geq 0$, on note $M$ le point de $\\mathcal{C}$ d'abscisse $x$. Entrer l'abscisse du point de $\\mathcal{C}$ le plus proche de $A$.",
+       "reponse": 10,
+       "indice": "La distance $AM$ est minimale là où $AM^2$ l'est : exprime $AM^2$ en fonction de $x$, sans racine carrée.",
+       "explication": "$AM^2 = \\left(x - \\frac{21}{2}\\right)^2 + (\\sqrt{x})^2 = \\left(x - \\frac{21}{2}\\right)^2 + x$. Sa dérivée, $2\\left(x - \\frac{21}{2}\\right) + 1 = 2x - 20$, est négative sur $[0\\,;10[$ et positive sur $]10\\,;+\\infty[$ : $AM^2$, donc $AM$, est minimale en $x = 10$. Le point cherché est $(10\\,;\\sqrt{10})$.",
+       "retenir": "Pour minimiser une distance, minimiser son carré : la racine carrée étant strictement croissante, l'extremum est atteint au même point.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une erreur de dérivation",
+       "enonce": "Un élève de Première écrit : « $f(x) = (3x - 1)^2$, donc $f'(x) = 2(3x - 1)$. » Quel diagnostic est correct ?",
+       "reponse": 1,
+       "choix": [
+        "Il a oublié le facteur 3 : $f'(x) = 3 \\times 2(3x - 1) = 6(3x - 1)$.",
+        "Il aurait dû développer d'abord : on ne sait pas dériver le carré d'une expression en Première.",
+        "Il a oublié de dériver la constante $-1$ : $f'(x) = 2(3x - 1) - 1$.",
+        "Il n'y a pas d'erreur."
+       ],
+       "indice": "Vérifie en développant : $(3x - 1)^2 = 9x^2 - 6x + 1$.",
+       "explication": "En développant, $f(x) = 9x^2 - 6x + 1$, donc $f'(x) = 18x - 6 = 6(3x - 1)$, et non $2(3x - 1)$. L'élève a appliqué $(X^2)' = 2X$ en oubliant le facteur $a = 3$ de la règle $(g(ax + b))' = a\\,g'(ax + b)$. Le faire développer lui permet de constater l'erreur par lui-même.",
+       "retenir": "Pour convaincre un élève, lui faire vérifier le résultat par une seconde méthode (ici, développer) plutôt que lui réciter la règle."
+      },
+      {
+       "titre": "Le bon contre-exemple",
+       "enonce": "Programme de Terminale (continuité). Pour convaincre une classe qu'une fonction continue en un point n'est pas forcément dérivable en ce point, quel exemple choisir ?",
+       "reponse": 4,
+       "choix": [
+        "La fonction $x \\mapsto x^2$ en 0.",
+        "La fonction inverse $x \\mapsto \\frac{1}{x}$ en 0.",
+        "La fonction racine carrée en 1.",
+        "La fonction $x \\mapsto |x|$ en 0."
+       ],
+       "indice": "L'exemple doit vérifier l'hypothèse (continuité au point choisi) et contredire la conclusion (dérivabilité en ce point).",
+       "explication": "La valeur absolue est continue en 0, et son taux d'accroissement $\\frac{|h|}{h}$ vaut 1 pour $h > 0$ et $-1$ pour $h < 0$ : il n'a pas de limite, donc elle n'est pas dérivable en 0 (point anguleux visible sur la courbe). La fonction carré est dérivable en 0, la racine carrée est dérivable en 1, et la fonction inverse n'est même pas définie en 0.",
+       "retenir": "Un bon contre-exemple vérifie toutes les hypothèses et contredit la conclusion ; la valeur absolue en 0 est l'exemple de référence."
+      },
+      {
+       "titre": "Un tableau de variations faux",
+       "enonce": "Un élève écrit : « Pour $f(x) = \\frac{1}{x}$, on a $f'(x) = -\\frac{1}{x^2} < 0$ pour tout $x \\neq 0$, donc $f$ est décroissante sur $\\mathbb{R}^*$ et $f(-1) > f(1)$. » Or $f(-1) = -1 < 1 = f(1)$. Quelle est l'erreur ?",
+       "reponse": 3,
+       "choix": [
+        "Le calcul de la dérivée est faux : $f'(x) = \\frac{1}{x^2}$.",
+        "Une dérivée strictement négative ne suffit pas à prouver la décroissance : il faut aussi étudier les limites.",
+        "Le lien entre signe de $f'$ et variations ne vaut que sur un intervalle : $f$ est décroissante sur $]-\\infty\\,;0[$ et sur $]0\\,;+\\infty[$, pas sur leur réunion.",
+        "$f$ est bien décroissante sur $\\mathbb{R}^*$ : l'élève s'est seulement trompé en calculant $f(-1)$."
+       ],
+       "indice": "Relis l'hypothèse du théorème qui relie le signe de $f'$ au sens de variation : sur quel type d'ensemble s'applique-t-il ?",
+       "explication": "Le théorème « $f' < 0$ sur $I$ entraîne $f$ strictement décroissante sur $I$ » exige que $I$ soit un intervalle. $\\mathbb{R}^*$ n'en est pas un : $f$ est décroissante sur $]-\\infty\\,;0[$ et sur $]0\\,;+\\infty[$, mais pas sur leur réunion, comme le montre $f(-1) < f(1)$. Le calcul de $f'$ est juste.",
+       "retenir": "Le signe de $f'$ donne les variations sur un intervalle ; un tableau de variations se découpe aux valeurs interdites."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur $\\mathbb{R}$ dont la dérivée $f'$ est croissante sur $\\mathbb{R}$. Alors la courbe de $f$ est au-dessus de chacune de ses tangentes. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Fixe $a$ et étudie les variations de la différence entre $f(x)$ et l'ordonnée du point d'abscisse $x$ de la tangente en $a$.",
+       "explication": "Vrai. Soit $a$ un réel et $g(x) = f(x) - f'(a)(x - a) - f(a)$. Alors $g'(x) = f'(x) - f'(a)$, négative ou nulle pour $x \\leq a$ et positive ou nulle pour $x \\geq a$, car $f'$ est croissante. Donc $g$ est décroissante sur $]-\\infty\\,;a]$, croissante sur $[a\\,;+\\infty[$, et $g(x) \\geq g(a) = 0$ : la courbe est au-dessus de sa tangente en $a$. En Terminale, une telle fonction est dite convexe.",
+       "retenir": "Position courbe-tangente : étudier $g(x) = f(x) - [f'(a)(x - a) + f(a)]$, qui s'annule en $a$, à l'aide de sa dérivée."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soient $f$ et $g$ deux fonctions dérivables sur $\\mathbb{R}$ telles que $f(0) = g(0)$ et $f'(x) \\leq g'(x)$ pour tout réel $x$. Alors $f(x) \\leq g(x)$ pour tout réel $x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Regarde ce qui se passe pour $x < 0$, avec deux fonctions affines bien choisies.",
+       "explication": "Faux. Avec $f(x) = 0$ et $g(x) = x$ : $f(0) = g(0)$ et $f'(x) = 0 \\leq 1 = g'(x)$, mais $f(-1) = 0 > -1 = g(-1)$. La différence $g - f$ est croissante et nulle en 0 : elle est positive pour $x \\geq 0$, mais négative pour $x \\leq 0$.",
+       "retenir": "Une fonction croissante et nulle en 0 est positive à droite de 0 et négative à gauche : attention au domaine d'une inégalité."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ une fonction dérivable sur $\\mathbb{R}$. Si $f'$ est paire, alors $f$ est impaire. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Ajoute une constante non nulle à une fonction impaire.",
+       "explication": "Faux. Pour $f(x) = x + 1$, la dérivée $f'(x) = 1$ est paire, mais $f(0) = 1 \\neq 0$, alors qu'une fonction impaire sur $\\mathbb{R}$ vérifie $f(0) = 0$. (Si $f'$ est paire, c'est $f - f(0)$ qui est impaire : la constante empêche la réciproque.)",
+       "retenir": "Une fonction impaire définie en 0 vérifie $f(0) = 0$. Une dérivée ne détermine une fonction qu'à une constante près."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

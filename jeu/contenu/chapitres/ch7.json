@@ -1,0 +1,723 @@
+{
+ "id": "ch7",
+ "titre": "Vecteurs, géométrie repérée et produit scalaire",
+ "introduction": "Descartes a donné à chaque point deux nombres, et la géométrie est devenue calcul. Le produit scalaire achève ce mouvement : un seul nombre dit à la fois les longueurs, les angles et l'orthogonalité. Cette semaine, apprends à passer de la figure à l'équation et retour, sans perdre le sens : vecteur normal, projeté orthogonal et distance t'ouvriront plus tard les portes de l'espace.",
+ "conclusion": "Emporte trois réflexes : le déterminant pour la colinéarité, le vecteur normal pour écrire une droite et ses perpendiculaires, le produit scalaire pour les angles, les longueurs et l'orthogonalité. La distance d'un point à une droite n'est qu'un projeté orthogonal : dans l'espace, la même idée donnera la distance à un plan.",
+ "salles": [
+  {
+   "id": "c7r1",
+   "carte": "descartes",
+   "fond": "nuit",
+   "nom": "L'ombre de Thalès",
+   "notion": "Vecteurs, coordonnées, colinéarité",
+   "athena": "Thalès mesurait une pyramide par son ombre : la colinéarité est une proportionnalité, et le déterminant $xy'-yx'$ la teste en un seul calcul.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le quatrième sommet",
+       "enonce": "Dans un repère orthonormé, on considère les points $A(2\\,;-1)$, $B(5\\,;3)$ et $C(-1\\,;6)$. Le point $D$ est tel que $ABCD$ soit un parallélogramme. Entrer l'abscisse de $D$.",
+       "reponse": -4,
+       "indice": "Dans le parallélogramme $ABCD$, les côtés opposés $[AB]$ et $[DC]$ donnent $\\vec{AB}=\\vec{DC}$ : attention à l'ordre des lettres.",
+       "explication": "$ABCD$ est un parallélogramme si et seulement si $\\vec{AB}=\\vec{DC}$. Ici $\\vec{AB}(3\\,;4)$, donc $x_C-x_D=3$ et $y_C-y_D=4$, d'où $D(-4\\,;2)$. L'erreur classique $\\vec{AB}=\\vec{CD}$ donne $(2\\,;10)$, qui construit le parallélogramme $ABDC$.",
+       "retenir": "$ABCD$ parallélogramme $\\iff \\vec{AB}=\\vec{DC} \\iff$ les diagonales $[AC]$ et $[BD]$ ont le même milieu."
+      },
+      {
+       "titre": "Le point pondéré",
+       "enonce": "Dans un repère orthonormé, on considère $A(-2\\,;1)$ et $B(4\\,;5)$. Le point $M$ vérifie $\\vec{MA}+2\\vec{MB}=\\vec{0}$. Entrer l'ordonnée de $M$, sous forme de fraction.",
+       "reponse": "11/3",
+       "indice": "Avec la relation de Chasles, écris $\\vec{MB}=\\vec{MA}+\\vec{AB}$, puis exprime $\\vec{AM}$ en fonction de $\\vec{AB}$.",
+       "explication": "$\\vec{MA}+2(\\vec{MA}+\\vec{AB})=\\vec{0}$ donne $3\\vec{AM}=2\\vec{AB}$, soit $\\vec{AM}=\\frac{2}{3}\\vec{AB}$. Avec $\\vec{AB}(6\\,;4)$ : $M\\left(-2+4\\,;1+\\frac{8}{3}\\right)$, c'est-à-dire $M\\left(2\\,;\\frac{11}{3}\\right)$.",
+       "retenir": "Point défini par une relation vectorielle : tout ramener à une seule origine par Chasles, puis passer aux coordonnées."
+      },
+      {
+       "titre": "Dans une autre base",
+       "enonce": "Dans un repère orthonormé, on considère $\\vec{u}(2\\,;1)$, $\\vec{v}(-1\\,;3)$ et $\\vec{w}(7\\,;0)$. Justifier que $\\vec{u}$ et $\\vec{v}$ ne sont pas colinéaires, puis déterminer les réels $a$ et $b$ tels que $\\vec{w}=a\\vec{u}+b\\vec{v}$. Entrer $a$.",
+       "reponse": 3,
+       "indice": "Calcule le déterminant de $\\vec{u}$ et $\\vec{v}$, puis traduis l'égalité vectorielle en un système de deux équations d'inconnues $a$ et $b$.",
+       "explication": "$\\det(\\vec{u},\\vec{v})=2\\times3-1\\times(-1)=7\\neq0$ : $(\\vec{u},\\vec{v})$ est une base, donc $a$ et $b$ existent et sont uniques. Le système $2a-b=7$, $a+3b=0$ donne $a=-3b$, puis $-7b=7$ : $b=-1$ et $a=3$. Vérification : $3\\vec{u}-\\vec{v}$ a pour coordonnées $(7\\,;0)$.",
+       "retenir": "Deux vecteurs non colinéaires forment une base : tout vecteur du plan s'écrit de façon unique comme combinaison de ces deux vecteurs."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Colinéaires ?",
+       "enonce": "Dans un repère orthonormé, on considère $\\vec{u}(-3\\,;5)$ et $\\vec{v}(6\\,;k)$, où $k$ est un réel. Entrer la valeur de $k$ pour laquelle $\\vec{u}$ et $\\vec{v}$ sont colinéaires.",
+       "reponse": -10,
+       "indice": "Deux vecteurs $(x\\,;y)$ et $(x'\\,;y')$ sont colinéaires si et seulement si $xy'-yx'=0$.",
+       "explication": "$\\det(\\vec{u},\\vec{v})=(-3)\\times k-5\\times6=-3k-30$, nul si et seulement si $k=-10$. Contrôle : $\\vec{v}(6\\,;-10)=-2\\,\\vec{u}$.",
+       "retenir": "$\\vec{u}(x\\,;y)$ et $\\vec{v}(x'\\,;y')$ sont colinéaires si et seulement si $xy'-yx'=0$."
+      },
+      {
+       "titre": "Trois points alignés",
+       "enonce": "Dans un repère orthonormé, on considère $A(1\\,;2)$, $B(4\\,;-1)$ et, pour tout réel $m$, le point $C(m\\,;m+5)$. Entrer la valeur de $m$ pour laquelle $A$, $B$ et $C$ sont alignés.",
+       "reponse": -1,
+       "indice": "$A$, $B$ et $C$ sont alignés si et seulement si $\\vec{AB}$ et $\\vec{AC}$ sont colinéaires.",
+       "explication": "$\\vec{AB}(3\\,;-3)$ et $\\vec{AC}(m-1\\,;m+3)$. Leur déterminant vaut $3(m+3)-(-3)(m-1)=6m+6$, nul pour $m=-1$. On obtient $C(-1\\,;4)$, qui vérifie bien l'équation $y=-x+3$ de la droite $(AB)$.",
+       "retenir": "Alignement de trois points = colinéarité de deux vecteurs ayant une origine commune."
+      },
+      {
+       "titre": "Alignés sans angle droit",
+       "enonce": "$ABCD$ est un parallélogramme. On travaille dans le repère $(A\\,;\\vec{AB},\\vec{AD})$, qui n'est pas nécessairement orthonormé. Le point $E$ vérifie $\\vec{AE}=\\frac{1}{3}\\vec{AB}$ et, pour un réel $k$, le point $F$ vérifie $\\vec{AF}=k\\,\\vec{AD}$. Entrer la valeur de $k$ pour laquelle $E$, $F$ et $C$ sont alignés, sous forme de fraction ou de décimal.",
+       "reponse": -0.5,
+       "indice": "Dans ce repère, $C$ a pour coordonnées $(1\\,;1)$ car $\\vec{AC}=\\vec{AB}+\\vec{AD}$. Le critère du déterminant reste valable dans un repère quelconque.",
+       "explication": "Coordonnées : $E\\left(\\frac{1}{3}\\,;0\\right)$, $F(0\\,;k)$, $C(1\\,;1)$. Les vecteurs $\\vec{EC}\\left(\\frac{2}{3}\\,;1\\right)$ et $\\vec{EF}\\left(-\\frac{1}{3}\\,;k\\right)$ ont pour déterminant $\\frac{2}{3}k+\\frac{1}{3}$, nul pour $k=-\\frac{1}{2}$ : $F$ est le symétrique par rapport à $A$ du milieu de $[AD]$. La colinéarité n'utilise ni longueur ni angle : un repère quelconque suffit.",
+       "retenir": "Colinéarité, alignement, milieux : valables dans tout repère. Seuls les calculs de longueurs et d'angles exigent un repère orthonormé."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous vecteurs $\\vec{u}$, $\\vec{v}$, $\\vec{w}$ du plan, si $\\vec{u}$ et $\\vec{v}$ sont colinéaires et si $\\vec{v}$ et $\\vec{w}$ sont colinéaires, alors $\\vec{u}$ et $\\vec{w}$ sont colinéaires. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense au vecteur que l'on oublie toujours.",
+       "explication": "Faux. Contre-exemple dans un repère orthonormé : $\\vec{u}(1\\,;0)$, $\\vec{v}=\\vec{0}$ et $\\vec{w}(0\\,;1)$. Le vecteur nul est colinéaire à tout vecteur, donc les deux hypothèses sont vraies, mais $\\det(\\vec{u},\\vec{w})=1\\neq0$. La propriété devient vraie si l'on impose $\\vec{v}\\neq\\vec{0}$.",
+       "retenir": "Le vecteur nul est colinéaire à tout vecteur : la colinéarité ne se transmet qu'à travers un vecteur non nul."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère quelconque du plan (non nécessairement orthonormé), si les vecteurs $\\vec{u}(a\\,;b)$ et $\\vec{v}(c\\,;d)$ vérifient $ad-bc=0$, alors $\\vec{u}$ et $\\vec{v}$ sont colinéaires. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Traite à part le cas $\\vec{u}=\\vec{0}$, puis cherche un réel $k$ tel que $\\vec{v}=k\\vec{u}$.",
+       "explication": "Vrai. Si $\\vec{u}=\\vec{0}$, c'est immédiat. Sinon, si $a\\neq0$, posons $k=\\frac{c}{a}$ : $c=ka$ et $d=\\frac{bc}{a}=kb$, donc $\\vec{v}=k\\vec{u}$. Si $a=0$, alors $b\\neq0$ et $bc=0$ donne $c=0$ ; avec $k=\\frac{d}{b}$, on a encore $\\vec{v}=k\\vec{u}$. Aucune longueur, aucun angle : le repère peut être quelconque.",
+       "retenir": "Le critère $xy'-yx'=0$ est une équivalence, valable dans tout repère, vecteur nul compris."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Soit $A$ et $B$ deux points distincts du plan. Proposition : « Un point $M$ vérifie $MA=MB$ si et seulement si $M$ est le milieu de $[AB]$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Le sens « $M$ milieu $\\Rightarrow MA=MB$ » est vrai. Et la réciproque ? Où sont tous les points équidistants de $A$ et de $B$ ?",
+       "explication": "Faux. Dans un repère orthonormé, avec $A(-1\\,;0)$, $B(1\\,;0)$ et $M(0\\,;1)$ : $MA=MB=\\sqrt{2}$, mais le milieu de $[AB]$ est $O(0\\,;0)$. Les points équidistants de $A$ et $B$ forment la médiatrice de $[AB]$. La version vectorielle, elle, est une équivalence : $\\vec{MA}+\\vec{MB}=\\vec{0}$ si et seulement si $M$ est le milieu de $[AB]$.",
+       "retenir": "$MA=MB$ caractérise la médiatrice de $[AB]$ ; $\\vec{MA}+\\vec{MB}=\\vec{0}$ caractérise le milieu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7r2",
+   "carte": "archimede",
+   "fond": "jardin",
+   "nom": "L'Académie de Platon",
+   "notion": "Équations de droites, vecteurs directeur et normal",
+   "athena": "Dans $ax+by+c=0$, lis sans calcul : $(-b\\,;a)$ dirige la droite et, en repère orthonormé, $(a\\,;b)$ lui est normal. Un vecteur normal suffit pour écrire une perpendiculaire.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Du vecteur directeur à l'équation",
+       "enonce": "Dans un repère orthonormé, la droite $d$ passe par $A(2\\,;-1)$ et admet $\\vec{u}(3\\,;2)$ pour vecteur directeur. Elle a une équation de la forme $2x-3y+c=0$. Entrer $c$.",
+       "reponse": -7,
+       "indice": "La droite $ax+by+c=0$ est dirigée par $(-b\\,;a)$ : vérifie que la forme proposée convient, puis écris que $A$ appartient à $d$.",
+       "explication": "La droite $2x-3y+c=0$ est dirigée par $(3\\,;2)$ : la forme convient. $A\\in d$ donne $2\\times2-3\\times(-1)+c=0$, soit $c=-7$. Une équation de $d$ est $2x-3y-7=0$.",
+       "retenir": "La droite $ax+by+c=0$ a pour vecteur directeur $(-b\\,;a)$ ; un point de la droite fixe ensuite $c$."
+      },
+      {
+       "titre": "La parallèle",
+       "enonce": "Dans un repère orthonormé, on considère la droite $\\Delta : 3x+4y-1=0$ et le point $A(-1\\,;5)$. La parallèle à $\\Delta$ passant par $A$ a pour équation réduite $y=mx+p$. Entrer $p$, sous forme de fraction.",
+       "reponse": "17/4",
+       "indice": "Deux droites parallèles ont des équations cartésiennes qui peuvent ne différer que par le terme constant.",
+       "explication": "La parallèle a une équation $3x+4y+c=0$, et $A$ donne $-3+20+c=0$, donc $c=-17$. En isolant $y$ : $y=-\\frac{3}{4}x+\\frac{17}{4}$, d'où $p=\\frac{17}{4}$. Piège : recopier $p=\\frac{1}{4}$, l'ordonnée à l'origine de $\\Delta$.",
+       "retenir": "Droites parallèles : mêmes coefficients $a$ et $b$ (ou même coefficient directeur), seule la constante change."
+      },
+      {
+       "titre": "Le point fixe",
+       "enonce": "Dans un repère orthonormé, on considère, pour tout réel $m$, la droite $d_m : (1+m)x-(1+2m)y-3=0$. Toutes les droites $d_m$ passent par un même point $K$. Entrer l'abscisse de $K$.",
+       "reponse": 6,
+       "indice": "Regroupe l'équation sous la forme $(\\dots)+m(\\dots)=0$ : elle doit être vraie pour tout réel $m$.",
+       "explication": "L'équation s'écrit $(x-y-3)+m(x-2y)=0$. Elle est vraie pour tout $m$ si et seulement si $x-y-3=0$ et $x-2y=0$ (prendre $m=0$, puis $m=1$), soit $y=3$ et $x=6$. Réciproquement, $K(6\\,;3)$ vérifie $6(1+m)-3(1+2m)-3=0$ pour tout $m$.",
+       "retenir": "Égalité vraie pour tout $m$ : l'écrire $A+mB=0$, puis exiger $A=0$ et $B=0$.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La perpendiculaire",
+       "enonce": "Dans un repère orthonormé, on considère la droite $d : 2x-5y+1=0$ et le point $A(3\\,;1)$. La perpendiculaire à $d$ passant par $A$ a une équation de la forme $5x+2y+c=0$. Entrer $c$.",
+       "reponse": -17,
+       "indice": "Un vecteur directeur de $d$ est un vecteur normal de toute perpendiculaire à $d$.",
+       "explication": "$d$ est dirigée par $\\vec{u}(5\\,;2)$, qui est donc normal à la perpendiculaire : celle-ci a une équation $5x+2y+c=0$. $A$ donne $15+2+c=0$, soit $c=-17$. Contrôle : les vecteurs normaux $(2\\,;-5)$ et $(5\\,;2)$ sont orthogonaux.",
+       "retenir": "Dans un repère orthonormé, la droite de vecteur normal $\\vec{n}(a\\,;b)$ a une équation de la forme $ax+by+c=0$."
+      },
+      {
+       "titre": "La médiatrice",
+       "enonce": "Dans un repère orthonormé, on considère $A(-1\\,;2)$ et $B(3\\,;6)$. La médiatrice de $[AB]$ a une équation de la forme $x+y+c=0$. Entrer $c$.",
+       "reponse": -5,
+       "indice": "La médiatrice passe par le milieu de $[AB]$ et admet $\\vec{AB}$ pour vecteur normal.",
+       "explication": "Le milieu de $[AB]$ est $I(1\\,;4)$ et $\\vec{AB}(4\\,;4)$, colinéaire à $(1\\,;1)$, est normal à la médiatrice : équation $x+y+c=0$ avec $1+4+c=0$, soit $c=-5$. Autre voie : $MA^2=MB^2$ donne $8x+8y-40=0$.",
+       "retenir": "Médiatrice de $[AB]$ : la droite qui passe par le milieu de $[AB]$ et admet $\\vec{AB}$ pour vecteur normal."
+      },
+      {
+       "titre": "Le pied de la perpendiculaire",
+       "enonce": "Dans un repère orthonormé, on considère la droite $d : x-2y+3=0$ et le point $M(4\\,;1)$. On note $H$ le projeté orthogonal de $M$ sur $d$. Entrer l'abscisse de $H$.",
+       "reponse": 3,
+       "indice": "$H$ est sur la droite qui passe par $M$ et qui est dirigée par un vecteur normal $\\vec{n}$ de $d$ : écris $\\vec{MH}=t\\,\\vec{n}$, puis impose $H\\in d$.",
+       "explication": "$\\vec{n}(1\\,;-2)$ est normal à $d$, donc $H(4+t\\,;1-2t)$ pour un réel $t$. $H\\in d$ donne $4+t-2(1-2t)+3=0$, soit $5t+5=0$ et $t=-1$. Ainsi $H(3\\,;3)$, et la distance de $M$ à $d$ vaut $MH=\\sqrt{1+4}=\\sqrt{5}$.",
+       "retenir": "Projeté orthogonal de $M$ sur $d$ : partir de $M$ selon un vecteur normal de $d$, puis chercher l'intersection avec $d$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, toute droite admet une équation de la forme $y=mx+p$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Pense à une droite parallèle à l'axe des ordonnées.",
+       "explication": "Faux. La droite d'équation $x=2$ contient $(2\\,;0)$ et $(2\\,;1)$ : une équation $y=mx+p$ imposerait $0=2m+p$ et $1=2m+p$, ce qui est contradictoire. Toute droite admet en revanche une équation cartésienne $ax+by+c=0$ avec $(a\\,;b)\\neq(0\\,;0)$.",
+       "retenir": "Les droites parallèles à l'axe des ordonnées n'ont pas d'équation réduite $y=mx+p$ : leur équation est $x=k$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, les droites $d : 2x-3y+1=0$ et $d' : -4x+6y-2=0$ sont strictement parallèles. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Compare les deux équations terme à terme.",
+       "explication": "Faux. L'équation de $d'$ est celle de $d$ multipliée par $-2$ : les deux droites sont confondues. Par exemple, le point $(1\\,;1)$ vérifie les deux équations. Elles sont parallèles, mais pas strictement.",
+       "retenir": "Équations proportionnelles, constante comprise : droites confondues. Seuls $a$ et $b$ proportionnels : droites parallèles."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, les droites $d : ax+by+c=0$ et $d' : a'x+b'y+c'=0$ sont perpendiculaires si et seulement si $aa'+bb'=0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Que représentent les vecteurs $(a\\,;b)$ et $(a'\\,;b')$ pour ces deux droites ?",
+       "explication": "Vrai. $\\vec{u}(-b\\,;a)$ dirige $d$ et $\\vec{u}'(-b'\\,;a')$ dirige $d'$. Les droites sont perpendiculaires si et seulement si $\\vec{u}\\cdot\\vec{u}'=0$, et dans un repère orthonormé $\\vec{u}\\cdot\\vec{u}'=bb'+aa'$. Autrement dit, deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux $(a\\,;b)$ et $(a'\\,;b')$ sont orthogonaux.",
+       "retenir": "Deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux (ou directeurs) sont orthogonaux."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7r3",
+   "carte": "oresme",
+   "fond": "crepuscule",
+   "nom": "Le méridien de Posidonius",
+   "notion": "Produit scalaire : définitions et calculs",
+   "athena": "Le produit scalaire a quatre visages : coordonnées, normes, projection, cosinus. Avant de calculer, choisis celui que l'énoncé te tend.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "En coordonnées",
+       "enonce": "Dans un repère orthonormé, on considère $\\vec{u}(3\\,;-2)$ et $\\vec{v}(4\\,;5)$. Entrer $\\vec{u}\\cdot\\vec{v}$.",
+       "reponse": 2,
+       "indice": "Dans un repère orthonormé, $\\vec{u}\\cdot\\vec{v}=xx'+yy'$.",
+       "explication": "$\\vec{u}\\cdot\\vec{v}=3\\times4+(-2)\\times5=12-10=2$. Le produit scalaire est un nombre réel, pas un vecteur.",
+       "retenir": "En repère orthonormé : $\\vec{u}\\cdot\\vec{v}=xx'+yy'$ et $\\|\\vec{u}\\|^2=x^2+y^2$."
+      },
+      {
+       "titre": "Avec les seules normes",
+       "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\|=3$, $\\|\\vec{v}\\|=5$ et $\\|\\vec{u}+\\vec{v}\\|=7$. Entrer $\\vec{u}\\cdot\\vec{v}$, sous forme de fraction ou de décimal.",
+       "reponse": 7.5,
+       "indice": "Développe $\\|\\vec{u}+\\vec{v}\\|^2=(\\vec{u}+\\vec{v})\\cdot(\\vec{u}+\\vec{v})$.",
+       "explication": "$\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2$, donc $49=9+2\\,\\vec{u}\\cdot\\vec{v}+25$ et $\\vec{u}\\cdot\\vec{v}=\\frac{15}{2}$. On en déduit $\\cos(\\vec{u},\\vec{v})=\\frac{7{,}5}{15}=\\frac{1}{2}$ : les vecteurs forment un angle de $60^\\circ$.",
+       "retenir": "$\\vec{u}\\cdot\\vec{v}=\\frac{1}{2}\\left(\\|\\vec{u}+\\vec{v}\\|^2-\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2\\right)$ : les normes suffisent."
+      },
+      {
+       "titre": "Le minimum caché",
+       "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$ et $\\vec{u}\\cdot\\vec{v}=-1$. Pour tout réel $t$, on pose $f(t)=\\|\\vec{u}+t\\,\\vec{v}\\|^2$. Entrer la valeur de $t$ pour laquelle $f(t)$ est minimal, sous forme de fraction.",
+       "reponse": "1/9",
+       "indice": "Développe $f(t)$ : c'est un trinôme du second degré en $t$.",
+       "explication": "$f(t)=\\|\\vec{u}\\|^2+2t\\,\\vec{u}\\cdot\\vec{v}+t^2\\|\\vec{v}\\|^2=9t^2-2t+4$, minimal en $t=\\frac{2}{18}=\\frac{1}{9}$. Pour cette valeur, $(\\vec{u}+t\\vec{v})\\cdot\\vec{v}=-1+9t=0$ : le vecteur le plus court de la famille est orthogonal à $\\vec{v}$. C'est l'idée du projeté orthogonal.",
+       "retenir": "$\\|\\vec{u}+t\\vec{v}\\|$ est minimal quand $\\vec{u}+t\\vec{v}$ est orthogonal à $\\vec{v}$, c'est-à-dire pour $t=-\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|^2}$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Avec le cosinus",
+       "enonce": "Dans un triangle $ABC$, on a $AB=4$, $AC=6$ et $\\widehat{BAC}=60^\\circ$. Entrer $\\vec{AB}\\cdot\\vec{AC}$.",
+       "reponse": 12,
+       "indice": "$\\vec{AB}\\cdot\\vec{AC}=AB\\times AC\\times\\cos\\widehat{BAC}$.",
+       "explication": "$\\vec{AB}\\cdot\\vec{AC}=4\\times6\\times\\cos60^\\circ=24\\times\\frac{1}{2}=12$.",
+       "retenir": "$\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|\\times\\cos(\\vec{u},\\vec{v})$ : le signe du produit scalaire est celui du cosinus."
+      },
+      {
+       "titre": "Par projection",
+       "enonce": "$ABCD$ est un carré de côté 4 et $I$ est le milieu de $[CD]$. Entrer $\\vec{AB}\\cdot\\vec{AI}$.",
+       "reponse": 8,
+       "indice": "Projette orthogonalement le point $I$ sur la droite $(AB)$.",
+       "explication": "Le projeté orthogonal de $I$ sur $(AB)$ est le milieu $J$ de $[AB]$, et $\\vec{AJ}$ a le même sens que $\\vec{AB}$. Donc $\\vec{AB}\\cdot\\vec{AI}=\\vec{AB}\\cdot\\vec{AJ}=4\\times2=8$. Contrôle dans le repère orthonormé d'origine $A$ où $B(4\\,;0)$ et $D(0\\,;4)$ : $\\vec{AB}(4\\,;0)$ et $\\vec{AI}(2\\,;4)$.",
+       "retenir": "Si $H$ est le projeté orthogonal de $C$ sur $(AB)$, alors $\\vec{AB}\\cdot\\vec{AC}=\\vec{AB}\\cdot\\vec{AH}$ : positif si même sens, négatif sinon."
+      },
+      {
+       "titre": "L'angle des diagonales",
+       "enonce": "$ABCD$ est un rectangle tel que $AB=6$ et $AD=4$ ; ses diagonales se coupent en $O$. Entrer $\\cos\\widehat{AOB}$, sous forme de fraction.",
+       "reponse": "-5/13",
+       "indice": "Place le rectangle dans un repère orthonormé d'origine $A$, puis calcule $\\vec{OA}\\cdot\\vec{OB}$ et les longueurs $OA$ et $OB$.",
+       "explication": "Repère orthonormé d'origine $A$ : $B(6\\,;0)$, $D(0\\,;4)$, $O(3\\,;2)$. $\\vec{OA}(-3\\,;-2)$ et $\\vec{OB}(3\\,;-2)$ donnent $\\vec{OA}\\cdot\\vec{OB}=-9+4=-5$ et $OA=OB=\\sqrt{13}$. Donc $\\cos\\widehat{AOB}=-\\frac{5}{13}$ : l'angle est obtus, ce qui est cohérent puisqu'il fait face au grand côté $[AB]$.",
+       "retenir": "Angle géométrique : $\\cos\\widehat{AOB}=\\dfrac{\\vec{OA}\\cdot\\vec{OB}}{OA\\times OB}$, après avoir choisi un repère adapté à la figure."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$ du plan, $|\\vec{u}\\cdot\\vec{v}|\\leq\\|\\vec{u}\\|\\times\\|\\vec{v}\\|$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Traite à part le cas d'un vecteur nul, puis utilise l'expression du produit scalaire avec le cosinus.",
+       "explication": "Vrai. Si $\\vec{u}$ ou $\\vec{v}$ est nul, les deux membres sont nuls. Sinon, $\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|\\times\\cos\\theta$, où $\\theta$ est l'angle des deux vecteurs, et $|\\cos\\theta|\\leq1$. C'est l'inégalité de Cauchy-Schwarz ; l'égalité a lieu si et seulement si les vecteurs sont colinéaires.",
+       "retenir": "Inégalité de Cauchy-Schwarz : $|\\vec{u}\\cdot\\vec{v}|\\leq\\|\\vec{u}\\|\\,\\|\\vec{v}\\|$, avec égalité si et seulement si $\\vec{u}$ et $\\vec{v}$ sont colinéaires."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$ du plan, $(\\vec{u}+\\vec{v})\\cdot(\\vec{u}-\\vec{v})=0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Développe, comme une identité remarquable.",
+       "explication": "Faux. $(\\vec{u}+\\vec{v})\\cdot(\\vec{u}-\\vec{v})=\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2$. Contre-exemple en repère orthonormé : $\\vec{u}(2\\,;0)$ et $\\vec{v}(1\\,;0)$ donnent $(3\\,;0)\\cdot(1\\,;0)=3\\neq0$. L'égalité n'a lieu que si $\\|\\vec{u}\\|=\\|\\vec{v}\\|$ : c'est l'orthogonalité des diagonales d'un losange.",
+       "retenir": "$(\\vec{u}+\\vec{v})\\cdot(\\vec{u}-\\vec{v})=\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2$ : nul si et seulement si $\\|\\vec{u}\\|=\\|\\vec{v}\\|$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$ du plan, $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2$ si et seulement si $\\vec{u}$ et $\\vec{v}$ sont orthogonaux. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Développe $\\|\\vec{u}+\\vec{v}\\|^2$.",
+       "explication": "Vrai. $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2$, donc l'égalité équivaut à $\\vec{u}\\cdot\\vec{v}=0$, c'est-à-dire à l'orthogonalité (le vecteur nul étant orthogonal à tout vecteur). C'est le théorème de Pythagore et sa réciproque, en une seule ligne.",
+       "retenir": "Pythagore vectoriel : $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2 \\iff \\vec{u}\\cdot\\vec{v}=0$."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "La simplification interdite",
+     "enonce": "Un élève veut démontrer que si $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ avec $\\vec{u}\\neq\\vec{0}$, alors $\\vec{v}=\\vec{w}$. Il écrit : « on simplifie par $\\vec{u}$, qui n'est pas nul ». Que peut-on réellement déduire de l'hypothèse ?",
+     "reponse": 2,
+     "choix": [
+      "Que $\\vec{v}=\\vec{w}$ : la simplification est permise puisque $\\vec{u}\\neq\\vec{0}$.",
+      "Seulement que $\\vec{u}$ est orthogonal à $\\vec{v}-\\vec{w}$.",
+      "Que $\\vec{v}$ et $\\vec{w}$ sont colinéaires.",
+      "Que $\\|\\vec{v}\\|=\\|\\vec{w}\\|$."
+     ],
+     "indice": "Fais tout passer dans le même membre et factorise : quelle propriété géométrique obtiens-tu ?",
+     "explication": "L'hypothèse équivaut à $\\vec{u}\\cdot(\\vec{v}-\\vec{w})=0$, c'est-à-dire à $\\vec{u}\\perp(\\vec{v}-\\vec{w})$, et rien de plus. Contre-exemple à la « simplification », dans un repère orthonormé : $\\vec{u}(1\\,;0)$, $\\vec{v}(1\\,;0)$ et $\\vec{w}(1\\,;5)$ donnent $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}=1$, alors que $\\vec{v}$ et $\\vec{w}$ ne sont ni égaux, ni colinéaires, ni de même norme.",
+     "retenir": "On ne divise jamais par un vecteur : $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ signifie seulement $\\vec{u}\\perp(\\vec{v}-\\vec{w})$."
+    }
+   ]
+  },
+  {
+   "id": "c7r4",
+   "carte": "hypatie",
+   "fond": "orient",
+   "nom": "L'attention de Simone Weil",
+   "notion": "Applications : Al-Kashi, orthogonalité, cercles",
+   "athena": "Regarde avant de calculer : un diamètre, un rayon perpendiculaire à une tangente, un angle obtus caché font souvent tout le travail.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "La traversée du lagon",
+       "enonce": "Depuis un ponton $P$ de Petite-Terre, un kayak rejoint un îlot $I$ situé à 5 km, un autre rejoint un récif $R$ situé à 8 km. L'angle $\\widehat{IPR}$ mesure $60^\\circ$. Entrer la distance $IR$, en km.",
+       "reponse": 7,
+       "unite": "km",
+       "indice": "Formule d'Al-Kashi : $IR^2=PI^2+PR^2-2\\,PI\\times PR\\times\\cos\\widehat{IPR}$.",
+       "explication": "$IR^2=25+64-2\\times5\\times8\\times\\frac{1}{2}=89-40=49$, donc $IR=7$ km.",
+       "retenir": "Al-Kashi : $a^2=b^2+c^2-2bc\\cos\\widehat{A}$ ; c'est Pythagore corrigé par un produit scalaire."
+      },
+      {
+       "titre": "Un angle obtus",
+       "enonce": "Dans un triangle $ABC$, on a $AB=4$, $AC=5$ et $BC=7$. Entrer $\\cos\\widehat{BAC}$, sous forme de fraction.",
+       "reponse": "-1/5",
+       "indice": "Écris la formule d'Al-Kashi pour le côté opposé au sommet $A$, puis isole le cosinus.",
+       "explication": "$BC^2=AB^2+AC^2-2\\,AB\\times AC\\times\\cos\\widehat{BAC}$ donne $\\cos\\widehat{BAC}=\\frac{16+25-49}{2\\times4\\times5}=\\frac{-8}{40}=-\\frac{1}{5}$. Le cosinus est négatif : l'angle est obtus, ce qu'annonçait $BC^2>AB^2+AC^2$.",
+       "retenir": "$\\cos\\widehat{A}=\\dfrac{b^2+c^2-a^2}{2bc}$, où $a$ est le côté opposé à $A$ : son signe dit si l'angle est aigu, droit ou obtus."
+      },
+      {
+       "titre": "La médiane",
+       "enonce": "Dans un triangle $ABC$, on a $AB=7$, $AC=9$ et $BC=8$. On note $I$ le milieu de $[BC]$. Entrer la longueur $AI$.",
+       "reponse": 7,
+       "indice": "Écris $\\vec{AI}=\\frac{1}{2}(\\vec{AB}+\\vec{AC})$ et calcule d'abord $\\vec{AB}\\cdot\\vec{AC}$ à partir des trois longueurs.",
+       "explication": "$\\vec{AB}\\cdot\\vec{AC}=\\frac{1}{2}(AB^2+AC^2-BC^2)=\\frac{1}{2}(49+81-64)=33$. Puis $AI^2=\\frac{1}{4}\\left(AB^2+2\\,\\vec{AB}\\cdot\\vec{AC}+AC^2\\right)=\\frac{1}{4}(49+66+81)=49$, donc $AI=7$. C'est le théorème de la médiane : $AB^2+AC^2=2AI^2+\\frac{1}{2}BC^2$.",
+       "retenir": "Théorème de la médiane : $AB^2+AC^2=2AI^2+\\frac{1}{2}BC^2$, où $I$ est le milieu de $[BC]$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Centre et rayon",
+       "enonce": "Dans un repère orthonormé, l'ensemble des points $M(x\\,;y)$ tels que $x^2+y^2-6x+4y-12=0$ est un cercle. Entrer son rayon.",
+       "reponse": 5,
+       "indice": "Fais apparaître deux carrés, par exemple $x^2-6x=(x-3)^2-9$.",
+       "explication": "L'équation s'écrit $(x-3)^2-9+(y+2)^2-4-12=0$, soit $(x-3)^2+(y+2)^2=25$ : cercle de centre $\\Omega(3\\,;-2)$ et de rayon 5.",
+       "retenir": "$(x-a)^2+(y-b)^2=r^2$ : cercle de centre $(a\\,;b)$ et de rayon $r$ ; on s'y ramène par forme canonique."
+      },
+      {
+       "titre": "Le cercle de diamètre [AB]",
+       "enonce": "Dans un repère orthonormé, on considère $A(1\\,;2)$ et $B(5\\,;-4)$. L'ensemble des points $M(x\\,;y)$ tels que $\\vec{MA}\\cdot\\vec{MB}=0$ a une équation de la forme $x^2+y^2+ax+by+c=0$. Entrer $c$.",
+       "reponse": -3,
+       "indice": "Écris les coordonnées de $\\vec{MA}$ et de $\\vec{MB}$ en fonction de $x$ et $y$, puis développe leur produit scalaire.",
+       "explication": "$\\vec{MA}(1-x\\,;2-y)$ et $\\vec{MB}(5-x\\,;-4-y)$, donc $\\vec{MA}\\cdot\\vec{MB}=(1-x)(5-x)+(2-y)(-4-y)=x^2-6x+5+y^2+2y-8$, et $c=-3$. C'est le cercle de diamètre $[AB]$ : centre $(3\\,;-1)$, rayon $\\sqrt{13}=\\frac{AB}{2}$.",
+       "retenir": "$\\vec{MA}\\cdot\\vec{MB}=0$ décrit le cercle de diamètre $[AB]$ : le cercle circonscrit au triangle rectangle du collège, en une équation."
+      },
+      {
+       "titre": "Les tangentes parallèles",
+       "enonce": "Dans un repère orthonormé, on considère le cercle $\\mathcal{C}$ de centre $\\Omega(2\\,;-1)$ et de rayon 2 et, pour tout réel $k$, la droite $d_k : 3x+4y+k=0$. Entrer la plus grande valeur de $k$ pour laquelle $d_k$ est tangente à $\\mathcal{C}$.",
+       "reponse": 8,
+       "indice": "$d_k$ est tangente à $\\mathcal{C}$ si et seulement si $\\Omega H=2$, où $H$ est le projeté orthogonal de $\\Omega$ sur $d_k$. Pars de $\\Omega$ selon le vecteur normal $(3\\,;4)$.",
+       "explication": "$\\vec{n}(3\\,;4)$ est normal à $d_k$ : $H=\\Omega+t\\vec{n}$, soit $H(2+3t\\,;-1+4t)$, et $H\\in d_k$ donne $25t+2+k=0$. Alors $\\Omega H=|t|\\times\\|\\vec{n}\\|=\\frac{|k+2|}{5}$. La tangence s'écrit $|k+2|=10$, soit $k=8$ ou $k=-12$. La plus grande valeur est 8.",
+       "retenir": "Une droite est tangente à un cercle si et seulement si la distance du centre à la droite est égale au rayon."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un triangle $ABC$, si $BC^2>AB^2+AC^2$, alors l'angle $\\widehat{BAC}$ est obtus. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Exprime $\\cos\\widehat{BAC}$ à l'aide de la formule d'Al-Kashi.",
+       "explication": "Vrai. Al-Kashi donne $\\cos\\widehat{BAC}=\\dfrac{AB^2+AC^2-BC^2}{2\\,AB\\times AC}$. L'hypothèse rend le numérateur strictement négatif et le dénominateur est positif : $\\cos\\widehat{BAC}<0$. Comme $\\widehat{BAC}$ est strictement compris entre $0^\\circ$ et $180^\\circ$, l'angle est obtus. La réciproque est vraie aussi.",
+       "retenir": "Comparer $a^2$ à $b^2+c^2$ dit si l'angle opposé au côté $a$ est aigu, droit ou obtus."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, l'ensemble des points $M(x\\,;y)$ tels que $x^2+y^2-2x+4y+6=0$ est un cercle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Mets l'équation sous forme canonique et regarde le signe du second membre.",
+       "explication": "Faux. L'équation s'écrit $(x-1)^2+(y+2)^2=1+4-6=-1$. Une somme de deux carrés ne peut pas valoir $-1$ : l'ensemble est vide. Une équation $x^2+y^2+ax+by+c=0$ décrit un cercle, un point ou l'ensemble vide.",
+       "retenir": "Avant de lire un centre et un rayon, vérifier que le second membre de la forme canonique est strictement positif."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, la droite $d : x+y+1=0$ est tangente au cercle $\\mathcal{C} : x^2+y^2-4x-2y-3=0$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Détermine le centre et le rayon de $\\mathcal{C}$, puis le projeté orthogonal du centre sur $d$.",
+       "explication": "Vrai. $\\mathcal{C} : (x-2)^2+(y-1)^2=8$, de centre $\\Omega(2\\,;1)$ et de rayon $2\\sqrt{2}$. Le projeté de $\\Omega$ sur $d$ est $H=\\Omega+t\\,(1\\,;1)$ avec $(2+t)+(1+t)+1=0$, soit $t=-2$ et $H(0\\,;-1)$. Alors $\\Omega H=\\sqrt{4+4}=2\\sqrt{2}$, égal au rayon : $d$ est tangente à $\\mathcal{C}$ en $H$.",
+       "retenir": "Tangence : distance du centre à la droite égale au rayon ; le point de contact est le projeté orthogonal du centre."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7b",
+   "carte": "boss-euler",
+   "fond": "temple",
+   "nom": "La mesure d'Ératosthène",
+   "notion": "Problème de géométrie repérée",
+   "athena": "Ératosthène a mesuré la Terre avec un angle et une distance. Mesure ce pavé pièce à pièce : chaque question peut se traiter seule.",
+   "steles": [
+    {
+     "boss": "Le Sphinx de Thèbes",
+     "monstre": "sphinx",
+     "contexte": "D'après CAPES Mayotte 2022 (composition 1) : certains trottoirs du Caire sont pavés de pentagones dont les cinq côtés ont la même longueur. Le plan est muni d'un repère orthonormé. On considère $A\\left(-\\frac{3}{2}\\,;0\\right)$, $B\\left(-\\frac{1}{2}\\,;0\\right)$, $C\\left(\\frac{1}{2}\\,;0\\right)$ et $D\\left(\\frac{3}{2}\\,;0\\right)$. Le point $E$ est le point d'ordonnée positive tel que $EA=ED=2$. On note $\\mathcal{C}_1$ le cercle de centre $B$ et de rayon 1, $\\mathcal{C}_5$ le cercle de centre $E$ et de rayon 1, $G_1$ le point commun à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ d'abscisse négative et $G_2$ le symétrique de $G_1$ par rapport à l'axe des ordonnées. Le pavé est le pentagone $BCG_2EG_1$.",
+     "exercices": [
+      {
+       "titre": "Le sommet E",
+       "enonce": "On rappelle que $E$ est le point d'ordonnée positive tel que $EA=ED=2$, avec $A\\left(-\\frac{3}{2}\\,;0\\right)$ et $D\\left(\\frac{3}{2}\\,;0\\right)$. Quelle est l'ordonnée de $E$ ?",
+       "reponse": 3,
+       "choix": [
+        "$\\frac{\\sqrt{15}}{2}$",
+        "$\\frac{7}{4}$",
+        "$\\frac{\\sqrt{7}}{2}$",
+        "$\\sqrt{3}$"
+       ],
+       "indice": "$E$ est équidistant de $A$ et de $D$ : sur quelle droite se trouve-t-il ?",
+       "explication": "$EA=ED$ place $E$ sur la médiatrice de $[AD]$, qui est l'axe des ordonnées : $E(0\\,;y)$ avec $y>0$. Puis $EA^2=\\frac{9}{4}+y^2=4$, donc $y^2=\\frac{7}{4}$ et $y=\\frac{\\sqrt{7}}{2}$. Les autres valeurs viennent d'erreurs classiques : $\\frac{\\sqrt{15}}{2}$ confond $A$ avec $B$, et $\\frac{7}{4}$ oublie la racine carrée.",
+       "retenir": "Un point équidistant de deux points est sur leur médiatrice : la symétrie de la figure fixe une coordonnée."
+      },
+      {
+       "titre": "L'angle en $G_1$",
+       "enonce": "On admet que $B\\left(-\\frac{1}{2}\\,;0\\right)$ et $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$. Le point $G_1$ vérifie $G_1B=G_1E=1$. Entrer la mesure, en degrés, de l'angle $\\widehat{BG_1E}$.",
+       "reponse": 90,
+       "unite": "°",
+       "indice": "Calcule $BE^2$, puis applique la formule d'Al-Kashi dans le triangle $BG_1E$.",
+       "explication": "$BE^2=\\left(\\frac{1}{2}\\right)^2+\\frac{7}{4}=2$. Al-Kashi dans $BG_1E$ : $BE^2=G_1B^2+G_1E^2-2\\,G_1B\\times G_1E\\times\\cos\\widehat{BG_1E}$, soit $2=2-2\\cos\\widehat{BG_1E}$. Donc $\\cos\\widehat{BG_1E}=0$ : l'angle est droit (c'est aussi la réciproque du théorème de Pythagore).",
+       "retenir": "Al-Kashi contient la réciproque de Pythagore : $a^2=b^2+c^2 \\iff \\cos\\widehat{A}=0$."
+      },
+      {
+       "titre": "Le cercle $\\mathcal{C}_5$",
+       "enonce": "On admet que $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$. Le cercle $\\mathcal{C}_5$ de centre $E$ et de rayon 1 a une équation de la forme $x^2+y^2+ax+by+c=0$. Entrer $c$, sous forme de fraction.",
+       "reponse": "3/4",
+       "indice": "Écris $(x-x_E)^2+(y-y_E)^2=1$, puis développe.",
+       "explication": "$x^2+\\left(y-\\frac{\\sqrt{7}}{2}\\right)^2=1$ donne $x^2+y^2-\\sqrt{7}\\,y+\\frac{7}{4}-1=0$ : $a=0$, $b=-\\sqrt{7}$ et $c=\\frac{3}{4}$.",
+       "retenir": "Le terme constant de l'équation développée d'un cercle de centre $\\Omega$ et de rayon $r$ vaut $x_\\Omega^2+y_\\Omega^2-r^2$."
+      },
+      {
+       "titre": "La corde commune",
+       "enonce": "On admet que $B\\left(-\\frac{1}{2}\\,;0\\right)$, $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$ et que les deux points communs à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ sont sur la droite $\\Delta : x+\\sqrt{7}\\,y-\\frac{3}{2}=0$ (obtenue en soustrayant les équations des deux cercles). On note $\\delta$ la distance du point $B$ à la droite $\\Delta$. Entrer $\\delta^2$, le carré de cette distance, sous forme de fraction.",
+       "reponse": "1/2",
+       "indice": "Compare un vecteur normal de $\\Delta$ au vecteur $\\vec{BE}$ : $\\Delta$ est une droite bien connue associée au segment $[BE]$.",
+       "explication": "$\\vec{n}(1\\,;\\sqrt{7})=2\\,\\vec{BE}$ est normal à $\\Delta$, et le milieu $\\left(-\\frac{1}{4}\\,;\\frac{\\sqrt{7}}{4}\\right)$ de $[BE]$ vérifie l'équation de $\\Delta$ : $\\Delta$ est la médiatrice de $[BE]$. Le projeté orthogonal de $B$ sur $\\Delta$ est ce milieu, donc $\\delta=\\frac{BE}{2}=\\frac{\\sqrt{2}}{2}$ et $\\delta^2=\\frac{1}{2}$. Contrôle par la formule : $\\frac{\\left|-\\frac{1}{2}-\\frac{3}{2}\\right|}{\\sqrt{1+7}}=\\frac{2}{2\\sqrt{2}}$.",
+       "retenir": "Deux cercles de même rayon se coupent sur la médiatrice de leurs centres ; une distance à une droite se lit sur un projeté orthogonal."
+      },
+      {
+       "titre": "L'aire du pavé",
+       "enonce": "On admet que $B\\left(-\\frac{1}{2}\\,;0\\right)$, $C\\left(\\frac{1}{2}\\,;0\\right)$, $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$ et que les triangles $BG_1E$ et $CG_2E$ sont rectangles isocèles en $G_1$ et $G_2$, avec $G_1B=G_2C=1$, et situés à l'extérieur du triangle $BCE$. Entrer l'aire du pentagone $BCG_2EG_1$, arrondie au centième.",
+       "reponse": 1.66,
+       "tolerance": 0.005,
+       "indice": "Découpe le pentagone en trois triangles : $BCE$ et les deux triangles rectangles isocèles.",
+       "explication": "Le triangle $BCE$ a pour base $BC=1$ et pour hauteur $y_E=\\frac{\\sqrt{7}}{2}$ : son aire vaut $\\frac{\\sqrt{7}}{4}$. Chaque triangle rectangle isocèle dont les côtés de l'angle droit mesurent 1 a pour aire $\\frac{1}{2}$. Aire du pentagone : $1+\\frac{\\sqrt{7}}{4}\\approx1{,}66$.",
+       "retenir": "Aire d'un polygone en repère : le découper en triangles dont on connaît une base et la hauteur associée."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Dans un repère orthonormé, on considère $E(-2\\,;0)$, $F(8\\,;0)$ et $G(0\\,;4)$. Proposition : « L'orthocentre du triangle $EFG$ est le point $G$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Calcule $\\vec{GE}\\cdot\\vec{GF}$.",
+       "explication": "Vrai. $\\vec{GE}(-2\\,;-4)$ et $\\vec{GF}(8\\,;-4)$ donnent $\\vec{GE}\\cdot\\vec{GF}=-16+16=0$ : le triangle est rectangle en $G$. La hauteur issue de $E$ est alors la droite $(EG)$ et celle issue de $F$ est la droite $(FG)$ : elles se coupent en $G$, qui est donc l'orthocentre.",
+       "retenir": "Dans un triangle rectangle, l'orthocentre est le sommet de l'angle droit."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $ABCD$ est un quadrilatère tel que $\\vec{AC}\\cdot\\vec{BD}=0$, alors $ABCD$ est un losange. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Les diagonales d'un losange sont perpendiculaires. Et la réciproque ? Pense à un cerf-volant.",
+       "explication": "Faux. Dans un repère orthonormé, prenons $A(0\\,;1)$, $B(-1\\,;0)$, $C(0\\,;-3)$ et $D(1\\,;0)$ : $\\vec{AC}(0\\,;-4)$ et $\\vec{BD}(2\\,;0)$ sont orthogonaux, mais $AB=\\sqrt{2}$ et $BC=\\sqrt{10}$, donc $ABCD$ n'est pas un losange. Il faudrait en plus que les diagonales aient le même milieu.",
+       "retenir": "Diagonales perpendiculaires ne suffisent pas pour un losange : il faut aussi qu'elles se coupent en leur milieu."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Un parallélogramme dont les diagonales ont la même longueur est un rectangle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Exprime $\\vec{AC}$ et $\\vec{BD}$ à l'aide de $\\vec{AB}$ et $\\vec{AD}$, puis compare $AC^2$ et $BD^2$.",
+       "explication": "Vrai. Soit $ABCD$ un parallélogramme, $\\vec{u}=\\vec{AB}$ et $\\vec{v}=\\vec{AD}$ : $\\vec{AC}=\\vec{u}+\\vec{v}$ et $\\vec{BD}=\\vec{v}-\\vec{u}$, donc $AC^2-BD^2=4\\,\\vec{u}\\cdot\\vec{v}$. Ainsi $AC=BD$ équivaut à $\\vec{u}\\cdot\\vec{v}=0$, c'est-à-dire à un angle droit en $A$ : un parallélogramme ayant un angle droit est un rectangle. Sans l'hypothèse « parallélogramme », c'est faux : un trapèze isocèle a des diagonales de même longueur.",
+       "retenir": "Dans un parallélogramme : diagonales de même longueur $\\iff$ rectangle ; diagonales perpendiculaires $\\iff$ losange."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c7s",
+   "carte": "sanct-nombres",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Poincaré",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Ici, les échafaudages tombent : la distance devient une projection, l'optimum un produit scalaire. Enseigner, ce sera savoir dire pourquoi.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Entre deux parallèles",
+       "enonce": "Dans un repère orthonormé, on considère les droites $d : 3x-4y+2=0$ et $d' : 6x-8y-21=0$. Justifier qu'elles sont parallèles, puis entrer la distance entre $d$ et $d'$, sous forme de fraction ou de décimal.",
+       "reponse": 2.5,
+       "indice": "Prends un point $A$ de $d$ et projette-le orthogonalement sur $d'$ en suivant le vecteur normal $\\vec{n}(3\\,;-4)$.",
+       "explication": "Les vecteurs normaux $(3\\,;-4)$ et $(6\\,;-8)$ sont colinéaires : $d$ et $d'$ sont parallèles (et distinctes). Le point $A(2\\,;2)$ est sur $d$. Son projeté sur $d'$ est $H=A+t\\vec{n}$ avec $6(2+3t)-8(2-4t)-21=0$, soit $50t=25$ et $t=\\frac{1}{2}$. Distance : $AH=|t|\\times\\|\\vec{n}\\|=\\frac{1}{2}\\times5=\\frac{5}{2}$. Piège : appliquer $\\frac{|c-c'|}{5}$ sans réécrire $d' : 3x-4y-\\frac{21}{2}=0$ donne $\\frac{23}{5}$.",
+       "retenir": "Distance entre deux droites parallèles : la distance d'un point quelconque de l'une à l'autre, obtenue par projection orthogonale."
+      },
+      {
+       "titre": "Le point le plus proche",
+       "enonce": "Dans un repère orthonormé, on considère la droite $d : y=2x+1$ et le point $A(5\\,;1)$. Un point $M$ parcourt la droite $d$. Entrer la valeur minimale de $AM^2$.",
+       "reponse": 20,
+       "indice": "Écris $M(x\\,;2x+1)$ : $AM^2$ est un trinôme en $x$. Ou bien cherche le projeté orthogonal de $A$ sur $d$.",
+       "explication": "$AM^2=(x-5)^2+(2x)^2=5x^2-10x+25$, minimal en $x=1$, où il vaut 20. Le point $H(1\\,;3)$ obtenu est le projeté orthogonal de $A$ sur $d$ : $\\vec{AH}(-4\\,;2)$ est orthogonal au vecteur directeur $(1\\,;2)$. La distance de $A$ à $d$ vaut $\\sqrt{20}=2\\sqrt{5}$.",
+       "retenir": "Le minimum de $AM$ pour $M$ sur une droite est atteint au projeté orthogonal : c'est la distance du point à la droite."
+      },
+      {
+       "titre": "Une aire par la distance",
+       "enonce": "Dans un repère orthonormé, on considère $A(1\\,;2)$, $B(4\\,;-1)$ et $C(6\\,;5)$. En calculant la distance de $C$ à la droite $(AB)$ à l'aide d'un vecteur normal, déterminer l'aire du triangle $ABC$. Entrer cette aire.",
+       "reponse": 12,
+       "indice": "$\\vec{AB}(3\\,;-3)$ dirige $(AB)$, donc $\\vec{n}(1\\,;1)$ lui est normal. La distance de $C$ à $(AB)$ est la longueur de la projection de $\\vec{AC}$ sur la direction de $\\vec{n}$.",
+       "explication": "$\\vec{AC}(5\\,;3)$ et $\\vec{n}(1\\,;1)$ : la distance de $C$ à $(AB)$ vaut $\\frac{|\\vec{AC}\\cdot\\vec{n}|}{\\|\\vec{n}\\|}=\\frac{8}{\\sqrt{2}}=4\\sqrt{2}$. Avec $AB=3\\sqrt{2}$, l'aire vaut $\\frac{1}{2}\\times3\\sqrt{2}\\times4\\sqrt{2}=12$. On retrouve $\\frac{1}{2}|\\det(\\vec{AB},\\vec{AC})|=\\frac{1}{2}|9+15|=12$.",
+       "retenir": "Distance de $C$ à $(AB)$ : $\\dfrac{|\\vec{AC}\\cdot\\vec{n}|}{\\|\\vec{n}\\|}$, avec $\\vec{n}$ normal à $(AB)$. La même formule donnera la distance d'un point à un plan."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La règle du parallélogramme",
+       "enonce": "$ABCD$ est un parallélogramme tel que $AB=9$, $AD=7$ et $AC=14$. Entrer la longueur $BD$.",
+       "reponse": 8,
+       "indice": "Avec $\\vec{u}=\\vec{AB}$ et $\\vec{v}=\\vec{AD}$, on a $\\vec{AC}=\\vec{u}+\\vec{v}$ et $\\vec{BD}=\\vec{v}-\\vec{u}$. Additionne les carrés des normes.",
+       "explication": "$AC^2+BD^2=\\|\\vec{u}+\\vec{v}\\|^2+\\|\\vec{v}-\\vec{u}\\|^2=2\\left(\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2\\right)$, car les doubles produits s'éliminent. Donc $BD^2=2(81+49)-196=64$ et $BD=8$.",
+       "retenir": "Règle du parallélogramme : $AC^2+BD^2=2(AB^2+AD^2)$, la somme des carrés des diagonales égale celle des quatre côtés."
+      },
+      {
+       "titre": "Une droite cachée",
+       "enonce": "Dans un repère orthonormé, on considère $A(1\\,;2)$ et $B(5\\,;4)$. L'ensemble des points $M$ tels que $MA^2-MB^2=20$ est une droite. Entrer l'ordonnée de son point d'intersection avec l'axe des ordonnées.",
+       "reponse": 14,
+       "indice": "Développe $MA^2-MB^2$ en coordonnées : les termes en $x^2$ et en $y^2$ disparaissent.",
+       "explication": "$MA^2-MB^2=(x-1)^2+(y-2)^2-(x-5)^2-(y-4)^2=8x+4y-36$. La condition s'écrit $8x+4y-56=0$, soit $2x+y-14=0$ : une droite de vecteur normal $(2\\,;1)$, colinéaire à $\\vec{AB}(4\\,;2)$, donc perpendiculaire à $(AB)$. Pour $x=0$, on obtient $y=14$.",
+       "retenir": "$MA^2-MB^2=2\\,\\vec{IM}\\cdot\\vec{AB}$, où $I$ est le milieu de $[AB]$ : l'ensemble $MA^2-MB^2=k$ est une droite perpendiculaire à $(AB)$."
+      },
+      {
+       "titre": "Le maximum sur le cercle",
+       "enonce": "Dans un repère orthonormé, le point $M(x\\,;y)$ parcourt le cercle de centre $O$ et de rayon 2. Entrer la plus grande valeur prise par $3x+4y$.",
+       "reponse": 10,
+       "indice": "$3x+4y$ est le produit scalaire de $\\vec{OM}$ par un vecteur fixe : majore-le.",
+       "explication": "$3x+4y=\\vec{n}\\cdot\\vec{OM}$ avec $\\vec{n}(3\\,;4)$. Par l'inégalité de Cauchy-Schwarz, $\\vec{n}\\cdot\\vec{OM}\\leq\\|\\vec{n}\\|\\times OM=5\\times2=10$, avec égalité lorsque $\\vec{OM}$ est colinéaire à $\\vec{n}$ et de même sens : $M\\left(\\frac{6}{5}\\,;\\frac{8}{5}\\right)$ donne bien $\\frac{18}{5}+\\frac{32}{5}=10$. Géométriquement, la droite $3x+4y=10$ est tangente au cercle.",
+       "retenir": "Pour optimiser $ax+by$ sur un cercle de centre $O$ et de rayon $r$, y voir un produit scalaire : le maximum vaut $r\\sqrt{a^2+b^2}$.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Le signe oublié",
+       "enonce": "En Première, on donne un triangle $ABC$ tel que $AB=4$, $AC=5$ et $\\widehat{BAC}=120^\\circ$. Un élève note $H$ le projeté orthogonal de $C$ sur $(AB)$, calcule $AH=5\\cos60^\\circ=2{,}5$ et conclut : $\\vec{AB}\\cdot\\vec{AC}=AB\\times AH=10$. Quel diagnostic poser ?",
+       "reponse": 4,
+       "choix": [
+        "Le calcul est juste : par projection, un produit scalaire est un produit de deux longueurs.",
+        "Il fallait projeter $B$ sur $(AC)$ : la projection de $C$ sur $(AB)$ ne convient pas.",
+        "Il fallait encore multiplier par $\\cos120^\\circ$, ce qui donne $-5$.",
+        "$H$ n'est pas sur la demi-droite $[AB)$ : $\\vec{AH}$ et $\\vec{AB}$ sont de sens contraires, donc $\\vec{AB}\\cdot\\vec{AC}=-AB\\times AH=-10$."
+       ],
+       "indice": "L'angle $\\widehat{BAC}$ est obtus : de quel côté de $A$ tombe le projeté de $C$ sur la droite $(AB)$ ?",
+       "explication": "L'angle en $A$ étant obtus, $H$ est sur la droite $(AB)$, du côté de $A$ opposé à $B$ : $\\vec{AB}\\cdot\\vec{AC}=\\vec{AB}\\cdot\\vec{AH}=-AB\\times AH=-10$. Contrôle : $4\\times5\\times\\cos120^\\circ=-10$. La longueur $AH=2{,}5$ était juste ; projeter $B$ sur $(AC)$ marcherait aussi, à condition de tenir compte du sens.",
+       "retenir": "Produit scalaire par projection : $\\vec{AB}\\cdot\\vec{AC}=\\pm AB\\times AH$, le signe dépendant du sens de $\\vec{AH}$ par rapport à $\\vec{AB}$."
+      },
+      {
+       "titre": "Un exemple qui convainc",
+       "enonce": "Pour convaincre une classe que la formule $\\vec{u}\\cdot\\vec{v}=xx'+yy'$ exige un repère orthonormé, quel exemple choisir ?",
+       "reponse": 2,
+       "choix": [
+        "Dans un repère orthonormé, $\\vec{u}(1\\,;0)$ et $\\vec{v}(0\\,;1)$ : la formule donne 0 et les vecteurs sont bien orthogonaux.",
+        "Dans un repère où $\\vec{\\imath}$ et $\\vec{\\jmath}$, unitaires, forment un angle de $60^\\circ$ : pour $\\vec{\\imath}(1\\,;0)$ et $\\vec{\\jmath}(0\\,;1)$, la formule donne 0, or $\\vec{\\imath}\\cdot\\vec{\\jmath}=\\frac{1}{2}$.",
+        "Dans un repère orthonormé, $\\vec{u}(2\\,;0)$ et $\\vec{v}(3\\,;0)$ : la formule donne $6=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|$.",
+        "Dans un repère où $\\vec{\\imath}\\perp\\vec{\\jmath}$, $\\|\\vec{\\imath}\\|=2$ et $\\|\\vec{\\jmath}\\|=1$ : la formule donne $\\vec{\\imath}\\cdot\\vec{\\jmath}=0$, ce qui est exact."
+       ],
+       "indice": "Un exemple convaincant doit mettre la formule en défaut, pas la confirmer.",
+       "explication": "Les exemples 1, 3 et 4 donnent tous un résultat juste : ils ne prouvent rien. Dans le repère à $60^\\circ$, $\\vec{\\imath}$ et $\\vec{\\jmath}$ ont pour coordonnées $(1\\,;0)$ et $(0\\,;1)$ ; la formule donnerait 0, alors que $\\vec{\\imath}\\cdot\\vec{\\jmath}=1\\times1\\times\\cos60^\\circ=\\frac{1}{2}$. En général, $\\vec{u}\\cdot\\vec{v}=xx'\\|\\vec{\\imath}\\|^2+(xy'+yx')\\,\\vec{\\imath}\\cdot\\vec{\\jmath}+yy'\\|\\vec{\\jmath}\\|^2$ : on ne retrouve $xx'+yy'$ que si la base est orthonormée.",
+       "retenir": "Une formule fausse se réfute par un seul exemple où elle échoue ; des exemples où elle marche ne prouvent rien."
+      },
+      {
+       "titre": "Pourquoi la plus courte ?",
+       "enonce": "Une élève demande pourquoi la distance d'un point $M$ à une droite $d$ est la longueur $MH$, où $H$ est le projeté orthogonal de $M$ sur $d$. Quelle justification attendre au tableau ?",
+       "reponse": 1,
+       "choix": [
+        "Pour tout point $P$ de $d$, le triangle $MHP$ est rectangle en $H$, donc $MP^2=MH^2+HP^2\\geq MH^2$, avec égalité seulement si $P=H$.",
+        "Par l'inégalité triangulaire, $MP\\leq MH+HP$ pour tout point $P$ de $d$.",
+        "Parce que la perpendiculaire est, par définition, le plus court chemin d'un point à une droite.",
+        "Parce que le cercle de centre $M$ et de rayon $MH$ coupe $d$ en deux points."
+       ],
+       "indice": "Compare $MP$ et $MH$ pour un point $P$ quelconque de $d$ : quel théorème du collège relie ces longueurs ?",
+       "explication": "Seule la première réponse démontre : pour $P\\neq H$, Pythagore dans $MHP$ donne $MP^2=MH^2+HP^2>MH^2$. L'inégalité triangulaire majore $MP$ au lieu de le minorer ; la troisième réponse affirme ce qu'il faut prouver ; le cercle de rayon $MH$ est tangent à $d$ en $H$ et ne la coupe pas en deux points. Cette preuve se transpose telle quelle à la distance d'un point à un plan.",
+       "retenir": "Distance d'un point à une droite (ou à un plan) : le minimum est atteint au projeté orthogonal, par le théorème de Pythagore."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous points $A$, $B$, $C$ du plan, si $AB+BC=AC$, alors $B$ appartient au segment $[AC]$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Élève au carré et compare $\\|\\vec{AB}+\\vec{BC}\\|^2$ à $(AB+BC)^2$ : que vaut alors $\\vec{AB}\\cdot\\vec{BC}$ ?",
+       "explication": "Vrai. Si $B=A$ ou $B=C$, c'est clair. Sinon, $AC^2=\\|\\vec{AB}+\\vec{BC}\\|^2=AB^2+2\\,\\vec{AB}\\cdot\\vec{BC}+BC^2$ et $(AB+BC)^2=AB^2+2\\,AB\\times BC+BC^2$. L'égalité donne $\\vec{AB}\\cdot\\vec{BC}=AB\\times BC$ : c'est le cas d'égalité de Cauchy-Schwarz, donc $\\vec{BC}=k\\,\\vec{AB}$ avec $k>0$. Alors $\\vec{AC}=(1+k)\\vec{AB}$, soit $\\vec{AB}=\\frac{1}{1+k}\\vec{AC}$ avec $0<\\frac{1}{1+k}<1$ : $B\\in[AC]$.",
+       "retenir": "Cas d'égalité de l'inégalité triangulaire : $AB+BC=AC$ si et seulement si $B\\in[AC]$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, la distance du point $M(x_0\\,;y_0)$ à la droite $d : ax+by+c=0$ est égale à $|ax_0+by_0+c|$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste la proposition avec l'axe des ordonnées, décrit par l'équation $2x=0$.",
+       "explication": "Faux. La droite $d : 2x=0$ est l'axe des ordonnées, et $M(1\\,;0)$ en est à la distance 1, alors que $|2\\times1+0+0|=2$. En projetant $M$ selon le vecteur normal $\\vec{n}(a\\,;b)$, on obtient la formule correcte $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$. Une même droite a une infinité d'équations : une distance ne peut pas dépendre de celle qu'on choisit.",
+       "retenir": "Distance de $M(x_0\\,;y_0)$ à $ax+by+c=0$ : $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ ; sans le dénominateur, le résultat dépend de l'équation choisie."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Soit $A$ et $B$ deux points du plan tels que $AB=2$. Proposition : « Pour tout réel $k$, l'ensemble des points $M$ du plan tels que $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Introduis le milieu $I$ de $[AB]$ : $\\vec{MA}=\\vec{MI}+\\vec{IA}$ et $\\vec{MB}=\\vec{MI}-\\vec{IA}$. Développe, puis essaie une valeur de $k$ très négative.",
+       "explication": "Faux. Avec $I$ milieu de $[AB]$, $\\vec{IB}=-\\vec{IA}$, donc $\\vec{MA}\\cdot\\vec{MB}=(\\vec{MI}+\\vec{IA})\\cdot(\\vec{MI}-\\vec{IA})=MI^2-IA^2=MI^2-1$. Pour $k=-2$, la condition devient $MI^2=-1$ : aucun point ne la vérifie, l'ensemble est vide, ce n'est pas un cercle. Pour $k=-1$, on obtient le seul point $I$ ; pour $k>-1$, le cercle de centre $I$ et de rayon $\\sqrt{k+1}$ (pour $k=0$, le cercle de diamètre $[AB]$).",
+       "retenir": "$\\vec{MA}\\cdot\\vec{MB}=MI^2-\\frac{AB^2}{4}$ ($I$ milieu de $[AB]$) : l'ensemble $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle de centre $I$, un point ou l'ensemble vide."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

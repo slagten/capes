@@ -1,0 +1,730 @@
+{
+ "id": "ch6",
+ "titre": "Fonction exponentielle",
+ "introduction": "Voici la fonction qui est sa propre dérivée : $\\exp' = \\exp$ et $\\exp(0) = 1$. De cette seule propriété naissent toutes les autres : elle change les sommes en produits, ne s'annule jamais et croît sans cesse. Partout où une grandeur varie en proportion d'elle-même (une population, la dose d'un médicament, l'écart de température d'un plat qui refroidit), c'est elle que tu retrouves.",
+ "conclusion": "Emporte deux réflexes : ramener toute équation à $e^{a} = e^{b}$ ou à un second degré en $X = e^{x} > 0$, et dériver $e^{u}$ en $u'e^{u}$. Le reste, signe, variations et modèles, découle de la positivité et de la stricte croissance de l'exponentielle.",
+ "salles": [
+  {
+   "id": "c6r1",
+   "carte": "viete",
+   "fond": "crepuscule",
+   "nom": "La goutte de Lucrèce",
+   "notion": "Définition et propriétés algébriques",
+   "athena": "L'exponentielle change les sommes en produits : $e^{a+b} = e^{a}e^{b}$. Toutes ses règles de calcul en découlent, comme pour les puissances du collège.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Puissances d'exponentielle",
+       "enonce": "On pose $A = \\dfrac{(e^{3})^{2} \\times e^{-4}}{e^{-1}}$. Le nombre $A$ s'écrit $e^{n}$ avec $n$ entier. Entrer $n$.",
+       "reponse": 3,
+       "indice": "Utilise $(e^{a})^{k} = e^{ka}$, $e^{a}e^{b} = e^{a+b}$ et $\\frac{e^{a}}{e^{b}} = e^{a-b}$, en surveillant les signes.",
+       "explication": "$(e^{3})^{2} = e^{6}$, donc le numérateur vaut $e^{6-4} = e^{2}$, et $A = \\frac{e^{2}}{e^{-1}} = e^{2-(-1)} = e^{3}$. Donc $n = 3$. Les pièges : écrire $(e^{3})^{2} = e^{9}$, ou oublier que diviser par $e^{-1}$ revient à multiplier par $e$.",
+       "retenir": "$e^{a+b} = e^{a}e^{b}$, $e^{a-b} = \\frac{e^{a}}{e^{b}}$, $(e^{a})^{k} = e^{ka}$ : les règles des puissances valent pour l'exponentielle."
+      },
+      {
+       "titre": "Une différence de carrés",
+       "enonce": "Pour tout réel $x$, on pose $B(x) = (e^{x} + e^{-x})^{2} - (e^{x} - e^{-x})^{2}$. Cette expression ne dépend pas de $x$. Entrer sa valeur.",
+       "reponse": 4,
+       "indice": "Développe les deux carrés : que vaut le produit $e^{x} \\times e^{-x}$ ?",
+       "explication": "$(e^{x}+e^{-x})^{2} = e^{2x} + 2e^{x}e^{-x} + e^{-2x} = e^{2x} + 2 + e^{-2x}$, car $e^{x}e^{-x} = e^{0} = 1$. De même, $(e^{x}-e^{-x})^{2} = e^{2x} - 2 + e^{-2x}$. La différence vaut $4$ pour tout réel $x$ (c'est aussi $(a+b)^{2} - (a-b)^{2} = 4ab$ avec $ab = 1$).",
+       "retenir": "$e^{x} \\times e^{-x} = e^{0} = 1$ : $e^{-x}$ est l'inverse de $e^{x}$, pas son opposé."
+      },
+      {
+       "titre": "Une équation fonctionnelle",
+       "enonce": "Soit $f$ une fonction définie sur $\\mathbb{R}$ telle que, pour tous réels $a$ et $b$, $f(a+b) = f(a) \\times f(b)$, et telle que $f(1) = 3$. Entrer $f(-2)$, sous forme de fraction.",
+       "reponse": "1/9",
+       "indice": "Choisis d'abord $a = 1$ et $b = 0$ pour obtenir $f(0)$, puis $a = 1$ et $b = -1$.",
+       "explication": "Avec $a = 1$, $b = 0$ : $f(1) = f(1)f(0)$, et $f(1) = 3 \\neq 0$, donc $f(0) = 1$. Avec $a = 1$, $b = -1$ : $f(0) = f(1)f(-1)$, donc $f(-1) = \\frac{1}{3}$. Enfin, avec $a = b = -1$ : $f(-2) = f(-1)^{2} = \\frac{1}{9}$. C'est la relation fonctionnelle de l'exponentielle : ici $f(n) = 3^{n}$ pour tout entier $n$.",
+       "retenir": "Si $f(a+b) = f(a)f(b)$ pour tous réels $a$ et $b$, et si $f$ n'est pas la fonction nulle, alors $f(0) = 1$ et $f(-a) = \\frac{1}{f(a)}$ : c'est le comportement des puissances."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La méthode d'Euler",
+       "enonce": "La fonction exponentielle est l'unique fonction $f$ dérivable sur $\\mathbb{R}$ telle que $f' = f$ et $f(0) = 1$. Pour approcher $e = f(1)$, on applique la méthode d'Euler de pas $h = 0{,}5$ : $y_0 = 1$ et $y_{n+1} = y_n + h \\times y_n$. Le nombre $y_2$ est alors une valeur approchée de $e$. Entrer $y_2$.",
+       "reponse": 2.25,
+       "indice": "Comme $f' = f$, on a $f(x+h) \\approx f(x) + h\\,f(x)$ : chaque pas multiplie par $1 + h$.",
+       "explication": "$y_1 = 1 + 0{,}5 \\times 1 = 1{,}5$, puis $y_2 = 1{,}5 + 0{,}5 \\times 1{,}5 = 2{,}25$. C'est $(1{,}5)^{2}$ : une approximation grossière de $e \\approx 2{,}718$, qui s'améliore quand le pas diminue.",
+       "retenir": "Méthode d'Euler pour $f' = f$ : $y_{n+1} = (1+h)\\,y_n$. Avec le pas $h = \\frac{1}{n}$, on obtient $e \\approx \\left(1+\\frac{1}{n}\\right)^{n}$."
+      },
+      {
+       "titre": "Une tangente remarquable",
+       "enonce": "Dans un repère, on considère la courbe de la fonction exponentielle et sa tangente au point d'abscisse $3$. Cette tangente coupe l'axe des abscisses en un point. Entrer l'abscisse de ce point.",
+       "reponse": 2,
+       "indice": "La tangente au point d'abscisse $a$ a pour équation $y = \\exp'(a)(x-a) + \\exp(a)$, et $\\exp' = \\exp$.",
+       "explication": "Comme $\\exp' = \\exp$, la tangente au point d'abscisse $3$ a pour équation $y = e^{3}(x-3) + e^{3} = e^{3}(x-2)$. Comme $e^{3} \\neq 0$, $y = 0$ équivaut à $x = 2$. Plus généralement, la tangente au point d'abscisse $a$ coupe l'axe des abscisses en $a - 1$.",
+       "retenir": "Tangente à la courbe de exp au point d'abscisse $a$ : $y = e^{a}(x - a + 1)$ ; elle coupe l'axe des abscisses en $a - 1$."
+      },
+      {
+       "titre": "Pourquoi l'exponentielle ne s'annule pas",
+       "enonce": "Soit $f$ une fonction dérivable sur $\\mathbb{R}$ telle que $f' = f$ et $f(0) = 1$. Pour démontrer que $f$ ne s'annule pas, on pose, pour tout réel $x$, $g(x) = f(x) \\times f(-x)$. Quelle rédaction est correcte ?",
+       "reponse": 4,
+       "choix": [
+        "Pour tout réel $x$, $f'(x) = f(x) > 0$, donc $f$ est croissante et $f(x) \\ge f(0) = 1$.",
+        "$g'(x) = f'(x)f(-x) + f(x)f'(-x) = 2g(x)$, donc $g$ ne s'annule pas.",
+        "$f$ est la fonction exponentielle, qui est toujours strictement positive, donc $g(x) > 0$.",
+        "$g'(x) = f'(x)f(-x) - f(x)f'(-x) = 0$, donc $g$ est constante, égale à $g(0) = 1$ ; ainsi $f(x)f(-x) = 1$ et $f(x) \\neq 0$."
+       ],
+       "indice": "La dérivée de $x \\mapsto f(-x)$ est $x \\mapsto -f'(-x)$ : c'est la dérivée de $x \\mapsto f(ax+b)$ avec $a = -1$.",
+       "explication": "La dérivée d'un produit et celle de $x \\mapsto f(-x)$ donnent $g'(x) = f'(x)f(-x) - f(x)f'(-x) = f(x)f(-x) - f(x)f(-x) = 0$. Donc $g$ est constante sur $\\mathbb{R}$, égale à $g(0) = f(0)^{2} = 1$ : $f(x)f(-x) = 1$, donc $f(x) \\neq 0$. Les rédactions qui affirment $f > 0$ supposent ce qu'il faut démontrer ; celle qui écrit $+f(x)f'(-x)$ oublie le facteur $-1$.",
+       "retenir": "Pour tout réel $x$, $e^{x} \\times e^{-x} = 1$ : l'exponentielle ne s'annule jamais, et $e^{-x} = \\frac{1}{e^{x}}$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $e^{x^{2}} = (e^{x})^{2}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris $(e^{x})^{2}$ sous la forme $e^{\\dots}$, puis teste $x = 1$.",
+       "explication": "Faux. $(e^{x})^{2} = e^{2x}$. Pour $x = 1$ : $e^{1^{2}} = e$, alors que $(e^{1})^{2} = e^{2}$, et $e \\neq e^{2}$ car $e \\neq 1$. L'égalité n'a lieu que si $x^{2} = 2x$, c'est-à-dire pour $x = 0$ ou $x = 2$.",
+       "retenir": "$(e^{x})^{2} = e^{2x}$, et non $e^{x^{2}}$ : on multiplie l'exposant par 2, on ne l'élève pas au carré."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $\\sqrt{e^{x}} = e^{x/2}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Un réel $y$ est égal à $\\sqrt{A}$ si et seulement si $y \\ge 0$ et $y^{2} = A$.",
+       "explication": "Vrai. Pour tout réel $x$, $e^{x/2} > 0$ et $(e^{x/2})^{2} = e^{2 \\times x/2} = e^{x}$. Or $\\sqrt{e^{x}}$ est l'unique réel positif dont le carré vaut $e^{x}$ : donc $\\sqrt{e^{x}} = e^{x/2}$.",
+       "retenir": "$\\sqrt{e^{x}} = e^{x/2}$ : la racine carrée divise l'exposant par 2, grâce à la positivité de l'exponentielle."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si une fonction $f$ dérivable sur $\\mathbb{R}$ vérifie $f' = f$, alors $f$ est la fonction exponentielle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche une fonction très simple égale à sa dérivée, ou multiplie l'exponentielle par une constante.",
+       "explication": "Faux. La fonction nulle vérifie $f' = f$ sans être l'exponentielle ; de même, $f(x) = 2e^{x}$ vérifie $f'(x) = 2e^{x} = f(x)$, mais $f(0) = 2$. Il manque la condition $f(0) = 1$ : les fonctions telles que $f' = f$ sont exactement les fonctions $x \\mapsto Ce^{x}$, $C$ réel (car la dérivée de $x \\mapsto f(x)e^{-x}$ est alors nulle).",
+       "retenir": "L'exponentielle est caractérisée par deux conditions : $f' = f$ et $f(0) = 1$. Sans la seconde, il y a une infinité de solutions."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6r2",
+   "carte": "neufchap",
+   "fond": "mer",
+   "nom": "Les leçons de Musonius",
+   "notion": "Équations et inéquations",
+   "athena": "L'exponentielle est strictement croissante : $e^{a} = e^{b}$ équivaut à $a = b$, et $e^{a} < e^{b}$ à $a < b$. Ramène-toi toujours à cette forme.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Égalité d'exponentielles",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $e^{2x+1} = e^{7-x}$. Entrer la solution.",
+       "reponse": 2,
+       "indice": "$e^{a} = e^{b}$ équivaut à $a = b$.",
+       "explication": "L'exponentielle est strictement croissante, donc $e^{2x+1} = e^{7-x}$ équivaut à $2x + 1 = 7 - x$, soit $3x = 6$, c'est-à-dire $x = 2$.",
+       "retenir": "Pour tous réels $a$ et $b$ : $e^{a} = e^{b} \\iff a = b$."
+      },
+      {
+       "titre": "Le piège du carré",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\dfrac{e^{x^{2}}}{e^{3}} = (e^{x})^{2}$. Entrer la plus petite solution.",
+       "reponse": -1,
+       "indice": "Écris chaque membre sous la forme $e^{\\dots}$ ; attention, $(e^{x})^{2}$ n'est pas $e^{x^{2}}$.",
+       "explication": "L'équation s'écrit $e^{x^{2}-3} = e^{2x}$, c'est-à-dire $x^{2} - 3 = 2x$, soit $x^{2} - 2x - 3 = 0$. Le discriminant vaut $16$ ; les solutions sont $-1$ et $3$. La plus petite est $-1$.",
+       "retenir": "Une équation $e^{u(x)} = e^{v(x)}$ se ramène à $u(x) = v(x)$, souvent une équation du second degré."
+      },
+      {
+       "titre": "Un second degré caché",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $e^{2x} - (e^{3} + e^{4})\\,e^{x} + e^{7} = 0$. Entrer la somme des solutions.",
+       "reponse": 7,
+       "indice": "Avec $X = e^{x}$, on obtient $X^{2} - SX + P = 0$ : quels sont les deux nombres de somme $S = e^{3} + e^{4}$ et de produit $P = e^{7}$ ?",
+       "explication": "Avec $X = e^{x}$ (donc $e^{2x} = X^{2}$), l'équation devient $X^{2} - (e^{3}+e^{4})X + e^{3}e^{4} = 0$, soit $(X - e^{3})(X - e^{4}) = 0$. Donc $e^{x} = e^{3}$ ou $e^{x} = e^{4}$, c'est-à-dire $x = 3$ ou $x = 4$. La somme vaut $7$ ; on la lit aussi sur le produit des racines : $e^{x_1}e^{x_2} = e^{x_1+x_2} = e^{7}$.",
+       "retenir": "Équation en $e^{2x}$ et $e^{x}$ : poser $X = e^{x}$ (avec $X > 0$), résoudre le second degré, puis revenir à $x$.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une inéquation",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $e^{-x} \\ge e^{2x-6}$. L'ensemble des solutions est de la forme $]-\\infty\\,;a]$. Entrer $a$.",
+       "reponse": 2,
+       "indice": "L'exponentielle est strictement croissante : l'inégalité entre les exposants a le même sens.",
+       "explication": "Comme l'exponentielle est strictement croissante, $e^{-x} \\ge e^{2x-6}$ équivaut à $-x \\ge 2x - 6$, soit $6 \\ge 3x$, c'est-à-dire $x \\le 2$. L'ensemble des solutions est $]-\\infty\\,;2]$.",
+       "retenir": "Pour tous réels $a$ et $b$ : $e^{a} \\le e^{b} \\iff a \\le b$. L'exponentielle conserve l'ordre."
+      },
+      {
+       "titre": "Changement de variable",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $e^{2x} + e^{x} - 2 < 0$. L'ensemble des solutions est de la forme $]-\\infty\\,;a[$. Entrer $a$.",
+       "reponse": 0,
+       "indice": "Pose $X = e^{x}$ et factorise $X^{2} + X - 2$, sans oublier que $X > 0$.",
+       "explication": "Avec $X = e^{x}$, l'inéquation devient $X^{2} + X - 2 < 0$, soit $(X - 1)(X + 2) < 0$. Comme $X = e^{x} > 0$, on a $X + 2 > 0$ : l'inéquation équivaut à $X < 1$, soit $e^{x} < e^{0}$, c'est-à-dire $x < 0$. L'ensemble des solutions est $]-\\infty\\,;0[$.",
+       "retenir": "Après le changement de variable $X = e^{x}$, garder la contrainte $X > 0$ : elle élimine des cas."
+      },
+      {
+       "titre": "Un tableau de signes",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $(x^{2} - 9)(e^{x} - 1) \\le 0$. Entrer le nombre d'entiers relatifs de l'intervalle $[-6\\,;6]$ qui en sont solutions.",
+       "reponse": 8,
+       "indice": "Étudie séparément le signe de $x^{2} - 9$ et celui de $e^{x} - 1$ (compare $e^{x}$ à $e^{0}$), puis dresse un tableau de signes.",
+       "explication": "$x^{2} - 9$ est négatif sur $[-3\\,;3]$ et positif ailleurs ; $e^{x} - 1$ est du signe de $x$, car $e^{x} > 1 \\iff x > 0$. Le produit est négatif ou nul sur $]-\\infty\\,;-3] \\cup [0\\,;3]$. Dans $[-6\\,;6]$, les entiers solutions sont $-6$, $-5$, $-4$, $-3$, $0$, $1$, $2$ et $3$ : il y en a $8$.",
+       "retenir": "Un produit se traite par un tableau de signes, une ligne par facteur, sans oublier les valeurs qui l'annulent."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $a$ et $b$, si $e^{a} < e^{b}$, alors $a < b$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Raisonne par contraposée : que se passe-t-il si $a \\ge b$ ?",
+       "explication": "Vrai. Par contraposée : si $a \\ge b$, alors $e^{a} \\ge e^{b}$ car l'exponentielle est croissante, donc on n'a pas $e^{a} < e^{b}$. Ainsi, $e^{a} < e^{b}$ entraîne $a < b$ ; la réciproque est vraie aussi, par stricte croissance.",
+       "retenir": "Une fonction strictement croissante conserve l'ordre dans les deux sens : $e^{a} < e^{b} \\iff a < b$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « L'équation $e^{x^{2}} = e$ admet une unique solution réelle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris $e = e^{1}$, puis résous l'équation obtenue sur les exposants.",
+       "explication": "Faux. $e^{x^{2}} = e^{1}$ équivaut à $x^{2} = 1$, soit $x = 1$ ou $x = -1$. Les réels $1$ et $-1$ sont deux solutions distinctes : $e^{(-1)^{2}} = e^{1} = e$.",
+       "retenir": "$e^{u} = e^{v} \\iff u = v$ : le problème passe aux exposants, avec toutes leurs solutions (ici $x^{2} = 1$ en a deux)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « L'ensemble des solutions de l'inéquation $e^{1/x} > e$ est l'intervalle $]0\\,;1[$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "L'inéquation équivaut à $\\frac{1}{x} > 1$ ; attention au signe de $x$ avant de multiplier.",
+       "explication": "Vrai. Par stricte croissance de l'exponentielle, $e^{1/x} > e^{1}$ équivaut à $\\frac{1}{x} > 1$, avec $x \\neq 0$. Si $x < 0$, alors $\\frac{1}{x} < 0 < 1$ : pas de solution. Si $x > 0$, on multiplie par $x > 0$ : $1 > x$. L'ensemble des solutions est bien $]0\\,;1[$.",
+       "retenir": "Avant de multiplier une inégalité par $x$, connaître le signe de $x$ ; sinon, distinguer les cas."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6r3",
+   "carte": "chasles",
+   "fond": "bibliotheque",
+   "nom": "Le banquet de Plutarque",
+   "notion": "Dérivées et études de fonctions",
+   "athena": "La règle d'or : la dérivée de $e^{u}$ est $u'e^{u}$. L'exposant ne bouge pas ; sa dérivée vient multiplier.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Une exponentielle affine",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = e^{-3x+2}$. Entrer $f'\\left(\\frac{2}{3}\\right)$.",
+       "reponse": -3,
+       "indice": "La dérivée de $x \\mapsto e^{ax+b}$ est $x \\mapsto a\\,e^{ax+b}$.",
+       "explication": "Pour tout réel $x$, $f'(x) = -3e^{-3x+2}$. Donc $f'\\left(\\frac{2}{3}\\right) = -3e^{-2+2} = -3e^{0} = -3$. Oublier le facteur $-3$ donnerait $1$ : c'est l'erreur la plus fréquente.",
+       "retenir": "$(e^{ax+b})' = a\\,e^{ax+b}$ : le coefficient de $x$ vient devant, l'exponentielle reste inchangée."
+      },
+      {
+       "titre": "Un exposant du second degré",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = e^{x^{2}-2x}$. Entrer $f'(0)$.",
+       "reponse": -2,
+       "indice": "La dérivée de $e^{u}$ est $u'e^{u}$ ; ici $u(x) = x^{2} - 2x$.",
+       "explication": "Avec $u(x) = x^{2} - 2x$, on a $u'(x) = 2x - 2$, donc $f'(x) = (2x - 2)e^{x^{2}-2x}$ et $f'(0) = -2 \\times e^{0} = -2$. Attention : la dérivée de $e^{u}$ n'est pas $u\\,e^{u-1}$, règle des puissances qui ne s'applique pas ici.",
+       "retenir": "$(e^{u})' = u'e^{u}$ : on multiplie par la dérivée de l'exposant, sans toucher à l'exposant."
+      },
+      {
+       "titre": "Une équation différentielle",
+       "enonce": "On cherche les réels $a$ tels que la fonction $f : x \\mapsto e^{ax}$ vérifie, pour tout réel $x$, $f''(x) + f'(x) - 6f(x) = 0$, où $f''$ désigne la dérivée de $f'$. Entrer la valeur positive de $a$.",
+       "reponse": 2,
+       "indice": "Exprime $f'(x)$ et $f''(x)$ à l'aide de $e^{ax}$, puis factorise par $e^{ax}$, qui ne s'annule pas.",
+       "explication": "$f'(x) = a\\,e^{ax}$ et $f''(x) = a^{2}e^{ax}$. La condition s'écrit $(a^{2} + a - 6)e^{ax} = 0$ pour tout réel $x$ ; comme $e^{ax} > 0$, elle équivaut à $a^{2} + a - 6 = 0$, soit $(a - 2)(a + 3) = 0$. Donc $a = 2$ ou $a = -3$ ; la valeur positive est $2$.",
+       "retenir": "Pour $f(x) = e^{ax}$, dériver revient à multiplier par $a$ : $f' = af$ et $f'' = a^{2}f$. Une telle équation se ramène au second degré."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un minimum",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (x-3)e^{x}$. Elle admet un minimum sur $\\mathbb{R}$. Entrer l'abscisse du point où il est atteint.",
+       "reponse": 2,
+       "indice": "Dérive le produit $(x-3) \\times e^{x}$, puis factorise par $e^{x}$.",
+       "explication": "$f'(x) = 1 \\times e^{x} + (x-3)e^{x} = (x-2)e^{x}$. Comme $e^{x} > 0$, $f'(x)$ a le signe de $x - 2$ : $f$ est décroissante sur $]-\\infty\\,;2]$ et croissante sur $[2\\,;+\\infty[$. Le minimum est atteint en $x = 2$ ; il vaut $-e^{2}$.",
+       "retenir": "$\\big((ax+b)e^{x}\\big)' = (ax + a + b)e^{x}$ : le signe de la dérivée est celui d'un facteur affine."
+      },
+      {
+       "titre": "Un maximum",
+       "enonce": "Soit $g$ la fonction définie sur $\\mathbb{R}$ par $g(x) = (x+1)e^{-x}$. Entrer le maximum de $g$ sur $\\mathbb{R}$.",
+       "reponse": 1,
+       "indice": "La dérivée de $x \\mapsto e^{-x}$ est $x \\mapsto -e^{-x}$ : attention au signe.",
+       "explication": "$g'(x) = e^{-x} + (x+1)(-e^{-x}) = -x\\,e^{-x}$. Comme $e^{-x} > 0$, $g'(x)$ est du signe de $-x$ : $g$ est croissante sur $]-\\infty\\,;0]$ et décroissante sur $[0\\,;+\\infty[$. Son maximum est $g(0) = 1$.",
+       "retenir": "$(e^{-x})' = -e^{-x}$ : oublier ce signe moins inverse tout le tableau de variations."
+      },
+      {
+       "titre": "Une tangente sous condition",
+       "enonce": "Pour tout réel $k$, on note $f_k$ la fonction définie sur $\\mathbb{R}$ par $f_k(x) = (x+k)e^{x}$. Déterminer le réel $k$ tel que la tangente à la courbe de $f_k$ au point d'abscisse $0$ passe par le point $A(-3\\,;0)$. Entrer $k$, sous forme de fraction ou de décimal.",
+       "reponse": "-3/2",
+       "indice": "Calcule $f_k(0)$ et $f_k'(0)$, écris l'équation de la tangente, puis traduis « $A$ appartient à la tangente ».",
+       "explication": "$f_k'(x) = e^{x} + (x+k)e^{x} = (x+k+1)e^{x}$, donc $f_k(0) = k$ et $f_k'(0) = k+1$. La tangente a pour équation $y = (k+1)x + k$. Elle passe par $A(-3\\,;0)$ si et seulement si $0 = -3(k+1) + k = -2k - 3$, soit $k = -\\frac{3}{2}$.",
+       "retenir": "Tangente en $a$ : $y = f'(a)(x-a) + f(a)$. « Le point est sur la droite » se traduit par une équation d'inconnue le paramètre."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $f(x) = e^{x} \\times e^{x}$ pour tout réel $x$, alors $f'(x) = e^{x} \\times e^{x}$ pour tout réel $x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris $f(x) = e^{2x}$, ou dérive le produit avec $(uv)' = u'v + uv'$.",
+       "explication": "Faux. $f(x) = e^{2x}$, donc $f'(x) = 2e^{2x}$. En $x = 0$ : $f'(0) = 2$, alors que $e^{0} \\times e^{0} = 1$. L'erreur consiste à dériver un produit en multipliant les dérivées ; en fait $(uv)' = u'v + uv' = 2e^{x}e^{x}$.",
+       "retenir": "La dérivée d'un produit n'est pas le produit des dérivées : $(uv)' = u'v + uv'$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction $f : x \\mapsto x\\,e^{x}$ est croissante sur $\\mathbb{R}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Calcule $f'(x)$ et étudie son signe pour $x < -1$.",
+       "explication": "Faux. $f'(x) = (x+1)e^{x}$ est strictement négative sur $]-\\infty\\,;-1[$. Contre-exemple explicite : $-2 < -1$, mais $f(-2) - f(-1) = -2e^{-2} + e^{-1} = e^{-2}(e - 2) > 0$, donc $f(-2) > f(-1)$.",
+       "retenir": "Pour réfuter « $f$ est croissante sur $\\mathbb{R}$ », il suffit d'exhiber $a < b$ avec $f(a) > f(b)$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction $x \\mapsto e^{-x^{2}}$ admet sur $\\mathbb{R}$ un maximum égal à $1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Compare $-x^{2}$ à $0$, ou étudie le signe de la dérivée $-2x\\,e^{-x^{2}}$.",
+       "explication": "Vrai. Pour tout réel $x$, $-x^{2} \\le 0$, donc $e^{-x^{2}} \\le e^{0} = 1$ par croissance de l'exponentielle, avec égalité pour $x = 0$. La dérivée $-2x\\,e^{-x^{2}}$, du signe de $-x$, confirme : la fonction croît sur $]-\\infty\\,;0]$ puis décroît sur $[0\\,;+\\infty[$.",
+       "retenir": "Comparer les exposants suffit parfois : $u(x) \\le 0$ entraîne $e^{u(x)} \\le 1$."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "La faille de la démonstration",
+     "enonce": "Un élève veut démontrer que, pour tout réel $x$, $e^{x} \\ge 1 + x$. Il écrit : (1) Soit $g(x) = e^{x} - 1 - x$. (2) Pour tout réel $x$, $g'(x) = e^{x} - 1$. (3) Or $e^{x} \\ge 1$, donc $g'(x) \\ge 0$ et $g$ est croissante sur $\\mathbb{R}$. (4) Donc $g(x) \\ge g(0) = 0$. Quelle est la première étape fausse ?",
+     "reponse": 3,
+     "choix": [
+      "L'étape (1)",
+      "L'étape (2)",
+      "L'étape (3)",
+      "Aucune : la démonstration est correcte"
+     ],
+     "indice": "Teste l'affirmation « $e^{x} \\ge 1$ » pour $x = -1$.",
+     "explication": "L'étape (3) est fausse : $e^{x} \\ge 1$ seulement pour $x \\ge 0$ ; par exemple $e^{-1} < 1$. En réalité, $g'(x)$ a le signe de $x$ : $g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$, donc son minimum est $g(0) = 0$, et $g(x) \\ge 0$ pour tout réel $x$. L'étape (4) est d'ailleurs fautive elle aussi : si $g$ est croissante, $g(x) \\le g(0)$ pour $x \\le 0$. La conclusion est vraie, mais la preuve de l'élève ne vaut que pour $x \\ge 0$.",
+     "retenir": "Pour tout réel $x$, $e^{x} \\ge 1 + x$ : la courbe de exp est au-dessus de sa tangente en 0. On le prouve par un minimum, pas par une croissance globale."
+    }
+   ]
+  },
+  {
+   "id": "c6r4",
+   "carte": "harriot",
+   "fond": "temple",
+   "nom": "Le tonneau de Diogène",
+   "notion": "Suites et modèles exponentiels",
+   "athena": "À durées égales, facteurs égaux : $e^{(n+1)a} = e^{a} \\times e^{na}$. Une grandeur qui varie proportionnellement à elle-même suit un modèle exponentiel.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Une suite géométrique",
+       "enonce": "Pour tout entier naturel $n$, on pose $u_n = e^{1-2n}$. La suite $(u_n)$ est géométrique et sa raison s'écrit $e^{k}$. Entrer $k$.",
+       "reponse": -2,
+       "indice": "Calcule le quotient $\\frac{u_{n+1}}{u_n}$ avec la règle $\\frac{e^{a}}{e^{b}} = e^{a-b}$.",
+       "explication": "Pour tout entier $n$, $u_n > 0$ et $\\frac{u_{n+1}}{u_n} = \\frac{e^{1-2(n+1)}}{e^{1-2n}} = e^{(-1-2n)-(1-2n)} = e^{-2}$. La suite est géométrique de raison $e^{-2}$ et de premier terme $u_0 = e$ : $k = -2$.",
+       "retenir": "$u_n = e^{an+b}$ définit une suite géométrique de raison $e^{a}$ : $u_{n+1} = e^{a} \\times u_n$."
+      },
+      {
+       "titre": "Un produit de termes",
+       "enonce": "Pour tout entier naturel $n$, on pose $u_n = e^{2n+1}$. Le produit $P = u_0 \\times u_1 \\times \\cdots \\times u_9$ s'écrit $e^{N}$. Entrer $N$.",
+       "reponse": 100,
+       "indice": "Le produit des exponentielles est l'exponentielle de la somme : il reste à sommer les termes d'une suite arithmétique.",
+       "explication": "$P = e^{1+3+5+\\cdots+19}$. Les exposants forment une suite arithmétique de 10 termes, de premier terme $1$ et de dernier terme $19$ : leur somme vaut $10 \\times \\frac{1+19}{2} = 100$. Donc $N = 100$.",
+       "retenir": "Somme de termes consécutifs d'une suite arithmétique : nombre de termes × (premier + dernier) / 2."
+      },
+      {
+       "titre": "Le plus grand terme",
+       "enonce": "Pour tout entier naturel $n$, on pose $u_n = n^{2}e^{-n}$. En étudiant la fonction $f : x \\mapsto x^{2}e^{-x}$ sur $[0\\,;+\\infty[$, déterminer l'entier $n$ pour lequel $u_n$ est le plus grand terme de la suite. Entrer cet entier.",
+       "reponse": 2,
+       "indice": "Dérive le produit $x^{2} \\times e^{-x}$ et factorise : le signe de $f'(x)$ est celui d'un trinôme.",
+       "explication": "$f'(x) = 2x\\,e^{-x} - x^{2}e^{-x} = x(2-x)e^{-x}$. Sur $[0\\,;+\\infty[$, $f'$ est positive sur $[0\\,;2]$ et négative sur $[2\\,;+\\infty[$ : $f$ croît strictement puis décroît strictement, avec un maximum en $2$. Comme $u_n = f(n)$ et que $2$ est un entier, le plus grand terme est $u_2 = 4e^{-2} \\approx 0{,}54$.",
+       "retenir": "Si $u_n = f(n)$ et si $f$ est monotone sur $[p\\,;+\\infty[$, alors $(u_n)$ a la même monotonie à partir du rang $p$ ; la réciproque est fausse."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Des bactéries dans le lagon",
+       "enonce": "Dans un échantillon d'eau prélevé dans le lagon, le nombre de bactéries est modélisé par $N(t) = 2000\\,e^{0{,}3t}$, où $t$ est le temps en heures. Il existe un réel $k$ tel que, pour tout $t \\ge 0$, $N'(t) = k\\,N(t)$. Entrer $k$.",
+       "reponse": 0.3,
+       "indice": "Dérive $t \\mapsto e^{0{,}3t}$ : c'est une exponentielle de la forme $e^{at}$.",
+       "explication": "$N'(t) = 2000 \\times 0{,}3\\,e^{0{,}3t} = 0{,}3\\,N(t)$. Donc $k = 0{,}3$ : la vitesse de croissance est proportionnelle à l'effectif, ce qui caractérise un modèle exponentiel.",
+       "retenir": "$N(t) = N_0e^{kt}$ vérifie $N' = kN$ : croissance si $k > 0$, décroissance si $k < 0$."
+      },
+      {
+       "titre": "Le mataba refroidit",
+       "enonce": "On sert du mataba bouillant dans une assiette. Sa température, en degrés Celsius, est modélisée par $T(t) = 25 + 75\\,e^{-0{,}1t}$, où $t$ est le temps en minutes. Entrer $T'(0)$, vitesse de variation de la température à l'instant $0$, en degrés par minute.",
+       "reponse": -7.5,
+       "unite": "°C/min",
+       "indice": "La dérivée de la constante 25 est nulle, et la dérivée de $t \\mapsto e^{-0{,}1t}$ est $t \\mapsto -0{,}1\\,e^{-0{,}1t}$.",
+       "explication": "$T'(t) = 75 \\times (-0{,}1)\\,e^{-0{,}1t} = -7{,}5\\,e^{-0{,}1t}$, donc $T'(0) = -7{,}5$ : au départ, la température baisse de 7,5 °C par minute. Ensuite, $|T'(t)|$ diminue : le refroidissement ralentit à mesure que l'écart avec l'air ambiant (25 °C) se réduit.",
+       "retenir": "Pour $T(t) = a + C\\,e^{-kt}$, la constante disparaît à la dérivation : $T'(t) = -kC\\,e^{-kt}$."
+      },
+      {
+       "titre": "La demi-vie d'un médicament",
+       "enonce": "La concentration d'un médicament dans le sang est modélisée par $C(t) = C_0\\,e^{-kt}$, avec $t$ en heures, $C_0 > 0$ et $k > 0$. Au bout de 6 heures, la concentration a été divisée par 4. Au bout de combien d'heures la concentration initiale est-elle divisée par 8 ? Entrer ce nombre d'heures.",
+       "reponse": 9,
+       "unite": "h",
+       "indice": "$e^{-6k} = \\frac{1}{4}$ : écris $\\frac{1}{4} = \\left(\\frac{1}{2}\\right)^{2}$ et cherche d'abord $e^{-3k}$.",
+       "explication": "$C(6) = \\frac{C_0}{4}$ donne $e^{-6k} = \\frac{1}{4}$, soit $(e^{-3k})^{2} = \\frac{1}{4}$, donc $e^{-3k} = \\frac{1}{2}$ car $e^{-3k} > 0$ : la concentration est divisée par 2 toutes les 3 heures. Alors $\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3} = e^{-9k}$, et comme $t \\mapsto e^{-kt}$ est strictement décroissante, $C(t) = \\frac{C_0}{8}$ équivaut à $t = 9$.",
+       "retenir": "Dans un modèle exponentiel, la durée de division par 2 (demi-vie) est constante : trois demi-vies divisent par $2^{3} = 8$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La suite définie pour tout entier naturel $n$ par $u_n = e^{n^{2}}$ est géométrique. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Compare $\\frac{u_1}{u_0}$ et $\\frac{u_2}{u_1}$.",
+       "explication": "Faux. $\\frac{u_1}{u_0} = \\frac{e^{1}}{e^{0}} = e$, alors que $\\frac{u_2}{u_1} = \\frac{e^{4}}{e^{1}} = e^{3}$. Le quotient de deux termes consécutifs n'est pas constant : la suite n'est pas géométrique, car les exposants $n^{2}$ ne forment pas une suite arithmétique.",
+       "retenir": "La suite $(e^{v_n})$ est géométrique si et seulement si la suite $(v_n)$ est arithmétique."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si une grandeur est modélisée par $N(t) = N_0\\,e^{kt}$ avec $N_0 > 0$, alors son taux d'évolution entre les instants $t$ et $t+1$ ne dépend pas de $t$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Calcule le coefficient multiplicateur $\\frac{N(t+1)}{N(t)}$.",
+       "explication": "Vrai. Pour tout $t$, $\\frac{N(t+1)}{N(t)} = \\frac{N_0e^{kt+k}}{N_0e^{kt}} = e^{k}$ : le coefficient multiplicateur est constant, donc le taux d'évolution $e^{k} - 1$ aussi. C'est la version continue d'une suite géométrique.",
+       "retenir": "Modèle exponentiel : sur des durées égales, le coefficient multiplicateur est le même."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $a$, la suite $(e^{na})_{n \\in \\mathbb{N}}$ est monotone. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Étudie le signe de $u_{n+1} - u_n = e^{na}(e^{a} - 1)$.",
+       "explication": "Vrai. $u_{n+1} - u_n = e^{na}(e^{a} - 1)$ est du signe de $e^{a} - 1$, c'est-à-dire du signe de $a$, qui ne dépend pas de $n$. Si $a > 0$, la suite est croissante ; si $a < 0$, elle est décroissante ; si $a = 0$, elle est constante.",
+       "retenir": "Sens de variation d'une suite : étudier le signe de $u_{n+1} - u_n$ et vérifier qu'il ne dépend pas de $n$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6b",
+   "carte": "boss-eratosthene",
+   "fond": "orient",
+   "nom": "La quête de Xénophane",
+   "notion": "Problème : étude complète d'une fonction avec exponentielle",
+   "athena": "Signe, dérivée, variations, tangente, extremum : une étude complète. N'oublie aucune branche du tableau avant de conclure.",
+   "steles": [
+    {
+     "boss": "Céléno, reine des Harpies",
+     "monstre": "harpie",
+     "contexte": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (x^{2} - 3)\\,e^{x}$, et $\\mathcal{C}$ sa courbe représentative dans un repère orthonormé. On étudie successivement le signe de $f$, sa dérivée, ses variations, une tangente et son minimum. Les questions sont indépendantes : chacune redonne les résultats dont elle a besoin.",
+     "exercices": [
+      {
+       "titre": "Le signe",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $f(x) < 0$. Entrer le nombre d'entiers relatifs qui en sont solutions.",
+       "reponse": 3,
+       "indice": "$e^{x} > 0$ : le signe de $f(x)$ est celui de $x^{2} - 3$.",
+       "explication": "Comme $e^{x} > 0$ pour tout réel $x$, $f(x) < 0$ équivaut à $x^{2} < 3$, soit $-\\sqrt{3} < x < \\sqrt{3}$. Comme $\\sqrt{3} \\approx 1{,}73$, les entiers solutions sont $-1$, $0$ et $1$ : il y en a $3$.",
+       "retenir": "$e^{u}$ est toujours strictement positif : le signe de $P(x)\\,e^{x}$ est celui de $P(x)$."
+      },
+      {
+       "titre": "La dérivée",
+       "enonce": "Il existe des réels $b$ et $c$ tels que, pour tout réel $x$, $f'(x) = (x^{2} + bx + c)\\,e^{x}$. Entrer $b$.",
+       "reponse": 2,
+       "indice": "Dérive le produit $u \\times v$ avec $u(x) = x^{2} - 3$ et $v(x) = e^{x}$, puis factorise par $e^{x}$.",
+       "explication": "$f'(x) = 2x\\,e^{x} + (x^{2}-3)e^{x} = (x^{2} + 2x - 3)e^{x}$, donc $b = 2$ et $c = -3$. Les deux erreurs typiques : multiplier les dérivées ($2x\\,e^{x}$) ou oublier de dériver le facteur polynomial ($(x^{2}-3)e^{x}$, qui donnerait $b = 0$).",
+       "retenir": "$(P\\,e^{x})' = (P' + P)\\,e^{x}$ : on ajoute au polynôme sa dérivée, l'exponentielle reste en facteur."
+      },
+      {
+       "titre": "Les variations",
+       "enonce": "On admet que, pour tout réel $x$, $f'(x) = (x^{2} + 2x - 3)\\,e^{x}$. Sur quel intervalle la fonction $f$ est-elle décroissante ?",
+       "reponse": 2,
+       "choix": [
+        "$]-\\infty\\,;-3]$ et $[1\\,;+\\infty[$",
+        "$[-3\\,;1]$",
+        "$[-1\\,;3]$",
+        "$[-\\sqrt{3}\\,;\\sqrt{3}]$"
+       ],
+       "indice": "Le signe de $f'(x)$ est celui du trinôme $x^{2} + 2x - 3$ : cherche ses racines.",
+       "explication": "Comme $e^{x} > 0$, $f'(x)$ a le signe de $x^{2} + 2x - 3 = (x+3)(x-1)$, trinôme de racines $-3$ et $1$, négatif entre ses racines. Donc $f$ est décroissante sur $[-3\\,;1]$, et croissante sur $]-\\infty\\,;-3]$ et sur $[1\\,;+\\infty[$. L'intervalle $[-\\sqrt{3}\\,;\\sqrt{3}]$ est celui où $f$ est négative : ne pas confondre le signe de $f$ et celui de $f'$.",
+       "retenir": "Les variations de $f$ se lisent sur le signe de $f'$, pas sur celui de $f$. Un trinôme a le signe de $a$ à l'extérieur de ses racines."
+      },
+      {
+       "titre": "Une tangente",
+       "enonce": "On admet que, pour tout réel $x$, $f'(x) = (x^{2} + 2x - 3)\\,e^{x}$. La tangente à $\\mathcal{C}$ au point d'abscisse $0$ coupe l'axe des abscisses en un point. Entrer l'abscisse de ce point.",
+       "reponse": -1,
+       "indice": "Équation de la tangente au point d'abscisse $0$ : $y = f'(0)\\,x + f(0)$.",
+       "explication": "$f(0) = (0-3)e^{0} = -3$ et $f'(0) = -3e^{0} = -3$, donc la tangente a pour équation $y = -3x - 3$. Elle coupe l'axe des abscisses lorsque $-3x - 3 = 0$, soit $x = -1$.",
+       "retenir": "Tangente au point d'abscisse $a$ : $y = f'(a)(x-a) + f(a)$ ; en $a = 0$, $y = f'(0)\\,x + f(0)$."
+      },
+      {
+       "titre": "Le minimum",
+       "enonce": "On admet que $f$ est croissante sur $]-\\infty\\,;-3]$, décroissante sur $[-3\\,;1]$ et croissante sur $[1\\,;+\\infty[$. La fonction $f$ admet un minimum sur $\\mathbb{R}$, qui s'écrit $k \\times e$ avec $k$ réel. Entrer $k$.",
+       "reponse": -2,
+       "indice": "Sur $[-3\\,;+\\infty[$, le minimum est $f(1)$. Et pour $x \\le -3$, quel est le signe de $x^{2} - 3$ ?",
+       "explication": "Sur $[-3\\,;+\\infty[$, $f$ décroît puis croît : le minimum y est $f(1) = (1-3)e = -2e$. Sur $]-\\infty\\,;-3]$, $x^{2} \\ge 9$, donc $f(x) = (x^{2}-3)e^{x} > 0 > -2e$. Le minimum de $f$ sur $\\mathbb{R}$ est donc $-2e$, atteint en $1$ : $k = -2$. Il ne fallait pas oublier la branche $]-\\infty\\,;-3]$, où $f$ croît : il faut y comparer $f$ à $-2e$.",
+       "retenir": "Un minimum local ne devient global qu'après comparaison avec toutes les autres branches du tableau de variations."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $(x^{2} - 3)\\,e^{x} \\ge -3$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Calcule la valeur de l'expression en $x = 1$, sachant que $e \\approx 2{,}718$.",
+       "explication": "Faux. Pour $x = 1$ : $(1 - 3)e^{1} = -2e \\approx -5{,}44$, et $-2e < -3$ car $e > 1{,}5$. La valeur $-3$ est celle prise en $0$, mais ce n'est pas le minimum : il est atteint en $1$ et vaut $-2e$.",
+       "retenir": "Une valeur remarquable, comme l'image de 0, n'est pas forcément un minimum : seule l'étude des variations le dit."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $a$ et $b$, $e^{\\frac{a+b}{2}} \\le \\dfrac{e^{a} + e^{b}}{2}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Pose $A = e^{a/2}$ et $B = e^{b/2}$, et pense à $(A - B)^{2} \\ge 0$.",
+       "explication": "Vrai. Avec $A = e^{a/2}$ et $B = e^{b/2}$ : $AB = e^{\\frac{a+b}{2}}$, $A^{2} = e^{a}$ et $B^{2} = e^{b}$. Or $(A - B)^{2} \\ge 0$ donne $A^{2} + B^{2} \\ge 2AB$, c'est-à-dire $\\frac{e^{a}+e^{b}}{2} \\ge e^{\\frac{a+b}{2}}$. C'est l'inégalité entre la moyenne géométrique et la moyenne arithmétique de $e^{a}$ et $e^{b}$.",
+       "retenir": "Pour tous réels $x, y > 0$ : $\\sqrt{xy} \\le \\frac{x+y}{2}$, car $(\\sqrt{x} - \\sqrt{y})^{2} \\ge 0$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La négation de l'énoncé “pour tout réel $x$, $e^{x} > x$” est “il existe un réel $x$ tel que $e^{x} < x$”. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Le contraire de « strictement supérieur » n'est pas « strictement inférieur ».",
+       "explication": "Faux. La négation de « pour tout $x$, $P(x)$ » est « il existe $x$ tel que non $P(x)$ », et la négation de $e^{x} > x$ est $e^{x} \\le x$. La négation correcte est donc « il existe un réel $x$ tel que $e^{x} \\le x$ ». L'énoncé initial est d'ailleurs vrai, puisque $e^{x} \\ge 1 + x > x$.",
+       "retenir": "Nier « pour tout $x$, $f(x) > g(x)$ » donne « il existe $x$ tel que $f(x) \\le g(x)$ » : le cas d'égalité change de camp."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c6s",
+   "carte": "sanct-figures",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Kant",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Ici, les outils de Terminale sont permis, et chaque énoncé qui les utilise le signale. Puis vient le regard du professeur : comprendre l'erreur avant de la corriger.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Un nombre dérivé déguisé",
+       "enonce": "Programme de Terminale (limites). Déterminer $\\displaystyle \\lim_{x \\to 0} \\frac{e^{3x} - 1}{x}$. Entrer cette limite.",
+       "reponse": 3,
+       "indice": "Reconnais le taux d'accroissement en $0$ de la fonction $g : x \\mapsto e^{3x}$.",
+       "explication": "Avec $g(x) = e^{3x}$, on a $g(0) = 1$, donc $\\frac{e^{3x}-1}{x} = \\frac{g(x) - g(0)}{x - 0}$ est le taux d'accroissement de $g$ en $0$. Comme $g$ est dérivable en $0$, il tend vers $g'(0) = 3e^{0} = 3$.",
+       "retenir": "Une limite de la forme $\\frac{g(x) - g(a)}{x - a}$ est un nombre dérivé : par exemple $\\lim_{x \\to 0} \\frac{e^{x}-1}{x} = 1$."
+      },
+      {
+       "titre": "Le terme dominant",
+       "enonce": "Programme de Terminale : on admet que $\\displaystyle \\lim_{x \\to +\\infty} x\\,e^{-x} = 0$. Déterminer $\\displaystyle \\lim_{x \\to +\\infty} \\frac{x\\,e^{x} - e^{2x}}{e^{2x} + x}$. Entrer cette limite.",
+       "reponse": -1,
+       "indice": "Divise le numérateur et le dénominateur par $e^{2x}$, le terme qui domine.",
+       "explication": "En divisant par $e^{2x}$ : $\\frac{x e^{x} - e^{2x}}{e^{2x} + x} = \\frac{x e^{-x} - 1}{1 + x e^{-2x}}$. Or $x e^{-x} \\to 0$, et pour $x \\ge 0$, $0 \\le x e^{-2x} \\le x e^{-x}$ car $e^{-x} \\le 1$, donc $x e^{-2x} \\to 0$. La limite vaut $\\frac{0 - 1}{1 + 0} = -1$.",
+       "retenir": "Forme indéterminée avec des exponentielles : factoriser par le terme dominant ($e^{2x}$ l'emporte sur $x\\,e^{x}$)."
+      },
+      {
+       "titre": "La crue d'une rivière",
+       "enonce": "Pendant le passage d'une dépression tropicale sur Grande-Terre, le débit supplémentaire d'une rivière, en m³/s, est modélisé par $D(t) = 0{,}1\\,t^{3}e^{-t/3}$ pour $t \\ge 0$, où $t$ est le temps en heures écoulé depuis le début des pluies. Au bout de combien d'heures ce débit est-il maximal ? Entrer ce nombre d'heures.",
+       "reponse": 9,
+       "unite": "h",
+       "indice": "Dérive le produit $t^{3} \\times e^{-t/3}$, puis factorise par $t^{2}e^{-t/3}$.",
+       "explication": "$D'(t) = 0{,}1\\left(3t^{2}e^{-t/3} - \\frac{1}{3}t^{3}e^{-t/3}\\right) = 0{,}1\\,t^{2}e^{-t/3}\\left(3 - \\frac{t}{3}\\right)$. Pour $t > 0$, $D'(t)$ a le signe de $3 - \\frac{t}{3}$ : positif avant $9$, négatif après. Le débit croît puis décroît : il est maximal au bout de 9 heures. $D'$ s'annule aussi en $0$, mais c'est là que le débit est minimal.",
+       "retenir": "Un extremum se lit sur un changement de signe de $f'$, pas sur la seule annulation de $f'$.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un point d'inflexion",
+       "enonce": "Programme de Terminale (convexité). Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x\\,e^{-x}$. Sa courbe admet un unique point d'inflexion. Entrer son abscisse.",
+       "reponse": 2,
+       "indice": "Calcule $f'$, puis $f''$, la dérivée de $f'$, et cherche où $f''$ change de signe.",
+       "explication": "$f'(x) = e^{-x} - x\\,e^{-x} = (1-x)e^{-x}$, puis $f''(x) = -e^{-x} - (1-x)e^{-x} = (x-2)e^{-x}$. Comme $e^{-x} > 0$, $f''$ a le signe de $x - 2$ : $f$ est concave sur $]-\\infty\\,;2]$ et convexe sur $[2\\,;+\\infty[$. Le point d'inflexion a pour abscisse $2$.",
+       "retenir": "Point d'inflexion : $f''$ s'annule en changeant de signe. Pour $P(x)\\,e^{-x}$, chaque dérivation donne $(P' - P)\\,e^{-x}$."
+      },
+      {
+       "titre": "Deux solutions, à quelle condition ?",
+       "enonce": "Programme de Terminale : on admet que, pour tout réel $X > 0$, l'équation $e^{x} = X$ a une unique solution réelle. Soit $m$ un réel. L'équation $e^{2x} - m\\,e^{x} + 4 = 0$ admet deux solutions réelles distinctes si et seulement si $m$ appartient à un intervalle $]a\\,;+\\infty[$. Entrer $a$.",
+       "reponse": 4,
+       "indice": "Avec $X = e^{x}$, il faut deux racines distinctes et strictement positives : regarde le discriminant, puis la somme et le produit des racines.",
+       "explication": "Avec $X = e^{x}$, l'équation devient $X^{2} - mX + 4 = 0$, et chaque racine $X > 0$ donne exactement une solution $x$. Il faut donc deux racines distinctes strictement positives : $\\Delta = m^{2} - 16 > 0$ ; leur produit vaut $4 > 0$, donc elles sont de même signe, celui de leur somme $m$. D'où $m > 4$, et $a = 4$. Pour $m < -4$, les deux racines sont négatives : aucune solution.",
+       "retenir": "Signe des racines d'un trinôme sans les calculer : produit $\\frac{c}{a}$ et somme $-\\frac{b}{a}$."
+      },
+      {
+       "titre": "Tangentes issues d'un point",
+       "enonce": "Programme de Terminale (théorème des valeurs intermédiaires). Combien de tangentes à la courbe de la fonction exponentielle passent par le point $A\\left(0\\,;\\frac{1}{2}\\right)$ ? Entrer ce nombre.",
+       "reponse": 2,
+       "indice": "La tangente au point d'abscisse $a$ coupe l'axe des ordonnées en $(1-a)e^{a}$. Étudie les variations de $g : a \\mapsto (1-a)e^{a}$, puis compare $g(-2)$, $g(0)$ et $g(1)$ à $\\frac{1}{2}$.",
+       "explication": "La tangente en $a$ a pour équation $y = e^{a}(x - a) + e^{a}$ ; elle passe par $A$ si et seulement si $g(a) = (1-a)e^{a} = \\frac{1}{2}$. Or $g'(a) = -a\\,e^{a}$ : $g$ est strictement croissante sur $]-\\infty\\,;0]$, strictement décroissante sur $[0\\,;+\\infty[$, et $g(0) = 1$. Comme $g(-2) = 3e^{-2} < \\frac{1}{2}$ (car $e^{2} > 6$) et $g(1) = 0$, le théorème des valeurs intermédiaires donne une unique solution dans $]-2\\,;0[$ et une unique solution dans $]0\\,;1[$ ; ailleurs, $g(a) < \\frac{1}{2}$. Il y a donc 2 tangentes.",
+       "retenir": "« Combien de tangentes passent par $A$ ? » revient à « combien de solutions a l'équation d'inconnue $a$ ? » : c'est une étude de fonction.",
+       "temps": 420
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "L'erreur de dérivation",
+       "enonce": "Un élève écrit : « La dérivée de $f(x) = e^{x^{2}}$ est $f'(x) = x^{2}e^{x^{2}-1}$. » Quelle est son erreur ?",
+       "reponse": 1,
+       "choix": [
+        "Il applique à l'exponentielle la règle de dérivation de $x^{n}$ ; la bonne dérivée est $2x\\,e^{x^{2}}$.",
+        "Il a confondu $e^{x^{2}}$ avec $(e^{x})^{2}$ ; la bonne dérivée est $2e^{2x}$.",
+        "Il a seulement oublié un facteur 2 ; la bonne dérivée est $2x^{2}e^{x^{2}-1}$.",
+        "Aucune erreur : la formule est juste."
+       ],
+       "indice": "Compare avec la formule $(e^{u})' = u'e^{u}$ : que devient l'exposant ?",
+       "explication": "L'élève traite $e^{x^{2}}$ comme une puissance : il fait « descendre » l'exposant et lui retire 1, comme pour $(x^{n})' = nx^{n-1}$. Or $(e^{u})' = u'e^{u}$ avec $u(x) = x^{2}$, donc $f'(x) = 2x\\,e^{x^{2}}$. Pour remédier, on peut lui faire appliquer sa règle à $e^{x}$ lui-même : elle donnerait $x\\,e^{x-1}$ au lieu de $e^{x}$.",
+       "retenir": "Erreur classique : appliquer $(x^{n})' = nx^{n-1}$ à une exponentielle. Dans $e^{u}$, l'exposant ne bouge pas : $(e^{u})' = u'e^{u}$."
+      },
+      {
+       "titre": "Prolonger les puissances",
+       "enonce": "Une élève de Première demande pourquoi on note $\\exp(x) = e^{x}$. Quelle réponse est mathématiquement correcte ?",
+       "reponse": 3,
+       "choix": [
+        "C'est une convention arbitraire, sans lien avec les puissances vues au collège.",
+        "Parce que $e^{x}$ s'obtient en multipliant $e$ par lui-même $x$ fois, pour tout réel $x$.",
+        "Parce que $\\exp(a+b) = \\exp(a)\\exp(b)$ et $\\exp(1) = e$ donnent $\\exp(n) = e^{n}$ pour tout entier $n$ : la notation prolonge les puissances.",
+        "Parce que la fonction exponentielle est la dérivée de la constante $e$."
+       ],
+       "indice": "Que vaut $\\exp(2) = \\exp(1+1)$ ? Et $\\exp(-1)$ ?",
+       "explication": "La relation fonctionnelle donne $\\exp(2) = \\exp(1)^{2} = e^{2}$, puis par récurrence $\\exp(n) = e^{n}$ pour tout entier naturel $n$, et $\\exp(-n) = \\frac{1}{e^{n}} = e^{-n}$. Les règles $e^{a+b} = e^{a}e^{b}$ et $(e^{a})^{n} = e^{na}$ prolongent celles des puissances du collège. En revanche, « multiplier $e$ par lui-même $x$ fois » n'a pas de sens pour $x = \\frac{1}{2}$ ou $x = \\sqrt{2}$.",
+       "retenir": "$\\exp(n) = e^{n}$ pour tout entier $n$ : la notation $e^{x}$ prolonge les puissances entières, avec les mêmes règles de calcul."
+      },
+      {
+       "titre": "Le bon contre-exemple",
+       "enonce": "Un élève affirme : « Pour tout réel $x$, $e^{x} > x^{2}$ ; je l'ai vérifié pour $x = 0$, $1$, $2$, $3$ et $10$. » Quel exemple montre à la classe que l'affirmation est fausse ?",
+       "reponse": 4,
+       "choix": [
+        "$x = 5$",
+        "$x = \\frac{1}{2}$",
+        "$x = -\\frac{1}{10}$",
+        "$x = -1$"
+       ],
+       "indice": "Cherche là où $e^{x}$ est petit : du côté des négatifs, mais pas trop près de 0.",
+       "explication": "Pour $x = -1$ : $e^{-1} = \\frac{1}{e} < 1 = (-1)^{2}$, car $e > 1$. L'affirmation est donc fausse. Les autres valeurs vérifient l'inégalité (par exemple $e^{-0{,}1} \\approx 0{,}90 > 0{,}01$) et ne prouvent rien. Leçon pour la classe : des exemples ne démontrent pas un énoncé universel, alors qu'un seul contre-exemple suffit à le réfuter.",
+       "retenir": "Énoncé « pour tout » : des exemples ne prouvent rien, un contre-exemple réfute. Le chercher là où l'intuition est la plus fragile."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "D'après CAPES Mayotte 2022. Programme de Terminale (limite d'une suite). Proposition : « $\\displaystyle \\lim_{n \\to +\\infty} n\\left(e^{\\frac{1}{n}} - 1\\right) = 1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Pose $h = \\frac{1}{n}$ et reconnais un taux d'accroissement de l'exponentielle en $0$.",
+       "explication": "Vrai. Avec $h = \\frac{1}{n}$, qui tend vers $0$, on a $n\\left(e^{1/n} - 1\\right) = \\frac{e^{h} - e^{0}}{h - 0}$ : c'est le taux d'accroissement de l'exponentielle entre $0$ et $h$. Comme l'exponentielle est dérivable en $0$, il tend vers $\\exp'(0) = e^{0} = 1$.",
+       "retenir": "$\\lim_{h \\to 0} \\frac{e^{h}-1}{h} = 1$ : c'est le nombre dérivé de exp en 0, à reconnaître sous toutes ses formes."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n \\ge 1$, $\\left(1 + \\frac{1}{n}\\right)^{n} \\le e$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Utilise l'inégalité $e^{x} \\ge 1 + x$, valable pour tout réel $x$, avec $x = \\frac{1}{n}$.",
+       "explication": "Vrai. Pour tout réel $x$, $e^{x} \\ge 1 + x$ (la fonction $x \\mapsto e^{x} - 1 - x$ a pour minimum $0$, atteint en $0$). Avec $x = \\frac{1}{n}$ : $0 < 1 + \\frac{1}{n} \\le e^{1/n}$. La fonction $t \\mapsto t^{n}$ étant croissante sur $[0\\,;+\\infty[$, on obtient $\\left(1 + \\frac{1}{n}\\right)^{n} \\le \\left(e^{1/n}\\right)^{n} = e$.",
+       "retenir": "L'inégalité $e^{x} \\ge 1 + x$ est un outil : l'appliquer en un point bien choisi, puis composer par une fonction croissante."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $e^{x} \\ge 1 + x + \\dfrac{x^{2}}{2}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste un réel négatif, par exemple $x = -1$, avec $e \\approx 2{,}718$.",
+       "explication": "Faux. Pour $x = -1$ : $1 + x + \\frac{x^{2}}{2} = \\frac{1}{2}$, alors que $e^{-1} = \\frac{1}{e} < \\frac{1}{2}$ car $e > 2$. L'inégalité est vraie pour $x \\ge 0$, mais pas sur $\\mathbb{R}$ tout entier.",
+       "retenir": "Une inégalité vraie sur $[0\\,;+\\infty[$ peut être fausse sur $\\mathbb{R}$ : toujours tester des réels négatifs."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

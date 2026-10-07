@@ -1,0 +1,739 @@
+{
+ "id": "ch3",
+ "titre": "Arithmétique",
+ "introduction": "Les nombres entiers paraissent simples ; pourtant, depuis Pythagore, ils portent les démonstrations les plus pures. Cette semaine, tu apprends à écrire $n = 2k + 1$, à raisonner selon les restes, à décomposer un nombre en facteurs premiers et à conduire l'algorithme d'Euclide. Au concours, une preuve d'arithmétique tient en trois lignes : chacune doit être juste.",
+ "conclusion": "Emporte trois gestes : écrire la division euclidienne avec son reste encadré, raisonner par cas selon les restes, lire les diviseurs sur la décomposition en facteurs premiers. Et souviens-toi qu'un exemple illustre, mais que seule une preuve générale démontre.",
+ "salles": [
+  {
+   "id": "c3r1",
+   "carte": "descartes",
+   "fond": "jardin",
+   "nom": "Le nombre de Philolaos",
+   "notion": "Divisibilité, multiples, parité",
+   "athena": "Dire que $a$ divise $b$, c'est écrire $b = ka$ avec $k$ entier : pose cet entier avant tout calcul, et la preuve s'écrit presque seule.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Les multiples de 7",
+       "enonce": "Entrer le nombre de multiples de 7 compris entre 100 et 300.",
+       "reponse": 28,
+       "indice": "Encadre : quel est le plus petit multiple de 7 supérieur à 100, et le plus grand inférieur à 300 ?",
+       "explication": "$7 \\times 14 = 98 < 100 < 105 = 7 \\times 15$ et $7 \\times 42 = 294 \\leq 300 < 301 = 7 \\times 43$. Les multiples cherchés sont les $7k$ pour $k$ entier de 15 à 42 : il y en a $42 - 15 + 1 = 28$.",
+       "retenir": "Compter des multiples, c'est compter les entiers $k$ ; de $p$ à $q$ inclus, il y en a $q - p + 1$."
+      },
+      {
+       "titre": "Le chiffre manquant",
+       "enonce": "Le nombre à quatre chiffres $\\overline{52x4}$ (5 milliers, 2 centaines, $x$ dizaines, 4 unités) est divisible par 12. Entrer le chiffre $x$.",
+       "reponse": 4,
+       "indice": "Un multiple de 12 est multiple de 3 et de 4 : utilise le critère de divisibilité par 3 (somme des chiffres) et celui par 4 (nombre formé par les deux derniers chiffres).",
+       "explication": "Si 12 divise ce nombre, 3 et 4 le divisent. Par 3 : $5 + 2 + x + 4 = 11 + x$ est multiple de 3, donc $x \\in \\{1, 4, 7\\}$. Par 4 : $\\overline{x4}$ est multiple de 4, donc $x$ est pair. Seul $x = 4$ convient et, réciproquement, $5\\,244 = 12 \\times 437$.",
+       "retenir": "Être divisible par 12 entraîne être divisible par 3 et par 4. Attention : être divisible par 2 et par 6 ne suffit pas (6 lui-même n'est pas multiple de 12)."
+      },
+      {
+       "titre": "Un diviseur à trouver",
+       "enonce": "Entrer le nombre d'entiers relatifs $n$, avec $n \\neq -3$, tels que $n + 3$ divise $2n + 13$.",
+       "reponse": 4,
+       "indice": "Écris $2n + 13$ sous la forme $2(n + 3) + c$, avec $c$ entier.",
+       "explication": "$2n + 13 = 2(n + 3) + 7$. Si $n + 3$ divise $2n + 13$, il divise $(2n + 13) - 2(n + 3) = 7$ ; réciproquement, s'il divise 7, il divise $2(n + 3) + 7$. Donc $n + 3 \\in \\{-7, -1, 1, 7\\}$, soit $n \\in \\{-10, -4, -2, 4\\}$ : 4 entiers. Oublier les diviseurs négatifs en fait perdre deux.",
+       "retenir": "Si $d$ divise $a$ et $b$, il divise toute combinaison $ua + vb$ ($u$, $v$ entiers). Dans $\\mathbb{Z}$, 7 a quatre diviseurs : $1$, $-1$, $7$, $-7$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La bonne rédaction",
+       "enonce": "Quelle rédaction démontre que, pour tout entier $n$, le produit $n(n+1)$ est pair ?",
+       "reponse": 3,
+       "choix": [
+        "$1 \\times 2 = 2$, $4 \\times 5 = 20$ et $9 \\times 10 = 90$ sont pairs, donc $n(n+1)$ est toujours pair.",
+        "Si $n$ est pair, $n = 2k$ avec $k$ entier, donc $n(n+1) = 2k(2k+1)$ est pair.",
+        "Si $n = 2k$, $n(n+1) = 2\\,[k(2k+1)]$ ; si $n = 2k+1$, $n(n+1) = 2\\,[(2k+1)(k+1)]$ ($k$ entier). Dans les deux cas, $n(n+1)$ est pair.",
+        "$n(n+1) = n^2 + n$ et $n^2$ est pair, donc $n^2 + n$ est pair."
+       ],
+       "indice": "Une preuve doit couvrir tous les entiers : un entier est soit pair, soit impair.",
+       "explication": "La troisième rédaction traite les deux cas possibles (disjonction de cas) et exhibe chaque fois le double d'un entier. La première ne donne que des exemples, la deuxième oublie le cas $n$ impair, la quatrième affirme à tort que $n^2$ est toujours pair. On peut aussi dire : de deux entiers consécutifs, l'un est pair.",
+       "retenir": "Pour une propriété universelle sur les entiers : écrire $n = 2k$ ou $n = 2k + 1$, traiter chaque cas, conclure « dans tous les cas »."
+      },
+      {
+       "titre": "Pair ou impair ?",
+       "enonce": "Pour tout entier $n$, on pose $A = n^2 + 5n + 7$. Quelle affirmation est exacte ?",
+       "reponse": 2,
+       "choix": [
+        "$A$ est pair si et seulement si $n$ est pair.",
+        "$A$ est toujours impair.",
+        "$A$ est pair si et seulement si $n$ est impair.",
+        "$A$ est toujours pair."
+       ],
+       "indice": "Factorise $n^2 + 5n$ et compare la parité de $n$ et celle de $n + 5$.",
+       "explication": "$A = n(n + 5) + 7$. Les entiers $n$ et $n + 5$ n'ont pas la même parité (leur différence, 5, est impaire), donc l'un des deux est pair et $n(n + 5)$ est pair. Ainsi $A$, somme d'un nombre pair et de 7, est impair pour tout $n$. Contrôle : $n = 0$ donne 7, $n = 1$ donne 13.",
+       "retenir": "Si $a - b$ est impair, $a$ et $b$ sont de parités différentes, donc le produit $ab$ est pair."
+      },
+      {
+       "titre": "Le carré d'un impair",
+       "enonce": "Entrer le plus grand entier naturel $d$ qui divise $n^2 - 1$ pour tout entier impair $n$.",
+       "reponse": 8,
+       "indice": "Écris $n = 2k + 1$, factorise $n^2 - 1$, puis regarde le cas $n = 3$.",
+       "explication": "Avec $n = 2k + 1$ : $n^2 - 1 = 4k^2 + 4k = 4k(k + 1)$. Or $k(k + 1)$, produit de deux entiers consécutifs, est pair : $k(k + 1) = 2m$, d'où $n^2 - 1 = 8m$. Donc 8 convient. Et pour $n = 3$, $n^2 - 1 = 8$ : aucun entier plus grand que 8 ne divise tous ces nombres. Donc $d = 8$.",
+       "retenir": "Le carré d'un entier impair s'écrit $8m + 1$ : réflexe $n = 2k + 1$, puis « $k(k + 1)$ est pair »."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous entiers $a$, $b$, $c$, si $a$ divise $bc$, alors $a$ divise $b$ ou $a$ divise $c$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche un diviseur $a$ dont les facteurs se répartissent entre $b$ et $c$.",
+       "explication": "Faux. Contre-exemple : $a = 6$, $b = 2$, $c = 3$. 6 divise $2 \\times 3 = 6$, mais 6 ne divise ni 2 ni 3.",
+       "retenir": "Un diviseur d'un produit peut se partager entre les facteurs ; la propriété devient vraie lorsque $a$ est premier (on le démontrera plus tard)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n$, si 2 divise $n$ et 3 divise $n$, alors 6 divise $n$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $n = 3n - 2n$ et regarde chacun des deux termes.",
+       "explication": "Vrai. Si $n = 2k$ et $n = 3m$ ($k$, $m$ entiers), alors $3n = 6k$ et $2n = 6m$, donc $n = 3n - 2n = 6(k - m)$, avec $k - m$ entier : 6 divise $n$.",
+       "retenir": "De « 2 divise $n$ et 3 divise $n$ » on tire « 6 divise $n$ » en écrivant $n = 3n - 2n$. Le produit de deux diviseurs ne divise pas toujours $n$ : penser au PPCM."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La somme de quatre entiers consécutifs est toujours divisible par 4. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Écris les quatre entiers $n$, $n + 1$, $n + 2$, $n + 3$ et additionne-les.",
+       "explication": "Faux. Contre-exemple : $1 + 2 + 3 + 4 = 10$ n'est pas divisible par 4. En général, $n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 4(n + 1) + 2$ : le reste dans la division par 4 vaut toujours 2.",
+       "retenir": "La somme de trois entiers consécutifs est multiple de 3, celle de quatre ne l'est jamais de 4 : vérifier avant de généraliser."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3r2",
+   "carte": "neufchap",
+   "fond": "brumes",
+   "nom": "Les nombres parfaits de Nicomaque",
+   "notion": "Division euclidienne, restes",
+   "athena": "Diviser $a$ par $b$, c'est écrire $a = bq + r$ avec $0 \\leq r < b$ : sans cette inégalité sur le reste, il n'y a pas de division euclidienne.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le reste de 2027",
+       "enonce": "Entrer le reste de la division euclidienne de 2027 par 13.",
+       "reponse": 12,
+       "indice": "Cherche le plus grand multiple de 13 inférieur ou égal à 2027.",
+       "explication": "$13 \\times 155 = 2\\,015$ et $13 \\times 156 = 2\\,028 > 2\\,027$. Donc $2\\,027 = 13 \\times 155 + 12$ avec $0 \\leq 12 < 13$ : le quotient est 155 et le reste 12.",
+       "retenir": "Le quotient est le plus grand entier $q$ tel que $bq \\leq a$ ; le reste $r = a - bq$ vérifie alors $0 \\leq r < b$."
+      },
+      {
+       "titre": "Un dividende négatif",
+       "enonce": "Entrer le reste de la division euclidienne de $-17$ par 5.",
+       "reponse": 3,
+       "indice": "Le reste doit vérifier $0 \\leq r < 5$ : le quotient sera donc négatif.",
+       "explication": "$-17 = 5 \\times (-4) + 3$ avec $0 \\leq 3 < 5$ : le quotient est $-4$ et le reste 3. L'égalité $-17 = 5 \\times (-3) - 2$ est exacte, mais $-2$ n'est pas un reste, car il est négatif.",
+       "retenir": "Le reste d'une division euclidienne est toujours positif ou nul, même pour un dividende négatif : le quotient est le plus grand entier $q$ tel que $bq \\leq a$."
+      },
+      {
+       "titre": "Dividende 79, reste 7",
+       "enonce": "D'après CAPES Mayotte 2021. Dans une division euclidienne d'entiers naturels, le dividende est 79 et le reste est 7. Entrer le nombre de valeurs possibles du diviseur.",
+       "reponse": 7,
+       "indice": "Si $79 = bq + 7$, que vaut $bq$ ? Et n'oublie pas la condition imposée au reste.",
+       "explication": "$79 = bq + 7$ avec $0 \\leq 7 < b$ équivaut à $bq = 72$ et $b > 7$. Les diviseurs de 72 sont 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 ; ceux qui dépassent 7 sont 8, 9, 12, 18, 24, 36 et 72. Il y a donc 7 diviseurs possibles (de quotients respectifs 9, 8, 6, 4, 3, 2, 1).",
+       "retenir": "Dans $a = bq + r$, la condition $0 \\leq r < b$ fait partie de la définition : ici, elle élimine les diviseurs 1, 2, 3, 4 et 6.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Le reste d'un carré",
+       "enonce": "Un entier $n$ a pour reste 3 dans la division euclidienne par 7. Entrer le reste de la division euclidienne de $n^2$ par 7.",
+       "reponse": 2,
+       "indice": "Écris $n = 7q + 3$ et développe $n^2$ en isolant un multiple de 7.",
+       "explication": "$n = 7q + 3$ donne $n^2 = 49q^2 + 42q + 9 = 7(7q^2 + 6q + 1) + 2$, avec $0 \\leq 2 < 7$. Le reste est 2, et non 9, qui dépasse 7.",
+       "retenir": "Le reste de $n^2$ ne dépend que du reste de $n$ : on élève ce reste au carré, puis on divise à nouveau le résultat."
+      },
+      {
+       "titre": "La faille de la preuve",
+       "enonce": "Pour démontrer « si $n^2$ est divisible par 3, alors $n$ est divisible par 3 », un candidat écrit : « Si $n = 3k$, alors $n^2 = 9k^2 = 3(3k^2)$ est divisible par 3. » Quel jugement porter sur cette preuve ?",
+       "reponse": 4,
+       "choix": [
+        "Elle est correcte et complète.",
+        "Elle est correcte, mais il faut aussi traiter le cas $n$ négatif.",
+        "Il suffit de la compléter par l'exemple $n = 6$ : 36 est divisible par 3, et 6 aussi.",
+        "Elle démontre la réciproque. Il faut prouver la contraposée : si $n = 3k + 1$ ou $n = 3k + 2$, alors $n^2$ a pour reste 1 dans la division par 3."
+       ],
+       "indice": "Repère l'hypothèse et la conclusion de la proposition, puis celles de la preuve.",
+       "explication": "La proposition part de « 3 divise $n^2$ », la preuve part de « 3 divise $n$ » : elle établit la réciproque. On démontre la contraposée : si $n = 3k + 1$, $n^2 = 3(3k^2 + 2k) + 1$ ; si $n = 3k + 2$, $n^2 = 3(3k^2 + 4k + 1) + 1$. Dans les deux cas le reste est 1, donc $n^2$ n'est pas divisible par 3.",
+       "retenir": "Avant de rédiger, repérer hypothèse et conclusion : démontrer la réciproque à la place de la proposition est l'erreur de logique la plus fréquente."
+      },
+      {
+       "titre": "Entre 1 et 100",
+       "enonce": "Entrer le nombre d'entiers $n$ compris entre 1 et 100 (inclus) tels que $n^2 + 2n$ soit divisible par 5.",
+       "reponse": 40,
+       "indice": "Raisonne selon le reste $r$ de $n$ dans la division par 5 : seul $r$ compte pour le reste de $n^2 + 2n$.",
+       "explication": "Si $n = 5q + r$, alors $n^2 + 2n = 5(5q^2 + 2qr + 2q) + r^2 + 2r$. Pour $r = 0, 1, 2, 3, 4$, $r^2 + 2r$ vaut $0, 3, 8, 15, 24$, de restes $0, 3, 3, 0, 4$. Donc 5 divise $n^2 + 2n$ si et seulement si $n$ a pour reste 0 ou 3. Entre 1 et 100, il y a 20 entiers de chaque sorte : 40 au total.",
+       "retenir": "Pour une question « pour quels $n$ ce nombre est-il divisible par $m$ ? », dresser le tableau des restes de $n$, de 0 à $m - 1$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si le reste de la division euclidienne de $a$ par 6 est 4, alors le reste de la division euclidienne de $a$ par 3 est 1. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $a = 6q + 4$ et fais apparaître un multiple de 3.",
+       "explication": "Vrai. Si $a = 6q + 4$, alors $a = 3(2q + 1) + 1$ avec $2q + 1$ entier et $0 \\leq 1 < 3$ : par unicité de la division euclidienne, le reste de $a$ par 3 est 1.",
+       "retenir": "Pour passer d'un reste par $b$ à un reste par un diviseur de $b$, réécrire $a = bq + r$ et redécouper $r$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $a$ et $b$ ont pour restes respectifs 5 et 4 dans la division euclidienne par 7, alors $a + b$ a pour reste 9 dans la division euclidienne par 7. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Un reste dans la division par 7 peut-il valoir 9 ?",
+       "explication": "Faux. Contre-exemple : $a = 5$, $b = 4$ ; $a + b = 9 = 7 \\times 1 + 2$ a pour reste 2. En général $a + b = 7(q + q') + 9 = 7(q + q' + 1) + 2$ : le reste vaut 2, car un reste est strictement inférieur à 7.",
+       "retenir": "On additionne ou on multiplie les restes, puis on reprend le reste du résultat, qui doit être compris entre 0 et $b - 1$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Aucun entier naturel dont le reste dans la division euclidienne par 4 est 3 n'est la somme de deux carrés d'entiers. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Quels restes un carré peut-il avoir dans la division par 4 ? Traite $n$ pair et $n$ impair.",
+       "explication": "Vrai. Si $n = 2k$, $n^2 = 4k^2$ (reste 0) ; si $n = 2k + 1$, $n^2 = 4(k^2 + k) + 1$ (reste 1). La somme de deux carrés s'écrit donc $4m$, $4m + 1$ ou $4m + 2$ : son reste par 4 vaut 0, 1 ou 2, jamais 3. Par exemple, $2\\,027 = 4 \\times 506 + 3$ n'est pas somme de deux carrés.",
+       "retenir": "Un carré a pour reste 0 ou 1 dans la division par 4 : un outil rapide pour prouver une impossibilité."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3r3",
+   "carte": "oresme",
+   "fond": "temple",
+   "nom": "La tétractys de Pythagore",
+   "notion": "Nombres premiers, décomposition, diviseurs",
+   "athena": "Tout entier au moins égal à 2 se décompose de façon unique en facteurs premiers : c'est là que se lisent ses diviseurs.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le crible",
+       "enonce": "Avec le crible d'Ératosthène, déterminer les nombres premiers inférieurs à 50. Entrer leur nombre.",
+       "reponse": 15,
+       "indice": "Barre les multiples de 2, 3, 5 et 7 autres qu'eux-mêmes ; demande-toi pourquoi on peut s'arrêter à 7.",
+       "explication": "Il reste 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 : 15 nombres. Barrer les multiples de 2, 3, 5 et 7 suffit, car un entier non premier $n \\leq 50$ a un diviseur premier $p$ tel que $p^2 \\leq n$, donc $p \\leq 7$.",
+       "retenir": "Un nombre premier a exactement deux diviseurs positifs : 1 et lui-même. 1 n'est pas premier ; 2 est le seul nombre premier pair."
+      },
+      {
+       "titre": "401 est-il premier ?",
+       "enonce": "Pour prouver que 401 est premier, on teste sa divisibilité par les nombres premiers successifs 2, 3, 5, … Entrer le plus grand nombre premier qu'il est nécessaire de tester.",
+       "reponse": 19,
+       "indice": "Si $n$ n'est pas premier, il possède un diviseur premier $p$ tel que $p^2 \\leq n$.",
+       "explication": "Comme $19^2 = 361 \\leq 401 < 529 = 23^2$, il suffit de tester les premiers $p$ tels que $p^2 \\leq 401$ : 2, 3, 5, 7, 11, 13, 17 et 19. Aucun ne divise 401, qui est donc premier. Le dernier test porte sur 19.",
+       "retenir": "Pour tester si $n$ est premier, il suffit d'essayer les diviseurs premiers $p$ tels que $p \\leq \\sqrt{n}$."
+      },
+      {
+       "titre": "Un trinôme premier",
+       "enonce": "Entrer la somme des entiers naturels $n$ pour lesquels $n^2 - 6n + 8$ est un nombre premier.",
+       "reponse": 6,
+       "indice": "Factorise le trinôme. Si un produit de deux entiers relatifs est premier, que vaut nécessairement l'un des facteurs ?",
+       "explication": "$n^2 - 6n + 8 = (n - 2)(n - 4)$. Un nombre premier ne s'écrit comme produit de deux entiers relatifs que si l'un des facteurs vaut $1$ ou $-1$. $n - 4 = 1$ donne $n = 5$ et le produit $3$, premier ; $n - 2 = -1$ donne $n = 1$ et $(-1) \\times (-3) = 3$, premier ; $n - 2 = 1$ et $n - 4 = -1$ donnent $n = 3$ et le produit $-1$. Les solutions sont 1 et 5 : leur somme vaut 6.",
+       "retenir": "Si un produit d'entiers $ab$ est premier, l'un des facteurs vaut $1$ ou $-1$ : ne pas oublier les facteurs négatifs."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Les diviseurs de 360",
+       "enonce": "Entrer le nombre de diviseurs positifs de 360.",
+       "reponse": 24,
+       "indice": "Décompose 360 en facteurs premiers : un diviseur positif s'écrit $2^a \\times 3^b \\times 5^c$ avec des exposants bornés.",
+       "explication": "$360 = 2^3 \\times 3^2 \\times 5$. Les diviseurs positifs sont les $2^a \\times 3^b \\times 5^c$ avec $0 \\leq a \\leq 3$, $0 \\leq b \\leq 2$ et $0 \\leq c \\leq 1$ : il y en a $4 \\times 3 \\times 2 = 24$.",
+       "retenir": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$, alors $n$ a $(a_1 + 1)(a_2 + 1) \\cdots (a_k + 1)$ diviseurs positifs."
+      },
+      {
+       "titre": "Compléter en carré",
+       "enonce": "Entrer le plus petit entier naturel non nul $k$ tel que $360k$ soit le carré d'un entier.",
+       "reponse": 10,
+       "indice": "Un entier est un carré si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs.",
+       "explication": "$360 = 2^3 \\times 3^2 \\times 5$ : les exposants de 2 et de 5 sont impairs. Il faut donc que $k$ soit multiple de $2 \\times 5 = 10$, et $k = 10$ convient : $360 \\times 10 = 3\\,600 = 60^2$.",
+       "retenir": "Un entier est un carré parfait si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs."
+      },
+      {
+       "titre": "Dix diviseurs",
+       "enonce": "Entrer le plus petit entier naturel ayant exactement 10 diviseurs positifs.",
+       "reponse": 48,
+       "indice": "Écris 10 comme produit de facteurs $(a_1 + 1)(a_2 + 1) \\cdots$ : $10 = 10$ ou $10 = 5 \\times 2$.",
+       "explication": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a 10 diviseurs, alors $(a_1 + 1) \\cdots (a_k + 1) = 10$, d'où $n = p^9$ ou $n = p^4 q$ ($p$, $q$ premiers distincts). Le plus petit $p^9$ est $2^9 = 512$ ; le plus petit $p^4 q$ est $2^4 \\times 3 = 48$. Donc 48, dont les diviseurs sont 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.",
+       "retenir": "Pour rendre $n$ minimal à nombre de diviseurs fixé : factoriser ce nombre, puis placer les plus grands exposants sur les plus petits nombres premiers."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier naturel $n$, le nombre $n^2 + n + 41$ est premier. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche une valeur de $n$ qui fait apparaître 41 en facteur.",
+       "explication": "Faux. Pour $n = 40$ : $40^2 + 40 + 41 = 40 \\times 41 + 41 = 41^2 = 1\\,681$, qui n'est pas premier. La propriété est pourtant vraie pour $n = 0, 1, \\dots, 39$ : quarante exemples ne font pas une preuve.",
+       "retenir": "Une propriété universelle ne se prouve pas par des exemples, aussi nombreux soient-ils ; un seul contre-exemple suffit à la réfuter."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Tout entier $n \\geq 2$ qui n'est pas premier admet un diviseur premier $p$ tel que $p^2 \\leq n$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Considère le plus petit diviseur $p > 1$ de $n$ : pourquoi est-il premier, et comment se compare-t-il à $\\frac{n}{p}$ ?",
+       "explication": "Vrai. Soit $p$ le plus petit diviseur de $n$ strictement supérieur à 1. Il est premier : un diviseur de $p$ strictement compris entre 1 et $p$ diviserait $n$ et serait plus petit. Comme $n$ n'est pas premier, $n = pm$ avec $1 < m < n$ ; $m$ divise $n$, donc $m \\geq p$, et $n = pm \\geq p^2$.",
+       "retenir": "Un entier non premier $n \\geq 2$ a un diviseur premier au plus égal à $\\sqrt{n}$ : c'est ce qui justifie le crible et les tests de primalité."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $n$ est un nombre premier, alors $2^n - 1$ est un nombre premier. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste les nombres premiers jusqu'à 11 ; $2^{11} = 2\\,048$.",
+       "explication": "Faux. Pour $n = 11$, premier, $2^{11} - 1 = 2\\,047 = 23 \\times 89$ n'est pas premier. La propriété est vraie pour $n = 2, 3, 5, 7$ (on obtient 3, 7, 31, 127), d'où l'illusion. C'est la réciproque qui est vraie : si $2^n - 1$ est premier, alors $n$ est premier.",
+       "retenir": "Ne pas confondre une implication et sa réciproque : « $2^n - 1$ premier $\\Rightarrow$ $n$ premier » est vraie, l'implication inverse est fausse."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "Les cent casiers",
+     "enonce": "Dans un couloir du collège, 100 casiers numérotés de 1 à 100 sont fermés. Cent élèves passent l'un après l'autre : l'élève numéro $k$ change l'état (il ouvre s'il est fermé, il ferme s'il est ouvert) de chaque casier dont le numéro est un multiple de $k$. Entrer le nombre de casiers ouverts après le passage des cent élèves.",
+     "reponse": 10,
+     "indice": "Le casier $n$ change d'état autant de fois que $n$ a de diviseurs. Quand ce nombre est-il impair ?",
+     "explication": "Le casier $n$ est manipulé par chaque élève $k$ qui divise $n$ ; il finit ouvert si $n$ a un nombre impair de diviseurs. Les diviseurs vont par paires $(d, \\frac{n}{d})$, distinctes sauf si $d = \\frac{n}{d}$, c'est-à-dire $n = d^2$. Seuls les carrés ont donc un nombre impair de diviseurs : 1, 4, 9, …, 100, soit 10 casiers.",
+     "retenir": "Un entier $n \\geq 1$ a un nombre impair de diviseurs positifs si et seulement si c'est un carré parfait."
+    }
+   ]
+  },
+  {
+   "id": "c3r4",
+   "carte": "hypatie",
+   "fond": "bibliotheque",
+   "nom": "L'hymne de Cléanthe",
+   "notion": "PGCD, PPCM, algorithme d'Euclide",
+   "athena": "Les diviseurs communs à $a$ et $b$ sont ceux de $b$ et du reste $r$ : l'algorithme d'Euclide n'est que cette phrase, répétée jusqu'au reste nul.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "L'algorithme d'Euclide",
+       "enonce": "À l'aide de l'algorithme d'Euclide, déterminer $\\mathrm{PGCD}(1\\,078\\,;\\,322)$. Entrer ce PGCD.",
+       "reponse": 14,
+       "indice": "Divise 1 078 par 322, puis 322 par le reste obtenu, et ainsi de suite : le PGCD est le dernier reste non nul.",
+       "explication": "$1\\,078 = 322 \\times 3 + 112$ ; $322 = 112 \\times 2 + 98$ ; $112 = 98 \\times 1 + 14$ ; $98 = 14 \\times 7 + 0$. Le dernier reste non nul est 14, donc $\\mathrm{PGCD}(1\\,078\\,;\\,322) = 14$.",
+       "retenir": "Si $a = bq + r$, alors $\\mathrm{PGCD}(a\\,;b) = \\mathrm{PGCD}(b\\,;r)$ : le PGCD est le dernier reste non nul de l'algorithme d'Euclide."
+      },
+      {
+       "titre": "Les bouquets d'ylang-ylang",
+       "enonce": "Une fleuriste dispose de 252 fleurs d'ylang-ylang et de 180 fleurs de frangipanier. Elle veut composer le plus grand nombre possible de bouquets identiques en utilisant toutes les fleurs. Entrer le nombre de fleurs de chaque bouquet.",
+       "reponse": 12,
+       "indice": "Le nombre de bouquets divise 252 et 180, et on le veut le plus grand possible.",
+       "explication": "Le nombre de bouquets est le plus grand diviseur commun de 252 et 180 : $252 = 180 + 72$, $180 = 2 \\times 72 + 36$, $72 = 2 \\times 36$, donc $\\mathrm{PGCD}(252\\,;180) = 36$. Chaque bouquet contient $252 \\div 36 = 7$ ylang-ylang et $180 \\div 36 = 5$ frangipaniers, soit 12 fleurs.",
+       "retenir": "« Le plus grand nombre de parts identiques » : PGCD ; « la première coïncidence de deux cycles » : PPCM."
+      },
+      {
+       "titre": "Un PGCD qui dépend de n",
+       "enonce": "Pour tout entier naturel $n$, on note $d_n = \\mathrm{PGCD}(3n + 4\\,;\\,5n + 1)$. Entrer la plus grande valeur que peut prendre $d_n$.",
+       "reponse": 17,
+       "indice": "Un diviseur commun de $3n + 4$ et $5n + 1$ divise toute combinaison de ces deux nombres : élimine $n$.",
+       "explication": "$d_n$ divise $5(3n + 4) - 3(5n + 1) = 17$, et 17 est premier, donc $d_n = 1$ ou $d_n = 17$. La valeur 17 est atteinte : pour $n = 10$, $3n + 4 = 34 = 2 \\times 17$ et $5n + 1 = 51 = 3 \\times 17$. La plus grande valeur est 17.",
+       "retenir": "Pour un PGCD qui dépend de $n$ : éliminer $n$ par une combinaison, puis vérifier sur un exemple que la valeur maximale est atteinte."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Deux barges",
+       "enonce": "Deux barges quittent ensemble le quai de Mamoudzou à 6 h. La première y repart toutes les 40 minutes, la seconde toutes les 25 minutes. Entrer le nombre de minutes écoulées avant leur prochain départ simultané.",
+       "reponse": 200,
+       "unite": "min",
+       "indice": "Les départs de la première ont lieu aux multiples de 40 minutes, ceux de la seconde aux multiples de 25 minutes.",
+       "explication": "Les départs simultanés ont lieu aux multiples communs de 40 et de 25. Comme $40 = 2^3 \\times 5$ et $25 = 5^2$, $\\mathrm{PPCM}(40\\,;25) = 2^3 \\times 5^2 = 200$. Les barges repartent ensemble 200 minutes plus tard, à 9 h 20.",
+       "retenir": "Sur les décompositions en facteurs premiers : le PPCM prend chaque premier avec le plus grand exposant, le PGCD avec le plus petit."
+      },
+      {
+       "titre": "PGCD et PPCM",
+       "enonce": "Deux entiers naturels $a$ et $b$ vérifient $\\mathrm{PGCD}(a\\,;b) = 6$ et $\\mathrm{PPCM}(a\\,;b) = 180$. On sait que $a = 36$. Entrer $b$.",
+       "reponse": 30,
+       "indice": "Pour des entiers naturels non nuls, le produit du PGCD et du PPCM est égal à $ab$.",
+       "explication": "$36 \\times b = 6 \\times 180 = 1\\,080$, donc $b = 30$. Vérification : $36 = 2^2 \\times 3^2$ et $30 = 2 \\times 3 \\times 5$ ont pour PGCD $2 \\times 3 = 6$ et pour PPCM $2^2 \\times 3^2 \\times 5 = 180$.",
+       "retenir": "$\\mathrm{PGCD}(a\\,;b) \\times \\mathrm{PPCM}(a\\,;b) = ab$ pour $a$ et $b$ entiers naturels non nuls ; vérifier ensuite le couple trouvé."
+      },
+      {
+       "titre": "Somme 84, PGCD 6",
+       "enonce": "Entrer le nombre de couples $(a\\,;b)$ d'entiers naturels tels que $a \\leq b$, $a + b = 84$ et $\\mathrm{PGCD}(a\\,;b) = 6$.",
+       "reponse": 3,
+       "indice": "Écris $a = 6a'$ et $b = 6b'$ : que vaut $a' + b'$, et que doit valoir $\\mathrm{PGCD}(a'\\,;b')$ ?",
+       "explication": "On pose $a = 6a'$ et $b = 6b'$ ; alors $a' + b' = 14$ et $\\mathrm{PGCD}(a'\\,;b') = 1$ (sinon le PGCD de $a$ et $b$ dépasserait 6). Avec $a' \\leq b'$ : $(1\\,;13)$, $(3\\,;11)$ et $(5\\,;9)$ conviennent ; $(0\\,;14)$, $(2\\,;12)$, $(4\\,;10)$, $(6\\,;8)$ et $(7\\,;7)$ non. D'où 3 couples : $(6\\,;78)$, $(18\\,;66)$, $(30\\,;54)$.",
+       "retenir": "Si $\\mathrm{PGCD}(a\\,;b) = d$, alors $a = da'$ et $b = db'$ avec $\\mathrm{PGCD}(a'\\,;b') = 1$ : c'est le premier réflexe dans un problème de PGCD."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n$, si 4 divise $n$ et 6 divise $n$, alors 24 divise $n$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche le plus petit entier strictement positif divisible à la fois par 4 et par 6.",
+       "explication": "Faux. Contre-exemple : $n = 12$ est divisible par 4 et par 6, mais pas par 24. Ce que l'on peut affirmer : $n$ est divisible par $\\mathrm{PPCM}(4\\,;6) = 12$.",
+       "retenir": "Si $a$ et $b$ divisent $n$, alors $\\mathrm{PPCM}(a\\,;b)$ divise $n$ ; mais le produit $ab$, en général, ne le divise pas."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous entiers naturels non nuls $a$ et $b$, $\\mathrm{PGCD}(a\\,;b) \\times \\mathrm{PPCM}(a\\,;b) = ab$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Compare, pour chaque nombre premier $p$, l'exposant de $p$ dans les deux membres.",
+       "explication": "Vrai. Pour chaque nombre premier $p$, notons $\\alpha$ et $\\beta$ ses exposants dans $a$ et dans $b$. Son exposant est $\\min(\\alpha, \\beta)$ dans le PGCD et $\\max(\\alpha, \\beta)$ dans le PPCM, donc $\\min(\\alpha, \\beta) + \\max(\\alpha, \\beta) = \\alpha + \\beta$ dans le produit, comme dans $ab$. Les deux membres ont la même décomposition en facteurs premiers : ils sont égaux.",
+       "retenir": "PGCD : les plus petits exposants ; PPCM : les plus grands ; leur produit redonne $ab$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier naturel $n$, $\\mathrm{PGCD}(n\\,;n + 2)$ vaut 1 ou 2. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Un diviseur commun de $n$ et de $n + 2$ divise leur différence.",
+       "explication": "Vrai. Si $d$ divise $n$ et $n + 2$, il divise $(n + 2) - n = 2$ ; le PGCD est donc un diviseur positif de 2 : 1 ou 2. Plus précisément, il vaut 2 si $n$ est pair (y compris $n = 0$) et 1 si $n$ est impair.",
+       "retenir": "Le PGCD de deux entiers divise leur différence : $\\mathrm{PGCD}(a\\,;b) = \\mathrm{PGCD}(a\\,;b - a)$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3b",
+   "carte": "boss-euler",
+   "fond": "nuit",
+   "nom": "Le commentaire de Proclus",
+   "notion": "Restes dans la division par 9, critères de divisibilité, preuve par neuf",
+   "athena": "La preuve par neuf compare des restes : elle peut révéler une erreur, jamais garantir une exactitude.",
+   "steles": [
+    {
+     "boss": "La Chimère de Lycie",
+     "monstre": "chimere",
+     "contexte": "D'après CAPES Mayotte 2022. Tout entier naturel $A$ s'écrit en base dix $A = a_0 + 10\\,a_1 + 10^2 a_2 + \\dots + 10^n a_n$, où $a_0, a_1, \\dots, a_n$ sont ses chiffres. On note $s(A) = a_0 + a_1 + \\dots + a_n$ la somme de ses chiffres et $r(A)$ le reste de la division euclidienne de $A$ par 9. La « preuve par neuf » d'une multiplication $A \\times B = C$ consiste à comparer $r(C)$ et $r\\big(r(A) \\times r(B)\\big)$.",
+     "exercices": [
+      {
+       "titre": "Un premier reste",
+       "enonce": "Entrer $r(2027)$, le reste de la division euclidienne de 2027 par 9.",
+       "reponse": 2,
+       "indice": "Cherche le plus grand multiple de 9 inférieur ou égal à 2027.",
+       "explication": "$9 \\times 225 = 2\\,025$, donc $2\\,027 = 9 \\times 225 + 2$ avec $0 \\leq 2 < 9$ : $r(2\\,027) = 2$. On remarque que $s(2\\,027) = 2 + 0 + 2 + 7 = 11$ et que $r(11) = 2$ : même reste.",
+       "retenir": "Le reste par 9 d'un entier est celui de la somme de ses chiffres (démonstration à la question suivante)."
+      },
+      {
+       "titre": "Le cœur de la méthode",
+       "enonce": "On admet que, pour tout entier $k \\geq 1$, $10^k - 1$ est divisible par 9 (il s'écrit avec $k$ chiffres 9). Quelle conclusion est correctement justifiée ?",
+       "reponse": 1,
+       "choix": [
+        "$A - s(A) = a_1(10 - 1) + a_2(10^2 - 1) + \\dots + a_n(10^n - 1)$ est divisible par 9, donc $A$ et $s(A)$ ont le même reste dans la division par 9.",
+        "$A - s(A)$ est divisible par 9, donc $r(A) = s(A)$.",
+        "$A$ est divisible par 9 dès qu'il a au moins deux chiffres.",
+        "$s(A)$ divise $A$."
+       ],
+       "indice": "Calcule $A - s(A)$ en regroupant les termes chiffre par chiffre.",
+       "explication": "$A - s(A) = a_1(10 - 1) + \\dots + a_n(10^n - 1)$ est une somme de multiples de 9 : $A = 9m + s(A)$. En écrivant $s(A) = 9q + r$ avec $0 \\leq r < 9$, on obtient $A = 9(m + q) + r$ : $A$ et $s(A)$ ont le même reste. En revanche, $r(A) = s(A)$ est faux en général : pour $A = 99$, $s(A) = 18$ mais $r(A) = 0$.",
+       "retenir": "Si $A - B$ est un multiple de $b$, alors $A$ et $B$ ont le même reste dans la division euclidienne par $b$."
+      },
+      {
+       "titre": "39 fois 47",
+       "enonce": "On admet que $r(A \\times B) = r\\big(r(A) \\times r(B)\\big)$ pour tous entiers naturels $A$ et $B$. Un élève écrit $39 \\times 47 = 1\\,823$. Entrer $r\\big(r(39) \\times r(47)\\big)$.",
+       "reponse": 6,
+       "indice": "Calcule $r(39)$ et $r(47)$ (par exemple avec la somme des chiffres), multiplie-les, puis reprends le reste.",
+       "explication": "$r(39) = 3$ (car $39 = 9 \\times 4 + 3$) et $r(47) = 2$ ; $3 \\times 2 = 6$, donc $r\\big(r(39) \\times r(47)\\big) = 6$. Or $r(1\\,823) = r(1 + 8 + 2 + 3) = r(14) = 5 \\neq 6$ : le résultat de l'élève est faux (en fait, $39 \\times 47 = 1\\,833$).",
+       "retenir": "Si les deux restes diffèrent, la multiplication est certainement fausse."
+      },
+      {
+       "titre": "36 fois 124",
+       "enonce": "On admet que $r(A \\times B) = r\\big(r(A) \\times r(B)\\big)$ pour tous entiers naturels $A$ et $B$. Un élève écrit $36 \\times 124 = 4\\,644$. Que permet de conclure la preuve par neuf ?",
+       "reponse": 4,
+       "choix": [
+        "Le résultat est exact, puisque les restes concordent.",
+        "Le résultat est faux, puisque $r(36) = 0$.",
+        "La preuve par neuf ne s'applique pas lorsqu'un facteur est multiple de 9.",
+        "Rien : les deux restes sont nuls, ce qui n'assure pas l'exactitude ; d'ailleurs $36 \\times 124 = 4\\,464$."
+       ],
+       "indice": "Une égalité de restes est une condition nécessaire d'exactitude ; est-elle suffisante ?",
+       "explication": "$r(36) = 0$, donc $r\\big(r(36) \\times r(124)\\big) = 0$ ; et $r(4\\,644) = r(18) = 0$. Les restes concordent, mais cela ne prouve rien : $36 \\times 124 = 4\\,464$. L'élève a permuté deux chiffres, ce qui ne change pas leur somme, donc pas le reste par 9.",
+       "retenir": "La preuve par neuf détecte certaines erreurs mais ne prouve jamais un résultat : elle ne voit pas une permutation de chiffres."
+      },
+      {
+       "titre": "Une grande puissance",
+       "enonce": "On admet que $r(A \\times B) = r\\big(r(A) \\times r(B)\\big)$ pour tous entiers naturels $A$ et $B$. Entrer le reste de la division euclidienne de $2027^{2027}$ par 9.",
+       "reponse": 5,
+       "indice": "$r(2027) = 2$ ; cherche une puissance de 2 dont le reste par 9 vaut 1.",
+       "explication": "En appliquant la propriété de proche en proche, $r(2\\,027^k) = r(2^k)$, car $r(2\\,027) = 2$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$ et, de même, $r(2^{6m}) = 1$ pour tout entier $m$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2027}) = r(2^{6 \\times 337} \\times 2^5) = r(1 \\times 32) = 5$.",
+       "retenir": "Pour le reste d'une grande puissance : chercher un exposant qui donne le reste 1, puis effectuer la division euclidienne de l'exposant."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si la somme des chiffres d'un entier naturel est divisible par 3, alors cet entier est divisible par 3. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Utilise l'écriture $A - s(A) = a_1(10 - 1) + \\dots + a_n(10^n - 1)$.",
+       "explication": "Vrai. $A - s(A) = a_1(10 - 1) + \\dots + a_n(10^n - 1)$, et chaque $10^k - 1$, qui s'écrit avec $k$ chiffres 9, est multiple de 9, donc de 3. Ainsi $A = \\big(A - s(A)\\big) + s(A)$ est la somme de deux multiples de 3 : il est divisible par 3.",
+       "retenir": "Les critères de divisibilité par 3 et par 9 ont la même preuve : $10^k - 1$ est multiple de 9."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Un entier naturel dont la somme des chiffres vaut 18 est divisible par 18. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "$18 = 2 \\times 9$ : la somme des chiffres renseigne-t-elle sur la parité ?",
+       "explication": "Faux. Contre-exemple : la somme des chiffres de 99 vaut 18, mais 99 est impair, donc pas divisible par 18 ($99 = 18 \\times 5 + 9$). Une somme des chiffres égale à 18 assure seulement la divisibilité par 9.",
+       "retenir": "Le critère de la somme des chiffres ne vaut que pour 3 et 9, pas pour leurs multiples comme 18 ou 27."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Un entier naturel est divisible par 4 si et seulement si le nombre formé par ses deux derniers chiffres est divisible par 4. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $A = 100q + u$, où $u$ est le nombre formé par les deux derniers chiffres de $A$.",
+       "explication": "Vrai. Tout entier naturel s'écrit $A = 100q + u$ avec $0 \\leq u \\leq 99$, où $u$ est le nombre formé par ses deux derniers chiffres. Comme $100 = 4 \\times 25$ : si 4 divise $u$, il divise $A = 100q + u$ ; si 4 divise $A$, il divise $u = A - 100q$.",
+       "retenir": "$A$ et ses deux derniers chiffres diffèrent d'un multiple de 100, donc de 4 et de 25 : d'où les critères de divisibilité par 4 et par 25."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c3s",
+   "carte": "sanct-nombres",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Boèce",
+   "notion": "Nombres parfaits, diviseurs, restes ; regard de futur professeur",
+   "athena": "Ici, les nombres parfaits d'Euclide et les erreurs d'élèves : on n'enseigne bien que ce que l'on a soi-même démontré.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "La somme des diviseurs",
+       "enonce": "Entrer la somme de tous les diviseurs positifs de $496 = 2^4 \\times 31$, y compris 496.",
+       "reponse": 992,
+       "indice": "Les diviseurs positifs sont les $2^a \\times 31^b$ ; factorise leur somme.",
+       "explication": "Les diviseurs sont les $2^a$ et les $31 \\times 2^a$ pour $0 \\leq a \\leq 4$. Leur somme vaut $(1 + 2 + 4 + 8 + 16)(1 + 31) = 31 \\times 32 = 992 = 2 \\times 496$. La somme des diviseurs de 496 autres que lui-même vaut donc 496 : c'est un nombre parfait.",
+       "retenir": "Si $n = p^a q^b$ ($p$, $q$ premiers distincts), la somme de ses diviseurs positifs vaut $(1 + p + \\dots + p^a)(1 + q + \\dots + q^b)$."
+      },
+      {
+       "titre": "Un nombre de Mersenne",
+       "enonce": "On remarque que $2^{15} - 1 = (2^3)^5 - 1$. Entrer le plus petit diviseur premier de $2^{15} - 1 = 32\\,767$.",
+       "reponse": 7,
+       "indice": "Pour tout réel $x$, $x^5 - 1 = (x - 1)(x^4 + x^3 + x^2 + x + 1)$. Vérifie aussi 2, 3 et 5.",
+       "explication": "Avec $x = 2^3 = 8$ : $2^{15} - 1 = 8^5 - 1 = (8 - 1)(8^4 + 8^3 + 8^2 + 8 + 1)$, donc 7 divise $2^{15} - 1$. Par ailleurs, 32 767 est impair, la somme de ses chiffres (25) n'est pas multiple de 3, et il ne se termine ni par 0 ni par 5 : 2, 3 et 5 ne le divisent pas. Le plus petit diviseur premier est 7.",
+       "retenir": "Si $m = ab$, alors $2^a - 1$ divise $2^m - 1$ : pour que $2^m - 1$ soit premier, il faut que $m$ soit premier."
+      },
+      {
+       "titre": "Le théorème d'Euclide",
+       "enonce": "Euclide a démontré : si $2^{k+1} - 1$ est premier, alors $2^k(2^{k+1} - 1)$ est un nombre parfait. Pour $k = 1$ et $k = 2$, on obtient 6 et 28. En poursuivant avec $k = 3, 4, 5, \\dots$ et en ne retenant que les $k$ pour lesquels $2^{k+1} - 1$ est premier, entrer le quatrième nombre parfait ainsi obtenu.",
+       "reponse": 8128,
+       "indice": "Examine $2^{k+1} - 1$ pour $k = 3, 4, 5, 6$ : lesquels de ces nombres sont premiers ?",
+       "explication": "$k = 3$ : $2^4 - 1 = 15 = 3 \\times 5$, rejeté. $k = 4$ : 31 est premier, d'où $16 \\times 31 = 496$, le troisième. $k = 5$ : $63 = 7 \\times 9$, rejeté. $k = 6$ : 127 est premier (ni 2, ni 3, ni 5, ni 7, ni 11 ne le divisent, et $13^2 > 127$), d'où $2^6 \\times 127 = 64 \\times 127 = 8\\,128$, le quatrième.",
+       "retenir": "Les nombres parfaits pairs sont exactement les $2^k(2^{k+1} - 1)$ avec $2^{k+1} - 1$ premier (Euclide, puis Euler pour la réciproque)."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un diviseur universel",
+       "enonce": "Entrer le plus grand entier naturel $d$ tel que, pour tout entier naturel $n$, $d$ divise $n^5 - n$.",
+       "reponse": 30,
+       "indice": "Calcule $2^5 - 2$ pour borner $d$, puis montre que 2, 3 et 5 divisent toujours $n^5 - n$.",
+       "explication": "Pour $n = 2$, $n^5 - n = 30$, donc $d$ divise 30. Réciproquement, $n^5 - n = (n - 1)n(n + 1)(n^2 + 1)$ : parmi $n - 1$, $n$, $n + 1$, l'un est pair et l'un est multiple de 3. Pour 5, selon le reste $r$ de $n$ : si $r \\in \\{0, 1, 4\\}$, 5 divise $n$, $n - 1$ ou $n + 1$ ; si $r \\in \\{2, 3\\}$, 5 divise $n^2 + 1$. Ainsi 2, 3 et 5 figurent dans la décomposition de $n^5 - n$ (s'il est non nul), et 30 le divise. Donc $d = 30$.",
+       "retenir": "Pour le plus grand diviseur commun à toute une famille : borner par un exemple, puis démontrer la divisibilité dans le cas général."
+      },
+      {
+       "titre": "Les zéros de 100!",
+       "enonce": "Entrer le nombre de zéros qui terminent l'écriture décimale de $100! = 1 \\times 2 \\times 3 \\times \\dots \\times 100$.",
+       "reponse": 24,
+       "indice": "Chaque zéro final provient d'un facteur $10 = 2 \\times 5$ ; lequel des deux facteurs premiers est le plus rare ?",
+       "explication": "Le nombre de zéros finaux est l'exposant de 10, c'est-à-dire le plus petit des exposants de 2 et de 5 dans la décomposition de $100!$ : celui de 5. Les 20 multiples de 5 jusqu'à 100 apportent chacun un facteur 5, et les multiples de 25 (25, 50, 75, 100) en apportent un second : $20 + 4 = 24$.",
+       "retenir": "L'exposant d'un nombre premier $p$ dans $n!$ est le nombre de multiples de $p$, plus celui des multiples de $p^2$, de $p^3$, etc., jusqu'à $n$."
+      },
+      {
+       "titre": "Diviseurs d'un carré",
+       "enonce": "Soit $n = 2^5 \\times 3^2 = 288$. Entrer le nombre de diviseurs positifs de $n^2$ qui sont strictement inférieurs à $n$ et qui ne divisent pas $n$.",
+       "reponse": 10,
+       "indice": "Associe chaque diviseur $d$ de $n^2$ au diviseur $\\frac{n^2}{d}$ : l'un des deux est inférieur à $n$, sauf si $d = n$.",
+       "explication": "$n^2 = 2^{10} \\times 3^4$ a $11 \\times 5 = 55$ diviseurs. Ils s'associent par paires $(d, \\frac{n^2}{d})$ avec $d < n < \\frac{n^2}{d}$, sauf $d = n$ : il y a donc $\\frac{55 - 1}{2} = 27$ diviseurs de $n^2$ inférieurs à $n$. Parmi eux, ceux qui divisent $n$ sont les diviseurs de $n$ autres que $n$ : $6 \\times 3 - 1 = 17$. Réponse : $27 - 17 = 10$.",
+       "retenir": "Les diviseurs de $N$ vont par paires $(d, \\frac{N}{d})$ de part et d'autre de $\\sqrt{N}$ : ce regroupement simplifie bien des dénombrements.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Le même k",
+       "enonce": "Pour prouver que la somme de deux entiers impairs est paire, un élève écrit : « $a = 2k + 1$ et $b = 2k + 1$, donc $a + b = 4k + 2 = 2(2k + 1)$ est pair. » Quelle est son erreur ?",
+       "reponse": 1,
+       "choix": [
+        "En utilisant le même $k$, il ne traite que le cas $a = b$ ; il faut écrire $b = 2m + 1$ avec $m$ entier.",
+        "Il aurait dû écrire $a = 2k - 1$.",
+        "Il aurait dû conclure que $a + b$ est multiple de 4.",
+        "Aucune : la preuve est correcte."
+       ],
+       "indice": "Avec l'écriture de l'élève, que vaut $a - b$ ?",
+       "explication": "Avec la même lettre $k$, l'élève impose $a = b$ : il n'a démontré que « le double d'un impair est pair ». Rédaction attendue : $a = 2k + 1$ et $b = 2m + 1$ ($k$, $m$ entiers), donc $a + b = 2(k + m + 1)$, avec $k + m + 1$ entier.",
+       "retenir": "Deux objets quelconques reçoivent deux lettres différentes : un même $k$ crée un lien que l'énoncé ne donne pas."
+      },
+      {
+       "titre": "Le bon contre-exemple",
+       "enonce": "Pour convaincre une classe que la proposition « si $n^2$ est multiple de 4, alors $n$ est multiple de 4 » est fausse, quel entier $n$ faut-il proposer ?",
+       "reponse": 3,
+       "choix": [
+        "$n = 4$",
+        "$n = 3$",
+        "$n = 6$",
+        "$n = 8$"
+       ],
+       "indice": "Un contre-exemple vérifie l'hypothèse mais pas la conclusion.",
+       "explication": "$n = 6$ : $n^2 = 36 = 4 \\times 9$ est multiple de 4, mais 6 ne l'est pas. Avec $n = 4$ ou $n = 8$, la conclusion est vraie ; avec $n = 3$, l'hypothèse est fausse (9 n'est pas multiple de 4) : ce ne sont pas des contre-exemples.",
+       "retenir": "Un contre-exemple à « si P, alors Q » doit vérifier P et ne pas vérifier Q."
+      },
+      {
+       "titre": "Diviseurs d'un produit",
+       "enonce": "Un élève affirme : « 12 a 6 diviseurs positifs et 18 aussi, donc $12 \\times 18 = 216$ en a $6 \\times 6 = 36$. » Quelle est son erreur ?",
+       "reponse": 2,
+       "choix": [
+        "Aucune : le nombre de diviseurs d'un produit est le produit des nombres de diviseurs.",
+        "La règle ne vaut que si les deux facteurs n'ont aucun facteur premier commun ; ici $216 = 2^3 \\times 3^3$ a 16 diviseurs.",
+        "12 n'a que 5 diviseurs positifs.",
+        "Il fallait additionner : 216 a $6 + 6 = 12$ diviseurs."
+       ],
+       "indice": "Décompose 216 en facteurs premiers et compte ses diviseurs avec la formule.",
+       "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ ont les facteurs premiers 2 et 3 en commun. $216 = 2^3 \\times 3^3$ a $(3 + 1)(3 + 1) = 16$ diviseurs. Le nombre de diviseurs d'un produit est le produit des nombres de diviseurs seulement si les facteurs n'ont aucun premier commun (exemple : $36 = 4 \\times 9$ a $3 \\times 3 = 9$ diviseurs).",
+       "retenir": "Le nombre de diviseurs se calcule sur la décomposition en facteurs premiers du produit, jamais en multipliant à l'aveugle."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier naturel $n$, le nombre $n^2 + n + 1$ n'est pas divisible par 5. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Raisonne selon le reste de $n$ dans la division par 5.",
+       "explication": "Vrai. Si $n = 5q + r$, alors $n^2 + n + 1 = 5(5q^2 + 2qr + q) + r^2 + r + 1$. Pour $r = 0, 1, 2, 3, 4$, $r^2 + r + 1$ vaut $1, 3, 7, 13, 21$, de restes $1, 3, 2, 3, 1$ : jamais 0. Donc 5 ne divise jamais $n^2 + n + 1$.",
+       "retenir": "Pour montrer qu'une expression n'est jamais divisible par $m$, examiner les $m$ restes possibles de $n$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout nombre premier $p$, le nombre $p^2 + 2$ n'est pas premier. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste les plus petits nombres premiers.",
+       "explication": "Faux. Pour $p = 3$, $p^2 + 2 = 11$ est premier. En revanche, pour tout premier $p \\neq 3$, $p$ a pour reste 1 ou 2 dans la division par 3, $p^2$ a pour reste 1, donc $p^2 + 2$ est un multiple de 3 supérieur à 3 : il n'est pas premier. Le seul cas $p = 3$ rend la proposition fausse.",
+       "retenir": "Avant de démontrer une propriété des nombres premiers, tester 2 et 3 : ce sont les cas limites."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Il existe une infinité d'entiers naturels $n$ tels que $n$, $n + 2$ et $n + 4$ soient tous trois premiers. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Regarde les restes de $n$, $n + 2$ et $n + 4$ dans la division par 3.",
+       "explication": "Faux. Si $n$ a pour reste 0, 1 ou 2 dans la division par 3, alors respectivement $n$, $n + 2$ ou $n + 4$ est multiple de 3. Pour que les trois soient premiers, ce multiple de 3 doit valoir 3 : $n = 3$, ou $n + 2 = 3$ (alors $n = 1$, non premier), ou $n + 4 = 3$ (impossible). Seul le triplet $(3, 5, 7)$ convient.",
+       "retenir": "Pour nier « il existe une infinité de… », il faut une preuve générale (ici par les restes) : un exemple ne suffit pas."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,790 @@
+{
+ "id": "ch1",
+ "titre": "Calcul et logique",
+ "introduction": "Te voici au seuil des Salles. Avant les fonctions et les figures vient la langue même des mathématiques : « si… alors », « pour tout », « il existe », et le calcul exact, qui ne tolère aucun à-peu-près. Les stoïciens comparaient la philosophie à un champ fertile dont la logique est la clôture : sans elle, rien de ce que tu sèmeras ne sera protégé. Avance sans hâte ; chaque flèche a un sens, et chaque mot compte.",
+ "conclusion": "Emporte trois réflexes : une implication n'est pas sa réciproque, une négation échange « pour tout » et « il existe » sans changer leur ordre, et un seul contre-exemple renverse ce que mille exemples ne prouveront jamais. Le reste, calcul exact et inégalités justifiées pas à pas, est affaire de patience : c'est elle qui fait les copies sans faute.",
+ "salles": [
+  {
+   "id": "c1r1",
+   "carte": "stevin",
+   "fond": "temple",
+   "nom": "Le portique de Chrysippe",
+   "notion": "Implication, réciproque, contraposée, équivalence",
+   "athena": "Une implication ne promet rien quand son hypothèse est fausse. Avant de conclure, regarde toujours dans quel sens va la flèche.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "La contraposée",
+       "enonce": "On considère l'implication : « S'il pleut à Mamoudzou, alors les rues de Mamoudzou sont mouillées. » Quelle est sa contraposée ?",
+       "reponse": 3,
+       "choix": [
+        "« Si les rues de Mamoudzou sont mouillées, alors il pleut à Mamoudzou. »",
+        "« S'il ne pleut pas à Mamoudzou, alors les rues de Mamoudzou ne sont pas mouillées. »",
+        "« Si les rues de Mamoudzou ne sont pas mouillées, alors il ne pleut pas à Mamoudzou. »",
+        "« Il pleut à Mamoudzou et les rues de Mamoudzou ne sont pas mouillées. »"
+       ],
+       "indice": "La contraposée de « si $P$, alors $Q$ » part de la négation de la conclusion : « si non $Q$, alors… ».",
+       "explication": "La contraposée de $P \\Rightarrow Q$ est $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$ : « si les rues ne sont pas mouillées, alors il ne pleut pas ». Elle est équivalente à l'implication de départ. La première option est la réciproque $Q \\Rightarrow P$, qui peut être fausse (un camion-citerne peut mouiller les rues) ; la deuxième est la contraposée de la réciproque ; la dernière est la négation de l'implication.",
+       "retenir": "Contraposée de $P \\Rightarrow Q$ : $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$, toujours équivalente. Réciproque : $Q \\Rightarrow P$, sans lien de vérité."
+      },
+      {
+       "titre": "Trois flèches",
+       "enonce": "Soit $x$ un réel. On considère l'implication $\\mathcal{I}$ : « si $x^2 < 4$, alors $x < 2$ ». Parmi les trois propositions $\\mathcal{I}$, sa réciproque et sa contraposée, combien sont vraies pour tout réel $x$ ? Entrer ce nombre.",
+       "reponse": 2,
+       "indice": "Écris la réciproque (« si $x < 2$, alors… ») et teste-la avec un nombre négatif. Une implication et sa contraposée ont toujours la même valeur de vérité.",
+       "explication": "$\\mathcal{I}$ est vraie : si $x^2 < 4$, alors $-2 < x < 2$, donc $x < 2$. Sa contraposée « si $x \\geqslant 2$, alors $x^2 \\geqslant 4$ » est vraie aussi : elle lui est équivalente (directement : $x \\geqslant 2 > 0$ et la fonction carré est croissante sur $[0\\,;+\\infty[$). La réciproque « si $x < 2$, alors $x^2 < 4$ » est fausse : $x = -3$ donne $x^2 = 9$. Deux propositions sont vraies.",
+       "retenir": "Une implication et sa contraposée sont vraies ou fausses ensemble ; la réciproque s'étudie à part (penser aux nombres négatifs)."
+      },
+      {
+       "titre": "Le seuil de l'implication",
+       "enonce": "Soit $a$ un réel. On considère la proposition : « pour tout réel $x$, si $x > a$, alors $x^2 > 9$ ». Selon la valeur de $a$, elle est vraie ou fausse. Entrer la plus petite valeur de $a$ pour laquelle elle est vraie.",
+       "reponse": 3,
+       "indice": "Elle est fausse dès qu'il existe un réel $x > a$ tel que $x^2 \\leqslant 9$, c'est-à-dire $-3 \\leqslant x \\leqslant 3$. Pour quelles valeurs de $a$ un tel $x$ existe-t-il ?",
+       "explication": "Pour $a = 3$ : si $x > 3$, alors $x > 0$ et, la fonction carré étant strictement croissante sur $[0\\,;+\\infty[$, $x^2 > 9$. La proposition est vraie, et elle l'est a fortiori pour tout $a \\geqslant 3$. Pour $a < 3$, $x = 3$ est un contre-exemple : $3 > a$, mais $3^2 = 9$ n'est pas strictement supérieur à $9$. La plus petite valeur est donc $a = 3$.",
+       "retenir": "Pour réfuter « pour tout $x$, si $A(x)$, alors $B(x)$ », il suffit d'un $x$ qui vérifie l'hypothèse $A(x)$ sans vérifier la conclusion $B(x)$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Nécessaire ou suffisante ?",
+       "enonce": "Soit $n$ un entier naturel. Pour que $n$ soit divisible par 5, la condition « $n$ est divisible par 10 » est une condition :",
+       "reponse": 2,
+       "choix": [
+        "nécessaire mais pas suffisante",
+        "suffisante mais pas nécessaire",
+        "nécessaire et suffisante",
+        "ni nécessaire ni suffisante"
+       ],
+       "indice": "« $P$ est suffisante pour $Q$ » signifie $P \\Rightarrow Q$ ; « $P$ est nécessaire pour $Q$ » signifie $Q \\Rightarrow P$. Teste les deux implications.",
+       "explication": "Si $n$ est divisible par 10, alors $n = 10k = 5 \\times (2k)$ avec $k$ entier : $n$ est divisible par 5. La condition est donc suffisante. Elle n'est pas nécessaire : $n = 5$ est divisible par 5 sans être divisible par 10.",
+       "retenir": "« Il suffit que $P$ » : $P \\Rightarrow Q$. « Il faut que $P$ » : $Q \\Rightarrow P$. Nécessaire et suffisante : $P \\Leftrightarrow Q$."
+      },
+      {
+       "titre": "Une seule équivalence",
+       "enonce": "Laquelle de ces équivalences est vraie pour tout réel $x$ (non nul dans la dernière) ?",
+       "reponse": 1,
+       "choix": [
+        "$|x - 1| \\leqslant 2 \\Leftrightarrow -1 \\leqslant x \\leqslant 3$",
+        "$x^2 = 9 \\Leftrightarrow x = 3$",
+        "$x^2 > x \\Leftrightarrow x > 1$",
+        "$\\frac{1}{x} < 1 \\Leftrightarrow x > 1$"
+       ],
+       "indice": "Une équivalence est fausse dès qu'un de ses deux sens l'est. Pour chaque ligne, teste un nombre négatif.",
+       "explication": "$|x - 1| \\leqslant 2$ signifie que la distance de $x$ à $1$ est au plus $2$, soit $-2 \\leqslant x - 1 \\leqslant 2$, c'est-à-dire $-1 \\leqslant x \\leqslant 3$ : l'équivalence est vraie. Les autres ont un sens faux : $x = -3$ vérifie $x^2 = 9$ ; $x = -1$ vérifie $x^2 > x$ et $\\frac{1}{x} < 1$ ; aucun de ces nombres ne vérifie le membre de droite.",
+       "retenir": "Prouver $P \\Leftrightarrow Q$ demande les deux implications ; un seul contre-exemple sur l'une d'elles réfute l'équivalence."
+      },
+      {
+       "titre": "Élever au carré",
+       "enonce": "On veut résoudre dans $\\mathbb{R}$ l'équation $\\sqrt{x + 2} = x$. En élevant au carré, on obtient $x + 2 = x^2$. Entrer le nombre de solutions réelles de l'équation de départ.",
+       "reponse": 1,
+       "indice": "Élever au carré ne donne qu'une implication. Résous $x^2 - x - 2 = 0$, puis vérifie chaque candidat dans l'équation de départ.",
+       "explication": "Si $\\sqrt{x+2} = x$, alors $x + 2 = x^2$, soit $(x - 2)(x + 1) = 0$ : $x = 2$ ou $x = -1$. Ce n'est qu'une implication, il faut vérifier. $\\sqrt{4} = 2$ : $2$ convient. $\\sqrt{1} = 1 \\neq -1$ : $-1$ ne convient pas (une racine carrée est positive). Il y a une seule solution.",
+       "retenir": "$A = B \\Rightarrow A^2 = B^2$, mais la réciproque est fausse : après avoir élevé au carré, on vérifie les solutions trouvées."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si une implication est vraie, alors sa réciproque est fausse. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche une implication vraie dont la réciproque est vraie aussi.",
+       "explication": "Faux. Contre-exemple : pour un réel $x$, « si $x = 2$, alors $2x = 4$ » est vraie, et sa réciproque « si $2x = 4$, alors $x = 2$ » est vraie aussi. La réciproque d'une implication vraie peut être vraie ou fausse : il n'y a aucun lien.",
+       "retenir": "La valeur de vérité de la réciproque ne se déduit pas de celle de l'implication : il faut l'étudier."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n$, si $n^2$ est un multiple de 4, alors $n$ est un multiple de 4. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Essaie de petits entiers pairs.",
+       "explication": "Faux. Contre-exemple : $n = 2$. On a $n^2 = 4$, multiple de 4, mais $2$ n'est pas un multiple de 4. (La réciproque, elle, est vraie : si $n = 4k$, alors $n^2 = 4 \\times 4k^2$.)",
+       "retenir": "Un seul contre-exemple suffit à réfuter une proposition « pour tout » : tester d'abord les petites valeurs."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « L'implication “si $3 < 2$, alors $5 < 4$” est vraie. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Une implication n'est fausse que dans un seul cas : hypothèse vraie et conclusion fausse. Ici, l'hypothèse est-elle vraie ?",
+       "explication": "Vrai. L'implication $P \\Rightarrow Q$ n'est fausse que si $P$ est vraie et $Q$ fausse. Ici $P$ : « $3 < 2$ » est fausse, donc l'implication est vraie, quelle que soit la conclusion.",
+       "retenir": "Une implication dont l'hypothèse est fausse est vraie : elle ne promet rien dans ce cas."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c1r2",
+   "carte": "archimede",
+   "fond": "mer",
+   "nom": "L'infini d'Anaxagore",
+   "notion": "Fractions, puissances, racines carrées",
+   "athena": "Décompose en facteurs premiers, fais sortir les carrés parfaits : le calcul exact récompense la patience, pas la vitesse.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Priorités",
+       "enonce": "Calculer $A = \\frac{5}{6} - \\frac{2}{3} \\div \\frac{4}{9}$. Entrer $A$ sous forme de fraction irréductible.",
+       "reponse": "-2/3",
+       "indice": "La division est prioritaire sur la soustraction. Diviser par $\\frac{4}{9}$, c'est multiplier par $\\frac{9}{4}$.",
+       "explication": "D'abord la division : $\\frac{2}{3} \\div \\frac{4}{9} = \\frac{2}{3} \\times \\frac{9}{4} = \\frac{18}{12} = \\frac{3}{2}$. Puis $A = \\frac{5}{6} - \\frac{9}{6} = -\\frac{4}{6} = -\\frac{2}{3}$. Calculer de gauche à droite donnerait à tort $\\frac{1}{6} \\times \\frac{9}{4} = \\frac{3}{8}$.",
+       "retenir": "Multiplications et divisions avant additions et soustractions ; diviser par une fraction, c'est multiplier par son inverse."
+      },
+      {
+       "titre": "Puissances en facteurs premiers",
+       "enonce": "Calculer $B = \\frac{(-3)^{4} \\times 4^{3}}{6^{5} \\times 2^{-1}}$. Entrer $B$ sous forme de fraction irréductible.",
+       "reponse": "4/3",
+       "indice": "Écris tout avec des puissances de 2 et de 3 : $(-3)^4 = 3^4$, $4^3 = 2^6$, $6^5 = 2^5 \\times 3^5$.",
+       "explication": "$(-3)^4 = 3^4$ (exposant pair), $4^3 = 2^6$ et $6^5 = 2^5 \\times 3^5$. Le dénominateur vaut $2^5 \\times 3^5 \\times 2^{-1} = 2^4 \\times 3^5$. Donc $B = 2^{6-4} \\times 3^{4-5} = 2^2 \\times 3^{-1} = \\frac{4}{3}$.",
+       "retenir": "Quotient de puissances : tout décomposer en nombres premiers, puis soustraire les exposants. $(-a)^n = a^n$ si $n$ est pair."
+      },
+      {
+       "titre": "Les zéros d'un grand nombre",
+       "enonce": "On considère l'entier $N = 8^{3} \\times 125^{2} \\times 6$. Son écriture décimale se termine par un certain nombre de chiffres 0 consécutifs. Entrer ce nombre de zéros finaux.",
+       "reponse": 6,
+       "indice": "Décompose en facteurs premiers, puis regroupe les facteurs $2 \\times 5 = 10$.",
+       "explication": "$8^3 = 2^9$, $125^2 = 5^6$ et $6 = 2 \\times 3$, donc $N = 2^{10} \\times 3 \\times 5^6 = 2^4 \\times 3 \\times (2 \\times 5)^6 = 48 \\times 10^6 = 48\\,000\\,000$. Comme $48$ ne se termine pas par 0, $N$ se termine par exactement 6 zéros.",
+       "retenir": "Le nombre de zéros finaux d'un entier est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Réduire une somme de racines",
+       "enonce": "On pose $C = \\sqrt{75} - 3\\sqrt{12} + \\sqrt{48}$. On peut écrire $C = a\\sqrt{3}$ avec $a$ entier. Entrer $a$.",
+       "reponse": 3,
+       "indice": "Fais apparaître un carré parfait sous chaque racine : $75 = 25 \\times 3$, $12 = 4 \\times 3$, $48 = 16 \\times 3$.",
+       "explication": "$\\sqrt{75} = 5\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$ et $\\sqrt{48} = 4\\sqrt{3}$. Donc $C = 5\\sqrt{3} - 6\\sqrt{3} + 4\\sqrt{3} = 3\\sqrt{3}$ et $a = 3$.",
+       "retenir": "Pour $k \\geqslant 0$ et $m \\geqslant 0$, $\\sqrt{k^2 m} = k\\sqrt{m}$ : on fait sortir le plus grand carré parfait."
+      },
+      {
+       "titre": "L'expression conjuguée",
+       "enonce": "On écrit $\\frac{6}{3 - \\sqrt{7}}$ sans racine carrée au dénominateur, sous la forme $a + b\\sqrt{7}$ avec $a$ et $b$ entiers. Entrer $a$.",
+       "reponse": 9,
+       "indice": "Multiplie le numérateur et le dénominateur par $3 + \\sqrt{7}$.",
+       "explication": "$(3 - \\sqrt{7})(3 + \\sqrt{7}) = 9 - 7 = 2$. Donc $\\frac{6}{3 - \\sqrt{7}} = \\frac{6(3 + \\sqrt{7})}{2} = 3(3 + \\sqrt{7}) = 9 + 3\\sqrt{7}$, et $a = 9$.",
+       "retenir": "$(a - \\sqrt{b})(a + \\sqrt{b}) = a^2 - b$ : l'expression conjuguée fait disparaître la racine du dénominateur."
+      },
+      {
+       "titre": "Racines emboîtées",
+       "enonce": "Le nombre $E = \\sqrt{7 + 4\\sqrt{3}} + \\sqrt{7 - 4\\sqrt{3}}$ est un entier. Entrer $E$.",
+       "reponse": 4,
+       "indice": "Développe $(2 + \\sqrt{3})^2$ et $(2 - \\sqrt{3})^2$. Attention : $\\sqrt{u^2} = |u|$.",
+       "explication": "$(2 + \\sqrt{3})^2 = 4 + 4\\sqrt{3} + 3 = 7 + 4\\sqrt{3}$ et $(2 - \\sqrt{3})^2 = 7 - 4\\sqrt{3}$. Donc $\\sqrt{7 + 4\\sqrt{3}} = 2 + \\sqrt{3}$ et $\\sqrt{7 - 4\\sqrt{3}} = |2 - \\sqrt{3}| = 2 - \\sqrt{3}$, car $\\sqrt{3} < 2$. Ainsi $E = 4$.",
+       "retenir": "Pour simplifier $\\sqrt{p + q\\sqrt{r}}$, chercher un carré $(a + b\\sqrt{r})^2$ ; et ne jamais oublier que $\\sqrt{u^2} = |u|$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels positifs $a$ et $b$, $\\sqrt{a + b} \\leqslant \\sqrt{a} + \\sqrt{b}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Les deux membres sont positifs : compare leurs carrés.",
+       "explication": "Vrai. Les deux membres sont positifs et $(\\sqrt{a} + \\sqrt{b})^2 = a + b + 2\\sqrt{ab} \\geqslant a + b = (\\sqrt{a + b})^2$. Or deux réels positifs sont rangés dans le même ordre que leurs carrés (la racine carrée est croissante sur $[0\\,;+\\infty[$). Donc $\\sqrt{a + b} \\leqslant \\sqrt{a} + \\sqrt{b}$, avec égalité seulement si $a = 0$ ou $b = 0$.",
+       "retenir": "$\\sqrt{a + b} \\neq \\sqrt{a} + \\sqrt{b}$ en général, mais $\\sqrt{a + b} \\leqslant \\sqrt{a} + \\sqrt{b}$ pour tous $a, b \\geqslant 0$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier naturel $n$, $2^{n} + 2^{n} = 4^{n}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Factorise : $2^n + 2^n = 2 \\times 2^n$. Puis teste $n = 2$.",
+       "explication": "Faux. Contre-exemple : $n = 2$ donne $2^2 + 2^2 = 8$, alors que $4^2 = 16$. En réalité $2^n + 2^n = 2 \\times 2^n = 2^{n+1}$, et $2^{n+1} = 4^n = 2^{2n}$ seulement pour $n = 1$ : un cas où l'égalité est vraie ne suffit pas.",
+       "retenir": "$a^n + a^n = 2a^n$ : on factorise une somme de puissances égales, on ne multiplie pas les bases."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $a$ et $b$ tels que $0 < a < b$, $\\frac{a + 1}{b + 1} > \\frac{a}{b}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Étudie le signe de la différence $\\frac{a+1}{b+1} - \\frac{a}{b}$, mise au même dénominateur.",
+       "explication": "Vrai. $\\frac{a+1}{b+1} - \\frac{a}{b} = \\frac{b(a+1) - a(b+1)}{b(b+1)} = \\frac{b - a}{b(b+1)}$. Comme $b > a$ et $b > 0$, le numérateur et le dénominateur sont strictement positifs : la différence est strictement positive.",
+       "retenir": "Pour comparer deux nombres, étudier le signe de leur différence, écrite sous forme de quotient ou de produit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c1r3",
+   "carte": "hippase",
+   "fond": "crepuscule",
+   "nom": "La leçon de Théodore",
+   "notion": "Raisonnements : absurde, contre-exemple, disjonction de cas",
+   "athena": "Choisis ton arme avant d'écrire : un seul contre-exemple renverse un « pour tout », mais seul un raisonnement général peut l'établir.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le bon contre-exemple",
+       "enonce": "On considère la proposition : « pour tout réel $x$, $x^2 \\geqslant x$ ». Quel réel est un contre-exemple ?",
+       "reponse": 4,
+       "choix": [
+        "$x = -1$",
+        "$x = 0$",
+        "$x = 2$",
+        "$x = \\frac{1}{2}$"
+       ],
+       "indice": "Un contre-exemple est un réel tel que $x^2 < x$. Que devient un nombre compris entre 0 et 1 quand on l'élève au carré ?",
+       "explication": "Pour $x = \\frac{1}{2}$ : $x^2 = \\frac{1}{4} < \\frac{1}{2}$, donc la proposition est fausse. Les autres valeurs vérifient l'inégalité ($1 \\geqslant -1$, $0 \\geqslant 0$, $4 \\geqslant 2$) : ce sont des exemples, et des exemples ne prouvent rien sur un « pour tout ».",
+       "retenir": "Entre 0 et 1, un nombre est strictement plus grand que son carré : c'est là qu'il faut chercher les contre-exemples."
+      },
+      {
+       "titre": "Une série trompeuse",
+       "enonce": "Proposition : « pour tout entier naturel $n$, le nombre $n^2 + n + 11$ est premier ». Elle est vraie pour $n = 0$, $1$, $2$… et pourtant elle est fausse. Entrer le plus petit entier naturel $n$ qui est un contre-exemple.",
+       "reponse": 10,
+       "indice": "Cherche une valeur de $n$ pour laquelle $n^2 + n + 11$ est visiblement divisible par 11, puis vérifie qu'aucune valeur plus petite ne convient.",
+       "explication": "Pour $n = 0, 1, \\dots, 9$, on obtient $11, 13, 17, 23, 31, 41, 53, 67, 83, 101$, tous premiers. Pour $n = 10$ : $100 + 10 + 11 = 121 = 11^2$, qui n'est pas premier. Le plus petit contre-exemple est $10$ : dix vérifications réussies ne prouvaient rien.",
+       "retenir": "Vérifier une propriété sur des exemples, même nombreux, ne la démontre pas ; un seul contre-exemple la réfute."
+      },
+      {
+       "titre": "Contre-exemple d'une implication",
+       "enonce": "Proposition : « pour tous réels $a$ et $b$ non nuls, si $a < b$, alors $\\frac{1}{a} > \\frac{1}{b}$ ». Quel couple est un contre-exemple ?",
+       "reponse": 2,
+       "choix": [
+        "$a = 1$ et $b = 2$",
+        "$a = -1$ et $b = 2$",
+        "$a = 2$ et $b = 1$",
+        "$a = -2$ et $b = -1$"
+       ],
+       "indice": "Un contre-exemple doit vérifier l'hypothèse $a < b$ et contredire la conclusion. Pense aux signes de $a$ et $b$.",
+       "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. La proposition n'est vraie que si $a$ et $b$ ont le même signe.",
+       "retenir": "Un contre-exemple de « si $P$, alors $Q$ » vérifie $P$ et ne vérifie pas $Q$ : c'est exactement la négation de l'implication."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Supposer le contraire",
+       "enonce": "Selon le Théétète de Platon, Théodore de Cyrène montrait l'irrationalité de $\\sqrt{3}$, $\\sqrt{5}$… Pour démontrer par l'absurde que $\\sqrt{5}$ est irrationnel, par quelle supposition commence-t-on ?",
+       "reponse": 2,
+       "choix": [
+        "« $\\sqrt{5}$ est irrationnel. »",
+        "« $\\sqrt{5} = \\frac{p}{q}$, avec $p$ et $q$ entiers naturels non nuls et la fraction $\\frac{p}{q}$ irréductible. »",
+        "« $5$ n'est pas le carré d'un entier. »"
+       ],
+       "indice": "Le raisonnement par l'absurde suppose la négation de ce que l'on veut démontrer. Quelle est la négation de « irrationnel » ?",
+       "explication": "On suppose le contraire de la conclusion : $\\sqrt{5}$ est rationnel, donc s'écrit $\\frac{p}{q}$, et l'on peut choisir la fraction irréductible. On en tire $p^2 = 5q^2$, puis que $p$ et $q$ sont tous deux multiples de 5, ce qui contredit l'irréductibilité. Supposer ce que l'on veut démontrer serait un cercle vicieux ; « 5 n'est pas le carré d'un entier » est un fait vrai, pas l'hypothèse d'un raisonnement par l'absurde.",
+       "retenir": "Raisonnement par l'absurde : on suppose la négation de la conclusion et on aboutit à une contradiction. On l'annonce : « Raisonnons par l'absurde »."
+      },
+      {
+       "titre": "Deux cas, deux sorts",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $|x - 5| = 2x + 1$ en distinguant les cas $x \\geqslant 5$ et $x < 5$. Elle admet une unique solution. Entrer cette solution, sous forme de fraction.",
+       "reponse": "4/3",
+       "indice": "Dans chaque cas, remplace $|x - 5|$ par $x - 5$ ou par $5 - x$, résous, puis ne garde la solution que si elle appartient au cas étudié.",
+       "explication": "Si $x \\geqslant 5$ : $x - 5 = 2x + 1$ donne $x = -6$, qui n'est pas supérieur ou égal à 5 : rejeté. Si $x < 5$ : $5 - x = 2x + 1$ donne $x = \\frac{4}{3}$, qui est bien inférieur à 5. Vérification : $\\left|\\frac{4}{3} - 5\\right| = \\frac{11}{3}$ et $2 \\times \\frac{4}{3} + 1 = \\frac{11}{3}$. L'unique solution est $\\frac{4}{3}$.",
+       "retenir": "Dans une disjonction de cas, une solution trouvée n'est valable que si elle appartient au cas étudié."
+      },
+      {
+       "titre": "Le sens de la flèche",
+       "enonce": "Pour démontrer que $\\sqrt{3}$ est irrationnel, on suppose $\\sqrt{3} = \\frac{p}{q}$ avec $p$, $q$ entiers naturels non nuls et $\\frac{p}{q}$ irréductible. On obtient $p^2 = 3q^2$, donc $3$ divise $p^2$. Quelle propriété permet d'en déduire que $3$ divise $p$ ?",
+       "reponse": 3,
+       "choix": [
+        "« Si $3$ divise $p$, alors $3$ divise $p^2$. »",
+        "« Si $p^2$ est pair, alors $p$ est pair. »",
+        "« Si $3$ divise $p^2$, alors $3$ divise $p$. »"
+       ],
+       "indice": "On sait que 3 divise $p^2$ et l'on veut que 3 divise $p$. Quelle implication va dans ce sens ?",
+       "explication": "On dispose de « 3 divise $p^2$ » et l'on veut conclure « 3 divise $p$ » : il faut l'implication dans ce sens. La première est sa réciproque : vraie, mais inutile ici. La deuxième concerne la parité, pas la divisibilité par 3. La bonne propriété se démontre par contraposée : si $p = 3k + 1$ ou $p = 3k + 2$, alors $p^2 = 3(3k^2 + 2k) + 1$ ou $p^2 = 3(3k^2 + 4k + 1) + 1$, qui n'est pas divisible par 3.",
+       "retenir": "Avant d'invoquer une propriété, vérifier son sens : on part de ce que l'on sait pour aller vers ce que l'on veut."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La somme de deux nombres irrationnels est toujours irrationnelle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche deux irrationnels dont les parties irrationnelles se compensent.",
+       "explication": "Faux. Contre-exemple : $\\sqrt{2}$ et $1 - \\sqrt{2}$ sont irrationnels (si $1 - \\sqrt{2}$ était rationnel, $\\sqrt{2} = 1 - (1 - \\sqrt{2})$ le serait aussi), mais leur somme vaut $1$, qui est rationnel.",
+       "retenir": "Les irrationnels ne sont stables ni par addition ni par multiplication : $\\sqrt{2} + (1 - \\sqrt{2}) = 1$ et $\\sqrt{2} \\times \\sqrt{2} = 2$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La somme d'un nombre rationnel et d'un nombre irrationnel est irrationnelle. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Raisonne par l'absurde : suppose la somme rationnelle et isole le nombre irrationnel.",
+       "explication": "Vrai. Soit $r$ rationnel et $x$ irrationnel. Supposons par l'absurde que $s = r + x$ soit rationnel. Alors $x = s - r$ est la différence de deux rationnels, donc rationnel : contradiction. Donc $r + x$ est irrationnel.",
+       "retenir": "La différence de deux rationnels est rationnelle : c'est l'argument clé de nombreuses preuves d'irrationalité par l'absurde."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, si $x^2$ est irrationnel, alors $x$ est irrationnel. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris la contraposée de cette implication.",
+       "explication": "Vrai. Montrons la contraposée : « si $x$ est rationnel, alors $x^2$ est rationnel ». Si $x = \\frac{p}{q}$ avec $p$, $q$ entiers et $q \\neq 0$, alors $x^2 = \\frac{p^2}{q^2}$ est un quotient d'entiers avec $q^2 \\neq 0$ : il est rationnel. (La réciproque est fausse : $\\sqrt{2}$ est irrationnel, mais $(\\sqrt{2})^2 = 2$ ne l'est pas.)",
+       "retenir": "Quand la conclusion est négative (« irrationnel »), la contraposée la rend positive et souvent facile à établir."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "La faille de la preuve",
+     "enonce": "Un élève « démontre » que $\\sqrt{4}$ est irrationnel. Supposons $\\sqrt{4} = \\frac{p}{q}$, fraction irréductible d'entiers naturels non nuls. (a) Alors $p^2 = 4q^2$, donc $4$ divise $p^2$. (b) Donc $4$ divise $p$ : $p = 4k$ avec $k$ entier. (c) Alors $16k^2 = 4q^2$, d'où $q^2 = 4k^2$ et $q = 2k$. (d) Ainsi $p$ et $q$ sont pairs, ce qui contredit l'irréductibilité. Quelle étape est fausse ?",
+     "reponse": 2,
+     "choix": [
+      "L'étape (a)",
+      "L'étape (b)",
+      "L'étape (c)",
+      "L'étape (d)"
+     ],
+     "indice": "Comme $\\sqrt{4} = 2$, la conclusion est fausse : une étape l'est aussi. Teste chaque implication avec $p = 2$ et $q = 1$.",
+     "explication": "L'étape (b) utilise « si 4 divise $p^2$, alors 4 divise $p$ », qui est fausse : $p = 2$ donne $p^2 = 4$, divisible par 4, alors que 4 ne divise pas 2. La propriété analogue est vraie pour un nombre premier comme 2 ou 3, pas pour 4. Les étapes (a), (c) et (d) sont correctes.",
+     "retenir": "« Si $d$ divise $p^2$, alors $d$ divise $p$ » est vrai pour $d$ premier, faux en général ($d = 4$, $p = 2$). Une preuve qui démontre une absurdité contient une faille."
+    }
+   ]
+  },
+  {
+   "id": "c1r4",
+   "carte": "euclide",
+   "fond": "bibliotheque",
+   "nom": "Le carré d'Aristote",
+   "notion": "Quantificateurs et négation",
+   "athena": "Pour nier, change chaque « pour tout » en « il existe » et inversement, garde l'ordre, puis ne nie que la propriété finale.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Nier un encadrement",
+       "enonce": "Soit $x$ un réel. Quelle est la négation de « $-1 \\leqslant x \\leqslant 4$ » ?",
+       "reponse": 3,
+       "choix": [
+        "« $x < -1$ et $x > 4$ »",
+        "« $x \\leqslant -1$ ou $x \\geqslant 4$ »",
+        "« $x < -1$ ou $x > 4$ »",
+        "« $-1 > x > 4$ »"
+       ],
+       "indice": "« $-1 \\leqslant x \\leqslant 4$ » signifie « $x \\geqslant -1$ et $x \\leqslant 4$ ». La négation de « $P$ et $Q$ » est « non $P$ ou non $Q$ ».",
+       "explication": "« $-1 \\leqslant x \\leqslant 4$ » est la conjonction « $x \\geqslant -1$ et $x \\leqslant 4$ ». Sa négation est « $x < -1$ ou $x > 4$ » : le « et » devient « ou », et chaque inégalité large devient une inégalité stricte dans l'autre sens. La version avec « et » n'est vérifiée par aucun réel ; celle avec des inégalités larges contient à tort $-1$ et $4$, qui vérifient la proposition de départ.",
+       "retenir": "non($P$ et $Q$) = (non $P$) ou (non $Q$). La négation de $x \\leqslant b$ est $x > b$."
+      },
+      {
+       "titre": "Nier « pour tout… il existe… »",
+       "enonce": "Quelle est la négation de la phrase : « Pour tout élève du collège, il existe un professeur qui le connaît » ?",
+       "reponse": 1,
+       "choix": [
+        "« Il existe un élève du collège qu'aucun professeur ne connaît. »",
+        "« Pour tout élève du collège, il existe un professeur qui ne le connaît pas. »",
+        "« Il existe un professeur qui ne connaît aucun élève du collège. »",
+        "« Aucun élève du collège n'est connu d'un professeur. »"
+       ],
+       "indice": "Échange « pour tout » et « il existe » sans changer l'ordre (l'élève d'abord, le professeur ensuite), puis nie la fin « le connaît ».",
+       "explication": "En symboles : « $\\forall e$, $\\exists p$, $p$ connaît $e$ ». Négation : « $\\exists e$, $\\forall p$, $p$ ne connaît pas $e$ », soit « il existe un élève qu'aucun professeur ne connaît ». La deuxième option n'échange pas les quantificateurs ; la troisième inverse leur ordre (elle parle d'un professeur) ; la quatrième est bien trop forte : elle exige que tous les élèves soient inconnus.",
+       "retenir": "Négation de « $\\forall x$, $\\exists y$, $P(x, y)$ » : « $\\exists x$, $\\forall y$, non $P(x, y)$ ». Même ordre, quantificateurs échangés."
+      },
+      {
+       "titre": "Nier une implication, puis trancher",
+       "enonce": "On considère la proposition $P$ : « pour tout réel $x$, si $x^2 > 4$, alors $x > 2$ ». Quelle affirmation est exacte ?",
+       "reponse": 4,
+       "choix": [
+        "La négation de $P$ est « pour tout réel $x$, si $x^2 > 4$, alors $x \\leqslant 2$ », et c'est elle qui est vraie.",
+        "La négation de $P$ est « il existe un réel $x$ tel que $x^2 \\leqslant 4$ et $x > 2$ », et c'est $P$ qui est vraie.",
+        "La négation de $P$ est « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ », et c'est $P$ qui est vraie.",
+        "La négation de $P$ est « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ », et c'est elle qui est vraie."
+       ],
+       "indice": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ ». Ensuite, teste un réel négatif.",
+       "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation d'une implication n'est jamais une implication.",
+       "retenir": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ » : c'est l'existence d'un contre-exemple, pas une autre implication."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Vérifier sur un ensemble fini",
+       "enonce": "Soit $E = \\{1, 2, 3, 4\\}$. Combien des propositions suivantes sont vraies ? (a) $\\forall x \\in E,\\ x^2 \\geqslant x$ ; (b) $\\exists x \\in E,\\ x^2 = 2x$ ; (c) « $\\forall x \\in E$, $x$ est pair » ; (d) $\\exists x \\in E,\\ \\forall y \\in E,\\ y \\leqslant x$. Entrer ce nombre.",
+       "reponse": 3,
+       "indice": "Un « pour tout » doit être vérifié pour chaque élément de $E$ ; un « il existe » demande un seul élément qui convient.",
+       "explication": "(a) vraie : pour $x \\geqslant 1$, $x^2 = x \\times x \\geqslant x$. (b) vraie : $x = 2$ donne $4 = 4$. (c) fausse : $1$ n'est pas pair. (d) vraie : $x = 4$ est supérieur ou égal à tous les éléments de $E$. Trois propositions sont vraies.",
+       "retenir": "Un « il existe » se prouve par un exemple ; un « pour tout » se réfute par un contre-exemple."
+      },
+      {
+       "titre": "L'ordre des quantificateurs",
+       "enonce": "Combien des propositions suivantes sont vraies ? (a) $\\forall x \\in \\mathbb{R},\\ \\exists y \\in \\mathbb{R},\\ x + y = 0$ ; (b) $\\exists y \\in \\mathbb{R},\\ \\forall x \\in \\mathbb{R},\\ x + y = 0$ ; (c) $\\exists x \\in \\mathbb{R},\\ \\forall y \\in \\mathbb{R},\\ xy = 0$ ; (d) $\\forall x \\in \\mathbb{R},\\ \\exists y \\in \\mathbb{R},\\ xy = 1$. Entrer ce nombre.",
+       "reponse": 2,
+       "indice": "Dans « $\\forall x$, $\\exists y$ », $y$ peut dépendre de $x$ ; dans « $\\exists y$, $\\forall x$ », le même $y$ doit convenir pour tous les $x$. Pense aussi au cas $x = 0$.",
+       "explication": "(a) vraie : pour $x$ donné, $y = -x$ convient. (b) fausse : un même $y$ devrait vérifier $y = -x$ pour tout $x$ ; $x = 0$ et $x = 1$ imposent $y = 0$ et $y = -1$. (c) vraie : $x = 0$ convient pour tout $y$. (d) fausse : pour $x = 0$, $xy = 0 \\neq 1$ quel que soit $y$. Deux propositions sont vraies.",
+       "retenir": "« $\\forall x$, $\\exists y$ » : $y$ peut dépendre de $x$. « $\\exists y$, $\\forall x$ » : un seul $y$ pour tous les $x$. Échanger l'ordre change le sens."
+      },
+      {
+       "titre": "Nier avec epsilon",
+       "enonce": "Quelle est la négation de la proposition « $\\forall \\varepsilon > 0,\\ \\exists n \\in \\mathbb{N},\\ \\frac{1}{n+1} < \\varepsilon$ » ?",
+       "reponse": 3,
+       "choix": [
+        "$\\exists \\varepsilon \\leqslant 0,\\ \\forall n \\in \\mathbb{N},\\ \\frac{1}{n+1} \\geqslant \\varepsilon$",
+        "$\\forall \\varepsilon > 0,\\ \\exists n \\in \\mathbb{N},\\ \\frac{1}{n+1} \\geqslant \\varepsilon$",
+        "$\\exists \\varepsilon > 0,\\ \\forall n \\in \\mathbb{N},\\ \\frac{1}{n+1} \\geqslant \\varepsilon$",
+        "$\\exists n \\in \\mathbb{N},\\ \\forall \\varepsilon > 0,\\ \\frac{1}{n+1} \\geqslant \\varepsilon$"
+       ],
+       "indice": "« $\\varepsilon > 0$ » indique seulement où l'on choisit $\\varepsilon$ : on ne le nie pas. On échange les quantificateurs, on garde l'ordre, on nie l'inégalité finale.",
+       "explication": "On échange $\\forall$ et $\\exists$ sans changer ni l'ordre ni le domaine : « $\\exists \\varepsilon > 0,\\ \\forall n \\in \\mathbb{N},\\ \\frac{1}{n+1} \\geqslant \\varepsilon$ ». Nier « $\\varepsilon > 0$ » est l'erreur classique : c'est le domaine, pas la propriété. Une autre option n'échange pas les quantificateurs, une autre inverse leur ordre. Ici, la proposition de départ est vraie (pour $\\varepsilon$ donné, un entier $n > \\frac{1}{\\varepsilon}$ convient), donc sa négation est fausse.",
+       "retenir": "« $\\forall \\varepsilon > 0$ » se nie en « $\\exists \\varepsilon > 0$ » : la condition sur $\\varepsilon$ reste, seule la propriété finale est niée."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $x^2 + 1 > 2x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Fais tout passer dans un même membre et reconnais une identité remarquable. Que se passe-t-il quand ce carré est nul ?",
+       "explication": "Faux. $x^2 + 1 - 2x = (x - 1)^2$, qui est nul pour $x = 1$. Contre-exemple : $x = 1$ donne $x^2 + 1 = 2 = 2x$, donc l'inégalité stricte est fausse. En revanche, pour tout réel $x$, $x^2 + 1 \\geqslant 2x$.",
+       "retenir": "Un carré est positif ou nul : le cas d'égalité fait tomber les inégalités strictes."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Il existe un réel $x$ tel que, pour tout réel $y$, $y^2 \\geqslant x$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Il suffit d'exhiber un seul $x$ qui convienne pour tous les $y$. Que sait-on du signe de $y^2$ ?",
+       "explication": "Vrai. Prenons $x = 0$ : pour tout réel $y$, $y^2 \\geqslant 0 = x$. Le même $x$ convient pour tous les $y$, comme l'exige l'ordre « il existe… pour tout… ». (Tout réel $x \\leqslant 0$ conviendrait aussi.)",
+       "retenir": "Pour prouver « $\\exists x$, $\\forall y$ », on fixe un $x$ précis, puis on démontre la propriété pour tous les $y$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout entier $n \\geqslant 1$, il existe un entier $m$ tel que $n < m < 2n$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste la plus petite valeur de $n$ autorisée.",
+       "explication": "Faux. Contre-exemple : $n = 1$. Il faudrait un entier $m$ tel que $1 < m < 2$, et il n'en existe pas. (Pour $n \\geqslant 2$, $m = n + 1$ convient car $n + 1 < 2n$, mais un seul cas suffit à rendre la proposition fausse.)",
+       "retenir": "Pour tester un « pour tout », essayer d'abord les cas limites : la plus petite valeur, 0, 1, les cas d'égalité."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c1b",
+   "carte": "boss-fibonacci",
+   "fond": "nuit",
+   "nom": "Le procès d'Euathle",
+   "notion": "Inégalités, valeur absolue, encadrements",
+   "athena": "Chaque inégalité se justifie : signe du multiplicateur, sens de variation, carré positif. L'Hydre ne pardonne aucune étape sautée.",
+   "steles": [
+    {
+     "boss": "L'Hydre de Lerne",
+     "monstre": "hydre",
+     "contexte": "D'après CAPES Mayotte 2022 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$.",
+     "exercices": [
+      {
+       "titre": "L'aller-retour de la vedette",
+       "enonce": "Une vedette va de Mamoudzou à Dzaoudzi à la vitesse moyenne de 12 km/h, puis revient par le même trajet à 24 km/h. Entrer sa vitesse moyenne sur l'aller-retour, en km/h.",
+       "reponse": 16,
+       "unite": "km/h",
+       "indice": "La vitesse moyenne est la distance totale divisée par la durée totale. Appelle $d$ la longueur du trajet.",
+       "explication": "Avec $d$ la longueur du trajet, la durée totale est $\\frac{d}{12} + \\frac{d}{24} = \\frac{3d}{24} = \\frac{d}{8}$ pour une distance $2d$. La vitesse moyenne vaut $2d \\div \\frac{d}{8} = 16$ km/h. C'est la moyenne harmonique $h = \\frac{2 \\times 12 \\times 24}{12 + 24} = 16$, et non la moyenne arithmétique $18$.",
+       "retenir": "Sur deux trajets de même longueur, la vitesse moyenne est la moyenne harmonique des deux vitesses, pas leur moyenne arithmétique."
+      },
+      {
+       "titre": "L'écart des carrés",
+       "enonce": "Pour tous réels $x$ et $y$ tels que $0 < x < y$, on a $a^2 - g^2 = k\\,(x - y)^2$, où $a = \\frac{x+y}{2}$, $g = \\sqrt{xy}$ et $k$ est une constante. Entrer $k$, sous forme de fraction ou de décimal.",
+       "reponse": "1/4",
+       "indice": "Développe $\\left(\\frac{x+y}{2}\\right)^2 - xy$ et réduis au même dénominateur.",
+       "explication": "$a^2 - g^2 = \\frac{(x+y)^2}{4} - xy = \\frac{x^2 + 2xy + y^2 - 4xy}{4} = \\frac{(x - y)^2}{4}$. Donc $k = \\frac{1}{4}$, et $a^2 - g^2 > 0$ puisque $x \\neq y$.",
+       "retenir": "$\\left(\\frac{x+y}{2}\\right)^2 - xy = \\left(\\frac{x-y}{2}\\right)^2$ : l'inégalité entre moyennes arithmétique et géométrique vient d'un carré positif."
+      },
+      {
+       "titre": "Justifier un passage",
+       "enonce": "On sait que $a^2 - g^2 > 0$, où $a = \\frac{x+y}{2}$ et $g = \\sqrt{xy}$ avec $0 < x < y$. Quelle justification permet de conclure rigoureusement que $g < a$ ?",
+       "reponse": 4,
+       "choix": [
+        "La fonction carré est croissante sur $\\mathbb{R}$, donc $a^2 > g^2$ entraîne $a > g$.",
+        "Pour tous réels $u$ et $v$, $u^2 > v^2$ entraîne $u > v$.",
+        "On peut toujours « simplifier les carrés » des deux côtés d'une inégalité.",
+        "$a$ et $g$ sont positifs, et deux réels positifs sont rangés dans le même ordre que leurs carrés."
+       ],
+       "indice": "Une seule de ces justifications est un énoncé vrai. Teste les autres avec $u = -3$ et $v = 1$.",
+       "explication": "$a > 0$ et $g > 0$ car $x$ et $y$ sont strictement positifs. Pour $u, v \\geqslant 0$ : $u^2 > v^2 \\Leftrightarrow u > v$, car la fonction racine carrée est strictement croissante sur $[0\\,;+\\infty[$. Donc $g < a$. La fonction carré n'est pas croissante sur $\\mathbb{R}$, et $u = -3$, $v = 1$ vérifient $u^2 > v^2$ sans vérifier $u > v$ : les autres justifications sont fausses.",
+       "retenir": "Passer des carrés aux nombres exige des nombres positifs : écrire « $a$ et $g$ sont positifs » avant de conclure."
+      },
+      {
+       "titre": "Un premier encadrement",
+       "enonce": "On prend $x = 2$ et $y = 3$, de sorte que $g = \\sqrt{6}$. On admet que $h < g < a$. Cet encadrement de $\\sqrt{6}$ s'écrit $|\\sqrt{6} - c| < r$, où $c$ est le centre de l'intervalle $]h\\,;a[$ et $r$ la moitié de sa longueur. Entrer $r$.",
+       "reponse": 0.05,
+       "indice": "Calcule $a = \\frac{x+y}{2}$ et $h = \\frac{2xy}{x+y}$. L'intervalle $]h\\,;a[$ est formé des réels dont la distance à son centre est strictement inférieure à $\\frac{a - h}{2}$.",
+       "explication": "$a = \\frac{5}{2} = 2{,}5$ et $h = \\frac{12}{5} = 2{,}4$, donc $2{,}4 < \\sqrt{6} < 2{,}5$. Le centre est $c = 2{,}45$ et $r = \\frac{2{,}5 - 2{,}4}{2} = 0{,}05$ : $|\\sqrt{6} - 2{,}45| < 0{,}05$.",
+       "retenir": "$|t - c| < r \\Leftrightarrow c - r < t < c + r$ : la valeur absolue d'une différence est une distance."
+      },
+      {
+       "titre": "Recommencer pour gagner en précision",
+       "enonce": "On pose $a = \\frac{5}{2}$ et $h = \\frac{12}{5}$, de sorte que $ah = 6$. On recommence avec ces deux nombres : $a' = \\frac{a + h}{2}$ et $h' = \\frac{2ah}{a + h}$. On admet que $h' < \\sqrt{ah} < a'$, c'est-à-dire $h' < \\sqrt{6} < a'$. Entrer la longueur $a' - h'$ de ce nouvel encadrement, sous forme de fraction.",
+       "reponse": "1/980",
+       "indice": "$a + h = \\frac{49}{10}$. Calcule $a'$ et $h'$ sous forme de fractions, puis leur différence au même dénominateur.",
+       "explication": "$a + h = \\frac{25}{10} + \\frac{24}{10} = \\frac{49}{10}$, donc $a' = \\frac{49}{20}$ et $h' = \\frac{2 \\times 6}{49/10} = \\frac{120}{49}$. Alors $a' - h' = \\frac{49 \\times 49 - 120 \\times 20}{980} = \\frac{2401 - 2400}{980} = \\frac{1}{980}$. On obtient $\\frac{120}{49} < \\sqrt{6} < \\frac{49}{20}$, encadrement de longueur environ $0{,}001$, contre $0{,}1$ au départ.",
+       "retenir": "Remplacer $a$ et $h$ par leurs moyennes arithmétique et harmonique conserve le produit $ah$ et resserre très vite l'encadrement de $\\sqrt{ah}$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $a$, $b$, $c$, $d$, si $a < b$ et $c < d$, alors $a - c < b - d$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "On peut additionner deux inégalités de même sens. Peut-on les soustraire ? Essaie avec $d$ très grand.",
+       "explication": "Faux. Contre-exemple : $a = 0$, $b = 1$, $c = 0$, $d = 5$. On a bien $a < b$ et $c < d$, mais $a - c = 0$ et $b - d = -4$, donc $a - c > b - d$. On peut additionner des inégalités de même sens, pas les soustraire.",
+       "retenir": "On additionne deux inégalités de même sens ; pour une différence, on passe à l'opposé : $c < d \\Rightarrow -d < -c$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, si $|x - 3| < 1$, alors $|x^2 - 9| < 7$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Factorise $x^2 - 9$ et majore chaque facteur lorsque $2 < x < 4$.",
+       "explication": "Vrai. Si $|x - 3| < 1$, alors $2 < x < 4$, donc $5 < x + 3 < 7$ et $|x + 3| < 7$. Ainsi $|x^2 - 9| = |x - 3| \\times |x + 3| \\leqslant 7\\,|x - 3| < 7$.",
+       "retenir": "$|ab| = |a| \\times |b|$ : pour majorer une valeur absolue, factoriser, puis majorer chaque facteur."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, si $|x| < 2$, alors $x^2 < 2|x|$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste le cas limite le plus simple.",
+       "explication": "Faux. Contre-exemple : $x = 0$. On a $|0| < 2$, mais $x^2 = 0$ et $2|x| = 0$ : l'inégalité stricte $0 < 0$ est fausse. (Pour $x \\neq 0$, elle est vraie : $x^2 = |x| \\times |x| < 2|x|$ car $|x| > 0$.)",
+       "retenir": "Multiplier une inégalité stricte par $|x|$ exige $|x| > 0$ : toujours penser au cas $x = 0$."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c1s",
+   "carte": "sanct-nombres",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Parménide",
+   "notion": "Problèmes difficiles et regard de futur professeur",
+   "athena": "Ici, deviner ne suffit plus : chaque réponse doit pouvoir se démontrer, et chaque erreur d'élève se comprendre.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Somme de distances",
+       "enonce": "On cherche les réels $x$ tels que $|x - 1| + |x - 5| = 4$. Entrer le nombre d'entiers relatifs qui sont solutions.",
+       "reponse": 5,
+       "indice": "$|x - 1|$ est la distance de $x$ à $1$ et $|x - 5|$ celle de $x$ à $5$. Ou bien : distingue les cas $x < 1$, $1 \\leqslant x \\leqslant 5$ et $x > 5$.",
+       "explication": "Si $x < 1$ : $(1 - x) + (5 - x) = 6 - 2x > 4$. Si $x > 5$ : $(x - 1) + (x - 5) = 2x - 6 > 4$. Si $1 \\leqslant x \\leqslant 5$ : $(x - 1) + (5 - x) = 4$. L'ensemble des solutions est donc l'intervalle $[1\\,;5]$, qui contient 5 entiers : 1, 2, 3, 4 et 5. Géométriquement, la somme des distances à 1 et à 5 vaut 4 exactement entre 1 et 5.",
+       "retenir": "$|x - a|$ est la distance de $x$ à $a$ : une équation avec des valeurs absolues peut avoir une infinité de solutions."
+      },
+      {
+       "titre": "Éliminer les radicaux",
+       "enonce": "On pose $r = \\sqrt{2} + \\sqrt{3}$. Il existe un entier $c$ tel que $r^4 - 10r^2 + c = 0$. Entrer $c$.",
+       "reponse": 1,
+       "indice": "Calcule $r^2$, isole le terme en $\\sqrt{6}$, puis élève de nouveau au carré.",
+       "explication": "$r^2 = 2 + 2\\sqrt{6} + 3 = 5 + 2\\sqrt{6}$, donc $r^2 - 5 = 2\\sqrt{6}$ et $(r^2 - 5)^2 = 24$, soit $r^4 - 10r^2 + 1 = 0$ : $c = 1$. Le calcul de $r^2$ prouve aussi, par l'absurde, que $r$ est irrationnel : si $r$ était rationnel, $\\sqrt{6} = \\frac{r^2 - 5}{2}$ le serait, ce qui est faux.",
+       "retenir": "Pour montrer qu'une expression avec des racines est irrationnelle : la supposer rationnelle, élever au carré, isoler un irrationnel connu."
+      },
+      {
+       "titre": "Analyse, puis synthèse",
+       "enonce": "On cherche toutes les fonctions affines $f$, de la forme $f(x) = mx + p$ avec $m$ et $p$ réels, telles que, pour tout réel $x$, $f(f(x)) = 4x + 9$. Entrer le nombre de fonctions solutions.",
+       "reponse": 2,
+       "indice": "Analyse : calcule $f(f(x))$ et identifie les coefficients, sans oublier de solution de $m^2 = 4$. Synthèse : vérifie chaque candidate.",
+       "explication": "Analyse : $f(f(x)) = m(mx + p) + p = m^2 x + (m + 1)p$. Par identification, $m^2 = 4$ et $(m + 1)p = 9$. Si $m = 2$, $p = 3$ ; si $m = -2$, $-p = 9$, soit $p = -9$. Synthèse : $f(x) = 2x + 3$ donne $2(2x + 3) + 3 = 4x + 9$, et $f(x) = -2x - 9$ donne $-2(-2x - 9) - 9 = 4x + 9$. Il y a deux solutions.",
+       "retenir": "Analyse-synthèse : l'analyse fournit des conditions nécessaires (des candidats), la synthèse vérifie qu'ils conviennent vraiment."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Comparer sans calculatrice",
+       "enonce": "Comparer les nombres $A = \\sqrt{2} + \\sqrt{6}$ et $B = \\sqrt{3} + \\sqrt{5}$, sans utiliser de valeur approchée.",
+       "reponse": 1,
+       "choix": [
+        "$A < B$",
+        "$A = B$",
+        "$A > B$"
+       ],
+       "indice": "$A$ et $B$ sont positifs : compare leurs carrés.",
+       "explication": "$A^2 = 2 + 6 + 2\\sqrt{12} = 8 + 2\\sqrt{12}$ et $B^2 = 3 + 5 + 2\\sqrt{15} = 8 + 2\\sqrt{15}$. Comme $12 < 15$ et que la racine carrée est strictement croissante, $A^2 < B^2$. Les nombres $A$ et $B$ étant positifs, $A < B$.",
+       "retenir": "Deux réels positifs se comparent comme leurs carrés : c'est l'outil pour comparer des sommes de racines."
+      },
+      {
+       "titre": "La meilleure constante",
+       "enonce": "On cherche le plus grand réel $k$ tel que, pour tous réels $a$ et $b$, $a^2 + ab + b^2 \\geqslant k\\,(a + b)^2$. Entrer $k$, sous forme de fraction ou de décimal.",
+       "reponse": "3/4",
+       "indice": "Un cas particulier bien choisi ($a = b$) majore $k$ ; vérifie ensuite que cette valeur convient pour tous $a$ et $b$ en faisant apparaître un carré.",
+       "explication": "Avec $a = b = 1$ : $3 \\geqslant 4k$, donc nécessairement $k \\leqslant \\frac{3}{4}$. Réciproquement, $a^2 + ab + b^2 - \\frac{3}{4}(a + b)^2 = \\frac{4a^2 + 4ab + 4b^2 - 3a^2 - 6ab - 3b^2}{4} = \\frac{(a - b)^2}{4} \\geqslant 0$. Donc $k = \\frac{3}{4}$ convient, et c'est le plus grand.",
+       "retenir": "Une « meilleure constante » s'établit en deux temps : un exemple qui empêche de faire mieux, puis une preuve générale pour cette valeur."
+      },
+      {
+       "titre": "Des racines de plus en plus proches",
+       "enonce": "Entrer le plus petit entier naturel $n$ tel que $\\sqrt{n+1} - \\sqrt{n} < 0{,}16$.",
+       "reponse": 10,
+       "indice": "Multiplie par l'expression conjuguée : $\\sqrt{n+1} - \\sqrt{n} = \\frac{1}{\\sqrt{n+1} + \\sqrt{n}}$. Que devient l'inégalité ?",
+       "explication": "$\\sqrt{n+1} - \\sqrt{n} = \\frac{1}{\\sqrt{n+1} + \\sqrt{n}}$, et pour $u > 0$, $\\frac{1}{u} < 0{,}16 \\Leftrightarrow u > 6{,}25$. Or $\\sqrt{n+1} + \\sqrt{n}$ augmente avec $n$. Pour $n = 9$ : $\\sqrt{10} + 3 < 3{,}17 + 3 < 6{,}25$, car $3{,}17^2 > 10$. Pour $n = 10$ : $\\sqrt{11} + \\sqrt{10} > 3{,}31 + 3{,}16 > 6{,}25$, car $3{,}31^2 < 11$ et $3{,}16^2 < 10$. Le plus petit entier est $n = 10$.",
+       "retenir": "$\\sqrt{n+1} - \\sqrt{n} = \\frac{1}{\\sqrt{n+1} + \\sqrt{n}}$ : l'expression conjuguée change une différence délicate en un quotient facile à encadrer.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Ce que l'élève a démontré",
+       "enonce": "On demande de démontrer : « pour tout entier $n$, si $n^2$ est un multiple de 3, alors $n$ est un multiple de 3 ». Un élève écrit : « Soit $n = 3k$ avec $k$ entier. Alors $n^2 = 9k^2 = 3 \\times 3k^2$ est un multiple de 3. » Que lui répondre ?",
+       "reponse": 2,
+       "choix": [
+        "« Ta preuve est juste : tu as démontré la contraposée, qui est équivalente. »",
+        "« Tu as démontré la réciproque, qui ne permet pas de conclure. Démontre plutôt la contraposée : si $n$ n'est pas multiple de 3, alors $n^2$ non plus. »",
+        "« Ta preuve est juste, mais il faut aussi la vérifier sur quelques exemples. »",
+        "« Ta preuve est fausse, car $9k^2$ n'est pas un multiple de 3. »"
+       ],
+       "indice": "Repère l'hypothèse et la conclusion utilisées par l'élève, et compare-les à celles de l'énoncé.",
+       "explication": "L'élève part de « $n$ multiple de 3 » et arrive à « $n^2$ multiple de 3 » : il a démontré la réciproque, qui est vraie mais ne dit rien de l'énoncé demandé. Ce n'est pas la contraposée, qui serait « si $n$ n'est pas multiple de 3, alors $n^2$ n'est pas multiple de 3 ». Pour l'établir, on distingue $n = 3k + 1$ et $n = 3k + 2$, et l'on montre que $n^2$ s'écrit alors $3m + 1$ avec $m$ entier.",
+       "retenir": "Devant une copie, souligner l'hypothèse de départ et la conclusion atteinte : on voit aussitôt si l'élève a démontré la réciproque."
+      },
+      {
+       "titre": "Une inéquation mal résolue",
+       "enonce": "Pour résoudre dans $\\mathbb{R}^*$ l'inéquation $\\frac{1}{x} < 2$, un élève écrit : « Je multiplie par $x$ : $1 < 2x$, donc $x > \\frac{1}{2}$. L'ensemble des solutions est $]\\frac{1}{2}\\,;+\\infty[$. » Quel est le bon diagnostic ?",
+       "reponse": 1,
+       "choix": [
+        "Il a multiplié par $x$ sans connaître son signe : il oublie toutes les solutions strictement négatives.",
+        "Sa réponse est juste ; il a seulement oublié de préciser que $x \\neq 0$.",
+        "Il fallait inverser les deux membres et obtenir $x > 2$.",
+        "Il fallait changer le sens de l'inégalité et obtenir $x < \\frac{1}{2}$."
+       ],
+       "indice": "Teste $x = -1$ dans l'inéquation de départ.",
+       "explication": "Multiplier par $x$ ne conserve le sens que si $x > 0$. Pour $x > 0$, on obtient bien $x > \\frac{1}{2}$. Pour $x < 0$, $\\frac{1}{x} < 0 < 2$ : tout réel strictement négatif est solution. L'ensemble des solutions est $]-\\infty\\,;0[ \\cup ]\\frac{1}{2}\\,;+\\infty[$. La méthode sûre : étudier le signe de $\\frac{1}{x} - 2 = \\frac{1 - 2x}{x}$ dans un tableau de signes.",
+       "retenir": "On ne multiplie une inéquation par une expression que si l'on connaît son signe ; sinon, on étudie le signe d'une différence."
+      },
+      {
+       "titre": "Un exemple qui ne prouve rien",
+       "enonce": "Une élève de Seconde affirme : « $(a + b)^2 = a^2 + b^2$, je l'ai vérifié avec $a = 0$ et $b = 5$. » Quelle réponse est la plus juste ?",
+       "reponse": 4,
+       "choix": [
+        "« C'est faux : $(a + b)^2 = a^2 + 2ab + b^2$, donc ce n'est jamais égal à $a^2 + b^2$. »",
+        "« Ton exemple est correct, donc l'égalité est vraie. »",
+        "« C'est vrai seulement pour des nombres positifs. »",
+        "« Un exemple ne suffit pas pour tous les nombres : avec $a = b = 1$, on trouve $4$ d'un côté et $2$ de l'autre. »"
+       ],
+       "indice": "La réponse doit être mathématiquement exacte : l'égalité est-elle vraiment fausse pour toutes les valeurs de $a$ et $b$ ?",
+       "explication": "L'égalité « pour tous $a$ et $b$ » est fausse, et un contre-exemple le prouve : $(1 + 1)^2 = 4$ alors que $1^2 + 1^2 = 2$. Mais elle est vraie lorsque $ab = 0$, comme dans l'exemple de l'élève : dire « jamais égal » est donc faux. Quant à « vrai pour les nombres positifs », $a = b = 1$ le réfute.",
+       "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité ; une identité fausse peut être vraie pour certaines valeurs. Les quantificateurs font la différence."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soient $a$ et $b$ deux réels. Si, pour tout réel $\\varepsilon > 0$, $|a - b| < \\varepsilon$, alors $a = b$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Raisonne par l'absurde : si $a \\neq b$, quel $\\varepsilon$ choisir ?",
+       "explication": "Vrai. Supposons par l'absurde $a \\neq b$. Alors $\\varepsilon = |a - b|$ est strictement positif, et l'hypothèse appliquée à cet $\\varepsilon$ donne $|a - b| < |a - b|$ : contradiction. Donc $a = b$.",
+       "retenir": "Un réel positif ou nul qui est inférieur à tout $\\varepsilon > 0$ est nul : c'est la base des raisonnements d'analyse."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soient $P$ et $Q$ deux propositions. Si l'implication $P \\Rightarrow Q$ est vraie et si $Q$ est vraie, alors $P$ est vraie. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Relis la table de vérité de l'implication : que se passe-t-il quand $P$ est fausse et $Q$ vraie ?",
+       "explication": "Faux. Contre-exemple : pour le réel $x = 3$, prenons $P$ : « $x > 5$ » et $Q$ : « $x > 2$ ». L'implication $P \\Rightarrow Q$ est vraie, $Q$ est vraie, mais $P$ est fausse. Conclure $P$ à partir de $P \\Rightarrow Q$ et de $Q$, c'est confondre l'implication avec sa réciproque.",
+       "retenir": "De $P \\Rightarrow Q$ et $Q$, on ne déduit rien sur $P$. De $P \\Rightarrow Q$ et non $Q$, on déduit non $P$ (contraposée)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $x$ et $y$, $\\big||x| - |y|\\big| \\leqslant |x - y|$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $x = (x - y) + y$ et utilise l'inégalité triangulaire $|u + v| \\leqslant |u| + |v|$.",
+       "explication": "Vrai. Par l'inégalité triangulaire, $|x| = |(x - y) + y| \\leqslant |x - y| + |y|$, donc $|x| - |y| \\leqslant |x - y|$. En échangeant $x$ et $y$ : $|y| - |x| \\leqslant |y - x| = |x - y|$. Un réel $t$ tel que $t \\leqslant m$ et $-t \\leqslant m$ vérifie $|t| \\leqslant m$ : d'où le résultat.",
+       "retenir": "Inégalité triangulaire et sa forme renversée : $\\big||x| - |y|\\big| \\leqslant |x - y| \\leqslant |x| + |y|$."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

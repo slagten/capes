@@ -1,0 +1,82 @@
+// =====================================================================
+//  LES COMBATS : manches, sablier, expérience, rangs et monstres
+// =====================================================================
+//  Chaque stèle est gardée par un monstre, qui rôde près d'elle dans la
+//  salle : s'il voit Talos, il s'approche et l'attaque, et le combat
+//  commence (on peut aussi aller lire la stèle soi-même, touche E).
+//
+//  Un combat se joue en plusieurs manches, un exercice par manche :
+//   - 1re manche, l'attaque : une bonne réponse, et Talos frappe ;
+//   - 2e manche, l'esquive : le monstre se prépare à frapper, une bonne
+//     réponse et Talos esquive d'un salto arrière ;
+//   - 3e manche, le coup final : le monstre est changé en pierre, et la
+//     stèle s'allume.
+//  Un boss (la dernière salle de chaque chapitre) se bat en 5 manches.
+//  Une mauvaise réponse, ou un sablier vide, fait perdre un cœur à Talos.
+//  Sans cœur, Talos revient au départ de la salle (les stèles déjà
+//  résolues restent résolues) et retrouve tous ses cœurs.
+//
+//  L'expérience ne se gagne qu'une fois par stèle : la première fois
+//  qu'on la résout. Rejouer une salle ne fait donc pas grimper
+//  l'expérience.
+//
+//  Vous pouvez modifier les nombres et les textes ci-dessous.
+// =====================================================================
+
+// Le temps pour répondre à chaque manche, en secondes.
+// Quand le sablier est vide, le monstre frappe (comme une erreur), puis
+// la manche recommence avec un sablier plein. Fuir le combat (Échap)
+// n'arrête pas le sablier.
+// Un exercice peut avoir son propre temps : ajoutez par exemple
+// temps: 150,  dans cet exercice (dans niveaux.js).
+// Le sablier peut aussi être coupé en jeu (bouton « Sablier » en haut).
+// Les temps sont pensés pour un travail sur feuille, au rythme du concours.
+var TEMPS_LIMITE = {
+  actif: true,        // false : pas de sablier du tout
+  attaque: 180,       // la manche d'attaque (3 min)
+  esquive: 180,       // la manche d'esquive (3 min)
+  coupFinal: 300,     // la dernière manche, le coup final (5 min)
+  automatisme: 150,   // chaque Vrai–Faux d'une stèle d'or (2 min 30)
+  hermes: 240,        // une stèle d'Hermès, celle des figures (4 min)
+  boss: 360,          // chaque question d'un boss (6 min)
+  coefficient: 1      // multiplie tous les temps : 1.33 pour un tiers-temps
+};
+
+// Ce que rapporte une victoire.
+var XP = {
+  pierre: 100,      // une stèle de pierre (un combat en 3 manches)
+  or: 80,           // une stèle d'or (des automatismes)
+  boss: 300,        // un boss (un combat en 5 manches)
+  figure: 60,       // une stèle d'Hermès, la première fois
+  revision: 40,     // une stèle du temple de Mnémosyne (à chaque séance)
+  sansFaute: 50,    // bonus : le combat est gagné sans aucune erreur
+  serie: 10,        // bonus par bonne réponse d'affilée, à partir de la 2e
+  serieMax: 50      // le bonus de série ne dépasse jamais cette valeur
+};
+
+// Les rangs de Talos : l'expérience qu'il faut pour les atteindre,
+// leur titre, et le nombre de cœurs de Talos à ce rang.
+var RANGS = [
+  { xp: 0,     titre: "Automate éveillé",    coeurs: 3 },
+  { xp: 400,   titre: "Apprenti du temple",  coeurs: 3 },
+  { xp: 1000,  titre: "Gardien de bronze",   coeurs: 3 },
+  { xp: 1800,  titre: "Hoplite",             coeurs: 4 },
+  { xp: 2800,  titre: "Héros d'Athènes",     coeurs: 4 },
+  { xp: 4000,  titre: "Champion d'Olympie",  coeurs: 4 },
+  { xp: 5400,  titre: "Argonaute",           coeurs: 4 },
+  { xp: 7000,  titre: "Héros de l'Odyssée",  coeurs: 5 },
+  { xp: 8800,  titre: "Demi-dieu",           coeurs: 5 },
+  { xp: 10800, titre: "Élu d'Athéna",        coeurs: 5 },
+  { xp: 13000, titre: "Gardien de l'Olympe", coeurs: 5 },
+  { xp: 15500, titre: "Légende du temple",   coeurs: 5 }
+];
+
+// L'ordre dans lequel les monstres gardent les stèles de pierre,
+// d'une stèle à la suivante tout au long du jeu.
+// Les stèles d'or sont gardées par les oiseaux du lac Stymphale,
+// et les sanctuaires secrets par le Sphinx.
+// Pour choisir le monstre d'une stèle précise, ajoutez dans la stèle
+// (dans niveaux.js), à côté de « exercices », par exemple :   monstre: "hydre",
+// Monstres possibles : "minotaure", "hydre", "cyclope", "meduse",
+// "harpie", "chimere", "sphinx", "stymphale".
+var ORDRE_DES_MONSTRES = ["minotaure", "hydre", "cyclope", "meduse", "harpie", "chimere"];

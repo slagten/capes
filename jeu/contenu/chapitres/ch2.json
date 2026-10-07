@@ -1,0 +1,768 @@
+{
+ "id": "ch2",
+ "titre": "Second degré et fonctions de référence",
+ "introduction": "Cette semaine, tu entres dans le royaume de la parabole. Les scribes de Babylone résolvaient déjà ces équations en complétant un carré : derrière chaque formule se cache une figure. Un même trinôme s'écrit sous trois formes, développée, canonique, factorisée, et tout l'art consiste à choisir celle qui répond à la question posée. Les inéquations seront ton épreuve : le signe se voit sur la courbe avant de s'écrire.",
+ "conclusion": "Emporte trois réflexes : la forme canonique donne le sommet, la forme factorisée donne les racines et le signe, et le signe de $a$ gouverne le reste. Devant une inéquation ou un paramètre, ramène tout à zéro, factorise, distingue les cas et vérifie tes solutions.",
+ "salles": [
+  {
+   "id": "c2r1",
+   "carte": "viete",
+   "fond": "jardin",
+   "nom": "La leçon du Ménon",
+   "notion": "Fonctions de référence, équations x² = a, comparaisons",
+   "athena": "Le carré d'aire double n'a pas un côté double : avant de calculer, demande-toi quelle fonction agit et comment elle range les nombres.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Un carré égal à 25",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $(2x-1)^2 = 25$. Entrer la plus petite solution.",
+       "reponse": -2,
+       "indice": "Un nombre a pour carré $25$ lorsqu'il vaut $5$ ou $-5$.",
+       "explication": "$(2x-1)^2 = 25 \\iff 2x-1 = 5$ ou $2x-1 = -5$, soit $x = 3$ ou $x = -2$. La plus petite solution est $-2$. Oublier le cas $-5$ ferait perdre une solution.",
+       "retenir": "Pour $a > 0$ : $X^2 = a \\iff X = \\sqrt{a}$ ou $X = -\\sqrt{a}$. Ne jamais oublier la solution négative."
+      },
+      {
+       "titre": "Plus grand que 5",
+       "enonce": "Déterminer l'ensemble des solutions dans $\\mathbb{R}$ de l'inéquation $x^2 \\geqslant 5$.",
+       "reponse": 2,
+       "choix": [
+        "$[\\sqrt{5}\\,;+\\infty[$",
+        "$]-\\infty\\,;-\\sqrt{5}]\\cup[\\sqrt{5}\\,;+\\infty[$",
+        "$[-\\sqrt{5}\\,;\\sqrt{5}]$"
+       ],
+       "indice": "Les solutions de $x^2 = 5$ sont $-\\sqrt{5}$ et $\\sqrt{5}$. Où la parabole $y = x^2$ est-elle au-dessus de la droite $y = 5$ ?",
+       "explication": "$x^2 \\geqslant 5 \\iff (x-\\sqrt{5})(x+\\sqrt{5}) \\geqslant 0$. Ce produit est strictement positif à l'extérieur des racines et nul en elles : $x \\leqslant -\\sqrt{5}$ ou $x \\geqslant \\sqrt{5}$. Par exemple $-3$ est solution, car $9 \\geqslant 5$ : la réponse $[\\sqrt{5}\\,;+\\infty[$ oublie les négatifs.",
+       "retenir": "Pour $a > 0$ : $x^2 \\geqslant a \\iff x \\leqslant -\\sqrt{a}$ ou $x \\geqslant \\sqrt{a}$ ; $x^2 \\leqslant a \\iff -\\sqrt{a} \\leqslant x \\leqslant \\sqrt{a}$."
+      },
+      {
+       "titre": "Encadrer un inverse",
+       "enonce": "Soit $x$ un réel tel que $-3 \\leqslant x \\leqslant 2$. Entrer la plus grande valeur que peut prendre $\\dfrac{1}{x^2+1}$.",
+       "reponse": 1,
+       "indice": "L'intervalle $[-3\\,;2]$ contient $0$ : la fonction carré n'y est pas monotone. Encadre d'abord $x^2$, puis $x^2 + 1$.",
+       "explication": "Comme $0 \\in [-3\\,;2]$, on a $0 \\leqslant x^2 \\leqslant 9$ (et non $4 \\leqslant x^2 \\leqslant 9$), donc $1 \\leqslant x^2 + 1 \\leqslant 10$. La fonction inverse étant décroissante sur $]0\\,;+\\infty[$ : $\\frac{1}{10} \\leqslant \\frac{1}{x^2+1} \\leqslant 1$. La valeur $1$ est atteinte pour $x = 0$.",
+       "retenir": "On ne « met pas au carré » un encadrement qui contient $0$ : on s'appuie sur les variations de la fonction carré, de part et d'autre de $0$."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Le cube",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $2x^3 + 54 = 0$. Entrer la solution.",
+       "reponse": -3,
+       "indice": "Isole $x^3$. La fonction cube est strictement croissante sur $\\mathbb{R}$.",
+       "explication": "$2x^3 + 54 = 0 \\iff x^3 = -27$. La fonction cube est strictement croissante sur $\\mathbb{R}$ et prend toutes les valeurs réelles : $-27$ a un unique antécédent, et $(-3)^3 = -27$. Donc $x = -3$.",
+       "retenir": "Pour tout réel $a$, l'équation $x^3 = a$ a exactement une solution ; l'équation $x^2 = a$ en a $0$, $1$ ou $2$ selon le signe de $a$."
+      },
+      {
+       "titre": "Un inverse minoré",
+       "enonce": "Déterminer l'ensemble des solutions de l'inéquation $\\dfrac{1}{x} > -2$, d'inconnue $x$ réelle non nulle.",
+       "reponse": 3,
+       "choix": [
+        "$]-\\frac{1}{2}\\,;0[\\,\\cup\\,]0\\,;+\\infty[$",
+        "$]-\\infty\\,;-\\frac{1}{2}[$",
+        "$]-\\infty\\,;-\\frac{1}{2}[\\,\\cup\\,]0\\,;+\\infty[$"
+       ],
+       "indice": "Distingue $x < 0$ et $x > 0$ : multiplier par $x$ change le sens de l'inégalité quand $x$ est négatif.",
+       "explication": "Si $x > 0$, alors $\\frac{1}{x} > 0 > -2$ : tout réel strictement positif est solution. Si $x < 0$, multiplier par $x$ change le sens : $\\frac{1}{x} > -2 \\iff 1 < -2x \\iff x < -\\frac{1}{2}$. Donc $S = ]-\\infty\\,;-\\frac{1}{2}[\\,\\cup\\,]0\\,;+\\infty[$. Sans changer le sens, on trouverait $x > -\\frac{1}{2}$ : faux pour $x = -\\frac{1}{4}$, car $\\frac{1}{x} = -4$. Autre voie : $\\frac{1}{x} + 2 = \\frac{2x+1}{x}$ et un tableau de signes.",
+       "retenir": "On ne multiplie pas une inéquation par une expression de signe inconnu : on passe tout d'un côté et on étudie le signe d'un quotient."
+      },
+      {
+       "titre": "Le rang des puissances",
+       "enonce": "Soit $x$ un réel tel que $0 < x < 1$. Quel est le bon rangement ?",
+       "reponse": 1,
+       "choix": [
+        "$x^3 < x^2 < x < \\sqrt{x} < \\frac{1}{x}$",
+        "$\\frac{1}{x} < \\sqrt{x} < x < x^2 < x^3$",
+        "$x^3 < x^2 < \\sqrt{x} < x < \\frac{1}{x}$",
+        "$x < x^2 < x^3 < \\sqrt{x} < \\frac{1}{x}$"
+       ],
+       "indice": "Multiplie l'inégalité $x < 1$ par le réel positif $x$, puis par $x^2$. Pour $\\sqrt{x}$, applique le même argument au nombre $\\sqrt{x}$, lui aussi dans $]0\\,;1[$.",
+       "explication": "En multipliant $x < 1$ par $x > 0$ : $x^2 < x$ ; par $x^2 > 0$ : $x^3 < x^2$. Comme $0 < \\sqrt{x} < 1$, le même argument donne $(\\sqrt{x})^2 < \\sqrt{x}$, soit $x < \\sqrt{x}$. Enfin $\\sqrt{x} < 1 < \\frac{1}{x}$. Contrôle avec $x = \\frac{1}{4}$ : $\\frac{1}{64} < \\frac{1}{16} < \\frac{1}{4} < \\frac{1}{2} < 4$.",
+       "retenir": "Sur $]0\\,;1[$, une puissance plus grande diminue le nombre et la racine carrée l'augmente ; sur $]1\\,;+\\infty[$, c'est l'inverse."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « La fonction inverse est décroissante sur $]-\\infty\\,;0[\\,\\cup\\,]0\\,;+\\infty[$. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Compare les images de $-1$ et de $1$.",
+       "explication": "Faux. $-1 < 1$ et pourtant $\\frac{1}{-1} = -1 < 1 = \\frac{1}{1}$ : l'ordre est conservé, ce qui contredit la décroissance sur la réunion. La fonction inverse est décroissante sur $]-\\infty\\,;0[$ et sur $]0\\,;+\\infty[$ séparément, pas sur leur réunion.",
+       "retenir": "Un sens de variation se donne sur un intervalle : « décroissante sur chacun des deux intervalles » ne signifie pas « décroissante sur leur réunion »."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, si $-3 < x < -1$, alors $1 < x^2 < 9$. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Dans quel intervalle se trouve $x$, et quel y est le sens de variation de la fonction carré ?",
+       "explication": "Vrai. La fonction carré est strictement décroissante sur $]-\\infty\\,;0]$ : elle y renverse l'ordre. Si $-3 < x < -1$, les nombres $-3$, $x$ et $-1$ sont dans $]-\\infty\\,;0]$, donc $(-3)^2 > x^2 > (-1)^2$, soit $1 < x^2 < 9$. La réciproque est fausse : $x = 2$ vérifie $1 < x^2 < 9$, mais pas $-3 < x < -1$.",
+       "retenir": "Sur un intervalle où elle est croissante, une fonction conserve l'ordre ; là où elle est décroissante, elle le renverse : la fonction carré renverse l'ordre sur $]-\\infty\\,;0]$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « L'équation $x^3 = x$ admet une unique solution réelle. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Essaie $x = 1$ et $x = -1$.",
+       "explication": "Faux. $1$ et $-1$ sont deux solutions distinctes. Plus précisément $x^3 - x = x(x-1)(x+1)$ : il y a trois solutions, $-1$, $0$ et $1$. La stricte croissance du cube assure l'unicité pour $x^3 = a$ avec $a$ fixé, pas pour $x^3 = x$.",
+       "retenir": "Pour résoudre $x^3 = x$, on ne divise pas par $x$ : on factorise $x(x-1)(x+1) = 0$."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2r2",
+   "carte": "aljabr",
+   "fond": "orient",
+   "nom": "Le jardin d'Épicure",
+   "notion": "Forme canonique, sommet de la parabole",
+   "athena": "Compléter le carré, c'est révéler le sommet : la forme canonique dit d'un regard où la parabole tourne et jusqu'où elle va.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Compléter le carré",
+       "enonce": "Pour tout réel $x$, on écrit $x^2 - 6x + 11$ sous la forme $(x - \\alpha)^2 + \\beta$. Entrer $\\beta$.",
+       "reponse": 2,
+       "indice": "$x^2 - 6x$ est le début du développement de $(x-3)^2$.",
+       "explication": "$(x-3)^2 = x^2 - 6x + 9$, donc $x^2 - 6x + 11 = (x-3)^2 - 9 + 11 = (x-3)^2 + 2$. Ainsi $\\alpha = 3$ et $\\beta = 2$.",
+       "retenir": "$x^2 + bx = \\left(x + \\frac{b}{2}\\right)^2 - \\frac{b^2}{4}$ : on complète le carré avec la moitié du coefficient de $x$."
+      },
+      {
+       "titre": "Avec un coefficient",
+       "enonce": "Pour tout réel $x$, on écrit $2x^2 + 12x + 7$ sous la forme $2(x - \\alpha)^2 + \\beta$. Entrer $\\beta$.",
+       "reponse": -11,
+       "indice": "Factorise d'abord par $2$ les deux premiers termes : $2(x^2 + 6x) + 7$.",
+       "explication": "$2x^2 + 12x + 7 = 2(x^2 + 6x) + 7 = 2\\left[(x+3)^2 - 9\\right] + 7 = 2(x+3)^2 - 11$. Donc $\\alpha = -3$ et $\\beta = -11$. Piège : oublier de multiplier le $-9$ par $2$ (on trouverait $-2$). Contrôle : $\\beta = f(-3) = 18 - 36 + 7 = -11$.",
+       "retenir": "Forme canonique $a(x-\\alpha)^2 + \\beta$ : $\\alpha = -\\frac{b}{2a}$ et $\\beta = f(\\alpha)$, ce qui permet toujours de contrôler $\\beta$."
+      },
+      {
+       "titre": "Un minimum imposé",
+       "enonce": "Soit $m$ un réel strictement positif et $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2 - mx + 10$. On sait que le minimum de $f$ sur $\\mathbb{R}$ vaut $1$. Entrer $m$.",
+       "reponse": 6,
+       "indice": "Écris la forme canonique de $f$ : le minimum s'y lit directement, en fonction de $m$.",
+       "explication": "$f(x) = \\left(x - \\frac{m}{2}\\right)^2 + 10 - \\frac{m^2}{4}$. Le minimum, atteint en $x = \\frac{m}{2}$, vaut $10 - \\frac{m^2}{4}$. Donc $10 - \\frac{m^2}{4} = 1 \\iff m^2 = 36 \\iff m = 6$ ou $m = -6$. Comme $m > 0$, $m = 6$.",
+       "retenir": "Pour $a > 0$, le minimum de $x \\mapsto ax^2 + bx + c$ est $f\\left(-\\frac{b}{2a}\\right)$, l'ordonnée du sommet.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Le sommet",
+       "enonce": "Dans un repère, on considère la parabole d'équation $y = -x^2 + 4x + 1$. Entrer l'ordonnée de son sommet.",
+       "reponse": 5,
+       "indice": "L'abscisse du sommet est $-\\frac{b}{2a}$.",
+       "explication": "$\\alpha = -\\frac{4}{2 \\times (-1)} = 2$ et $\\beta = -4 + 8 + 1 = 5$. Le sommet est $S(2\\,;5)$ ; comme $a = -1 < 0$, c'est le point le plus haut de la parabole.",
+       "retenir": "Sommet de la parabole $y = ax^2 + bx + c$ : abscisse $-\\frac{b}{2a}$, ordonnée obtenue en remplaçant $x$ par cette abscisse."
+      },
+      {
+       "titre": "Lire la forme factorisée",
+       "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = -2(x+1)(x-5)$. Entrer le maximum de $f$ sur $\\mathbb{R}$.",
+       "reponse": 18,
+       "indice": "La parabole est symétrique par rapport à la droite verticale qui passe par le milieu de ses deux racines.",
+       "explication": "Les racines sont $-1$ et $5$ ; l'axe de symétrie est la droite d'équation $x = \\frac{-1+5}{2} = 2$. Comme $a = -2 < 0$, $f$ admet un maximum en $2$ : $f(2) = -2 \\times 3 \\times (-3) = 18$.",
+       "retenir": "L'abscisse du sommet est la moyenne des racines : $\\alpha = \\frac{x_1 + x_2}{2}$."
+      },
+      {
+       "titre": "Au plus près de trois mesures",
+       "enonce": "D'après CAPES Mayotte 2022. Trois mesures valent $2$, $5$ et $11$. Pour tout réel $x$, on pose $S(x) = (x-2)^2 + (x-5)^2 + (x-11)^2$. Entrer le minimum de $S$ sur $\\mathbb{R}$.",
+       "reponse": 42,
+       "indice": "Développe : $S$ est un trinôme $3x^2 + bx + c$. Cherche l'abscisse de son sommet.",
+       "explication": "$S(x) = 3x^2 - 36x + 150 = 3(x-6)^2 + 42$. Le minimum vaut $42$ ; il est atteint en $x = 6$, qui est exactement la moyenne de $2$, $5$ et $11$.",
+       "retenir": "La somme des carrés des écarts $\\sum (x - x_i)^2$ est minimale lorsque $x$ est la moyenne des $x_i$ : un trinôme se cache derrière la moyenne."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = ax^2 + bx + c$, avec $a \\neq 0$, vérifie $f(1) = f(5)$, alors sa courbe admet pour axe de symétrie la droite d'équation $x = 3$. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Traduis $f(1) = f(5)$ par une relation entre $a$ et $b$.",
+       "explication": "Vrai. $f(1) = f(5) \\iff a + b + c = 25a + 5b + c \\iff 24a + 4b = 0 \\iff b = -6a$. Alors $-\\frac{b}{2a} = \\frac{6a}{2a} = 3$ : l'axe de symétrie de la parabole est la droite d'équation $x = 3$.",
+       "retenir": "Deux points de même ordonnée sur une parabole sont symétriques par rapport à son axe : l'abscisse du sommet est le milieu de leurs abscisses."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $a$, $\\alpha$, $\\beta$ trois réels avec $a \\neq 0$ et $\\beta > 0$. La fonction $x \\mapsto a(x - \\alpha)^2 + \\beta$ ne s'annule jamais sur $\\mathbb{R}$. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Que se passe-t-il lorsque $a$ est négatif ?",
+       "explication": "Faux. Contre-exemple : $a = -1$, $\\alpha = 0$, $\\beta = 1$ ; la fonction $x \\mapsto -x^2 + 1$ s'annule en $1$ (et en $-1$). La forme canonique montre que $f$ ne s'annule pas lorsque $a$ et $\\beta$ sont de même signe ; s'ils sont de signes contraires, $f(x) = 0 \\iff (x - \\alpha)^2 = -\\frac{\\beta}{a}$, nombre strictement positif : deux solutions.",
+       "retenir": "Sur $a(x - \\alpha)^2 + \\beta$ : deux racines si $a$ et $\\beta$ sont de signes contraires, aucune s'ils sont de même signe, une seule si $\\beta = 0$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans un repère orthonormé, les paraboles d'équations $y = x^2 + 2x$ et $y = x^2 - 2x$ sont symétriques l'une de l'autre par rapport à l'axe des ordonnées. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Le symétrique du point $M(x\\,;y)$ par rapport à l'axe des ordonnées est $M'(-x\\,;y)$.",
+       "explication": "Vrai. Posons $f(x) = x^2 + 2x$ et $g(x) = x^2 - 2x$. Pour tout réel $x$, $f(-x) = x^2 - 2x = g(x)$. Donc $M(x\\,;y)$ est sur la courbe de $g$ si et seulement si $M'(-x\\,;y)$ est sur celle de $f$. Contrôle : les sommets $(-1\\,;-1)$ et $(1\\,;-1)$ sont bien symétriques.",
+       "retenir": "Les courbes de $x \\mapsto f(x)$ et de $x \\mapsto f(-x)$ sont symétriques par rapport à l'axe des ordonnées."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2r3",
+   "carte": "chasles",
+   "fond": "temple",
+   "nom": "Le Portique peint",
+   "notion": "Discriminant, racines, factorisation",
+   "athena": "Avant de calculer $\\Delta$, écris l'équation sous la forme $ax^2 + bx + c = 0$ ; si une racine saute aux yeux, le produit des racines livre l'autre.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le discriminant",
+       "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $2x^2 - 3x - 2 = 0$. Entrer la plus petite solution.",
+       "reponse": "-1/2",
+       "indice": "Calcule $\\Delta = b^2 - 4ac$, puis $\\frac{-b \\pm \\sqrt{\\Delta}}{2a}$.",
+       "explication": "$\\Delta = (-3)^2 - 4 \\times 2 \\times (-2) = 9 + 16 = 25 > 0$ : deux solutions, $\\frac{3 - 5}{4} = -\\frac{1}{2}$ et $\\frac{3 + 5}{4} = 2$. La plus petite est $-\\frac{1}{2}$.",
+       "retenir": "Si $\\Delta > 0$, les racines sont $\\frac{-b \\pm \\sqrt{\\Delta}}{2a}$ : on divise par $2a$, pas par $2$."
+      },
+      {
+       "titre": "D'abord réordonner",
+       "enonce": "Entrer le nombre de solutions réelles de l'équation $x(x+3) = 5x - 4$.",
+       "reponse": 0,
+       "indice": "Ramène tout dans un seul membre avant de penser au discriminant.",
+       "explication": "$x(x+3) = 5x - 4 \\iff x^2 - 2x + 4 = 0$. $\\Delta = 4 - 16 = -12 < 0$ : aucune solution réelle. Autre voie : $x^2 - 2x + 4 = (x-1)^2 + 3 \\geqslant 3 > 0$.",
+       "retenir": "Le discriminant se calcule sur l'équation écrite $ax^2 + bx + c = 0$, jamais avant d'avoir tout ramené dans un membre."
+      },
+      {
+       "titre": "Le cas oublié",
+       "enonce": "Pour tout réel $m$, on note $(E_m)$ l'équation $(m-1)x^2 + 4x + 1 = 0$, d'inconnue réelle $x$. Entrer la somme de toutes les valeurs de $m$ pour lesquelles $(E_m)$ admet exactement une solution.",
+       "reponse": 6,
+       "indice": "Ne suppose pas trop vite que l'équation est du second degré : que se passe-t-il si $m = 1$ ?",
+       "explication": "Si $m = 1$ : l'équation devient $4x + 1 = 0$, qui a exactement une solution, $-\\frac{1}{4}$. Si $m \\neq 1$ : c'est une équation du second degré, de discriminant $\\Delta = 16 - 4(m-1) = 20 - 4m$ ; elle a une seule solution si et seulement si $\\Delta = 0$, soit $m = 5$. Les valeurs cherchées sont $1$ et $5$, de somme $6$.",
+       "retenir": "Équation à paramètre : traiter toujours à part le cas où le coefficient de $x^2$ s'annule."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Factoriser",
+       "enonce": "Pour tout réel $x$, on écrit $-2x^2 + 2x + 12 = a(x - x_1)(x - x_2)$ avec $x_1 < x_2$. Entrer $x_1$.",
+       "reponse": -2,
+       "indice": "Factorise d'abord par $-2$, puis cherche les racines de $x^2 - x - 6$.",
+       "explication": "$-2x^2 + 2x + 12 = -2(x^2 - x - 6)$. Pour $x^2 - x - 6$ : $\\Delta = 1 + 24 = 25$, racines $\\frac{1 \\pm 5}{2}$, soit $-2$ et $3$. Donc $-2x^2 + 2x + 12 = -2(x+2)(x-3)$ et $x_1 = -2$.",
+       "retenir": "Si $\\Delta \\geqslant 0$ : $ax^2 + bx + c = a(x - x_1)(x - x_2)$. Ne pas oublier le facteur $a$."
+      },
+      {
+       "titre": "Une racine évidente",
+       "enonce": "Le nombre $1$ est solution de l'équation $5x^2 + 2x - 7 = 0$. Entrer l'autre solution.",
+       "reponse": "-7/5",
+       "indice": "Le produit des deux solutions de $ax^2 + bx + c = 0$ vaut $\\frac{c}{a}$.",
+       "explication": "$5 + 2 - 7 = 0$ confirme que $1$ est solution. Le produit des solutions vaut $\\frac{c}{a} = -\\frac{7}{5}$, donc l'autre solution est $-\\frac{7}{5}$. Contrôle par la somme : $1 - \\frac{7}{5} = -\\frac{2}{5} = -\\frac{b}{a}$.",
+       "retenir": "Si $a + b + c = 0$, alors $1$ est racine de $ax^2 + bx + c$ et l'autre racine est $\\frac{c}{a}$."
+      },
+      {
+       "titre": "Changer de variable",
+       "enonce": "Entrer le nombre de solutions réelles de l'équation $(x^2 - 2x)^2 - 2(x^2 - 2x) - 3 = 0$.",
+       "reponse": 3,
+       "indice": "Pose $X = x^2 - 2x$. Résous d'abord en $X$, puis reviens à $x$ pour chaque valeur trouvée.",
+       "explication": "Avec $X = x^2 - 2x$ : $X^2 - 2X - 3 = 0 \\iff X = 3$ ou $X = -1$. Puis $x^2 - 2x = 3 \\iff (x-3)(x+1) = 0 \\iff x = 3$ ou $x = -1$ ; et $x^2 - 2x = -1 \\iff (x-1)^2 = 0 \\iff x = 1$. Trois solutions : $-1$, $1$ et $3$ (et non quatre : la racine double ne donne qu'une solution).",
+       "retenir": "Après un changement de variable, revenir à l'inconnue de départ et résoudre chaque équation obtenue, en comptant ses solutions."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $a$, $b$, $c$ trois réels avec $a \\neq 0$. Si $ac < 0$, alors l'équation $ax^2 + bx + c = 0$ admet deux solutions réelles distinctes. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Quel est le signe de $-4ac$ ?",
+       "explication": "Vrai. $\\Delta = b^2 - 4ac$ avec $b^2 \\geqslant 0$ et $-4ac > 0$, donc $\\Delta > 0$ : deux solutions distinctes. Leur produit $\\frac{c}{a}$ est négatif : elles sont même de signes contraires. La réciproque est fausse : $x^2 - 3x + 2 = 0$ a deux solutions ($1$ et $2$) alors que $ac = 2 > 0$.",
+       "retenir": "Si $a$ et $c$ sont de signes contraires, $\\Delta > 0$ sans calcul et les deux racines sont de signes contraires."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « L'équation $x^2 - 2\\sqrt{3}\\,x + 3 = 0$ admet deux solutions réelles distinctes. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Calcule $\\Delta$ avec soin, ou reconnais une identité remarquable.",
+       "explication": "Faux. $\\Delta = (2\\sqrt{3})^2 - 4 \\times 3 = 12 - 12 = 0$ : une seule solution. En effet $x^2 - 2\\sqrt{3}\\,x + 3 = (x - \\sqrt{3})^2$, qui ne s'annule qu'en $\\sqrt{3}$.",
+       "retenir": "Un trinôme $x^2 - 2kx + k^2$ est le carré $(x - k)^2$ : $\\Delta = 0$ et une racine double $k$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $2x^2 + 5x - 3 = (x+3)\\left(x - \\frac{1}{2}\\right)$. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Compare les deux membres pour une valeur simple de $x$.",
+       "explication": "Faux. Pour $x = 0$, le membre de gauche vaut $-3$ et celui de droite $-\\frac{3}{2}$. Les racines $-3$ et $\\frac{1}{2}$ sont justes, mais il manque le coefficient $a = 2$ : $2x^2 + 5x - 3 = 2(x+3)\\left(x - \\frac{1}{2}\\right) = (x+3)(2x-1)$.",
+       "retenir": "Deux trinômes de mêmes racines peuvent différer d'un facteur : la forme factorisée est $a(x - x_1)(x - x_2)$."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "La faille du carré",
+     "enonce": "Pour résoudre $\\sqrt{2x+3} = x$, un élève écrit : « J'élève au carré : $2x + 3 = x^2$, soit $x^2 - 2x - 3 = 0$. Comme $\\Delta = 16$, on trouve $S = \\{-1\\,;3\\}$. » Que penser de sa réponse ?",
+     "reponse": 3,
+     "choix": [
+      "Elle est juste : les deux valeurs vérifient l'équation de départ.",
+      "Elle est fausse : le discriminant vaut $-8$, il n'y a aucune solution.",
+      "Elle est fausse : élever au carré donne seulement une implication ; $-1$ ne vérifie pas l'équation, donc $S = \\{3\\}$.",
+      "Elle est fausse : on n'a jamais le droit d'élever au carré une équation."
+     ],
+     "indice": "Remplace $x$ par chacune des deux valeurs dans l'équation de départ.",
+     "explication": "Si $\\sqrt{2x+3} = x$, alors $2x + 3 = x^2$ ; mais la réciproque est fausse, car $A^2 = B^2$ n'entraîne pas $A = B$. Vérification : pour $x = -1$, $\\sqrt{1} = 1 \\neq -1$ ; pour $x = 3$, $\\sqrt{9} = 3$. Donc $S = \\{3\\}$. Rédaction correcte : $\\sqrt{2x+3} = x \\iff \\left(x \\geqslant 0 \\text{ et } 2x + 3 = x^2\\right)$.",
+     "retenir": "Élever au carré n'est une équivalence qu'entre deux nombres de même signe : imposer la condition de signe ou vérifier chaque solution."
+    }
+   ]
+  },
+  {
+   "id": "c2r4",
+   "carte": "harriot",
+   "fond": "nuit",
+   "nom": "Le gnomon d'Anaximandre",
+   "notion": "Signe du trinôme, inéquations",
+   "athena": "Une inéquation ne se divise pas à l'aveugle : tout d'un côté, factorise, puis lis le signe, celui de $a$ à l'extérieur des racines, l'opposé entre elles.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Entre les racines",
+       "enonce": "Déterminer l'ensemble des solutions dans $\\mathbb{R}$ de l'inéquation $x^2 - x - 6 \\leqslant 0$.",
+       "reponse": 4,
+       "choix": [
+        "$]-\\infty\\,;-2]\\cup[3\\,;+\\infty[$",
+        "$[-3\\,;2]$",
+        "$]-2\\,;3[$",
+        "$[-2\\,;3]$"
+       ],
+       "indice": "Cherche les racines, puis rappelle-toi que le trinôme a le signe de $a$ à l'extérieur des racines.",
+       "explication": "$\\Delta = 1 + 24 = 25$, racines $-2$ et $3$ : $x^2 - x - 6 = (x+2)(x-3)$. Comme $a = 1 > 0$, le trinôme est négatif entre les racines et nul en elles ; l'inégalité étant large, les bornes sont incluses : $S = [-2\\,;3]$.",
+       "retenir": "Si $\\Delta > 0$ : $ax^2 + bx + c$ est du signe de $a$ à l'extérieur des racines, du signe opposé entre elles."
+      },
+      {
+       "titre": "Quand a est négatif",
+       "enonce": "Entrer le nombre d'entiers relatifs $n$ tels que $-2n^2 + 3n + 2 > 0$.",
+       "reponse": 2,
+       "indice": "Trouve les racines du trinôme $-2x^2 + 3x + 2$, puis tiens compte du signe de $a = -2$.",
+       "explication": "$\\Delta = 9 + 16 = 25$, racines $\\frac{-3 \\pm 5}{-4}$, soit $-\\frac{1}{2}$ et $2$. Comme $a = -2 < 0$, le trinôme est strictement positif entre ses racines : $-\\frac{1}{2} < n < 2$. Les entiers solutions sont $0$ et $1$ ($2$ est exclu car l'inégalité est stricte).",
+       "retenir": "Avec $a < 0$, le trinôme est positif entre les racines : esquisser la parabole tournée vers le bas évite l'erreur."
+      },
+      {
+       "titre": "Un nombre et son inverse",
+       "enonce": "Déterminer l'ensemble des réels $x$ non nuls tels que $x + \\dfrac{1}{x} \\geqslant 2$.",
+       "reponse": 1,
+       "choix": [
+        "$]0\\,;+\\infty[$",
+        "$]-\\infty\\,;0[\\,\\cup\\,]0\\,;+\\infty[$",
+        "$[1\\,;+\\infty[$",
+        "$\\{1\\}$"
+       ],
+       "indice": "Écris $x + \\frac{1}{x} - 2$ comme un seul quotient et reconnais une identité remarquable au numérateur.",
+       "explication": "$x + \\frac{1}{x} - 2 = \\frac{x^2 - 2x + 1}{x} = \\frac{(x-1)^2}{x}$. Le numérateur est positif ou nul ; le quotient est donc positif ou nul exactement lorsque $x > 0$. Ainsi $S = ]0\\,;+\\infty[$. Pour $x < 0$, on a même $x + \\frac{1}{x} < 0$.",
+       "retenir": "Inéquation avec une fraction : tout d'un côté, même dénominateur, puis signe du quotient ; jamais de multiplication par une quantité de signe inconnu."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Un carré parfait",
+       "enonce": "Déterminer l'ensemble des solutions dans $\\mathbb{R}$ de l'inéquation $x^2 + 9 > 6x$.",
+       "reponse": 2,
+       "choix": [
+        "$\\mathbb{R}$",
+        "$\\mathbb{R} \\setminus \\{3\\}$",
+        "$\\varnothing$",
+        "$]3\\,;+\\infty[$"
+       ],
+       "indice": "Passe $6x$ dans le membre de gauche et reconnais une identité remarquable.",
+       "explication": "$x^2 + 9 > 6x \\iff x^2 - 6x + 9 > 0 \\iff (x-3)^2 > 0$. Un carré est strictement positif sauf là où il s'annule, c'est-à-dire en $3$. Donc $S = \\mathbb{R} \\setminus \\{3\\}$. Ici $\\Delta = 0$ : le trinôme a le signe de $a$ partout, sauf en sa racine double où il est nul.",
+       "retenir": "Si $\\Delta = 0$, le trinôme s'annule en $-\\frac{b}{2a}$ et a le signe de $a$ ailleurs : inclure ou exclure ce point selon l'inégalité."
+      },
+      {
+       "titre": "Un produit qui ne vaut pas zéro",
+       "enonce": "Entrer la plus grande solution réelle de l'inéquation $(x-1)(x+2) \\leqslant 4$.",
+       "reponse": 2,
+       "indice": "La règle du produit nul ne vaut que pour $0$ : développe, passe $4$ dans le membre de gauche, puis factorise.",
+       "explication": "$(x-1)(x+2) \\leqslant 4 \\iff x^2 + x - 6 \\leqslant 0 \\iff (x+3)(x-2) \\leqslant 0 \\iff -3 \\leqslant x \\leqslant 2$. La plus grande solution est $2$. Le raisonnement fautif « $x - 1 \\leqslant 4$ » donnerait $5$ ; or $(5-1)(5+2) = 28 > 4$.",
+       "retenir": "« $AB \\leqslant 4$ » ne se traite pas facteur par facteur : on se ramène à comparer à $0$ une expression factorisée."
+      },
+      {
+       "titre": "Positif partout",
+       "enonce": "Déterminer l'ensemble des réels $m$ tels que, pour tout réel $x$, $mx^2 + 4x + m > 0$.",
+       "reponse": 3,
+       "choix": [
+        "$]-\\infty\\,;-2[\\,\\cup\\,]2\\,;+\\infty[$",
+        "$]-2\\,;2[$",
+        "$]2\\,;+\\infty[$",
+        "$[2\\,;+\\infty[$"
+       ],
+       "indice": "Traite à part $m = 0$. Sinon, un trinôme est strictement positif sur $\\mathbb{R}$ si et seulement si $a > 0$ et $\\Delta < 0$.",
+       "explication": "Si $m = 0$ : $4x > 0$ est faux pour $x = -1$. Si $m \\neq 0$ : il faut $m > 0$ et $\\Delta = 16 - 4m^2 < 0$, soit $m^2 > 4$ ; avec $m > 0$, cela donne $m > 2$. Pour $m < -2$, on a bien $\\Delta < 0$, mais le trinôme est alors négatif partout. Pour $m = 2$, $2(x+1)^2$ s'annule en $-1$. Donc $m \\in ]2\\,;+\\infty[$.",
+       "retenir": "Pour $a \\neq 0$ : $ax^2 + bx + c > 0$ pour tout réel $x$ si et seulement si $a > 0$ et $\\Delta < 0$. Les deux conditions sont indispensables."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Les inéquations $\\dfrac{x+1}{x-2} \\geqslant 0$ et $(x+1)(x-2) \\geqslant 0$ ont le même ensemble de solutions. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Regarde ce qui se passe pour $x = 2$.",
+       "explication": "Faux. $x = 2$ est solution de $(x+1)(x-2) \\geqslant 0$ (le produit vaut $0$), mais $\\frac{x+1}{x-2}$ n'est pas défini en $2$. Les ensembles sont $]-\\infty\\,;-1]\\cup]2\\,;+\\infty[$ pour le quotient et $]-\\infty\\,;-1]\\cup[2\\,;+\\infty[$ pour le produit : même signe, mais la valeur interdite fait la différence.",
+       "retenir": "Dans le tableau de signes d'un quotient, la valeur qui annule le dénominateur est toujours exclue (double barre)."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $m$, l'ensemble des solutions de l'inéquation $x^2 - 2mx + m^2 - 1 \\leqslant 0$ est un intervalle de longueur $2$. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Reconnais $(x - m)^2$ dans le trinôme.",
+       "explication": "Vrai. Pour tout réel $m$, $x^2 - 2mx + m^2 - 1 = (x-m)^2 - 1 = (x - m - 1)(x - m + 1)$. Ce trinôme, de coefficient $a = 1 > 0$, est négatif ou nul exactement entre ses racines $m - 1$ et $m + 1$ : $S = [m-1\\,;m+1]$, de longueur $2$, quel que soit $m$.",
+       "retenir": "Un paramètre se manipule comme un nombre : la forme canonique $(x - m)^2 - 1$ donne les racines sans calculer $\\Delta$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $x$, $x^2 \\leqslant 2x \\iff x \\leqslant 2$. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Teste un réel négatif.",
+       "explication": "Faux. Pour $x = -1$ : $x \\leqslant 2$, mais $x^2 = 1 > -2 = 2x$. En réalité $x^2 \\leqslant 2x \\iff x(x-2) \\leqslant 0 \\iff 0 \\leqslant x \\leqslant 2$. L'erreur vient d'une division par $x$, dont le signe est inconnu.",
+       "retenir": "On ne simplifie pas une inéquation par $x$ : on factorise, ici $x(x-2)$, et on étudie le signe."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2b",
+   "carte": "boss-eratosthene",
+   "fond": "bibliotheque",
+   "nom": "Le cratère d'Empédocle",
+   "notion": "Problème : trinôme à paramètre, somme et produit des racines",
+   "athena": "Le paramètre est un curseur : exprime le discriminant en fonction de lui, puis laisse la somme et le produit parler des racines sans les calculer.",
+   "steles": [
+    {
+     "boss": "Polyphème le Cyclope",
+     "monstre": "cyclope",
+     "contexte": "Pour tout réel $m$, on considère l'équation $(E_m)$ : $x^2 - 2mx + m + 6 = 0$, d'inconnue réelle $x$. Lorsqu'elle admet des solutions, on les note $x_1$ et $x_2$ (avec $x_1 = x_2$ en cas de solution double). On étudie comment le nombre et le signe des solutions dépendent de $m$, puis on cherche la plus petite valeur de $x_1^2 + x_2^2$.",
+     "exercices": [
+      {
+       "titre": "Un cas particulier",
+       "enonce": "On prend $m = 7$. Entrer la plus grande solution de $(E_7)$.",
+       "reponse": 13,
+       "indice": "Écris $(E_7)$ et cherche une racine évidente, ou calcule le discriminant.",
+       "explication": "$(E_7)$ s'écrit $x^2 - 14x + 13 = 0$. Comme $1 - 14 + 13 = 0$, $1$ est solution, et l'autre vaut $\\frac{c}{a} = 13$. Les solutions sont $1$ et $13$ ; la plus grande est $13$.",
+       "retenir": "Penser aux racines évidentes avant de calculer $\\Delta$ : $1$ si $a + b + c = 0$, $-1$ si $a - b + c = 0$."
+      },
+      {
+       "titre": "Aucune solution",
+       "enonce": "Le discriminant de $(E_m)$ vaut $\\Delta = 4(m^2 - m - 6)$. Déterminer l'ensemble des réels $m$ pour lesquels $(E_m)$ n'admet aucune solution réelle.",
+       "reponse": 2,
+       "choix": [
+        "$]-\\infty\\,;-2[\\,\\cup\\,]3\\,;+\\infty[$",
+        "$]-2\\,;3[$",
+        "$[-2\\,;3]$",
+        "$]-3\\,;2[$"
+       ],
+       "indice": "Il faut $\\Delta < 0$ : c'est une inéquation du second degré d'inconnue $m$. Cherche les racines de $m^2 - m - 6$.",
+       "explication": "$m^2 - m - 6 = (m+2)(m-3)$, de racines $-2$ et $3$. Ce trinôme en $m$, de coefficient dominant $1 > 0$, est strictement négatif entre ses racines. Donc $\\Delta < 0 \\iff -2 < m < 3$ : $(E_m)$ n'a aucune solution pour $m \\in ]-2\\,;3[$. Pour $m = -2$ ou $m = 3$, elle a une solution double.",
+       "retenir": "Étudier une équation à paramètre revient souvent à résoudre une inéquation du second degré dont l'inconnue est le paramètre."
+      },
+      {
+       "titre": "Deux solutions positives",
+       "enonce": "On admet que $(E_m)$ a deux solutions distinctes si et seulement si $m < -2$ ou $m > 3$, et qu'alors $x_1 + x_2 = 2m$ et $x_1 x_2 = m + 6$. Déterminer l'ensemble des réels $m$ pour lesquels $(E_m)$ a deux solutions distinctes strictement positives.",
+       "reponse": 4,
+       "choix": [
+        "$]-6\\,;-2[\\,\\cup\\,]3\\,;+\\infty[$",
+        "$]0\\,;+\\infty[$",
+        "$]-\\infty\\,;-2[\\,\\cup\\,]3\\,;+\\infty[$",
+        "$]3\\,;+\\infty[$"
+       ],
+       "indice": "Deux réels sont tous deux strictement positifs si et seulement si leur produit et leur somme sont strictement positifs.",
+       "explication": "Il faut $\\Delta > 0$ ($m < -2$ ou $m > 3$), un produit positif ($m + 6 > 0$, soit $m > -6$) et une somme positive ($2m > 0$, soit $m > 0$). L'intersection est $]3\\,;+\\infty[$. Oublier la somme donnerait $]-6\\,;-2[\\,\\cup\\,]3\\,;+\\infty[$ ; or pour $m = -3$, les deux solutions sont négatives (somme $-6$, produit $3$).",
+       "retenir": "Signe des racines, quand $\\Delta > 0$ : $P < 0$, signes contraires ; $P > 0$ et $S > 0$, deux positives ; $P > 0$ et $S < 0$, deux négatives."
+      },
+      {
+       "titre": "Une solution imposée",
+       "enonce": "On suppose que $2$ est solution de $(E_m)$. On rappelle que, lorsque $(E_m)$ a deux solutions, leur somme vaut $2m$. Entrer l'autre solution, sous forme de fraction.",
+       "reponse": "14/3",
+       "indice": "Remplace $x$ par $2$ dans $(E_m)$ pour trouver $m$, puis utilise la somme des solutions.",
+       "explication": "$4 - 4m + m + 6 = 0 \\iff 3m = 10 \\iff m = \\frac{10}{3}$. La somme des solutions vaut alors $2m = \\frac{20}{3}$, donc l'autre solution est $\\frac{20}{3} - 2 = \\frac{14}{3}$. Contrôle par le produit : $2 \\times \\frac{14}{3} = \\frac{28}{3} = \\frac{10}{3} + 6$.",
+       "retenir": "Une solution connue et la somme (ou le produit) des racines donnent l'autre solution, sans discriminant."
+      },
+      {
+       "titre": "Le minimum caché",
+       "enonce": "On admet que $(E_m)$ a des solutions si et seulement si $m \\leqslant -2$ ou $m \\geqslant 3$, et qu'alors $x_1 + x_2 = 2m$ et $x_1 x_2 = m + 6$. Entrer la plus petite valeur possible de $x_1^2 + x_2^2$ lorsque $m$ varie.",
+       "reponse": 8,
+       "indice": "Exprime $x_1^2 + x_2^2$ à l'aide de $x_1 + x_2$ et $x_1 x_2$, puis étudie ce trinôme en $m$ seulement pour les valeurs permises de $m$.",
+       "explication": "$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = 4m^2 - 2m - 12 = g(m)$. Le sommet de $g$ est en $m = \\frac{1}{4}$, valeur interdite (on y trouverait $-12{,}25$, absurde pour une somme de carrés). $g$ est décroissante sur $]-\\infty\\,;-2]$ et croissante sur $[3\\,;+\\infty[$ : minimum $g(-2) = 8$ sur le premier intervalle, $g(3) = 18$ sur le second. Réponse : $8$, obtenu pour $m = -2$ (solution double $-2$ : $4 + 4 = 8$).",
+       "retenir": "Sous contrainte, le sommet ne donne l'extremum que s'il est dans le domaine permis ; sinon, l'extremum est atteint en une borne."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Il existe deux réels dont la somme vaut $4$ et le produit vaut $5$. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Deux réels de somme $S$ et de produit $P$ sont les solutions de $X^2 - SX + P = 0$.",
+       "explication": "Faux. Si $u + v = 4$ et $uv = 5$, alors $(X - u)(X - v) = X^2 - 4X + 5$ pour tout réel $X$, donc $u$ et $v$ sont solutions de $X^2 - 4X + 5 = 0$. Or $\\Delta = 16 - 20 = -4 < 0$ : cette équation n'a aucune solution réelle. De tels réels n'existent donc pas.",
+       "retenir": "Il existe deux réels de somme $S$ et de produit $P$ si et seulement si $S^2 - 4P \\geqslant 0$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $m$, l'équation $x^2 + mx - m^2 - 1 = 0$ admet deux solutions réelles de signes contraires. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Regarde le signe de $ac$, puis celui du produit des solutions.",
+       "explication": "Vrai. Soit $m$ un réel. Ici $a = 1$ et $c = -m^2 - 1 < 0$, donc $ac < 0$ et $\\Delta = m^2 + 4(m^2 + 1) = 5m^2 + 4 > 0$ : deux solutions distinctes. Leur produit $\\frac{c}{a} = -m^2 - 1$ est strictement négatif : elles sont de signes contraires.",
+       "retenir": "Produit des racines $\\frac{c}{a} < 0$ : deux racines réelles de signes contraires, sans même calculer $\\Delta$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $x_1$ et $x_2$ sont les deux solutions de $3x^2 - 7x - 2 = 0$, alors $\\dfrac{1}{x_1} + \\dfrac{1}{x_2} = -\\dfrac{7}{2}$. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Réduis au même dénominateur : la somme et le produit des solutions suffisent.",
+       "explication": "Vrai. Comme $ac < 0$, l'équation a deux solutions, non nulles puisque $c \\neq 0$. On a $x_1 + x_2 = \\frac{7}{3}$ et $x_1 x_2 = -\\frac{2}{3}$. Donc $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2} = \\frac{7}{3} \\times \\left(-\\frac{3}{2}\\right) = -\\frac{7}{2}$.",
+       "retenir": "Toute expression symétrique des racines s'exprime avec $S = -\\frac{b}{a}$ et $P = \\frac{c}{a}$, sans calculer les racines."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c2s",
+   "carte": "sanct-figures",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire d'Hypatie",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Ici, chaque réponse se défend comme devant une classe : la justification compte autant que le résultat.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le pentagone et le nombre d'or",
+       "enonce": "D'après CAPES Mayotte 2022. On admet que les réels $\\alpha = 2\\cos\\left(\\frac{2\\pi}{5}\\right)$ et $\\beta = 2\\cos\\left(\\frac{4\\pi}{5}\\right)$ vérifient $\\alpha + \\beta = -1$ et $\\alpha\\beta = -1$. Entrer la valeur de $\\cos\\left(\\frac{2\\pi}{5}\\right)$ arrondie au millième.",
+       "reponse": 0.309,
+       "tolerance": 0.0005,
+       "indice": "$\\alpha$ et $\\beta$ sont les solutions d'une équation $X^2 - SX + P = 0$. Pour identifier $\\alpha$ parmi elles : comme $0 < \\frac{2\\pi}{5} < \\frac{\\pi}{2}$, le réel $\\cos\\left(\\frac{2\\pi}{5}\\right)$ est strictement positif.",
+       "explication": "$\\alpha$ et $\\beta$ sont les solutions de $X^2 + X - 1 = 0$, soit $\\frac{-1 \\pm \\sqrt{5}}{2}$. Comme $0 < \\frac{2\\pi}{5} < \\frac{\\pi}{2}$, on a $\\alpha > 0$, donc $\\alpha = \\frac{\\sqrt{5} - 1}{2}$ et $\\cos\\left(\\frac{2\\pi}{5}\\right) = \\frac{\\sqrt{5} - 1}{4} \\approx 0{,}309$.",
+       "retenir": "Deux nombres de somme $S$ et de produit $P$ sont les solutions de $X^2 - SX + P = 0$ : c'est ainsi qu'on les calcule."
+      },
+      {
+       "titre": "Une corde de la parabole",
+       "enonce": "D'après CAPES Mayotte 2021. Dans un repère, la droite passant par $A(3\\,;9)$ et $C(0\\,;12)$ recoupe la parabole d'équation $y = x^2$ en un second point $B$. Entrer l'abscisse de $B$.",
+       "reponse": -4,
+       "indice": "La droite a une équation $y = px + 12$ ; les abscisses des points communs sont les solutions d'une équation du second degré dont tu connais déjà une solution.",
+       "explication": "La droite $(AC)$ a pour coefficient directeur $\\frac{9 - 12}{3 - 0} = -1$ et pour équation $y = -x + 12$. Les abscisses des points communs vérifient $x^2 = -x + 12$, soit $x^2 + x - 12 = 0$. Le produit des solutions vaut $-12$ ; l'une est $3$, l'autre est donc $-4$, d'où $B(-4\\,;16)$. Plus généralement, la droite passant par $(a\\,;a^2)$ et $(-b\\,;b^2)$ coupe l'axe des ordonnées au point d'ordonnée $ab$.",
+       "retenir": "Intersection d'une droite et d'une parabole : une équation du second degré dont on connaît souvent une solution ; le produit donne l'autre."
+      },
+      {
+       "titre": "L'une double de l'autre",
+       "enonce": "Soit $m$ un réel strictement positif. On sait que l'équation $x^2 - mx + 18 = 0$ admet deux solutions réelles, dont l'une est le double de l'autre. Entrer $m$.",
+       "reponse": 9,
+       "indice": "Note les solutions $t$ et $2t$, puis écris leur produit et leur somme.",
+       "explication": "Les solutions $t$ et $2t$ vérifient $t \\times 2t = 18$, donc $t^2 = 9$, et $t + 2t = m$, donc $m = 3t$. Comme $m > 0$, $t > 0$ : $t = 3$ et $m = 9$. Vérification : $x^2 - 9x + 18 = (x-3)(x-6)$, de solutions $3$ et $6 = 2 \\times 3$.",
+       "retenir": "Une condition sur les racines ($x_2 = 2x_1$, $x_2 = -x_1$…) se traduit par la somme et le produit : deux équations, sans discriminant.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Périmètre et diagonale",
+       "enonce": "Un terrain rectangulaire à Mamoudzou a un périmètre de $34$ m et une diagonale de $13$ m. Entrer sa longueur (le plus grand côté), en mètres.",
+       "reponse": 12,
+       "unite": "m",
+       "indice": "Avec $x + y = 17$ et $x^2 + y^2 = 169$, calcule $xy$ grâce au développement de $(x+y)^2$.",
+       "explication": "Notons $x$ et $y$ les côtés : $x + y = 17$ et, d'après le théorème de Pythagore, $x^2 + y^2 = 169$. Alors $2xy = (x+y)^2 - (x^2 + y^2) = 289 - 169 = 120$, donc $xy = 60$. Les côtés sont les solutions de $X^2 - 17X + 60 = 0$ : $\\Delta = 289 - 240 = 49$, $X = \\frac{17 \\pm 7}{2}$, soit $12$ et $5$. La longueur est $12$ m.",
+       "retenir": "Connaître la somme $S$ et le produit $P$ de deux nombres, c'est connaître l'équation $X^2 - SX + P = 0$ dont ils sont les solutions."
+      },
+      {
+       "titre": "Une équation réciproque",
+       "enonce": "Entrer le nombre de solutions réelles de l'équation $x^4 - 5x^3 + 8x^2 - 5x + 1 = 0$. On pourra diviser par $x^2$ et poser $X = x + \\dfrac{1}{x}$.",
+       "reponse": 3,
+       "indice": "Vérifie que $0$ n'est pas solution, puis utilise $x^2 + \\frac{1}{x^2} = X^2 - 2$.",
+       "explication": "$0$ n'est pas solution. En divisant par $x^2$ : $x^2 + \\frac{1}{x^2} - 5\\left(x + \\frac{1}{x}\\right) + 8 = 0$, soit $X^2 - 2 - 5X + 8 = 0$, c'est-à-dire $X^2 - 5X + 6 = 0$ : $X = 2$ ou $X = 3$. Or $x + \\frac{1}{x} = 2 \\iff (x-1)^2 = 0 \\iff x = 1$, et $x + \\frac{1}{x} = 3 \\iff x^2 - 3x + 1 = 0$, de discriminant $5$ : deux solutions $\\frac{3 \\pm \\sqrt{5}}{2}$. Au total, trois solutions réelles.",
+       "retenir": "Équation à coefficients symétriques : diviser par $x^2$ et poser $X = x + \\frac{1}{x}$ ramène au second degré."
+      },
+      {
+       "titre": "Un maximum par le discriminant",
+       "enonce": "Soit $x$ et $y$ deux réels tels que $x^2 + y^2 = 1$. Pour tout réel $t$, on pose $P(t) = (xt - 3)^2 + (yt - 4)^2$. En utilisant le signe de $P$, entrer la plus grande valeur possible de $3x + 4y$.",
+       "reponse": 5,
+       "indice": "Développe $P(t)$ : c'est un trinôme en $t$, positif ou nul pour tout $t$. Que peut-on en déduire sur son discriminant ?",
+       "explication": "$P(t) = (x^2 + y^2)t^2 - 2(3x + 4y)t + 25 = t^2 - 2(3x + 4y)t + 25$. Comme $P(t) \\geqslant 0$ pour tout réel $t$, ce trinôme n'a pas deux racines distinctes : $\\Delta = 4(3x + 4y)^2 - 100 \\leqslant 0$, d'où $(3x + 4y)^2 \\leqslant 25$ et $3x + 4y \\leqslant 5$. La valeur $5$ est atteinte pour $x = \\frac{3}{5}$ et $y = \\frac{4}{5}$.",
+       "retenir": "Un trinôme positif ou nul sur $\\mathbb{R}$ a un discriminant négatif ou nul : c'est la preuve classique de l'inégalité de Cauchy-Schwarz."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une justification incomplète",
+       "enonce": "Pour prouver que $-x^2 + 2x - 5 < 0$ pour tout réel $x$, un élève écrit : « $\\Delta = 4 - 20 = -16 < 0$, donc le trinôme est négatif. » Quelle appréciation porter ?",
+       "reponse": 2,
+       "choix": [
+        "La conclusion est fausse : le trinôme prend aussi des valeurs positives.",
+        "La conclusion est juste mais la justification est incomplète : $\\Delta < 0$ donne un signe constant, celui de $a$, ici $a = -1 < 0$.",
+        "Tout est correct et complet : $\\Delta < 0$ suffit à conclure.",
+        "Le discriminant est faux : il vaut $4 + 20 = 24$."
+       ],
+       "indice": "Le trinôme $x^2 + 1$ a lui aussi un discriminant négatif : quel est son signe ?",
+       "explication": "$\\Delta < 0$ signifie que le trinôme ne s'annule pas et garde un signe constant, celui de $a$. L'élève conclut juste, mais sans citer le signe de $a$ ; avec le même argument, il « prouverait » que $x^2 + 1$ est négatif. On attend : « $\\Delta = -16 < 0$ et $a = -1 < 0$, donc le trinôme est strictement négatif sur $\\mathbb{R}$ », ou la forme canonique $-(x-1)^2 - 4$.",
+       "retenir": "Le signe d'un trinôme se lit avec deux informations : le signe de $\\Delta$ (racines ou non) et le signe de $a$."
+      },
+      {
+       "titre": "Choisir le bon contre-exemple",
+       "enonce": "Une élève affirme : « Si $\\Delta > 0$, alors le trinôme $x^2 + bx + c$ a deux racines strictement positives. » Quel trinôme fournit un contre-exemple à présenter à la classe ?",
+       "reponse": 4,
+       "choix": [
+        "$x^2 - 5x + 6$",
+        "$x^2 - 4x + 4$",
+        "$x^2 + 1$",
+        "$x^2 + x - 6$"
+       ],
+       "indice": "Un contre-exemple doit vérifier l'hypothèse ($\\Delta > 0$) et contredire la conclusion.",
+       "explication": "$x^2 + x - 6$ a pour discriminant $25 > 0$ et pour racines $2$ et $-3$ : l'hypothèse est vérifiée, la conclusion non. $x^2 - 4x + 4$ ($\\Delta = 0$) et $x^2 + 1$ ($\\Delta < 0$) ne vérifient pas l'hypothèse : ils ne prouvent rien. $x^2 - 5x + 6$ a deux racines positives, $2$ et $3$ : c'est un exemple, pas un contre-exemple.",
+       "retenir": "Un contre-exemple à « si $H$, alors $C$ » vérifie $H$ sans vérifier $C$ ; un cas qui ne vérifie pas $H$ ne prouve rien."
+      },
+      {
+       "titre": "Du collège au lycée",
+       "enonce": "En classe de Seconde, pour factoriser $x^2 - 6x + 5$ sans utiliser le discriminant, quelle démarche réinvestit le mieux les acquis du collège ?",
+       "reponse": 1,
+       "choix": [
+        "Écrire $x^2 - 6x + 5 = (x-3)^2 - 4$, puis utiliser $A^2 - B^2 = (A-B)(A+B)$ pour obtenir $(x-5)(x-1)$.",
+        "Mettre $x$ en facteur : $x(x-6) + 5$ est la forme factorisée cherchée.",
+        "Utiliser $(a-b)^2 = a^2 - 2ab + b^2$ pour écrire directement $(x - \\sqrt{5})^2$.",
+        "Essayer des valeurs au tableur jusqu'à voir apparaître la factorisation."
+       ],
+       "indice": "Quelle identité remarquable du collège transforme une différence de deux carrés en produit ?",
+       "explication": "On complète le carré : $x^2 - 6x + 5 = (x-3)^2 - 9 + 5 = (x-3)^2 - 2^2$, puis l'identité $A^2 - B^2 = (A - B)(A + B)$ donne $(x - 3 - 2)(x - 3 + 2) = (x-5)(x-1)$. C'est la démonstration de la formule des racines, faite sur un exemple. $x(x-6) + 5$ est une somme, pas un produit ; et $(x - \\sqrt{5})^2 = x^2 - 2\\sqrt{5}\\,x + 5$.",
+       "retenir": "Forme canonique puis $A^2 - B^2 = (A-B)(A+B)$ : c'est la preuve des formules du discriminant, à faire refaire sur des exemples."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous réels $x$ et $y$, $x^2 + xy + y^2 \\geqslant 0$. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Fixe $y$ et regarde l'expression comme un trinôme en $x$.",
+       "explication": "Vrai. Soit $y$ un réel fixé. Le trinôme en $x$, $x^2 + yx + y^2$, a pour coefficient dominant $1 > 0$ et pour discriminant $y^2 - 4y^2 = -3y^2 \\leqslant 0$ : il est positif ou nul pour tout réel $x$. Autre preuve : $x^2 + xy + y^2 = \\left(x + \\frac{y}{2}\\right)^2 + \\frac{3y^2}{4}$, somme de deux carrés.",
+       "retenir": "Pour étudier le signe d'une expression à deux variables, fixer l'une et voir un trinôme en l'autre."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = ax^2 + bx + c$, avec $a \\neq 0$. Si $f(0) \\times f(1) < 0$, alors $f$ a deux racines réelles distinctes. »",
+       "reponse": 1,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Raisonne par l'absurde : que dire du signe de $f$ si $\\Delta \\leqslant 0$ ?",
+       "explication": "Vrai. Supposons $\\Delta \\leqslant 0$. Alors $f(x) = a\\left[\\left(x + \\frac{b}{2a}\\right)^2 - \\frac{\\Delta}{4a^2}\\right]$, où le crochet est positif ou nul : $a f(x) \\geqslant 0$ pour tout réel $x$. Donc $a^2 f(0) f(1) = (af(0))(af(1)) \\geqslant 0$, d'où $f(0) f(1) \\geqslant 0$, ce qui contredit l'hypothèse. Ainsi $\\Delta > 0$.",
+       "retenir": "Un trinôme qui change de signe a forcément deux racines distinctes : si $\\Delta \\leqslant 0$, il garde le signe de $a$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tout réel $m$, l'équation $x^2 - (m+1)x + m = 0$ admet deux solutions réelles distinctes. »",
+       "reponse": 2,
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "indice": "Cherche une racine évidente, puis l'autre racine en fonction de $m$.",
+       "explication": "Faux. $1$ est racine évidente ($1 - m - 1 + m = 0$) et le produit des racines vaut $m$ : $x^2 - (m+1)x + m = (x-1)(x-m)$. Les solutions sont $1$ et $m$, distinctes sauf si $m = 1$. Contre-exemple : $m = 1$ donne $x^2 - 2x + 1 = (x-1)^2$, une seule solution. D'ailleurs $\\Delta = (m-1)^2$ s'annule en $m = 1$.",
+       "retenir": "Un « pour tout $m$ » tombe sur une seule valeur : chercher les valeurs du paramètre qui annulent $\\Delta$."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

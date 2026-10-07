@@ -1,0 +1,698 @@
+{
+ "id": "ch8",
+ "titre": "Probabilités et statistiques",
+ "introduction": "Laplace l'a écrit : la théorie des probabilités n'est, au fond, que le bon sens réduit au calcul. Cette semaine, tu apprends à peser l'incertain : conditionner, c'est changer d'univers ; indépendant ne veut pas dire incompatible ; une moyenne cache autant qu'elle montre. Au concours, chaque probabilité se justifie : un arbre décrit, une formule nommée, une hypothèse vérifiée.",
+ "conclusion": "Emporte trois réflexes : demander « sachant quoi ? » avant tout calcul, prouver l'indépendance par un produit et non par l'intuition, lire toute moyenne avec ses effectifs. Le hasard ne se devine pas : il se pèse.",
+ "salles": [
+  {
+   "id": "c8r1",
+   "carte": "cramer",
+   "fond": "bibliotheque",
+   "nom": "Le pari de Pascal",
+   "notion": "Probabilités conditionnelles, arbres",
+   "athena": "Conditionner, c'est changer d'univers : avant tout calcul, demande-toi « sachant quoi ? ».",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Demi-pensionnaires",
+       "enonce": "Un collège de Mamoudzou compte 400 élèves : 220 filles et 180 garçons. Parmi les filles, 120 sont demi-pensionnaires ; parmi les garçons, 80 le sont. On choisit un élève au hasard et l'on note $F$ : « l'élève est une fille » et $D$ : « l'élève est demi-pensionnaire ». Entrer $P_D(F)$, sous forme de fraction ou de décimal.",
+       "reponse": "3/5",
+       "indice": "Sachant $D$ : l'univers devient l'ensemble des demi-pensionnaires. Combien sont-ils, et combien de filles parmi eux ?",
+       "explication": "Il y a $120 + 80 = 200$ demi-pensionnaires, dont 120 filles : $P_D(F) = \\frac{120}{200} = \\frac{3}{5}$. Ne pas confondre avec $P_F(D) = \\frac{120}{220} = \\frac{6}{11}$, qui est la proportion de demi-pensionnaires parmi les filles.",
+       "retenir": "$P_D(F) = \\frac{P(D \\cap F)}{P(D)}$ : on divise par la probabilité de l'événement qui suit « sachant »."
+      },
+      {
+       "titre": "Le retard de la barge",
+       "enonce": "Dans une entreprise de Mamoudzou, 40 % des salariés habitent en Petite-Terre et viennent par la barge. Un matin, 30 % de ces salariés arrivent en retard ; sur l'ensemble de l'entreprise, 20 % des salariés arrivent en retard ce matin-là. On choisit un salarié au hasard et l'on note $A$ : « il habite en Petite-Terre » et $R$ : « il est arrivé en retard ce matin-là ». Sachant qu'il est arrivé en retard, entrer la probabilité qu'il habite en Petite-Terre, sous forme décimale.",
+       "reponse": 0.6,
+       "indice": "On demande $P_R(A)$, pas $P_A(R)$. Calcule d'abord $P(A \\cap R)$.",
+       "explication": "$P(A \\cap R) = P(A) \\times P_A(R) = 0{,}4 \\times 0{,}3 = 0{,}12$, d'où $P_R(A) = \\frac{P(A \\cap R)}{P(R)} = \\frac{0{,}12}{0{,}2} = 0{,}6$. La réponse 0,3 confond $P_R(A)$ et $P_A(R)$.",
+       "retenir": "$P_A(R)$ et $P_R(A)$ ont le même numérateur $P(A \\cap R)$ mais pas le même dénominateur : si $P(A \\cap R) \\neq 0$, elles diffèrent dès que $P(A) \\neq P(R)$."
+      },
+      {
+       "titre": "Deux enfants",
+       "enonce": "On choisit une famille au hasard parmi les familles de deux enfants. On admet que les quatre compositions possibles, l'aîné étant cité en premier (fille-fille, fille-garçon, garçon-fille, garçon-garçon), sont équiprobables. Sachant que la famille choisie compte au moins une fille, entrer la probabilité que ses deux enfants soient des filles, sous forme de fraction.",
+       "reponse": "1/3",
+       "indice": "Parmi les quatre compositions équiprobables, lesquelles réalisent « au moins une fille » ? Sachant cela, l'univers se réduit à celles-là.",
+       "explication": "L'arbre (aîné, puis cadet) donne quatre issues de probabilité $\\frac{1}{4}$ : fille-fille, fille-garçon, garçon-fille, garçon-garçon. Notons $A$ : « au moins une fille » et $D$ : « deux filles ». Alors $P(A) = \\frac{3}{4}$ et, comme $D \\subset A$, $P(D \\cap A) = P(D) = \\frac{1}{4}$. Donc $P_A(D) = \\frac{1/4}{3/4} = \\frac{1}{3}$. La réponse $\\frac{1}{2}$ serait celle de la question « sachant que l'aînée est une fille » : l'information reçue n'est pas la même.",
+       "retenir": "Le conditionnement dépend exactement de l'information reçue : « au moins une fille » et « l'aînée est une fille » ne donnent pas la même probabilité."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Tortues du lagon",
+       "enonce": "Parmi les plongeurs d'une sortie dans le lagon, 30 % sont débutants. Un débutant aperçoit une tortue avec probabilité $0{,}6$ ; un plongeur confirmé, avec probabilité $0{,}8$. On choisit un plongeur au hasard ; $D$ : « il est débutant », $T$ : « il aperçoit une tortue ». Entrer $P(D \\cap \\overline{T})$, sous forme décimale.",
+       "reponse": 0.12,
+       "indice": "Premier niveau de l'arbre : $D$ ou $\\overline{D}$ ; second niveau : $T$ ou $\\overline{T}$. Quelle est la branche qui va de $D$ vers $\\overline{T}$ ?",
+       "explication": "L'arbre a un premier niveau $D$ (0,3) / $\\overline{D}$ (0,7), puis, après $D$ : $T$ (0,6) / $\\overline{T}$ (0,4), et après $\\overline{D}$ : $T$ (0,8) / $\\overline{T}$ (0,2). La probabilité d'un chemin est le produit des probabilités de ses branches : $P(D \\cap \\overline{T}) = P(D) \\times P_D(\\overline{T}) = 0{,}3 \\times 0{,}4 = 0{,}12$.",
+       "retenir": "Sur un arbre pondéré, les branches issues d'un même nœud ont pour somme 1, et la probabilité d'un chemin est le produit de ses branches."
+      },
+      {
+       "titre": "Deux boules sans remise",
+       "enonce": "Une urne contient 3 boules rouges et 5 boules noires, indiscernables au toucher. On tire au hasard une boule, on ne la remet pas, puis on en tire une seconde. Entrer la probabilité que les deux boules tirées soient de la même couleur, sous forme de fraction.",
+       "reponse": "13/28",
+       "indice": "Après le premier tirage, il ne reste que 7 boules et la composition a changé. Deux chemins de l'arbre conviennent.",
+       "explication": "Arbre : premier tirage rouge ($\\frac{3}{8}$) ou noir ($\\frac{5}{8}$) ; après une rouge, il reste 2 rouges et 5 noires ; après une noire, 3 rouges et 4 noires. Donc $P = \\frac{3}{8} \\times \\frac{2}{7} + \\frac{5}{8} \\times \\frac{4}{7} = \\frac{6}{56} + \\frac{20}{56} = \\frac{26}{56} = \\frac{13}{28}$. Avec remise, on aurait trouvé $\\frac{9}{64} + \\frac{25}{64} = \\frac{17}{32}$.",
+       "retenir": "Sans remise, les probabilités du second niveau de l'arbre sont conditionnelles : elles dépendent du résultat du premier tirage."
+      },
+      {
+       "titre": "Arrivés avant 7 h",
+       "enonce": "Une proportion $p$ des élèves d'un collège ($0 < p < 1$) vient en bus scolaire (événement $B$). Parmi eux, 50 % arrivent avant 7 h (événement $H$) ; parmi les autres élèves, 20 % arrivent avant 7 h. On constate que $P(B \\cap H) = P(\\overline{B} \\cap H)$. Entrer la valeur exacte de $p$, sous forme de fraction.",
+       "reponse": "2/7",
+       "indice": "Écris, en fonction de $p$, les probabilités des deux chemins qui mènent à $H$, puis égale-les.",
+       "explication": "Chemins : $P(B \\cap H) = 0{,}5p$ et $P(\\overline{B} \\cap H) = 0{,}2(1 - p)$. L'égalité donne $0{,}5p = 0{,}2 - 0{,}2p$, soit $0{,}7p = 0{,}2$ et $p = \\frac{2}{7}$. On en déduit d'ailleurs $P_H(B) = \\frac{1}{2}$ : la moitié des élèves arrivés avant 7 h viennent en bus, bien que seuls $\\frac{2}{7}$ des élèves le prennent.",
+       "retenir": "Un arbre se lit dans les deux sens : avec une inconnue sur une branche, une égalité entre chemins devient une équation."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous événements $A$ et $B$ de probabilités non nulles, $P_A(B) = P_B(A)$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Teste avec un dé : $A$ : « obtenir 6 » et $B$ : « obtenir un nombre pair ».",
+       "explication": "Faux. Contre-exemple : on lance un dé équilibré ; $A$ : « obtenir 6 », $B$ : « obtenir un nombre pair ». Alors $P_A(B) = 1$ (6 est pair) mais $P_B(A) = \\frac{P(A \\cap B)}{P(B)} = \\frac{1/6}{1/2} = \\frac{1}{3}$. En fait $P(A) \\times P_A(B) = P(B) \\times P_B(A) = P(A \\cap B)$ : les deux probabilités conditionnelles ne sont égales que si $P(A) = P(B)$ ou $P(A \\cap B) = 0$.",
+       "retenir": "$P(A)\\,P_A(B) = P(B)\\,P_B(A) = P(A \\cap B)$ : on passe de l'une à l'autre par la formule de Bayes, jamais par simple échange."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous événements $A$ et $B$ tels que $P(A) > 0$, on a $P_A(B) \\geqslant P(A \\cap B)$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris la définition de $P_A(B)$ et pense à l'encadrement $0 < P(A) \\leqslant 1$.",
+       "explication": "Vrai. Par définition, $P_A(B) = \\frac{P(A \\cap B)}{P(A)}$. Comme $0 < P(A) \\leqslant 1$, on a $\\frac{1}{P(A)} \\geqslant 1$ ; et $P(A \\cap B) \\geqslant 0$. Donc $P_A(B) = \\frac{1}{P(A)} \\times P(A \\cap B) \\geqslant P(A \\cap B)$. Il y a égalité lorsque $P(A) = 1$ ou $P(A \\cap B) = 0$.",
+       "retenir": "Diviser par une probabilité non nulle ne peut qu'agrandir : $P_A(B) \\geqslant P(A \\cap B)$. Sur un arbre, une branche vaut au moins le chemin qu'elle termine."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous événements $A$ et $B$ tels que $0 < P(B) < 1$, on a $P_B(A) + P_{\\overline{B}}(A) = 1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "La formule juste est $P_B(A) + P_B(\\overline{A}) = 1$. Ici, le conditionnement n'est pas le même dans les deux termes.",
+       "explication": "Faux. Contre-exemple : dé équilibré, $A$ : « obtenir 1 ou 2 », $B$ : « obtenir un nombre pair ». Sachant $B$, seul 2 convient parmi 2, 4, 6 : $P_B(A) = \\frac{1}{3}$ ; sachant $\\overline{B}$, seul 1 convient parmi 1, 3, 5 : $P_{\\overline{B}}(A) = \\frac{1}{3}$. La somme vaut $\\frac{2}{3} \\neq 1$. Ce qui est vrai : $P_B(A) + P_B(\\overline{A}) = 1$, car $P_B$ est une probabilité.",
+       "retenir": "$P_B$ est une probabilité : $P_B(A) + P_B(\\overline{A}) = 1$. Mais changer de conditionnement ($B$ puis $\\overline{B}$) ne donne aucune somme connue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c8r2",
+   "carte": "aljabr",
+   "fond": "mer",
+   "nom": "Le probable de Carnéade",
+   "notion": "Probabilités totales, indépendance",
+   "athena": "Incompatibles : ils s'excluent. Indépendants : l'un n'apprend rien sur l'autre. Ne confonds jamais ces deux mots.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Fleurs d'ylang-ylang",
+       "enonce": "Une distillerie d'ylang-ylang reçoit 40 % de ses fleurs d'une plantation de Combani et 60 % d'une plantation de Dembéni. 90 % des fleurs de Combani et 75 % de celles de Dembéni sont de première qualité. On choisit une fleur au hasard dans la distillerie. Entrer la probabilité qu'elle soit de première qualité, sous forme décimale.",
+       "reponse": 0.81,
+       "indice": "Deux chemins de l'arbre mènent à « première qualité » : additionne leurs probabilités.",
+       "explication": "Notons $C$ : « la fleur vient de Combani » et $Q$ : « elle est de première qualité ». Les événements $C$ et $\\overline{C}$ forment une partition de l'univers. Formule des probabilités totales : $P(Q) = P(C)\\,P_C(Q) + P(\\overline{C})\\,P_{\\overline{C}}(Q) = 0{,}4 \\times 0{,}9 + 0{,}6 \\times 0{,}75 = 0{,}36 + 0{,}45 = 0{,}81$.",
+       "retenir": "Probabilités totales : si $A$ et $\\overline{A}$ partitionnent l'univers, $P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$."
+      },
+      {
+       "titre": "Briques défectueuses",
+       "enonce": "Une briqueterie mahoraise fabrique des briques de terre comprimée avec deux presses : la presse A produit 60 % des briques, la presse B les 40 % restants. 2 % des briques de la presse A et 5 % de celles de la presse B sont défectueuses. Une brique prise au hasard est défectueuse. Entrer la probabilité qu'elle provienne de la presse B, sous forme de fraction ou de décimal.",
+       "reponse": "5/8",
+       "indice": "Avec $D$ : « la brique est défectueuse », calcule d'abord $P(D)$ par les probabilités totales, puis $P_D(B) = \\frac{P(B \\cap D)}{P(D)}$.",
+       "explication": "Notons $A$, $B$ les événements « la brique vient de la presse A, de la presse B » et $D$ : « elle est défectueuse ». $P(D) = 0{,}6 \\times 0{,}02 + 0{,}4 \\times 0{,}05 = 0{,}012 + 0{,}02 = 0{,}032$. Puis $P_D(B) = \\frac{0{,}4 \\times 0{,}05}{0{,}032} = \\frac{0{,}02}{0{,}032} = \\frac{5}{8}$. La presse B ne produit que 40 % des briques, mais 62,5 % des briques défectueuses.",
+       "retenir": "Formule de Bayes en pratique : $P_D(B) = \\frac{P(B)\\,P_B(D)}{P(D)}$, le dénominateur venant des probabilités totales."
+      },
+      {
+       "titre": "Deux urnes",
+       "enonce": "On lance une pièce équilibrée. Si elle tombe sur pile, on tire une boule dans l'urne $U$, qui contient 2 boules blanches et 2 noires ; sinon, on tire une boule dans l'urne $V$, qui contient 3 boules blanches et $n$ boules noires ($n$ entier naturel). On sait que, sachant que la boule tirée est blanche, la probabilité qu'elle provienne de l'urne $U$ est $\\frac{3}{5}$. Entrer $n$.",
+       "reponse": 6,
+       "indice": "Avec $B$ : « la boule est blanche », écris $P_B(U) = \\frac{P(U \\cap B)}{P(B)}$ ; tu en déduis $P(B)$, puis $n$ par les probabilités totales.",
+       "explication": "Notons $B$ : « la boule est blanche ». $P(U \\cap B) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$ et $P(V \\cap B) = \\frac{1}{2} \\times \\frac{3}{3+n}$. La condition $P_B(U) = \\frac{3}{5}$ s'écrit $\\frac{1}{4} = \\frac{3}{5}P(B)$, donc $P(B) = \\frac{5}{12}$, puis $P(V \\cap B) = \\frac{5}{12} - \\frac{1}{4} = \\frac{1}{6}$. Ainsi $\\frac{3}{2(3+n)} = \\frac{1}{6}$, soit $3 + n = 9$ et $n = 6$.",
+       "retenir": "Bayes « à rebours » : connaître $P_B(U)$ donne $P(B) = \\frac{P(U \\cap B)}{P_B(U)}$, puis l'inconnue par les probabilités totales.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "La barge et le bus",
+       "enonce": "Un matin, la barge est en retard avec probabilité $0{,}2$, et le bus scolaire que prend ensuite un élève est en retard avec probabilité $0{,}1$. On suppose ces deux événements indépendants. Entrer la probabilité qu'au moins l'un des deux soit en retard, sous forme décimale.",
+       "reponse": 0.28,
+       "indice": "Passe par le contraire : « aucun des deux n'est en retard ». Les contraires de deux événements indépendants sont indépendants.",
+       "explication": "Notons $A$ et $B$ les deux retards. Comme $A$ et $B$ sont indépendants, $\\overline{A}$ et $\\overline{B}$ le sont aussi, donc $P(\\overline{A} \\cap \\overline{B}) = 0{,}8 \\times 0{,}9 = 0{,}72$ et $P(A \\cup B) = 1 - 0{,}72 = 0{,}28$. Autre voie : $P(A \\cup B) = P(A) + P(B) - P(A)\\,P(B) = 0{,}2 + 0{,}1 - 0{,}02 = 0{,}28$.",
+       "retenir": "« Au moins un » : passer par le contraire. Indépendance : $P(A \\cap B) = P(A)\\,P(B)$ ; l'égalité $P(A \\cup B) = P(A) + P(B)$ est réservée aux événements incompatibles."
+      },
+      {
+       "titre": "Pair et multiple de 3",
+       "enonce": "On lance un dé équilibré à six faces. On note $A$ : « obtenir un nombre pair » et $B$ : « obtenir un multiple de 3 ». Que peut-on affirmer ?",
+       "reponse": 3,
+       "choix": [
+        "$A$ et $B$ sont incompatibles, donc ils ne sont pas indépendants.",
+        "$A$ et $B$ ne sont ni indépendants, ni incompatibles.",
+        "$A$ et $B$ sont indépendants, et ils ne sont pas incompatibles.",
+        "$A$ et $B$ sont indépendants, car ils sont incompatibles."
+       ],
+       "indice": "Compare $P(A \\cap B)$ et $P(A) \\times P(B)$ ; regarde aussi si $A$ et $B$ ont une issue commune.",
+       "explication": "$A \\cap B = \\{6\\}$ n'est pas vide : $A$ et $B$ ne sont pas incompatibles. Et $P(A \\cap B) = \\frac{1}{6} = \\frac{1}{2} \\times \\frac{1}{3} = P(A) \\times P(B)$ : ils sont indépendants. Savoir que le résultat est pair ne change pas la probabilité qu'il soit multiple de 3 : $P_A(B) = \\frac{1}{3} = P(B)$.",
+       "retenir": "Indépendance : $P(A \\cap B) = P(A)\\,P(B)$, cela se calcule. Incompatibilité : $A \\cap B = \\emptyset$, cela se lit sur les issues. Deux notions différentes."
+      },
+      {
+       "titre": "Le pari du chevalier",
+       "enonce": "On lance $n$ fois un dé équilibré, les lancers étant indépendants. Le chevalier de Méré veut parier sur l'événement « obtenir au moins un 6 » avec une probabilité de gagner strictement supérieure à $\\frac{1}{2}$. Entrer la plus petite valeur de $n$ qui convient.",
+       "reponse": 4,
+       "indice": "Le contraire de « au moins un 6 » est « aucun 6 », de probabilité $\\left(\\frac{5}{6}\\right)^n$ par indépendance. Calcule cette puissance pour $n = 3$ et $n = 4$.",
+       "explication": "Par indépendance des lancers, la probabilité de n'obtenir aucun 6 est $\\left(\\frac{5}{6}\\right)^n$, donc celle d'obtenir au moins un 6 est $1 - \\left(\\frac{5}{6}\\right)^n$. Or $\\left(\\frac{5}{6}\\right)^3 = \\frac{125}{216} \\approx 0{,}579 > \\frac{1}{2}$ et $\\left(\\frac{5}{6}\\right)^4 = \\frac{625}{1296} \\approx 0{,}482 < \\frac{1}{2}$. La suite $\\left(\\left(\\frac{5}{6}\\right)^n\\right)$ étant décroissante, le plus petit $n$ est 4 ; la probabilité de gagner vaut alors $\\frac{671}{1296} \\approx 0{,}518$.",
+       "retenir": "« Au moins un succès en $n$ essais indépendants de probabilité $p$ » : $1 - (1-p)^n$, jamais $n \\times p$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Deux événements incompatibles, de probabilités non nulles, ne sont jamais indépendants. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Que vaut $P(A \\cap B)$ pour des événements incompatibles ? Et $P(A) \\times P(B)$ ?",
+       "explication": "Vrai. Si $A$ et $B$ sont incompatibles, $A \\cap B = \\emptyset$, donc $P(A \\cap B) = 0$. Or $P(A) > 0$ et $P(B) > 0$, donc $P(A) \\times P(B) > 0$. Ainsi $P(A \\cap B) \\neq P(A) \\times P(B)$ : $A$ et $B$ ne sont pas indépendants. Intuitivement, savoir que $A$ est réalisé apprend que $B$ ne l'est pas.",
+       "retenir": "Incompatibles et de probabilités non nulles entraîne dépendants. L'hypothèse « non nulles » est indispensable : l'événement impossible est indépendant de tout événement."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Soit $A$ et $B$ deux événements avec $0 < P(A) < 1$. Proposition : « Si $P_A(B) = P_{\\overline{A}}(B)$, alors $A$ et $B$ sont indépendants. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Calcule $P(B)$ par la formule des probabilités totales, en notant $q$ la valeur commune des deux probabilités conditionnelles.",
+       "explication": "Vrai. Notons $q = P_A(B) = P_{\\overline{A}}(B)$. Par les probabilités totales, $P(B) = P(A)\\,q + P(\\overline{A})\\,q = q$. Donc $P(A \\cap B) = P(A)\\,P_A(B) = P(A)\\,q = P(A)\\,P(B)$ : $A$ et $B$ sont indépendants. Sur un arbre, des branches vers $B$ de même poids après $A$ et après $\\overline{A}$ traduisent l'indépendance.",
+       "retenir": "Si $B$ a la même probabilité, que $A$ soit réalisé ou non, alors $B$ est indépendant de $A$ : c'est le sens même de l'indépendance."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour tous événements $A$ et $B$ tels que $0 < P(A) < 1$, on a $P(B) = P_A(B) + P_{\\overline{A}}(B)$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Compare avec la formule des probabilités totales : que sont devenues les probabilités $P(A)$ et $P(\\overline{A})$ ?",
+       "explication": "Faux. Contre-exemple : on lance un dé équilibré, et $A$ et $B$ sont tous deux l'événement « obtenir 1, 2 ou 3 ». Alors $P_A(B) = 1$ et $P_{\\overline{A}}(B) = 0$, de somme 1, alors que $P(B) = \\frac{1}{2}$. La formule juste pondère : $P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$, qui donne bien $\\frac{1}{2} \\times 1 + \\frac{1}{2} \\times 0 = \\frac{1}{2}$.",
+       "retenir": "Probabilités totales : on additionne des chemins (des produits), pas des branches. Oublier les poids $P(A)$ et $P(\\overline{A})$ est l'erreur classique."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c8r3",
+   "carte": "pascal",
+   "fond": "jardin",
+   "nom": "Le doute de Montaigne",
+   "notion": "Variables aléatoires, espérance",
+   "athena": "L'espérance n'est pas le gain d'une partie : c'est la moyenne des gains sur un très grand nombre de parties.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Le jeu du dé",
+       "enonce": "On lance un dé équilibré à six faces. On gagne 10 € si l'on obtient 6, on gagne 2 € si l'on obtient 4 ou 5, et l'on perd 3 € sinon. On note $X$ le gain algébrique, en euros. Entrer l'espérance $E(X)$, sous forme de fraction.",
+       "reponse": "5/6",
+       "unite": "€",
+       "indice": "Donne la loi de $X$ (ses valeurs $10$, $2$, $-3$ et leurs probabilités), puis calcule la somme des produits « valeur × probabilité ».",
+       "explication": "Loi de $X$ : $P(X = 10) = \\frac{1}{6}$, $P(X = 2) = \\frac{2}{6}$, $P(X = -3) = \\frac{3}{6}$ (somme 1). Donc $E(X) = 10 \\times \\frac{1}{6} + 2 \\times \\frac{2}{6} - 3 \\times \\frac{3}{6} = \\frac{10 + 4 - 9}{6} = \\frac{5}{6}$. Sur un grand nombre de parties, on gagne en moyenne environ 0,83 € par partie : le jeu est favorable au joueur.",
+       "retenir": "$E(X) = \\sum x_i\\,P(X = x_i)$ ; vérifier d'abord que les probabilités de la loi ont pour somme 1."
+      },
+      {
+       "titre": "Les tortues de N'Gouja",
+       "enonce": "Lors d'une plongée à N'Gouja, le nombre $X$ de tortues aperçues prend les valeurs 0, 1, 2 ou 3. On sait que $P(X = 0) = 0{,}1$, $P(X = 1) = 0{,}3$ et $P(X = 2) = 2\\,P(X = 3)$. Entrer $E(X)$, sous forme décimale.",
+       "reponse": 1.7,
+       "indice": "La somme des probabilités vaut 1 : cela donne $P(X = 3)$.",
+       "explication": "Notons $a = P(X = 3)$. Alors $0{,}1 + 0{,}3 + 2a + a = 1$, donc $3a = 0{,}6$ et $a = 0{,}2$ ; puis $P(X = 2) = 0{,}4$. Ainsi $E(X) = 0 \\times 0{,}1 + 1 \\times 0{,}3 + 2 \\times 0{,}4 + 3 \\times 0{,}2 = 0{,}3 + 0{,}8 + 0{,}6 = 1{,}7$.",
+       "retenir": "Une loi de probabilité se complète grâce à la condition $\\sum P(X = x_i) = 1$."
+      },
+      {
+       "titre": "La mise équitable",
+       "enonce": "Une urne contient 2 boules rouges et 3 boules vertes. Un joueur paie une mise de $m$ euros, puis tire successivement, sans remise, deux boules. Il reçoit 20 € s'il tire deux rouges, 5 € s'il tire exactement une rouge, rien sinon. Le jeu est équitable lorsque l'espérance du gain algébrique (somme reçue moins la mise) est nulle. Entrer la valeur de $m$ qui rend le jeu équitable.",
+       "reponse": 5,
+       "unite": "€",
+       "indice": "Calcule l'espérance de la somme reçue $S$ à l'aide d'un arbre à deux niveaux ; le gain algébrique est $S - m$.",
+       "explication": "Arbre sans remise : deux rouges, $\\frac{2}{5} \\times \\frac{1}{4} = \\frac{1}{10}$ ; exactement une rouge, $\\frac{2}{5} \\times \\frac{3}{4} + \\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{5}$ ; deux vertes, $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{10}$. Donc $E(S) = 20 \\times \\frac{1}{10} + 5 \\times \\frac{3}{5} + 0 = 2 + 3 = 5$. Par linéarité, $E(S - m) = E(S) - m = 5 - m$, qui est nul pour $m = 5$.",
+       "retenir": "Jeu équitable : espérance du gain algébrique nulle, c'est-à-dire mise égale à l'espérance de la somme reçue, car $E(S - m) = E(S) - m$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour toute variable aléatoire $X$ prenant un nombre fini de valeurs et pour tous réels $a$ et $b$, $E(aX + b) = a\\,E(X) + b$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Écris $E(aX + b)$ comme une somme sur les valeurs $x_i$ de $X$, puis sépare la somme en deux.",
+       "explication": "Vrai. Si $X$ prend les valeurs $x_1, \\dots, x_n$ avec les probabilités $p_1, \\dots, p_n$, alors $aX + b$ prend les valeurs $a x_i + b$ avec ces mêmes probabilités (en regroupant les valeurs égales si $a = 0$). Donc $E(aX + b) = \\sum (a x_i + b)\\,p_i = a \\sum x_i p_i + b \\sum p_i = a\\,E(X) + b$, car $\\sum p_i = 1$.",
+       "retenir": "Linéarité de l'espérance : $E(aX + b) = a\\,E(X) + b$. Changer d'unité ou ajouter un bonus fixe agit de la même façon sur l'espérance."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour toute variable aléatoire $X$ ne prenant que des valeurs strictement positives, $E\\left(\\frac{1}{X}\\right) = \\frac{1}{E(X)}$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Essaie une variable qui prend deux valeurs, 1 et 3, avec la même probabilité.",
+       "explication": "Faux. Contre-exemple : $X$ prend les valeurs 1 et 3 avec probabilité $\\frac{1}{2}$ chacune. Alors $E(X) = 2$, donc $\\frac{1}{E(X)} = \\frac{1}{2}$, alors que $E\\left(\\frac{1}{X}\\right) = \\frac{1}{2} \\times 1 + \\frac{1}{2} \\times \\frac{1}{3} = \\frac{2}{3}$. L'espérance passe à travers une fonction affine, pas à travers une fonction comme $x \\mapsto \\frac{1}{x}$.",
+       "retenir": "En général $E(f(X)) \\neq f(E(X))$ : seules les fonctions affines passent à l'espérance. Même piège que « la vitesse moyenne n'est pas la moyenne des vitesses »."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si une variable aléatoire $X$ ne prend que des valeurs positives ou nulles et si $E(X) = 0$, alors $P(X = 0) = 1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "$E(X)$ est une somme de termes $x_i\\,P(X = x_i)$ : quel est leur signe ?",
+       "explication": "Vrai. $E(X) = \\sum x_i\\,P(X = x_i)$ est une somme de termes positifs ou nuls ; elle n'est nulle que si chaque terme l'est. Pour toute valeur $x_i > 0$, on obtient donc $P(X = x_i) = 0$. Il ne reste que la valeur 0, d'où $P(X = 0) = 1$. Sans l'hypothèse de positivité, c'est faux : si $X$ vaut $-1$ ou $1$ avec probabilité $\\frac{1}{2}$ chacun, $E(X) = 0$ mais $X$ ne prend jamais la valeur 0.",
+       "retenir": "Une somme de termes positifs est nulle si et seulement si chaque terme est nul : un argument clé pour l'espérance et la variance."
+      }
+     ]
+    }
+   ],
+   "acrobaties": [
+    {
+     "titre": "Le problème des partis",
+     "enonce": "En 1654, Pascal écrit à Fermat. Deux joueurs A et B ont misé chacun 32 pistoles ; chaque manche est gagnée par l'un ou l'autre avec probabilité $\\frac{1}{2}$, les manches étant indépendantes, et le premier qui gagne trois manches emporte les 64 pistoles. La partie est interrompue alors que A a gagné deux manches et B une. On partage l'enjeu selon l'espérance de ce que chacun aurait reçu si l'on avait continué. Entrer la part de A.",
+     "reponse": 48,
+     "unite": "pistoles",
+     "indice": "Décris la suite de la partie : A gagne dès qu'il remporte une manche ; B doit en remporter deux de suite. Quelle est la probabilité que A l'emporte ?",
+     "explication": "B n'emporte l'enjeu que s'il gagne les deux manches suivantes, avec probabilité $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$ ; A l'emporte donc avec probabilité $\\frac{3}{4}$. La somme reçue par A vaut 64 avec probabilité $\\frac{3}{4}$ et 0 sinon : son espérance est $64 \\times \\frac{3}{4} = 48$ pistoles, et B reçoit 16. C'est le partage proposé par Pascal : on raisonne sur ce qui reste à jouer, non sur les manches passées.",
+     "retenir": "Partager équitablement un jeu interrompu, c'est donner à chacun l'espérance de ce qu'il aurait reçu : on regarde l'avenir, pas le passé."
+    }
+   ]
+  },
+  {
+   "id": "c8r4",
+   "carte": "fermat",
+   "fond": "brumes",
+   "nom": "La suspension de Pyrrhon",
+   "notion": "Statistiques : moyenne, médiane, quartiles, écart-type",
+   "athena": "Une moyenne sans ses effectifs peut tromper : regarde toujours comment la population se répartit.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "Moyenne pondérée",
+       "enonce": "Dans une classe de 3e, les notes d'un devoir se répartissent ainsi : la note 8 a pour effectif 3, la note 10 a pour effectif 5, la note 12 a pour effectif 8 et la note 15 a pour effectif 4. Entrer la moyenne de la classe.",
+       "reponse": 11.5,
+       "indice": "Multiplie chaque note par son effectif, additionne, puis divise par l'effectif total.",
+       "explication": "Effectif total : $N = 3 + 5 + 8 + 4 = 20$. Somme des notes : $8 \\times 3 + 10 \\times 5 + 12 \\times 8 + 15 \\times 4 = 24 + 50 + 96 + 60 = 230$. Moyenne : $\\overline{x} = \\frac{230}{20} = 11{,}5$. La moyenne des quatre valeurs distinctes, $\\frac{8 + 10 + 12 + 15}{4} = 11{,}25$, ignore à tort les effectifs.",
+       "retenir": "Moyenne pondérée : $\\overline{x} = \\frac{1}{N}\\sum n_i x_i$, avec $N = \\sum n_i$."
+      },
+      {
+       "titre": "Deux classes réunies",
+       "enonce": "En 4e A, les 25 élèves ont obtenu une moyenne de 11 à un devoir commun ; en 4e B, les 15 élèves ont obtenu une moyenne de 13. Entrer la moyenne de l'ensemble des 40 élèves.",
+       "reponse": 11.75,
+       "indice": "Retrouve la somme des notes de chaque classe à partir de sa moyenne et de son effectif.",
+       "explication": "Somme des notes : $25 \\times 11 = 275$ en 4e A et $15 \\times 13 = 195$ en 4e B. Moyenne de l'ensemble : $\\frac{275 + 195}{40} = \\frac{470}{40} = 11{,}75$. La moyenne des deux moyennes, 12, ne serait juste que pour deux classes de même effectif.",
+       "retenir": "La moyenne d'une réunion de groupes est la moyenne des moyennes pondérée par les effectifs, pas leur moyenne simple."
+      },
+      {
+       "titre": "Deux collèges",
+       "enonce": "Au collège A, 90 % des 100 élèves sans retard scolaire et 60 % des 300 élèves en retard ont obtenu le brevet. Au collège B, ces taux sont de 85 % pour les 400 élèves sans retard et de 55 % pour les 100 élèves en retard. Que peut-on affirmer ?",
+       "reponse": 2,
+       "choix": [
+        "Le collège A a le meilleur taux global, puisqu'il fait mieux dans chacune des deux catégories.",
+        "Le collège B a le meilleur taux global (79 % contre 67,5 %), car il compte bien plus d'élèves sans retard, catégorie où l'on réussit le mieux.",
+        "Les deux collèges ont le même taux global, car les écarts de 5 points se compensent.",
+        "On ne peut pas comparer les taux globaux sans connaître les notes des élèves."
+       ],
+       "indice": "Calcule le nombre de reçus dans chaque collège, puis le taux global de chacun.",
+       "explication": "Collège A : $90 + 180 = 270$ reçus sur 400, soit 67,5 %. Collège B : $340 + 55 = 395$ reçus sur 500, soit 79 %. A fait mieux dans chaque catégorie, mais B a le meilleur taux global : 80 % de ses élèves sont sans retard, contre 25 % au collège A. C'est un effet de structure (paradoxe de Simpson) : un taux global est une moyenne des taux par catégorie, pondérée par la composition de la population.",
+       "retenir": "Effet de structure : comparer des taux globaux sans regarder la composition des populations peut inverser la conclusion (paradoxe de Simpson)."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une médiane à trier",
+       "enonce": "Huit élèves ont noté leur temps de trajet jusqu'au collège, en minutes : 14 ; 9 ; 21 ; 12 ; 9 ; 17 ; 30 ; 11. Pour un effectif pair, on prend pour médiane la demi-somme des deux valeurs centrales de la série rangée dans l'ordre croissant. Entrer la médiane.",
+       "reponse": 13,
+       "unite": "min",
+       "indice": "Range d'abord les huit valeurs dans l'ordre croissant : les valeurs centrales sont la 4e et la 5e.",
+       "explication": "Série rangée : 9 ; 9 ; 11 ; 12 ; 14 ; 17 ; 21 ; 30. Les 4e et 5e valeurs sont 12 et 14, donc la médiane vaut $\\frac{12 + 14}{2} = 13$ min. Sans tri, on prendrait à tort 12 et 9. La moyenne, $\\frac{123}{8} \\approx 15{,}4$ min, est tirée vers le haut par la valeur 30 ; la médiane n'y est pas sensible.",
+       "retenir": "Médiane : on trie d'abord. Au moins la moitié des valeurs lui sont inférieures ou égales, au moins la moitié supérieures ou égales ; elle résiste aux valeurs extrêmes."
+      },
+      {
+       "titre": "Les quartiles de la barge",
+       "enonce": "Durées de onze traversées de la barge, en minutes : 12 ; 15 ; 11 ; 18 ; 14 ; 13 ; 20 ; 16 ; 12 ; 17 ; 25. On rappelle que $Q_1$ est la plus petite valeur de la série telle qu'au moins 25 % des valeurs lui soient inférieures ou égales, et $Q_3$ la plus petite valeur telle qu'au moins 75 % des valeurs lui soient inférieures ou égales. Entrer l'écart interquartile $Q_3 - Q_1$.",
+       "reponse": 6,
+       "unite": "min",
+       "indice": "Trie la série. Comme $25\\,\\%$ de 11 vaut $2{,}75$, $Q_1$ est la 3e valeur. Raisonne de même pour $Q_3$.",
+       "explication": "Série triée : 11 ; 12 ; 12 ; 13 ; 14 ; 15 ; 16 ; 17 ; 18 ; 20 ; 25. Comme $0{,}25 \\times 11 = 2{,}75$, $Q_1$ est la 3e valeur : $Q_1 = 12$. Comme $0{,}75 \\times 11 = 8{,}25$, $Q_3$ est la 9e valeur : $Q_3 = 18$. Écart interquartile : $18 - 12 = 6$ min. Pour comparaison, l'étendue vaut $25 - 11 = 14$ min et la médiane (6e valeur) 15 min.",
+       "retenir": "Quartiles : trier, calculer $\\frac{N}{4}$ et $\\frac{3N}{4}$, prendre le rang entier immédiatement supérieur ou égal. L'écart interquartile mesure la dispersion de la moitié centrale."
+      },
+      {
+       "titre": "Recalibrer une série",
+       "enonce": "Une série de notes est : 2 ; 4 ; 4 ; 4 ; 5 ; 5 ; 7 ; 9. Son écart-type est $\\sigma = \\sqrt{\\frac{1}{N}\\sum (x_i - \\overline{x})^2}$. Un professeur transforme chaque note $x$ en $y = ax + b$, avec $a > 0$, pour que la nouvelle série ait pour moyenne 10 et pour écart-type 3. Entrer $b$.",
+       "reponse": 2.5,
+       "indice": "Calcule $\\overline{x}$ et $\\sigma_x$. Utilise ensuite $\\overline{y} = a\\overline{x} + b$ et $\\sigma_y = a\\,\\sigma_x$ (car $a > 0$).",
+       "explication": "$\\overline{x} = \\frac{40}{8} = 5$. Écarts à la moyenne : $-3, -1, -1, -1, 0, 0, 2, 4$, dont les carrés ont pour somme $9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32$ ; donc $\\sigma_x = \\sqrt{\\frac{32}{8}} = 2$. Comme $\\sigma_y = a\\,\\sigma_x$, on obtient $a = \\frac{3}{2}$ ; comme $\\overline{y} = a\\overline{x} + b$, $10 = 7{,}5 + b$, d'où $b = 2{,}5$.",
+       "retenir": "Pour $y = ax + b$ : $\\overline{y} = a\\overline{x} + b$ et $\\sigma_y = |a|\\,\\sigma_x$. Une translation des valeurs ne change pas leur dispersion."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Dans toute série statistique, au moins la moitié des valeurs sont supérieures ou égales à la moyenne. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Cherche une petite série dont une valeur très grande tire la moyenne vers le haut.",
+       "explication": "Faux. Contre-exemple : la série 1 ; 1 ; 1 ; 9 a pour moyenne $\\frac{12}{4} = 3$, et une seule valeur sur quatre (25 %) est supérieure ou égale à 3. C'est la médiane, et non la moyenne, qui partage la série en deux moitiés ; une valeur extrême déplace la moyenne mais pas la médiane (ici 1).",
+       "retenir": "La médiane partage l'effectif en deux ; la moyenne, non. Une série dissymétrique éloigne l'une de l'autre."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "On considère une série statistique d'effectif $n \\geqslant 3$ ; pour un effectif pair, la médiane est la demi-somme des deux valeurs centrales de la série rangée. Proposition : « Si l'on remplace une valeur égale au maximum de la série par un nombre strictement plus grand, alors la moyenne et l'étendue augmentent, et la médiane ne change pas. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Range la série dans l'ordre croissant : la valeur modifiée reste en dernière position. Quels rangs la médiane utilise-t-elle ?",
+       "explication": "Vrai. Rangeons la série : $x_1 \\leqslant x_2 \\leqslant \\dots \\leqslant x_n$ avec $n \\geqslant 3$, et remplaçons $x_n$ par $x_n' > x_n$. La somme augmente, donc la moyenne aussi ; le minimum $x_1$ ne change pas et le maximum augmente, donc l'étendue augmente. La série reste rangée et les valeurs de rangs 1 à $n - 1$ sont inchangées ; or la médiane n'utilise que le ou les rangs centraux, tous inférieurs ou égaux à $n - 1$ dès que $n \\geqslant 3$. Pour $n = 2$, ce serait faux : la médiane de 1 ; 3 est 2, celle de 1 ; 5 est 3.",
+       "retenir": "La moyenne et l'étendue sont sensibles aux valeurs extrêmes ; la médiane et l'écart interquartile le sont beaucoup moins."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si, d'une année à l'autre, le salaire moyen des employés et le salaire moyen des cadres d'une entreprise augmentent tous les deux, alors le salaire moyen de l'ensemble du personnel augmente. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Fais varier la répartition entre employés et cadres d'une année à l'autre.",
+       "explication": "Faux. Contre-exemple : l'année 1, 10 employés à 1 500 € et 10 cadres à 2 500 € : moyenne 2 000 €. L'année 2, 18 employés à 1 600 € et 2 cadres à 2 600 € : moyenne $\\frac{28\\,800 + 5\\,200}{20} = 1\\,700$ €. Les deux moyennes par catégorie ont augmenté de 100 €, mais la moyenne globale baisse, car la part de la catégorie la moins payée a augmenté. C'est un effet de structure.",
+       "retenir": "Une moyenne globale dépend des moyennes des groupes et de leurs poids : si la structure change, elle peut évoluer en sens inverse de toutes les moyennes partielles."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c8b",
+   "carte": "boss-nightingale",
+   "fond": "crepuscule",
+   "nom": "L'essai de Laplace",
+   "notion": "Problème de probabilités (arbre, Bayes, espérance)",
+   "athena": "Décris l'arbre avec des mots et nomme chaque formule que tu utilises : chaque question se traite alors seule.",
+   "steles": [
+    {
+     "boss": "Les oiseaux du lac Stymphale",
+     "monstre": "stymphale",
+     "contexte": "D'après CAPES Mayotte 2022 (composition 1, problème 3 : urne de Pólya). Une urne contient au départ une boule verte et trois boules blanches. On répète trois fois l'opération suivante : tirer une boule au hasard, noter sa couleur, la remettre dans l'urne et ajouter une boule de la même couleur. Pour $k \\in \\{1, 2, 3\\}$, on note $V_k$ l'événement « la $k$-ième boule tirée est verte », et $X$ le nombre de boules vertes tirées au cours des trois tirages. L'arbre a trois niveaux ; à chaque nœud, la probabilité de tirer une verte est le nombre de boules vertes divisé par le nombre total de boules présentes à cet instant.",
+     "exercices": [
+      {
+       "titre": "Deux vertes d'affilée",
+       "enonce": "Entrer $P(V_1 \\cap V_2)$, sous forme de fraction.",
+       "reponse": "1/10",
+       "indice": "Après une verte au premier tirage, que contient l'urne ?",
+       "explication": "$P(V_1) = \\frac{1}{4}$. Si la première boule est verte, on la remet et l'on ajoute une verte : l'urne contient 2 vertes et 3 blanches, donc $P_{V_1}(V_2) = \\frac{2}{5}$. D'où $P(V_1 \\cap V_2) = P(V_1) \\times P_{V_1}(V_2) = \\frac{1}{4} \\times \\frac{2}{5} = \\frac{1}{10}$.",
+       "retenir": "Probabilité d'un chemin : $P(A \\cap B) = P(A) \\times P_A(B)$, la branche conditionnelle se lisant sur l'état de l'urne après le premier tirage."
+      },
+      {
+       "titre": "La deuxième boule",
+       "enonce": "On admet que $P(V_1 \\cap V_2) = \\frac{1}{10}$. Entrer $P(V_2)$, sous forme de fraction.",
+       "reponse": "1/4",
+       "indice": "Probabilités totales avec la partition $V_1$, $\\overline{V_1}$. Que contient l'urne après une blanche au premier tirage ?",
+       "explication": "Après une blanche, l'urne contient 1 verte et 4 blanches : $P_{\\overline{V_1}}(V_2) = \\frac{1}{5}$. Par les probabilités totales, $P(V_2) = P(V_1 \\cap V_2) + P(\\overline{V_1})\\,P_{\\overline{V_1}}(V_2) = \\frac{1}{10} + \\frac{3}{4} \\times \\frac{1}{5} = \\frac{2}{20} + \\frac{3}{20} = \\frac{1}{4}$. Remarquable : $P(V_2) = P(V_1)$, bien que $V_1$ et $V_2$ ne soient pas indépendants ($\\frac{1}{10} \\neq \\frac{1}{16}$).",
+       "retenir": "Probabilités totales : additionner les probabilités de tous les chemins qui mènent à l'événement."
+      },
+      {
+       "titre": "Remonter le temps",
+       "enonce": "On admet que $P(V_2) = \\frac{1}{4}$ et $P(\\overline{V_1} \\cap V_2) = \\frac{3}{20}$. Sachant que la deuxième boule tirée est verte, entrer la probabilité que la première ait été blanche, sous forme de fraction.",
+       "reponse": "3/5",
+       "indice": "On cherche $P_{V_2}(\\overline{V_1})$ : on conditionne par l'événement le plus tardif, c'est la formule de Bayes.",
+       "explication": "$P_{V_2}(\\overline{V_1}) = \\frac{P(\\overline{V_1} \\cap V_2)}{P(V_2)} = \\frac{3/20}{1/4} = \\frac{3}{5}$. Une probabilité conditionnelle n'a pas à suivre l'ordre chronologique : on peut conditionner le passé par le présent. Ici, $P_{V_2}(V_1) = \\frac{2}{5} > P(V_1)$ : voir une verte au second tirage rend plus plausible une verte au premier.",
+       "retenir": "Formule de Bayes : $P_B(A) = \\frac{P(A \\cap B)}{P(B)}$ ; elle permet de remonter de l'effet observé vers la cause."
+      },
+      {
+       "titre": "Une seule verte",
+       "enonce": "Entrer $P(X = 1)$, sous forme de fraction.",
+       "reponse": "3/10",
+       "indice": "Trois chemins réalisent $X = 1$ : la verte apparaît au 1er, au 2e ou au 3e tirage. Suis l'état de l'urne le long de chacun.",
+       "explication": "Verte, blanche, blanche : $\\frac{1}{4} \\times \\frac{3}{5} \\times \\frac{4}{6} = \\frac{12}{120}$. Blanche, verte, blanche : $\\frac{3}{4} \\times \\frac{1}{5} \\times \\frac{4}{6} = \\frac{12}{120}$. Blanche, blanche, verte : $\\frac{3}{4} \\times \\frac{4}{5} \\times \\frac{1}{6} = \\frac{12}{120}$. Les trois chemins ont la même probabilité (mêmes facteurs au numérateur, dans un autre ordre), donc $P(X = 1) = \\frac{36}{120} = \\frac{3}{10}$.",
+       "retenir": "Pour la loi d'une variable : lister tous les chemins qui réalisent l'événement, calculer chacun par produit, puis additionner."
+      },
+      {
+       "titre": "L'espérance",
+       "enonce": "On admet que $P(X = 0) = \\frac{1}{2}$, $P(X = 1) = \\frac{3}{10}$ et $P(X = 2) = \\frac{3}{20}$. Entrer l'espérance $E(X)$, sous forme de fraction.",
+       "reponse": "3/4",
+       "indice": "Commence par $P(X = 3)$ : la somme des probabilités vaut 1 (ou suis le chemin vert, vert, vert).",
+       "explication": "$P(X = 3) = 1 - \\frac{1}{2} - \\frac{3}{10} - \\frac{3}{20} = \\frac{1}{20}$, ce que confirme le chemin $\\frac{1}{4} \\times \\frac{2}{5} \\times \\frac{3}{6} = \\frac{1}{20}$. Donc $E(X) = 0 \\times \\frac{1}{2} + 1 \\times \\frac{3}{10} + 2 \\times \\frac{3}{20} + 3 \\times \\frac{1}{20} = \\frac{6 + 6 + 3}{20} = \\frac{3}{4}$. C'est $3 \\times \\frac{1}{4}$ : chaque tirage donne une verte avec probabilité $\\frac{1}{4}$, malgré la dépendance entre les tirages.",
+       "retenir": "Compléter la loi grâce à la somme des probabilités égale à 1, puis $E(X) = \\sum x_i\\,P(X = x_i)$."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Une maladie touche 1 % d'une population. Un test est positif chez 99 % des malades et négatif chez 99 % des personnes saines. Proposition : « Une personne dont le test est positif est malade avec une probabilité d'au moins 0,99. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Avec $M$ : « malade » et $T$ : « test positif », calcule $P(T)$ par les probabilités totales, puis $P_T(M)$.",
+       "explication": "Faux. $P(M \\cap T) = 0{,}01 \\times 0{,}99 = 0{,}0099$ et $P(\\overline{M} \\cap T) = 0{,}99 \\times 0{,}01 = 0{,}0099$. Donc $P(T) = 0{,}0198$ et $P_T(M) = \\frac{0{,}0099}{0{,}0198} = \\frac{1}{2}$. Un test « fiable à 99 % » ne donne ici qu'une chance sur deux d'être malade quand il est positif : la maladie est rare, et les faux positifs sont aussi nombreux que les vrais.",
+       "retenir": "$P_M(T)$ (sensibilité du test) n'est pas $P_T(M)$ : la probabilité d'être malade sachant le test positif dépend fortement de la proportion de malades."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Soit $A$ et $B$ deux événements avec $0 < P(A) < 1$. Proposition : « Si $P_A(B) > P_{\\overline{A}}(B)$, alors $P_B(A) > P(A)$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Montre d'abord que $P(B) < P_A(B)$ : $P(B)$ est une moyenne pondérée de $P_A(B)$ et $P_{\\overline{A}}(B)$.",
+       "explication": "Vrai. Par les probabilités totales, $P(B) = P(A)\\,P_A(B) + (1 - P(A))\\,P_{\\overline{A}}(B) < P(A)\\,P_A(B) + (1 - P(A))\\,P_A(B) = P_A(B)$, car $1 - P(A) > 0$. Comme $P(A) > 0$, on en déduit $P(A \\cap B) = P(A)\\,P_A(B) > P(A)\\,P(B) \\geqslant 0$. En particulier $P(B) > 0$, car $P(B) \\geqslant P(A \\cap B) > 0$, et en divisant par $P(B)$ : $P_B(A) > P(A)$.",
+       "retenir": "$P(B)$ est une moyenne pondérée de $P_A(B)$ et $P_{\\overline{A}}(B)$. Si $A$ favorise $B$, alors $B$ favorise $A$ : la dépendance positive est symétrique."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si l'espérance du gain algébrique d'un jeu est strictement positive, alors le joueur a plus d'une chance sur deux de gagner de l'argent lors d'une partie. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "Imagine un jeu où l'on perd souvent un peu et où l'on gagne rarement beaucoup.",
+       "explication": "Faux. Contre-exemple : un jeu dont le gain $G$ vaut 10 € avec probabilité $\\frac{1}{4}$ et $-1$ € avec probabilité $\\frac{3}{4}$. Alors $E(G) = \\frac{10}{4} - \\frac{3}{4} = \\frac{7}{4} > 0$, mais $P(G > 0) = \\frac{1}{4} < \\frac{1}{2}$. L'espérance est une moyenne sur un grand nombre de parties ; elle ne dit pas ce qui se produit le plus souvent lors d'une partie.",
+       "retenir": "Espérance positive ne signifie pas gain probable : comme la moyenne et la médiane d'une série, $E(X)$ et « le cas le plus fréquent » peuvent être éloignés."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sanctuaire": {
+  "sceauxOr": 3,
+  "salle": {
+   "id": "c8s",
+   "carte": "sanct-figures",
+   "fond": "sanctuaire",
+   "nom": "Le sanctuaire de Hume",
+   "notion": "Problèmes plus difficiles et regard de futur professeur",
+   "athena": "Hume doutait que le passé garantisse l'avenir. Toi, mesure l'incertitude au lieu de la subir, et prépare-toi à l'expliquer.",
+   "steles": [
+    {
+     "exercices": [
+      {
+       "titre": "La roue de loterie",
+       "enonce": "Une roue est partagée en quatre secteurs de même aire : sur un secteur on perd 1 €, sur un autre on ne gagne rien, sur les deux derniers on gagne 2 €. On note $X$ le gain algébrique, en euros. On admet la formule $V(X) = E(X^2) - \\big(E(X)\\big)^2$. Entrer la variance $V(X)$, sous forme de fraction.",
+       "reponse": "27/16",
+       "indice": "Loi de $X$ : $-1$, $0$, $2$ avec les probabilités $\\frac{1}{4}$, $\\frac{1}{4}$, $\\frac{1}{2}$. Calcule $E(X)$, puis $E(X^2)$.",
+       "explication": "$E(X) = -\\frac{1}{4} + 0 + 2 \\times \\frac{1}{2} = \\frac{3}{4}$ et $E(X^2) = \\frac{1}{4} + 0 + 4 \\times \\frac{1}{2} = \\frac{9}{4}$. Donc $V(X) = \\frac{9}{4} - \\frac{9}{16} = \\frac{27}{16}$. Vérification par la définition : $\\frac{1}{4}\\left(\\frac{7}{4}\\right)^2 + \\frac{1}{4}\\left(\\frac{3}{4}\\right)^2 + \\frac{1}{2}\\left(\\frac{5}{4}\\right)^2 = \\frac{49 + 9 + 50}{64} = \\frac{108}{64} = \\frac{27}{16}$.",
+       "retenir": "Formule de König-Huygens : $V(X) = E(X^2) - \\big(E(X)\\big)^2$ ; l'écart-type est $\\sigma(X) = \\sqrt{V(X)}$."
+      },
+      {
+       "titre": "Écart-type d'une transformée",
+       "enonce": "Programme de Terminale (variance de $aX + b$). Une variable aléatoire $X$ vérifie $E(X) = 3$ et $E(X^2) = 13$. On pose $Y = 5 - 3X$. Entrer l'écart-type $\\sigma(Y)$.",
+       "reponse": 6,
+       "indice": "Calcule $V(X)$ par la formule de König-Huygens, puis utilise $V(aX + b) = a^2\\,V(X)$.",
+       "explication": "$V(X) = E(X^2) - \\big(E(X)\\big)^2 = 13 - 9 = 4$. Comme $V(aX + b) = a^2\\,V(X)$, on a $V(Y) = (-3)^2 \\times 4 = 36$, donc $\\sigma(Y) = 6$. Le signe de $a$ disparaît, $\\sigma(aX + b) = |a|\\,\\sigma(X)$, et la constante $b$ ne change pas la dispersion. Réponse fausse classique : $-3 \\times 2 = -6$, alors qu'un écart-type est positif.",
+       "retenir": "$V(aX + b) = a^2\\,V(X)$ et $\\sigma(aX + b) = |a|\\,\\sigma(X)$ : décaler ne disperse pas, multiplier par $a$ disperse d'un facteur $|a|$."
+      },
+      {
+       "titre": "Le dispensaire",
+       "enonce": "Cinq villages sont situés le long d'une route rectiligne, aux abscisses 1, 4, 6, 14 et 20 (en km). On veut placer un dispensaire au point d'abscisse $x$ de la route qui rend minimale la somme des carrés des distances aux villages : $f(x) = (x-1)^2 + (x-4)^2 + (x-6)^2 + (x-14)^2 + (x-20)^2$. Entrer l'abscisse qui minimise $f$.",
+       "reponse": 9,
+       "unite": "km",
+       "indice": "Développe $f(x)$ : c'est un trinôme $ax^2 + bx + c$ avec $a > 0$, minimal en $-\\frac{b}{2a}$.",
+       "explication": "$f(x) = 5x^2 - 2(1 + 4 + 6 + 14 + 20)x + c = 5x^2 - 90x + c$, où $c$ est une constante : trinôme de coefficient dominant positif, minimal en $x = \\frac{90}{10} = 9$, qui est la moyenne des abscisses. Le minimum $f(9) = 64 + 25 + 9 + 25 + 121 = 244$ vaut $5\\sigma^2$, où $\\sigma$ est l'écart-type de la série (division par l'effectif 5). Piège : la médiane, 6, minimise la somme des distances, pas celle de leurs carrés.",
+       "retenir": "La moyenne minimise $\\sum (x - x_i)^2$, et ce minimum vaut $N\\sigma^2$ ; la médiane, elle, minimise $\\sum |x - x_i|$.",
+       "effet": "passerelle"
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Deux tests valent mieux qu'un",
+       "enonce": "Une maladie touche 1 % d'une population. Un test est positif chez 90 % des malades et chez 5 % des personnes saines. Une personne passe deux fois ce test ; on admet que les deux tests sont positifs avec probabilité $0{,}9^2$ pour un malade et $0{,}05^2$ pour une personne saine. Les deux tests de cette personne sont positifs. Entrer la probabilité qu'elle soit malade, sous forme de fraction.",
+       "reponse": "36/47",
+       "indice": "Arbre : malade ou non, puis « deux tests positifs » ou non. Applique la formule de Bayes.",
+       "explication": "Avec $M$ : « malade » et $D$ : « deux tests positifs » : $P(M \\cap D) = 0{,}01 \\times 0{,}81 = 0{,}0081$ et $P(\\overline{M} \\cap D) = 0{,}99 \\times 0{,}0025 = 0{,}002475$. Donc $P_D(M) = \\frac{0{,}0081}{0{,}010575} = \\frac{8100}{10575} = \\frac{36}{47} \\approx 0{,}77$. Après un seul test positif, on n'aurait que $\\frac{0{,}009}{0{,}0585} = \\frac{2}{13} \\approx 0{,}15$ : confirmer un dépistage change tout.",
+       "retenir": "Bayes : la probabilité a posteriori dépend de la probabilité a priori ; un premier test positif sert de nouvel a priori pour le second."
+      },
+      {
+       "titre": "Les trois portes",
+       "enonce": "Un jeu télévisé propose trois portes : une voiture est cachée au hasard derrière l'une d'elles, une chèvre derrière chacune des deux autres. Le candidat choisit une porte au hasard. L'animateur, qui sait où est la voiture, ouvre alors toujours une porte non choisie par le candidat et cachant une chèvre (si deux portes conviennent, il en ouvre une au hasard), puis propose au candidat de changer pour la porte restée fermée. Le candidat change toujours. Entrer la probabilité qu'il gagne la voiture, sous forme de fraction.",
+       "reponse": "2/3",
+       "indice": "Premier niveau de l'arbre : le premier choix est-il la bonne porte ? Que se passe-t-il ensuite, en changeant, dans chacun des deux cas ?",
+       "explication": "Premier niveau : le candidat a d'abord choisi la voiture (probabilité $\\frac{1}{3}$) ou une chèvre ($\\frac{2}{3}$). S'il a choisi la voiture, changer le fait perdre à coup sûr. S'il a choisi une chèvre, l'animateur ouvre l'autre porte à chèvre, et la porte restante cache la voiture : changer le fait gagner à coup sûr. Donc la probabilité de gagner est $\\frac{1}{3} \\times 0 + \\frac{2}{3} \\times 1 = \\frac{2}{3}$. L'intuition « une chance sur deux » oublie que le choix de l'animateur dépend de la position de la voiture.",
+       "retenir": "Une information n'est pas neutre quand sa production dépend de l'inconnue : modéliser qui sait quoi, puis décrire l'arbre."
+      },
+      {
+       "titre": "Au plus trois lancers",
+       "enonce": "On lance un dé équilibré au plus trois fois, en s'arrêtant dès que l'on obtient un 6 ; les lancers sont indépendants. On note $N$ le nombre de lancers effectués ($N$ vaut donc 1, 2 ou 3). Entrer $E(N)$, sous forme de fraction.",
+       "reponse": "91/36",
+       "indice": "$N = 3$ dès que les deux premiers lancers ne donnent pas 6, quel que soit le résultat du troisième.",
+       "explication": "$P(N = 1) = \\frac{1}{6}$ ; $P(N = 2) = \\frac{5}{6} \\times \\frac{1}{6} = \\frac{5}{36}$ ; $P(N = 3) = \\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$, car le troisième lancer a lieu quel que soit son résultat. Vérification : $\\frac{6 + 5 + 25}{36} = 1$. Donc $E(N) = \\frac{6}{36} + 2 \\times \\frac{5}{36} + 3 \\times \\frac{25}{36} = \\frac{6 + 10 + 75}{36} = \\frac{91}{36} \\approx 2{,}53$.",
+       "retenir": "Pour un temps d'attente tronqué, la dernière valeur regroupe tous les cas restants : vérifier que la somme des probabilités vaut 1."
+      }
+     ]
+    },
+    {
+     "exercices": [
+      {
+       "titre": "Une erreur de sens",
+       "enonce": "Exercice de classe : une maladie touche 2 % d'une population ; un test est positif chez 95 % des malades et chez 10 % des personnes saines. On demande la probabilité qu'une personne testée positive soit malade. Un élève répond : « 0,95, car le test détecte 95 % des malades. » Quel diagnostic porter ?",
+       "reponse": 2,
+       "choix": [
+        "Il n'y a pas d'erreur : 0,95 est bien la probabilité demandée.",
+        "Il confond $P_M(T)$ et $P_T(M)$ ; la réponse est $\\frac{19}{117}$, environ 0,16, obtenue par la formule de Bayes.",
+        "Il a oublié de multiplier par 0,02 ; la réponse est $0{,}02 \\times 0{,}95 = 0{,}019$.",
+        "Il suppose à tort que les événements $M$ et $T$ sont incompatibles."
+       ],
+       "indice": "Écris, avec la notation $P_A(B)$, la probabilité donnée par l'énoncé et celle qui est demandée.",
+       "explication": "L'énoncé donne $P_M(T) = 0{,}95$ ; la question demande $P_T(M)$. Par les probabilités totales, $P(T) = 0{,}02 \\times 0{,}95 + 0{,}98 \\times 0{,}1 = 0{,}117$, puis $P_T(M) = \\frac{0{,}019}{0{,}117} = \\frac{19}{117} \\approx 0{,}16$. La réponse 0,019 est $P(M \\cap T)$, une autre confusion. En classe, un tableau d'effectifs fictifs (sur 10 000 personnes : 190 malades positifs, 980 sains positifs) rend l'écart frappant.",
+       "retenir": "Lire « sachant » : le conditionnement de la question n'est pas toujours celui de l'énoncé. Des effectifs fictifs aident les élèves à le voir."
+      },
+      {
+       "titre": "Choisir le bon exemple",
+       "enonce": "Pour convaincre une classe que deux événements incompatibles ne sont pas, en général, indépendants, on lance un dé équilibré à six faces. Quel couple d'événements choisir ?",
+       "reponse": 4,
+       "choix": [
+        "$A = \\{1 ; 2\\}$ et $B = \\{2 ; 3\\}$",
+        "$A = \\emptyset$ et $B = \\{1\\}$",
+        "$A = \\{2 ; 4 ; 6\\}$ et $B = \\{3 ; 6\\}$",
+        "$A = \\{1 ; 2\\}$ et $B = \\{5 ; 6\\}$"
+       ],
+       "indice": "Il faut deux événements incompatibles, de probabilités non nulles, tels que $P(A \\cap B) \\neq P(A)\\,P(B)$.",
+       "explication": "$\\{1 ; 2\\}$ et $\\{5 ; 6\\}$ sont incompatibles et $P(A \\cap B) = 0 \\neq \\frac{1}{3} \\times \\frac{1}{3}$ : ils ne sont pas indépendants. Le premier couple n'est pas incompatible (2 est commun). Le deuxième est un piège : $\\emptyset$ est incompatible avec tout événement, mais aussi indépendant de tout événement, car $0 = 0 \\times P(B)$. Le troisième couple est indépendant ($\\frac{1}{6} = \\frac{1}{2} \\times \\frac{1}{3}$) et non incompatible.",
+       "retenir": "Un bon contre-exemple pour une classe vérifie toutes les hypothèses de l'énoncé : ici, incompatibles et de probabilités non nulles."
+      },
+      {
+       "titre": "La médiane d'un tableau",
+       "enonce": "Quinze élèves indiquent le nombre de livres lus pendant les vacances : la valeur 0 a pour effectif 8, la valeur 1 a pour effectif 3, la valeur 2 a pour effectif 2, et les valeurs 3 et 4 ont chacune pour effectif 1. Un élève annonce : « la médiane est 2, c'est la valeur du milieu. » Quel diagnostic porter ?",
+       "reponse": 1,
+       "choix": [
+        "Il prend le milieu des valeurs distinctes sans tenir compte des effectifs ; la médiane est 0.",
+        "Il a calculé la moyenne au lieu de la médiane ; la médiane est 1.",
+        "Il n'a pas trié les valeurs ; la médiane est 1.",
+        "Il n'y a pas d'erreur : 2 est bien la valeur centrale du tableau."
+       ],
+       "indice": "Écris la série complète des quinze valeurs rangées dans l'ordre croissant : quelle est la 8e ?",
+       "explication": "La série rangée compte 15 valeurs ; la médiane est la 8e. Or les 8 premières valeurs valent 0 : la médiane est 0. L'élève a pris la valeur centrale de la liste 0, 1, 2, 3, 4 des valeurs distinctes, comme si chacune avait le même effectif. La moyenne, $\\frac{14}{15} \\approx 0{,}93$, ne vaut pas 2 non plus. Remède : faire calculer les effectifs cumulés croissants (8, 11, 13, 14, 15).",
+       "retenir": "Médiane d'un tableau d'effectifs : chercher le rang central à l'aide des effectifs cumulés croissants, jamais le milieu des valeurs distinctes."
+      }
+     ]
+    }
+   ],
+   "bonus": [
+    {
+     "exercices": [
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Pour toute variable aléatoire $X$ prenant un nombre fini de valeurs, $E(X^2) \\geqslant \\big(E(X)\\big)^2$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Développe $\\sum p_i (x_i - m)^2$, avec $m = E(X)$ et $p_i = P(X = x_i)$ : que reconnaît-on ?",
+       "explication": "Vrai. Notons $m = E(X)$ et $p_i = P(X = x_i)$. Alors $0 \\leqslant \\sum p_i (x_i - m)^2 = \\sum p_i x_i^2 - 2m \\sum p_i x_i + m^2 \\sum p_i = E(X^2) - 2m^2 + m^2 = E(X^2) - m^2$. C'est la formule de König-Huygens : la variance, somme de termes positifs, est positive. L'égalité a lieu si et seulement si $P(X = m) = 1$.",
+       "retenir": "$V(X) = E(X^2) - \\big(E(X)\\big)^2 \\geqslant 0$ : la moyenne des carrés dépasse toujours le carré de la moyenne."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "Proposition : « Si $A$ et $B$ sont deux événements indépendants tels que $P(A \\cup B) = 1$, alors $P(A) = 1$ ou $P(B) = 1$. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 1,
+       "indice": "Calcule $P(\\overline{A} \\cap \\overline{B})$ de deux façons.",
+       "explication": "Vrai. D'une part, $P(\\overline{A} \\cap \\overline{B}) = 1 - P(A \\cup B) = 0$. D'autre part, $P(\\overline{A} \\cap \\overline{B}) = 1 - P(A \\cup B) = 1 - P(A) - P(B) + P(A \\cap B)$, et par indépendance $P(A \\cap B) = P(A)\\,P(B)$, d'où $P(\\overline{A} \\cap \\overline{B}) = (1 - P(A))(1 - P(B))$. Un produit nul a un facteur nul : $P(A) = 1$ ou $P(B) = 1$.",
+       "retenir": "Si $A$ et $B$ sont indépendants, leurs contraires le sont aussi : $P(\\overline{A} \\cap \\overline{B}) = P(\\overline{A})\\,P(\\overline{B})$."
+      },
+      {
+       "titre": "Vrai ou faux ?",
+       "enonce": "L'écart-type d'une série de $N$ valeurs est $\\sigma = \\sqrt{\\frac{1}{N}\\sum (x_i - \\overline{x})^2}$. Proposition : « Si l'on ajoute à une série statistique une nouvelle valeur égale à sa moyenne, ni la moyenne ni l'écart-type de la série ne changent. »",
+       "choix": [
+        "Vrai",
+        "Faux"
+       ],
+       "reponse": 2,
+       "indice": "La moyenne ne change pas, c'est exact. Teste l'écart-type sur la série 0 ; 2.",
+       "explication": "Faux. Contre-exemple : la série 0 ; 2 a pour moyenne 1 et pour écart-type $\\sqrt{\\frac{1 + 1}{2}} = 1$. La série 0 ; 1 ; 2 a toujours pour moyenne 1, mais pour écart-type $\\sqrt{\\frac{1 + 0 + 1}{3}} = \\sqrt{\\frac{2}{3}} < 1$. En général, la somme des carrés des écarts est inchangée mais l'effectif passe de $N$ à $N + 1$ : $\\sigma'^2 = \\frac{N}{N+1}\\,\\sigma^2$.",
+       "retenir": "Une valeur égale à la moyenne ne déplace pas la moyenne mais resserre la série : l'écart-type diminue (sauf s'il est nul)."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

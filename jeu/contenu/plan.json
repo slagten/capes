@@ -1,0 +1,506 @@
+[
+ {
+  "id": "ch1",
+  "semaine": 1,
+  "titre": "Calcul et logique",
+  "portee": "Propositions, implication, réciproque, contraposée, équivalence ; quantificateurs et négation ; types de raisonnement (absurde, contre-exemple, disjonction de cas, analyse-synthèse simple) ; fractions, puissances, racines carrées ; inégalités, intervalles, valeur absolue. Niveau Seconde et Première, puis recul de concours.",
+  "salles": [
+   {
+    "id": "c1r1",
+    "carte": "stevin",
+    "fond": "temple",
+    "nom": "Le portique de Chrysippe",
+    "philosophe": "Chrysippe",
+    "notion": "Propositions, implication, réciproque, contraposée, équivalence"
+   },
+   {
+    "id": "c1r2",
+    "carte": "archimede",
+    "fond": "mer",
+    "nom": "L'infini d'Anaxagore",
+    "philosophe": "Anaxagore",
+    "notion": "Puissances, racines carrées, fractions"
+   },
+   {
+    "id": "c1r3",
+    "carte": "hippase",
+    "fond": "crepuscule",
+    "nom": "La leçon de Théodore",
+    "philosophe": "Platon",
+    "notion": "Raisonnements : absurde, contre-exemple, disjonction de cas"
+   },
+   {
+    "id": "c1r4",
+    "carte": "euclide",
+    "fond": "bibliotheque",
+    "nom": "Le carré d'Aristote",
+    "philosophe": "Aristote",
+    "notion": "Quantificateurs et négation"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c1b",
+    "carte": "boss-fibonacci",
+    "fond": "nuit",
+    "nom": "Le procès d'Euathle",
+    "philosophe": "Protagoras",
+    "notion": "Problème de synthèse : inégalités, valeur absolue, encadrements"
+   },
+   "nom": "L'Hydre de Lerne",
+   "monstre": "hydre"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c1s",
+    "carte": "sanct-nombres",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Parménide",
+    "philosophe": "Parménide",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch2",
+  "semaine": 2,
+  "titre": "Second degré et fonctions de référence",
+  "portee": "Fonctions de référence (carré, inverse, racine carrée, cube) et leurs variations ; forme développée, canonique, factorisée ; discriminant, racines, factorisation ; signe du trinôme, inéquations ; somme et produit des racines ; équations à paramètre ; problèmes se ramenant au second degré.",
+  "salles": [
+   {
+    "id": "c2r1",
+    "carte": "viete",
+    "fond": "jardin",
+    "nom": "La leçon du Ménon",
+    "philosophe": "Socrate",
+    "notion": "Fonctions de référence, équations x² = a, comparaisons"
+   },
+   {
+    "id": "c2r2",
+    "carte": "aljabr",
+    "fond": "orient",
+    "nom": "Le jardin d'Épicure",
+    "philosophe": "Épicure",
+    "notion": "Forme canonique, sommet de la parabole"
+   },
+   {
+    "id": "c2r3",
+    "carte": "chasles",
+    "fond": "temple",
+    "nom": "Le Portique peint",
+    "philosophe": "Zénon de Citium",
+    "notion": "Discriminant, racines, factorisation"
+   },
+   {
+    "id": "c2r4",
+    "carte": "harriot",
+    "fond": "nuit",
+    "nom": "Le gnomon d'Anaximandre",
+    "philosophe": "Anaximandre",
+    "notion": "Signe du trinôme, inéquations"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c2b",
+    "carte": "boss-eratosthene",
+    "fond": "bibliotheque",
+    "nom": "Le cratère d'Empédocle",
+    "philosophe": "Empédocle",
+    "notion": "Problème : trinôme à paramètre, somme et produit des racines"
+   },
+   "nom": "Polyphème le Cyclope",
+   "monstre": "cyclope"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c2s",
+    "carte": "sanct-figures",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire d'Hypatie",
+    "philosophe": "Hypatie",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch3",
+  "semaine": 3,
+  "titre": "Arithmétique",
+  "portee": "Divisibilité dans Z, multiples, parité ; division euclidienne (restes, cas selon le reste) ; nombres premiers, crible, décomposition en facteurs premiers, nombre de diviseurs ; PGCD, PPCM, algorithme d'Euclide ; preuves courtes (produit de deux entiers consécutifs pair, etc.). Pas encore de congruences ni de Bézout (semaine 17).",
+  "salles": [
+   {
+    "id": "c3r1",
+    "carte": "descartes",
+    "fond": "jardin",
+    "nom": "Le nombre de Philolaos",
+    "philosophe": "Philolaos",
+    "notion": "Divisibilité, multiples, parité"
+   },
+   {
+    "id": "c3r2",
+    "carte": "neufchap",
+    "fond": "brumes",
+    "nom": "Les nombres parfaits de Nicomaque",
+    "philosophe": "Nicomaque de Gérase",
+    "notion": "Division euclidienne, restes"
+   },
+   {
+    "id": "c3r3",
+    "carte": "oresme",
+    "fond": "temple",
+    "nom": "La tétractys de Pythagore",
+    "philosophe": "Pythagore",
+    "notion": "Nombres premiers, décomposition, diviseurs"
+   },
+   {
+    "id": "c3r4",
+    "carte": "hypatie",
+    "fond": "bibliotheque",
+    "nom": "L'hymne de Cléanthe",
+    "philosophe": "Cléanthe",
+    "notion": "PGCD, PPCM, algorithme d'Euclide"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c3b",
+    "carte": "boss-euler",
+    "fond": "nuit",
+    "nom": "Le commentaire de Proclus",
+    "philosophe": "Proclus",
+    "notion": "Problème d'arithmétique en plusieurs questions"
+   },
+   "nom": "La Chimère de Lycie",
+   "monstre": "chimere"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c3s",
+    "carte": "sanct-nombres",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Boèce",
+    "philosophe": "Boèce",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch4",
+  "semaine": 4,
+  "titre": "Suites (1)",
+  "portee": "Suites définies explicitement ou par récurrence ; suites arithmétiques et géométriques (terme général, reconnaissance) ; sens de variation ; sommes 1+2+…+n et 1+q+…+q^n ; suites arithmético-géométriques simples avec suite auxiliaire donnée ; seuil et petit algorithme Python ; modélisation (intérêts, populations). Pas encore de récurrence ni de limites formelles (semaine 9).",
+  "salles": [
+   {
+    "id": "c4r1",
+    "carte": "cramer",
+    "fond": "crepuscule",
+    "nom": "La course d'Achille",
+    "philosophe": "Zénon d'Élée",
+    "notion": "Suites arithmétiques"
+   },
+   {
+    "id": "c4r2",
+    "carte": "archimede",
+    "fond": "nuit",
+    "nom": "Le fleuve d'Héraclite",
+    "philosophe": "Héraclite",
+    "notion": "Suites géométriques"
+   },
+   {
+    "id": "c4r3",
+    "carte": "pascal",
+    "fond": "temple",
+    "nom": "Les atomes de Démocrite",
+    "philosophe": "Démocrite",
+    "notion": "Sens de variation d'une suite"
+   },
+   {
+    "id": "c4r4",
+    "carte": "fermat",
+    "fond": "jardin",
+    "nom": "Les Pensées de Marc Aurèle",
+    "philosophe": "Marc Aurèle",
+    "notion": "Sommes de termes"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c4b",
+    "carte": "boss-nightingale",
+    "fond": "mer",
+    "nom": "Les lettres de Sénèque",
+    "philosophe": "Sénèque",
+    "notion": "Problème : modélisation par une suite, seuil, algorithme"
+   },
+   "nom": "Méduse la Gorgone",
+   "monstre": "meduse"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c4s",
+    "carte": "sanct-figures",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire d'Archytas",
+    "philosophe": "Archytas de Tarente",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch5",
+  "semaine": 5,
+  "titre": "Dérivation",
+  "portee": "Taux d'accroissement, nombre dérivé, tangente (équation réduite) ; dérivées usuelles ; somme, produit, quotient, x↦f(ax+b) ; signe de la dérivée et variations ; extremums ; optimisation ; inégalités démontrées par étude de fonction ; position courbe-tangente.",
+  "salles": [
+   {
+    "id": "c5r1",
+    "carte": "stevin",
+    "fond": "jardin",
+    "nom": "L'école d'Épictète",
+    "philosophe": "Épictète",
+    "notion": "Taux d'accroissement, nombre dérivé"
+   },
+   {
+    "id": "c5r2",
+    "carte": "aljabr",
+    "fond": "brumes",
+    "nom": "L'éternité de Plotin",
+    "philosophe": "Plotin",
+    "notion": "Tangente à une courbe"
+   },
+   {
+    "id": "c5r3",
+    "carte": "hippase",
+    "fond": "nuit",
+    "nom": "La méthode de Descartes",
+    "philosophe": "Descartes",
+    "notion": "Dérivées usuelles et opérations"
+   },
+   {
+    "id": "c5r4",
+    "carte": "euclide",
+    "fond": "orient",
+    "nom": "Le calcul de Leibniz",
+    "philosophe": "Leibniz",
+    "notion": "Variations, extremums"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c5b",
+    "carte": "boss-fibonacci",
+    "fond": "crepuscule",
+    "nom": "Le tombeau d'Archimède",
+    "philosophe": "Cicéron",
+    "notion": "Problème : optimisation et étude de fonction"
+   },
+   "nom": "Le Minotaure de Cnossos",
+   "monstre": "minotaure"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c5s",
+    "carte": "sanct-nombres",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Spinoza",
+    "philosophe": "Spinoza",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch6",
+  "semaine": 6,
+  "titre": "Fonction exponentielle",
+  "portee": "Définition (f' = f, f(0) = 1), propriétés algébriques, notation e^x ; signe, variations ; équations et inéquations ; dérivée de x ↦ e^{ax+b} et de e^{u} pour u simple ; études de fonctions du type (ax+b)e^x ; suites (e^{na}) géométriques ; modèles de croissance et de décroissance. Point d'étape : quelques questions mêlent les semaines 1 à 5. Pas de logarithme (semaine 12).",
+  "salles": [
+   {
+    "id": "c6r1",
+    "carte": "viete",
+    "fond": "crepuscule",
+    "nom": "La goutte de Lucrèce",
+    "philosophe": "Lucrèce",
+    "notion": "Définition et propriétés algébriques"
+   },
+   {
+    "id": "c6r2",
+    "carte": "neufchap",
+    "fond": "mer",
+    "nom": "Les leçons de Musonius",
+    "philosophe": "Musonius Rufus",
+    "notion": "Équations et inéquations"
+   },
+   {
+    "id": "c6r3",
+    "carte": "chasles",
+    "fond": "bibliotheque",
+    "nom": "Le banquet de Plutarque",
+    "philosophe": "Plutarque",
+    "notion": "Dérivées et études de fonctions"
+   },
+   {
+    "id": "c6r4",
+    "carte": "harriot",
+    "fond": "temple",
+    "nom": "Le tonneau de Diogène",
+    "philosophe": "Diogène de Sinope",
+    "notion": "Suites et modèles exponentiels"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c6b",
+    "carte": "boss-eratosthene",
+    "fond": "orient",
+    "nom": "La quête de Xénophane",
+    "philosophe": "Xénophane",
+    "notion": "Problème : étude complète d'une fonction avec exponentielle"
+   },
+   "nom": "Céléno, reine des Harpies",
+   "monstre": "harpie"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c6s",
+    "carte": "sanct-figures",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Kant",
+    "philosophe": "Kant",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch7",
+  "semaine": 7,
+  "titre": "Vecteurs, géométrie repérée et produit scalaire",
+  "portee": "Vecteurs, coordonnées, colinéarité, déterminant ; équations cartésiennes et réduites de droites, vecteur directeur, vecteur normal ; produit scalaire (définitions : coordonnées, normes, projection, cosinus) ; orthogonalité ; formule d'Al-Kashi ; équation de cercle ; distance d'un point à une droite par projection. Plan seulement (l'espace vient aux semaines 15 et 16).",
+  "salles": [
+   {
+    "id": "c7r1",
+    "carte": "descartes",
+    "fond": "nuit",
+    "nom": "L'ombre de Thalès",
+    "philosophe": "Thalès",
+    "notion": "Vecteurs, coordonnées, colinéarité"
+   },
+   {
+    "id": "c7r2",
+    "carte": "archimede",
+    "fond": "jardin",
+    "nom": "L'Académie de Platon",
+    "philosophe": "Platon",
+    "notion": "Équations de droites, vecteurs directeur et normal"
+   },
+   {
+    "id": "c7r3",
+    "carte": "oresme",
+    "fond": "crepuscule",
+    "nom": "Le méridien de Posidonius",
+    "philosophe": "Posidonius",
+    "notion": "Produit scalaire : définitions et calculs"
+   },
+   {
+    "id": "c7r4",
+    "carte": "hypatie",
+    "fond": "orient",
+    "nom": "L'attention de Simone Weil",
+    "philosophe": "Simone Weil",
+    "notion": "Applications : Al-Kashi, orthogonalité, cercles"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c7b",
+    "carte": "boss-euler",
+    "fond": "temple",
+    "nom": "La mesure d'Ératosthène",
+    "philosophe": "Ératosthène",
+    "notion": "Problème de géométrie repérée"
+   },
+   "nom": "Le Sphinx de Thèbes",
+   "monstre": "sphinx"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c7s",
+    "carte": "sanct-nombres",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Poincaré",
+    "philosophe": "Poincaré",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ },
+ {
+  "id": "ch8",
+  "semaine": 8,
+  "titre": "Probabilités et statistiques",
+  "portee": "Probabilités conditionnelles, arbres pondérés, formule des probabilités totales, formule de Bayes en situation ; indépendance ; variable aléatoire discrète, loi, espérance (variance en sanctuaire) ; statistiques : moyenne (pondérée), médiane, quartiles, étendue, écart-type, effets de structure (paradoxe de Simpson). Pas encore de loi binomiale formelle ni de dénombrement (semaine 19).",
+  "salles": [
+   {
+    "id": "c8r1",
+    "carte": "cramer",
+    "fond": "bibliotheque",
+    "nom": "Le pari de Pascal",
+    "philosophe": "Pascal",
+    "notion": "Probabilités conditionnelles, arbres"
+   },
+   {
+    "id": "c8r2",
+    "carte": "aljabr",
+    "fond": "mer",
+    "nom": "Le probable de Carnéade",
+    "philosophe": "Carnéade",
+    "notion": "Probabilités totales, indépendance"
+   },
+   {
+    "id": "c8r3",
+    "carte": "pascal",
+    "fond": "jardin",
+    "nom": "Le doute de Montaigne",
+    "philosophe": "Montaigne",
+    "notion": "Variables aléatoires, espérance"
+   },
+   {
+    "id": "c8r4",
+    "carte": "fermat",
+    "fond": "brumes",
+    "nom": "La suspension de Pyrrhon",
+    "philosophe": "Pyrrhon",
+    "notion": "Statistiques : moyenne, médiane, quartiles, écart-type"
+   }
+  ],
+  "boss": {
+   "salle": {
+    "id": "c8b",
+    "carte": "boss-nightingale",
+    "fond": "crepuscule",
+    "nom": "L'essai de Laplace",
+    "philosophe": "Laplace",
+    "notion": "Problème de probabilités (arbre, Bayes, espérance)"
+   },
+   "nom": "Les oiseaux du lac Stymphale",
+   "monstre": "stymphale"
+  },
+  "sanctuaire": {
+   "sceauxOr": 3,
+   "salle": {
+    "id": "c8s",
+    "carte": "sanct-figures",
+    "fond": "sanctuaire",
+    "nom": "Le sanctuaire de Hume",
+    "philosophe": "Hume",
+    "notion": "Problèmes plus difficiles et regard de futur professeur"
+   }
+  }
+ }
+]
