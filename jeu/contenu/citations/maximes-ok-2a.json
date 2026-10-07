@@ -1,0 +1,471 @@
+[
+ {
+  "id": "heraclite-b18",
+  "type": "maxime",
+  "auteur": "Héraclite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 18 DK (Clément d'Alexandrie, Stromates, II, 17, 4)",
+  "texte": "Qui n'espère pas ne trouvera pas l'inespéré : il est inexplorable et sans chemin.",
+  "original": "ἐὰν μὴ ἔλπηται, ἀνέλπιστον οὐκ ἐξευρήσει, ἀνεξερεύνητον ἐὸν καὶ ἄπορον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Ponctuation de Diels-Kranz. Clément présente la phrase comme une paraphrase du mot du prophète (Isaïe 7, 9 : « si vous ne croyez pas, vous ne comprendrez pas »).",
+  "themes": [
+   "perseverance",
+   "courage",
+   "verite"
+  ]
+ },
+ {
+  "id": "heraclite-b22",
+  "type": "maxime",
+  "auteur": "Héraclite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 22 DK (Clément d'Alexandrie, Stromates, IV, 4, 2)",
+  "texte": "Ceux qui cherchent de l'or creusent beaucoup de terre et en trouvent peu.",
+  "original": "χρυσὸν γὰρ οἱ διζήμενοι γῆν πολλὴν ὀρύσσουσι καὶ εὑρίσκουσιν ὀλίγον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "perseverance",
+   "lenteur"
+  ]
+ },
+ {
+  "id": "heraclite-b40",
+  "type": "maxime",
+  "auteur": "Héraclite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 40 DK (Diogène Laërce, IX, 1)",
+  "texte": "Savoir beaucoup de choses n'enseigne pas à avoir l'intelligence : sinon, cela aurait instruit Hésiode et Pythagore, et aussi Xénophane et Hécatée.",
+  "original": "πολυμαθίη νόον ἔχειν οὐ διδάσκει· Ἡσίοδον γὰρ ἂν ἐδίδαξε καὶ Πυθαγόρην αὖτίς τε Ξενοφάνεά τε καὶ Ἑκαταῖον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Texte de Diels-Kranz, qui ajoute « ἔχειν » (« avoir »), absent chez Diogène Laërce.",
+  "themes": [
+   "apprendre",
+   "raison",
+   "methode"
+  ]
+ },
+ {
+  "id": "heraclite-b47",
+  "type": "maxime",
+  "auteur": "Héraclite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 47 DK (Diogène Laërce, IX, 73)",
+  "texte": "Ne faisons pas de conjectures au hasard sur les plus grandes choses.",
+  "original": "μὴ εἰκῆ περὶ τῶν μεγίστων συμβαλλώμεθα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme.",
+  "themes": [
+   "methode",
+   "preuve",
+   "hasard"
+  ]
+ },
+ {
+  "id": "heraclite-b54",
+  "type": "maxime",
+  "auteur": "Héraclite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 54 DK (Hippolyte, Réfutation de toutes les hérésies, IX, 9, 5)",
+  "texte": "L'harmonie qui ne se voit pas vaut mieux que celle qui se voit.",
+  "original": "ἁρμονίη ἀφανὴς φανερῆς κρείττων.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "κρείττων : « meilleure » ou « plus forte ».",
+  "themes": [
+   "ordre",
+   "beaute"
+  ]
+ },
+ {
+  "id": "parmenide-b4",
+  "type": "maxime",
+  "auteur": "Parménide",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 4, 1 DK (Clément d'Alexandrie, Stromates, V, 15, 5)",
+  "texte": "Contemple pourtant par l'intelligence les choses absentes comme fermement présentes.",
+  "original": "λεῦσσε δ᾿ ὅμως ἀπεόντα νόῳ παρεόντα βεβαίως.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Numérotation de Diels-Kranz ; dans la 1re édition de Diels (1903), c'est le fr. 2. Clément cite ce vers à propos de l'espérance, qui voit par l'esprit ce qui est à venir.",
+  "themes": [
+   "raison",
+   "attention"
+  ]
+ },
+ {
+  "id": "parmenide-b7",
+  "type": "maxime",
+  "auteur": "Parménide",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 7, 3-6 DK (Sextus Empiricus, Contre les mathématiciens, VII, 111 et 114 ; Diogène Laërce, IX, 22)",
+  "texte": "Que l'habitude aux mille expériences ne te force pas, sur ce chemin, à promener un œil sans but, une oreille bourdonnante et la langue : juge par la raison l'épreuve disputée que je t'ai proposée.",
+  "original": "κρῖναι δὲ λόγῳ πολύδηριν ἔλεγχον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "C'est la déesse qui parle au jeune homme dans le poème de Parménide. Texte de Diels-Kranz : « πολύδηριν » (« très disputée ») vient de Diogène Laërce ; Sextus lit « πολύπειρον ». Dans la 1re édition de Diels (1903), ces vers sont imprimés à la suite du fr. 1.",
+  "themes": [
+   "raison",
+   "preuve",
+   "attention"
+  ]
+ },
+ {
+  "id": "xenophane-b18",
+  "type": "maxime",
+  "auteur": "Xénophane",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 18 DK (Stobée, Choix de textes [Eclogae], I, 8, 2)",
+  "texte": "Les dieux n'ont pas tout dévoilé aux mortels dès le commencement ; mais avec le temps, en cherchant, ils découvrent le meilleur.",
+  "original": "οὔτοι ἀπ᾿ ἀρχῆς πάντα θεοὶ θνητοῖσ᾿ ὑπέδειξαν, ἀλλὰ χρόνῳ ζητοῦντες ἐφευρίσκουσιν ἄμεινον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Fragment transmis par Stobée.",
+  "themes": [
+   "temps",
+   "perseverance",
+   "lenteur"
+  ]
+ },
+ {
+  "id": "xenophane-b34",
+  "type": "maxime",
+  "auteur": "Xénophane",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 34 DK (Sextus Empiricus, Contre les mathématiciens, VII, 49)",
+  "texte": "Le certain, nul homme ne l'a vu […] ; même si quelqu'un venait par hasard à dire parfaitement ce qui est, lui-même ne le saurait pas : sur toutes choses règne l'opinion.",
+  "original": "δόκος δ᾿ ἐπὶ πᾶσι τέτυκται.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Xénophane parle des dieux et de la nature ; Sextus, qui cite ces vers plusieurs fois (VII, 49 et 110 ; VIII, 326), y voit un premier aveu sceptique.",
+  "themes": [
+   "humilite",
+   "doute",
+   "verite"
+  ]
+ },
+ {
+  "id": "democrite-b117",
+  "type": "maxime",
+  "auteur": "Démocrite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 117 DK (Diogène Laërce, IX, 72)",
+  "texte": "En réalité, nous ne savons rien : car la vérité est au fond de l'abîme.",
+  "original": "ἐτεῇ δὲ οὐδὲν ἴδμεν· ἐν βυθῷ γὰρ ἡ ἀλήθεια.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme.",
+  "themes": [
+   "verite",
+   "humilite",
+   "doute"
+  ]
+ },
+ {
+  "id": "democrite-b118",
+  "type": "maxime",
+  "auteur": "Démocrite",
+  "oeuvre": "Fragments (témoignage)",
+  "ref": "fr. B 118 DK (Denys d'Alexandrie, cité par Eusèbe, Préparation évangélique, XIV, 27, 4)",
+  "texte": "Démocrite disait, à ce qu'on rapporte, qu'il aimerait mieux trouver une seule explication par les causes que de devenir roi des Perses.",
+  "original": "βούλεσθαι μᾶλλον μίαν εὑρεῖν αἰτιολογίαν ἢ τὴν Περσῶν οἱ βασιλείαν γενέσθαι.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Propos rapporté (« à ce qu'on dit », ὥς φασιν) par Denys d'Alexandrie (IIIe s. apr. J.-C.), dans un passage que cite Eusèbe de Césarée (IVe s.) ; Diels-Kranz le rangent parmi les fragments (B 118).",
+  "themes": [
+   "preuve",
+   "verite",
+   "raison"
+  ]
+ },
+ {
+  "id": "democrite-b242",
+  "type": "maxime",
+  "auteur": "Démocrite",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 242 DK (Stobée, Anthologie, III, 29, 66)",
+  "texte": "Plus nombreux sont ceux qui deviennent bons par l'exercice que par la nature.",
+  "original": "πλέονες ἐξ ἀσκήσιος ἀγαθοὶ γίνονται ἢ ἀπὸ φύσιος.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Fragment transmis par Stobée.",
+  "themes": [
+   "effort",
+   "perseverance",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "anaxagore-b21a",
+  "type": "maxime",
+  "auteur": "Anaxagore",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 21a DK (Sextus Empiricus, Contre les mathématiciens, VII, 140)",
+  "texte": "Ce qui apparaît est une vue sur ce qui est caché.",
+  "original": "ὄψις γὰρ τῶν ἀδήλων τὰ φαινόμενα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Sextus cite ce mot en exposant, d'après Diotime, les critères de Démocrite, qui « loue Anaxagore pour ce mot ».",
+  "themes": [
+   "raison",
+   "methode",
+   "attention"
+  ]
+ },
+ {
+  "id": "anaxagore-b3",
+  "type": "maxime",
+  "auteur": "Anaxagore",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 3 DK (Simplicius, Commentaire sur la Physique d'Aristote, p. 164 Diels)",
+  "texte": "Du petit, il n'existe pas de plus petit de tous, mais toujours un plus petit encore […] ; et du grand aussi, il y a toujours un plus grand.",
+  "original": "οὔτε γὰρ τοῦ σμικροῦ ἐστι τό γε ἐλάχιστον, ἀλλ᾿ ἔλασσον ἀεί.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La coupure omet : « car il est impossible que ce qui est cesse d'être ».",
+  "themes": [
+   "infini",
+   "nombre"
+  ]
+ },
+ {
+  "id": "empedocle-b17",
+  "type": "maxime",
+  "auteur": "Empédocle",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 17, 14 DK (Simplicius, Commentaire sur la Physique d'Aristote, p. 158 Diels)",
+  "texte": "Allons, écoute mes paroles : car l'étude fait grandir l'esprit.",
+  "original": "ἀλλ᾿ ἄγε μύθων κλῦθι· μάθη γάρ τοι φρένας αὔξει.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le texte de Simplicius porte « μέθη » ; Diels et Diels-Kranz lisent « μάθη », « l'étude ».",
+  "themes": [
+   "apprendre",
+   "attention"
+  ]
+ },
+ {
+  "id": "empedocle-b110",
+  "type": "maxime",
+  "auteur": "Empédocle",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 110, 1-4 DK (Hippolyte, Réfutation de toutes les hérésies, VII, 29, 25-26)",
+  "texte": "Si tu les ancres au fond de ton esprit et les contemples avec bienveillance, par des exercices purs, toutes ces choses te resteront présentes ta vie durant, et tu en acquerras bien d'autres.",
+  "original": "εὐμενέως καθαρῇσιν ἐποπτεύσῃς μελέτῃσιν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Texte de Diels-Kranz, qui corrige celui d'Hippolyte (« ἐν σφαδινῇσιν… ἐποπτεύεις »). Le destinataire est sans doute Pausanias, disciple d'Empédocle, à qui s'adresse le poème De la nature.",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "philolaos-b4",
+  "type": "maxime",
+  "auteur": "Philolaos de Crotone",
+  "oeuvre": "Fragments",
+  "ref": "fr. B 4 DK (Stobée, Choix de textes [Eclogae], I, 21, 7b)",
+  "texte": "Et en vérité, tout ce que l'on connaît possède un nombre : sans lui, on ne pourrait rien penser ni rien connaître.",
+  "original": "πάντα γα μὰν τὰ γιγνωσκόμενα ἀριθμὸν ἔχοντι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Pythagoricien du Ve siècle av. J.-C., contemporain de Socrate. Fragment transmis par Stobée.",
+  "themes": [
+   "nombre",
+   "raison",
+   "ordre"
+  ]
+ },
+ {
+  "id": "archytas-b3",
+  "type": "maxime",
+  "auteur": "Archytas de Tarente",
+  "oeuvre": "Fragments (Sur les mathématiques)",
+  "ref": "fr. B 3 DK (Jamblique, De communi mathematica scientia, 11)",
+  "texte": "Trouver sans chercher est difficile et rare ; en cherchant, c'est aisé et facile ; mais chercher sans savoir est impossible.",
+  "original": "ἐξευρεῖν δὲ μὴ ζατοῦντα ἄπορον καὶ σπάνιον, ζατοῦντα δὲ εὔπορον καὶ ῥᾴδιον, μὴ ἐπιστάμενον δὲ ζητεῖν ἀδύνατον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Archytas, pythagoricien, géomètre et ami de Platon, donna une solution au problème de la duplication du cube. Jamblique cite ce passage de son livre Sur les mathématiques ; Stobée le cite aussi. Diels comprend la fin : « pour qui ne sait pas chercher, chercher est impossible ».",
+  "themes": [
+   "perseverance",
+   "methode",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "platon-apologie-21d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Apologie de Socrate",
+  "ref": "21d",
+  "texte": "Il semble que je sois un peu plus sage que lui en ceci même : ce que je ne sais pas, je ne crois pas non plus le savoir.",
+  "original": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Paroles de Socrate, après avoir interrogé un homme politique réputé sage. De ce passage vient la formule « je sais que je ne sais rien », qui ne figure pas telle quelle chez Platon.",
+  "themes": [
+   "humilite",
+   "verite",
+   "doute"
+  ]
+ },
+ {
+  "id": "platon-apologie-38a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Apologie de Socrate",
+  "ref": "38a",
+  "texte": "Le plus grand bien pour un homme est de s'entretenir chaque jour de la vertu […] ; une vie sans examen ne vaut pas d'être vécue.",
+  "original": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate à ses juges, après le verdict, pour expliquer pourquoi il ne peut pas se taire.",
+  "themes": [
+   "raison",
+   "verite",
+   "temps"
+  ]
+ },
+ {
+  "id": "platon-menon-81d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Ménon",
+  "ref": "81d",
+  "texte": "Rien n'empêche celui qui s'est ressouvenu d'une seule chose […] de retrouver lui-même tout le reste, s'il est courageux et ne se lasse pas de chercher : chercher et apprendre ne sont que réminiscence.",
+  "original": "τὸ γὰρ ζητεῖν ἄρα καὶ τὸ μανθάνειν ἀνάμνησις ὅλον ἐστίν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Paroles de Socrate à Ménon. La coupure omet : « ce que les hommes appellent apprendre ».",
+  "themes": [
+   "perseverance",
+   "courage",
+   "memoire"
+  ]
+ },
+ {
+  "id": "platon-menon-85c",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Ménon",
+  "ref": "85c-d",
+  "texte": "Ces opinions viennent de s'éveiller en lui comme dans un rêve ; mais si on l'interroge souvent et de diverses façons sur ces mêmes questions, il finira par les savoir aussi exactement que quiconque.",
+  "original": "εἰ δὲ αὐτόν τις ἀνερήσεται πολλάκις τὰ αὐτὰ ταῦτα καὶ πολλαχῇ, οἶσθ᾿ ὅτι τελευτῶν οὐδενὸς ἧττον ἀκριβῶς ἐπιστήσεται περὶ τούτων.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate parle du jeune esclave à qui il vient de faire trouver comment doubler l'aire d'un carré.",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "platon-menon-98a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Ménon",
+  "ref": "97e-98a",
+  "texte": "Les opinions vraies ne consentent pas à rester longtemps : elles s'enfuient de l'âme ; aussi valent-elles peu, tant qu'on ne les a pas liées par un raisonnement qui en donne la cause.",
+  "original": "ἕως ἄν τις αὐτὰς δήσῃ αἰτίας λογισμῷ.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate compare les opinions vraies aux statues de Dédale, qui s'enfuient si on ne les attache pas.",
+  "themes": [
+   "preuve",
+   "memoire",
+   "raison"
+  ]
+ },
+ {
+  "id": "platon-phedon-90e",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Phédon",
+  "ref": "90d-e",
+  "texte": "Ne croyons pas qu'il n'y a rien de sain dans les raisonnements, mais plutôt que nous ne sommes pas encore sains : il faut du courage et de l'ardeur pour le devenir.",
+  "original": "ἡμεῖς οὔπω ὑγιῶς ἔχομεν, ἀλλὰ ἀνδριστέον καὶ προθυμητέον ὑγιῶς ἔχειν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate met en garde contre la « misologie », la haine des raisonnements qui naît des déceptions.",
+  "themes": [
+   "erreur",
+   "courage",
+   "raison"
+  ]
+ },
+ {
+  "id": "platon-phedon-91c",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Phédon",
+  "ref": "91c",
+  "texte": "Souciez-vous peu de Socrate et beaucoup plus de la vérité : si je vous semble dire vrai, accordez-le ; sinon, opposez-moi toutes vos raisons.",
+  "original": "σμικρὸν φροντίσαντες Σωκράτους, τῆς δὲ ἀληθείας πολὺ μᾶλλον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate à Simmias et Cébès, le jour de sa mort.",
+  "themes": [
+   "verite",
+   "raison",
+   "doute"
+  ]
+ },
+ {
+  "id": "platon-theetete-150d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Théétète",
+  "ref": "150d",
+  "texte": "Ceux qui me fréquentent […] font des progrès étonnants ; et il est clair qu'ils n'ont jamais rien appris de moi, mais qu'ils ont trouvé d'eux-mêmes et enfanté beaucoup de belles choses.",
+  "original": "παρ᾿ ἐμοῦ οὐδὲν πώποτε μαθόντες, ἀλλ᾿ αὐτοὶ παρ᾿ αὑτῶν πολλὰ καὶ καλὰ εὑρόντες τε καὶ τεκόντες.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate décrit son art d'accoucheur des esprits (maïeutique) ; la coupure omet que ces progrès viennent « à ceux à qui le dieu le permet ».",
+  "themes": [
+   "apprendre",
+   "liberte"
+  ]
+ },
+ {
+  "id": "platon-theetete-155d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Théétète",
+  "ref": "155d",
+  "texte": "C'est tout à fait le propre du philosophe, ce sentiment : s'étonner. La philosophie n'a pas d'autre commencement.",
+  "original": "μάλα γὰρ φιλοσόφου τοῦτο τὸ πάθος, τὸ θαυμάζειν· οὐ γὰρ ἄλλη ἀρχὴ φιλοσοφίας ἢ αὕτη.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate répond au jeune mathématicien Théétète, qui avoue avoir le vertige devant ces questions.",
+  "themes": [
+   "verite",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "platon-theetete-191d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Théétète",
+  "ref": "191c-d",
+  "texte": "Disons que ce bloc de cire, dans nos âmes, est un don de Mnémosyne, mère des Muses : ce que nous voulons retenir, nous l'y imprimons, comme on imprime la marque d'un anneau.",
+  "original": "δῶρον τοίνυν αὐτὸ φῶμεν εἶναι τῆς τῶν Μουσῶν μητρὸς Μνημοσύνης.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate imagine dans chaque âme un bloc de cire, plus ou moins grand, pur et ferme.",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ }
+]

@@ -1,0 +1,92 @@
+{
+ "buste": {
+  "nom": "Mnémosyne, mère des Muses",
+  "portrait": "chignon",
+  "texte": "Pose donc, pour les besoins du raisonnement, qu’il y a dans nos âmes un bloc de cire, plus grand chez l’un, plus petit chez l’autre, […] d’une cire plus dure chez certains, plus molle chez d’autres. […] Disons que c’est un don de la mère des Muses, Mnémosyne. Tout ce que nous voulons nous rappeler de ce que nous avons vu, entendu ou conçu nous-mêmes, nous l’y imprimons […] comme on imprime la marque des anneaux. Ce qui s’y est empreint, nous nous en souvenons et le savons, tant que son image y demeure ; ce qui s’est effacé, ou n’a pu s’imprimer, nous l’oublions et ne le savons pas.",
+  "source": "Platon, Théétète, 191c-e : Socrate parle à Théétète (trad. adaptée)",
+  "glose": "Socrate imagine en chacun un bloc de cire, don de Mnémosyne : ce qui s'y imprime, on le sait tant que l'empreinte demeure. Ici, chaque exercice revient au moment où son empreinte commence à pâlir. Ne relis pas la correction avant de répondre : c'est l'effort de te souvenir qui creuse la cire."
+ },
+ "maximes": [
+  {
+   "id": "marc-aurele-pensees-5-16",
+   "texte": "Telles sont les choses que tu te représentes souvent, tel sera ton esprit : car l'âme prend la teinture de ses représentations.",
+   "auteur": "Marc Aurèle",
+   "ref": "Pensées, V, 16"
+  },
+  {
+   "id": "zenon-dl-7-37",
+   "texte": "Zénon comparait Cléanthe aux tablettes de cire dure, où l'on a peine à écrire, mais qui gardent ce qu'on y a écrit.",
+   "auteur": "Zénon de Citium",
+   "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 37",
+   "note": "Comparaison rapportée par Diogène Laërce (IIIe siècle apr. J.-C.) ; il dit Cléanthe « laborieux, mais peu doué et excessivement lent » (VII, 170)."
+  },
+  {
+   "id": "platon-menon-81d",
+   "texte": "Rien n'empêche celui qui s'est ressouvenu d'une seule chose […] de retrouver lui-même tout le reste, s'il est courageux et ne se lasse pas de chercher : chercher et apprendre ne sont que réminiscence.",
+   "auteur": "Platon",
+   "ref": "Ménon, 81d",
+   "note": "Paroles de Socrate à Ménon. La coupure omet : « ce que les hommes appellent apprendre »."
+  },
+  {
+   "id": "platon-phedre-275a",
+   "texte": "L'écriture produira l'oubli dans l'âme de ceux qui l'apprendront : se fiant à des marques extérieures, ils ne se ressouviendront plus du dedans, par eux-mêmes. C'est un remède pour le rappel, non pour la mémoire.",
+   "auteur": "Platon",
+   "ref": "Phèdre, 275a",
+   "note": "Le roi égyptien Thamous répond au dieu Theuth, inventeur de l'écriture, dans le mythe que raconte Socrate."
+  },
+  {
+   "id": "platon-lois-747b",
+   "texte": "L'étude des nombres éveille celui qui est par nature somnolent et lent d'esprit ; elle le rend prompt à apprendre, doué de mémoire et vif, et le fait progresser au-delà de sa nature.",
+   "auteur": "Platon",
+   "ref": "Lois, V, 747b",
+   "note": "L'Athénien ajoute que ce progrès se fait « par un art divin »."
+  },
+  {
+   "id": "aristote-analytiques-100a",
+   "texte": "De la sensation naît le souvenir ; du souvenir maintes fois répété d'une même chose naît l'expérience, car beaucoup de souvenirs, par le nombre, font une seule expérience.",
+   "auteur": "Aristote",
+   "ref": "Seconds Analytiques, II, 19, 100a3-6"
+  },
+  {
+   "id": "aristote-memoire-452a3",
+   "texte": "Ce qui possède un certain ordre, comme les mathématiques, se retient aisément ; le reste, mal et difficilement.",
+   "auteur": "Aristote",
+   "ref": "De la mémoire et de la réminiscence, 2, 452a2-4",
+   "note": "Juste avant (451b31), Aristote note que le ressouvenir vient le plus vite et le mieux quand on part du commencement : les choses s'enchaînent, et les mouvements de la mémoire aussi."
+  },
+  {
+   "id": "ciceron-orateur-2-353",
+   "texte": "C'est avant tout l'ordre qui apporte la lumière à la mémoire : il faut donc choisir des lieux et y disposer en esprit les images de ce qu'on veut retenir.",
+   "auteur": "Cicéron",
+   "ref": "De l'orateur, II, 353-354",
+   "note": "Dans le dialogue, c'est l'orateur Marc Antoine qui parle ; selon lui, le poète Simonide de Céos aurait découvert ce principe (« invenisse fertur ») : c'est l'origine de la « méthode des lieux »."
+  },
+  {
+   "id": "ciceron-caton-21",
+   "texte": "« Mais la mémoire diminue. » Sans doute, si on ne l'exerce pas […]. Les vieillards gardent leur esprit, pourvu que demeurent l'ardeur à l'étude et l'application.",
+   "auteur": "Cicéron",
+   "ref": "Caton l'Ancien (De la vieillesse), 21-22",
+   "note": "C'est Caton l'Ancien qui parle dans le dialogue."
+  },
+  {
+   "id": "boece-consolation-3-m11",
+   "texte": "Si la Muse de Platon dit vrai, ce que chacun apprend, il s'en ressouvient après l'avoir oublié.",
+   "auteur": "Boèce",
+   "ref": "Consolation de Philosophie, III, mètre 11, v. 15-16",
+   "note": "Boèce reprend la doctrine platonicienne de la réminiscence (Ménon, Phédon)."
+  },
+  {
+   "id": "augustin-confessions-10-8-15",
+   "texte": "Grande est la puissance de la mémoire […], sanctuaire vaste et infini. […] Et les hommes vont admirer les cimes des montagnes […] et le cours des astres, et se délaissent eux-mêmes.",
+   "auteur": "Augustin",
+   "ref": "Confessions, X, 8, 15"
+  },
+  {
+   "id": "augustin-confessions-10-12-19",
+   "texte": "La mémoire contient aussi les raisons et les lois innombrables des nombres et des dimensions, qu'aucun sens corporel n'y a imprimées : elles n'ont ni couleur, ni son, ni odeur, ni saveur […].",
+   "auteur": "Augustin",
+   "ref": "Confessions, X, 12, 19",
+   "note": "Augustin ajoute : il a vu des lignes tracées par les artisans, fines comme un fil d'araignée, mais les lignes qu'il connaît au-dedans sont d'une autre nature."
+  }
+ ]
+}

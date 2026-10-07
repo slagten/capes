@@ -1,0 +1,455 @@
+[
+ {
+  "id": "platon-republique-527b",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "République",
+  "ref": "VII, 527b",
+  "texte": "La géométrie est connaissance de ce qui est toujours ; elle attire donc l'âme vers la vérité et forme une pensée de philosophe, tournée vers le haut.",
+  "original": "τοῦ γὰρ ἀεὶ ὄντος ἡ γεωμετρικὴ γνῶσίς ἐστιν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Glaucon énonce la première proposition, Socrate en tire la conséquence : la pensée tourne vers le haut ce que nous tournons à tort vers le bas.",
+  "themes": [
+   "verite",
+   "raison",
+   "nombre"
+  ]
+ },
+ {
+  "id": "platon-republique-536e",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "République",
+  "ref": "VII, 536e-537a",
+  "texte": "Aucun savoir imposé de force ne demeure dans l'âme. Élève donc les enfants dans les études, non par la contrainte, mais en jouant.",
+  "original": "ψυχῇ δὲ βίαιον οὐδὲν ἔμμονον μάθημα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Il s'agit du calcul, de la géométrie et des autres études préparatoires à la dialectique ; Socrate vient de dire qu'un homme libre ne doit rien apprendre en esclave.",
+  "themes": [
+   "apprendre",
+   "memoire",
+   "liberte"
+  ]
+ },
+ {
+  "id": "platon-gorgias-458a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Gorgias",
+  "ref": "458a-b",
+  "texte": "Je suis de ceux qui ont plaisir à être réfutés quand ils disent quelque chose de faux, autant qu'à réfuter : être délivré soi-même du plus grand mal vaut mieux qu'en délivrer autrui.",
+  "original": "τῶν ἡδέως μὲν ἂν ἐλεγχθέντων εἴ τι μὴ ἀληθὲς λέγω.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Paroles de Socrate à Gorgias ; ce plus grand mal, précise-t-il, c'est une opinion fausse sur les sujets dont on discute.",
+  "themes": [
+   "erreur",
+   "verite",
+   "humilite"
+  ]
+ },
+ {
+  "id": "platon-phedre-237b",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Phèdre",
+  "ref": "237b-c",
+  "texte": "En toute chose, mon enfant, il n'y a qu'un point de départ pour bien délibérer : il faut savoir sur quoi porte la délibération, sinon l'on se trompe nécessairement sur tout.",
+  "original": "εἰδέναι δεῖ περὶ οὗ ἂν ᾖ ἡ βουλή, ἢ παντὸς ἁμαρτάνειν ἀνάγκη.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Début du premier discours de Socrate sur l'amour, qu'il met dans la bouche d'un amant rusé s'adressant à un jeune garçon.",
+  "themes": [
+   "methode",
+   "attention",
+   "erreur"
+  ]
+ },
+ {
+  "id": "platon-phedre-275a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Phèdre",
+  "ref": "275a",
+  "texte": "L'écriture produira l'oubli dans l'âme de ceux qui l'apprendront : se fiant à des marques extérieures, ils ne se ressouviendront plus du dedans, par eux-mêmes. C'est un remède pour le rappel, non pour la mémoire.",
+  "original": "οὔκουν μνήμης ἀλλὰ ὑπομνήσεως φάρμακον ηὗρες.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le roi égyptien Thamous répond au dieu Theuth, inventeur de l'écriture, dans le mythe que raconte Socrate.",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "attention"
+  ]
+ },
+ {
+  "id": "platon-banquet-210e",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Banquet",
+  "ref": "210e",
+  "texte": "Celui qui a contemplé les belles choses dans l'ordre et comme il faut apercevra soudain, parvenu au terme, une beauté merveilleuse : celle pour laquelle il avait enduré toutes ses peines.",
+  "original": "ἐξαίφνης κατόψεταί τι θαυμαστὸν τὴν φύσιν καλόν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Diotime, dont Socrate rapporte les paroles, décrit une ascension qui passe par « la beauté des sciences » (210c).",
+  "themes": [
+   "beaute",
+   "perseverance",
+   "ordre"
+  ]
+ },
+ {
+  "id": "platon-lois-747b",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Lois",
+  "ref": "V, 747b",
+  "texte": "L'étude des nombres éveille celui qui est par nature somnolent et lent d'esprit ; elle le rend prompt à apprendre, doué de mémoire et vif, et le fait progresser au-delà de sa nature.",
+  "original": "τὸν νυστάζοντα καὶ ἀμαθῆ φύσει ἐγείρει καὶ εὐμαθῆ καὶ μνήμονα καὶ ἀγχίνουν ἀπεργάζεται.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "L'Athénien ajoute que ce progrès se fait « par un art divin ».",
+  "themes": [
+   "nombre",
+   "apprendre",
+   "memoire"
+  ]
+ },
+ {
+  "id": "platon-timee-47a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Timée",
+  "ref": "47a-b",
+  "texte": "Le spectacle du jour et de la nuit, des mois et des années a produit le nombre et la notion du temps ; de là vient la philosophie, le plus grand des biens.",
+  "original": "ἐπορισάμεθα φιλοσοφίας γένος, οὗ μεῖζον ἀγαθὸν οὔτ᾿ ἦλθεν οὔτε ἥξει ποτὲ τῷ θνητῷ γένει.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Timée explique que la vue est pour nous la cause du plus grand bienfait ; le grec dit qu'aucun bien plus grand n'est jamais venu ni ne viendra des dieux à la race mortelle.",
+  "themes": [
+   "nombre",
+   "temps",
+   "ordre"
+  ]
+ },
+ {
+  "id": "platon-lettre7-341c",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Lettre VII",
+  "ref": "341c-d",
+  "texte": "Cela ne se dit pas comme les autres savoirs : après une longue fréquentation de la chose même, soudain, comme la lumière jaillie d'une étincelle, cela naît dans l'âme et s'y nourrit de soi-même.",
+  "original": "οἷον ἀπὸ πυρὸς πηδήσαντος ἐξαφθὲν φῶς, ἐν τῇ ψυχῇ γενόμενον αὐτὸ ἑαυτὸ ἤδη τρέφει.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Platon parle de l'objet de sa recherche la plus sérieuse, sur lequel il dit n'avoir rien écrit. L'authenticité de la Lettre VII est discutée.",
+  "themes": [
+   "perseverance",
+   "lenteur",
+   "verite"
+  ]
+ },
+ {
+  "id": "platon-academie-inscription",
+  "type": "maxime",
+  "auteur": "Inscription de l'Académie (tradition tardive)",
+  "oeuvre": "rapportée par Jean Philopon, Commentaire sur le traité De l'âme d'Aristote",
+  "ref": "p. 117, 26-27 Hayduck",
+  "texte": "Que nul ignorant de la géométrie n'entre ici.",
+  "original": "ἀγεωμέτρητος μὴ εἰσίτω.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "La tradition place cette inscription à l'entrée de l'école de Platon ; rien n'indique que Platon l'ait écrite. Elle n'est attestée que tardivement, notamment par Jean Philopon (VIe s. apr. J.-C.), près de neuf siècles après la fondation de l'Académie.",
+  "themes": [
+   "nombre",
+   "ordre"
+  ]
+ },
+ {
+  "id": "aristote-metaphysique-980a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Métaphysique",
+  "ref": "A, 1, 980a21-23",
+  "texte": "Tous les hommes désirent naturellement savoir ; en témoigne l'amour des sensations : en dehors même de leur utilité, nous les aimons pour elles-mêmes.",
+  "original": "Πάντες ἄνθρωποι τοῦ εἰδέναι ὀρέγονται φύσει.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "verite"
+  ]
+ },
+ {
+  "id": "aristote-metaphysique-983a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Métaphysique",
+  "ref": "A, 2, 983a12-21",
+  "texte": "Tous commencent par s'étonner que les choses soient ainsi, par exemple que la diagonale soit incommensurable ; mais, une fois instruit, rien n'étonnerait plus un géomètre que de la voir devenir commensurable.",
+  "original": "οὐθὲν γὰρ ἂν οὕτως θαυμάσειεν ἀνὴρ γεωμετρικὸς ὡς εἰ γένοιτο ἡ διάμετρος μετρητή.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La diagonale du carré rapportée au côté : une fois la démonstration comprise, l'étonnement change de sens.",
+  "themes": [
+   "preuve",
+   "nombre",
+   "verite"
+  ]
+ },
+ {
+  "id": "aristote-metaphysique-993a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Métaphysique",
+  "ref": "α, 1, 993a30-b3",
+  "texte": "L'étude de la vérité est difficile en un sens, facile en un autre : nul ne peut l'atteindre pleinement, mais tous ne la manquent pas, et de tous les apports réunis naît une grandeur.",
+  "original": "ἡ περὶ τῆς ἀληθείας θεωρία τῇ μὲν χαλεπὴ τῇ δὲ ῥᾳδία.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "verite",
+   "humilite",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "aristote-metaphysique-1051a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Métaphysique",
+  "ref": "Θ, 9, 1051a21-26",
+  "texte": "Les constructions géométriques se découvrent par l'acte : c'est en divisant les figures qu'on trouve. Si la parallèle au côté était déjà tracée, on verrait aussitôt pourquoi le triangle vaut deux droits.",
+  "original": "εὑρίσκεται δὲ καὶ τὰ διαγράμματα ἐνεργείᾳ· διαιροῦντες γὰρ εὑρίσκουσιν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La somme des angles d'un triangle vaut deux angles droits ; le tracé du bon trait fait voir la raison.",
+  "themes": [
+   "preuve",
+   "methode",
+   "effort"
+  ]
+ },
+ {
+  "id": "aristote-metaphysique-1078a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Métaphysique",
+  "ref": "M, 3, 1078a31-b1",
+  "texte": "Ils se trompent, ceux qui prétendent que les mathématiques ne disent rien du beau : ses formes majeures sont l'ordre, la symétrie et le défini, que les mathématiques montrent au plus haut point.",
+  "original": "τοῦ δὲ καλοῦ μέγιστα εἴδη τάξις καὶ συμμετρία καὶ τὸ ὡρισμένον, ἃ μάλιστα δεικνύουσιν αἱ μαθηματικαὶ ἐπιστῆμαι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "beaute",
+   "ordre",
+   "mesure"
+  ]
+ },
+ {
+  "id": "aristote-ethique-1094b",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Éthique à Nicomaque",
+  "ref": "I, 3, 1094b23-27",
+  "texte": "C'est le propre d'un esprit cultivé de chercher en chaque genre l'exactitude que permet la nature du sujet : accepter d'un mathématicien des vraisemblances, c'est comme exiger d'un orateur des démonstrations.",
+  "original": "πεπαιδευμένου γάρ ἐστιν ἐπὶ τοσοῦτον τἀκριβὲς ἐπιζητεῖν καθ᾿ ἕκαστον γένος, ἐφ᾿ ὅσον ἡ τοῦ πράγματος φύσις ἐπιδέχεται.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "preuve",
+   "methode",
+   "mesure"
+  ]
+ },
+ {
+  "id": "aristote-ethique-1098a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Éthique à Nicomaque",
+  "ref": "I, 7, 1098a21-25",
+  "texte": "Il faut sans doute d'abord esquisser, puis compléter le tracé ; et le temps semble en ces matières un bon découvreur, ou un bon collaborateur : de là viennent les progrès des arts.",
+  "original": "καὶ ὁ χρόνος τῶν τοιούτων εὑρετὴς ἢ συνεργὸς ἀγαθὸς εἶναι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Aristote vient de donner une première esquisse de sa définition du bonheur.",
+  "themes": [
+   "temps",
+   "methode",
+   "lenteur"
+  ]
+ },
+ {
+  "id": "aristote-ethique-1103a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Éthique à Nicomaque",
+  "ref": "II, 1, 1103a32-34",
+  "texte": "Ce qu'il faut avoir appris pour le faire, nous l'apprenons en le faisant : c'est en construisant qu'on devient constructeur, et en jouant de la cithare qu'on devient cithariste.",
+  "original": "ἃ γὰρ δεῖ μαθόντας ποιεῖν, ταῦτα ποιοῦντες μανθάνομεν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Aristote l'applique aussitôt aux vertus : c'est en accomplissant des actions justes qu'on devient juste.",
+  "themes": [
+   "effort",
+   "apprendre",
+   "methode"
+  ]
+ },
+ {
+  "id": "aristote-analytiques-71a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Seconds Analytiques",
+  "ref": "I, 1, 71a1-4",
+  "texte": "Tout enseignement et tout apprentissage intellectuel viennent d'une connaissance préexistante : c'est manifestement ainsi que s'acquièrent les sciences mathématiques, et chacun des autres arts.",
+  "original": "Πᾶσα διδασκαλία καὶ πᾶσα μάθησις διανοητικὴ ἐκ προϋπαρχούσης γίνεται γνώσεως.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "methode",
+   "memoire"
+  ]
+ },
+ {
+  "id": "aristote-analytiques-100a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Seconds Analytiques",
+  "ref": "II, 19, 100a3-6",
+  "texte": "De la sensation naît le souvenir ; du souvenir maintes fois répété d'une même chose naît l'expérience, car beaucoup de souvenirs, par le nombre, font une seule expérience.",
+  "original": "ἐκ δὲ μνήμης πολλάκις τοῦ αὐτοῦ γινομένης ἐμπειρία.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "aristote-physique-184a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Physique",
+  "ref": "I, 1, 184a16-18",
+  "texte": "Le chemin naturel va de ce qui est plus connaissable et plus clair pour nous vers ce qui est plus clair et plus connaissable par nature.",
+  "original": "πέφυκε δὲ ἐκ τῶν γνωριμωτέρων ἡμῖν ἡ ὁδὸς καὶ σαφεστέρων ἐπὶ τὰ σαφέστερα τῇ φύσει καὶ γνωριμώτερα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "methode",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "aristote-physique-206b",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Physique",
+  "ref": "III, 6, 207a1-2",
+  "texte": "L'infini n'est pas ce en dehors de quoi il n'y a rien, mais ce en dehors de quoi il y a toujours quelque chose.",
+  "original": "οὐ γὰρ οὗ μηδὲν ἔξω, ἀλλ᾿ οὗ ἀεί τι ἔξω ἐστί, τοῦτο ἄπειρόν ἐστιν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Aristote vient de dire (206b33) que l'infini est le contraire de ce qu'on en dit d'ordinaire.",
+  "themes": [
+   "infini",
+   "nombre"
+  ]
+ },
+ {
+  "id": "aristote-politique-1338a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Politique",
+  "ref": "VIII, 3, 1338a37-b4",
+  "texte": "Certaines connaissances utiles, comme les lettres, s'enseignent aux enfants non seulement pour leur utilité, mais parce qu'elles en ouvrent beaucoup d'autres. […] Chercher partout l'utile ne convient nullement aux âmes grandes et libres.",
+  "original": "τὸ δὲ ζητεῖν πανταχοῦ τὸ χρήσιμον ἥκιστα ἁρμόττει τοῖς μεγαλοψύχοις καὶ τοῖς ἐλευθερίοις.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "liberte",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "aristote-memoire-452a3",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "De la mémoire et de la réminiscence",
+  "ref": "2, 452a2-4",
+  "texte": "Ce qui possède un certain ordre, comme les mathématiques, se retient aisément ; le reste, mal et difficilement.",
+  "original": "ἔστιν εὐμνημόνευτα ὅσα τάξιν τινὰ ἔχει, ὥσπερ τὰ μαθήματα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Juste avant (451b31), Aristote note que le ressouvenir vient le plus vite et le mieux quand on part du commencement : les choses s'enchaînent, et les mouvements de la mémoire aussi.",
+  "themes": [
+   "memoire",
+   "ordre",
+   "nombre"
+  ]
+ },
+ {
+  "id": "aristote-memoire-452a27",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "De la mémoire et de la réminiscence",
+  "ref": "2, 452a27-30",
+  "texte": "L'habitude est déjà comme une nature : c'est pourquoi ce à quoi nous pensons souvent nous revient vite. […] La répétition fait une nature.",
+  "original": "ὥσπερ γὰρ φύσις ἤδη τὸ ἔθος· διὸ ἃ πολλάκις ἐννοοῦμεν, ταχὺ ἀναμιμνησκόμεθα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La coupure omet une phrase : « car, comme par nature telle chose vient après telle autre, il en va de même en acte ».",
+  "themes": [
+   "memoire",
+   "perseverance",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "aristote-protreptique-jamblique-6",
+  "type": "maxime",
+  "auteur": "Aristote (attribué)",
+  "oeuvre": "Protreptique (fragment transmis par Jamblique)",
+  "ref": "Jamblique, Protreptique, 6 (p. 40, 25 - 41, 2 Pistelli)",
+  "texte": "Pour philosopher, on n'a besoin ni d'instruments ni de lieux : où que l'on applique sa pensée sur la terre habitée, on touche partout la vérité, comme si elle était présente.",
+  "original": "ὅπῃ τις ἂν θῇ τῆς οἰκουμένης τὴν διάνοιαν, ὁμοίως πανταχόθεν ὥσπερ παρούσης ἅπτεται τῆς ἀληθείας.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Le Protreptique d'Aristote est perdu. Ce passage est transmis sans nom d'auteur par Jamblique (vers 300 apr. J.-C.) ; son attribution à Aristote vient des éditeurs modernes, depuis I. Bywater (1869). Jamblique le reprend dans Sur la science mathématique commune, 26, pour défendre l'étude des mathématiques.",
+  "themes": [
+   "verite",
+   "liberte"
+  ]
+ },
+ {
+  "id": "aristote-dl-5-18",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "Mot rapporté par Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "V, 18",
+  "texte": "Les racines de l'éducation sont amères, mais son fruit est doux.",
+  "original": "τῆς παιδείας ἔφη τὰς μὲν ῥίζας εἶναι πικράς, τὸν δὲ καρπὸν γλυκύν.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Apophtegme attribué à Aristote par Diogène Laërce (IIIe s. apr. J.-C.), Vies, V, 18 ; il ne figure dans aucun traité conservé.",
+  "themes": [
+   "effort",
+   "perseverance",
+   "apprendre"
+  ]
+ }
+]

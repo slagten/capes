@@ -1,0 +1,385 @@
+[
+ {
+  "id": "hume-enquete-12-24-doute",
+  "type": "maxime",
+  "auteur": "Hume",
+  "oeuvre": "Enquête sur l'entendement humain",
+  "ref": "Section XII, partie 3, § 24 (SBN 161-162)",
+  "texte": "En général, il y a un degré de doute, de prudence et de modestie qui, dans toute espèce d'examen et de décision, doit toujours accompagner celui qui raisonne juste.",
+  "original": "In general, there is a degree of doubt, and caution, and modesty, which, in all kinds of scrutiny and decision, ought for ever to accompany a just reasoner.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le scepticisme « mitigé » : le doute bien conduit. § 129 dans la numérotation continue de l'éd. Selby-Bigge.",
+  "themes": [
+   "doute",
+   "humilite",
+   "raison"
+  ]
+ },
+ {
+  "id": "condorcet-esquisse-perfectibilite",
+  "type": "maxime",
+  "auteur": "Condorcet",
+  "oeuvre": "Esquisse d'un tableau historique des progrès de l'esprit humain",
+  "ref": "Introduction (1795)",
+  "texte": "Montrer, par le raisonnement et par les faits, qu'il n'a été marqué aucun terme au perfectionnement des facultés humaines ; que la perfectibilité de l'homme est réellement indéfinie.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "« Tel est le but de l'ouvrage que j'ai entrepris, et dont le résultat sera de montrer… » La phrase continue : « que les progrès de cette perfectibilité […] n'ont d'autre terme que la durée du globe où la nature nous a jetés ».",
+  "themes": [
+   "perseverance",
+   "apprendre",
+   "infini"
+  ]
+ },
+ {
+  "id": "condorcet-memoire-1-instruction",
+  "type": "maxime",
+  "auteur": "Condorcet",
+  "oeuvre": "Cinq mémoires sur l'instruction publique",
+  "ref": "Premier mémoire, « Nature et objet de l'instruction publique » (1791)",
+  "texte": "Le but de l'instruction n'est pas de faire admirer aux hommes une législation toute faite, mais de les rendre capables de l'apprécier et de la corriger.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Sous l'intertitre « La constitution de chaque nation ne doit faire partie de l'instruction que comme un fait ».",
+  "themes": [
+   "raison",
+   "liberte",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "laplace-essai-bon-sens",
+  "type": "maxime",
+  "auteur": "Laplace",
+  "oeuvre": "Essai philosophique sur les probabilités",
+  "ref": "Dernier paragraphe de l'ouvrage (fin de la « Notice historique sur le calcul des probabilités »)",
+  "texte": "La théorie des probabilités n'est au fond que le bon sens réduit au calcul : elle fait apprécier avec exactitude ce que les esprits justes sentent par une sorte d'instinct […].",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Le texte commence par « On voit, par cet Essai, que… » et finit par « sans qu'ils puissent souvent s'en rendre compte ».",
+  "themes": [
+   "hasard",
+   "raison",
+   "nombre"
+  ]
+ },
+ {
+  "id": "laplace-essai-questions-vie",
+  "type": "maxime",
+  "auteur": "Laplace",
+  "oeuvre": "Essai philosophique sur les probabilités",
+  "ref": "Introduction, premier paragraphe",
+  "texte": "Les questions les plus importantes de la vie […] ne sont en effet, pour la plupart, que des problèmes de probabilité.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Le texte dit : « …aux questions les plus importantes de la vie, qui ne sont en effet… ».",
+  "themes": [
+   "hasard",
+   "raison"
+  ]
+ },
+ {
+  "id": "laplace-essai-efforts",
+  "type": "maxime",
+  "auteur": "Laplace",
+  "oeuvre": "Essai philosophique sur les probabilités",
+  "ref": "« De la probabilité »",
+  "texte": "Tous ses efforts dans la recherche de la vérité tendent à le rapprocher sans cesse de l'intelligence que nous venons de concevoir, mais dont il restera toujours infiniment éloigné.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "« Ses », « le » : l'esprit humain. « L'intelligence » : celle qui, connaissant toutes les forces de la nature, verrait l'avenir comme le passé.",
+  "themes": [
+   "verite",
+   "effort",
+   "humilite"
+  ]
+ },
+ {
+  "id": "poincare-sh-douter",
+  "type": "maxime",
+  "auteur": "Poincaré",
+  "oeuvre": "La Science et l'Hypothèse",
+  "ref": "Introduction (1902)",
+  "texte": "Douter de tout ou tout croire, ce sont deux solutions également commodes, qui l'une et l'autre nous dispensent de réfléchir.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "doute",
+   "raison"
+  ]
+ },
+ {
+  "id": "poincare-vds-intuition",
+  "type": "maxime",
+  "auteur": "Poincaré",
+  "oeuvre": "La Valeur de la science",
+  "ref": "Ire partie, ch. I, « L'intuition et la logique en mathématiques » (1905)",
+  "texte": "La logique qui peut seule donner la certitude est l'instrument de la démonstration : l'intuition est l'instrument de l'invention.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "preuve",
+   "methode"
+  ]
+ },
+ {
+  "id": "poincare-sm-meme-nom",
+  "type": "maxime",
+  "auteur": "Poincaré",
+  "oeuvre": "Science et méthode",
+  "ref": "Livre I, ch. II, « L'avenir des mathématiques » (1908)",
+  "texte": "La mathématique est l'art de donner le même nom à des choses différentes.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Le texte dit : « Je ne sais si je n'ai pas déjà dit quelque part que la mathématique est l'art… ».",
+  "themes": [
+   "nombre",
+   "beaute",
+   "methode"
+  ]
+ },
+ {
+  "id": "poincare-sm-beaute",
+  "type": "maxime",
+  "auteur": "Poincaré",
+  "oeuvre": "Science et méthode",
+  "ref": "Livre I, ch. III, « L'invention mathématique » (1908)",
+  "texte": "Le sentiment de la beauté mathématique, de l'harmonie des nombres et des formes, de l'élégance géométrique : c'est un vrai sentiment esthétique que tous les vrais mathématiciens connaissent.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Le texte dit : « Ce serait oublier le sentiment de la beauté mathématique, […] de l'élégance géométrique. C'est un vrai sentiment esthétique… » (contre l'idée que les démonstrations n'intéressent que l'intelligence) ; deux-points mis à la place du point.",
+  "themes": [
+   "beaute",
+   "nombre"
+  ]
+ },
+ {
+  "id": "weil-etudes-attention",
+  "type": "maxime",
+  "auteur": "Simone Weil",
+  "oeuvre": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu",
+  "ref": "1942 (recueilli dans Attente de Dieu, 1950)",
+  "texte": "La formation de la faculté d'attention est le but véritable et presque l'unique intérêt des études.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "La phrase commence par « Bien qu'aujourd'hui on semble l'ignorer, ».",
+  "themes": [
+   "attention",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "weil-etudes-geometrie",
+  "type": "maxime",
+  "auteur": "Simone Weil",
+  "oeuvre": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu",
+  "ref": "1942 (recueilli dans Attente de Dieu, 1950)",
+  "texte": "Si on cherche avec une véritable attention la solution d'un problème de géométrie, et si, au bout d'une heure, on n'est pas plus avancé […], on a néanmoins avancé […] dans une autre dimension plus mystérieuse.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Coupures : « qu'en commençant » et « durant chaque minute de cette heure ». Même page : « Jamais, en aucun cas, aucun effort d'attention véritable n'est perdu. »",
+  "themes": [
+   "attention",
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "weil-etudes-exercice-manque",
+  "type": "maxime",
+  "auteur": "Simone Weil",
+  "oeuvre": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu",
+  "ref": "1942 (recueilli dans Attente de Dieu, 1950)",
+  "texte": "S'astreindre rigoureusement à regarder en face, à contempler avec attention, pendant longtemps, chaque exercice scolaire manqué, dans toute la laideur de sa médiocrité.",
+  "original": "",
+  "traduction": "texte original",
+  "statut": "authentique",
+  "note": "Seconde condition d'un bon usage des études (« La seconde condition est de… »). La phrase continue : « sans se chercher aucune excuse, […] et en essayant de remonter à l'origine de chaque faute ».",
+  "themes": [
+   "erreur",
+   "attention",
+   "humilite"
+  ]
+ },
+ {
+  "id": "platon-menon-81cd",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Ménon",
+  "ref": "81d",
+  "texte": "Rien n'empêche qu'en se ressouvenant d'une seule chose — ce que les hommes appellent apprendre — on retrouve soi-même tout le reste, si l'on est courageux et qu'on ne se lasse pas de chercher.",
+  "original": "οὐδὲν κωλύει ἓν μόνον ἀναμνησθέντα—ὃ δὴ μάθησιν καλοῦσιν ἄνθρωποι—τἆλλα πάντα αὐτὸν ἀνευρεῖν, ἐάν τις ἀνδρεῖος ᾖ καὶ μὴ ἀποκάμνῃ ζητῶν",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Suite : « car chercher et apprendre ne sont en somme que réminiscence » (τὸ γὰρ ζητεῖν ἄρα καὶ τὸ μανθάνειν ἀνάμνησις ὅλον ἐστίν).",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "courage",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "platon-menon-85cd",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Ménon",
+  "ref": "85c-d",
+  "texte": "Pour l'instant, ces opinions viennent de s'éveiller en lui comme en rêve ; mais qu'on l'interroge souvent et de plusieurs façons sur ces mêmes choses : à la fin, il les saura aussi exactement que personne.",
+  "original": "καὶ νῦν μέν γε αὐτῷ ὥσπερ ὄναρ ἄρτι ἀνακεκίνηνται αἱ δόξαι αὗται· εἰ δὲ αὐτόν τις ἀνερήσεται πολλάκις τὰ αὐτὰ ταῦτα καὶ πολλαχῇ, οἶσθʼ ὅτι τελευτῶν οὐδενὸς ἧττον ἀκριβῶς ἐπιστήσεται περὶ τούτων.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate, après l'interrogation du jeune esclave sur la duplication du carré. Interroger souvent et de plusieurs façons : c'est déjà le principe des révisions.",
+  "themes": [
+   "memoire",
+   "apprendre",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "platon-phedre-275a",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Phèdre",
+  "ref": "275a",
+  "texte": "Se fiant à l'écriture, ils se ressouviendront du dehors, par des marques étrangères, non du dedans, par eux-mêmes : tu as trouvé un remède non pour la mémoire, mais pour le rappel.",
+  "original": "ἔξωθεν ὑπʼ ἀλλοτρίων τύπων, οὐκ ἔνδοθεν αὐτοὺς ὑφʼ αὑτῶν ἀναμιμνῃσκομένους· οὔκουν μνήμης ἀλλὰ ὑπομνήσεως φάρμακον ηὗρες.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le roi Thamus à Theuth, inventeur de l'écriture, qui produira « l'oubli dans les âmes de ceux qui l'auront apprise, faute d'exercer leur mémoire ». Relire ses notes n'est pas se souvenir.",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "platon-theetete-191d",
+  "type": "maxime",
+  "auteur": "Platon",
+  "oeuvre": "Théétète",
+  "ref": "191d",
+  "texte": "Disons que cette cire de l'âme est un don de Mnémosyne, mère des Muses : ce que nous y imprimons comme le sceau d'un anneau, nous le retenons et le savons tant que l'image demeure.",
+  "original": "δῶρον τοίνυν αὐτὸ φῶμεν εἶναι τῆς τῶν Μουσῶν μητρὸς Μνημοσύνης",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Socrate suppose dans l'âme un bloc de cire (κήρινον ἐκμαγεῖον, 191c) ; ce qui s'efface, on l'oublie et on ne le sait plus. Texte de dédicace naturel pour le temple de Mnémosyne.",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "aristote-memoire-451a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "De la mémoire et de la réminiscence",
+  "ref": "1, 451a12-14",
+  "texte": "Les exercices conservent la mémoire en ravivant sans cesse le souvenir ; ce n'est rien d'autre que considérer souvent ce qu'on se représente comme une image, et non en lui-même.",
+  "original": "αἱ δὲ μελέται τὴν μνήμην σώζουσι τῷ ἐπαναμιμνήσκειν· τοῦτο δ’ ἐστὶν οὐδὲν ἕτερον ἢ τὸ θεωρεῖν πολλάκις ὡς εἰκόνα καὶ μὴ ὡς καθ’ αὑτό.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "« Comme une image » : comme la copie d'une chose passée. Dernière phrase de l'exposé sur la mémoire (ch. 1).",
+  "themes": [
+   "memoire",
+   "effort",
+   "methode"
+  ]
+ },
+ {
+  "id": "aristote-memoire-452a",
+  "type": "maxime",
+  "auteur": "Aristote",
+  "oeuvre": "De la mémoire et de la réminiscence",
+  "ref": "2, 452a2-4",
+  "texte": "Ce qui a un certain ordre, comme les mathématiques, se rappelle aisément ; ce qui est mal ordonné, difficilement.",
+  "original": "καὶ ἔστιν εὐμνημόνευτα ὅσα τάξιν τινὰ ἔχει, ὥσπερ τὰ μαθήματα· τὰ δὲ φαύλως καὶ χαλεπῶς.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Τὰ μαθήματα : les sciences mathématiques. Contexte : le rappel (ἀνάμνησις) suit l'ordre dans lequel les choses s'enchaînent ; il réussit le mieux en partant du début.",
+  "themes": [
+   "memoire",
+   "ordre",
+   "nombre"
+  ]
+ },
+ {
+  "id": "ciceron-orateur-1-18",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "De l'orateur",
+  "ref": "I, 18",
+  "texte": "Que dire de la mémoire, trésor de toutes choses ? Si elle n'est pas gardienne des idées et des mots qu'on a trouvés et médités, tout, même le plus brillant chez l'orateur, périra.",
+  "original": "Quid dicam de thesauro rerum omnium, memoria? Quae nisi custos inventis cogitatisque rebus et verbis adhibeatur, intellegimus omnia, etiam si praeclarissima fuerint in oratore, peritura.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "memoire",
+   "effort"
+  ]
+ },
+ {
+  "id": "quintilien-11-2-43",
+  "type": "maxime",
+  "auteur": "Quintilien",
+  "oeuvre": "Institution oratoire",
+  "ref": "XI, 2, 43",
+  "texte": "Chose étonnante, dont la raison n'est pas claire : combien une nuit d'intervalle donne de solidité ! […] Ce qu'on ne pouvait restituer sur-le-champ s'enchaîne le lendemain, et le temps, cause ordinaire de l'oubli, affermit la mémoire.",
+  "original": "Mirum dictu est nec in promptu ratio, quantum nox interposita adferat firmitatis […]; quae statim referri non poterant, contexuntur postera die, confirmatque memoriam illud tempus, quod esse in causa solet oblivionis.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Coupure : hypothèses de Quintilien sur la cause (repos de l'effort, maturation du souvenir). Au § 40 : « l'unique et le plus grand art de la mémoire, c'est l'exercice et le travail : apprendre beaucoup par cœur, réfléchir beaucoup, et si possible chaque jour ».",
+  "themes": [
+   "memoire",
+   "temps",
+   "lenteur"
+  ]
+ },
+ {
+  "id": "seneque-lettres-84-7",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "84, 6-7",
+  "texte": "Ce que nous avons puisé, ne le laissons pas intact, pour qu'il ne nous reste pas étranger. Digérons-le : autrement il ira dans la mémoire, non dans l'intelligence.",
+  "original": "ut quaecumque hausimus non patiamur integra esse, ne aliena sint. Concoquamus illa; alioqui in memoriam ibunt, non in ingenium.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Lettre des abeilles (84, 3 : « Apes, ut aiunt, debemus imitari… ») : la lecture doit être digérée comme la nourriture. Le texte de Gummere (Perseus) lit « patiantur ».",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "augustin-confessions-10-12-19",
+  "type": "maxime",
+  "auteur": "Augustin",
+  "oeuvre": "Confessions",
+  "ref": "X, 12, 19",
+  "texte": "La mémoire contient les raisons et les lois innombrables des nombres et des dimensions, dont aucune n'a été imprimée par un sens du corps.",
+  "original": "Continet memoria numerorum dimensionumque rationes et leges innumerabiles, quarum nullam corporis sensus impressit.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Suite : « car elles n'ont ni couleur, ni son, ni odeur, ni goût, ni toucher ». Voir aussi X, 8, 12 : « les vastes palais de la mémoire, où sont les trésors d'innombrables images ».",
+  "themes": [
+   "memoire",
+   "nombre",
+   "verite"
+  ]
+ }
+]

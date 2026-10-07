@@ -1,0 +1,419 @@
+[
+ {
+  "id": "montaigne-1-26-par-coeur",
+  "type": "maxime",
+  "auteur": "Montaigne",
+  "oeuvre": "Essais",
+  "ref": "I, 26, « De l'institution des enfants »",
+  "texte": "Savoir par cœur n'est pas savoir : c'est tenir ce qu'on a donné en garde à sa mémoire. Ce qu'on sait droitement, on en dispose, sans regarder au patron, sans tourner les yeux vers son livre.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Numérotation Villey (I, 26) ; I, 25 dans l'édition de 1595. Écho de Sénèque, Lettres, 33, 8 (meminisse / scire).",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "montaigne-1-26-cent-visages",
+  "type": "maxime",
+  "auteur": "Montaigne",
+  "oeuvre": "Essais",
+  "ref": "I, 26, « De l'institution des enfants »",
+  "texte": "Que ce qu'il viendra d'apprendre, il le lui fasse mettre en cent visages et accommoder à autant de divers sujets, pour voir s'il l'a encore bien pris et bien fait sien.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Le précepteur fait varier les applications d'une même leçon : l'éloge de l'exercice varié. I, 25 dans l'édition de 1595.",
+  "themes": [
+   "apprendre",
+   "methode"
+  ]
+ },
+ {
+  "id": "montaigne-1-26-etamine",
+  "type": "maxime",
+  "auteur": "Montaigne",
+  "oeuvre": "Essais",
+  "ref": "I, 26, « De l'institution des enfants »",
+  "texte": "Qu'il lui fasse tout passer par l'étamine, et ne loge rien en sa tête par simple autorité et à crédit.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "L'étamine : le tamis, le crible. I, 25 dans l'édition de 1595.",
+  "themes": [
+   "doute",
+   "raison"
+  ]
+ },
+ {
+  "id": "montaigne-3-8-queter",
+  "type": "maxime",
+  "auteur": "Montaigne",
+  "oeuvre": "Essais",
+  "ref": "III, 8, « De l'art de conférer »",
+  "texte": "Nous sommes nés à quêter la vérité ; il appartient de la posséder à une plus grande puissance.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Le « Car » initial est omis.",
+  "themes": [
+   "verite",
+   "humilite"
+  ]
+ },
+ {
+  "id": "descartes-discours-1-lentement",
+  "type": "maxime",
+  "auteur": "Descartes",
+  "oeuvre": "Discours de la méthode",
+  "ref": "Première partie (AT VI, 2)",
+  "texte": "Ceux qui ne marchent que fort lentement peuvent avancer beaucoup davantage, s'ils suivent toujours le droit chemin, que ne font ceux qui courent, et qui s'en éloignent.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Le « Et » initial est omis.",
+  "themes": [
+   "lenteur",
+   "perseverance",
+   "methode"
+  ]
+ },
+ {
+  "id": "descartes-discours-2-ordre",
+  "type": "maxime",
+  "auteur": "Descartes",
+  "oeuvre": "Discours de la méthode",
+  "ref": "Seconde partie, troisième précepte (AT VI, 18-19)",
+  "texte": "Conduire par ordre mes pensées, en commençant par les objets les plus simples et les plus aisés à connaître, pour monter peu à peu, comme par degrés, jusques à la connaissance des plus composés.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Troisième des quatre préceptes ; le texte porte « Le troisième, de conduire… ». La phrase continue : « et supposant même de l'ordre entre ceux qui ne se précèdent point naturellement les uns les autres ».",
+  "themes": [
+   "ordre",
+   "methode"
+  ]
+ },
+ {
+  "id": "descartes-regulae-9",
+  "type": "maxime",
+  "auteur": "Descartes",
+  "oeuvre": "Règles pour la direction de l'esprit",
+  "ref": "Règle IX, énoncé (AT X, 400)",
+  "texte": "Il faut tourner toute la pointe de l'esprit vers les choses les plus petites et les plus faciles, et s'y arrêter longtemps, jusqu'à ce qu'on s'habitue à voir la vérité distinctement et clairement.",
+  "original": "Oportet ingenii aciem ad res minimas et maxime faciles totam convertere, atque in illis diutius immorari, donec assuescamus veritatem distincte et perspicue intueri.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Traité latin posthume (1701). Énoncé latin vérifié sur l'éd. Adam-Tannery, t. X, p. 400.",
+  "themes": [
+   "attention",
+   "lenteur",
+   "methode"
+  ]
+ },
+ {
+  "id": "descartes-regulae-10",
+  "type": "maxime",
+  "auteur": "Descartes",
+  "oeuvre": "Règles pour la direction de l'esprit",
+  "ref": "Règle X, énoncé (AT X, 403)",
+  "texte": "Pour que l'esprit devienne sagace, il faut l'exercer à chercher ce que d'autres ont déjà trouvé, et à parcourir avec méthode même les plus humbles techniques, surtout celles qui expliquent ou supposent un ordre.",
+  "original": "Ut ingenium fiat sagax, exerceri debet in iisdem quaerendis, quae jam ab aliis inventa sunt, et cum methodo etiam levissima quaeque hominum artificia percurrere, sed illa maxime quae ordinem explicant vel supponunt.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Énoncé latin vérifié sur l'éd. Adam-Tannery, t. X, p. 403. « Hominum artificia » : les techniques, les arts des hommes. Refaire soi-même ce que d'autres ont déjà trouvé : c'est l'exercice même du candidat.",
+  "themes": [
+   "apprendre",
+   "methode",
+   "ordre"
+  ]
+ },
+ {
+  "id": "pascal-L737",
+  "type": "maxime",
+  "auteur": "Pascal",
+  "oeuvre": "Pensées",
+  "ref": "fr. 737 Lafuma (10 Brunschvicg ; 617 Sellier)",
+  "texte": "On se persuade mieux, pour l'ordinaire, par les raisons qu'on a soi-même trouvées, que par celles qui sont venues dans l'esprit des autres.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Paragraphe d'un papier qui réunit les fragments Laf. 736 à 743.",
+  "themes": [
+   "apprendre",
+   "raison"
+  ]
+ },
+ {
+  "id": "pascal-L41",
+  "type": "maxime",
+  "auteur": "Pascal",
+  "oeuvre": "Pensées",
+  "ref": "fr. 41 Lafuma (69 Brunschvicg ; 75 Sellier), liasse « Vanité »",
+  "texte": "Quand on lit trop vite ou trop doucement on n'entend rien.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "« Entendre » : comprendre.",
+  "themes": [
+   "mesure",
+   "lenteur",
+   "attention"
+  ]
+ },
+ {
+  "id": "pascal-L188",
+  "type": "maxime",
+  "auteur": "Pascal",
+  "oeuvre": "Pensées",
+  "ref": "fr. 188 Lafuma (267 Brunschvicg ; 220 Sellier), liasse « Soumission et usage de la raison »",
+  "texte": "La dernière démarche de la raison est de reconnaître qu'il y a une infinité de choses qui la surpassent.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "raison",
+   "infini",
+   "humilite"
+  ]
+ },
+ {
+  "id": "pascal-esprit-geometrique-methode",
+  "type": "maxime",
+  "auteur": "Pascal",
+  "oeuvre": "De l'esprit géométrique et de l'art de persuader",
+  "ref": "Section I, « De la méthode des démonstrations géométriques, c'est-à-dire méthodiques et parfaites »",
+  "texte": "Cette véritable méthode […] consisterait en deux choses principales : l'une, de n'employer aucun terme dont on n'eût auparavant expliqué nettement le sens ; l'autre, de n'avancer jamais aucune proposition qu'on ne démontrât par des vérités déjà connues.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Coupure : « qui formerait les démonstrations dans la plus haute excellence, s'il était possible d'y arriver ». Définir tous les termes, démontrer toutes les propositions. Certaines éditions intitulent cette section « Réflexions sur la géométrie en général ».",
+  "themes": [
+   "preuve",
+   "methode",
+   "verite"
+  ]
+ },
+ {
+  "id": "spinoza-ethique-1-app-mathesis",
+  "type": "maxime",
+  "auteur": "Spinoza",
+  "oeuvre": "Éthique",
+  "ref": "I, appendice",
+  "texte": "Ce préjugé aurait caché à jamais la vérité aux hommes, si la mathématique, qui traite non des fins mais seulement des essences et propriétés des figures, ne leur avait montré une autre norme de vérité.",
+  "original": "nisi Mathesis, quae non circa fines, sed tantum circa figurarum essentias et proprietates versatur, aliam veritatis normam hominibus ostendisset",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le préjugé : croire que les jugements des dieux dépassent de loin la compréhension humaine (« quae sane unica fuisset causa, ut veritas humanum genus in aeternum lateret »). Spinoza ajoute que d'autres causes encore ont pu ouvrir les yeux des hommes.",
+  "themes": [
+   "verite",
+   "preuve",
+   "nombre"
+  ]
+ },
+ {
+  "id": "spinoza-ethique-5-23-demonstrations",
+  "type": "maxime",
+  "auteur": "Spinoza",
+  "oeuvre": "Éthique",
+  "ref": "V, proposition 23, scolie",
+  "texte": "Les yeux de l'esprit, par lesquels il voit et observe les choses, sont les démonstrations elles-mêmes.",
+  "original": "Mentis enim oculi, quibus res videt observatque, sunt ipsae demonstrationes.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "preuve",
+   "verite"
+  ]
+ },
+ {
+  "id": "spinoza-ethique-5-42-praeclara",
+  "type": "maxime",
+  "auteur": "Spinoza",
+  "oeuvre": "Éthique",
+  "ref": "V, proposition 42, scolie (dernières lignes de l'ouvrage)",
+  "texte": "Si la voie que j'ai montrée pour y parvenir paraît très ardue, on peut pourtant la trouver. […] Mais tout ce qui est beau est aussi difficile que rare.",
+  "original": "Si jam via, quam ad haec ducere ostendi, perardua videatur, inveniri tamen potest. […] Sed omnia praeclara tam difficilia quam rara sunt.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Coupure : « Et sane arduum debet esse quod adeo raro reperitur… ». « Praeclara » : ce qui est beau, excellent.",
+  "themes": [
+   "effort",
+   "perseverance",
+   "beaute"
+  ]
+ },
+ {
+  "id": "spinoza-tie-31-instruments",
+  "type": "maxime",
+  "auteur": "Spinoza",
+  "oeuvre": "Traité de la réforme de l'entendement",
+  "ref": "§ 31 (numérotation Bruder)",
+  "texte": "De même, l'entendement, par sa force native, se fait des instruments intellectuels, par lesquels il acquiert d'autres forces pour d'autres œuvres […], et ainsi avance par degrés jusqu'à atteindre le sommet de la sagesse.",
+  "original": "intellectus vi sua nativa facit sibi instrumenta intellectualia, quibus alias vires acquirit ad alia opera intellectualia […] et sic gradatim pergit, donec sapientiae culmen attingat.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Suite de l'argument du marteau (§ 30) : pour forger le fer il faut un marteau, mais les hommes ont commencé avec leurs outils naturels. Coupure : « et de ces œuvres d'autres instruments, c'est-à-dire le pouvoir de pousser plus loin la recherche ».",
+  "themes": [
+   "apprendre",
+   "methode",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "leibniz-nouveaux-essais-preface",
+  "type": "maxime",
+  "auteur": "Leibniz",
+  "oeuvre": "Nouveaux essais sur l'entendement humain",
+  "ref": "Préface (avant-propos)",
+  "texte": "Les vérités nécessaires, telles qu'on les trouve dans les mathématiques pures, et particulièrement dans l'arithmétique et dans la géométrie, doivent avoir des principes dont la preuve ne dépende point des exemples.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Phrase commençant par « D'où il paraît que » et coupée avant « ni par conséquent du témoignage des sens ». Ouvrage écrit en français (1704, publié en 1765).",
+  "themes": [
+   "preuve",
+   "verite",
+   "nombre"
+  ]
+ },
+ {
+  "id": "leibniz-monadologie-33",
+  "type": "maxime",
+  "auteur": "Leibniz",
+  "oeuvre": "Monadologie",
+  "ref": "§ 33",
+  "texte": "Quand une vérité est nécessaire, on peut en trouver la raison par l'analyse, la résolvant en idées et en vérités plus simples jusqu'à ce qu'on vienne aux primitives.",
+  "original": "",
+  "traduction": "texte original (orthographe modernisée)",
+  "statut": "authentique",
+  "note": "Écrit en français (1714). Certaines éditions portent « on en peut trouver la raison ».",
+  "themes": [
+   "preuve",
+   "methode",
+   "raison"
+  ]
+ },
+ {
+  "id": "leibniz-goldbach-musica",
+  "type": "maxime",
+  "auteur": "Leibniz",
+  "oeuvre": "Lettre à Christian Goldbach",
+  "ref": "17 avril 1712",
+  "texte": "La musique est un exercice caché d'arithmétique, d'une âme qui ne sait pas qu'elle compte.",
+  "original": "Musica est exercitium arithmeticae occultum nescientis se numerare animi.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Lettre datée de Hanovre, 17 avril 1712, publiée par Kortholt, Epistolae ad diversos, t. I (1734). Leibniz poursuit : l'âme fait beaucoup de choses par des perceptions confuses ou insensibles, qu'elle ne peut remarquer par une aperception distincte.",
+  "themes": [
+   "nombre",
+   "beaute"
+  ]
+ },
+ {
+  "id": "kant-krv-bxi-thales",
+  "type": "maxime",
+  "auteur": "Kant",
+  "oeuvre": "Critique de la raison pure",
+  "ref": "Préface de la 2e édition, B XI-XII",
+  "texte": "Au premier qui démontra le triangle isocèle (Thalès ou un autre), une lumière se fit : il comprit qu'il ne devait pas épier ce qu'il voyait dans la figure, mais en produire les propriétés par construction.",
+  "original": "Dem ersten, der den gleichschenklichten Triangel demonstrierte (er mag nun Thales oder wie man will geheißen haben), dem ging ein Licht auf",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "L'édition de 1787 imprime « gleichseitigen » (équilatéral) ; Kant a signalé l'erreur dans sa lettre à C. G. Schütz du 25 juin 1787, et l'édition de l'Académie imprime « gleichschenklichten » (isocèle). « Thalès ou un autre » abrège « qu'il se soit appelé Thalès ou comme on voudra ». Kant précise : les produire par ce qu'il y mettait lui-même a priori d'après des concepts et présentait (par construction).",
+  "themes": [
+   "preuve",
+   "beaute",
+   "methode"
+  ]
+ },
+ {
+  "id": "kant-krv-a5-colombe",
+  "type": "maxime",
+  "auteur": "Kant",
+  "oeuvre": "Critique de la raison pure",
+  "ref": "Introduction, A 5 / B 8-9",
+  "texte": "La colombe légère, qui fend l'air dans son libre vol et en sent la résistance, pourrait s'imaginer qu'elle volerait bien mieux encore dans un espace vide d'air.",
+  "original": "Die leichte Taube, indem sie im freien Fluge die Luft teilt, deren Widerstand sie fühlt, könnte die Vorstellung fassen, daß es ihr im luftleeren Raum noch viel besser gelingen werde.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Kant enchaîne sur Platon, qui quitta le monde sensible pour s'aventurer dans l'espace vide de l'entendement pur, sans point d'appui.",
+  "themes": [
+   "effort",
+   "raison",
+   "humilite"
+  ]
+ },
+ {
+  "id": "kant-krv-a133-jugement",
+  "type": "maxime",
+  "auteur": "Kant",
+  "oeuvre": "Critique de la raison pure",
+  "ref": "Analytique des principes, introduction, A 133 / B 172",
+  "texte": "L'entendement peut être instruit et équipé de règles, mais le jugement est un talent particulier, qui ne veut pas être enseigné, mais seulement exercé.",
+  "original": "…daß zwar der Verstand einer Belehrung und Ausrüstung durch Regeln fähig, Urteilskraft aber ein besonderes Talent sei, welches gar nicht belehrt, sondern nur geübt sein will.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Kant ajoute (A 134 / B 173) : « Telle est la seule et grande utilité des exemples : ils aiguisent le jugement ».",
+  "themes": [
+   "apprendre",
+   "effort",
+   "raison"
+  ]
+ },
+ {
+  "id": "kant-lumieres-sapere-aude",
+  "type": "maxime",
+  "auteur": "Kant",
+  "oeuvre": "Réponse à la question : Qu'est-ce que les Lumières ?",
+  "ref": "1784, premier paragraphe (AA VIII, 35)",
+  "texte": "Sapere aude ! Aie le courage de te servir de ton propre entendement ! Voilà donc la devise des Lumières.",
+  "original": "Sapere aude! Habe Mut, dich deines eigenen Verstandes zu bedienen! ist also der Wahlspruch der Aufklärung.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "« Sapere aude » (« ose savoir ») vient d'Horace, Épîtres, I, 2, 40.",
+  "themes": [
+   "courage",
+   "liberte",
+   "raison"
+  ]
+ },
+ {
+  "id": "hume-enquete-4-1-euclide",
+  "type": "maxime",
+  "auteur": "Hume",
+  "oeuvre": "Enquête sur l'entendement humain",
+  "ref": "Section IV, partie 1, § 20 (SBN 25)",
+  "texte": "Quand il n'y aurait jamais eu dans la nature ni cercle ni triangle, les vérités démontrées par Euclide garderaient pour toujours leur certitude et leur évidence.",
+  "original": "Though there never were a circle or triangle in nature, the truths, demonstrated by Euclid, would for ever retain their certainty and evidence.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Numérotation des paragraphes de Selby-Bigge (E 4.1 dans l'édition Beauchamp).",
+  "themes": [
+   "preuve",
+   "verite",
+   "nombre"
+  ]
+ },
+ {
+  "id": "hume-enquete-10-4-sage",
+  "type": "maxime",
+  "auteur": "Hume",
+  "oeuvre": "Enquête sur l'entendement humain",
+  "ref": "Section X, partie 1, § 87 (SBN 110)",
+  "texte": "Un homme sage proportionne donc sa croyance aux preuves.",
+  "original": "A wise man, therefore, proportions his belief to the evidence.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "« Evidence » : les preuves, les témoignages dont on dispose. Numérotation des paragraphes de Selby-Bigge (E 10.4 dans l'édition Beauchamp).",
+  "themes": [
+   "raison",
+   "doute",
+   "mesure"
+  ]
+ }
+]

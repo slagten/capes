@@ -1,0 +1,757 @@
+[
+ {
+  "id": "epicure-menecee-122",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Lettre à Ménécée",
+  "ref": "122",
+  "texte": "Que nul, étant jeune, ne tarde à philosopher, ni, étant vieux, ne se lasse de philosopher : car il n'est jamais trop tôt ni trop tard pour veiller à la santé de l'âme.",
+  "original": "Μήτε νέος τις ὢν μελλέτω φιλοσοφεῖν, μήτε γέρων ὑπάρχων κοπιάτω φιλοσοφῶν· οὔτε γὰρ ἄωρος οὐδείς ἐστιν οὔτε πάρωρος πρὸς τὸ κατὰ ψυχὴν ὑγιαῖνον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Ouverture de la lettre, conservée par Diogène Laërce, X, 122.",
+  "themes": [
+   "apprendre",
+   "temps",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "epicure-menecee-135",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Lettre à Ménécée",
+  "ref": "135",
+  "texte": "Médite ces choses jour et nuit, en toi-même et avec qui te ressemble : jamais, ni éveillé ni en songe, tu ne seras troublé, et tu vivras comme un dieu parmi les hommes.",
+  "original": "Ταῦτα οὖν καὶ τὰ τούτοις συγγενῆ μελέτα πρὸς σεαυτὸν ἡμέρας καὶ νυκτὸς πρός τε τὸν ὅμοιον σεαυτῷ",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Conclusion de la lettre (Diogène Laërce, X, 135).",
+  "themes": [
+   "perseverance",
+   "memoire",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "epicure-herodote-36",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Lettre à Hérodote",
+  "ref": "36",
+  "texte": "Même pour qui est pleinement instruit, l'essentiel de toute connaissance exacte est de pouvoir mobiliser promptement sa pensée, chaque chose étant ramenée à des éléments et à des formules simples.",
+  "original": "τὸ ταῖς ἐπιβολαῖς ὀξέως δύνασθαι χρῆσθαι, ἑκάστων πρὸς ἁπλᾶ στοιχειώματα καὶ φωνὰς συναγομένων",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Épicure justifie ainsi l'abrégé qu'il envoie à Hérodote : un résumé bien su permet de retrouver tout le détail. Lettre conservée par Diogène Laërce, X, 35-83.",
+  "themes": [
+   "methode",
+   "memoire",
+   "ordre"
+  ]
+ },
+ {
+  "id": "epicure-sv-14",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Sentences vaticanes",
+  "ref": "14",
+  "texte": "Nous ne naissons qu'une fois […]. Toi qui n'es pas maître du lendemain, tu remets à plus tard le moment favorable ; mais la vie se perd à attendre, et chacun de nous meurt affairé.",
+  "original": "σὺ δὲ οὐκ ὢν τῆς αὔριον 〈κύριος〉 ἀναβάλλῃ τὸν καιρόν· ὁ δὲ βίος μελλησμῷ παραπόλλυται καὶ εἷς ἕκαστος ἡμῶν ἀσχολούμενος ἀποθνῄσκει.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Sentence du Gnomologium Vaticanum (manuscrit Vat. gr. 1950), recueil anonyme de sentences épicuriennes où se mêlent des paroles d'Épicure et de ses disciples : l'attribution de celle-ci à Épicure lui-même n'est pas certaine. Le mot « maître » (κύριος) est un ajout des éditeurs.",
+  "themes": [
+   "temps",
+   "effort"
+  ]
+ },
+ {
+  "id": "epicure-sv-27",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Sentences vaticanes",
+  "ref": "27",
+  "texte": "Dans les autres activités, le fruit ne vient qu'au terme, à grand-peine ; en philosophie, le plaisir accompagne la connaissance : on ne jouit pas après avoir appris, on apprend et l'on jouit ensemble.",
+  "original": "οὐ γὰρ μετὰ μάθησιν ἀπόλαυσις, ἀλλὰ ἅμα μάθησις καὶ ἀπόλαυσις.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "verite",
+   "effort"
+  ]
+ },
+ {
+  "id": "epicure-sv-41",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Sentences vaticanes",
+  "ref": "41",
+  "texte": "Il faut à la fois rire, philosopher, gouverner sa maison et user de ses autres biens, sans jamais cesser de faire entendre les paroles de la droite philosophie.",
+  "original": "Γελᾶν ἅμα δεῖ καὶ φιλοσοφεῖν καὶ οἰκονομεῖν",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "mesure",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "epicure-sv-54",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Sentences vaticanes",
+  "ref": "54",
+  "texte": "Il ne faut pas faire semblant de philosopher, mais philosopher pour de bon : nous n'avons pas besoin de paraître en bonne santé, mais de l'être vraiment.",
+  "original": "Οὐ προσποιεῖσθαι δεῖ φιλοσοφεῖν, ἀλλ' ὄντως φιλοσοφεῖν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "verite",
+   "effort"
+  ]
+ },
+ {
+  "id": "epicure-sv-74",
+  "type": "maxime",
+  "auteur": "Épicure",
+  "oeuvre": "Sentences vaticanes",
+  "ref": "74",
+  "texte": "Dans une discussion menée par amour du savoir, c'est le vaincu qui gagne le plus, dans la mesure où il y a appris quelque chose.",
+  "original": "Ἐν φιλολόγῳ συζητήσει πλεῖον ἤνυσεν ὁ ἡττηθείς, καθ' ὃ προσέμαθεν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "erreur",
+   "apprendre",
+   "humilite"
+  ]
+ },
+ {
+  "id": "lucrece-1-140",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "I, 140-144",
+  "texte": "Ton mérite et le plaisir espéré d'une douce amitié me font endurer toute peine et veiller les nuits sereines, cherchant par quels mots, par quels vers porter devant ton esprit une claire lumière.",
+  "original": "noctes vigilare serenas",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Lucrèce s'adresse à Memmius, le dédicataire du poème, et dit la peine de rendre en vers latins les découvertes obscures des Grecs.",
+  "themes": [
+   "effort",
+   "perseverance",
+   "temps"
+  ]
+ },
+ {
+  "id": "lucrece-1-146",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "I, 146-148",
+  "texte": "Cette terreur de l'esprit et ces ténèbres, ce ne sont pas les rayons du soleil ni les traits lumineux du jour qui doivent les dissiper, mais la vue de la nature et son explication.",
+  "original": "sed naturae species ratioque",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Ces trois vers reviennent comme un refrain en II, 59-61 ; III, 91-93 ; VI, 39-41.",
+  "themes": [
+   "raison",
+   "verite"
+  ]
+ },
+ {
+  "id": "lucrece-1-311",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "I, 311-314",
+  "texte": "Au retour de bien des années, l'anneau s'amincit au doigt qui le porte ; la goutte qui tombe creuse la pierre ; le soc de fer de la charrue s'use insensiblement dans les champs.",
+  "original": "stilicidi casus lapidem cavat",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Lucrèce prouve ainsi l'existence de corps invisibles : tout change par parcelles imperceptibles.",
+  "themes": [
+   "lenteur",
+   "perseverance",
+   "temps",
+   "changement"
+  ]
+ },
+ {
+  "id": "lucrece-1-402",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "I, 402-403",
+  "texte": "Ces petites traces suffisent à un esprit sagace : par elles, tu pourras connaître le reste par toi-même.",
+  "original": "verum animo satis haec vestigia parva sagaci / sunt, per quae possis cognoscere cetera tute",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "methode",
+   "apprendre",
+   "raison"
+  ]
+ },
+ {
+  "id": "lucrece-1-1114",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "I, 1114-1117",
+  "texte": "Avec un léger effort, tu connaîtras cela : une chose éclairera l'autre, la nuit aveugle ne te barrera pas la route jusqu'au fond de la nature ; les choses allumeront la lumière pour les choses.",
+  "original": "namque alid ex alio clarescet… ita res accendent lumina rebus",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Derniers vers du livre I.",
+  "themes": [
+   "apprendre",
+   "methode",
+   "raison"
+  ]
+ },
+ {
+  "id": "lucrece-3-10",
+  "type": "maxime",
+  "auteur": "Lucrèce",
+  "oeuvre": "De la nature",
+  "ref": "III, 10-13",
+  "texte": "Comme les abeilles butinent tout dans les bois fleuris, ainsi, dans tes écrits, homme illustre, nous nous nourrissons de toutes tes paroles d'or, d'or, et toujours dignes d'une vie éternelle.",
+  "original": "floriferis ut apes in saltibus omnia libant",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Lucrèce s'adresse à Épicure (« tu, pater, es rerum inventor », III, 9).",
+  "themes": [
+   "apprendre",
+   "memoire"
+  ]
+ },
+ {
+  "id": "ciceron-tusculanes-1-5",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Tusculanes",
+  "ref": "I, 5",
+  "texte": "Chez les Grecs, la géométrie fut tenue en très grand honneur, et rien n'était plus illustre que les mathématiciens ; nous, nous avons borné cet art à l'utilité de mesurer et de calculer.",
+  "original": "In summo apud illos honore geometria fuit, itaque nihil mathematicis inlustrius",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "nombre",
+   "beaute",
+   "raison"
+  ]
+ },
+ {
+  "id": "ciceron-tusculanes-2-13",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Tusculanes",
+  "ref": "II, 13",
+  "texte": "Un champ, si fertile soit-il, ne peut porter de fruits sans culture ; il en va de même de l'esprit sans enseignement. Or la culture de l'esprit, c'est la philosophie.",
+  "original": "cultura autem animi philosophia est",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "ciceron-devoirs-1-18",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Des devoirs",
+  "ref": "I, 18",
+  "texte": "Il faut éviter de tenir pour connu ce qu'on ignore et d'y donner à la légère son assentiment ; qui veut fuir ce défaut, et tous doivent le vouloir, consacrera à l'examen temps et attention.",
+  "original": "adhibebit ad considerandas res et tempus et diligentiam",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "erreur",
+   "attention",
+   "methode",
+   "doute"
+  ]
+ },
+ {
+  "id": "ciceron-fins-5-48",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Des fins des biens et des maux",
+  "ref": "V, 48",
+  "texte": "Si grand est l'amour de la connaissance et du savoir qui est né avec nous, que nul ne peut douter que la nature humaine y soit entraînée sans l'appât d'aucun profit.",
+  "original": "tantus est igitur innatus in nobis cognitionis amor et scientiae",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Dans le dialogue, c'est Pison qui parle, exposant la doctrine de l'Ancienne Académie selon Antiochus d'Ascalon.",
+  "themes": [
+   "apprendre",
+   "verite"
+  ]
+ },
+ {
+  "id": "ciceron-orateur-2-353",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "De l'orateur",
+  "ref": "II, 353-354",
+  "texte": "C'est avant tout l'ordre qui apporte la lumière à la mémoire : il faut donc choisir des lieux et y disposer en esprit les images de ce qu'on veut retenir.",
+  "original": "ordinem esse maxime, qui memoriae lumen adferret",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Dans le dialogue, c'est l'orateur Marc Antoine qui parle ; selon lui, le poète Simonide de Céos aurait découvert ce principe (« invenisse fertur ») : c'est l'origine de la « méthode des lieux ».",
+  "themes": [
+   "memoire",
+   "ordre",
+   "methode"
+  ]
+ },
+ {
+  "id": "ciceron-academiques-2-7",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Académiques",
+  "ref": "II (Lucullus), 7",
+  "texte": "Nos discussions n'ont d'autre but que de faire jaillir et comme d'extraire, en parlant et en écoutant pour et contre, quelque chose qui soit vrai ou qui s'en approche le plus possible.",
+  "original": "ut in utramque partem dicendo et audiendo eliciant et tamquam exprimant aliquid quod aut verum sit aut ad id quam proxime accedat",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Cicéron parle en son nom dans le prologue du dialogue et défend la méthode de la Nouvelle Académie : examiner chaque question des deux côtés.",
+  "themes": [
+   "doute",
+   "verite",
+   "methode"
+  ]
+ },
+ {
+  "id": "ciceron-caton-21",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Caton l'Ancien (De la vieillesse)",
+  "ref": "21-22",
+  "texte": "« Mais la mémoire diminue. » Sans doute, si on ne l'exerce pas […]. Les vieillards gardent leur esprit, pourvu que demeurent l'ardeur à l'étude et l'application.",
+  "original": "At memoria minuitur. Credo, nisi eam exerceas… Manent ingenia senibus, modo permaneat studium et industria",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "C'est Caton l'Ancien qui parle dans le dialogue.",
+  "themes": [
+   "memoire",
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "ciceron-caton-26",
+  "type": "maxime",
+  "auteur": "Cicéron",
+  "oeuvre": "Caton l'Ancien (De la vieillesse)",
+  "ref": "26",
+  "texte": "Solon se vante dans ses vers de vieillir en apprenant chaque jour quelque chose ; et moi, j'ai appris le grec étant vieux, avidement, comme pour apaiser une longue soif.",
+  "original": "qui se cotidie aliquid addiscentem dicit senem fieri",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "C'est Caton l'Ancien qui parle dans le dialogue.",
+  "themes": [
+   "apprendre",
+   "perseverance",
+   "temps"
+  ]
+ },
+ {
+  "id": "plutarque-ecouter-48c",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Comment écouter (Œuvres morales)",
+  "ref": "48C",
+  "texte": "L'esprit n'a pas besoin, comme un vase, d'être rempli ; comme le bois, il lui suffit d'être allumé, pour qu'y naissent l'élan de la découverte et le désir de la vérité.",
+  "original": "οὐ γὰρ ὡς ἀγγεῖον ὁ νοῦς ἀποπληρώσεως ἀλλʼ ὑπεκκαύματος μόνον ὥσπερ ὕλη δεῖται, ὁρμὴν ἐμποιοῦντος εὑρετικὴν καὶ ὄρεξιν ἐπὶ τὴν ἀλήθειαν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Passage d'où dérive la formule qui circule sous une forme inexacte : « L'esprit n'est pas un vase à remplir, mais un feu à allumer. »",
+  "themes": [
+   "apprendre",
+   "verite",
+   "attention"
+  ]
+ },
+ {
+  "id": "plutarque-progres-76c",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Comment s'apercevoir qu'on progresse dans la vertu (Œuvres morales)",
+  "ref": "76C",
+  "texte": "Comme les marins mesurent leur route au temps et à la force du vent, on peut en philosophie prendre pour preuve du progrès la constance et la continuité de la marche, sans haltes ni bonds.",
+  "original": "τὸ ἐνδελεχὲς καὶ τὸ συνεχὲς τῆς πορείας",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "perseverance",
+   "lenteur",
+   "methode"
+  ]
+ },
+ {
+  "id": "plutarque-progres-76d",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Comment s'apercevoir qu'on progresse dans la vertu (Œuvres morales)",
+  "ref": "76D-E",
+  "texte": "Les planètes, disent les mathématiciens, deviennent stationnaires quand leur marche s'arrête ; en philosophie, il n'y a pas de station : notre nature, comme une balance, penche vers le meilleur ou glisse vers le pire.",
+  "original": "Τοὺς μὲν γὰρ πλάνητας οἱ μαθηματικοὶ στηρίζειν λέγουσι παυσαμένης τῆς εἰς τοὔμπροσθεν αὐτῶν πορείας",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Les astronomes appelaient « station » le moment où une planète semble s'arrêter dans le ciel.",
+  "themes": [
+   "perseverance",
+   "changement",
+   "effort"
+  ]
+ },
+ {
+  "id": "plutarque-marcellus-17-4",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Vie de Marcellus",
+  "ref": "17, 4",
+  "texte": "Dans ces recherches, où le beau ne se mêle à aucun besoin, la matière rivalise avec la démonstration : l'une apporte la grandeur et la beauté, l'autre l'exactitude et une puissance prodigieuse.",
+  "original": "ἔριν δὲ παρέχοντα πρὸς τὴν ὕλην τῇ ἀποδείξει, τῆς μὲν τὸ μέγεθος καὶ τὸ κάλλος, τῆς δὲ τὴν ἀκρίβειαν καὶ τὴν δύναμιν ὑπερφυῆ παρεχομένης",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Plutarque parle des travaux géométriques d'Archimède, qui dédaignait les applications pratiques.",
+  "themes": [
+   "beaute",
+   "preuve"
+  ]
+ },
+ {
+  "id": "plutarque-marcellus-17-5-travail",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Vie de Marcellus",
+  "ref": "17, 5",
+  "texte": "Les uns attribuent cela au génie naturel de l'homme ; d'autres pensent que c'est à force d'un immense travail que chacun de ses résultats paraît obtenu sans peine et avec aisance.",
+  "original": "οἱ μὲν εὐφυΐᾳ τοῦ ἀνδρὸς προσάπτουσιν, οἱ δὲ ὑπερβολῇ τινι πόνου νομίζουσιν ἀπόνως πεποιημένῳ καὶ ῥᾳδίως ἕκαστον ἐοικὸς γεγονέναι",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Il s'agit d'Archimède, qui résolvait les questions les plus difficiles de la géométrie par les principes les plus simples.",
+  "themes": [
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "plutarque-marcellus-17-5-preuve",
+  "type": "maxime",
+  "auteur": "Plutarque",
+  "oeuvre": "Vie de Marcellus",
+  "ref": "17, 5",
+  "texte": "En cherchant, personne ne trouverait seul la démonstration ; mais dès qu'on l'apprend, on croit qu'on l'aurait trouvée soi-même, tant est lisse et rapide le chemin par lequel il mène au résultat.",
+  "original": "ζητῶν μὲν γὰρ οὐκ ἄν τις εὕροι διʼ αὐτοῦ τὴν ἀπόδειξιν, ἅμα δὲ τῇ μαθήσει παρίσταται δόξα τοῦ κἂν αὐτὸν εὑρεῖν",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Il s'agit d'Archimède.",
+  "themes": [
+   "preuve",
+   "apprendre",
+   "beaute"
+  ]
+ },
+ {
+  "id": "sextus-hypotyposes-1-1",
+  "type": "maxime",
+  "auteur": "Sextus Empiricus",
+  "oeuvre": "Esquisses pyrrhoniennes",
+  "ref": "I, 1-3",
+  "texte": "Quand on cherche quelque chose, il est naturel d'aboutir soit à la découverte, soit à la négation de la découverte […], soit à la persévérance dans la recherche. […] Les sceptiques, eux, cherchent encore.",
+  "original": "ἢ εὕρεσιν ἐπακολουθεῖν εἰκὸς ἢ ἄρνησιν εὑρέσεως καὶ ἀκαταληψίας ὁμολογίαν ἢ ἐπιμονὴν ζητήσεως",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "doute",
+   "perseverance",
+   "verite"
+  ]
+ },
+ {
+  "id": "sextus-hypotyposes-1-28",
+  "type": "maxime",
+  "auteur": "Sextus Empiricus",
+  "oeuvre": "Esquisses pyrrhoniennes",
+  "ref": "I, 28-29",
+  "texte": "Apelle, désespérant de peindre l'écume d'un cheval, jeta son éponge contre le tableau : elle fit l'écume. Ainsi, les sceptiques ayant suspendu leur jugement, la tranquillité suivit comme par hasard, comme l'ombre le corps.",
+  "original": "ἐπισχοῦσι δὲ αὐτοῖς οἷον τυχικῶς ἡ ἀταραξία παρηκολούθησεν ὡς σκιὰ σώματι",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Apelle est le plus célèbre peintre grec (IVe s. av. J.-C.) ; Sextus rapporte l'anecdote comme un « on dit » (φασί).",
+  "themes": [
+   "hasard",
+   "maitrise_de_soi",
+   "doute"
+  ]
+ },
+ {
+  "id": "pyrrhon-dl-9-64",
+  "type": "maxime",
+  "auteur": "Pyrrhon d'Élis",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "IX, 64",
+  "texte": "Surpris un jour à se parler à lui-même, et interrogé sur la raison, il répondit qu'il s'exerçait à être bon.",
+  "original": "ἐρωτηθεὶς τὴν αἰτίαν ἔφη μελετᾶν χρηστὸς εἶναι",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.), plus de cinq siècles après Pyrrhon, qui n'a rien écrit.",
+  "themes": [
+   "effort",
+   "maitrise_de_soi",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "pyrrhon-dl-9-66",
+  "type": "maxime",
+  "auteur": "Pyrrhon d'Élis",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "IX, 66",
+  "texte": "Il est difficile de dépouiller entièrement l'homme ; mais il faut lutter contre les choses, d'abord par les actes autant qu'on le peut, sinon du moins par la raison.",
+  "original": "ὡς χαλεπὸν εἴη ὁλοσχερῶς ἐκδῦναι τὸν ἄνθρωπον",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Réponse rapportée par Diogène Laërce : Pyrrhon, effrayé par un chien, répondait à qui lui reprochait ce manque d'impassibilité.",
+  "themes": [
+   "humilite",
+   "courage",
+   "raison"
+  ]
+ },
+ {
+  "id": "pyrrhon-dl-9-68",
+  "type": "maxime",
+  "auteur": "Pyrrhon d'Élis",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "IX, 68",
+  "texte": "Dans une tempête, ses compagnons de traversée étant effrayés, il resta calme et leur montra un porcelet qui mangeait à bord : telle doit être, dit-il, la tranquillité du sage.",
+  "original": "ὡς χρὴ τὸν σοφὸν ἐν τοιαύτῃ καθεστάναι ἀταραξίᾳ",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Anecdote rapportée par Diogène Laërce d'après Posidonius (Ier s. av. J.-C.).",
+  "themes": [
+   "courage",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "antisthene-dl-6-7",
+  "type": "maxime",
+  "auteur": "Antisthène",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VI, 7",
+  "texte": "Comme on lui demandait quel savoir est le plus nécessaire, il répondit : « Celui qui dispense d'avoir à désapprendre. »",
+  "original": "τὸ περιαιρεῖν, ἔφη, τὸ ἀπομανθάνειν",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot d'Antisthène, maître de Diogène le Cynique, rapporté par Diogène Laërce (IIIe s. apr. J.-C.). Le grec, très elliptique, est compris de plusieurs façons ; on lit aussi simplement : « Désapprendre. »",
+  "themes": [
+   "apprendre",
+   "erreur",
+   "methode"
+  ]
+ },
+ {
+  "id": "diogene-dl-6-34",
+  "type": "maxime",
+  "auteur": "Diogène de Sinope",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VI, 34",
+  "texte": "À ceux qui lui disaient : « Tu es vieux, repose-toi », il répondit : « Si je courais la course de fond, faudrait-il ralentir près du but, et non plutôt accélérer ? »",
+  "original": "εἰ δόλιχον ἔτρεχον, πρὸς τῷ τέλει ἔδει με ἀνεῖναι καὶ μὴ μᾶλλον ἐπιτεῖναι;",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce, environ cinq siècles après Diogène de Sinope.",
+  "themes": [
+   "perseverance",
+   "effort",
+   "courage"
+  ]
+ },
+ {
+  "id": "diogene-dl-6-35",
+  "type": "maxime",
+  "auteur": "Diogène de Sinope",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VI, 35",
+  "texte": "Il disait imiter les maîtres de chœur : eux aussi donnent la note un peu trop haut, pour que les autres trouvent le ton juste.",
+  "original": "καὶ γὰρ ἐκείνους ὑπὲρ τόνον ἐνδιδόναι ἕνεκα τοῦ τοὺς λοιποὺς ἅψασθαι τοῦ προσήκοντος τόνου",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.), sans autre contexte ; on y voit d'ordinaire la justification des outrances de Diogène.",
+  "themes": [
+   "mesure",
+   "effort"
+  ]
+ },
+ {
+  "id": "diogene-dl-6-71",
+  "type": "maxime",
+  "auteur": "Diogène de Sinope",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VI, 71",
+  "texte": "Rien absolument, disait-il, ne réussit dans la vie sans exercice, et l'exercice peut venir à bout de tout.",
+  "original": "οὐδέν γε μὴν ἔλεγε τὸ παράπαν ἐν τῷ βίῳ χωρὶς ἀσκήσεως κατορθοῦσθαι, δυνατὴν δὲ ταύτην πᾶν ἐκνικῆσαι",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Doctrine de l'« ascèse » (exercice) de Diogène, rapportée par Diogène Laërce, VI, 70-71.",
+  "themes": [
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "plotin-enneades-1-6-9",
+  "type": "maxime",
+  "auteur": "Plotin",
+  "oeuvre": "Ennéades",
+  "ref": "I, 6 (Du beau), 9",
+  "texte": "Fais comme le sculpteur d'une statue qui doit devenir belle : il ôte, gratte, polit […]. Ne cesse pas de sculpter ta propre statue, jusqu'à ce que brille pour toi l'éclat divin de la vertu.",
+  "original": "μὴ παύσῃ τεκταίνων τὸ σὸν ἄγαλμα",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "perseverance",
+   "effort",
+   "beaute"
+  ]
+ },
+ {
+  "id": "proclus-euclide-68",
+  "type": "maxime",
+  "auteur": "Proclus",
+  "oeuvre": "Commentaire sur le premier livre des Éléments d'Euclide",
+  "ref": "Prologue II, p. 68 (éd. Friedlein)",
+  "texte": "On raconte que Ptolémée demanda un jour à Euclide s'il existait, en géométrie, un chemin plus court que les Éléments ; il répondit qu'il n'y a pas de voie royale vers la géométrie.",
+  "original": "",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot attribué à Euclide, rapporté par Proclus (Ve s. apr. J.-C.), plus de sept siècles plus tard, comme un « on raconte ». Stobée (Anthologie, II, 31, 115) prête une réponse semblable à Ménechme s'adressant à Alexandre.",
+  "themes": [
+   "humilite",
+   "effort",
+   "methode"
+  ]
+ },
+ {
+  "id": "proclus-euclide-84",
+  "type": "maxime",
+  "auteur": "Proclus",
+  "oeuvre": "Commentaire sur le premier livre des Éléments d'Euclide",
+  "ref": "Prologue II, p. 84, 15-22 (éd. Friedlein)",
+  "texte": "« Une figure et une marche, non une figure et trois oboles » : la géométrie digne d'étude est celle qui, à chaque théorème nouveau, dresse une marche pour monter et élève l'âme.",
+  "original": "",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Devise des pythagoriciens rapportée et commentée par Proclus (Ve s. apr. J.-C.) : chaque théorème doit être un degré de plus, et non un gain de trois oboles.",
+  "themes": [
+   "beaute",
+   "perseverance",
+   "nombre"
+  ]
+ },
+ {
+  "id": "boece-consolation-2-p4-18",
+  "type": "maxime",
+  "auteur": "Boèce",
+  "oeuvre": "Consolation de Philosophie",
+  "ref": "II, prose 4, 18",
+  "texte": "Rien n'est misérable que lorsqu'on le juge tel ; et inversement, tout sort est heureux pour qui le supporte d'une âme égale.",
+  "original": "nihil est miserum nisi cum putes, contraque beata sors omnis est aequanimitate tolerantis",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "maitrise_de_soi",
+   "courage",
+   "mesure"
+  ]
+ },
+ {
+  "id": "boece-consolation-3-m11",
+  "type": "maxime",
+  "auteur": "Boèce",
+  "oeuvre": "Consolation de Philosophie",
+  "ref": "III, mètre 11, v. 15-16",
+  "texte": "Si la Muse de Platon dit vrai, ce que chacun apprend, il s'en ressouvient après l'avoir oublié.",
+  "original": "quod quisque discit immemor recordatur",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Boèce reprend la doctrine platonicienne de la réminiscence (Ménon, Phédon).",
+  "themes": [
+   "memoire",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "augustin-confessions-11-14-17",
+  "type": "maxime",
+  "auteur": "Augustin",
+  "oeuvre": "Confessions",
+  "ref": "XI, 14, 17",
+  "texte": "Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à qui me le demande, je ne le sais pas.",
+  "original": "Quid est ergo tempus? Si nemo ex me quaerat, scio; si quaerenti explicare velim, nescio.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "temps",
+   "humilite",
+   "verite"
+  ]
+ },
+ {
+  "id": "augustin-confessions-10-8-15",
+  "type": "maxime",
+  "auteur": "Augustin",
+  "oeuvre": "Confessions",
+  "ref": "X, 8, 15",
+  "texte": "Grande est la puissance de la mémoire […], sanctuaire vaste et infini. […] Et les hommes vont admirer les cimes des montagnes […] et le cours des astres, et se délaissent eux-mêmes.",
+  "original": "Magna ista vis est memoriae… penetrale amplum et infinitum… et relinquunt se ipsos",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "memoire",
+   "infini",
+   "attention"
+  ]
+ },
+ {
+  "id": "augustin-confessions-10-12-19",
+  "type": "maxime",
+  "auteur": "Augustin",
+  "oeuvre": "Confessions",
+  "ref": "X, 12, 19",
+  "texte": "La mémoire contient aussi les raisons et les lois innombrables des nombres et des dimensions, qu'aucun sens corporel n'y a imprimées : elles n'ont ni couleur, ni son, ni odeur, ni saveur […].",
+  "original": "Item continet memoria numerorum dimensionumque rationes et leges innumerabiles",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Augustin ajoute : il a vu des lignes tracées par les artisans, fines comme un fil d'araignée, mais les lignes qu'il connaît au-dedans sont d'une autre nature.",
+  "themes": [
+   "memoire",
+   "nombre",
+   "verite"
+  ]
+ }
+]

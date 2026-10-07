@@ -1,0 +1,514 @@
+[
+ {
+  "id": "epictete-entretiens-4-12-1",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "IV, 12, 1",
+  "texte": "Quand tu relâches un peu ton attention, ne t'imagine pas la reprendre quand tu voudras ; garde à l'esprit que, par la faute d'aujourd'hui, tout le reste ira nécessairement plus mal.",
+  "original": "ὅταν ἀφῇς πρὸς ὀλίγον τὴν προσοχήν, μὴ τοῦτο φαντάζου, ὅτι, ὁπόταν θέλῃς, ἀναλήψῃ αὐτήν, ἀλλ’ ἐκεῖνο πρόχειρον ἔστω σοι, ὅτι παρὰ τὸ σήμερον ἁμαρτηθὲν εἰς τἆλλα χεῖρον ἀνάγκη σοι τὰ πράγματα ἔχειν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "attention",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-1-7",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "I, 7",
+  "texte": "De Rusticus : lire avec exactitude, sans me contenter d'une compréhension approximative, et ne pas donner trop vite mon assentiment aux bavards.",
+  "original": "Παρὰ Ῥουστίκου … τὸ ἀκριβῶς ἀναγινώσκειν καὶ μὴ ἀρκεῖσθαι περινοοῦντα ὁλοσχερῶς μηδὲ τοῖς περιλαλοῦσι ταχέως συγκατατίθεσθαι",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le livre I énumère ce que Marc Aurèle doit à chacun de ses maîtres ; Rusticus lui fit aussi connaître les leçons d'Épictète.",
+  "themes": [
+   "attention",
+   "methode",
+   "verite"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-2-5",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "II, 5",
+  "texte": "À chaque heure, applique-toi fermement, en Romain et en homme, à faire ce que tu as en main avec une gravité exacte et sans affectation […], et à te libérer de toute autre pensée.",
+  "original": "Πάσης ὥρας φρόντιζε στιβαρῶς ὡς Ῥωμαῖος καὶ ἄρρην τὸ ἐν χερσὶ μετὰ τῆς ἀκριβοῦς καὶ ἀπλάστου σεμνότητος καὶ φιλοστοργίας καὶ ἐλευθερίας καὶ δικαιότητος πράσσειν καὶ σχολὴν σαυτῷ ἀπὸ πασῶν τῶν ἄλλων φαντασιῶν πορίζειν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La coupure […] omet la suite de l'énumération : « avec affection, liberté et justice ».",
+  "themes": [
+   "attention",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-3-11",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "III, 11",
+  "texte": "Rien ne rend l'âme aussi grande que de pouvoir examiner avec méthode et vérité chacune des choses qui se présentent dans la vie.",
+  "original": "οὐδὲν γὰρ οὕτως μεγαλοφροσύνης ποιητικόν, ὡς τὸ ἐλέγχειν ὁδῷ καὶ ἀληθείᾳ ἕκαστον τῶν τῷ βίῳ ὑποπιπτόντων δύνασθαι",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "ὁδῷ : littéralement « avec chemin », c'est-à-dire avec méthode.",
+  "themes": [
+   "methode",
+   "verite",
+   "raison"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-4-49",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "IV, 49",
+  "texte": "Sois semblable au promontoire contre lequel les flots se brisent sans cesse : lui reste debout, et autour de lui s'apaise le bouillonnement des eaux.",
+  "original": "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "perseverance",
+   "courage",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-5-1",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "V, 1",
+  "texte": "À l'aube, quand tu as peine à te lever, aie cette pensée sous la main : je m'éveille pour faire œuvre d'homme.",
+  "original": "Ὄρθρου, ὅταν δυσόκνως ἐξεγείρῃ, πρόχειρον ἔστω ὅτι ἐπὶ ἀνθρώπου ἔργον ἐγείρομαι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-5-9",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "V, 9",
+  "texte": "Ne te dégoûte pas, ne renonce pas, ne perds pas courage si tu ne parviens pas à toujours agir selon de justes principes ; mais, repoussé, reviens-y.",
+  "original": "Μὴ σικχαίνειν μηδὲ ἀπαυδᾶν μηδὲ ἀποδυσπετεῖν, εἰ μὴ καταπυκνοῦταί σοι τὸ ἀπὸ δογμάτων ὀρθῶν ἕκαστα πράσσειν, ἀλλὰ ἐκκρουσθέντα πάλιν ἐπανιέναι",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "erreur",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-5-16",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "V, 16",
+  "texte": "Telles sont les choses que tu te représentes souvent, tel sera ton esprit : car l'âme prend la teinture de ses représentations.",
+  "original": "Οἷα ἂν πολλάκις φαντασθῇς, τοιαύτη σοι ἔσται ἡ διάνοια· βάπτεται γὰρ ὑπὸ τῶν φαντασιῶν ἡ ψυχή.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "memoire",
+   "attention",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-5-20",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "V, 20",
+  "texte": "L'intelligence retourne et fait servir à son but tout obstacle à son action : ce qui retenait l'ouvrage le fait avancer, ce qui barrait la route fait avancer sur la route.",
+  "original": "περιτρέπει γὰρ καὶ μεθίστησι πᾶν τὸ τῆς ἐνεργείας κώλυμα ἡ διάνοια εἰς τὸ προηγούμενον καὶ πρὸ ἔργου γίνεται τὸ τοῦ ἔργου τούτου ἐφεκτικὸν καὶ πρὸ ὁδοῦ τὸ τῆς ὁδοῦ ταύτης ἐνστατικόν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "courage",
+   "erreur",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-6-19",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "VI, 19",
+  "texte": "Si une chose t'est difficile à accomplir, ne pense pas qu'elle soit impossible à l'homme ; mais si elle est possible à l'homme et lui convient, crois-la aussi à ta portée.",
+  "original": "Μή, εἴ τι αὐτῷ σοὶ δυσκαταπόνητον, τοῦτο ἀνθρώπῳ ἀδύνατον ὑπολαμβάνειν, ἀλλ’ εἴ τι ἀνθρώπῳ δυνατὸν καὶ οἰκεῖον, τοῦτο καὶ σεαυτῷ ἐφικτὸν νόμιζε.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "courage",
+   "effort"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-6-21",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "VI, 21",
+  "texte": "Qu'on me prouve que je pense ou agis mal, je changerai avec joie : je cherche la vérité, qui n'a jamais nui à personne. On se nuit en persistant dans son erreur et son ignorance.",
+  "original": "Εἴ τίς με ἐλέγξαι καὶ παραστῆσαί μοι, ὅτι οὐκ ὀρθῶς ὑπολαμβάνω ἢ πράσσω, δύναται, χαίρων μεταθήσομαι· ζητῶ γὰρ τὴν ἀλήθειαν, ὑφ’ ἧς οὐδεὶς πώποτε ἐβλάβη, βλάπτεται δὲ ὁ ἐπιμένων ἐπὶ τῆς ἑαυτοῦ ἀπάτης καὶ ἀγνοίας.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "verite",
+   "erreur",
+   "humilite"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-7-47",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "VII, 47",
+  "texte": "Contemple le cours des astres comme si tu courais avec eux, et pense sans cesse aux transformations des éléments les uns dans les autres : ces images lavent la souillure de la vie terre à terre.",
+  "original": "Περισκοπεῖν ἄστρων δρόμους ὥσπερ συμπεριθέοντα καὶ τὰς τῶν στοιχείων εἰς ἄλληλα μεταβολὰς συνεχῶς ἐννοεῖν· ἀποκαθαίρουσι γὰρ αἱ τούτων φαντασίαι τὸν ῥύπον τοῦ χαμαὶ βίου.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "ordre",
+   "beaute",
+   "changement"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-7-59",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "VII, 59",
+  "texte": "Creuse au-dedans. Au-dedans est la source du bien, et elle peut toujours jaillir, si tu creuses toujours.",
+  "original": "Ἔνδον σκάπτε, ἔνδον ἡ πηγὴ τοῦ ἀγαθοῦ καὶ ἀεὶ ἀναβλύειν δυναμένη, ἐὰν ἀεὶ σκάπτῃς.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "perseverance",
+   "effort"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-8-36",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "VIII, 36",
+  "texte": "Ne te laisse pas troubler par l'image de ta vie entière […] ; mais à chaque circonstance présente, demande-toi : qu'y a-t-il d'insupportable dans cette tâche ? Tu auras honte de l'avouer.",
+  "original": "Μή σε συγχείτω ἡ τοῦ ὅλου βίου φαντασία … ἀλλὰ καθ’ ἕκαστον τῶν παρόντων ἐπερώτα σεαυτόν· τί τοῦ ἔργου τὸ ἀφόρητον καὶ ἀνύποιστον; αἰσχυνθήσῃ γὰρ ὁμολογῆσαι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La coupure […] omet : « n'embrasse pas en pensée toutes les peines, si nombreuses et si lourdes, qui peuvent survenir ».",
+  "themes": [
+   "temps",
+   "maitrise_de_soi",
+   "courage"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-9-29",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "IX, 29",
+  "texte": "N'espère pas la République de Platon, mais sois content si la moindre chose avance.",
+  "original": "μὴ τὴν Πλάτωνος πολιτείαν ἔλπιζε, ἀλλὰ ἀρκοῦ, εἰ τὸ βραχύτατον πρόεισι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La fin de la phrase (καὶ τούτου αὐτοῦ τὴν ἔκβασιν ὡς μικρόν τί ἐστι διανοοῦ dans l'édition Leopold, sans négation) est lue et comprise diversement selon les éditions ; elle n'est pas traduite ici.",
+  "themes": [
+   "lenteur",
+   "humilite",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "marc-aurele-pensees-10-16",
+  "type": "maxime",
+  "auteur": "Marc Aurèle",
+  "oeuvre": "Pensées",
+  "ref": "X, 16",
+  "texte": "Ne discute plus du tout de ce que doit être l'homme de bien : sois-le.",
+  "original": "Μηκέθ’ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "verite"
+  ]
+ },
+ {
+  "id": "musonius-aulu-gelle-16-1-2",
+  "type": "maxime",
+  "auteur": "Musonius Rufus",
+  "oeuvre": "Mot rapporté par Aulu-Gelle, Nuits attiques",
+  "ref": "XVI, 1, 2",
+  "texte": "Si tu fais quelque chose de beau avec peine, la peine passe, le beau demeure ; si tu fais quelque chose de laid avec plaisir, le plaisir passe, le laid demeure.",
+  "original": "Ἄν τι πράξῃς καλὸν μετὰ πόνου, ὁ μὲν πόνος οἴχεται, τὸ δὲ καλὸν μένει· ἄν τι ποιήσῃς αἰσχρὸν μετὰ ἡδονῆς, τὸ μὲν ἡδὺ οἴχεται, τὸ δὲ αἰσχρὸν μένει.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Aulu-Gelle (IIe siècle apr. J.-C.), qui, jeune étudiant, entendait citer cette sentence grecque comme étant du philosophe Musonius ; il signale que Caton avait exprimé la même pensée en latin, bien des années plus tôt, dans un discours prononcé à Numance.",
+  "themes": [
+   "effort",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "musonius-diatribe-1",
+  "type": "maxime",
+  "auteur": "Musonius Rufus",
+  "oeuvre": "Diatribes",
+  "ref": "I",
+  "texte": "Il ne faut pas chercher beaucoup de preuves pour chaque question, mais des preuves efficaces et claires. […] Plus l'auditeur est intelligent, plus vite il donne son assentiment à l'essentiel d'un raisonnement sain.",
+  "original": "οὐχὶ πολλὰς ἐφ’ ἑκάστου πράγματος ζητεῖν ἀποδείξεις προσήκειν, ἀλλ’ ἀνυσίμους καὶ ἐναργεῖς … καὶ ὁ ἀκουστὴς ὅσῳπερ ἂν ᾖ συνετώτερος, τοσούτῳ θᾶττον συναινέσει τῷ κεφαλαίῳ τοῦ λόγου, ὄντι γε ὑγιεῖ.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée ; texte grec de l'édition O. Hense (Teubner, 1905), diatribe I. La coupure […] omet une comparaison avec le médecin.",
+  "themes": [
+   "preuve",
+   "raison",
+   "methode"
+  ]
+ },
+ {
+  "id": "musonius-diatribe-2",
+  "type": "maxime",
+  "auteur": "Musonius Rufus",
+  "oeuvre": "Diatribes",
+  "ref": "II",
+  "texte": "Nous sommes tous ainsi faits par nature que nous pouvons vivre sans faute et noblement, et non pas l'un de nous oui, l'autre non.",
+  "original": "Πάντες, ἔφη, φύσει πεφύκαμεν οὕτως, ὥστε ζῆν ἀναμαρτήτως καὶ καλῶς, οὐχ ὁ μὲν ἡμῶν ὁ δ’ οὔ·",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée ; texte grec de l'édition O. Hense (Teubner, 1905), diatribe II.",
+  "themes": [
+   "raison",
+   "courage"
+  ]
+ },
+ {
+  "id": "musonius-diatribe-6",
+  "type": "maxime",
+  "auteur": "Musonius Rufus",
+  "oeuvre": "Diatribes",
+  "ref": "VI",
+  "texte": "La vertu, disait-il, est une science non seulement théorique, mais aussi pratique, comme la médecine et la musique.",
+  "original": "Ἡ ἀρετή, ἔφη, ἐπιστήμη ἐστὶν οὐ θεωρητικὴ μόνον, ἀλλὰ καὶ πρακτικὴ καθάπερ ἥ τε ἰατρικὴ καὶ ἡ μουσική.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Début de la diatribe VI, « De l'exercice » (Περὶ ἀσκήσεως) : propos de Musonius rédigés par son disciple Lucius et conservés par Stobée ; texte grec de l'édition O. Hense (Teubner, 1905). La suite en tire qu'il faut non seulement apprendre, mais s'exercer.",
+  "themes": [
+   "effort",
+   "methode",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "musonius-epictete-3-23-29",
+  "type": "maxime",
+  "auteur": "Musonius Rufus",
+  "oeuvre": "Mot rapporté par Épictète, Entretiens",
+  "ref": "III, 23, 29",
+  "texte": "Rufus avait coutume de dire : « Si vous avez le loisir de me louer, c'est que je parle pour ne rien dire. »",
+  "original": "εἰ εὐσχολεῖτε ἐπαινέσαι με, ἐγὼ δ’ οὐδὲν λέγω.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot de Musonius Rufus rapporté par son élève Épictète (Entretiens, rédigés par Arrien au début du IIe siècle) : Rufus parlait de telle sorte que chaque auditeur se croyait visé.",
+  "themes": [
+   "apprendre",
+   "humilite"
+  ]
+ },
+ {
+  "id": "zenon-dl-7-2",
+  "type": "maxime",
+  "auteur": "Zénon de Citium",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 2",
+  "texte": "Zénon demanda à l'oracle ce qu'il devait faire pour vivre au mieux ; le dieu répondit : prendre la couleur des morts. Il comprit, et se mit à lire les anciens.",
+  "original": "χρηστηριασαμένου αὐτοῦ τί πράττων ἄριστα βιώσεται, ἀποκρίνασθαι τὸν θεόν, εἰ συγχρωτίζοιτο τοῖς νεκροῖς· ὅθεν ξυνέντα τὰ τῶν ἀρχαίων ἀναγινώσκειν.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Anecdote rapportée par Diogène Laërce (IIIe siècle apr. J.-C.) d'après Hécaton et Apollonios de Tyr.",
+  "themes": [
+   "apprendre",
+   "memoire"
+  ]
+ },
+ {
+  "id": "zenon-dl-7-4",
+  "type": "maxime",
+  "auteur": "Zénon de Citium",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 4",
+  "texte": "Zénon, qu'un naufrage avait conduit à Athènes et à la philosophie, aurait dit : « J'ai fait bonne traversée quand j'ai fait naufrage. »",
+  "original": "νῦν εὐπλόηκα, ὅτε νεναυάγηκα.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), qui en donne plusieurs versions (VII, 4-5) ; le naufrage est raconté en VII, 2.",
+  "themes": [
+   "erreur",
+   "hasard",
+   "courage"
+  ]
+ },
+ {
+  "id": "zenon-dl-7-23",
+  "type": "maxime",
+  "auteur": "Zénon de Citium",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 23",
+  "texte": "Zénon disait que nous ne manquons de rien autant que de temps.",
+  "original": "μηδενός θ’ ἡμᾶς οὕτως εἶναι ἐνδεεῖς ὡς χρόνου.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.).",
+  "themes": [
+   "temps"
+  ]
+ },
+ {
+  "id": "zenon-dl-7-26",
+  "type": "maxime",
+  "auteur": "Zénon de Citium",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 26",
+  "texte": "Le bien s'obtient peu à peu, et pourtant ce n'est pas peu de chose.",
+  "original": "τὸ εὖ γίνεσθαι μὲν παρὰ μικρόν, οὐ μὴν μικρὸν εἶναι.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.) parmi les sentences de Zénon ; il signale que d'autres l'attribuent à Socrate.",
+  "themes": [
+   "lenteur",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "zenon-dl-7-37",
+  "type": "maxime",
+  "auteur": "Zénon de Citium",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 37",
+  "texte": "Zénon comparait Cléanthe aux tablettes de cire dure, où l'on a peine à écrire, mais qui gardent ce qu'on y a écrit.",
+  "original": "ταῖς σκληροκήροις δέλτοις, αἳ μόλις μὲν γράφονται, διατηροῦσι δὲ τὰ γραφέντα.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Comparaison rapportée par Diogène Laërce (IIIe siècle apr. J.-C.) ; il dit Cléanthe « laborieux, mais peu doué et excessivement lent » (VII, 170).",
+  "themes": [
+   "memoire",
+   "lenteur",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "cleanthe-dl-7-170",
+  "type": "maxime",
+  "auteur": "Cléanthe",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 170",
+  "texte": "Moqué par ses condisciples, Cléanthe le supportait ; traité d'âne, il l'acceptait, disant qu'il était seul capable de porter le fardeau de Zénon.",
+  "original": "Καὶ σκωπτόμενος δ’ ὑπὸ τῶν συμμαθητῶν ἠνείχετο καὶ ὄνος ἀκούων προσεδέχετο, λέγων αὐτὸς μόνος δύνασθαι βαστάζειν τὸ Ζήνωνος φορτίον.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), qui le dit « laborieux, mais peu doué et excessivement lent » ; pauvre, il puisait de l'eau la nuit dans les jardins et s'exerçait le jour aux discussions philosophiques (VII, 168).",
+  "themes": [
+   "perseverance",
+   "humilite",
+   "lenteur"
+  ]
+ },
+ {
+  "id": "cleanthe-hymne-a-zeus",
+  "type": "maxime",
+  "auteur": "Cléanthe",
+  "oeuvre": "Hymne à Zeus (conservé par Stobée, Choix d'extraits, I, 1, 12)",
+  "ref": "v. 18-19",
+  "texte": "Mais toi, tu sais rendre pair ce qui est impair, mettre en ordre ce qui est sans ordre, et ce qui n'est pas aimé t'est cher.",
+  "original": "ἀλλὰ σὺ καὶ τὰ περισσὰ ἐπίστασαι ἄρτια θεῖναι / καὶ κοσμεῖν τἄκοσμα, καὶ οὐ φίλα σοὶ φίλα ἐστίν",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Hymne transmis par Stobée (Choix d'extraits, I, 1, 12 = SVF I, 537 ; numérotation des vers de l'éd. J. C. Thom, 2005). περισσός et ἄρτιος désignent en grec l'impair et le pair (ainsi chez Euclide), mais aussi « l'excessif » et « l'ajusté » : le dieu remet en ordre ce qui déborde.",
+  "themes": [
+   "ordre",
+   "nombre",
+   "beaute"
+  ]
+ },
+ {
+  "id": "cleanthe-epictete-manuel-53-1",
+  "type": "maxime",
+  "auteur": "Cléanthe",
+  "oeuvre": "Vers cités par Épictète, Manuel",
+  "ref": "53, 1",
+  "texte": "Conduis-moi, ô Zeus, et toi, Destinée, là où vous m'avez assigné ma place : je suivrai sans hésiter ; et si je refuse, devenu lâche, je suivrai tout de même.",
+  "original": "ἄγου δέ μ’, ὦ Ζεῦ, καὶ σύ γ’ ἡ Πεπρωμένη, ὅποι ποθ’ ὑμῖν εἰμι διατεταγμένος· ὡς ἕψομαί γ’ ἄοκνος· ἢν δέ γε μὴ θέλω, κακὸς γενόμενος, οὐδὲν ἧττον ἕψομαι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le Manuel cite ces vers sans nommer leur auteur ; Épictète les attribue à Cléanthe (Entretiens, IV, 4, 34) et Sénèque les traduit en latin comme vers de Cléanthe (Lettres à Lucilius, 107, 10-11). La version de Sénèque s'achève sur un vers absent du grec : « Ducunt volentem fata, nolentem trahunt ».",
+  "themes": [
+   "ordre",
+   "courage",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "chrysippe-dl-7-179",
+  "type": "maxime",
+  "auteur": "Chrysippe",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 179",
+  "texte": "Chrysippe disait souvent à Cléanthe qu'il n'avait besoin que de l'enseignement des doctrines : les démonstrations, il les trouverait lui-même.",
+  "original": "μόνης τῆς τῶν δογμάτων διδασκαλίας χρῄζειν, τὰς δὲ ἀποδείξεις αὐτὸς εὑρήσειν.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), qui ajoute que Chrysippe se repentait chaque fois qu'il s'en était pris à son maître.",
+  "themes": [
+   "preuve",
+   "raison",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "chrysippe-dl-7-182",
+  "type": "maxime",
+  "auteur": "Chrysippe",
+  "oeuvre": "Diogène Laërce, Vies et doctrines des philosophes illustres",
+  "ref": "VII, 182",
+  "texte": "À quelqu'un qui lui reprochait de ne pas suivre avec la foule les leçons d'Ariston, Chrysippe répondit : « Si j'avais écouté la foule, je n'aurais pas fait de philosophie. »",
+  "original": "εἰ τοῖς πολλοῖς, εἶπε, προσεῖχον, οὐκ ἂν ἐφιλοσόφησα.",
+  "traduction": "trad. adaptée",
+  "statut": "tradition",
+  "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.).",
+  "themes": [
+   "liberte",
+   "verite"
+  ]
+ }
+]

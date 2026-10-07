@@ -102,6 +102,8 @@ h1 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clam
 .readout.warn b { color: var(--sig-amber); }
 .themer { flex: 0 0 auto; font-family: var(--f-pixel); font-size: 20px; line-height: 1; color: var(--term-fg); background: var(--term-bg); border: 1px solid color-mix(in srgb, var(--term-hi) 40%, transparent); border-radius: 3px; padding: 6px 12px; cursor: pointer; }
 .themer:hover { color: var(--term-hi); }
+.hero-actions { display: flex; gap: 8px; flex: 0 0 auto; }
+a.themer { text-decoration: none; }
 
 /* Onglets : un bandeau de pierre qui reste en haut */
 nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin-block: 0 22px; padding: 5px; background: var(--stone); border: 1px solid var(--stone-edge); border-radius: 3px; box-shadow: inset 0 1px 0 var(--engrave), 0 12px 28px -18px var(--shadow); }
@@ -256,7 +258,10 @@ try { var t0 = localStorage.getItem("carnet-mayotte-2027-theme"); if (t0 === "da
   <header class="hero">
     <div class="hero-top">
       <span class="eyebrow">CAPES externe de mathématiques · affectation locale à Mayotte</span>
-      <button class="themer" id="themer" type="button">Nuit</button>
+      <div class="hero-actions">
+        <a class="themer jouer" href="https://slagten.github.io/capes/jeu/" target="_blank" rel="noopener" title="Les Salles : le jeu de révision (exercices, philosophes, révisions espacées)">Jouer</a>
+        <button class="themer" id="themer" type="button">Nuit</button>
+      </div>
     </div>
     <h1>Carnet Mayotte 2027</h1>
     <p class="motto" title="Par des chemins ardus jusqu’aux étoiles">Per aspera ad astra</p>

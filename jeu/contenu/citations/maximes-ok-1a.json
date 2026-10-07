@@ -1,0 +1,509 @@
+[
+ {
+  "id": "seneque-lettres-1-3",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "1, 3",
+  "texte": "Tout, Lucilius, nous est étranger ; seul le temps est à nous. C'est de ce seul bien, fugitif et glissant, que la nature nous a mis en possession.",
+  "original": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "temps"
+  ]
+ },
+ {
+  "id": "seneque-lettres-2-2",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "2, 2",
+  "texte": "Il faut s'attarder auprès de quelques esprits choisis et s'en nourrir, si l'on veut en tirer quelque chose qui demeure fidèlement dans l'âme. Qui est partout n'est nulle part.",
+  "original": "Nusquam est qui ubique est.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "methode",
+   "attention",
+   "memoire"
+  ]
+ },
+ {
+  "id": "seneque-lettres-6-5",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "6, 5",
+  "texte": "Long est le chemin par les préceptes, court et efficace par les exemples.",
+  "original": "Longum iter est per praecepta, breve et efficax per exempla.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "methode"
+  ]
+ },
+ {
+  "id": "seneque-lettres-7-8",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "7, 8",
+  "texte": "Fréquente ceux qui te rendront meilleur, accueille ceux que tu peux rendre meilleurs. Cela se fait dans les deux sens : en enseignant, les hommes apprennent.",
+  "original": "Mutuo ista fiunt, et homines dum docent discunt.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre"
+  ]
+ },
+ {
+  "id": "seneque-lettres-33-11",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "33, 11",
+  "texte": "Nos prédécesseurs en ces matières ne sont pas nos maîtres, mais nos guides. La vérité est ouverte à tous ; elle n'est pas encore occupée ; il en reste beaucoup à ceux qui viendront.",
+  "original": "Patet omnibus veritas; nondum est occupata; multum ex illa etiam futuris relictum est.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "La phrase qui précède (33, 10) : « Qui suit un autre ne trouve rien ; bien plus, il ne cherche même pas. »",
+  "themes": [
+   "verite",
+   "liberte",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "seneque-lettres-71-3",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "71, 3",
+  "texte": "Nos projets s'égarent parce qu'ils n'ont rien vers quoi se diriger : pour qui ne sait pas quel port il cherche, aucun vent n'est favorable.",
+  "original": "Ignoranti quem portum petat nullus suus ventus est.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "methode",
+   "raison"
+  ]
+ },
+ {
+  "id": "seneque-lettres-76-6",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "76, 6",
+  "texte": "Qu'attends-tu ? Personne n'est devenu sage par hasard. La vertu ne te tombera pas dessus : on ne parvient pas à la connaître par un travail léger ni au prix d'un petit effort.",
+  "original": "Quid expectas? Nulli sapere casu obtigit.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "hasard"
+  ]
+ },
+ {
+  "id": "seneque-lettres-84-5",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "84, 5",
+  "texte": "Imitons les abeilles : séparons ce que nous avons amassé de lectures diverses (on conserve mieux ce qui est distinct), puis, avec le soin de notre esprit, fondons ces sucs variés en une seule saveur.",
+  "original": "Melius enim distincta servantur.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "memoire",
+   "methode",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "seneque-lettres-88-13",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "88, 13",
+  "texte": "Tu sais ce qu'est une ligne droite : à quoi te sert-il de le savoir, si tu ignores ce qui est droit dans la vie ?",
+  "original": "Scis quae recta sit linea: quid tibi prodest, si quid in vita rectum sit ignoras?",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Dans une lettre sur les arts libéraux, où Sénèque interroge le géomètre : savoir mesurer ne dispense pas de savoir vivre.",
+  "themes": [
+   "raison",
+   "mesure"
+  ]
+ },
+ {
+  "id": "seneque-lettres-104-26",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Lettres à Lucilius",
+  "ref": "104, 26",
+  "texte": "Ce n'est pas parce que les choses sont difficiles que nous n'osons pas ; c'est parce que nous n'osons pas qu'elles sont difficiles.",
+  "original": "Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "courage",
+   "effort"
+  ]
+ },
+ {
+  "id": "seneque-brevete-1-3",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la brièveté de la vie",
+  "ref": "1, 3",
+  "texte": "Nous n'avons pas trop peu de temps, mais nous en avons beaucoup perdu. La vie est assez longue, et largement donnée pour accomplir de très grandes choses, si elle était tout entière bien employée.",
+  "original": "Non exiguum temporis habemus, sed multum perdidimus.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "temps"
+  ]
+ },
+ {
+  "id": "seneque-brevete-9-1",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la brièveté de la vie",
+  "ref": "9, 1",
+  "texte": "Le plus grand obstacle à la vie, c'est l'attente : elle se suspend au lendemain et perd l'aujourd'hui.",
+  "original": "Maximum vivendi impedimentum est exspectatio, quae pendet ex crastino, perdit hodiernum.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "temps"
+  ]
+ },
+ {
+  "id": "seneque-brevete-14-2",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la brièveté de la vie",
+  "ref": "14, 2",
+  "texte": "Il nous est permis de discuter avec Socrate, de douter avec Carnéade, de nous reposer avec Épicure, de vaincre la nature humaine avec les stoïciens.",
+  "original": "Disputare cum Socrate licet, dubitare cum Carneade, cum Epicuro quiescere, hominis naturam cum Stoicis vincere.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Sur la fréquentation des grands auteurs : par l'étude, aucun siècle ne nous est fermé.",
+  "themes": [
+   "apprendre",
+   "doute"
+  ]
+ },
+ {
+  "id": "seneque-tranquillite-17-5",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la tranquillité de l'âme",
+  "ref": "17, 5",
+  "texte": "Il faut accorder du relâche à l'esprit : reposé, il se relèvera meilleur et plus vif.",
+  "original": "Danda est animis remissio: meliores acrioresque requieti surgent.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "mesure",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "seneque-providence-2-4",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la providence",
+  "ref": "2, 4",
+  "texte": "Sans adversaire, la vertu s'engourdit : on ne voit sa grandeur et sa force que lorsque l'endurance montre ce qu'elle peut.",
+  "original": "Marcet sine adversario virtus.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "courage",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "seneque-colere-2-12-3",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la colère",
+  "ref": "II, 12, 3",
+  "texte": "Rien n'est si difficile ni si ardu que l'esprit humain ne le surmonte, et qu'un exercice assidu ne le rende familier.",
+  "original": "Nihil est tam difficile et arduum quod non humana mens vincat et in familiaritatem perducat adsidua meditatio.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "perseverance",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "seneque-colere-3-36-1",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "De la colère",
+  "ref": "III, 36, 1",
+  "texte": "Sextius, la journée finie, interrogeait son âme : « De quel mal t'es-tu guérie aujourd'hui ? À quel défaut as-tu résisté ? En quoi es-tu meilleure ? »",
+  "original": "Quod hodie malum tuum sanasti? Cui vitio obstitisti? Qua parte melior es?",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Sénèque rapporte l'examen du soir que pratiquait le philosophe Quintus Sextius, et le propose en modèle.",
+  "themes": [
+   "erreur",
+   "maitrise_de_soi",
+   "methode"
+  ]
+ },
+ {
+  "id": "seneque-questions-naturelles-7-25-4",
+  "type": "maxime",
+  "auteur": "Sénèque",
+  "oeuvre": "Questions naturelles",
+  "ref": "VII, 25, 4",
+  "texte": "Un jour viendra où le temps et l'application d'une durée plus longue mettront en lumière ce qui est aujourd'hui caché. Pour rechercher de si grandes choses, une seule vie ne suffit pas.",
+  "original": "Veniet tempus quo ista quae nunc latent in lucem dies extrahat et longioris aevi diligentia.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "À propos des comètes, dont on ignorait encore les lois du retour.",
+  "themes": [
+   "lenteur",
+   "verite",
+   "temps"
+  ]
+ },
+ {
+  "id": "epictete-manuel-1-1",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "1, 1",
+  "texte": "Parmi les choses, les unes dépendent de nous, les autres non. Dépendent de nous le jugement, l'élan, le désir, l'aversion : en un mot, tout ce qui est notre œuvre.",
+  "original": "Τῶν ὄντων τὰ μέν ἐστιν ἐφ’ ἡμῖν, τὰ δὲ οὐκ ἐφ’ ἡμῖν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "liberte",
+   "attention",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "epictete-manuel-5",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "5",
+  "texte": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+  "original": "Ταράσσει τοὺς ἀνθρώπους οὐ τὰ πράγματα, ἀλλὰ τὰ περὶ τῶν πραγμάτων δόγματα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "raison",
+   "maitrise_de_soi"
+  ]
+ },
+ {
+  "id": "epictete-manuel-5-reproches",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "5",
+  "texte": "Accuser les autres de ses propres échecs est le fait d'un ignorant ; s'en accuser soi-même, de qui commence à s'instruire ; n'accuser ni autrui ni soi-même, de qui est instruit.",
+  "original": "ἀπαιδεύτου ἔργον τὸ ἄλλοις ἐγκαλεῖν, ἐφ’ οἷς αὐτὸς πράσσει κακῶς· ἠργμένου παιδεύεσθαι τὸ ἑαυτῷ· πεπαιδευμένου τὸ μήτε ἄλλῳ μήτε ἑαυτῷ.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "erreur",
+   "apprendre",
+   "humilite"
+  ]
+ },
+ {
+  "id": "epictete-manuel-8",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "8",
+  "texte": "Ne demande pas que les événements arrivent comme tu le veux ; veuille qu'ils arrivent comme ils arrivent, et ta vie coulera heureuse.",
+  "original": "Μὴ ζήτει τὰ γινόμενα γίνεσθαι ὡς θέλεις, ἀλλὰ θέλε τὰ γινόμενα ὡς γίνεται καὶ εὐροήσεις.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "maitrise_de_soi",
+   "ordre"
+  ]
+ },
+ {
+  "id": "epictete-manuel-29-1",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "29, 1",
+  "texte": "Pour toute entreprise, examine ce qui la précède et ce qui la suit, puis engage-toi. Sinon, tu commenceras avec ardeur et, quand des difficultés apparaîtront, tu abandonneras honteusement.",
+  "original": "Ἑκάστου ἔργου σκόπει τὰ καθηγούμενα καὶ τὰ ἀκόλουθα αὐτοῦ καὶ οὕτως ἔρχου ἐπ’ αὐτό.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Même conseil, presque mot pour mot, dans les Entretiens, III, 15, 1.",
+  "themes": [
+   "methode",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "epictete-manuel-46-2",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "46, 2",
+  "texte": "Les brebis ne montrent pas combien elles ont mangé : elles digèrent au-dedans leur pâture et donnent au-dehors laine et lait. N'étale pas les principes devant les profanes : montre les actes qu'ils produisent, une fois digérés.",
+  "original": "μὴ τὰ θεωρήματα τοῖς ἰδιώταις ἐπιδείκνυε, ἀλλ’ ἀπ’ αὐτῶν πεφθέντων τὰ ἔργα.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "θεωρήματα : les principes de la philosophie (le mot grec a donné « théorème »).",
+  "themes": [
+   "apprendre",
+   "humilite",
+   "memoire"
+  ]
+ },
+ {
+  "id": "epictete-manuel-51-2",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "51, 2",
+  "texte": "Souviens-toi : c'est maintenant le combat, les jeux Olympiques sont déjà là, on ne peut plus différer ; d'un seul jour, d'une seule action dépend que le progrès se perde ou se sauve.",
+  "original": "νῦν ὁ ἀγὼν καὶ ἤδη πάρεστι τὰ Ὀλύμπια καὶ οὐκ ἔστιν ἀναβάλλεσθαι οὐκέτι.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "temps",
+   "courage",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "epictete-manuel-52",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Manuel",
+  "ref": "52, 1-2",
+  "texte": "Le premier lieu en philosophie, le plus nécessaire, est l'usage des principes ; le deuxième, les démonstrations ; le troisième, leur confirmation et leur analyse. Or nous nous attardons au troisième et négligeons entièrement le premier.",
+  "original": "ἐν γὰρ τῷ τρίτῳ τόπῳ διατρίβομεν […] τοῦ δὲ πρώτου παντελῶς ἀμελοῦμεν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Le troisième lieu examine « ce qu'est une démonstration, une conséquence, une contradiction, le vrai, le faux ». Exemple d'Épictète : le premier lieu, c'est ne pas mentir ; le deuxième, démontrer qu'il ne faut pas mentir. D'où la conclusion : nous mentons, mais nous avons sous la main la démonstration qu'il ne faut pas mentir.",
+  "themes": [
+   "preuve",
+   "methode",
+   "raison"
+  ]
+ },
+ {
+  "id": "epictete-entretiens-1-2-37",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "I, 2, 37",
+  "texte": "Je ne serai pas Milon, et pourtant je ne néglige pas mon corps ; ni Crésus, et pourtant je ne néglige pas mes biens. On n'abandonne aucun soin par désespoir d'atteindre les sommets.",
+  "original": "οὐδὲ γὰρ Μίλων ἔσομαι καὶ ὅμως οὐκ ἀμελῶ τοῦ σώματος.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "Milon de Crotone, athlète légendaire ; Crésus, roi proverbialement riche.",
+  "themes": [
+   "perseverance",
+   "effort",
+   "humilite"
+  ]
+ },
+ {
+  "id": "epictete-entretiens-1-15-7",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "I, 15, 7",
+  "texte": "Rien de grand ne naît tout d'un coup, pas plus que la grappe de raisin ou la figue. Si tu me dis maintenant : « Je veux une figue », je te répondrai : « Il faut du temps. »",
+  "original": "οὐδέν, ἔφη, τῶν μεγάλων ἄφνω γίνεται, ὅπου γε οὐδʼ ὁ βότρυς οὐδὲ σῦκον.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "lenteur",
+   "temps",
+   "perseverance"
+  ]
+ },
+ {
+  "id": "epictete-entretiens-2-17-1",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "II, 17, 1",
+  "texte": "Quelle est la première tâche de qui philosophe ? Se défaire de la présomption : car il est impossible de commencer à apprendre ce que l'on croit savoir.",
+  "original": "ἀμήχανον γάρ, ἅ τις εἰδέναι οἴεται, ταῦτα ἄρξασθαι μανθάνειν.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "humilite"
+  ]
+ },
+ {
+  "id": "epictete-entretiens-2-18-2",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "II, 18, 1-2",
+  "texte": "Toute disposition, toute capacité se maintient et grandit par les actes qui lui correspondent. Veux-tu savoir lire ? Lis. Savoir écrire ? Écris. Passe trente jours de suite sans lire, et tu verras ce qui arrive.",
+  "original": "ἂν θέλῃς ἀναγνωστικὸς εἶναι, ἀναγίγνωσκε· ἂν γραφικός, γράφε.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "effort",
+   "perseverance",
+   "apprendre"
+  ]
+ },
+ {
+  "id": "epictete-entretiens-3-23-30",
+  "type": "maxime",
+  "auteur": "Épictète",
+  "oeuvre": "Entretiens",
+  "ref": "III, 23, 30",
+  "texte": "L'école du philosophe est un cabinet de médecin : on ne doit pas en sortir avec plaisir, mais après avoir eu mal.",
+  "original": "ἰατρεῖόν ἐστιν, ἄνδρες, τὸ τοῦ φιλοσόφου σχολεῖον· οὐ δεῖ ἡσθέντας ἐξελθεῖν, ἀλλ’ ἀλγήσαντας.",
+  "traduction": "trad. adaptée",
+  "statut": "authentique",
+  "note": "",
+  "themes": [
+   "apprendre",
+   "erreur",
+   "effort"
+  ]
+ }
+]
