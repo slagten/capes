@@ -1769,7 +1769,7 @@
       if (!liste.length) return;
       aucune = false;
       var d = element("details", "tablette");
-      d.appendChild(element("summary", "", libelleChapitre(c) + " · " + liste.length + " règle(s)"));
+      d.appendChild(element("summary", "", libelleChapitre(c) + " · " + liste.length + (liste.length > 1 ? " règles" : " règle")));
       var ul = element("ul");
       liste.forEach(function (t) {
         var li = element("li", t.maitrise ? "maitrisee" : "");

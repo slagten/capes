@@ -11,6 +11,15 @@
    "nom": "La course d'Achille",
    "notion": "Suites arithmétiques",
    "athena": "Une suite arithmétique avance d'un pas constant : repère ce pas $r$, et le terme général s'écrit tout seul, $u_n = u_0 + nr$.",
+   "guides": [
+    {
+     "nom": "Zénon d'Élée (vers 490 – vers 430 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Les raisonnements de Zénon sur le mouvement qui embarrassent ceux qui veulent les résoudre sont au nombre de quatre. […] Le deuxième est celui qu'on appelle l'Achille : le plus lent, à la course, ne sera jamais rattrapé par le plus rapide ; car il faut d'abord que le poursuivant arrive au point d'où le fuyard est parti, de sorte que le plus lent a toujours nécessairement quelque avance. […] Mais prétendre que celui qui a de l'avance n'est pas rattrapé, c'est faux : tant qu'il a de l'avance, il n'est pas rattrapé ; et pourtant il est rattrapé, si l'on accorde qu'on peut parcourir une distance finie.",
+     "source": "Rapporté par Aristote, Physique, VI, 9, 239b9-18 et 239b26-29 ; la dernière phrase est la réponse d'Aristote (trad. adaptée)",
+     "glose": "Découpe la course à la manière de Zénon : Achille court jusqu'au point de départ de la tortue, puis jusqu'à sa nouvelle position, et ainsi de suite. Ces étapes sont en nombre infini, mais leur durée totale est finie : Achille rejoint bien la tortue. Compter seconde après seconde, c'est au contraire suivre deux suites arithmétiques, une par coureur, et les comparer rang par rang."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,14 @@
        "explication": "$u_n = 5 + 4(n - 1) = 4n + 1$. On veut $100 \\leqslant 4n + 1 \\leqslant 2027$, soit $24{,}75 \\leqslant n \\leqslant 506{,}5$, c'est-à-dire $25 \\leqslant n \\leqslant 506$ pour $n$ entier. Cela fait $506 - 25 + 1 = 482$ termes, de $u_{25} = 101$ à $u_{506} = 2025$.",
        "retenir": "Il y a $q - p + 1$ entiers de $p$ à $q$ inclus : le « $+1$ » des piquets et des intervalles."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "lucrece-1-402",
+      "texte": "Ces petites traces suffisent à un esprit sagace : par elles, tu pourras connaître le reste par toi-même.",
+      "auteur": "Lucrèce",
+      "ref": "De la nature, I, 402-403",
+      "note": "Lucrèce vient de donner ses preuves du vide. Il ajoute : comme le chien sur une piste sûre, « tu pourras, d'une chose à l'autre, voir par toi-même » le reste."
+     }
     },
     {
      "exercices": [
@@ -73,7 +89,14 @@
        "explication": "Les positions forment deux suites arithmétiques : $a_n = 10n$ et $t_n = 100 + n$. La boucle tourne tant que $10n < 100 + n$, c'est-à-dire $n < \\frac{100}{9} \\approx 11{,}1$. Elle s'arrête au premier $n$ tel que $10n \\geqslant 100 + n$, soit $n = 12$ (alors $a = 120$ et $t = 112$) : le programme affiche 12.",
        "retenir": "Une boucle « while » s'arrête au premier rang où sa condition devient fausse : le programme affiche ce rang, le plus petit qui convient."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "descartes-discours-1-lentement",
+      "texte": "Ceux qui ne marchent que fort lentement peuvent avancer beaucoup davantage, s'ils suivent toujours le droit chemin, que ne font ceux qui courent, et qui s'en éloignent.",
+      "auteur": "Descartes",
+      "ref": "Discours de la méthode, première partie (AT VI, 2)",
+      "note": "Un peu plus haut : « ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'appliquer bien »."
+     }
     }
    ],
    "bonus": [
@@ -115,7 +138,14 @@
        "explication": "Vrai. Si $u_n = u_0 + nr$ pour tout $n$, alors $u_{2n} = u_0 + 2nr = u_0 + n(2r)$ : la suite $(u_{2n})$ est arithmétique, de premier terme $u_0$ et de raison $2r$.",
        "retenir": "Les termes de rang pair d'une suite arithmétique de raison $r$ forment une suite arithmétique de raison $2r$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-academiques-2-7",
+      "texte": "Nos discussions n'ont d'autre but que de faire jaillir et comme d'extraire, en parlant et en écoutant pour et contre, quelque chose qui soit vrai ou qui s'en approche le plus possible.",
+      "auteur": "Cicéron",
+      "ref": "Académiques, II (Lucullus), 7",
+      "note": "Cicéron parle en son nom dans le prologue du dialogue et défend la méthode de la Nouvelle Académie : examiner chaque question des deux côtés."
+     }
     }
    ]
   },
@@ -126,6 +156,15 @@
    "nom": "Le fleuve d'Héraclite",
    "notion": "Suites géométriques",
    "athena": "Une suite géométrique se multiplie à chaque pas par le même facteur $q$ : cherche le quotient de deux termes consécutifs, pas leur différence.",
+   "guides": [
+    {
+     "nom": "Héraclite d'Éphèse (vers 540 – vers 480 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "« Héraclite dit quelque part que tout s'en va et que rien ne demeure ; comparant les êtres au courant d'un fleuve, il dit qu'on ne saurait entrer deux fois dans le même fleuve. » (Platon) « Sur ceux qui entrent dans les mêmes fleuves affluent d'autres eaux, et d'autres encore. » (Héraclite)",
+     "source": "Platon, Cratyle, 402a ; puis Héraclite, fr. B 12 DK, rapporté par Arius Didyme chez Eusèbe, Préparation évangélique, XV, 20, 2 (trad. adaptée)",
+     "glose": "Dans le fragment d'Héraclite, les fleuves sont « les mêmes », mais les eaux qui y affluent sont toujours autres. Une suite est ainsi faite : chaque terme est nouveau, la loi qui mène au suivant demeure. Dans une suite géométrique, cette loi est « multiplier par $q$ » : c'est elle qu'il faut reconnaître, $u_{n+1} = q\\,u_n$, sous les termes qui passent."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -154,7 +193,14 @@
        "retenir": "Trois termes consécutifs d'une suite géométrique vérifient $b^2 = ac$ : le terme du milieu est, au signe près, la moyenne géométrique de ses voisins.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-memoire-451a",
+      "texte": "Les exercices conservent la mémoire en ravivant sans cesse le souvenir ; ce n'est rien d'autre que considérer souvent ce qu'on se représente comme une image, et non en lui-même.",
+      "auteur": "Aristote",
+      "ref": "De la mémoire et de la réminiscence, 1, 451a12-14",
+      "note": "« Comme une image » : comme la copie d'une chose passée. Dernière phrase de l'exposé sur la mémoire (ch. 1)."
+     }
     },
     {
      "exercices": [
@@ -184,7 +230,14 @@
        "explication": "Après $n$ tours de boucle, $u = 1000 \\times 1{,}05^n$. La boucle s'arrête au premier $n$ tel que $1{,}05^n \\geqslant 2$. Or $1{,}05^{14} \\approx 1{,}980 < 2$ et $1{,}05^{15} \\approx 2{,}079 \\geqslant 2$ : le programme affiche 15. Le capital double en 15 ans.",
        "retenir": "Algorithme de seuil : $n$ compte les tours de boucle ; à la sortie, $n$ est le premier rang où la condition du « while » est fausse."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-71-3",
+      "texte": "Nos projets s'égarent parce qu'ils n'ont rien vers quoi se diriger : pour qui ne sait pas quel port il cherche, aucun vent n'est favorable.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 71, 3",
+      "note": "En latin : « Ignoranti quem portum petat nullus suus ventus est. »"
+     }
     }
    ],
    "bonus": [
@@ -226,7 +279,14 @@
        "explication": "Vrai. Si $u_n = u_0\\,q^n$ pour tout $n$, alors $w_n = u_{n+1} - u_n = u_0(q - 1)\\,q^n$, donc $w_{n+1} = q\\,w_n$ pour tout $n$ : la suite des écarts est géométrique de raison $q$ et de premier terme $u_0(q - 1)$ (c'est la suite nulle si $q = 1$, qui est bien géométrique).",
        "retenir": "Les écarts d'une suite géométrique de raison $q$ forment une suite géométrique de même raison $q$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "spinoza-ethique-5-23-demonstrations",
+      "texte": "Les yeux de l'esprit, par lesquels il voit et observe les choses, sont les démonstrations elles-mêmes.",
+      "auteur": "Spinoza",
+      "ref": "Éthique, V, proposition 23, scolie",
+      "note": "En latin : « Mentis enim oculi, quibus res videt observatque, sunt ipsae demonstrationes. »"
+     }
     }
    ]
   },
@@ -236,7 +296,16 @@
    "fond": "temple",
    "nom": "Les atomes de Démocrite",
    "notion": "Sens de variation d'une suite",
-   "athena": "Pour savoir si une suite monte ou descend, étudie le signe de $u_{n+1} - u_n$ ; si ses termes sont positifs, tu peux aussi comparer $\\frac{u_{n+1}}{u_n}$ à 1.",
+   "athena": "Pour savoir si une suite monte ou descend, étudie le signe de $u_{n+1} - u_n$ ; si ses termes sont strictement positifs, tu peux aussi comparer $\\frac{u_{n+1}}{u_n}$ à 1.",
+   "guides": [
+    {
+     "nom": "Démocrite d'Abdère (vers 460 – vers 370 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Ceux qui ignorent un art, quel qu'il soit, ou qui y sont encore imparfaits, sentent la fatigue dans leurs entreprises, faute d'expérience et parce que l'ouvrage ne leur est pas encore familier. Mais ceux qui progressent, et plus encore ceux qui sont accomplis, réussissent sans peine ce qu'ils poursuivent et s'en réjouissent : ils aimeraient mieux mener à son terme leur travail habituel que posséder tous les biens des hommes. Démocrite lui-même, dit-on, déclarait qu'il aimerait mieux trouver une seule explication par les causes que devenir roi des Perses.",
+     "source": "Denys d'Alexandrie, Sur la nature, cité par Eusèbe, Préparation évangélique, XIV, 27, 3-4, qui rapporte le mot de Démocrite (fr. B 118 DK) (trad. adaptée)",
+     "glose": "Selon le mot que rapporte Denys, Démocrite aimait mieux trouver une seule explication par les causes que devenir roi des Perses. Pour le sens de variation d'une suite, l'explication tient au signe de $u_{n+1} - u_n$, établi pour tout $n$ : quelques termes qui montent ne prouvent rien. Ce calcul, pénible aux premiers essais, devient familier à force de pratique, comme tout art."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -270,7 +339,13 @@
        "explication": "$\\frac{u_{n+1}}{u_n} = \\frac{3^{n+1}}{(n+1)!} \\times \\frac{n!}{3^n} = \\frac{3}{n+1}$. Ce quotient est supérieur à 1 pour $n \\leqslant 1$, égal à 1 pour $n = 2$, inférieur à 1 pour $n \\geqslant 3$. La suite croît jusqu'à $u_2 = u_3 = \\frac{9}{2}$, puis décroît : le plus grand terme est $\\frac{9}{2}$.",
        "retenir": "Suite à termes strictement positifs : $u_{n+1} \\geqslant u_n$ si et seulement si $\\frac{u_{n+1}}{u_n} \\geqslant 1$. Le quotient est plus commode avec des puissances ou des factorielles."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-5-9",
+      "texte": "Ne te dégoûte pas, ne renonce pas, ne perds pas courage si tu ne parviens pas à toujours agir selon de justes principes ; mais, repoussé, reviens-y.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, V, 9"
+     }
     }
    ],
    "bonus": [
@@ -312,7 +387,14 @@
        "explication": "Vrai. Pour tout $n$, $u_{n+1} - u_n = u_0\\,q^n\\,(q - 1)$. Or $u_0 < 0$, $q^n > 0$ et $q - 1 < 0$ : ce produit est strictement positif. La suite est même strictement croissante, par exemple $-8, -4, -2, -1, \\dots$ pour $u_0 = -8$ et $q = \\frac{1}{2}$.",
        "retenir": "Une suite géométrique de raison $q$ entre 0 et 1 se rapproche de 0 : elle décroît si $u_0 > 0$, elle croît si $u_0 < 0$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "sextus-hypotyposes-1-1",
+      "texte": "Quand on cherche quelque chose, il est naturel d'aboutir soit à la découverte, soit à la négation de la découverte […], soit à la persévérance dans la recherche. […] Les sceptiques, eux, cherchent encore.",
+      "auteur": "Sextus Empiricus",
+      "ref": "Esquisses pyrrhoniennes, I, 1-3",
+      "note": "Sextus range parmi ceux qui croient avoir trouvé Aristote, Épicure et les stoïciens ; parmi ceux qui déclarent la chose insaisissable, les académiciens."
+     }
     }
    ],
    "acrobaties": [
@@ -328,7 +410,14 @@
      ],
      "indice": "Calcule quelques termes avec $u_0 = 2$, puis avec $u_0 = 8$.",
      "explication": "Avec $u_0 = 2$ : $u_1 = 4$, $u_2 = 5$, $u_3 = 5{,}5$. La conclusion est vraie : $v_n = u_n - 6$ définit une suite géométrique de raison $\\frac{1}{2}$, d'où $u_n = 6 - 4 \\times 0{,}5^n$ et $u_{n+1} - u_n = 2 \\times 0{,}5^n > 0$. Mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, on obtient $8, 7, 6{,}5, \\dots$, qui décroît. Pour une suite définie par récurrence, $u_{n+1} = f(u_n)$ avec $f$ croissante, le sens de variation se lit en comparant $u_0$ et $u_1$ ; ce résultat général se démontre par un raisonnement par récurrence, vu en Terminale.",
-     "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas, à lui seul, le sens de variation : il faut aussi comparer $u_0$ et $u_1$."
+     "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas, à lui seul, le sens de variation : il faut aussi comparer $u_0$ et $u_1$.",
+     "maxime": {
+      "id": "platon-menon-98a",
+      "texte": "Les opinions vraies ne consentent pas à rester longtemps : elles s'enfuient de l'âme ; aussi valent-elles peu, tant qu'on ne les a pas liées par un raisonnement qui en donne la cause.",
+      "auteur": "Platon",
+      "ref": "Ménon, 97e-98a",
+      "note": "Socrate compare les opinions vraies aux statues de Dédale, qui s'enfuient si on ne les attache pas."
+     }
     }
    ]
   },
@@ -339,6 +428,15 @@
    "nom": "Les Pensées de Marc Aurèle",
    "notion": "Sommes de termes",
    "athena": "Avant de sommer, compte les termes. Une somme arithmétique vaut le nombre de termes fois la moyenne du premier et du dernier.",
+   "guides": [
+    {
+     "nom": "Marc Aurèle (121 – 180)",
+     "portrait": "grec",
+     "texte": "Ne te laisse pas troubler par la représentation de ta vie entière. N'embrasse pas en pensée les peines, de quelle sorte et en quel nombre, qui vont vraisemblablement survenir ; mais, à propos de chacune des choses présentes, demande-toi : qu'y a-t-il, dans cette tâche, d'insupportable et d'intenable ? Tu rougiras de l'avouer. Rappelle-toi ensuite que ce n'est ni l'avenir ni le passé qui te pèse, mais toujours le présent ; et le présent se réduit à peu de chose si tu le circonscris, lui seul, et si tu fais honte à ta pensée de ne pouvoir tenir bon contre cette seule chose, toute nue.",
+     "source": "Marc Aurèle, Pensées (À soi-même), VIII, 36 (trad. adaptée)",
+     "glose": "Marc Aurèle décompose le poids d'une vie en tâches présentes, dont chacune, prise seule, se laisse porter. Devant $1 + 2 + \\cdots + n$, fais de même : ne contemple pas la somme d'un bloc ; compte ses termes, puis associe le premier au dernier, le deuxième à l'avant-dernier, et remarque que chaque paire a la même valeur."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -366,7 +464,14 @@
        "explication": "Il faut $\\frac{n(n+1)}{2} \\leqslant 2027$, soit $n(n+1) \\leqslant 4054$. Comme $63 \\times 64 = 4032 \\leqslant 4054$ et $64 \\times 65 = 4160 > 4054$, on obtient $n = 63$ : la pyramide utilise $2016$ gobelets et il en reste $11$.",
        "retenir": "Un seuil sur une somme $\\frac{n(n+1)}{2}$ mène à une inéquation du second degré ; on conclut en testant deux entiers consécutifs."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-theetete-155d",
+      "texte": "C'est tout à fait le propre du philosophe, ce sentiment : s'étonner. La philosophie n'a pas d'autre commencement.",
+      "auteur": "Platon",
+      "ref": "Théétète, 155d",
+      "note": "Socrate répond au jeune mathématicien Théétète, qui avoue avoir le vertige devant ces questions."
+     }
     },
     {
      "exercices": [
@@ -396,7 +501,14 @@
        "explication": "Juste après le versement de 2036, le capital vaut $1000\\,(1 + 1{,}02 + \\cdots + 1{,}02^9) = 1000 \\times \\frac{1{,}02^{10} - 1}{0{,}02} \\approx 10\\,949{,}72$ €. Il y a 10 versements, donc 10 termes, de $1{,}02^0$ à $1{,}02^9$.",
        "retenir": "Des versements réguliers capitalisés conduisent à une somme géométrique : repérer avec soin le premier et le dernier exposant."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plotin-enneades-1-6-9",
+      "texte": "Fais comme le sculpteur d'une statue qui doit devenir belle : il ôte, gratte, polit […]. Ne cesse pas de sculpter ta propre statue, jusqu'à ce que brille pour toi l'éclat divin de la vertu.",
+      "auteur": "Plotin",
+      "ref": "Ennéades, I, 6 (Du beau), 9",
+      "note": "La coupure omet notamment : « ôte, toi aussi, tout ce qui est superflu, redresse ce qui est tordu »."
+     }
     }
    ],
    "bonus": [
@@ -438,7 +550,14 @@
        "explication": "Faux. Contre-exemple : pour $n = 2$, le membre de gauche vaut $3 + 5 = 8$ et celui de droite $2 \\times 3 + 1 = 7$. En fait, $\\sum_{k=1}^{n} (2k + 1) = 2\\sum_{k=1}^{n} k + \\sum_{k=1}^{n} 1 = n(n+1) + n$ : la constante est ajoutée $n$ fois.",
        "retenir": "Linéarité : $\\sum_{k=1}^{n} (a\\,u_k + b) = a\\sum_{k=1}^{n} u_k + nb$. La constante compte autant de fois qu'il y a de termes."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-metaphysique-983a",
+      "texte": "Tous commencent par s'étonner que les choses soient ainsi, par exemple que la diagonale soit incommensurable ; mais, une fois instruit, rien n'étonnerait plus un géomètre que de la voir devenir commensurable.",
+      "auteur": "Aristote",
+      "ref": "Métaphysique, A, 2, 983a12-21",
+      "note": "La diagonale du carré rapportée au côté : une fois la démonstration comprise, l'étonnement change de sens."
+     }
     }
    ]
   },
@@ -449,6 +568,15 @@
    "nom": "Les lettres de Sénèque",
    "notion": "Problème : modélisation par une suite, seuil, algorithme",
    "athena": "Modéliser, c'est traduire une phrase en relation de récurrence ; une suite auxiliaire bien choisie rend ensuite la suite explicite.",
+   "guides": [
+    {
+     "nom": "Sénèque (vers 4 av. J.-C. – 65 apr. J.-C.)",
+     "portrait": "grec",
+     "texte": "Fais ainsi, mon cher Lucilius : reprends possession de toi-même ; et le temps qui jusqu'ici t'était pris, ou dérobé, ou qui t'échappait, recueille-le et garde-le. Persuade-toi qu'il en est comme je te l'écris : une part de notre temps nous est arrachée, une autre soustraite, une autre s'écoule. Mais la perte la plus honteuse est celle qui vient de la négligence. […] Fais donc, mon cher Lucilius, ce que tu m'écris que tu fais : embrasse toutes tes heures. Tu dépendras moins de demain si tu mets la main sur aujourd'hui. Pendant qu'on remet à plus tard, la vie passe en courant.",
+     "source": "Sénèque, Lettres à Lucilius, 1, 1-2 (trad. adaptée)",
+     "glose": "Sénèque voit le temps fuir de trois façons : arraché, soustrait, écoulé. Dans la baie aussi, chaque année emporte un dixième des palétuviers, et seuls les plants mis en terre font monter la suite. Une boucle de seuil fait le compte de ces années, une à une, jusqu'au premier rang où le but est atteint."
+    }
+   ],
    "steles": [
     {
      "boss": "Méduse la Gorgone",
@@ -502,7 +630,14 @@
        "explication": "Pour tout $n$, $3000 \\times 0{,}9^n > 0$, donc $u_n < 4000$ : si $s \\geqslant 4000$, la condition $u < s$ reste vraie et la boucle ne s'arrête jamais. Si $s \\leqslant 3999$, il suffit que $3000 \\times 0{,}9^n \\leqslant 1$, ce qui arrive dès $n = 76$ : alors $u_n \\geqslant 3999 \\geqslant s$ et la boucle s'arrête. Le plus petit entier cherché est 4000.",
        "retenir": "Avant de lancer une boucle de seuil, vérifier que le seuil est atteignable : sinon le programme ne s'arrête jamais."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "musonius-aulu-gelle-16-1-2",
+      "texte": "Si tu fais quelque chose de beau avec peine, la peine passe, le beau demeure ; si tu fais quelque chose de laid avec plaisir, le plaisir passe, le laid demeure.",
+      "auteur": "Musonius Rufus",
+      "ref": "Aulu-Gelle, Nuits attiques, XVI, 1, 2",
+      "note": "Mot rapporté par Aulu-Gelle (IIe s. apr. J.-C.), qui, étudiant, l'entendait citer comme une sentence grecque du philosophe Musonius ; Caton avait dit la même chose en latin."
+     }
     }
    ],
    "bonus": [
@@ -544,7 +679,14 @@
        "explication": "Vrai. Si $u_{n+1} = u_n + r$ et $u_{n+1} = q\\,u_n$ pour tout $n$, alors $r = (q - 1)\\,u_n$ pour tout $n$. Si $q = 1$, alors $r = 0$ ; sinon, $u_n = \\frac{r}{q - 1}$ pour tout $n$. Dans les deux cas, la suite est constante.",
        "retenir": "Pour exploiter une relation vraie « pour tout $n$ », isoler $u_n$ : ici $r = (q - 1)\\,u_n$ force la suite à être constante."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-1-1",
+      "texte": "Parmi les choses, les unes dépendent de nous, les autres non. Dépendent de nous le jugement, l'élan, le désir, l'aversion : en un mot, tout ce qui est notre œuvre.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 1, 1",
+      "note": "Premières lignes du Manuel, où Arrien, élève d'Épictète, a résumé son enseignement."
+     }
     }
    ]
   }
@@ -558,6 +700,15 @@
    "nom": "Le sanctuaire d'Archytas",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Ici, une somme cache une équation, une récurrence cache une suite auxiliaire. Et le futur professeur doit savoir dire pourquoi une erreur en est une.",
+   "guides": [
+    {
+     "nom": "Archytas de Tarente (vers 430 – vers 350 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Ceux qui s'occupent des sciences mathématiques me semblent avoir bien discerné, et il n'est pas étonnant qu'ils pensent avec justesse ce qu'est chaque chose : car, ayant bien discerné la nature du tout, ils devaient bien voir aussi ce que sont les choses dans leurs parties. Sur la géométrie, l'arithmétique et la sphérique, ils nous ont transmis une connaissance claire, et non moins sur la musique. Car ces sciences semblent être sœurs : elles portent sur les deux formes premières de l'être, qui sont sœurs.",
+     "source": "Archytas, fr. B 1 DK (début), cité par Nicomaque de Gérase, Introduction arithmétique, I, 3, 4 (trad. adaptée)",
+     "glose": "Archytas tient l'arithmétique, la géométrie et la musique pour des sciences sœurs ; dans un autre fragment (B 2 DK), il distingue trois moyennes, dont l'arithmétique, $2b = a + c$, et la géométrique, $b^2 = ac$. Dans ce sanctuaire, les deux sortes de suites se croisent sans cesse : à toi de voir, comme lui, ce qui les apparente et ce qui les sépare."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -586,7 +737,14 @@
        "retenir": "La somme de $n$ termes d'une suite arithmétique est un polynôme du second degré en $n$ : trouver $n$, c'est résoudre une équation du second degré.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "pyrrhon-dl-9-68",
+      "texte": "Dans une tempête, ses compagnons de traversée étant effrayés, il resta calme et leur montra un porcelet qui mangeait à bord : telle doit être, dit-il, la tranquillité du sage.",
+      "auteur": "Pyrrhon d'Élis",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, IX, 68",
+      "note": "Anecdote rapportée par Diogène Laërce d'après Posidonius (Ier s. av. J.-C.)."
+     }
     },
     {
      "exercices": [
@@ -614,7 +772,14 @@
        "explication": "Au départ $a = b$, donc on entre dans la boucle. Après $n$ tours, $a = 30\\,000 + 1500n$ (suite arithmétique) et $b = 30\\,000 \\times 1{,}04^n$ (suite géométrique). On a $b \\leqslant a$ pour $n$ de 1 à 11 (pour $n = 11$ : $b \\approx 46\\,184$ et $a = 46\\,500$), puis, pour $n = 12$ : $b \\approx 48\\,031 > a = 48\\,000$. Le programme affiche 12.",
        "retenir": "Une suite géométrique de raison $q > 1$ et de premier terme strictement positif peut partir plus lentement, mais elle finit par dépasser une suite arithmétique."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-herodote-36",
+      "texte": "Même pour qui est pleinement instruit, l'essentiel de toute connaissance exacte est de pouvoir mobiliser promptement sa pensée, chaque chose étant ramenée à des éléments et à des formules simples.",
+      "auteur": "Épicure",
+      "ref": "Lettre à Hérodote, 36",
+      "note": "Épicure justifie ainsi l'abrégé qu'il envoie à Hérodote : un résumé bien su permet de retrouver tout le détail. Lettre conservée par Diogène Laërce, X, 35-83."
+     }
     },
     {
      "exercices": [
@@ -660,7 +825,14 @@
        "explication": "$u_n = u_0 + nr = f(n)$ avec $f(x) = rx + u_0$ : une suite arithmétique est la restriction aux entiers naturels d'une fonction affine, quelle que soit sa raison. Ses points sont alignés sur une droite de coefficient directeur $r$. Il n'y a proportionnalité que si $u_0 = 0$, et les points d'une suite géométrique non constante ne sont pas alignés.",
        "retenir": "Suite arithmétique : croissance linéaire (fonction affine) ; suite géométrique : croissance exponentielle. Un lien à faire vivre du collège au lycée."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-republique-536e",
+      "texte": "Aucun savoir imposé de force ne demeure dans l'âme. Élève donc les enfants dans les études, non par la contrainte, mais en jouant.",
+      "auteur": "Platon",
+      "ref": "République, VII, 536e-537a",
+      "note": "Il s'agit du calcul, de la géométrie et des autres études préparatoires à la dialectique ; Socrate vient de dire qu'un homme libre ne doit rien apprendre en esclave."
+     }
     }
    ],
    "bonus": [
@@ -702,7 +874,14 @@
        "explication": "Vrai. Si $n$ est impair, $\\frac{n+1}{2}$ est entier et $\\frac{n(n+1)}{2} = n \\times \\frac{n+1}{2}$ est un multiple de $n$. Si $n = 2m$, la somme vaut $m(2m + 1)$ ; si $2m$ la divisait, on aurait $m(2m + 1) = 2mk$ pour un entier $k$, soit $2m + 1 = 2k$ : impossible, car $2m + 1$ est impair.",
        "retenir": "Pour une équivalence, démontrer les deux sens ; ici, la disjonction des cas pair et impair fait tout le travail."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "democrite-b117",
+      "texte": "En réalité, nous ne savons rien : car la vérité est au fond de l'abîme.",
+      "auteur": "Démocrite",
+      "ref": "fr. B 117 DK (cité par Diogène Laërce, IX, 72)",
+      "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme."
+     }
     }
    ]
   }

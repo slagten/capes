@@ -11,6 +11,15 @@
    "nom": "L'ombre de Thalès",
    "notion": "Vecteurs, coordonnées, colinéarité",
    "athena": "Thalès mesurait une pyramide par son ombre : la colinéarité est une proportionnalité, et le déterminant $xy'-yx'$ la teste en un seul calcul.",
+   "guides": [
+    {
+     "nom": "Thalès de Milet (vers 625 – vers 547 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Le roi [Amasis] t’admire pour bien d’autres choses, mais ta mesure de la pyramide l’a charmé au plus haut point : sans aucune peine, sans avoir besoin d’aucun instrument, tu as seulement dressé ton bâton à l’extrémité de l’ombre que projetait la pyramide ; le rayon du soleil, en les touchant, formait deux triangles, et tu as montré que la pyramide est au bâton dans le rapport même où l’ombre est à l’ombre.",
+     "source": "Rapporté par Plutarque, Banquet des sept sages, 2 (146f-147a) : dans ce dialogue, Niloxénos s'adresse à Thalès (trad. adaptée)",
+     "glose": "Dans ce récit, Thalès n'a besoin d'aucun instrument : le rapport de deux ombres suffit à atteindre un sommet inaccessible. Les vecteurs font de même : pour savoir si trois points sont alignés ou si $ABCD$ est un parallélogramme, inutile de tracer ; deux vecteurs et un calcul répondent, même dans un repère qui n'est pas orthonormé."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,13 @@
        "explication": "$\\det(\\vec{u},\\vec{v})=2\\times3-1\\times(-1)=7\\neq0$ : $(\\vec{u},\\vec{v})$ est une base, donc $a$ et $b$ existent et sont uniques. Le système $2a-b=7$, $a+3b=0$ donne $a=-3b$, puis $-7b=7$ : $b=-1$ et $a=3$. Vérification : $3\\vec{u}-\\vec{v}$ a pour coordonnées $(7\\,;0)$.",
        "retenir": "Deux vecteurs non colinéaires forment une base : tout vecteur du plan s'écrit de façon unique comme combinaison de ces deux vecteurs."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-politique-1338a",
+      "texte": "Certaines connaissances utiles, comme les lettres, s'enseignent aux enfants non seulement pour leur utilité, mais parce qu'elles en ouvrent beaucoup d'autres. […] Chercher partout l'utile ne convient nullement aux âmes grandes et libres.",
+      "auteur": "Aristote",
+      "ref": "Politique, VIII, 3, 1338a37-b4"
+     }
     },
     {
      "exercices": [
@@ -66,7 +81,13 @@
        "explication": "Coordonnées : $E\\left(\\frac{1}{3}\\,;0\\right)$, $F(0\\,;k)$, $C(1\\,;1)$. Les vecteurs $\\vec{EC}\\left(\\frac{2}{3}\\,;1\\right)$ et $\\vec{EF}\\left(-\\frac{1}{3}\\,;k\\right)$ ont pour déterminant $\\frac{2}{3}k+\\frac{1}{3}$, nul pour $k=-\\frac{1}{2}$ : $F$ est le symétrique par rapport à $A$ du milieu de $[AD]$. La colinéarité n'utilise ni longueur ni angle : un repère quelconque suffit.",
        "retenir": "Colinéarité, alignement, milieux : valables dans tout repère. Seuls les calculs de longueurs et d'angles exigent un repère orthonormé."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-entretiens-2-18-2",
+      "texte": "Toute disposition, toute capacité se maintient et grandit par les actes qui lui correspondent. Veux-tu savoir lire ? Lis. Savoir écrire ? Écris. Passe trente jours de suite sans lire, et tu verras ce qui arrive.",
+      "auteur": "Épictète",
+      "ref": "Entretiens, II, 18, 1-2"
+     }
     }
    ],
    "bonus": [
@@ -108,7 +129,14 @@
        "explication": "Faux. Dans un repère orthonormé, avec $A(-1\\,;0)$, $B(1\\,;0)$ et $M(0\\,;1)$ : $MA=MB=\\sqrt{2}$, mais le milieu de $[AB]$ est $O(0\\,;0)$. Les points équidistants de $A$ et $B$ forment la médiatrice de $[AB]$. La version vectorielle, elle, est une équivalence : $\\vec{MA}+\\vec{MB}=\\vec{0}$ si et seulement si $M$ est le milieu de $[AB]$.",
        "retenir": "$MA=MB$ caractérise la médiatrice de $[AB]$ ; $\\vec{MA}+\\vec{MB}=\\vec{0}$ caractérise le milieu."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "hume-enquete-10-4-sage",
+      "texte": "Un homme sage proportionne donc sa croyance aux preuves.",
+      "auteur": "Hume",
+      "ref": "Enquête sur l'entendement humain, section X, partie 1, § 87",
+      "note": "Dans la section « Des miracles ». « Evidence » : les preuves et témoignages dont on dispose. Numérotation de l'éd. Selby-Bigge (E 10.4 dans l'éd. Beauchamp)."
+     }
     }
    ]
   },
@@ -119,6 +147,15 @@
    "nom": "L'Académie de Platon",
    "notion": "Équations de droites, vecteurs directeur et normal",
    "athena": "Dans $ax+by+c=0$, lis sans calcul : $(-b\\,;a)$ dirige la droite et, en repère orthonormé, $(a\\,;b)$ lui est normal. Un vecteur normal suffit pour écrire une perpendiculaire.",
+   "guides": [
+    {
+     "nom": "Platon (vers 428 – vers 348 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Ceux qui ont un peu pratiqué la géométrie ne nous contesteront pas que cette science est tout le contraire de ce qu’en disent ceux qui la manient. Ils en parlent d’une façon bien ridicule, quoique forcée : comme s’ils agissaient, et ne parlaient qu’en vue de l’action, ils disent « carrer », « appliquer », « ajouter », et parlent toujours ainsi ; alors que toute cette science n’est cultivée qu’en vue de connaître, […] de connaître ce qui est toujours, et non ce qui, à un moment, naît et périt. […] Elle tirerait donc l’âme vers la vérité, et formerait la pensée du philosophe à élever vers le haut ce que nous tournons à tort vers le bas.",
+     "source": "Platon, République, VII, 527a-b : Socrate parle à Glaucon (trad. adaptée)",
+     "glose": "Socrate trouve risibles les verbes d'artisan des géomètres, même s'ils n'en ont pas d'autres : ce qu'ils étudient ne se fabrique pas. Une même droite a une infinité d'équations : de $ax+by+c=0$, on passe à toutes les autres en multipliant par un réel non nul. Derrière l'écriture, vois l'objet, puis lis ce que l'équation dit de lui : un vecteur directeur et, en repère orthonormé, un vecteur normal."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -147,7 +184,14 @@
        "retenir": "Égalité vraie pour tout $m$ : l'écrire $A+mB=0$, puis exiger $A=0$ et $B=0$.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "archytas-b3",
+      "texte": "Trouver sans chercher est difficile et rare ; en cherchant, c'est aisé et facile ; mais chercher sans savoir est impossible.",
+      "auteur": "Archytas de Tarente",
+      "ref": "fr. B 3 DK (Jamblique, De communi mathematica scientia, 11)",
+      "note": "Archytas, pythagoricien, géomètre et ami de Platon. Passage de son livre Sur les mathématiques, que citent Jamblique et Stobée."
+     }
     },
     {
      "exercices": [
@@ -175,7 +219,14 @@
        "explication": "$\\vec{n}(1\\,;-2)$ est normal à $d$, donc $H(4+t\\,;1-2t)$ pour un réel $t$. $H\\in d$ donne $4+t-2(1-2t)+3=0$, soit $5t+5=0$ et $t=-1$. Ainsi $H(3\\,;3)$, et la distance de $M$ à $d$ vaut $MH=\\sqrt{1+4}=\\sqrt{5}$.",
        "retenir": "Projeté orthogonal de $M$ sur $d$ : partir de $M$ selon un vecteur normal de $d$, puis chercher l'intersection avec $d$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-ethique-1098a",
+      "texte": "Il faut sans doute d'abord esquisser, puis compléter le tracé ; et le temps semble en ces matières un bon découvreur, ou un bon collaborateur : de là viennent les progrès des arts.",
+      "auteur": "Aristote",
+      "ref": "Éthique à Nicomaque, I, 7, 1098a21-25",
+      "note": "Aristote vient de donner une première esquisse de sa définition du bonheur."
+     }
     }
    ],
    "bonus": [
@@ -217,7 +268,14 @@
        "explication": "Vrai. $\\vec{u}(-b\\,;a)$ dirige $d$ et $\\vec{u}'(-b'\\,;a')$ dirige $d'$. Les droites sont perpendiculaires si et seulement si $\\vec{u}\\cdot\\vec{u}'=0$, et dans un repère orthonormé $\\vec{u}\\cdot\\vec{u}'=bb'+aa'$. Autrement dit, deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux $(a\\,;b)$ et $(a'\\,;b')$ sont orthogonaux.",
        "retenir": "Deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux (ou directeurs) sont orthogonaux."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "hume-enquete-12-24-doute",
+      "texte": "En général, il y a un degré de doute, de prudence et de modestie qui, dans toute espèce d'examen et de décision, doit toujours accompagner celui qui raisonne juste.",
+      "auteur": "Hume",
+      "ref": "Enquête sur l'entendement humain, section XII, partie 3, § 129",
+      "note": "Le scepticisme « mitigé » : le doute bien conduit. Numérotation de l'éd. Selby-Bigge (E 12.24 dans l'éd. Beauchamp)."
+     }
     }
    ]
   },
@@ -228,6 +286,15 @@
    "nom": "Le méridien de Posidonius",
    "notion": "Produit scalaire : définitions et calculs",
    "athena": "Le produit scalaire a quatre visages : coordonnées, normes, projection, cosinus. Avant de calculer, choisis celui que l'énoncé te tend.",
+   "guides": [
+    {
+     "nom": "Posidonius d’Apamée (vers 135 – vers 51 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Posidonius dit que Rhodes et Alexandrie sont sous le même méridien, […] et la distance entre les villes semble être de cinq mille stades. […] L’étoile appelée Canope, très brillante, au midi, […] commence à être visible à Rhodes : aperçue sur l’horizon, elle se couche aussitôt avec la rotation du ciel. Mais lorsque, après la traversée depuis Rhodes, nous sommes à Alexandrie, on la trouve, à sa culmination exacte, élevée au-dessus de l’horizon d’un quart de signe, c’est-à-dire d’un quarante-huitième du zodiaque. […] Ainsi le plus grand cercle de la Terre mesure vingt-quatre myriades de stades, si l’on compte cinq mille stades de Rhodes à Alexandrie ; sinon, en proportion de la distance.",
+     "source": "Rapporté par Cléomède, Le Mouvement circulaire des corps célestes, I, 7 (I, 10 éd. Ziegler) ; l'ouvrage de Posidonius est perdu (trad. adaptée)",
+     "glose": "Remarque la fin : si la distance n'est pas de cinq mille stades, le résultat suit « en proportion ». La méthode, un angle et une longueur reliés par une proportion, ne dépend pas des mesures, et c'est elle qu'il faut retenir. Le produit scalaire noue de même longueurs et angles : avec $\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|\\times\\cos(\\vec{u},\\vec{v})$, l'angle et les longueurs donnent le nombre, et le nombre, en retour, donne l'angle."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -255,7 +322,14 @@
        "explication": "$f(t)=\\|\\vec{u}\\|^2+2t\\,\\vec{u}\\cdot\\vec{v}+t^2\\|\\vec{v}\\|^2=9t^2-2t+4$, minimal en $t=\\frac{2}{18}=\\frac{1}{9}$. Pour cette valeur, $(\\vec{u}+t\\vec{v})\\cdot\\vec{v}=-1+9t=0$ : le vecteur le plus court de la famille est orthogonal à $\\vec{v}$. C'est l'idée du projeté orthogonal.",
        "retenir": "$\\|\\vec{u}+t\\vec{v}\\|$ est minimal quand $\\vec{u}+t\\vec{v}$ est orthogonal à $\\vec{v}$, c'est-à-dire pour $t=-\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|^2}$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "heraclite-b54",
+      "texte": "L'harmonie qui ne se voit pas vaut mieux que celle qui se voit.",
+      "auteur": "Héraclite",
+      "ref": "fr. B 54 DK (Hippolyte, Réfutation de toutes les hérésies, IX, 9, 5)",
+      "note": "« Vaut mieux » : en grec κρείττων, « meilleure » ou « plus forte »."
+     }
     },
     {
      "exercices": [
@@ -283,7 +357,14 @@
        "explication": "Repère orthonormé d'origine $A$ : $B(6\\,;0)$, $D(0\\,;4)$, $O(3\\,;2)$. $\\vec{OA}(-3\\,;-2)$ et $\\vec{OB}(3\\,;-2)$ donnent $\\vec{OA}\\cdot\\vec{OB}=-9+4=-5$ et $OA=OB=\\sqrt{13}$. Donc $\\cos\\widehat{AOB}=-\\frac{5}{13}$ : l'angle est obtus, ce qui est cohérent puisqu'il fait face au grand côté $[AB]$.",
        "retenir": "Angle géométrique : $\\cos\\widehat{AOB}=\\dfrac{\\vec{OA}\\cdot\\vec{OB}}{OA\\times OB}$, après avoir choisi un repère adapté à la figure."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-3-11",
+      "texte": "Rien ne rend l'âme aussi grande que de pouvoir examiner avec méthode et vérité chacune des choses qui se présentent dans la vie.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, III, 11",
+      "note": "« Avec méthode » : en grec ὁδῷ, littéralement « avec chemin »."
+     }
     }
    ],
    "bonus": [
@@ -325,7 +406,13 @@
        "explication": "Vrai. $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2$, donc l'égalité équivaut à $\\vec{u}\\cdot\\vec{v}=0$, c'est-à-dire à l'orthogonalité (le vecteur nul étant orthogonal à tout vecteur). C'est le théorème de Pythagore et sa réciproque, en une seule ligne.",
        "retenir": "Pythagore vectoriel : $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2 \\iff \\vec{u}\\cdot\\vec{v}=0$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-sv-74",
+      "texte": "Dans une discussion menée par amour du savoir, c'est le vaincu qui gagne le plus, dans la mesure où il y a appris quelque chose.",
+      "auteur": "Épicure",
+      "ref": "Sentences vaticanes, 74"
+     }
     }
    ],
    "acrobaties": [
@@ -341,7 +428,14 @@
      ],
      "indice": "Fais tout passer dans le même membre et factorise : quelle propriété géométrique obtiens-tu ?",
      "explication": "L'hypothèse équivaut à $\\vec{u}\\cdot(\\vec{v}-\\vec{w})=0$, c'est-à-dire à $\\vec{u}\\perp(\\vec{v}-\\vec{w})$, et rien de plus. Contre-exemple à la « simplification », dans un repère orthonormé : $\\vec{u}(1\\,;0)$, $\\vec{v}(1\\,;0)$ et $\\vec{w}(1\\,;5)$ donnent $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}=1$, alors que $\\vec{v}$ et $\\vec{w}$ ne sont ni égaux, ni colinéaires, ni de même norme.",
-     "retenir": "On ne divise jamais par un vecteur : $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ signifie seulement $\\vec{u}\\perp(\\vec{v}-\\vec{w})$."
+     "retenir": "On ne divise jamais par un vecteur : $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ signifie seulement $\\vec{u}\\perp(\\vec{v}-\\vec{w})$.",
+     "maxime": {
+      "id": "kant-krv-a5-colombe",
+      "texte": "La colombe légère, qui fend l'air dans son libre vol et en sent la résistance, pourrait s'imaginer qu'elle volerait bien mieux encore dans un espace vide d'air.",
+      "auteur": "Kant",
+      "ref": "Critique de la raison pure, Introduction, A 5 / B 8-9",
+      "note": "Kant enchaîne sur Platon, qui quitta le monde sensible pour s'aventurer dans l'espace vide de l'entendement pur, sans point d'appui."
+     }
     }
    ]
   },
@@ -352,6 +446,15 @@
    "nom": "L'attention de Simone Weil",
    "notion": "Applications : Al-Kashi, orthogonalité, cercles",
    "athena": "Regarde avant de calculer : un diamètre, un rayon perpendiculaire à une tangente, un angle obtus caché font souvent tout le travail.",
+   "guides": [
+    {
+     "nom": "Simone Weil (1909 – 1943)",
+     "portrait": "moderne",
+     "texte": "Si on cherche avec une véritable attention la solution d’un problème de géométrie, et si, au bout d’une heure, on n’est pas plus avancé qu’en commençant, on a néanmoins avancé, durant chaque minute de cette heure, dans une autre dimension plus mystérieuse. Sans qu’on le sente, sans qu’on le sache, cet effort en apparence stérile et sans fruit a mis plus de lumière dans l’âme. Le fruit se retrouvera un jour, plus tard, dans la prière. Il se retrouvera sans doute aussi par surcroît dans un domaine quelconque de l’intelligence, peut-être tout à fait étranger à la mathématique.",
+     "source": "Simone Weil, Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu (1942), dans Attente de Dieu (1950)",
+     "glose": "Le progrès que décrit Simone Weil ne se voit pas sur la copie : il se fait « dans une autre dimension ». Un problème de géométrie cherché avec une vraie attention, même sans succès, a travaillé pour toi ; il arrive qu'au retour de la stèle, des jours plus tard, la figure s'éclaire d'un coup."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -380,7 +483,13 @@
        "explication": "$\\vec{AB}\\cdot\\vec{AC}=\\frac{1}{2}(AB^2+AC^2-BC^2)=\\frac{1}{2}(49+81-64)=33$. Puis $AI^2=\\frac{1}{4}\\left(AB^2+2\\,\\vec{AB}\\cdot\\vec{AC}+AC^2\\right)=\\frac{1}{4}(49+66+81)=49$, donc $AI=7$. C'est le théorème de la médiane : $AB^2+AC^2=2AI^2+\\frac{1}{2}BC^2$.",
        "retenir": "Théorème de la médiane : $AB^2+AC^2=2AI^2+\\frac{1}{2}BC^2$, où $I$ est le milieu de $[BC]$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-7-59",
+      "texte": "Creuse au-dedans. Au-dedans est la source du bien, et elle peut toujours jaillir, si tu creuses toujours.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, VII, 59"
+     }
     },
     {
      "exercices": [
@@ -408,7 +517,14 @@
        "explication": "$\\vec{n}(3\\,;4)$ est normal à $d_k$ : $H=\\Omega+t\\vec{n}$, soit $H(2+3t\\,;-1+4t)$, et $H\\in d_k$ donne $25t+2+k=0$. Alors $\\Omega H=|t|\\times\\|\\vec{n}\\|=\\frac{|k+2|}{5}$. La tangence s'écrit $|k+2|=10$, soit $k=8$ ou $k=-12$. La plus grande valeur est 8.",
        "retenir": "Une droite est tangente à un cercle si et seulement si la distance du centre à la droite est égale au rayon."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "poincare-sm-beaute",
+      "texte": "Le sentiment de la beauté mathématique, de l'harmonie des nombres et des formes, de l'élégance géométrique : c'est un vrai sentiment esthétique que tous les vrais mathématiciens connaissent.",
+      "auteur": "Poincaré",
+      "ref": "Science et méthode (1908), livre I, chap. III, « L'invention mathématique »",
+      "note": "Poincaré répond à l'idée que les démonstrations ne parleraient qu'à l'intelligence. Le texte a un point là où l'on a mis les deux-points."
+     }
     }
    ],
    "bonus": [
@@ -450,7 +566,14 @@
        "explication": "Vrai. $\\mathcal{C} : (x-2)^2+(y-1)^2=8$, de centre $\\Omega(2\\,;1)$ et de rayon $2\\sqrt{2}$. Le projeté de $\\Omega$ sur $d$ est $H=\\Omega+t\\,(1\\,;1)$ avec $(2+t)+(1+t)+1=0$, soit $t=-2$ et $H(0\\,;-1)$. Alors $\\Omega H=\\sqrt{4+4}=2\\sqrt{2}$, égal au rayon : $d$ est tangente à $\\mathcal{C}$ en $H$.",
        "retenir": "Tangence : distance du centre à la droite égale au rayon ; le point de contact est le projeté orthogonal du centre."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-devoirs-1-18",
+      "texte": "Il faut éviter de tenir pour connu ce qu'on ignore et d'y donner à la légère son assentiment ; qui veut fuir ce défaut, et tous doivent le vouloir, consacrera à l'examen temps et attention.",
+      "auteur": "Cicéron",
+      "ref": "Des devoirs, I, 18",
+      "note": "Premier des deux défauts à fuir dans la recherche du vrai ; le second est de consacrer trop d'efforts à des questions obscures et difficiles, qui ne sont pas nécessaires (I, 19)."
+     }
     }
    ]
   },
@@ -461,6 +584,15 @@
    "nom": "La mesure d'Ératosthène",
    "notion": "Problème de géométrie repérée",
    "athena": "Ératosthène a mesuré la Terre avec un angle et une distance. Mesure ce pavé pièce à pièce : chaque question peut se traiter seule.",
+   "guides": [
+    {
+     "nom": "Ératosthène de Cyrène (vers 276 – vers 194 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Syène et Alexandrie, dit Ératosthène, sont sous le même méridien. […] Quand le soleil, au solstice d’été, culmine exactement, les gnomons des cadrans [de Syène] sont sans ombre ; à Alexandrie, à la même heure, ils projettent une ombre. […] Sur ces deux droites parallèles tombe la droite menée du centre de la Terre au gnomon d’Alexandrie : elle fait des angles alternes égaux. […] Or l’arc tracé dans la cuvette du cadran se trouve être la cinquantième partie de son cercle : la distance de Syène à Alexandrie est donc la cinquantième partie du plus grand cercle de la Terre. Elle est de cinq mille stades : le cercle entier vaut donc vingt-cinq myriades.",
+     "source": "Rapporté par Cléomède, Le Mouvement circulaire des corps célestes, I, 7 (I, 10 éd. Ziegler) ; le traité d'Ératosthène est perdu (trad. adaptée)",
+     "glose": "Une ombre, deux droites parallèles, des angles alternes égaux, une proportion : rien qui dépasse le collège, et pourtant ces maillons enchaînés donnent le tour de la Terre. Un problème de concours se mène de même, maillon après maillon ; et, comme dans le problème de cette salle, l'énoncé redonne souvent le résultat à admettre, si bien qu'une question manquée ne bloque pas la suivante."
+    }
+   ],
    "steles": [
     {
      "boss": "Le Sphinx de Thèbes",
@@ -515,7 +647,13 @@
        "explication": "Le triangle $BCE$ a pour base $BC=1$ et pour hauteur $y_E=\\frac{\\sqrt{7}}{2}$ : son aire vaut $\\frac{\\sqrt{7}}{4}$. Chaque triangle rectangle isocèle dont les côtés de l'angle droit mesurent 1 a pour aire $\\frac{1}{2}$. Aire du pentagone : $1+\\frac{\\sqrt{7}}{4}\\approx1{,}66$.",
        "retenir": "Aire d'un polygone en repère : le découper en triangles dont on connaît une base et la hauteur associée."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-brevete-1-3",
+      "texte": "Nous n'avons pas trop peu de temps, mais nous en avons beaucoup perdu. La vie est assez longue, et largement donnée pour accomplir de très grandes choses, si elle était tout entière bien employée.",
+      "auteur": "Sénèque",
+      "ref": "De la brièveté de la vie, 1, 3"
+     }
     }
    ],
    "bonus": [
@@ -557,7 +695,14 @@
        "explication": "Vrai. Soit $ABCD$ un parallélogramme, $\\vec{u}=\\vec{AB}$ et $\\vec{v}=\\vec{AD}$ : $\\vec{AC}=\\vec{u}+\\vec{v}$ et $\\vec{BD}=\\vec{v}-\\vec{u}$, donc $AC^2-BD^2=4\\,\\vec{u}\\cdot\\vec{v}$. Ainsi $AC=BD$ équivaut à $\\vec{u}\\cdot\\vec{v}=0$, c'est-à-dire à un angle droit en $A$ : un parallélogramme ayant un angle droit est un rectangle. Sans l'hypothèse « parallélogramme », c'est faux : un trapèze isocèle a des diagonales de même longueur.",
        "retenir": "Dans un parallélogramme : diagonales de même longueur $\\iff$ rectangle ; diagonales perpendiculaires $\\iff$ losange."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "pascal-L188",
+      "texte": "La dernière démarche de la raison est de reconnaître qu'il y a une infinité de choses qui la surpassent.",
+      "auteur": "Pascal",
+      "ref": "Pensées, fr. 188 Lafuma (267 Brunschvicg)",
+      "note": "Liasse « Soumission et usage de la raison »."
+     }
     }
    ]
   }
@@ -571,6 +716,15 @@
    "nom": "Le sanctuaire de Poincaré",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Ici, les échafaudages tombent : la distance devient une projection, l'optimum un produit scalaire. Enseigner, ce sera savoir dire pourquoi.",
+   "guides": [
+    {
+     "nom": "Henri Poincaré (1854 – 1912)",
+     "portrait": "xixe",
+     "texte": "En d’autres termes, les axiomes de la géométrie (je ne parle pas de ceux de l’arithmétique) ne sont que des définitions déguisées. Dès lors, que doit-on penser de cette question : La géométrie euclidienne est-elle vraie ? Elle n’a aucun sens. Autant demander si le système métrique est vrai et les anciennes mesures fausses ; si les coordonnées cartésiennes sont vraies et les coordonnées polaires fausses. Une géométrie ne peut pas être plus vraie qu’une autre ; elle peut seulement être plus commode. Or la géométrie euclidienne est et restera la plus commode : 1° parce qu’elle est la plus simple […].",
+     "source": "Henri Poincaré, La Science et l'Hypothèse (1902), IIe partie, chap. III, « Les géométries non euclidiennes »",
+     "glose": "Choisir un repère, c'est choisir une commodité, non une vérité : l'origine au centre du cercle, un axe porté par la droite, et le calcul se simplifie. Devant une classe, tu auras à justifier ce choix, et à reconnaître qu'un élève qui en a fait un autre peut avoir raison lui aussi."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -598,7 +752,14 @@
        "explication": "$\\vec{AC}(5\\,;3)$ et $\\vec{n}(1\\,;1)$ : la distance de $C$ à $(AB)$ vaut $\\frac{|\\vec{AC}\\cdot\\vec{n}|}{\\|\\vec{n}\\|}=\\frac{8}{\\sqrt{2}}=4\\sqrt{2}$. Avec $AB=3\\sqrt{2}$, l'aire vaut $\\frac{1}{2}\\times3\\sqrt{2}\\times4\\sqrt{2}=12$. On retrouve $\\frac{1}{2}|\\det(\\vec{AB},\\vec{AC})|=\\frac{1}{2}|9+15|=12$.",
        "retenir": "Distance de $C$ à $(AB)$ : $\\dfrac{|\\vec{AC}\\cdot\\vec{n}|}{\\|\\vec{n}\\|}$, avec $\\vec{n}$ normal à $(AB)$. La même formule donnera la distance d'un point à un plan."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-29-1",
+      "texte": "Pour toute entreprise, examine ce qui la précède et ce qui la suit, puis engage-toi. Sinon, tu commenceras avec ardeur et, quand des difficultés apparaîtront, tu abandonneras honteusement.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 29, 1",
+      "note": "Même conseil, presque mot pour mot, dans les Entretiens, III, 15, 1."
+     }
     },
     {
      "exercices": [
@@ -627,7 +788,14 @@
        "retenir": "Pour optimiser $ax+by$ sur un cercle de centre $O$ et de rayon $r$, y voir un produit scalaire : le maximum vaut $r\\sqrt{a^2+b^2}$.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-lettre7-341c",
+      "texte": "Cela ne se dit pas comme les autres savoirs : après une longue fréquentation de la chose même, soudain, comme la lumière jaillie d'une étincelle, cela naît dans l'âme et s'y nourrit de soi-même.",
+      "auteur": "Platon",
+      "ref": "Lettre VII, 341c-d",
+      "note": "Platon parle de l'objet de sa recherche la plus sérieuse, sur lequel il dit n'avoir rien écrit. L'authenticité de la Lettre VII est discutée."
+     }
     },
     {
      "exercices": [
@@ -673,7 +841,14 @@
        "explication": "Seule la première réponse démontre : pour $P\\neq H$, Pythagore dans $MHP$ donne $MP^2=MH^2+HP^2>MH^2$. L'inégalité triangulaire majore $MP$ au lieu de le minorer ; la troisième réponse affirme ce qu'il faut prouver ; le cercle de rayon $MH$ est tangent à $d$ en $H$ et ne la coupe pas en deux points. Cette preuve se transpose telle quelle à la distance d'un point à un plan.",
        "retenir": "Distance d'un point à une droite (ou à un plan) : le minimum est atteint au projeté orthogonal, par le théorème de Pythagore."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-6-5",
+      "texte": "Long est le chemin par les préceptes, court et efficace par les exemples.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 6, 5",
+      "note": "Sénèque conseille à Lucilius de vivre auprès des sages : leur voix vivante et la vie commune lui profiteront plus que leurs discours."
+     }
     }
    ],
    "bonus": [
@@ -715,7 +890,13 @@
        "explication": "Faux. Avec $I$ milieu de $[AB]$, $\\vec{IB}=-\\vec{IA}$, donc $\\vec{MA}\\cdot\\vec{MB}=(\\vec{MI}+\\vec{IA})\\cdot(\\vec{MI}-\\vec{IA})=MI^2-IA^2=MI^2-1$. Pour $k=-2$, la condition devient $MI^2=-1$ : aucun point ne la vérifie, l'ensemble est vide, ce n'est pas un cercle. Pour $k=-1$, on obtient le seul point $I$ ; pour $k>-1$, le cercle de centre $I$ et de rayon $\\sqrt{k+1}$ (pour $k=0$, le cercle de diamètre $[AB]$).",
        "retenir": "$\\vec{MA}\\cdot\\vec{MB}=MI^2-\\frac{AB^2}{4}$ ($I$ milieu de $[AB]$) : l'ensemble $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle de centre $I$, un point ou l'ensemble vide."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "augustin-confessions-11-14-17",
+      "texte": "Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à qui me le demande, je ne le sais pas.",
+      "auteur": "Augustin",
+      "ref": "Confessions, XI, 14, 17"
+     }
     }
    ]
   }

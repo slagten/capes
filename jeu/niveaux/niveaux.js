@@ -118,7 +118,14 @@ var CHAPITRES = [
         "explication": "$(x+1)^2 = (x+1)(x+1) = x^2 + x + x + 1 = x^2 + 2x + 1$. La première égalité oublie le double produit $2x$ : elle est fausse dès $x = 1$ ($4 \\neq 2$).",
         "retenir": "$(a+b)^2 = a^2 + 2ab + b^2$ : ne jamais oublier le double produit."
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-menon-85c",
+       "texte": "Ces opinions viennent de s'éveiller en lui comme dans un rêve ; mais si on l'interroge souvent et de diverses façons sur ces mêmes questions, il finira par les savoir aussi exactement que quiconque.",
+       "auteur": "Platon",
+       "ref": "Ménon, 85c-d",
+       "note": "Socrate parle du jeune esclave à qui il vient de faire trouver comment doubler l'aire d'un carré."
+      }
      }
     ],
     "bonus": [
@@ -160,7 +167,14 @@ var CHAPITRES = [
         "explication": "Vrai. Si $n = 6k$ avec $k$ entier, alors $n = 3 \\times (2k)$ et $2k$ est entier : $n$ est divisible par 3. (La réciproque est fausse : 3 n'est pas divisible par 6.)",
         "retenir": "Pour prouver « pour tout », on raisonne sur un élément quelconque, pas sur des exemples."
        }
-      ]
+      ],
+      "maxime": {
+       "id": "montaigne-1-26-par-coeur",
+       "texte": "Savoir par cœur n'est pas savoir : c'est tenir ce qu'on a donné en garde à sa mémoire. Ce qu'on sait droitement, on en dispose, sans regarder au patron, sans tourner les yeux vers son livre.",
+       "auteur": "Montaigne",
+       "ref": "Essais, I, 26, « De l'institution des enfants »",
+       "note": "Numérotation Villey (I, 26) ; I, 25 dans l'édition de 1595. Écho de Sénèque, Lettres, 33, 8 (meminisse / scire)."
+      }
      }
     ],
     "inscriptions": [
@@ -213,6 +227,13 @@ var CHAPITRES = [
       "indice": "Un quart d'heure dure 15 minutes.",
       "explication": "$\\dfrac{3}{4} \\times 60 = 45$ minutes.",
       "retenir": "Prendre une fraction d'une quantité, c'est la multiplier par cette fraction.",
+      "maxime": {
+       "id": "aristote-memoire-452a27",
+       "texte": "L'habitude est déjà comme une nature : c'est pourquoi ce à quoi nous pensons souvent nous revient vite. […] La répétition fait une nature.",
+       "auteur": "Aristote",
+       "ref": "De la mémoire et de la réminiscence, 2, 452a27-30",
+       "note": "La coupure omet une phrase : « car, comme par nature telle chose vient après telle autre, il en va de même en acte »."
+      },
       "figure": "salto"
      }
     ],
@@ -258,9 +279,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Chrysippe de Soles (vers 280 – vers 206 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ici Chrysippe, mis en difficulté, espère que les Chaldéens et les autres devins se trompent, et qu'ils n'énonceront pas leurs règles par une conditionnelle : « Si quelqu'un est né au lever de la Canicule, il ne mourra pas en mer », mais qu'ils diront plutôt : « Il n'est pas vrai que quelqu'un soit né au lever de la Canicule et qu'il meure en mer. » […] De même, le géomètre ne dira pas : « Dans la sphère, les grands cercles se coupent mutuellement en deux parties égales », mais plutôt : « Il n'est pas vrai qu'il y ait dans la sphère des grands cercles et qu'ils ne se coupent pas mutuellement en deux parties égales. »",
+      "source": "Rapporté par Cicéron, Du destin, VIII, 15 ; l'exemple du géomètre est de Cicéron (trad. adaptée)",
+      "glose": "La tournure que propose Chrysippe, « il n'est pas vrai que A et non B », est exactement le sens que les mathématiques donnent aujourd'hui à « si A, alors B » : pour réfuter une implication, il te faut et il te suffit d'un cas où A est vrai et B faux. La contraposée, « si non B, alors non A », interdit le même cas : voilà pourquoi elle lui équivaut, alors que la réciproque en interdit un autre."
      }
     ],
     "steles": [
@@ -299,7 +322,14 @@ var CHAPITRES = [
         "retenir": "Pour réfuter « pour tout $x$, si $A(x)$, alors $B(x)$ », il suffit d'un $x$ qui vérifie l'hypothèse $A(x)$ sans vérifier la conclusion $B(x)$.",
         "id": "c1r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "musonius-diatribe-2",
+       "texte": "Nous sommes tous ainsi faits par nature que nous pouvons vivre sans faute et noblement, et non pas l'un de nous oui, l'autre non.",
+       "auteur": "Musonius Rufus",
+       "ref": "Diatribes, II",
+       "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée."
+      }
      },
      {
       "exercices": [
@@ -342,7 +372,14 @@ var CHAPITRES = [
         "retenir": "$A = B \\Rightarrow A^2 = B^2$, mais la réciproque est fausse : après avoir élevé au carré, on vérifie les solutions trouvées.",
         "id": "c1r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-entretiens-3-23-30",
+       "texte": "L'école du philosophe est un cabinet de médecin : on ne doit pas en sortir avec plaisir, mais après avoir eu mal.",
+       "auteur": "Épictète",
+       "ref": "Entretiens, III, 23, 30",
+       "note": "Propos d'Épictète notés par son élève Arrien."
+      }
      }
     ],
     "bonus": [
@@ -387,7 +424,14 @@ var CHAPITRES = [
         "retenir": "Une implication dont l'hypothèse est fausse est vraie : elle ne promet rien dans ce cas.",
         "id": "c1r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "poincare-vds-intuition",
+       "texte": "La logique qui peut seule donner la certitude est l'instrument de la démonstration : l'intuition est l'instrument de l'invention.",
+       "auteur": "Poincaré",
+       "ref": "La Valeur de la science, I, 1",
+       "note": "Chapitre « L'intuition et la logique en mathématiques » (1905)."
+      }
      }
     ]
    },
@@ -414,9 +458,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Anaxagore de Clazomènes (vers 500 – vers 428 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Toutes choses étaient ensemble, illimitées en nombre et en petitesse. […] Car dans le petit, il n'y a pas de plus petit absolu : il y a toujours plus petit, car ce qui est ne peut pas ne pas être. Mais dans le grand aussi, il y a toujours plus grand. Et le grand est égal au petit en multitude ; et, rapportée à elle-même, chaque chose est à la fois grande et petite.",
+      "source": "Anaxagore, De la nature, fr. B 1 et B 3 DK, cités par Simplicius, Commentaire sur la Physique d'Aristote (trad. adaptée)",
+      "glose": "Ce qu'Anaxagore dit des choses vaut aussi pour les nombres : entre deux fractions, il y en a toujours une autre (leur moyenne, par exemple), et $10^{-n}$ finit par passer sous tout nombre positif donné, comme $10^{n}$ par le dépasser. Une valeur approchée n'est donc qu'une étape : ce que tu écris, c'est la valeur exacte, en fraction irréductible ou en racine simplifiée."
      }
     ],
     "steles": [
@@ -450,7 +496,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c1r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-physique-206b",
+       "texte": "L'infini n'est pas ce en dehors de quoi il n'y a rien, mais ce en dehors de quoi il y a toujours quelque chose.",
+       "auteur": "Aristote",
+       "ref": "Physique, III, 6, 207a1-2",
+       "note": "Aristote vient de dire que l'infini est le contraire de ce qu'on en dit d'ordinaire (206b33)."
+      }
      },
      {
       "exercices": [
@@ -481,7 +534,14 @@ var CHAPITRES = [
         "retenir": "Pour simplifier $\\sqrt{p + q\\sqrt{r}}$, chercher un carré $(a + b\\sqrt{r})^2$ ; et ne jamais oublier que $\\sqrt{u^2} = |u|$.",
         "id": "c1r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-banquet-210e",
+       "texte": "Celui qui a contemplé les belles choses dans l'ordre et comme il faut apercevra soudain, parvenu au terme, une beauté merveilleuse : celle pour laquelle il avait enduré toutes ses peines.",
+       "auteur": "Platon",
+       "ref": "Banquet, 210e",
+       "note": "Diotime, dont Socrate rapporte les paroles, décrit une ascension qui passe par « la beauté des sciences » (210c)."
+      }
      }
     ],
     "bonus": [
@@ -526,7 +586,14 @@ var CHAPITRES = [
         "retenir": "Pour comparer deux nombres, étudier le signe de leur différence, écrite sous forme de quotient ou de produit.",
         "id": "c1r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plutarque-marcellus-17-5-preuve",
+       "texte": "En cherchant, personne ne trouverait seul la démonstration ; mais dès qu'on l'apprend, on croit qu'on l'aurait trouvée soi-même, tant est lisse et rapide le chemin par lequel il mène au résultat.",
+       "auteur": "Plutarque",
+       "ref": "Vie de Marcellus, 17, 5",
+       "note": "Plutarque parle d'Archimède."
+      }
      }
     ]
    },
@@ -553,9 +620,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Platon (428/427 – 348/347 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Théodore que voici nous traçait des figures au sujet des puissances : il nous montrait que celle de trois pieds et celle de cinq pieds ne sont pas commensurables en longueur avec celle d'un pied ; et il les prenait ainsi une par une, jusqu'à celle de dix-sept pieds ; là, je ne sais comment, il s'arrêta. Alors, comme les puissances apparaissaient infinies en nombre, l'idée nous vint d'essayer de les rassembler sous une seule notion, qui nous permettrait de les désigner toutes. — Et vous avez trouvé quelque chose de tel ? — Il me semble que oui ; mais examine, toi aussi.",
+      "source": "Platon, Théétète, 147d-e : Théétète répond à Socrate (trad. adaptée)",
+      "glose": "Théodore montrait l'irrationalité de $\\sqrt{3}$, puis de $\\sqrt{5}$…, un cas après l'autre, et s'arrêta à $\\sqrt{17}$ : aucune liste de cas ne couvre une infinité de nombres. Les jeunes gens cherchent une notion et une preuve qui vaillent pour tous. Quand tu raisonnes par disjonction de cas, vérifie que tes cas, en nombre fini, épuisent toutes les possibilités : c'est à ce prix que la disjonction est une preuve complète."
      }
     ],
     "steles": [
@@ -600,7 +669,14 @@ var CHAPITRES = [
         "retenir": "Un contre-exemple de « si $P$, alors $Q$ » vérifie $P$ et ne vérifie pas $Q$ : c'est exactement la négation de l'implication.",
         "id": "c1r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "heraclite-b40",
+       "texte": "Savoir beaucoup de choses n'enseigne pas à avoir l'intelligence : sinon, cela aurait instruit Hésiode et Pythagore, et aussi Xénophane et Hécatée.",
+       "auteur": "Héraclite",
+       "ref": "Fragments, B 40 DK (cité par Diogène Laërce, IX, 1)",
+       "note": "Héraclite vise des hommes célèbres pour l'étendue de leur savoir."
+      }
      },
      {
       "exercices": [
@@ -641,7 +717,14 @@ var CHAPITRES = [
         "retenir": "Avant d'invoquer une propriété, vérifier son sens : on part de ce que l'on sait pour aller vers ce que l'on veut.",
         "id": "c1r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-tusculanes-1-5",
+       "texte": "Chez les Grecs, la géométrie fut tenue en très grand honneur, et rien n'était plus illustre que les mathématiciens ; nous, nous avons borné cet art à l'utilité de mesurer et de calculer.",
+       "auteur": "Cicéron",
+       "ref": "Tusculanes, I, 5",
+       "note": "« Nous » : les Romains, que Cicéron oppose aux Grecs."
+      }
      }
     ],
     "bonus": [
@@ -686,7 +769,14 @@ var CHAPITRES = [
         "retenir": "Quand la conclusion est négative (« irrationnel »), la contraposée la rend positive et souvent facile à établir.",
         "id": "c1r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "hume-enquete-4-1-euclide",
+       "texte": "Quand il n'y aurait jamais eu dans la nature ni cercle ni triangle, les vérités démontrées par Euclide garderaient pour toujours leur certitude et leur évidence.",
+       "auteur": "Hume",
+       "ref": "Enquête sur l'entendement humain, IV, 1, § 20",
+       "note": "Écrit en anglais (1748). Paragraphe 20 selon Selby-Bigge ; 4.1 dans l'édition Beauchamp."
+      }
      }
     ],
     "acrobaties": [
@@ -703,6 +793,12 @@ var CHAPITRES = [
       "indice": "Comme $\\sqrt{4} = 2$, la conclusion est fausse : une étape l'est aussi. Teste chaque implication avec $p = 2$ et $q = 1$.",
       "explication": "L'étape (b) utilise « si 4 divise $p^2$, alors 4 divise $p$ », qui est fausse : $p = 2$ donne $p^2 = 4$, divisible par 4, alors que 4 ne divise pas 2. La propriété analogue est vraie pour un nombre premier comme 2 ou 3, pas pour 4. Les étapes (a), (c) et (d) sont correctes.",
       "retenir": "« Si $d$ divise $p^2$, alors $d$ divise $p$ » est vrai pour $d$ premier, faux en général ($d = 4$, $p = 2$). Une preuve qui démontre une absurdité contient une faille.",
+      "maxime": {
+       "id": "marc-aurele-pensees-6-21",
+       "texte": "Qu'on me prouve que je pense ou agis mal, je changerai avec joie : je cherche la vérité, qui n'a jamais nui à personne. On se nuit en persistant dans son erreur et son ignorance.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, VI, 21"
+      },
       "id": "c1r3-h0",
       "figure": "double"
      }
@@ -731,9 +827,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Aristote (384 – 322 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "J'appelle opposées de façon contradictoire l'affirmation et la négation dont l'une signifie l'universel et l'autre, de la même chose, que ce n'est pas universellement : ainsi « tout homme est blanc » et « ce n'est pas tout homme qui est blanc » ; « aucun homme n'est blanc » et « quelque homme est blanc ». J'appelle contraires l'affirmation universelle et la négation universelle : ainsi « tout homme est blanc » et « aucun homme n'est blanc » […]. C'est pourquoi ces dernières ne peuvent être vraies ensemble, alors que leurs opposées peuvent parfois l'être à propos du même sujet, comme « ce n'est pas tout homme qui est blanc » et « quelque homme est blanc ».",
+      "source": "Aristote, De l'interprétation, 7, 17b16-25 (trad. adaptée)",
+      "glose": "« Ce n'est pas tout homme qui est blanc » veut dire « quelque homme n'est pas blanc » : c'est la négation de « tout homme est blanc », alors que « aucun homme n'est blanc » n'en est que le contraire. De même, la négation de « pour tout $x$, $P(x)$ » est « il existe $x$ tel que non $P(x)$ ». Retiens : deux propositions contraires peuvent être fausses ensemble ; de deux contradictoires, une exactement est vraie."
      }
     ],
     "steles": [
@@ -784,7 +882,14 @@ var CHAPITRES = [
         "retenir": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ » : c'est l'existence d'un contre-exemple, pas une autre implication.",
         "id": "c1r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "empedocle-b17",
+       "texte": "Allons, écoute mes paroles : car l'étude fait grandir l'esprit.",
+       "auteur": "Empédocle",
+       "ref": "Fragments, B 17, 14 DK (cité par Simplicius, Commentaire sur la Physique)",
+       "note": "Une partie des manuscrits de Simplicius porte « méthè », l'ivresse ; les éditeurs retiennent « mathè », l'étude."
+      }
      },
      {
       "exercices": [
@@ -821,7 +926,14 @@ var CHAPITRES = [
         "retenir": "« $\\forall \\varepsilon > 0$ » se nie en « $\\exists \\varepsilon > 0$ » : la condition sur $\\varepsilon$ reste, seule la propriété finale est niée.",
         "id": "c1r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-84-7",
+       "texte": "Ce que nous avons puisé, ne le laissons pas intact, pour qu'il ne nous reste pas étranger. Digérons-le : autrement il ira dans la mémoire, non dans l'intelligence.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 84, 6-7",
+       "note": "Lettre des abeilles : ce qu'on lit doit être digéré comme la nourriture."
+      }
      }
     ],
     "bonus": [
@@ -866,7 +978,14 @@ var CHAPITRES = [
         "retenir": "Pour tester un « pour tout », essayer d'abord les cas limites : la plus petite valeur, 0, 1, les cas d'égalité.",
         "id": "c1r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-1-7",
+       "texte": "De Rusticus : lire avec exactitude, sans me contenter d'une compréhension approximative, et ne pas donner trop vite mon assentiment aux bavards.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, I, 7",
+       "note": "Le livre I énumère ce que Marc Aurèle doit à ses maîtres ; Rusticus lui fit connaître les leçons d'Épictète."
+      }
      }
     ]
    },
@@ -893,9 +1012,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Protagoras d'Abdère (vers 490 – vers 420 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Euathle, jeune homme riche, désirait apprendre l'éloquence et plaider. Il se mit à l'école de Protagoras, lui paya aussitôt la moitié du salaire, et s'engagea à verser le reste le premier jour où il aurait plaidé devant des juges et gagné. […] Protagoras lui fit un procès pour être payé. Devant les juges, il commença ainsi : « Apprends, jeune insensé, que de toute façon tu me paieras, que le jugement soit rendu contre toi ou pour toi. Si tu perds, le salaire me sera dû par la sentence, parce que j'aurai gagné ; si l'on juge en ta faveur, il me sera dû par le contrat, parce que tu auras gagné. »",
+      "source": "Rapporté par Aulu-Gelle, Nuits attiques, V, 10, 5-10 ; aussi par Diogène Laërce, IX, 56 (trad. adaptée)",
+      "glose": "Protagoras raisonne par cas : perdre ou gagner, il sera payé. Mais il change de règle d'un cas à l'autre, la sentence ici, le contrat là, et Euathle, raconte Aulu-Gelle, n'a eu qu'à l'imiter pour retourner l'argument. Un raisonnement qui gagne à tous les coups mérite qu'on vérifie chaque pas : avant de passer des carrés aux nombres eux-mêmes, assure-toi qu'ils sont positifs."
      }
     ],
     "steles": [
@@ -956,7 +1077,13 @@ var CHAPITRES = [
       ],
       "boss": "L'Hydre de Lerne",
       "monstre": "hydre",
-      "contexte": "D'après CAPES Mayotte 2022, composition 2 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$."
+      "contexte": "D'après CAPES Mayotte 2022, composition 2 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$.",
+      "maxime": {
+       "id": "seneque-lettres-1-3",
+       "texte": "Tout, Lucilius, nous est étranger ; seul le temps est à nous. C'est de ce seul bien, fugitif et glissant, que la nature nous a mis en possession.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 1, 3"
+      }
      }
     ],
     "bonus": [
@@ -1001,7 +1128,14 @@ var CHAPITRES = [
         "retenir": "Multiplier une inégalité stricte par $|x|$ exige $|x| > 0$ : toujours penser au cas $x = 0$.",
         "id": "c1b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "chrysippe-dl-7-182",
+       "texte": "À quelqu'un qui lui reprochait de ne pas suivre avec la foule les leçons d'Ariston, Chrysippe répondit : « Si j'avais écouté la foule, je n'aurais pas fait de philosophie. »",
+       "auteur": "Chrysippe",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 182",
+       "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.)."
+      }
      }
     ]
    }
@@ -1031,9 +1165,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Parménide d'Élée (né vers 515 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Allons, je vais te dire — et toi, recueille la parole que tu auras entendue — quelles sont les seules voies de recherche qui se laissent penser. L'une : qu'il est, et qu'il n'est pas possible qu'il ne soit pas ; c'est le chemin de la Persuasion, car elle accompagne la Vérité. L'autre : qu'il n'est pas, et qu'il est nécessaire qu'il ne soit pas ; ce sentier-là, je te le dis, est entièrement inconnaissable : car tu ne saurais connaître ce qui n'est pas — on n'y parvient pas — ni le dire.",
+      "source": "Parménide, De la nature, fr. B 2 DK, cité par Proclus et Simplicius : la déesse parle au jeune homme (trad. adaptée)",
+      "glose": "La déesse ne laisse que deux voies, qui s'excluent : « est » ou « n'est pas ». On y entend déjà le tiers exclu, ressort du raisonnement par l'absurde : si l'une des voies mène à une contradiction, il ne reste que l'autre. Devant une classe, tu devras rendre ce ressort visible : dire quelle hypothèse tu poses, et ce qu'elle contredit."
      }
     ],
     "steles": [
@@ -1066,7 +1202,14 @@ var CHAPITRES = [
         "retenir": "Analyse-synthèse : l'analyse fournit des conditions nécessaires (des candidats), la synthèse vérifie qu'ils conviennent vraiment.",
         "id": "c1s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-88-13",
+       "texte": "Tu sais ce qu'est une ligne droite : à quoi te sert-il de le savoir, si tu ignores ce qui est droit dans la vie ?",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 88, 13",
+       "note": "Dans une lettre sur les arts libéraux, où Sénèque interroge le géomètre."
+      }
      },
      {
       "exercices": [
@@ -1103,7 +1246,13 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c1s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-metaphysique-1078a",
+       "texte": "Ils se trompent, ceux qui prétendent que les mathématiques ne disent rien du beau : ses formes majeures sont l'ordre, la symétrie et le défini, que les mathématiques montrent au plus haut point.",
+       "auteur": "Aristote",
+       "ref": "Métaphysique, M, 3, 1078a31-b1"
+      }
      },
      {
       "exercices": [
@@ -1152,7 +1301,13 @@ var CHAPITRES = [
         "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité, et une égalité fausse en général peut être vraie pour certaines valeurs : les quantificateurs font la différence.",
         "id": "c1s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "pascal-L737",
+       "texte": "On se persuade mieux, pour l'ordinaire, par les raisons qu'on a soi-même trouvées, que par celles qui sont venues dans l'esprit des autres.",
+       "auteur": "Pascal",
+       "ref": "Pensées, fr. 737 Lafuma (10 Brunschvicg)"
+      }
      }
     ],
     "bonus": [
@@ -1197,7 +1352,14 @@ var CHAPITRES = [
         "retenir": "Inégalité triangulaire et sa forme renversée : $\\big||x| - |y|\\big| \\leqslant |x - y| \\leqslant |x| + |y|$.",
         "id": "c1s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "leibniz-monadologie-33",
+       "texte": "Quand une vérité est nécessaire, on peut en trouver la raison par l'analyse, la résolvant en idées et en vérités plus simples jusqu'à ce qu'on vienne aux primitives.",
+       "auteur": "Leibniz",
+       "ref": "Monadologie, § 33",
+       "note": "Écrit en français (1714)."
+      }
      }
     ]
    }
@@ -1206,7 +1368,7 @@ var CHAPITRES = [
  {
   "niveau": "Semaine 2",
   "titre": "Second degré et fonctions de référence",
-  "introduction": "Cette semaine, tu entres dans le royaume de la parabole. Les scribes de Babylone résolvaient déjà ces équations en complétant un carré : derrière chaque formule se cache une figure. Un même trinôme s'écrit sous trois formes, développée, canonique, factorisée, et tout l'art consiste à choisir celle qui répond à la question posée. Les inéquations seront ton épreuve : le signe se voit sur la courbe avant de s'écrire.",
+  "introduction": "Cette semaine, tu entres dans le royaume de la parabole. Les scribes de Babylone résolvaient déjà les équations du second degré en complétant un carré : derrière chaque formule se cache une figure. Un même trinôme s'écrit sous trois formes, développée, canonique, factorisée, et tout l'art consiste à choisir celle qui répond à la question posée. Les inéquations seront ton épreuve : le signe se voit sur la courbe avant de s'écrire.",
   "conclusion": "Emporte trois réflexes : la forme canonique donne le sommet, la forme factorisée donne les racines et le signe, et le signe de $a$ gouverne le reste. Devant une inéquation ou un paramètre, ramène tout à zéro, factorise, distingue les cas et vérifie tes solutions.",
   "salles": [
    {
@@ -1232,9 +1394,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Socrate (470/469 – 399 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Vois-tu, Ménon, où il en est déjà de son ressouvenir ? Au début, il ne savait pas quel est le côté du carré de huit pieds, et il ne le sait pas encore ; mais il croyait alors le savoir, il répondait avec assurance comme s'il savait, et ne se sentait pas dans l'embarras. Maintenant, il se sent dans l'embarras, et de même qu'il ne sait pas, il ne croit pas non plus savoir. […] En le mettant dans l'embarras et en l'engourdissant comme fait la torpille, lui avons-nous fait du tort ? […] Nous l'avons aidé, semble-t-il, à trouver ce qu'il en est : maintenant, ne sachant pas, il aurait plaisir à chercher.",
+      "source": "Platon, Ménon, 84a-b : Socrate parle à Ménon, après avoir interrogé le jeune esclave (trad. adaptée)",
+      "glose": "Pour doubler l'aire, l'esclave doublait le côté, comme si l'aire était proportionnelle au côté ; or doubler $x$ multiplie $x^2$ par $4$. Le côté cherché est la solution positive de $x^2 = 8$, soit $2\\sqrt{2}$. Son embarras n'est pas un recul : il a écarté $4$ puis $3$, et c'est maintenant qu'il cherche vraiment."
      }
     ],
     "steles": [
@@ -1272,7 +1436,13 @@ var CHAPITRES = [
         "retenir": "On ne « met pas au carré » un encadrement qui contient $0$ : on s'appuie sur les variations de la fonction carré, de part et d'autre de $0$.",
         "id": "c2r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-entretiens-4-12-1",
+       "texte": "Quand tu relâches un peu ton attention, ne t'imagine pas la reprendre quand tu voudras ; garde à l'esprit que, par la faute d'aujourd'hui, tout le reste ira nécessairement plus mal.",
+       "auteur": "Épictète",
+       "ref": "Entretiens, IV, 12, 1"
+      }
      },
      {
       "exercices": [
@@ -1314,7 +1484,13 @@ var CHAPITRES = [
         "retenir": "Sur $]0\\,;1[$, une puissance plus grande diminue le nombre et la racine carrée l'augmente ; sur $]1\\,;+\\infty[$, c'est l'inverse.",
         "id": "c2r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-84-5",
+       "texte": "Imitons les abeilles : séparons ce que nous avons amassé de lectures diverses (on conserve mieux ce qui est distinct), puis, avec le soin de notre esprit, fondons ces sucs variés en une seule saveur.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 84, 5"
+      }
      }
     ],
     "bonus": [
@@ -1359,7 +1535,14 @@ var CHAPITRES = [
         "retenir": "Pour résoudre $x^3 = x$, on ne divise pas par $x$ : on factorise $x(x-1)(x+1) = 0$.",
         "id": "c2r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-sv-27",
+       "texte": "Dans les autres activités, le fruit ne vient qu'au terme, à grand-peine ; en philosophie, le plaisir accompagne la connaissance : on ne jouit pas après avoir appris, on apprend et l'on jouit ensemble.",
+       "auteur": "Épicure",
+       "ref": "Sentences vaticanes, 27",
+       "note": "Recueil de sentences épicuriennes découvert en 1888 dans un manuscrit du Vatican."
+      }
      }
     ]
    },
@@ -1386,9 +1569,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Épicure (341 – 270 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Que nul, étant jeune, ne tarde à philosopher, ni, étant vieux, ne se lasse de philosopher : car il n'est pour personne ni trop tôt ni trop tard pour prendre soin de la santé de l'âme. Dire que l'heure de philosopher n'est pas encore venue, ou qu'elle est passée, c'est comme dire que l'heure du bonheur n'est pas encore là, ou qu'elle n'est plus. Il faut donc philosopher, jeune ou vieux : le vieux, pour rester jeune par les biens, grâce à la gratitude envers ce qui a été ; le jeune, pour être à la fois jeune et vieux, par l'absence de crainte devant l'avenir.",
+      "source": "Épicure, Lettre à Ménécée, 122, conservée par Diogène Laërce, Vies, X, 122 (trad. adaptée)",
+      "glose": "Pour Épicure, l'heure de philosopher n'est jamais passée ; celle de revoir le second degré, longtemps après le lycée, ne l'est pas davantage. Dans $a(x-\\alpha)^2 + \\beta$ avec $a > 0$, le terme $a(x-\\alpha)^2$ n'est jamais négatif : $\\beta$ est le minimum, atteint en $\\alpha$. La forme canonique dit d'avance jusqu'où descend la courbe."
      }
     ],
     "steles": [
@@ -1422,7 +1607,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c2r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "descartes-regulae-10",
+       "texte": "Pour que l'esprit devienne sagace, il faut l'exercer à chercher ce que d'autres ont déjà trouvé, et à parcourir avec méthode même les plus humbles techniques, surtout celles qui expliquent ou supposent un ordre.",
+       "auteur": "Descartes",
+       "ref": "Règles pour la direction de l'esprit, règle X (AT X, 403)",
+       "note": "« Hominum artificia » : les techniques des hommes. Refaire soi-même ce que d'autres ont trouvé, c'est l'exercice même du candidat."
+      }
      },
      {
       "exercices": [
@@ -1453,7 +1645,13 @@ var CHAPITRES = [
         "retenir": "La somme des carrés des écarts $\\sum (x - x_i)^2$ est minimale lorsque $x$ est la moyenne des $x_i$ : un trinôme se cache derrière la moyenne.",
         "id": "c2r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-colere-2-12-3",
+       "texte": "Rien n'est si difficile ni si ardu que l'esprit humain ne le surmonte, et qu'un exercice assidu ne le rende familier.",
+       "auteur": "Sénèque",
+       "ref": "De la colère, II, 12, 3"
+      }
      }
     ],
     "bonus": [
@@ -1498,7 +1696,14 @@ var CHAPITRES = [
         "retenir": "Les courbes de $x \\mapsto f(x)$ et de $x \\mapsto f(-x)$ sont symétriques par rapport à l'axe des ordonnées.",
         "id": "c2r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-caton-26",
+       "texte": "Solon se vante dans ses vers de vieillir en apprenant chaque jour quelque chose ; et moi, j'ai appris le grec étant vieux, avidement, comme pour apaiser une longue soif.",
+       "auteur": "Cicéron",
+       "ref": "Caton l'Ancien (De la vieillesse), 26",
+       "note": "C'est Caton l'Ancien qui parle dans ce dialogue de Cicéron."
+      }
      }
     ]
    },
@@ -1525,9 +1730,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Zénon de Citium (vers 334 – vers 262 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Vous niez que quiconque sache quoi que ce soit, hormis le sage. Et cela, Zénon le montrait par un geste. Il présentait sa main ouverte, les doigts tendus : « Voilà, disait-il, ce qu'est la représentation. » Puis il repliait un peu les doigts : « Voilà l'assentiment. » Puis, les serrant tout à fait, il faisait le poing, et disait que c'était la compréhension ; c'est de cette image qu'il tira le nom de katalepsis, « saisie », que la chose n'avait pas avant. Enfin, approchant la main gauche, il serrait ce poing fort et étroitement : telle était, disait-il, la science, que nul ne possède, sinon le sage.",
+      "source": "Rapporté par Cicéron, Premiers Académiques (Lucullus), II, 47, 145 (trad. adaptée)",
+      "glose": "Voir la formule $\\frac{-b \\pm \\sqrt{\\Delta}}{2a}$, c'est la main ouverte ; l'appliquer en lui faisant confiance, les doigts repliés. La saisir, poing fermé, c'est pouvoir la retrouver seul en complétant le carré. La science serre ce poing dans l'autre main : racines, factorisation, somme et produit y tiennent ensemble."
      }
     ],
     "steles": [
@@ -1560,7 +1767,14 @@ var CHAPITRES = [
         "retenir": "Équation à paramètre : traiter toujours à part le cas où le coefficient de $x^2$ s'annule.",
         "id": "c2r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-phedre-237b",
+       "texte": "En toute chose, mon enfant, il n'y a qu'un point de départ pour bien délibérer : il faut savoir sur quoi porte la délibération, sinon l'on se trompe nécessairement sur tout.",
+       "auteur": "Platon",
+       "ref": "Phèdre, 237b-c",
+       "note": "Ouverture du premier discours de Socrate sur l'amour, qu'il prête à un amant rusé."
+      }
      },
      {
       "exercices": [
@@ -1591,7 +1805,14 @@ var CHAPITRES = [
         "retenir": "Après un changement de variable, revenir à l'inconnue de départ et résoudre chaque équation obtenue, en comptant ses solutions.",
         "id": "c2r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-dl-5-18",
+       "texte": "Les racines de l'éducation sont amères, mais son fruit est doux.",
+       "auteur": "Aristote",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, V, 18",
+       "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.) ; aucun traité conservé d'Aristote ne le contient."
+      }
      }
     ],
     "bonus": [
@@ -1636,7 +1857,14 @@ var CHAPITRES = [
         "retenir": "Deux trinômes de mêmes racines peuvent différer d'un facteur : la forme factorisée est $a(x - x_1)(x - x_2)$.",
         "id": "c2r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-5",
+       "texte": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 5",
+       "note": "« Jugements » traduit dogmata : pour les stoïciens, juger, c'est donner son assentiment à une représentation, comme dans le geste de Zénon."
+      }
      }
     ],
     "acrobaties": [
@@ -1653,6 +1881,12 @@ var CHAPITRES = [
       "indice": "Remplace $x$ par chacune des deux valeurs dans l'équation de départ.",
       "explication": "Si $\\sqrt{2x+3} = x$, alors $2x + 3 = x^2$ ; mais la réciproque est fausse, car $A^2 = B^2$ n'entraîne pas $A = B$. Vérification : pour $x = -1$, $\\sqrt{1} = 1 \\neq -1$ ; pour $x = 3$, $\\sqrt{9} = 3$. Donc $S = \\{3\\}$. Rédaction correcte : $\\sqrt{2x+3} = x \\iff \\left(x \\geqslant 0 \\text{ et } 2x + 3 = x^2\\right)$.",
       "retenir": "Élever au carré n'est une équivalence qu'entre deux nombres de même signe : imposer la condition de signe ou vérifier chaque solution.",
+      "maxime": {
+       "id": "poincare-sh-douter",
+       "texte": "Douter de tout ou tout croire, ce sont deux solutions également commodes, qui l'une et l'autre nous dispensent de réfléchir.",
+       "auteur": "Poincaré",
+       "ref": "La Science et l'Hypothèse, introduction (1902)"
+      },
       "id": "c2r3-h0",
       "figure": "salto"
      }
@@ -1681,9 +1915,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Anaximandre de Milet (vers 610 – vers 546 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Il disait que le principe et l'élément est l'illimité, sans préciser s'il s'agit de l'air, de l'eau ou d'autre chose ; que les parties changent, mais que le tout est immuable. […] Il fut le premier à inventer le gnomon ; il le dressa sur les cadrans solaires de Lacédémone, à ce que dit Favorinus, pour marquer les solstices et les équinoxes ; il construisit aussi des horloges. […] On raconte que, comme il chantait, des enfants se moquèrent de lui ; l'ayant appris, il dit : « Il faut donc mieux chanter, à cause des enfants. »",
+      "source": "Rapporté par Diogène Laërce, Vies et doctrines des philosophes illustres, II, 1-2 (trad. adaptée)",
+      "glose": "Avec le gnomon, on lit la course du soleil dans une ombre ; avec l'esquisse de la parabole, on lit le signe du trinôme avant de l'écrire : celui de $a$ à l'extérieur des racines, l'opposé entre elles. Quant à la réponse faite aux enfants, elle vaut pour un futur professeur : chanter mieux, ici rédiger mieux, à cause des élèves."
      }
     ],
     "steles": [
@@ -1728,7 +1964,14 @@ var CHAPITRES = [
         "retenir": "Inéquation avec une fraction : tout d'un côté, même dénominateur, puis signe du quotient ; jamais de multiplication par une quantité de signe inconnu.",
         "id": "c2r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "anaxagore-b21a",
+       "texte": "Ce qui apparaît est une vue sur ce qui est caché.",
+       "auteur": "Anaxagore",
+       "ref": "fr. B 21a DK, cité par Sextus Empiricus, Contre les mathématiciens, VII, 140",
+       "note": "Sextus Empiricus rapporte, d'après Diotime, que Démocrite louait Anaxagore pour ce mot."
+      }
      },
      {
       "exercices": [
@@ -1771,7 +2014,14 @@ var CHAPITRES = [
         "retenir": "Pour $a \\neq 0$ : $ax^2 + bx + c > 0$ pour tout réel $x$ si et seulement si $a > 0$ et $\\Delta < 0$. Les deux conditions sont indispensables.",
         "id": "c2r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-phedon-90e",
+       "texte": "Ne croyons pas qu'il n'y a rien de sain dans les raisonnements, mais plutôt que nous ne sommes pas encore sains : il faut du courage et de l'ardeur pour le devenir.",
+       "auteur": "Platon",
+       "ref": "Phédon, 90d-e",
+       "note": "Socrate met en garde contre la « misologie », la haine des raisonnements qui naît des déceptions."
+      }
      }
     ],
     "bonus": [
@@ -1816,7 +2066,13 @@ var CHAPITRES = [
         "retenir": "On ne simplifie pas une inéquation par $x$ : on factorise, ici $x(x-2)$, et on étudie le signe.",
         "id": "c2r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "heraclite-b22",
+       "texte": "Ceux qui cherchent de l'or creusent beaucoup de terre et en trouvent peu.",
+       "auteur": "Héraclite",
+       "ref": "fr. B 22 DK, cité par Clément d'Alexandrie, Stromates, IV, 4, 2"
+      }
      }
     ]
    },
@@ -1843,9 +2099,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Empédocle d'Agrigente (vers 495 – vers 435 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Étroites sont les facultés répandues dans nos membres, et nombreux les maux qui s'abattent sur nous et émoussent la pensée. N'ayant vu de la vie qu'une faible part, promis à une prompte mort, les hommes s'envolent, emportés comme une fumée, persuadés de cela seul que chacun a rencontré, poussés de toutes parts ; et chacun se flatte d'avoir trouvé le tout. Ainsi, ces choses, les hommes ne peuvent ni les voir, ni les entendre, ni les embrasser par l'esprit. Mais toi, puisque tu t'es retiré ici, tu apprendras ; pas plus loin que ne s'élève l'intelligence d'un mortel.",
+      "source": "Empédocle, De la nature, fr. B 2 DK, cité par Sextus Empiricus, Contre les savants, VII, 123-124 (trad. adaptée)",
+      "glose": "Résoudre $(E_7)$, c'est n'avoir vu qu'une faible part : chaque valeur de $m$ donne une équation, et nul ne les parcourt toutes. Le signe de $\\Delta$ en fonction de $m$, puis la somme et le produit des racines, décrivent toute la famille sans traiter les équations une à une : c'est à cette mesure qu'un esprit mortel embrasse une infinité de cas."
      }
     ],
     "steles": [
@@ -1911,7 +2169,13 @@ var CHAPITRES = [
       ],
       "boss": "Polyphème le Cyclope",
       "monstre": "cyclope",
-      "contexte": "Pour tout réel $m$, on considère l'équation $(E_m)$ : $x^2 - 2mx + m + 6 = 0$, d'inconnue réelle $x$. Lorsqu'elle admet des solutions, on les note $x_1$ et $x_2$ (avec $x_1 = x_2$ en cas de solution double). On étudie comment le nombre et le signe des solutions dépendent de $m$, puis on cherche la plus petite valeur de $x_1^2 + x_2^2$."
+      "contexte": "Pour tout réel $m$, on considère l'équation $(E_m)$ : $x^2 - 2mx + m + 6 = 0$, d'inconnue réelle $x$. Lorsqu'elle admet des solutions, on les note $x_1$ et $x_2$ (avec $x_1 = x_2$ en cas de solution double). On étudie comment le nombre et le signe des solutions dépendent de $m$, puis on cherche la plus petite valeur de $x_1^2 + x_2^2$.",
+      "maxime": {
+       "id": "marc-aurele-pensees-6-19",
+       "texte": "Si une chose t'est difficile à accomplir, ne pense pas qu'elle soit impossible à l'homme ; mais si elle est possible à l'homme et lui convient, crois-la aussi à ta portée.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, VI, 19"
+      }
      }
     ],
     "bonus": [
@@ -1956,7 +2220,14 @@ var CHAPITRES = [
         "retenir": "Toute expression symétrique des racines s'exprime avec $S = -\\frac{b}{a}$ et $P = \\frac{c}{a}$, sans calculer les racines.",
         "id": "c2b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "quintilien-11-2-43",
+       "texte": "Chose étonnante, dont la raison n'est pas claire : combien une nuit d'intervalle donne de solidité ! […] Ce qu'on ne pouvait restituer sur-le-champ s'enchaîne le lendemain, et le temps, cause ordinaire de l'oubli, affermit la mémoire.",
+       "auteur": "Quintilien",
+       "ref": "Institution oratoire, XI, 2, 43",
+       "note": "Peu avant (XI, 2, 40), Quintilien fait de l'exercice le grand art de la mémoire : apprendre et réfléchir beaucoup, si possible chaque jour."
+      }
      }
     ]
    }
@@ -1986,9 +2257,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Hypatie d'Alexandrie (vers 360 – 415)",
+      "portrait": "chignon",
+      "texte": "Il y avait à Alexandrie une femme nommée Hypatie. Elle était la fille du philosophe Théon, et elle était allée si loin dans le savoir qu'elle surpassait les philosophes de son temps ; elle reçut la succession de l'école platonicienne issue de Plotin, et elle exposait toutes les sciences philosophiques à qui voulait les apprendre. Aussi, de partout, ceux qui voulaient philosopher accouraient auprès d'elle. […] Et il n'y avait rien d'inconvenant à ce qu'elle parût au milieu des hommes : tous, à cause de sa retenue hors du commun, la respectaient et l'admiraient d'autant plus.",
+      "source": "Rapporté par Socrate le Scolastique, Histoire ecclésiastique, VII, 15 (trad. adaptée)",
+      "glose": "Hypatie exposait les sciences à qui voulait les apprendre ; la Souda, encyclopédie byzantine du Xe siècle, lui attribue des commentaires de Diophante et d'Apollonius, maîtres des équations et des coniques. Dans ce sanctuaire, tu passes de l'autre côté de la table : chaque réponse doit pouvoir s'exposer devant une classe, avec la justification qui la rend sûre."
      }
     ],
     "steles": [
@@ -2023,7 +2296,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c2s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "diogene-dl-6-35",
+       "texte": "Il disait imiter les maîtres de chœur : eux aussi donnent la note un peu trop haut, pour que les autres trouvent le ton juste.",
+       "auteur": "Diogène de Sinope",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 35",
+       "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.), sans autre contexte ; on y lit d'ordinaire la justification de ses outrances."
+      }
      },
      {
       "exercices": [
@@ -2055,7 +2335,14 @@ var CHAPITRES = [
         "retenir": "Un trinôme positif ou nul sur $\\mathbb{R}$ a un discriminant négatif ou nul : c'est la preuve classique de l'inégalité de Cauchy-Schwarz.",
         "id": "c2s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-metaphysique-1051a",
+       "texte": "Les constructions géométriques se découvrent par l'acte : c'est en divisant les figures qu'on trouve. Si la parallèle au côté était déjà tracée, on verrait aussitôt pourquoi le triangle vaut deux droits.",
+       "auteur": "Aristote",
+       "ref": "Métaphysique, Θ, 9, 1051a21-26",
+       "note": "« Deux droits » : la somme des angles d'un triangle vaut deux angles droits ; le bon trait, une fois tracé, fait voir la raison."
+      }
      },
      {
       "exercices": [
@@ -2104,7 +2391,14 @@ var CHAPITRES = [
         "retenir": "Forme canonique puis $A^2 - B^2 = (A-B)(A+B)$ : c'est la preuve des formules du discriminant, à faire refaire sur des exemples.",
         "id": "c2s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-46-2",
+       "texte": "Les brebis ne montrent pas combien elles ont mangé : elles digèrent au-dedans leur pâture et donnent au-dehors laine et lait. N'étale pas les principes devant les profanes : montre les actes qu'ils produisent, une fois digérés.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 46, 2",
+       "note": "θεωρήματα : les principes de la philosophie ; le mot grec a donné « théorème »."
+      }
      }
     ],
     "bonus": [
@@ -2149,7 +2443,14 @@ var CHAPITRES = [
         "retenir": "Un « pour tout $m$ » tombe sur une seule valeur : chercher les valeurs du paramètre qui annulent $\\Delta$.",
         "id": "c2s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "leibniz-nouveaux-essais-preface",
+       "texte": "Les vérités nécessaires, telles qu'on les trouve dans les mathématiques pures, et particulièrement dans l'arithmétique et dans la géométrie, doivent avoir des principes dont la preuve ne dépende point des exemples.",
+       "auteur": "Leibniz",
+       "ref": "Nouveaux essais sur l'entendement humain, préface",
+       "note": "Écrit en français vers 1704, publié en 1765 ; la phrase continue : « ni par conséquent du témoignage des sens »."
+      }
      }
     ]
    }
@@ -2184,9 +2485,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Philolaos de Crotone (vers 470 – vers 385 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Et assurément, toutes les choses que l'on connaît ont un nombre : car il n'est pas possible de rien penser ni de rien connaître sans lui. Le nombre a deux espèces propres, l'impair et le pair, et une troisième, faite du mélange des deux, le pair-impair. Chacune des deux espèces a de nombreuses formes, que chaque chose manifeste par elle-même.",
+      "source": "Philolaos, De la nature, fr. B 4 et B 5 DK, cités par Stobée, Choix de textes, I, 21, 7b-c (trad. adaptée)",
+      "glose": "Pour Philolaos, rien ne se pense ni ne se connaît sans le nombre, et le nombre se partage d'abord en impair et pair. Ce partage devient un outil de calcul quand tu écris $n = 2k$ ou $n = 2k + 1$, avec $k$ entier : c'est le premier geste d'une preuve de parité, avant de traiter chaque cas."
      }
     ],
     "steles": [
@@ -2219,7 +2522,14 @@ var CHAPITRES = [
         "retenir": "Si $d$ divise $a$ et $b$, il divise toute combinaison $ua + vb$ ($u$, $v$ entiers). Dans $\\mathbb{Z}$, 7 a quatre diviseurs : $1$, $-1$, $7$, $-7$.",
         "id": "c3r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "descartes-regulae-9",
+       "texte": "Il faut tourner toute la pointe de l'esprit vers les choses les plus petites et les plus faciles, et s'y arrêter longtemps, jusqu'à ce qu'on s'habitue à voir la vérité distinctement et clairement.",
+       "auteur": "Descartes",
+       "ref": "Règles pour la direction de l'esprit, règle IX (AT X, 400)",
+       "note": "Traité latin posthume (1701)."
+      }
      },
      {
       "exercices": [
@@ -2262,7 +2572,14 @@ var CHAPITRES = [
         "retenir": "Le carré d'un entier impair s'écrit $8m + 1$ : réflexe $n = 2k + 1$, puis « $k(k + 1)$ est pair ».",
         "id": "c3r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "musonius-diatribe-1",
+       "texte": "Il ne faut pas chercher beaucoup de preuves pour chaque question, mais des preuves efficaces et claires. […] Plus l'auditeur est intelligent, plus vite il donne son assentiment à l'essentiel d'un raisonnement sain.",
+       "auteur": "Musonius Rufus",
+       "ref": "Diatribes, I",
+       "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée ; la coupure omet une comparaison avec le médecin."
+      }
      }
     ],
     "bonus": [
@@ -2307,7 +2624,14 @@ var CHAPITRES = [
         "retenir": "La somme de trois entiers consécutifs est multiple de 3, celle de quatre ne l'est jamais de 4 : vérifier avant de généraliser.",
         "id": "c3r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-metaphysique-993a",
+       "texte": "L'étude de la vérité est difficile en un sens, facile en un autre : nul ne peut l'atteindre pleinement, mais tous ne la manquent pas, et de tous les apports réunis naît une grandeur.",
+       "auteur": "Aristote",
+       "ref": "Métaphysique, α, 1, 993a30-b3",
+       "note": "Début du livre α, dit « petit alpha »."
+      }
      }
     ]
    },
@@ -2334,9 +2658,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Nicomaque de Gérase (vers 60 – vers 120 apr. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "On appelle proprement parfait le nombre qui est égal à ses propres parties, comme 6 et 28. […] Or il se trouve que, de même que les belles choses, celles qui relèvent de la vertu, sont rares et faciles à dénombrer, tandis que les choses laides et mauvaises foisonnent, de même les nombres surabondants et déficients sont très nombreux et sans ordre, et on les trouve sans règle, tandis que les parfaits sont faciles à dénombrer et rangés avec l'ordre qui convient : un seul parmi les unités, 6 ; un seul parmi les dizaines, 28 ; un troisième parmi les centaines, 496 ; un quatrième parmi les milliers, 8128.",
+      "source": "Nicomaque de Gérase, Introduction arithmétique, I, 16, éd. Hoche p. 39-40 (trad. adaptée)",
+      "glose": "Les « parties » d'un nombre sont ses diviseurs autres que lui-même ($6 = 1 + 2 + 3$), et $d$ divise $n$ si et seulement si le reste de la division euclidienne de $n$ par $d$ est nul. Nicomaque laisse croire à une loi, un nombre parfait par ordre de grandeur ; or aucun nombre parfait n'a cinq chiffres, et le cinquième, $33\\,550\\,336$, en a huit : quatre exemples ne font pas une règle."
      }
     ],
     "steles": [
@@ -2370,7 +2696,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c3r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "zenon-dl-7-4",
+       "texte": "Zénon, qu'un naufrage avait conduit à Athènes et à la philosophie, aurait dit : « J'ai fait bonne traversée quand j'ai fait naufrage. »",
+       "auteur": "Zénon de Citium",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 4",
+       "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), qui en donne plusieurs versions (VII, 4-5) ; le naufrage est raconté en VII, 2."
+      }
      },
      {
       "exercices": [
@@ -2407,7 +2740,14 @@ var CHAPITRES = [
         "retenir": "Pour une question « pour quels $n$ ce nombre est-il divisible par $m$ ? », dresser le tableau des restes de $n$, de 0 à $m - 1$.",
         "id": "c3r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "spinoza-tie-31-instruments",
+       "texte": "De même, l'entendement, par sa force native, se fait des instruments intellectuels, par lesquels il acquiert d'autres forces pour d'autres œuvres […], et ainsi avance par degrés jusqu'à atteindre le sommet de la sagesse.",
+       "auteur": "Spinoza",
+       "ref": "Traité de la réforme de l'entendement, § 31 (numérotation Bruder)",
+       "note": "Suite de l'image du marteau (§ 30) : pour forger le fer, il faut un marteau, mais les hommes ont commencé avec leurs outils naturels."
+      }
      }
     ],
     "bonus": [
@@ -2452,7 +2792,14 @@ var CHAPITRES = [
         "retenir": "Un carré a pour reste 0 ou 1 dans la division par 4 : un outil rapide pour prouver une impossibilité.",
         "id": "c3r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plutarque-marcellus-17-4",
+       "texte": "Dans ces recherches, où le beau ne se mêle à aucun besoin, la matière rivalise avec la démonstration : l'une apporte la grandeur et la beauté, l'autre l'exactitude et une puissance prodigieuse.",
+       "auteur": "Plutarque",
+       "ref": "Vie de Marcellus, 17, 4",
+       "note": "Plutarque parle des travaux géométriques d'Archimède, qui dédaignait les applications pratiques."
+      }
      }
     ]
    },
@@ -2479,9 +2826,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Pythagore de Samos (vers 570 – vers 495 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ceux qu'on appelle pythagoriciens s'attachèrent les premiers aux mathématiques et les firent progresser ; nourris de ces sciences, ils pensèrent que leurs principes étaient les principes de tous les êtres. Puisque, parmi ces principes, les nombres sont par nature les premiers, et qu'ils croyaient voir dans les nombres beaucoup de ressemblances avec ce qui est et ce qui devient, […] ils supposèrent que les éléments des nombres sont les éléments de tous les êtres, et que le ciel tout entier est harmonie et nombre.",
+      "source": "Rapporté par Aristote, Métaphysique, A, 5, 985b23-986a3, à propos des pythagoriciens (trad. adaptée)",
+      "glose": "Pythagore n'a rien écrit : Aristote parle de « ceux qu'on appelle pythagoriciens », pour qui les éléments des nombres sont ceux de tous les êtres. Les entiers ont, eux, des éléments au sens propre : les nombres premiers, dont tout entier au moins égal à 2 est le produit, de façon unique à l'ordre près. C'est sur cette décomposition que tu lis les diviseurs, leur nombre et les carrés."
      }
     ],
     "steles": [
@@ -2514,7 +2863,13 @@ var CHAPITRES = [
         "retenir": "Si un produit d'entiers $ab$ est premier, l'un des facteurs vaut $1$ ou $-1$ : ne pas oublier les facteurs négatifs.",
         "id": "c3r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-orateur-1-18",
+       "texte": "Que dire de la mémoire, trésor de toutes choses ? Si elle n'est pas gardienne des idées et des mots qu'on a trouvés et médités, tout, même le plus brillant chez l'orateur, périra.",
+       "auteur": "Cicéron",
+       "ref": "De l'orateur, I, 18"
+      }
      },
      {
       "exercices": [
@@ -2545,7 +2900,13 @@ var CHAPITRES = [
         "retenir": "$p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a $(a_1 + 1) \\cdots (a_k + 1)$ diviseurs positifs ; pour un $n$ minimal, placer les plus grands exposants sur les plus petits nombres premiers.",
         "id": "c3r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-76-6",
+       "texte": "Qu'attends-tu ? Personne n'est devenu sage par hasard. La vertu ne te tombera pas dessus : on ne parvient pas à la connaître par un travail léger ni au prix d'un petit effort.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 76, 6"
+      }
      }
     ],
     "bonus": [
@@ -2590,7 +2951,14 @@ var CHAPITRES = [
         "retenir": "Ne pas confondre une implication et sa réciproque : « $2^n - 1$ premier $\\Rightarrow$ $n$ premier » est vraie, l'implication inverse est fausse.",
         "id": "c3r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-gorgias-458a",
+       "texte": "Je suis de ceux qui ont plaisir à être réfutés quand ils disent quelque chose de faux, autant qu'à réfuter : être délivré soi-même du plus grand mal vaut mieux qu'en délivrer autrui.",
+       "auteur": "Platon",
+       "ref": "Gorgias, 458a-b",
+       "note": "Paroles de Socrate à Gorgias ; ce plus grand mal, précise-t-il, c'est une opinion fausse sur les sujets dont on discute."
+      }
      }
     ],
     "acrobaties": [
@@ -2601,6 +2969,12 @@ var CHAPITRES = [
       "indice": "Le casier $n$ change d'état autant de fois que $n$ a de diviseurs. Quand ce nombre est-il impair ?",
       "explication": "Le casier $n$ est manipulé par chaque élève $k$ qui divise $n$ ; il finit ouvert si $n$ a un nombre impair de diviseurs. Les diviseurs vont par paires $(d, \\frac{n}{d})$, distinctes sauf si $d = \\frac{n}{d}$, c'est-à-dire $n = d^2$. Seuls les carrés ont donc un nombre impair de diviseurs : 1, 4, 9, …, 100, soit 10 casiers.",
       "retenir": "Un entier $n \\geq 1$ a un nombre impair de diviseurs positifs si et seulement si c'est un carré parfait.",
+      "maxime": {
+       "id": "marc-aurele-pensees-5-20",
+       "texte": "L'intelligence retourne et fait servir à son but tout obstacle à son action : ce qui retenait l'ouvrage le fait avancer, ce qui barrait la route fait avancer sur la route.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, V, 20"
+      },
       "id": "c3r3-h0",
       "figure": "double"
      }
@@ -2629,9 +3003,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Cléanthe d'Assos (vers 330 – vers 230 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Rien ne se fait sans toi, ô dieu, ni sur la terre, ni dans la voûte divine de l'éther, ni sur la mer, sinon ce que font les méchants dans leur folie. Mais toi, tu sais rendre pair ce qui est impair, ordonner ce qui est sans ordre, et ce qui ne t'est pas cher t'est cher. Car tu as ainsi ajusté ensemble, en un tout, les biens avec les maux, de sorte qu'il naît de toutes choses une raison unique, éternelle.",
+      "source": "Cléanthe, Hymne à Zeus, v. 15-21, conservé par Stobée, Choix de textes, I, 1, 12 (trad. adaptée)",
+      "glose": "Cléanthe chante un dieu qui ajuste ensemble ce qui semblait discordant, d'où naît une raison unique ; chez les géomètres grecs, ce mot, logos, désigne aussi le rapport de deux grandeurs. Deux entiers ont une plus grande commune mesure, leur PGCD : l'algorithme d'Euclide la trouve en remplaçant $(a\\,;b)$ par $(b\\,;r)$ jusqu'au reste nul. Leurs multiples, eux, se rejoignent pour la première fois au PPCM."
      }
     ],
     "steles": [
@@ -2664,7 +3040,14 @@ var CHAPITRES = [
         "retenir": "Pour un PGCD qui dépend de $n$ : éliminer $n$ par une combinaison, puis vérifier sur un exemple que la valeur maximale est atteinte.",
         "id": "c3r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "lucrece-1-1114",
+       "texte": "Avec un léger effort, tu connaîtras cela : une chose éclairera l'autre, la nuit aveugle ne te barrera pas la route jusqu'au fond de la nature ; les choses allumeront la lumière pour les choses.",
+       "auteur": "Lucrèce",
+       "ref": "De la nature, I, 1114-1117",
+       "note": "Derniers vers du livre I."
+      }
      },
      {
       "exercices": [
@@ -2696,7 +3079,14 @@ var CHAPITRES = [
         "retenir": "Si $\\mathrm{PGCD}(a\\,;b) = d$, alors $a = da'$ et $b = db'$ avec $\\mathrm{PGCD}(a'\\,;b') = 1$ : c'est le premier réflexe dans un problème de PGCD.",
         "id": "c3r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-sv-14",
+       "texte": "Nous ne naissons qu'une fois […]. Toi qui n'es pas maître du lendemain, tu remets à plus tard le moment favorable ; mais la vie se perd à attendre, et chacun de nous meurt affairé.",
+       "auteur": "Épicure",
+       "ref": "Sentences vaticanes, 14",
+       "note": "Recueil anonyme de sentences épicuriennes (manuscrit du Vatican) : l'attribution à Épicure lui-même n'est pas certaine. Le mot « maître » est un ajout des éditeurs."
+      }
      }
     ],
     "bonus": [
@@ -2741,7 +3131,14 @@ var CHAPITRES = [
         "retenir": "Le PGCD de deux entiers divise leur différence : $\\mathrm{PGCD}(a\\,;b) = \\mathrm{PGCD}(a\\,;b - a)$.",
         "id": "c3r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "laplace-essai-efforts",
+       "texte": "Tous ses efforts dans la recherche de la vérité tendent à le rapprocher sans cesse de l'intelligence que nous venons de concevoir, mais dont il restera toujours infiniment éloigné.",
+       "auteur": "Laplace",
+       "ref": "Essai philosophique sur les probabilités, « De la probabilité »",
+       "note": "« Ses », « le » : l'esprit humain. « L'intelligence » : celle qui, connaissant toutes les forces de la nature, verrait l'avenir comme le passé."
+      }
      }
     ]
    },
@@ -2768,9 +3165,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Proclus (412 – 485)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Euclide n'est pas beaucoup plus jeune que ceux-là. Il rassembla les Éléments : il mit en ordre beaucoup de théorèmes d'Eudoxe, acheva beaucoup de ceux de Théétète, et ramena à des démonstrations irréfutables ce que ses prédécesseurs n'avaient démontré que de façon trop lâche. Il vécut au temps du premier Ptolémée. […] On raconte que Ptolémée lui demanda un jour s'il existait, pour la géométrie, un chemin plus court que les Éléments ; il répondit qu'il n'y a pas de route royale vers la géométrie.",
+      "source": "Proclus, Commentaire sur le premier livre des Éléments d'Euclide, prologue, p. 68 (éd. Friedlein) ; la réplique d'Euclide est une tradition qu'il rapporte (trad. adaptée)",
+      "glose": "Selon Proclus, Euclide a donné des démonstrations irréfutables à ce que d'autres n'avaient prouvé que de façon lâche. Fais de même avec la preuve par neuf : fonde-la sur une démonstration (un entier et la somme de ses chiffres ont le même reste par 9), et tu sauras exactement ce qu'elle garantit et ce qu'elle ne garantit pas. Quant à la route royale, il n'y en a pas : les cinq questions de la Chimère se prennent une à une."
      }
     ],
     "steles": [
@@ -2836,7 +3235,13 @@ var CHAPITRES = [
       ],
       "boss": "La Chimère de Lycie",
       "monstre": "chimere",
-      "contexte": "D'après CAPES Mayotte 2022. Tout entier naturel $A$ s'écrit en base dix $A = a_0 + 10\\,a_1 + 10^2 a_2 + \\dots + 10^n a_n$, où $a_0, a_1, \\dots, a_n$ sont ses chiffres. On note $s(A) = a_0 + a_1 + \\dots + a_n$ la somme de ses chiffres et $r(A)$ le reste de la division euclidienne de $A$ par 9. La « preuve par neuf » d'une multiplication $A \\times B = C$ consiste à comparer $r(C)$ et $r\\big(r(A) \\times r(B)\\big)$."
+      "contexte": "D'après CAPES Mayotte 2022. Tout entier naturel $A$ s'écrit en base dix $A = a_0 + 10\\,a_1 + 10^2 a_2 + \\dots + 10^n a_n$, où $a_0, a_1, \\dots, a_n$ sont ses chiffres. On note $s(A) = a_0 + a_1 + \\dots + a_n$ la somme de ses chiffres et $r(A)$ le reste de la division euclidienne de $A$ par 9. La « preuve par neuf » d'une multiplication $A \\times B = C$ consiste à comparer $r(C)$ et $r\\big(r(A) \\times r(B)\\big)$.",
+      "maxime": {
+       "id": "seneque-providence-2-4",
+       "texte": "Sans adversaire, la vertu s'engourdit : on ne voit sa grandeur et sa force que lorsque l'endurance montre ce qu'elle peut.",
+       "auteur": "Sénèque",
+       "ref": "De la providence, 2, 4"
+      }
      }
     ],
     "bonus": [
@@ -2881,7 +3286,14 @@ var CHAPITRES = [
         "retenir": "$A$ et ses deux derniers chiffres diffèrent d'un multiple de 100, donc de 4 et de 25 : d'où les critères de divisibilité par 4 et par 25.",
         "id": "c3b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "kant-lumieres-sapere-aude",
+       "texte": "Sapere aude ! Aie le courage de te servir de ton propre entendement ! Voilà donc la devise des Lumières.",
+       "auteur": "Kant",
+       "ref": "Réponse à la question : Qu'est-ce que les Lumières ? (1784), premier paragraphe (AA VIII, 35)",
+       "note": "« Sapere aude » (« ose savoir ») vient d'Horace, Épîtres, I, 2, 40."
+      }
      }
     ]
    }
@@ -2911,9 +3323,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Boèce (vers 480 – 524)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ses vêtements étaient faits de fils très fins, d'un art subtil, dans une matière indestructible ; elle les avait, comme je l'appris ensuite de sa bouche, tissés de ses propres mains. Une sorte de brume, celle d'un long abandon, en avait voilé l'éclat, comme il arrive aux portraits noircis par la fumée. Sur la bordure du bas, on lisait, tissé, un Π grec, et tout en haut un Θ. Et entre les deux lettres on voyait marqués, à la façon d'une échelle, des degrés par lesquels on pouvait monter de la lettre d'en bas à celle d'en haut.",
+      "source": "Boèce, Consolation de Philosophie, I, prose 1, 3-4 (trad. adaptée)",
+      "glose": "Sur la robe de Philosophie, des degrés mènent de Π à Θ : selon la lecture habituelle, de la pratique à la théorie. Ce sanctuaire te fait monter d'un degré avec des problèmes plus exigeants, puis redescendre vers la classe : un futur professeur doit savoir dire pourquoi la rédaction d'un élève est fausse, et choisir le contre-exemple qui convainc."
      }
     ],
     "steles": [
@@ -2946,7 +3360,13 @@ var CHAPITRES = [
         "retenir": "Les nombres parfaits pairs sont exactement les $2^k(2^{k+1} - 1)$ avec $2^{k+1} - 1$ premier (Euclide, puis Euler pour la réciproque).",
         "id": "c3s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-physique-184a",
+       "texte": "Le chemin naturel va de ce qui est plus connaissable et plus clair pour nous vers ce qui est plus clair et plus connaissable par nature.",
+       "auteur": "Aristote",
+       "ref": "Physique, I, 1, 184a16-18"
+      }
      },
      {
       "exercices": [
@@ -2978,7 +3398,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c3s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-entretiens-1-2-37",
+       "texte": "Je ne serai pas Milon, et pourtant je ne néglige pas mon corps ; ni Crésus, et pourtant je ne néglige pas mes biens. On n'abandonne aucun soin par désespoir d'atteindre les sommets.",
+       "auteur": "Épictète",
+       "ref": "Entretiens, I, 2, 37",
+       "note": "Milon de Crotone, athlète légendaire ; Crésus, roi proverbialement riche."
+      }
      },
      {
       "exercices": [
@@ -3027,7 +3454,13 @@ var CHAPITRES = [
         "retenir": "Le nombre de diviseurs se calcule sur la décomposition en facteurs premiers du produit, jamais en multipliant à l'aveugle.",
         "id": "c3s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "democrite-b242",
+       "texte": "Plus nombreux sont ceux qui deviennent bons par l'exercice que par la nature.",
+       "auteur": "Démocrite",
+       "ref": "Fragment B 242 DK (Stobée, Anthologie, III, 29, 66)"
+      }
      }
     ],
     "bonus": [
@@ -3072,7 +3505,14 @@ var CHAPITRES = [
         "retenir": "Pour nier « il existe une infinité de… », il faut une preuve générale (ici par les restes) : un exemple ne suffit pas.",
         "id": "c3s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "heraclite-b18",
+       "texte": "Qui n'espère pas ne trouvera pas l'inespéré : il est inexplorable et sans chemin.",
+       "auteur": "Héraclite",
+       "ref": "Fragment B 18 DK (Clément d'Alexandrie, Stromates, II, 17, 4)",
+       "note": "Clément, qui cite la phrase, y voit une paraphrase du mot d'Isaïe (7, 9) : « si vous ne croyez pas, vous ne comprendrez pas »."
+      }
      }
     ]
    }
@@ -3107,9 +3547,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Zénon d'Élée (vers 490 – vers 430 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Les raisonnements de Zénon sur le mouvement qui embarrassent ceux qui veulent les résoudre sont au nombre de quatre. […] Le deuxième est celui qu'on appelle l'Achille : le plus lent, à la course, ne sera jamais rattrapé par le plus rapide ; car il faut d'abord que le poursuivant arrive au point d'où le fuyard est parti, de sorte que le plus lent a toujours nécessairement quelque avance. […] Mais prétendre que celui qui a de l'avance n'est pas rattrapé, c'est faux : tant qu'il a de l'avance, il n'est pas rattrapé ; et pourtant il est rattrapé, si l'on accorde qu'on peut parcourir une distance finie.",
+      "source": "Rapporté par Aristote, Physique, VI, 9, 239b9-18 et 239b26-29 ; la dernière phrase est la réponse d'Aristote (trad. adaptée)",
+      "glose": "Découpe la course à la manière de Zénon : Achille court jusqu'au point de départ de la tortue, puis jusqu'à sa nouvelle position, et ainsi de suite. Ces étapes sont en nombre infini, mais leur durée totale est finie : Achille rejoint bien la tortue. Compter seconde après seconde, c'est au contraire suivre deux suites arithmétiques, une par coureur, et les comparer rang par rang."
      }
     ],
     "steles": [
@@ -3142,7 +3584,14 @@ var CHAPITRES = [
         "retenir": "Il y a $q - p + 1$ entiers de $p$ à $q$ inclus : le « $+1$ » des piquets et des intervalles.",
         "id": "c4r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "lucrece-1-402",
+       "texte": "Ces petites traces suffisent à un esprit sagace : par elles, tu pourras connaître le reste par toi-même.",
+       "auteur": "Lucrèce",
+       "ref": "De la nature, I, 402-403",
+       "note": "Lucrèce vient de donner ses preuves du vide. Il ajoute : comme le chien sur une piste sûre, « tu pourras, d'une chose à l'autre, voir par toi-même » le reste."
+      }
      },
      {
       "exercices": [
@@ -3180,7 +3629,14 @@ var CHAPITRES = [
         "retenir": "Une boucle « while » s'arrête au premier rang où sa condition devient fausse : le programme affiche ce rang, le plus petit qui convient.",
         "id": "c4r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "descartes-discours-1-lentement",
+       "texte": "Ceux qui ne marchent que fort lentement peuvent avancer beaucoup davantage, s'ils suivent toujours le droit chemin, que ne font ceux qui courent, et qui s'en éloignent.",
+       "auteur": "Descartes",
+       "ref": "Discours de la méthode, première partie (AT VI, 2)",
+       "note": "Un peu plus haut : « ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'appliquer bien »."
+      }
      }
     ],
     "bonus": [
@@ -3225,7 +3681,14 @@ var CHAPITRES = [
         "retenir": "Les termes de rang pair d'une suite arithmétique de raison $r$ forment une suite arithmétique de raison $2r$.",
         "id": "c4r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-academiques-2-7",
+       "texte": "Nos discussions n'ont d'autre but que de faire jaillir et comme d'extraire, en parlant et en écoutant pour et contre, quelque chose qui soit vrai ou qui s'en approche le plus possible.",
+       "auteur": "Cicéron",
+       "ref": "Académiques, II (Lucullus), 7",
+       "note": "Cicéron parle en son nom dans le prologue du dialogue et défend la méthode de la Nouvelle Académie : examiner chaque question des deux côtés."
+      }
      }
     ]
    },
@@ -3252,9 +3715,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Héraclite d'Éphèse (vers 540 – vers 480 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "« Héraclite dit quelque part que tout s'en va et que rien ne demeure ; comparant les êtres au courant d'un fleuve, il dit qu'on ne saurait entrer deux fois dans le même fleuve. » (Platon) « Sur ceux qui entrent dans les mêmes fleuves affluent d'autres eaux, et d'autres encore. » (Héraclite)",
+      "source": "Platon, Cratyle, 402a ; puis Héraclite, fr. B 12 DK, rapporté par Arius Didyme chez Eusèbe, Préparation évangélique, XV, 20, 2 (trad. adaptée)",
+      "glose": "Dans le fragment d'Héraclite, les fleuves sont « les mêmes », mais les eaux qui y affluent sont toujours autres. Une suite est ainsi faite : chaque terme est nouveau, la loi qui mène au suivant demeure. Dans une suite géométrique, cette loi est « multiplier par $q$ » : c'est elle qu'il faut reconnaître, $u_{n+1} = q\\,u_n$, sous les termes qui passent."
      }
     ],
     "steles": [
@@ -3288,7 +3753,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c4r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-memoire-451a",
+       "texte": "Les exercices conservent la mémoire en ravivant sans cesse le souvenir ; ce n'est rien d'autre que considérer souvent ce qu'on se représente comme une image, et non en lui-même.",
+       "auteur": "Aristote",
+       "ref": "De la mémoire et de la réminiscence, 1, 451a12-14",
+       "note": "« Comme une image » : comme la copie d'une chose passée. Dernière phrase de l'exposé sur la mémoire (ch. 1)."
+      }
      },
      {
       "exercices": [
@@ -3321,7 +3793,14 @@ var CHAPITRES = [
         "retenir": "Algorithme de seuil : $n$ compte les tours de boucle ; à la sortie, $n$ est le premier rang où la condition du « while » est fausse.",
         "id": "c4r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-71-3",
+       "texte": "Nos projets s'égarent parce qu'ils n'ont rien vers quoi se diriger : pour qui ne sait pas quel port il cherche, aucun vent n'est favorable.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 71, 3",
+       "note": "En latin : « Ignoranti quem portum petat nullus suus ventus est. »"
+      }
      }
     ],
     "bonus": [
@@ -3366,14 +3845,21 @@ var CHAPITRES = [
         "retenir": "Les écarts d'une suite géométrique de raison $q$ forment une suite géométrique de même raison $q$.",
         "id": "c4r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "spinoza-ethique-5-23-demonstrations",
+       "texte": "Les yeux de l'esprit, par lesquels il voit et observe les choses, sont les démonstrations elles-mêmes.",
+       "auteur": "Spinoza",
+       "ref": "Éthique, V, proposition 23, scolie",
+       "note": "En latin : « Mentis enim oculi, quibus res videt observatque, sunt ipsae demonstrationes. »"
+      }
      }
     ]
    },
    {
     "nom": "Les atomes de Démocrite",
     "fond": "temple",
-    "athena": "Pour savoir si une suite monte ou descend, étudie le signe de $u_{n+1} - u_n$ ; si ses termes sont positifs, tu peux aussi comparer $\\frac{u_{n+1}}{u_n}$ à 1.",
+    "athena": "Pour savoir si une suite monte ou descend, étudie le signe de $u_{n+1} - u_n$ ; si ses termes sont strictement positifs, tu peux aussi comparer $\\frac{u_{n+1}}{u_n}$ à 1.",
     "notion": "Sens de variation d'une suite",
     "plan": [
      "############################",
@@ -3393,9 +3879,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Démocrite d'Abdère (vers 460 – vers 370 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ceux qui ignorent un art, quel qu'il soit, ou qui y sont encore imparfaits, sentent la fatigue dans leurs entreprises, faute d'expérience et parce que l'ouvrage ne leur est pas encore familier. Mais ceux qui progressent, et plus encore ceux qui sont accomplis, réussissent sans peine ce qu'ils poursuivent et s'en réjouissent : ils aimeraient mieux mener à son terme leur travail habituel que posséder tous les biens des hommes. Démocrite lui-même, dit-on, déclarait qu'il aimerait mieux trouver une seule explication par les causes que devenir roi des Perses.",
+      "source": "Denys d'Alexandrie, Sur la nature, cité par Eusèbe, Préparation évangélique, XIV, 27, 3-4, qui rapporte le mot de Démocrite (fr. B 118 DK) (trad. adaptée)",
+      "glose": "Selon le mot que rapporte Denys, Démocrite aimait mieux trouver une seule explication par les causes que devenir roi des Perses. Pour le sens de variation d'une suite, l'explication tient au signe de $u_{n+1} - u_n$, établi pour tout $n$ : quelques termes qui montent ne prouvent rien. Ce calcul, pénible aux premiers essais, devient familier à force de pratique, comme tout art."
      }
     ],
     "steles": [
@@ -3434,7 +3922,13 @@ var CHAPITRES = [
         "retenir": "Suite à termes strictement positifs : $u_{n+1} \\geqslant u_n$ si et seulement si $\\frac{u_{n+1}}{u_n} \\geqslant 1$. Le quotient est plus commode avec des puissances ou des factorielles.",
         "id": "c4r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-5-9",
+       "texte": "Ne te dégoûte pas, ne renonce pas, ne perds pas courage si tu ne parviens pas à toujours agir selon de justes principes ; mais, repoussé, reviens-y.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, V, 9"
+      }
      }
     ],
     "bonus": [
@@ -3479,7 +3973,14 @@ var CHAPITRES = [
         "retenir": "Une suite géométrique de raison $q$ entre 0 et 1 se rapproche de 0 : elle décroît si $u_0 > 0$, elle croît si $u_0 < 0$.",
         "id": "c4r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "sextus-hypotyposes-1-1",
+       "texte": "Quand on cherche quelque chose, il est naturel d'aboutir soit à la découverte, soit à la négation de la découverte […], soit à la persévérance dans la recherche. […] Les sceptiques, eux, cherchent encore.",
+       "auteur": "Sextus Empiricus",
+       "ref": "Esquisses pyrrhoniennes, I, 1-3",
+       "note": "Sextus range parmi ceux qui croient avoir trouvé Aristote, Épicure et les stoïciens ; parmi ceux qui déclarent la chose insaisissable, les académiciens."
+      }
      }
     ],
     "acrobaties": [
@@ -3496,6 +3997,13 @@ var CHAPITRES = [
       "indice": "Calcule quelques termes avec $u_0 = 2$, puis avec $u_0 = 8$.",
       "explication": "Avec $u_0 = 2$ : $u_1 = 4$, $u_2 = 5$, $u_3 = 5{,}5$. La conclusion est vraie : $v_n = u_n - 6$ définit une suite géométrique de raison $\\frac{1}{2}$, d'où $u_n = 6 - 4 \\times 0{,}5^n$ et $u_{n+1} - u_n = 2 \\times 0{,}5^n > 0$. Mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, on obtient $8, 7, 6{,}5, \\dots$, qui décroît. Pour une suite définie par récurrence, $u_{n+1} = f(u_n)$ avec $f$ croissante, le sens de variation se lit en comparant $u_0$ et $u_1$ ; ce résultat général se démontre par un raisonnement par récurrence, vu en Terminale.",
       "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas, à lui seul, le sens de variation : il faut aussi comparer $u_0$ et $u_1$.",
+      "maxime": {
+       "id": "platon-menon-98a",
+       "texte": "Les opinions vraies ne consentent pas à rester longtemps : elles s'enfuient de l'âme ; aussi valent-elles peu, tant qu'on ne les a pas liées par un raisonnement qui en donne la cause.",
+       "auteur": "Platon",
+       "ref": "Ménon, 97e-98a",
+       "note": "Socrate compare les opinions vraies aux statues de Dédale, qui s'enfuient si on ne les attache pas."
+      },
       "id": "c4r3-h0",
       "figure": "salto"
      }
@@ -3524,9 +4032,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Marc Aurèle (121 – 180)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ne te laisse pas troubler par la représentation de ta vie entière. N'embrasse pas en pensée les peines, de quelle sorte et en quel nombre, qui vont vraisemblablement survenir ; mais, à propos de chacune des choses présentes, demande-toi : qu'y a-t-il, dans cette tâche, d'insupportable et d'intenable ? Tu rougiras de l'avouer. Rappelle-toi ensuite que ce n'est ni l'avenir ni le passé qui te pèse, mais toujours le présent ; et le présent se réduit à peu de chose si tu le circonscris, lui seul, et si tu fais honte à ta pensée de ne pouvoir tenir bon contre cette seule chose, toute nue.",
+      "source": "Marc Aurèle, Pensées (À soi-même), VIII, 36 (trad. adaptée)",
+      "glose": "Marc Aurèle décompose le poids d'une vie en tâches présentes, dont chacune, prise seule, se laisse porter. Devant $1 + 2 + \\cdots + n$, fais de même : ne contemple pas la somme d'un bloc ; compte ses termes, puis associe le premier au dernier, le deuxième à l'avant-dernier, et remarque que chaque paire a la même valeur."
      }
     ],
     "steles": [
@@ -3559,7 +4069,14 @@ var CHAPITRES = [
         "retenir": "Un seuil sur une somme $\\frac{n(n+1)}{2}$ mène à une inéquation du second degré ; on conclut en testant deux entiers consécutifs.",
         "id": "c4r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-theetete-155d",
+       "texte": "C'est tout à fait le propre du philosophe, ce sentiment : s'étonner. La philosophie n'a pas d'autre commencement.",
+       "auteur": "Platon",
+       "ref": "Théétète, 155d",
+       "note": "Socrate répond au jeune mathématicien Théétète, qui avoue avoir le vertige devant ces questions."
+      }
      },
      {
       "exercices": [
@@ -3592,7 +4109,14 @@ var CHAPITRES = [
         "retenir": "Des versements réguliers capitalisés conduisent à une somme géométrique : repérer avec soin le premier et le dernier exposant.",
         "id": "c4r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plotin-enneades-1-6-9",
+       "texte": "Fais comme le sculpteur d'une statue qui doit devenir belle : il ôte, gratte, polit […]. Ne cesse pas de sculpter ta propre statue, jusqu'à ce que brille pour toi l'éclat divin de la vertu.",
+       "auteur": "Plotin",
+       "ref": "Ennéades, I, 6 (Du beau), 9",
+       "note": "La coupure omet notamment : « ôte, toi aussi, tout ce qui est superflu, redresse ce qui est tordu »."
+      }
      }
     ],
     "bonus": [
@@ -3637,7 +4161,14 @@ var CHAPITRES = [
         "retenir": "Linéarité : $\\sum_{k=1}^{n} (a\\,u_k + b) = a\\sum_{k=1}^{n} u_k + nb$. La constante compte autant de fois qu'il y a de termes.",
         "id": "c4r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-metaphysique-983a",
+       "texte": "Tous commencent par s'étonner que les choses soient ainsi, par exemple que la diagonale soit incommensurable ; mais, une fois instruit, rien n'étonnerait plus un géomètre que de la voir devenir commensurable.",
+       "auteur": "Aristote",
+       "ref": "Métaphysique, A, 2, 983a12-21",
+       "note": "La diagonale du carré rapportée au côté : une fois la démonstration comprise, l'étonnement change de sens."
+      }
      }
     ]
    },
@@ -3664,9 +4195,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Sénèque (vers 4 av. J.-C. – 65 apr. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Fais ainsi, mon cher Lucilius : reprends possession de toi-même ; et le temps qui jusqu'ici t'était pris, ou dérobé, ou qui t'échappait, recueille-le et garde-le. Persuade-toi qu'il en est comme je te l'écris : une part de notre temps nous est arrachée, une autre soustraite, une autre s'écoule. Mais la perte la plus honteuse est celle qui vient de la négligence. […] Fais donc, mon cher Lucilius, ce que tu m'écris que tu fais : embrasse toutes tes heures. Tu dépendras moins de demain si tu mets la main sur aujourd'hui. Pendant qu'on remet à plus tard, la vie passe en courant.",
+      "source": "Sénèque, Lettres à Lucilius, 1, 1-2 (trad. adaptée)",
+      "glose": "Sénèque voit le temps fuir de trois façons : arraché, soustrait, écoulé. Dans la baie aussi, chaque année emporte un dixième des palétuviers, et seuls les plants mis en terre font monter la suite. Une boucle de seuil fait le compte de ces années, une à une, jusqu'au premier rang où le but est atteint."
      }
     ],
     "steles": [
@@ -3727,7 +4260,14 @@ var CHAPITRES = [
       ],
       "boss": "Méduse la Gorgone",
       "monstre": "meduse",
-      "contexte": "Une association replante la mangrove d'une baie de Mayotte. En 2025, la baie compte 1 000 jeunes palétuviers. Chaque année, 10 % des palétuviers meurent et l'association en plante 400 nouveaux. On note $u_n$ le nombre de palétuviers l'année $2025 + n$ : ainsi $u_0 = 1000$ et, pour tout entier naturel $n$, $u_{n+1} = 0{,}9\\,u_n + 400$."
+      "contexte": "Une association replante la mangrove d'une baie de Mayotte. En 2025, la baie compte 1 000 jeunes palétuviers. Chaque année, 10 % des palétuviers meurent et l'association en plante 400 nouveaux. On note $u_n$ le nombre de palétuviers l'année $2025 + n$ : ainsi $u_0 = 1000$ et, pour tout entier naturel $n$, $u_{n+1} = 0{,}9\\,u_n + 400$.",
+      "maxime": {
+       "id": "musonius-aulu-gelle-16-1-2",
+       "texte": "Si tu fais quelque chose de beau avec peine, la peine passe, le beau demeure ; si tu fais quelque chose de laid avec plaisir, le plaisir passe, le laid demeure.",
+       "auteur": "Musonius Rufus",
+       "ref": "Aulu-Gelle, Nuits attiques, XVI, 1, 2",
+       "note": "Mot rapporté par Aulu-Gelle (IIe s. apr. J.-C.), qui, étudiant, l'entendait citer comme une sentence grecque du philosophe Musonius ; Caton avait dit la même chose en latin."
+      }
      }
     ],
     "bonus": [
@@ -3772,7 +4312,14 @@ var CHAPITRES = [
         "retenir": "Pour exploiter une relation vraie « pour tout $n$ », isoler $u_n$ : ici $r = (q - 1)\\,u_n$ force la suite à être constante.",
         "id": "c4b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-1-1",
+       "texte": "Parmi les choses, les unes dépendent de nous, les autres non. Dépendent de nous le jugement, l'élan, le désir, l'aversion : en un mot, tout ce qui est notre œuvre.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 1, 1",
+       "note": "Premières lignes du Manuel, où Arrien, élève d'Épictète, a résumé son enseignement."
+      }
      }
     ]
    }
@@ -3802,9 +4349,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Archytas de Tarente (vers 430 – vers 350 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ceux qui s'occupent des sciences mathématiques me semblent avoir bien discerné, et il n'est pas étonnant qu'ils pensent avec justesse ce qu'est chaque chose : car, ayant bien discerné la nature du tout, ils devaient bien voir aussi ce que sont les choses dans leurs parties. Sur la géométrie, l'arithmétique et la sphérique, ils nous ont transmis une connaissance claire, et non moins sur la musique. Car ces sciences semblent être sœurs : elles portent sur les deux formes premières de l'être, qui sont sœurs.",
+      "source": "Archytas, fr. B 1 DK (début), cité par Nicomaque de Gérase, Introduction arithmétique, I, 3, 4 (trad. adaptée)",
+      "glose": "Archytas tient l'arithmétique, la géométrie et la musique pour des sciences sœurs ; dans un autre fragment (B 2 DK), il distingue trois moyennes, dont l'arithmétique, $2b = a + c$, et la géométrique, $b^2 = ac$. Dans ce sanctuaire, les deux sortes de suites se croisent sans cesse : à toi de voir, comme lui, ce qui les apparente et ce qui les sépare."
      }
     ],
     "steles": [
@@ -3838,7 +4387,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c4s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "pyrrhon-dl-9-68",
+       "texte": "Dans une tempête, ses compagnons de traversée étant effrayés, il resta calme et leur montra un porcelet qui mangeait à bord : telle doit être, dit-il, la tranquillité du sage.",
+       "auteur": "Pyrrhon d'Élis",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, IX, 68",
+       "note": "Anecdote rapportée par Diogène Laërce d'après Posidonius (Ier s. av. J.-C.)."
+      }
      },
      {
       "exercices": [
@@ -3869,7 +4425,14 @@ var CHAPITRES = [
         "retenir": "Une suite géométrique de raison $q > 1$ et de premier terme strictement positif peut partir plus lentement, mais elle finit par dépasser une suite arithmétique.",
         "id": "c4s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-herodote-36",
+       "texte": "Même pour qui est pleinement instruit, l'essentiel de toute connaissance exacte est de pouvoir mobiliser promptement sa pensée, chaque chose étant ramenée à des éléments et à des formules simples.",
+       "auteur": "Épicure",
+       "ref": "Lettre à Hérodote, 36",
+       "note": "Épicure justifie ainsi l'abrégé qu'il envoie à Hérodote : un résumé bien su permet de retrouver tout le détail. Lettre conservée par Diogène Laërce, X, 35-83."
+      }
      },
      {
       "exercices": [
@@ -3918,7 +4481,14 @@ var CHAPITRES = [
         "retenir": "Suite arithmétique : croissance linéaire (fonction affine) ; suite géométrique : croissance exponentielle. Un lien à faire vivre du collège au lycée.",
         "id": "c4s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-republique-536e",
+       "texte": "Aucun savoir imposé de force ne demeure dans l'âme. Élève donc les enfants dans les études, non par la contrainte, mais en jouant.",
+       "auteur": "Platon",
+       "ref": "République, VII, 536e-537a",
+       "note": "Il s'agit du calcul, de la géométrie et des autres études préparatoires à la dialectique ; Socrate vient de dire qu'un homme libre ne doit rien apprendre en esclave."
+      }
      }
     ],
     "bonus": [
@@ -3963,7 +4533,14 @@ var CHAPITRES = [
         "retenir": "Pour une équivalence, démontrer les deux sens ; ici, la disjonction des cas pair et impair fait tout le travail.",
         "id": "c4s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "democrite-b117",
+       "texte": "En réalité, nous ne savons rien : car la vérité est au fond de l'abîme.",
+       "auteur": "Démocrite",
+       "ref": "fr. B 117 DK (cité par Diogène Laërce, IX, 72)",
+       "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme."
+      }
      }
     ]
    }
@@ -3998,9 +4575,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Épictète (vers 50 – vers 135)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Rien de grand ne naît tout d'un coup, pas même la grappe de raisin ni la figue. Si tu me dis maintenant : « Je veux une figue », je te répondrai : « Il faut du temps. » Laisse-la d'abord fleurir, puis porter son fruit, puis mûrir. Le fruit du figuier ne s'achève pas tout d'un coup ni en une heure, et le fruit de l'esprit d'un homme, tu voudrais l'acquérir en si peu de temps et si facilement ? N'y compte pas, même si c'est moi qui te le dis.",
+      "source": "Épictète, Entretiens (leçons notées par Arrien), I, 15, 7-8 (trad. adaptée)",
+      "glose": "Épictète refuse la figue « tout d'un coup » : une croissance se mesure sur une durée. C'est ce que fait le taux d'accroissement, variation de $f$ divisée par l'écart $h$. Le nombre dérivé, vitesse de variation en un seul point, n'est que la limite de ces taux quand $h$ tend vers 0 : tu n'y accèdes qu'en passant par eux."
      }
     ],
     "steles": [
@@ -4033,7 +4612,13 @@ var CHAPITRES = [
         "retenir": "Pour obtenir un nombre dérivé, il suffit d'encadrer le taux d'accroissement : si $|\\tau(h) - \\ell| \\leq |h|$, alors $\\tau(h)$ tend vers $\\ell$.",
         "id": "c5r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-5-1",
+       "texte": "À l'aube, quand tu as peine à te lever, aie cette pensée sous la main : je m'éveille pour faire œuvre d'homme.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, V, 1"
+      }
      },
      {
       "exercices": [
@@ -4071,7 +4656,14 @@ var CHAPITRES = [
         "retenir": "Raccord sans « angle » en un point : les taux d'accroissement à gauche et à droite doivent avoir la même limite finie, ce qui raccorde les valeurs, puis les pentes.",
         "id": "c5r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "lucrece-1-146",
+       "texte": "Cette terreur de l'esprit et ces ténèbres, ce ne sont pas les rayons du soleil ni les traits lumineux du jour qui doivent les dissiper, mais la vue de la nature et son explication.",
+       "auteur": "Lucrèce",
+       "ref": "De la nature, I, 146-148",
+       "note": "Ces trois vers reviennent comme un refrain en II, 59-61, en III, 91-93 et en VI, 39-41."
+      }
      }
     ],
     "bonus": [
@@ -4116,7 +4708,14 @@ var CHAPITRES = [
         "retenir": "En un point où un facteur n'est pas dérivable, les formules ne concluent rien : on revient au taux d'accroissement.",
         "id": "c5r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-apologie-38a",
+       "texte": "Le plus grand bien pour un homme est de s'entretenir chaque jour de la vertu […] ; une vie sans examen ne vaut pas d'être vécue.",
+       "auteur": "Platon",
+       "ref": "Apologie de Socrate, 38a",
+       "note": "Socrate à ses juges, après le verdict, pour dire pourquoi il ne peut pas se taire."
+      }
      }
     ]
    },
@@ -4143,9 +4742,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Plotin (205 – 270)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Le temps dirait de lui-même à peu près ceci : avant d'avoir engendré cet « avant » et d'avoir eu besoin de l'« après », il reposait avec l'éternité dans l'être ; il n'était pas le temps, mais là, lui aussi se tenait en repos. Mais une nature remuante, qui voulait se gouverner et être à elle-même, et qui choisit de chercher plus que le présent, se mit en mouvement, et le temps avec elle. Nous, toujours en mouvement vers l'« ensuite » et l'« après », vers l'autre et non le même, puis vers un autre encore, avons fait un long chemin et fabriqué le temps, image de l'éternité.",
+      "source": "Plotin, Ennéades, III, 7 (« De l'éternité et du temps »), 11 (trad. adaptée)",
+      "glose": "Chez Plotin, le temps naît quand l'âme, « remuante », veut « plus que le présent » et se tourne vers l'« après ». La tangente répond au même besoin : au point $(a\\,;f(a))$, la seule position ne dit rien du mouvement ; la pente $f'(a)$ donne la direction où la courbe s'en va. Pour tracer une tangente, il te faut toujours ces deux nombres."
      }
     ],
     "steles": [
@@ -4179,7 +4780,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c5r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "proclus-euclide-84",
+       "texte": "« Une figure et une marche, non une figure et trois oboles » : la géométrie digne d'étude est celle qui, à chaque théorème nouveau, dresse une marche pour monter et élève l'âme.",
+       "auteur": "Proclus",
+       "ref": "Commentaire sur le premier livre des Éléments d'Euclide, prologue II, p. 84 Friedlein",
+       "note": "Devise des pythagoriciens, rapportée et commentée par Proclus (Ve siècle apr. J.-C.)."
+      }
      },
      {
       "exercices": [
@@ -4210,7 +4818,14 @@ var CHAPITRES = [
         "retenir": "Dans un repère orthonormé, deux droites de coefficients directeurs $m$ et $m'$ sont perpendiculaires si et seulement si $mm' = -1$.",
         "id": "c5r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-protreptique-jamblique-6",
+       "texte": "Pour philosopher, on n'a besoin ni d'instruments ni de lieux : où que l'on applique sa pensée sur la terre habitée, on touche partout la vérité, comme si elle était présente.",
+       "auteur": "Aristote (attribué)",
+       "ref": "Protreptique, fragment (Jamblique, Protreptique, 6)",
+       "note": "Transmis sans nom d'auteur par Jamblique (vers 300 apr. J.-C.) ; attribué à Aristote par les éditeurs modernes. « Toucher » se dit en latin tangere, d'où « tangente »."
+      }
      }
     ],
     "bonus": [
@@ -4255,7 +4870,14 @@ var CHAPITRES = [
         "retenir": "Pour nier « il existe », on démontre un « pour tout » : ici, deux abscisses distinctes donnent toujours deux pentes distinctes.",
         "id": "c5r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-brevete-14-2",
+       "texte": "Il nous est permis de discuter avec Socrate, de douter avec Carnéade, de nous reposer avec Épicure, de vaincre la nature humaine avec les stoïciens.",
+       "auteur": "Sénèque",
+       "ref": "De la brièveté de la vie, 14, 2",
+       "note": "Carnéade (IIe siècle av. J.-C.), de la Nouvelle Académie, savait plaider le pour et le contre d'une même thèse."
+      }
      }
     ]
    },
@@ -4282,9 +4904,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "René Descartes (1596 – 1650)",
+      "portrait": "perruque",
+      "texte": "Le premier était de ne recevoir jamais aucune chose pour vraie que je ne la connusse évidemment être telle […]. Le second, de diviser chacune des difficultés que j'examinerais en autant de parcelles qu'il se pourrait, et qu'il serait requis pour les mieux résoudre. Le troisième, de conduire par ordre mes pensées, en commençant par les objets les plus simples et les plus aisés à connaître, pour monter peu à peu, comme par degrés, jusques à la connaissance des plus composés […]. Et le dernier, de faire partout des dénombrements si entiers et des revues si générales, que je fusse assuré de ne rien omettre.",
+      "source": "Descartes, Discours de la méthode (1637), IIe partie (orthographe modernisée)",
+      "glose": "Dériver une expression compliquée, c'est appliquer le deuxième et le troisième précepte : la diviser en sommes, produits, quotients et formes $g(ax + b)$, puis remonter des dérivées usuelles jusqu'à la fonction entière. Le dernier précepte, celui des dénombrements, c'est ta relecture : n'oublie aucun terme, ni le facteur $a$ de $g(ax + b)$."
      }
     ],
     "steles": [
@@ -4317,7 +4941,14 @@ var CHAPITRES = [
         "retenir": "Si $f(x) = (x - a)g(x)$ avec $g$ dérivable, alors $f'(a) = g(a)$.",
         "id": "c5r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "kant-krv-a133-jugement",
+       "texte": "L'entendement peut être instruit et équipé de règles, mais le jugement est un talent particulier, qui ne veut pas être enseigné, mais seulement exercé.",
+       "auteur": "Kant",
+       "ref": "Critique de la raison pure, A 133 / B 172",
+       "note": "Kant ajoute (A 134 / B 173) : « Telle est la seule et grande utilité des exemples : ils aiguisent le jugement »."
+      }
      },
      {
       "exercices": [
@@ -4348,7 +4979,14 @@ var CHAPITRES = [
         "retenir": "Tangente horizontale au point d'abscisse $x_0$ $\\iff$ $f'(x_0) = 0$ ; avec un paramètre, cette condition devient une équation.",
         "id": "c5r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "weil-etudes-exercice-manque",
+       "texte": "S'astreindre rigoureusement à regarder en face, à contempler avec attention, pendant longtemps, chaque exercice scolaire manqué, dans toute la laideur de sa médiocrité.",
+       "auteur": "Simone Weil",
+       "ref": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu (1942)",
+       "note": "La phrase continue : « sans se chercher aucune excuse, […] et en essayant de remonter à l'origine de chaque faute »."
+      }
      }
     ],
     "bonus": [
@@ -4393,7 +5031,13 @@ var CHAPITRES = [
         "retenir": "Avant de dériver, simplifier ($\\sqrt{4x} = 2\\sqrt{x}$) ; et contrôler un résultat par une seconde méthode.",
         "id": "c5r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-entretiens-2-17-1",
+       "texte": "Quelle est la première tâche de qui philosophe ? Se défaire de la présomption : car il est impossible de commencer à apprendre ce que l'on croit savoir.",
+       "auteur": "Épictète",
+       "ref": "Entretiens, II, 17, 1"
+      }
      }
     ],
     "acrobaties": [
@@ -4404,6 +5048,13 @@ var CHAPITRES = [
       "indice": "Écris 32 comme une puissance de 2, et relis la définition du nombre dérivé.",
       "explication": "Comme $32 = 2^5$, le quotient s'écrit $\\frac{f(x) - f(2)}{x - 2}$ avec $f(x) = x^5$ : c'est le taux d'accroissement de $f$ entre 2 et $x$. Puisque $f$ est dérivable en 2, sa limite est $f'(2) = 5 \\times 2^4 = 80$. La factorisation $x^5 - 32 = (x - 2)(x^4 + 2x^3 + 4x^2 + 8x + 16)$ donne le même résultat, plus laborieusement.",
       "retenir": "Une limite de la forme $\\frac{f(x) - f(a)}{x - a}$ quand $x$ tend vers $a$ est un nombre dérivé : reconnaître le taux d'accroissement dispense du calcul.",
+      "maxime": {
+       "id": "aristote-analytiques-71a",
+       "texte": "Tout enseignement et tout apprentissage intellectuel viennent d'une connaissance préexistante : c'est manifestement ainsi que s'acquièrent les sciences mathématiques, et chacun des autres arts.",
+       "auteur": "Aristote",
+       "ref": "Seconds Analytiques, I, 1, 71a1-4",
+       "note": "Première phrase du traité."
+      },
       "id": "c5r3-h0",
       "figure": "double"
      }
@@ -4432,9 +5083,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Gottfried Wilhelm Leibniz (1646 – 1716)",
+      "portrait": "perruque",
+      "texte": "On comprend par là, de façon admirable, comment, dans l'origine même des choses, s'exerce une sorte de mathématique divine ou de mécanisme métaphysique, et comment la détermination du maximum y a lieu. Ainsi, en géométrie, parmi tous les angles, c'est l'angle droit qui est déterminé ; ainsi les liquides placés parmi des corps d'une autre nature prennent la figure la plus capace, c'est-à-dire la sphère ; mais surtout, dans la mécanique ordinaire elle-même, quand plusieurs corps pesants luttent entre eux, il en résulte enfin le mouvement par lequel se fait, au total, la plus grande descente.",
+      "source": "Leibniz, De l'origine radicale des choses (1697), éd. Gerhardt, Philosophische Schriften, t. VII, p. 304 (trad. adaptée)",
+      "glose": "Leibniz lit l'origine même des choses comme un problème de maximum. Son premier mémoire publié sur le calcul différentiel (1684) a d'ailleurs pour titre « Nouvelle méthode pour les maximums et les minimums, ainsi que pour les tangentes… ». La méthode de cette salle en découle : un extremum intérieur se cherche là où la dérivée s'annule, et se confirme par son changement de signe."
      }
     ],
     "steles": [
@@ -4467,7 +5120,14 @@ var CHAPITRES = [
         "retenir": "Sur un intervalle, une dérivée positive qui ne s'annule qu'en des points isolés donne une fonction strictement croissante (exemple : $x \\mapsto x^3$).",
         "id": "c5r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-33-11",
+       "texte": "Nos prédécesseurs en ces matières ne sont pas nos maîtres, mais nos guides. La vérité est ouverte à tous ; elle n'est pas encore occupée ; il en reste beaucoup à ceux qui viendront.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 33, 11",
+       "note": "Juste avant (33, 10) : « Qui suit un autre ne trouve rien ; bien plus, il ne cherche même pas. »"
+      }
      },
      {
       "exercices": [
@@ -4499,7 +5159,14 @@ var CHAPITRES = [
         "retenir": "Un changement de signe de $f'$ en $a$ assure un extremum local en $a$ ; une annulation sans changement de signe (racine double de $f'$) peut n'en donner aucun.",
         "id": "c5r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-menecee-135",
+       "texte": "Médite ces choses jour et nuit, en toi-même et avec qui te ressemble : jamais, ni éveillé ni en songe, tu ne seras troublé, et tu vivras comme un dieu parmi les hommes.",
+       "auteur": "Épicure",
+       "ref": "Lettre à Ménécée, 135",
+       "note": "Conclusion de la lettre, conservée par Diogène Laërce (Vies, X, 135)."
+      }
      }
     ],
     "bonus": [
@@ -4544,7 +5211,14 @@ var CHAPITRES = [
         "retenir": "Pour trouver le maximum sur $[a\\,;b]$, comparer les valeurs aux points où $f'$ s'annule ET aux bornes $a$ et $b$.",
         "id": "c5r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "parmenide-b7",
+       "texte": "Que l'habitude aux mille expériences ne te force pas, sur ce chemin, à promener un œil sans but, une oreille bourdonnante et la langue : juge par la raison l'épreuve disputée que je t'ai proposée.",
+       "auteur": "Parménide",
+       "ref": "Fragments, B 7, 3-6 DK",
+       "note": "La déesse parle au jeune homme. Vers transmis par Sextus Empiricus (Contre les mathématiciens, VII, 111 et 114) et Diogène Laërce (IX, 22)."
+      }
      }
     ]
    },
@@ -4571,9 +5245,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Cicéron (106 – 43 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "De cette même ville de Syracuse, je ferai sortir de sa poussière et de sa baguette de géomètre un humble petit homme, qui vécut bien des années plus tard : Archimède. Questeur, j'ai découvert son tombeau, que les Syracusains ignoraient au point d'en nier l'existence, enclos de toutes parts et couvert de ronces. Je savais quelques petits vers gravés, disait-on, sur son monument : ils indiquaient qu'au sommet du tombeau étaient posés une sphère et un cylindre. […] Son esprit se nourrissait à agiter et à approfondir des raisonnements, avec le plaisir de l'ingéniosité, qui est pour l'âme le plus doux des aliments.",
+      "source": "Cicéron, Tusculanes, V, 64-66 (trad. adaptée)",
+      "glose": "Sur la tombe d'Archimède, Cicéron reconnaît une sphère et un cylindre : la sphère occupe les deux tiers du volume du cylindre qui la contient. Le Minotaure renverse la figure : parmi les cylindres inscrits dans une sphère, lequel a le plus grand volume ? Affronte-le en suivant les trois temps d'Athéna, avec ce « plaisir de l'ingéniosité » dont parle Cicéron."
      }
     ],
     "steles": [
@@ -4636,7 +5312,13 @@ var CHAPITRES = [
       ],
       "boss": "Le Minotaure de Cnossos",
       "monstre": "minotaure",
-      "contexte": "Cicéron raconte avoir retrouvé à Syracuse le tombeau d'Archimède, orné d'une sphère inscrite dans un cylindre. On fait ici l'inverse : dans une boule de rayon 3 (en mètres), on inscrit un cylindre de révolution de hauteur $h$ et de rayon $r$, avec $0 < h < 6$, dont les deux cercles de base sont sur la sphère. On rappelle que le volume d'un cylindre est $\\pi r^2 h$, son aire latérale $2\\pi r h$, et que le volume d'une boule de rayon $R$ est $\\frac{4}{3}\\pi R^3$."
+      "contexte": "Cicéron raconte avoir retrouvé à Syracuse le tombeau d'Archimède, orné d'une sphère inscrite dans un cylindre. On fait ici l'inverse : dans une boule de rayon 3 (en mètres), on inscrit un cylindre de révolution de hauteur $h$ et de rayon $r$, avec $0 < h < 6$, dont les deux cercles de base sont sur la sphère. On rappelle que le volume d'un cylindre est $\\pi r^2 h$, son aire latérale $2\\pi r h$, et que le volume d'une boule de rayon $R$ est $\\frac{4}{3}\\pi R^3$.",
+      "maxime": {
+       "id": "epictete-manuel-51-2",
+       "texte": "Souviens-toi : c'est maintenant le combat, les jeux Olympiques sont déjà là, on ne peut plus différer ; d'un seul jour, d'une seule action dépend que le progrès se perde ou se sauve.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 51, 2"
+      }
      }
     ],
     "bonus": [
@@ -4681,7 +5363,14 @@ var CHAPITRES = [
         "retenir": "Pour comparer deux fonctions qui partent de la même valeur, étudier leur différence à l'aide de sa dérivée.",
         "id": "c5b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "spinoza-ethique-1-app-mathesis",
+       "texte": "Ce préjugé aurait caché à jamais la vérité aux hommes, si la mathématique, qui traite non des fins mais seulement des essences et propriétés des figures, ne leur avait montré une autre norme de vérité.",
+       "auteur": "Spinoza",
+       "ref": "Éthique, I, appendice",
+       "note": "Le préjugé : croire que les jugements des dieux dépassent de loin la compréhension humaine."
+      }
      }
     ]
    }
@@ -4711,9 +5400,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Baruch Spinoza (1632 – 1677)",
+      "portrait": "perruque",
+      "texte": "Le sage, au contraire, en tant qu'on le considère comme tel, n'est guère troublé en son âme ; conscient de lui-même, de Dieu et des choses par une certaine nécessité éternelle, il ne cesse jamais d'être, et possède toujours la vraie satisfaction de l'âme. Si la voie que j'ai montrée pour y conduire paraît très ardue, elle peut cependant être trouvée. Et certes, ce qu'on rencontre si rarement doit être ardu. Comment se pourrait-il, en effet, si le salut était à portée de main et pouvait se trouver sans grand labeur, qu'il fût négligé de presque tous ? Mais tout ce qui est remarquable est aussi difficile que rare.",
+      "source": "Spinoza, Éthique, V, proposition 42, scolie (trad. adaptée)",
+      "glose": "Ce sont les dernières lignes de l'Éthique, un livre démontré « selon l'ordre géométrique » : définitions, axiomes, propositions. Le sanctuaire est fait de ce difficile qui est aussi rare : des inégalités prouvées par l'étude d'une fonction, et des erreurs d'élèves à expliquer avec le regard d'un futur professeur."
      }
     ],
     "steles": [
@@ -4748,7 +5439,14 @@ var CHAPITRES = [
         "retenir": "Pour évaluer une expression en une racine $x_0$ d'un trinôme, utiliser l'équation vérifiée par $x_0$ pour abaisser les degrés.",
         "id": "c5s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "zenon-dl-7-2",
+       "texte": "Zénon demanda à l'oracle ce qu'il devait faire pour vivre au mieux ; le dieu répondit : prendre la couleur des morts. Il comprit, et se mit à lire les anciens.",
+       "auteur": "Zénon de Citium",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 2",
+       "note": "Anecdote rapportée par Diogène Laërce (IIIe siècle apr. J.-C.), d'après Hécaton et Apollonios de Tyr."
+      }
      },
      {
       "exercices": [
@@ -4780,7 +5478,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c5s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-metaphysique-980a",
+       "texte": "Tous les hommes désirent naturellement savoir ; en témoigne l'amour des sensations : en dehors même de leur utilité, nous les aimons pour elles-mêmes.",
+       "auteur": "Aristote",
+       "ref": "Métaphysique, A, 1, 980a21-23",
+       "note": "Première phrase de la Métaphysique."
+      }
      },
      {
       "exercices": [
@@ -4829,7 +5534,14 @@ var CHAPITRES = [
         "retenir": "Le signe de $f'$ donne les variations sur un intervalle ; un tableau de variations se découpe aux valeurs interdites.",
         "id": "c5s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "condorcet-memoire-1-instruction",
+       "texte": "Le but de l'instruction n'est pas de faire admirer aux hommes une législation toute faite, mais de les rendre capables de l'apprécier et de la corriger.",
+       "auteur": "Condorcet",
+       "ref": "Cinq mémoires sur l'instruction publique, premier mémoire (1791)",
+       "note": "Condorcet (1743-1794), mathématicien, parle ici de l'enseignement des lois et de la constitution."
+      }
      }
     ],
     "bonus": [
@@ -4874,7 +5586,14 @@ var CHAPITRES = [
         "retenir": "Une fonction impaire définie en 0 vérifie $f(0) = 0$. Une dérivée ne détermine une fonction qu'à une constante près.",
         "id": "c5s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "montaigne-3-8-queter",
+       "texte": "Nous sommes nés à quêter la vérité ; il appartient de la posséder à une plus grande puissance.",
+       "auteur": "Montaigne",
+       "ref": "Essais, III, 8 (« De l'art de conférer »)",
+       "note": "« Conférer » : discuter. Le chapitre fait l'éloge de la contradiction dans la discussion."
+      }
      }
     ]
    }
@@ -4909,9 +5628,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Lucrèce (vers 98 – vers 55 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Au fil des années, avec le retour des soleils, l'anneau s'amincit au doigt qui le porte ; la goutte qui tombe creuse la pierre ; le soc de fer recourbé de la charrue décroît en secret dans les champs. […] Nous voyons donc que ces choses diminuent, puisqu'elles s'usent ; mais quels corps s'en détachent à chaque instant, la nature jalouse nous a fermé la vue. Enfin, tout ce que le temps et la nature ajoutent peu à peu aux choses, en les forçant à croître avec mesure, aucun regard, si perçant soit-il, ne peut le voir.",
+      "source": "Lucrèce, De la nature, I, 311-314 et 319-324 (trad. adaptée)",
+      "glose": "Lucrèce ne voit pas ce qui se détache de l'anneau à chaque instant ; il le déduit de l'usure accumulée. L'exponentielle est définie de même par une loi d'instant en instant : sa vitesse de variation égale sa valeur, $f' = f$, avec $f(0) = 1$. Les propriétés que tu manies ensuite, comme $e^{a+b} = e^{a}e^{b}$ ou $e^{x} > 0$, se démontrent toutes à partir de cette loi."
      }
     ],
     "steles": [
@@ -4944,7 +5665,14 @@ var CHAPITRES = [
         "retenir": "Si $f(a+b) = f(a)f(b)$ pour tous réels $a$ et $b$, et si $f$ n'est pas la fonction nulle, alors $f(0) = 1$ et $f(-a) = \\frac{1}{f(a)}$ : c'est le comportement des puissances.",
         "id": "c6r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "montaigne-1-26-cent-visages",
+       "texte": "Que ce qu'il viendra d'apprendre, il le lui fasse mettre en cent visages et accommoder à autant de divers sujets, pour voir s'il l'a encore bien pris et bien fait sien.",
+       "auteur": "Montaigne",
+       "ref": "Essais, I, 26, « De l'institution des enfants »",
+       "note": "« Il » désigne le précepteur, « lui » l'élève. Chapitre I, 25 dans l'édition de 1595."
+      }
      },
      {
       "exercices": [
@@ -4981,7 +5709,14 @@ var CHAPITRES = [
         "retenir": "Pour tout réel $x$, $e^{x} \\times e^{-x} = 1$ : l'exponentielle ne s'annule jamais, et $e^{-x} = \\frac{1}{e^{x}}$.",
         "id": "c6r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-9-29",
+       "texte": "N'espère pas la République de Platon, mais sois content si la moindre chose avance.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, IX, 29",
+       "note": "La fin de la phrase, lue diversement selon les éditions, n'est pas traduite ici."
+      }
      }
     ],
     "bonus": [
@@ -5026,7 +5761,14 @@ var CHAPITRES = [
         "retenir": "L'exponentielle est caractérisée par deux conditions : $f' = f$ et $f(0) = 1$. Sans la seconde, il y a une infinité de solutions.",
         "id": "c6r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "pascal-esprit-geometrique-methode",
+       "texte": "Cette véritable méthode […] consisterait en deux choses principales : l'une, de n'employer aucun terme dont on n'eût auparavant expliqué nettement le sens ; l'autre, de n'avancer jamais aucune proposition qu'on ne démontrât par des vérités déjà connues.",
+       "auteur": "Pascal",
+       "ref": "De l'esprit géométrique et de l'art de persuader, section I",
+       "note": "Coupure : « qui formerait les démonstrations dans la plus haute excellence, s'il était possible d'y arriver »."
+      }
      }
     ]
    },
@@ -5053,9 +5795,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Musonius Rufus (vers 30 – vers 100)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "La vertu, disait-il, est une science non seulement théorique, mais aussi pratique, comme la médecine et la musique. Le médecin et le musicien ne doivent pas seulement avoir acquis les principes de leur art, mais aussi s'être exercés à agir selon eux ; de même, celui qui doit devenir homme de bien ne doit pas seulement apprendre à fond les leçons qui mènent à la vertu, mais aussi s'y exercer avec ardeur et sans ménager sa peine. Comment, en effet, deviendrait-on aussitôt tempérant, si l'on savait seulement qu'il ne faut pas se laisser vaincre par les plaisirs, sans être exercé à leur résister ?",
+      "source": "Musonius Rufus, Diatribes, VI, « Sur l'exercice », leçon notée par un élève et conservée par Stobée, Anthologie, III, 29, 78 (trad. adaptée)",
+      "glose": "Savoir que $e^{a} < e^{b}$ équivaut à $a < b$, c'est connaître la théorie ; l'appliquer quand l'équation se déguise (un carré dans l'exposant, un second degré en $e^{x}$) demande de l'exercice. Comme le musicien de Musonius, tu ne possèdes vraiment la règle qu'après l'avoir pratiquée assez pour reconnaître seul la forme à laquelle te ramener."
      }
     ],
     "steles": [
@@ -5089,7 +5833,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c6r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "antisthene-dl-6-7",
+       "texte": "Comme on lui demandait quel savoir est le plus nécessaire, il répondit : « Celui qui dispense d'avoir à désapprendre. »",
+       "auteur": "Antisthène",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 7",
+       "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.). Le grec, très elliptique, se comprend de plusieurs façons ; on lit aussi simplement : « Désapprendre. »"
+      }
      },
      {
       "exercices": [
@@ -5120,7 +5871,14 @@ var CHAPITRES = [
         "retenir": "Un produit se traite par un tableau de signes, une ligne par facteur, sans oublier les valeurs qui l'annulent.",
         "id": "c6r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "weil-etudes-attention",
+       "texte": "La formation de la faculté d'attention est le but véritable et presque l'unique intérêt des études.",
+       "auteur": "Simone Weil",
+       "ref": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu, 1942",
+       "note": "Recueilli dans Attente de Dieu (1950). La phrase commence par « Bien qu'aujourd'hui on semble l'ignorer, »."
+      }
      }
     ],
     "bonus": [
@@ -5165,7 +5923,14 @@ var CHAPITRES = [
         "retenir": "Avant de multiplier une inégalité par $x$, connaître le signe de $x$ ; sinon, distinguer les cas.",
         "id": "c6r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-fins-5-48",
+       "texte": "Si grand est l'amour de la connaissance et du savoir qui est né avec nous, que nul ne peut douter que la nature humaine y soit entraînée sans l'appât d'aucun profit.",
+       "auteur": "Cicéron",
+       "ref": "Des fins des biens et des maux, V, 48",
+       "note": "Dans le dialogue, c'est Pison qui parle, au nom de l'Ancienne Académie."
+      }
      }
     ]
    },
@@ -5192,9 +5957,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Plutarque (vers 46 – vers 125)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Exhortons les paresseux, une fois l'essentiel saisi, à composer par eux-mêmes le reste […] et, recevant la parole d'autrui comme un principe et une semence, à la nourrir et à la faire croître. Car l'esprit n'a pas besoin, comme un vase, d'être rempli : comme le bois, il lui faut seulement de quoi l'allumer, pour faire naître en lui l'élan de la découverte et le désir du vrai. Comme celui qui, venu chercher du feu chez ses voisins, en trouverait un grand et brillant et resterait là jusqu'au bout à se chauffer, ainsi fait celui qui écoute sans croire qu'il doive allumer sa propre lumière et sa propre pensée.",
+      "source": "Plutarque, Comment il faut écouter (Œuvres morales), 18, 48b-d (trad. adaptée, dernière phrase abrégée)",
+      "glose": "Le cours ne te donne qu'une semence : la dérivée de $e^{u}$ est $u'e^{u}$. Une étude de fonction la fait croître : dériver, mettre $e^{x}$ en facteur, étudier le signe de ce qui reste, conclure. Mène ces étapes toi-même avant d'ouvrir une correction ; la lire sans avoir cherché, c'est se chauffer au feu du voisin."
      }
     ],
     "steles": [
@@ -5227,7 +5994,14 @@ var CHAPITRES = [
         "retenir": "Pour $f(x) = e^{ax}$, dériver revient à multiplier par $a$ : $f' = af$ et $f'' = a^{2}f$. Une telle équation se ramène au second degré.",
         "id": "c6r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-ethique-1103a",
+       "texte": "Ce qu'il faut avoir appris pour le faire, nous l'apprenons en le faisant : c'est en construisant qu'on devient constructeur, et en jouant de la cithare qu'on devient cithariste.",
+       "auteur": "Aristote",
+       "ref": "Éthique à Nicomaque, II, 1, 1103a32-34",
+       "note": "Aristote l'applique aussitôt aux vertus : c'est en accomplissant des actions justes qu'on devient juste."
+      }
      },
      {
       "exercices": [
@@ -5258,7 +6032,14 @@ var CHAPITRES = [
         "retenir": "Tangente en $a$ : $y = f'(a)(x-a) + f(a)$. « Le point est sur la droite » se traduit par une équation d'inconnue le paramètre.",
         "id": "c6r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "parmenide-b4",
+       "texte": "Contemple pourtant par l'intelligence les choses absentes comme fermement présentes.",
+       "auteur": "Parménide",
+       "ref": "Fragments, B 4, 1 DK (cité par Clément d'Alexandrie, Stromates, V, 15, 5)",
+       "note": "Fr. 2 dans la 1re édition de Diels (1903). Clément cite ce vers à propos de l'espérance, qui voit par l'esprit ce qui est à venir."
+      }
      }
     ],
     "bonus": [
@@ -5303,7 +6084,14 @@ var CHAPITRES = [
         "retenir": "Comparer les exposants suffit parfois : $u(x) \\le 0$ entraîne $e^{u(x)} \\le 1$.",
         "id": "c6r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "lucrece-1-140",
+       "texte": "Ton mérite et le plaisir espéré d'une douce amitié me font endurer toute peine et veiller les nuits sereines, cherchant par quels mots, par quels vers porter devant ton esprit une claire lumière.",
+       "auteur": "Lucrèce",
+       "ref": "De la nature, I, 140-144",
+       "note": "Lucrèce s'adresse à Memmius, dédicataire du poème, et dit la peine de rendre en vers latins les découvertes obscures des Grecs."
+      }
      }
     ],
     "acrobaties": [
@@ -5320,6 +6108,13 @@ var CHAPITRES = [
       "indice": "Teste l'affirmation « $e^{x} \\ge 1$ » pour $x = -1$.",
       "explication": "L'étape (3) est fausse : $e^{x} \\ge 1$ seulement pour $x \\ge 0$ ; par exemple $e^{-1} < 1$. En réalité, $g'(x)$ a le signe de $x$ : $g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$, donc son minimum est $g(0) = 0$, et $g(x) \\ge 0$ pour tout réel $x$. L'étape (4) est d'ailleurs fautive elle aussi : si $g$ est croissante, $g(x) \\le g(0)$ pour $x \\le 0$. La conclusion est vraie, mais la preuve de l'élève ne vaut que pour $x \\ge 0$.",
       "retenir": "Pour tout réel $x$, $e^{x} \\ge 1 + x$ : la courbe de exp est au-dessus de sa tangente en 0. On le prouve par un minimum, pas par une croissance globale.",
+      "maxime": {
+       "id": "platon-apologie-21d",
+       "texte": "Il semble que je sois un peu plus sage que lui en ceci même : ce que je ne sais pas, je ne crois pas non plus le savoir.",
+       "auteur": "Platon",
+       "ref": "Apologie de Socrate, 21d",
+       "note": "Socrate parle, après avoir interrogé un homme réputé sage. La formule « je sais que je ne sais rien » ne figure pas telle quelle chez Platon."
+      },
       "id": "c6r3-h0",
       "figure": "salto"
      }
@@ -5348,9 +6143,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Diogène de Sinope (vers 413 – vers 323 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Comme il se chauffait au soleil au Cranéion, Alexandre s'arrêta devant lui et lui dit : « Demande-moi ce que tu veux. » Et lui : « Cesse de me faire de l'ombre. » Quelqu'un lisait un long ouvrage ; comme, vers la fin du livre, il montrait un endroit sans écriture : « Courage, mes amis, dit Diogène, je vois la terre ! » À celui qui soutenait que le mouvement n'existe pas, il répondit en se levant et en se mettant à marcher. En plein jour, il allumait une lampe et allait partout en disant : « Je cherche un homme. »",
+      "source": "Anecdotes rapportées par Diogène Laërce (IIIe s. apr. J.-C.), Vies et doctrines des philosophes illustres, VI, 38-39 et 41 (trad. adaptée)",
+      "glose": "À qui niait le mouvement, Diogène répond par un fait : il se lève et marche. Un modèle exponentiel se juge aussi sur pièces : calcule ce qu'il prévoit (une population, une température, une concentration) et confronte-le aux mesures. Une affirmation sur une suite se teste de même sur quelques termes, avant d'être démontrée ou réfutée."
      }
     ],
     "steles": [
@@ -5383,7 +6180,14 @@ var CHAPITRES = [
         "retenir": "Si $u_n = f(n)$ et si $f$ est monotone sur $[p\\,;+\\infty[$, alors $(u_n)$ a la même monotonie à partir du rang $p$ ; la réciproque est fausse.",
         "id": "c6r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "condorcet-esquisse-perfectibilite",
+       "texte": "Montrer, par le raisonnement et par les faits, qu'il n'a été marqué aucun terme au perfectionnement des facultés humaines ; que la perfectibilité de l'homme est réellement indéfinie.",
+       "auteur": "Condorcet",
+       "ref": "Esquisse d'un tableau historique des progrès de l'esprit humain, introduction (1795)",
+       "note": "La phrase continue : ces progrès n'ont « d'autre terme que la durée du globe où la nature nous a jetés »."
+      }
      },
      {
       "exercices": [
@@ -5416,7 +6220,14 @@ var CHAPITRES = [
         "retenir": "Dans un modèle exponentiel, la durée de division par 2 (demi-vie) est constante : trois demi-vies divisent par $2^{3} = 8$.",
         "id": "c6r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plutarque-progres-76d",
+       "texte": "Les planètes, disent les mathématiciens, deviennent stationnaires quand leur marche s'arrête ; en philosophie, il n'y a pas de station : notre nature, comme une balance, penche vers le meilleur ou glisse vers le pire.",
+       "auteur": "Plutarque",
+       "ref": "Comment s'apercevoir qu'on progresse dans la vertu (Œuvres morales), 76D-E",
+       "note": "Les astronomes appelaient « station » le moment où une planète semble s'arrêter dans le ciel."
+      }
      }
     ],
     "bonus": [
@@ -5461,7 +6272,14 @@ var CHAPITRES = [
         "retenir": "Sens de variation d'une suite : étudier le signe de $u_{n+1} - u_n$ et vérifier qu'il ne dépend pas de $n$.",
         "id": "c6r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-questions-naturelles-7-25-4",
+       "texte": "Un jour viendra où le temps et l'application d'une durée plus longue mettront en lumière ce qui est aujourd'hui caché. Pour rechercher de si grandes choses, une seule vie ne suffit pas.",
+       "auteur": "Sénèque",
+       "ref": "Questions naturelles, VII, 25, 4",
+       "note": "À propos des comètes, dont on ignorait encore les lois du retour."
+      }
      }
     ]
    },
@@ -5488,9 +6306,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Xénophane de Colophon (vers 570 – vers 475 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Les dieux n'ont pas tout dévoilé aux mortels dès l'origine ; mais, en cherchant, ceux-ci trouvent avec le temps ce qui est meilleur. […] Quant à la vérité certaine, aucun homme ne l'a vue, et il n'y aura personne qui la connaisse, sur les dieux et sur tout ce dont je parle : car même s'il lui arrivait, par chance, de dire la chose la plus parfaitement vraie, lui-même pourtant ne le saurait pas ; mais sur toutes choses s'étend l'opinion.",
+      "source": "Xénophane, fr. B 18 DK (cité par Stobée, Choix de textes, I, 8, 2) et fr. B 34 DK (cité par Sextus Empiricus, Contre les savants, VII, 49) (trad. adaptée)",
+      "glose": "Xénophane voit la recherche avancer avec le temps : une étude complète se mène ainsi, question après question, du signe jusqu'au minimum. Il ajoute que l'opinion s'étend sur toutes choses. En mathématiques pourtant, c'est la démonstration qui permet de savoir qu'on a dit vrai : un tableau de variations justifié, non une courbe entrevue."
      }
     ],
     "steles": [
@@ -5550,7 +6370,13 @@ var CHAPITRES = [
       ],
       "boss": "Céléno, reine des Harpies",
       "monstre": "harpie",
-      "contexte": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (x^{2} - 3)\\,e^{x}$, et $\\mathcal{C}$ sa courbe représentative dans un repère orthonormé. On étudie successivement le signe de $f$, sa dérivée, ses variations, une tangente et son minimum. Les questions sont indépendantes : chacune redonne les résultats dont elle a besoin."
+      "contexte": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (x^{2} - 3)\\,e^{x}$, et $\\mathcal{C}$ sa courbe représentative dans un repère orthonormé. On étudie successivement le signe de $f$, sa dérivée, ses variations, une tangente et son minimum. Les questions sont indépendantes : chacune redonne les résultats dont elle a besoin.",
+      "maxime": {
+       "id": "marc-aurele-pensees-4-49",
+       "texte": "Sois semblable au promontoire contre lequel les flots se brisent sans cesse : lui reste debout, et autour de lui s'apaise le bouillonnement des eaux.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, IV, 49"
+      }
      }
     ],
     "bonus": [
@@ -5595,7 +6421,14 @@ var CHAPITRES = [
         "retenir": "Nier « pour tout $x$, $f(x) > g(x)$ » donne « il existe $x$ tel que $f(x) \\le g(x)$ » : le cas d'égalité change de camp.",
         "id": "c6b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "chrysippe-dl-7-179",
+       "texte": "Chrysippe disait souvent à Cléanthe qu'il n'avait besoin que de l'enseignement des doctrines : les démonstrations, il les trouverait lui-même.",
+       "auteur": "Chrysippe",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 179",
+       "note": "Rapporté par Diogène Laërce (IIIe s. apr. J.-C.), qui ajoute que Chrysippe se repentait chaque fois qu'il s'en était pris à son maître."
+      }
      }
     ]
    }
@@ -5625,9 +6458,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Emmanuel Kant (1724 – 1804)",
+      "portrait": "perruque",
+      "texte": "Je crois que la mathématique a longtemps tâtonné, surtout chez les Égyptiens, et que ce changement est dû à une révolution qu'accomplit l'idée heureuse d'un seul homme, dans un essai après lequel on ne pouvait plus manquer la voie à suivre. […] Pour le premier qui démontra le triangle isocèle (qu'il s'appelât Thalès ou comme on voudra), la lumière se fit : il comprit qu'il ne devait pas épier ce qu'il voyait dans la figure, ni même son simple concept, pour en apprendre pour ainsi dire les propriétés, mais les produire par ce que lui-même, d'après des concepts, y introduisait a priori par la pensée et présentait (par construction).",
+      "source": "Kant, Critique de la raison pure, préface de la 2e éd. (1787), B XI-XII (trad. adaptée ; « isocèle » selon la correction de Kant, lettre à Schütz du 25 juin 1787)",
+      "glose": "Pour Kant, la mathématique sort du tâtonnement le jour où l'on renonce à épier la figure pour en produire les propriétés à partir du concept. L'élève qui « vérifie » $e^{x} > x^{2}$ sur cinq valeurs en est encore à épier ; ton travail de professeur sera de lui montrer qu'une propriété se démontre, et qu'un seul contre-exemple bien choisi suffit à la réfuter."
      }
     ],
     "steles": [
@@ -5662,7 +6497,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c6s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-academie-inscription",
+       "texte": "Que nul ignorant de la géométrie n'entre ici.",
+       "auteur": "Inscription de l'Académie (tradition tardive)",
+       "ref": "Jean Philopon, Commentaire sur le traité De l'âme d'Aristote, p. 117, 26-27 Hayduck",
+       "note": "Rapportée par Jean Philopon (VIe s. apr. J.-C.), près de neuf siècles après la fondation de l'Académie ; rien n'indique que Platon l'ait écrite."
+      }
      },
      {
       "exercices": [
@@ -5694,7 +6536,14 @@ var CHAPITRES = [
         "temps": 420,
         "id": "c6s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plutarque-marcellus-17-5-travail",
+       "texte": "Les uns attribuent cela au génie naturel de l'homme ; d'autres pensent que c'est à force d'un immense travail que chacun de ses résultats paraît obtenu sans peine et avec aisance.",
+       "auteur": "Plutarque",
+       "ref": "Vie de Marcellus, 17, 5",
+       "note": "Il s'agit d'Archimède, qui résolvait les questions les plus difficiles de la géométrie par les principes les plus simples."
+      }
      },
      {
       "exercices": [
@@ -5743,7 +6592,14 @@ var CHAPITRES = [
         "retenir": "Énoncé « pour tout » : des exemples ne prouvent rien, un contre-exemple réfute. Le chercher là où l'intuition est la plus fragile.",
         "id": "c6s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-7-8",
+       "texte": "Fréquente ceux qui te rendront meilleur, accueille ceux que tu peux rendre meilleurs. Cela se fait dans les deux sens : en enseignant, les hommes apprennent.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 7, 8",
+       "note": "En latin : « homines dum docent discunt »."
+      }
      }
     ],
     "bonus": [
@@ -5788,7 +6644,14 @@ var CHAPITRES = [
         "retenir": "Une inégalité vraie sur $[0\\,;+\\infty[$ peut être fausse sur $\\mathbb{R}$ : toujours tester des réels négatifs.",
         "id": "c6s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-theetete-150d",
+       "texte": "Ceux qui me fréquentent […] font des progrès étonnants ; et il est clair qu'ils n'ont jamais rien appris de moi, mais qu'ils ont trouvé d'eux-mêmes et enfanté beaucoup de belles choses.",
+       "auteur": "Platon",
+       "ref": "Théétète, 150d",
+       "note": "Socrate décrit son art d'accoucheur des esprits ; la coupure omet que ces progrès viennent « à ceux à qui le dieu le permet »."
+      }
      }
     ]
    }
@@ -5823,9 +6686,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Thalès de Milet (vers 625 – vers 547 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Le roi [Amasis] t'admire pour bien d'autres choses, mais ta mesure de la pyramide l'a charmé au plus haut point : sans aucune peine, sans avoir besoin d'aucun instrument, tu as seulement dressé ton bâton à l'extrémité de l'ombre que projetait la pyramide ; le rayon du soleil, en les touchant, formait deux triangles, et tu as montré que la pyramide est au bâton dans le rapport même où l'ombre est à l'ombre.",
+      "source": "Rapporté par Plutarque, Banquet des sept sages, 2 (146f-147a) : dans ce dialogue, Niloxénos s'adresse à Thalès (trad. adaptée)",
+      "glose": "Dans ce récit, Thalès n'a besoin d'aucun instrument : le rapport de deux ombres suffit à atteindre un sommet inaccessible. Les vecteurs font de même : pour savoir si trois points sont alignés ou si $ABCD$ est un parallélogramme, inutile de tracer ; deux vecteurs et un calcul répondent, même dans un repère qui n'est pas orthonormé."
      }
     ],
     "steles": [
@@ -5858,7 +6723,13 @@ var CHAPITRES = [
         "retenir": "Deux vecteurs non colinéaires forment une base : tout vecteur du plan s'écrit de façon unique comme combinaison de ces deux vecteurs.",
         "id": "c7r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-politique-1338a",
+       "texte": "Certaines connaissances utiles, comme les lettres, s'enseignent aux enfants non seulement pour leur utilité, mais parce qu'elles en ouvrent beaucoup d'autres. […] Chercher partout l'utile ne convient nullement aux âmes grandes et libres.",
+       "auteur": "Aristote",
+       "ref": "Politique, VIII, 3, 1338a37-b4"
+      }
      },
      {
       "exercices": [
@@ -5889,7 +6760,13 @@ var CHAPITRES = [
         "retenir": "Colinéarité, alignement, milieux : valables dans tout repère. Seuls les calculs de longueurs et d'angles exigent un repère orthonormé.",
         "id": "c7r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-entretiens-2-18-2",
+       "texte": "Toute disposition, toute capacité se maintient et grandit par les actes qui lui correspondent. Veux-tu savoir lire ? Lis. Savoir écrire ? Écris. Passe trente jours de suite sans lire, et tu verras ce qui arrive.",
+       "auteur": "Épictète",
+       "ref": "Entretiens, II, 18, 1-2"
+      }
      }
     ],
     "bonus": [
@@ -5934,7 +6811,14 @@ var CHAPITRES = [
         "retenir": "$MA=MB$ caractérise la médiatrice de $[AB]$ ; $\\vec{MA}+\\vec{MB}=\\vec{0}$ caractérise le milieu.",
         "id": "c7r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "hume-enquete-10-4-sage",
+       "texte": "Un homme sage proportionne donc sa croyance aux preuves.",
+       "auteur": "Hume",
+       "ref": "Enquête sur l'entendement humain, section X, partie 1, § 87",
+       "note": "Dans la section « Des miracles ». « Evidence » : les preuves et témoignages dont on dispose. Numérotation de l'éd. Selby-Bigge (E 10.4 dans l'éd. Beauchamp)."
+      }
      }
     ]
    },
@@ -5961,9 +6845,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Platon (vers 428 – vers 348 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Ceux qui ont un peu pratiqué la géométrie ne nous contesteront pas que cette science est tout le contraire de ce qu'en disent ceux qui la manient. Ils en parlent d'une façon bien ridicule, quoique forcée : comme s'ils agissaient, et ne parlaient qu'en vue de l'action, ils disent « carrer », « appliquer », « ajouter », et parlent toujours ainsi ; alors que toute cette science n'est cultivée qu'en vue de connaître, […] de connaître ce qui est toujours, et non ce qui, à un moment, naît et périt. […] Elle tirerait donc l'âme vers la vérité, et formerait la pensée du philosophe à élever vers le haut ce que nous tournons à tort vers le bas.",
+      "source": "Platon, République, VII, 527a-b : Socrate parle à Glaucon (trad. adaptée)",
+      "glose": "Socrate trouve risibles les verbes d'artisan des géomètres, même s'ils n'en ont pas d'autres : ce qu'ils étudient ne se fabrique pas. Une même droite a une infinité d'équations : de $ax+by+c=0$, on passe à toutes les autres en multipliant par un réel non nul. Derrière l'écriture, vois l'objet, puis lis ce que l'équation dit de lui : un vecteur directeur et, en repère orthonormé, un vecteur normal."
      }
     ],
     "steles": [
@@ -5997,7 +6883,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c7r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "archytas-b3",
+       "texte": "Trouver sans chercher est difficile et rare ; en cherchant, c'est aisé et facile ; mais chercher sans savoir est impossible.",
+       "auteur": "Archytas de Tarente",
+       "ref": "fr. B 3 DK (Jamblique, De communi mathematica scientia, 11)",
+       "note": "Archytas, pythagoricien, géomètre et ami de Platon. Passage de son livre Sur les mathématiques, que citent Jamblique et Stobée."
+      }
      },
      {
       "exercices": [
@@ -6028,7 +6921,14 @@ var CHAPITRES = [
         "retenir": "Projeté orthogonal de $M$ sur $d$ : partir de $M$ selon un vecteur normal de $d$, puis chercher l'intersection avec $d$.",
         "id": "c7r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-ethique-1098a",
+       "texte": "Il faut sans doute d'abord esquisser, puis compléter le tracé ; et le temps semble en ces matières un bon découvreur, ou un bon collaborateur : de là viennent les progrès des arts.",
+       "auteur": "Aristote",
+       "ref": "Éthique à Nicomaque, I, 7, 1098a21-25",
+       "note": "Aristote vient de donner une première esquisse de sa définition du bonheur."
+      }
      }
     ],
     "bonus": [
@@ -6073,7 +6973,14 @@ var CHAPITRES = [
         "retenir": "Deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux (ou directeurs) sont orthogonaux.",
         "id": "c7r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "hume-enquete-12-24-doute",
+       "texte": "En général, il y a un degré de doute, de prudence et de modestie qui, dans toute espèce d'examen et de décision, doit toujours accompagner celui qui raisonne juste.",
+       "auteur": "Hume",
+       "ref": "Enquête sur l'entendement humain, section XII, partie 3, § 129",
+       "note": "Le scepticisme « mitigé » : le doute bien conduit. Numérotation de l'éd. Selby-Bigge (E 12.24 dans l'éd. Beauchamp)."
+      }
      }
     ]
    },
@@ -6100,9 +7007,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Posidonius d'Apamée (vers 135 – vers 51 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Posidonius dit que Rhodes et Alexandrie sont sous le même méridien, […] et la distance entre les villes semble être de cinq mille stades. […] L'étoile appelée Canope, très brillante, au midi, […] commence à être visible à Rhodes : aperçue sur l'horizon, elle se couche aussitôt avec la rotation du ciel. Mais lorsque, après la traversée depuis Rhodes, nous sommes à Alexandrie, on la trouve, à sa culmination exacte, élevée au-dessus de l'horizon d'un quart de signe, c'est-à-dire d'un quarante-huitième du zodiaque. […] Ainsi le plus grand cercle de la Terre mesure vingt-quatre myriades de stades, si l'on compte cinq mille stades de Rhodes à Alexandrie ; sinon, en proportion de la distance.",
+      "source": "Rapporté par Cléomède, Le Mouvement circulaire des corps célestes, I, 7 (I, 10 éd. Ziegler) ; l'ouvrage de Posidonius est perdu (trad. adaptée)",
+      "glose": "Remarque la fin : si la distance n'est pas de cinq mille stades, le résultat suit « en proportion ». La méthode, un angle et une longueur reliés par une proportion, ne dépend pas des mesures, et c'est elle qu'il faut retenir. Le produit scalaire noue de même longueurs et angles : avec $\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|\\times\\cos(\\vec{u},\\vec{v})$, l'angle et les longueurs donnent le nombre, et le nombre, en retour, donne l'angle."
      }
     ],
     "steles": [
@@ -6135,7 +7044,14 @@ var CHAPITRES = [
         "retenir": "$\\|\\vec{u}+t\\vec{v}\\|$ est minimal quand $\\vec{u}+t\\vec{v}$ est orthogonal à $\\vec{v}$, c'est-à-dire pour $t=-\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|^2}$.",
         "id": "c7r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "heraclite-b54",
+       "texte": "L'harmonie qui ne se voit pas vaut mieux que celle qui se voit.",
+       "auteur": "Héraclite",
+       "ref": "fr. B 54 DK (Hippolyte, Réfutation de toutes les hérésies, IX, 9, 5)",
+       "note": "« Vaut mieux » : en grec κρείττων, « meilleure » ou « plus forte »."
+      }
      },
      {
       "exercices": [
@@ -6166,7 +7082,14 @@ var CHAPITRES = [
         "retenir": "Angle géométrique : $\\cos\\widehat{AOB}=\\dfrac{\\vec{OA}\\cdot\\vec{OB}}{OA\\times OB}$, après avoir choisi un repère adapté à la figure.",
         "id": "c7r3-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-3-11",
+       "texte": "Rien ne rend l'âme aussi grande que de pouvoir examiner avec méthode et vérité chacune des choses qui se présentent dans la vie.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, III, 11",
+       "note": "« Avec méthode » : en grec ὁδῷ, littéralement « avec chemin »."
+      }
      }
     ],
     "bonus": [
@@ -6211,7 +7134,13 @@ var CHAPITRES = [
         "retenir": "Pythagore vectoriel : $\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2 \\iff \\vec{u}\\cdot\\vec{v}=0$.",
         "id": "c7r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-sv-74",
+       "texte": "Dans une discussion menée par amour du savoir, c'est le vaincu qui gagne le plus, dans la mesure où il y a appris quelque chose.",
+       "auteur": "Épicure",
+       "ref": "Sentences vaticanes, 74"
+      }
      }
     ],
     "acrobaties": [
@@ -6228,6 +7157,13 @@ var CHAPITRES = [
       "indice": "Fais tout passer dans le même membre et factorise : quelle propriété géométrique obtiens-tu ?",
       "explication": "L'hypothèse équivaut à $\\vec{u}\\cdot(\\vec{v}-\\vec{w})=0$, c'est-à-dire à $\\vec{u}\\perp(\\vec{v}-\\vec{w})$, et rien de plus. Contre-exemple à la « simplification », dans un repère orthonormé : $\\vec{u}(1\\,;0)$, $\\vec{v}(1\\,;0)$ et $\\vec{w}(1\\,;5)$ donnent $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}=1$, alors que $\\vec{v}$ et $\\vec{w}$ ne sont ni égaux, ni colinéaires, ni de même norme.",
       "retenir": "On ne divise jamais par un vecteur : $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ signifie seulement $\\vec{u}\\perp(\\vec{v}-\\vec{w})$.",
+      "maxime": {
+       "id": "kant-krv-a5-colombe",
+       "texte": "La colombe légère, qui fend l'air dans son libre vol et en sent la résistance, pourrait s'imaginer qu'elle volerait bien mieux encore dans un espace vide d'air.",
+       "auteur": "Kant",
+       "ref": "Critique de la raison pure, Introduction, A 5 / B 8-9",
+       "note": "Kant enchaîne sur Platon, qui quitta le monde sensible pour s'aventurer dans l'espace vide de l'entendement pur, sans point d'appui."
+      },
       "id": "c7r3-h0",
       "figure": "double"
      }
@@ -6256,9 +7192,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Simone Weil (1909 – 1943)",
+      "portrait": "moderne",
+      "texte": "Si on cherche avec une véritable attention la solution d'un problème de géométrie, et si, au bout d'une heure, on n'est pas plus avancé qu'en commençant, on a néanmoins avancé, durant chaque minute de cette heure, dans une autre dimension plus mystérieuse. Sans qu'on le sente, sans qu'on le sache, cet effort en apparence stérile et sans fruit a mis plus de lumière dans l'âme. Le fruit se retrouvera un jour, plus tard, dans la prière. Il se retrouvera sans doute aussi par surcroît dans un domaine quelconque de l'intelligence, peut-être tout à fait étranger à la mathématique.",
+      "source": "Simone Weil, Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu (1942), dans Attente de Dieu (1950)",
+      "glose": "Le progrès que décrit Simone Weil ne se voit pas sur la copie : il se fait « dans une autre dimension ». Un problème de géométrie cherché avec une vraie attention, même sans succès, a travaillé pour toi ; il arrive qu'au retour de la stèle, des jours plus tard, la figure s'éclaire d'un coup."
      }
     ],
     "steles": [
@@ -6292,7 +7230,13 @@ var CHAPITRES = [
         "retenir": "Théorème de la médiane : $AB^2+AC^2=2AI^2+\\frac{1}{2}BC^2$, où $I$ est le milieu de $[BC]$.",
         "id": "c7r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-7-59",
+       "texte": "Creuse au-dedans. Au-dedans est la source du bien, et elle peut toujours jaillir, si tu creuses toujours.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, VII, 59"
+      }
      },
      {
       "exercices": [
@@ -6323,7 +7267,14 @@ var CHAPITRES = [
         "retenir": "Une droite est tangente à un cercle si et seulement si la distance du centre à la droite est égale au rayon.",
         "id": "c7r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "poincare-sm-beaute",
+       "texte": "Le sentiment de la beauté mathématique, de l'harmonie des nombres et des formes, de l'élégance géométrique : c'est un vrai sentiment esthétique que tous les vrais mathématiciens connaissent.",
+       "auteur": "Poincaré",
+       "ref": "Science et méthode (1908), livre I, chap. III, « L'invention mathématique »",
+       "note": "Poincaré répond à l'idée que les démonstrations ne parleraient qu'à l'intelligence. Le texte a un point là où l'on a mis les deux-points."
+      }
      }
     ],
     "bonus": [
@@ -6368,7 +7319,14 @@ var CHAPITRES = [
         "retenir": "Tangence : distance du centre à la droite égale au rayon ; le point de contact est le projeté orthogonal du centre.",
         "id": "c7r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-devoirs-1-18",
+       "texte": "Il faut éviter de tenir pour connu ce qu'on ignore et d'y donner à la légère son assentiment ; qui veut fuir ce défaut, et tous doivent le vouloir, consacrera à l'examen temps et attention.",
+       "auteur": "Cicéron",
+       "ref": "Des devoirs, I, 18",
+       "note": "Premier des deux défauts à fuir dans la recherche du vrai ; le second est de consacrer trop d'efforts à des questions obscures et difficiles, qui ne sont pas nécessaires (I, 19)."
+      }
      }
     ]
    },
@@ -6395,9 +7353,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Ératosthène de Cyrène (vers 276 – vers 194 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Syène et Alexandrie, dit Ératosthène, sont sous le même méridien. […] Quand le soleil, au solstice d'été, culmine exactement, les gnomons des cadrans [de Syène] sont sans ombre ; à Alexandrie, à la même heure, ils projettent une ombre. […] Sur ces deux droites parallèles tombe la droite menée du centre de la Terre au gnomon d'Alexandrie : elle fait des angles alternes égaux. […] Or l'arc tracé dans la cuvette du cadran se trouve être la cinquantième partie de son cercle : la distance de Syène à Alexandrie est donc la cinquantième partie du plus grand cercle de la Terre. Elle est de cinq mille stades : le cercle entier vaut donc vingt-cinq myriades.",
+      "source": "Rapporté par Cléomède, Le Mouvement circulaire des corps célestes, I, 7 (I, 10 éd. Ziegler) ; le traité d'Ératosthène est perdu (trad. adaptée)",
+      "glose": "Une ombre, deux droites parallèles, des angles alternes égaux, une proportion : rien qui dépasse le collège, et pourtant ces maillons enchaînés donnent le tour de la Terre. Un problème de concours se mène de même, maillon après maillon ; et, comme dans le problème de cette salle, l'énoncé redonne souvent le résultat à admettre, si bien qu'une question manquée ne bloque pas la suivante."
      }
     ],
     "steles": [
@@ -6459,7 +7419,13 @@ var CHAPITRES = [
       ],
       "boss": "Le Sphinx de Thèbes",
       "monstre": "sphinx",
-      "contexte": "D'après CAPES Mayotte 2022 (composition 1) : certains trottoirs du Caire sont pavés de pentagones dont les cinq côtés ont la même longueur. Le plan est muni d'un repère orthonormé. On considère $A\\left(-\\frac{3}{2}\\,;0\\right)$, $B\\left(-\\frac{1}{2}\\,;0\\right)$, $C\\left(\\frac{1}{2}\\,;0\\right)$ et $D\\left(\\frac{3}{2}\\,;0\\right)$. Le point $E$ est le point d'ordonnée positive tel que $EA=ED=2$. On note $\\mathcal{C}_1$ le cercle de centre $B$ et de rayon 1, $\\mathcal{C}_5$ le cercle de centre $E$ et de rayon 1, $G_1$ le point commun à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ d'abscisse négative et $G_2$ le symétrique de $G_1$ par rapport à l'axe des ordonnées. Le pavé est le pentagone $BCG_2EG_1$."
+      "contexte": "D'après CAPES Mayotte 2022 (composition 1) : certains trottoirs du Caire sont pavés de pentagones dont les cinq côtés ont la même longueur. Le plan est muni d'un repère orthonormé. On considère $A\\left(-\\frac{3}{2}\\,;0\\right)$, $B\\left(-\\frac{1}{2}\\,;0\\right)$, $C\\left(\\frac{1}{2}\\,;0\\right)$ et $D\\left(\\frac{3}{2}\\,;0\\right)$. Le point $E$ est le point d'ordonnée positive tel que $EA=ED=2$. On note $\\mathcal{C}_1$ le cercle de centre $B$ et de rayon 1, $\\mathcal{C}_5$ le cercle de centre $E$ et de rayon 1, $G_1$ le point commun à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ d'abscisse négative et $G_2$ le symétrique de $G_1$ par rapport à l'axe des ordonnées. Le pavé est le pentagone $BCG_2EG_1$.",
+      "maxime": {
+       "id": "seneque-brevete-1-3",
+       "texte": "Nous n'avons pas trop peu de temps, mais nous en avons beaucoup perdu. La vie est assez longue, et largement donnée pour accomplir de très grandes choses, si elle était tout entière bien employée.",
+       "auteur": "Sénèque",
+       "ref": "De la brièveté de la vie, 1, 3"
+      }
      }
     ],
     "bonus": [
@@ -6504,7 +7470,14 @@ var CHAPITRES = [
         "retenir": "Dans un parallélogramme : diagonales de même longueur $\\iff$ rectangle ; diagonales perpendiculaires $\\iff$ losange.",
         "id": "c7b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "pascal-L188",
+       "texte": "La dernière démarche de la raison est de reconnaître qu'il y a une infinité de choses qui la surpassent.",
+       "auteur": "Pascal",
+       "ref": "Pensées, fr. 188 Lafuma (267 Brunschvicg)",
+       "note": "Liasse « Soumission et usage de la raison »."
+      }
      }
     ]
    }
@@ -6534,9 +7507,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Henri Poincaré (1854 – 1912)",
+      "portrait": "xixe",
+      "texte": "En d'autres termes, les axiomes de la géométrie (je ne parle pas de ceux de l'arithmétique) ne sont que des définitions déguisées. Dès lors, que doit-on penser de cette question : La géométrie euclidienne est-elle vraie ? Elle n'a aucun sens. Autant demander si le système métrique est vrai et les anciennes mesures fausses ; si les coordonnées cartésiennes sont vraies et les coordonnées polaires fausses. Une géométrie ne peut pas être plus vraie qu'une autre ; elle peut seulement être plus commode. Or la géométrie euclidienne est et restera la plus commode : 1° parce qu'elle est la plus simple […].",
+      "source": "Henri Poincaré, La Science et l'Hypothèse (1902), IIe partie, chap. III, « Les géométries non euclidiennes »",
+      "glose": "Choisir un repère, c'est choisir une commodité, non une vérité : l'origine au centre du cercle, un axe porté par la droite, et le calcul se simplifie. Devant une classe, tu auras à justifier ce choix, et à reconnaître qu'un élève qui en a fait un autre peut avoir raison lui aussi."
      }
     ],
     "steles": [
@@ -6569,7 +7544,14 @@ var CHAPITRES = [
         "retenir": "Distance de $C$ à $(AB)$ : $\\dfrac{|\\vec{AC}\\cdot\\vec{n}|}{\\|\\vec{n}\\|}$, avec $\\vec{n}$ normal à $(AB)$. La même formule donnera la distance d'un point à un plan.",
         "id": "c7s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-29-1",
+       "texte": "Pour toute entreprise, examine ce qui la précède et ce qui la suit, puis engage-toi. Sinon, tu commenceras avec ardeur et, quand des difficultés apparaîtront, tu abandonneras honteusement.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 29, 1",
+       "note": "Même conseil, presque mot pour mot, dans les Entretiens, III, 15, 1."
+      }
      },
      {
       "exercices": [
@@ -6601,7 +7583,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c7s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-lettre7-341c",
+       "texte": "Cela ne se dit pas comme les autres savoirs : après une longue fréquentation de la chose même, soudain, comme la lumière jaillie d'une étincelle, cela naît dans l'âme et s'y nourrit de soi-même.",
+       "auteur": "Platon",
+       "ref": "Lettre VII, 341c-d",
+       "note": "Platon parle de l'objet de sa recherche la plus sérieuse, sur lequel il dit n'avoir rien écrit. L'authenticité de la Lettre VII est discutée."
+      }
      },
      {
       "exercices": [
@@ -6650,7 +7639,14 @@ var CHAPITRES = [
         "retenir": "Distance d'un point à une droite (ou à un plan) : le minimum est atteint au projeté orthogonal, par le théorème de Pythagore.",
         "id": "c7s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-6-5",
+       "texte": "Long est le chemin par les préceptes, court et efficace par les exemples.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 6, 5",
+       "note": "Sénèque conseille à Lucilius de vivre auprès des sages : leur voix vivante et la vie commune lui profiteront plus que leurs discours."
+      }
      }
     ],
     "bonus": [
@@ -6695,7 +7691,13 @@ var CHAPITRES = [
         "retenir": "$\\vec{MA}\\cdot\\vec{MB}=MI^2-\\frac{AB^2}{4}$ ($I$ milieu de $[AB]$) : l'ensemble $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle de centre $I$, un point ou l'ensemble vide.",
         "id": "c7s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "augustin-confessions-11-14-17",
+       "texte": "Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à qui me le demande, je ne le sais pas.",
+       "auteur": "Augustin",
+       "ref": "Confessions, XI, 14, 17"
+      }
      }
     ]
    }
@@ -6730,9 +7732,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Blaise Pascal (1623 – 1662)",
+      "portrait": "perruque",
+      "texte": "Tout joueur hasarde avec certitude pour gagner avec incertitude ; et néanmoins il hasarde certainement le fini pour gagner incertainement le fini, sans pécher contre la raison. Il n'y a pas infinité de distance entre cette certitude de ce qu'on s'expose et l'incertitude du gain ; cela est faux. Il y a, à la vérité, infinité entre la certitude de gagner et la certitude de perdre. Mais l'incertitude de gagner est proportionnée à la certitude de ce qu'on hasarde, selon la proportion des hasards de gain et de perte.",
+      "source": "Pascal, Pensées, fragment « Infini rien », Lafuma 418 / Brunschvicg 233",
+      "glose": "Le joueur de Pascal ne sait pas s'il gagnera, mais il n'agit pas à l'aveugle : il compare la mise, certaine, au gain, incertain, « selon la proportion des hasards ». Sur un arbre, chaque branche porte une telle proportion ; conditionner, c'est la recalculer dans l'univers réduit que fixe l'information reçue."
      }
     ],
     "steles": [
@@ -6765,7 +7769,14 @@ var CHAPITRES = [
         "retenir": "Le conditionnement dépend exactement de l'information reçue : « au moins une fille » et « l'aînée est une fille » ne donnent pas la même probabilité.",
         "id": "c8r1-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-5-reproches",
+       "texte": "Accuser les autres de ses propres échecs est le fait d'un ignorant ; s'en accuser soi-même, de qui commence à s'instruire ; n'accuser ni autrui ni soi-même, de qui est instruit.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 5",
+       "note": "Fin du chapitre qui commence par : « Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses. »"
+      }
      },
      {
       "exercices": [
@@ -6796,7 +7807,14 @@ var CHAPITRES = [
         "retenir": "Un arbre se lit dans les deux sens : avec une inconnue sur une branche, une égalité entre chemins devient une équation.",
         "id": "c8r1-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "poincare-sm-meme-nom",
+       "texte": "La mathématique est l'art de donner le même nom à des choses différentes.",
+       "auteur": "Poincaré",
+       "ref": "Science et méthode, livre I, ch. II (1908)",
+       "note": "Chapitre « L'avenir des mathématiques ». Poincaré amène la formule par : « Je ne sais si je n'ai pas déjà dit quelque part que… »"
+      }
      }
     ],
     "bonus": [
@@ -6841,7 +7859,14 @@ var CHAPITRES = [
         "retenir": "$P_B$ est une probabilité : $P_B(A) + P_B(\\overline{A}) = 1$. Mais changer de conditionnement ($B$ puis $\\overline{B}$) ne donne aucune somme connue.",
         "id": "c8r1-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "platon-phedon-91c",
+       "texte": "Souciez-vous peu de Socrate et beaucoup plus de la vérité : si je vous semble dire vrai, accordez-le ; sinon, opposez-moi toutes vos raisons.",
+       "auteur": "Platon",
+       "ref": "Phédon, 91c",
+       "note": "Socrate à Simmias et Cébès, le jour de sa mort."
+      }
      }
     ]
    },
@@ -6868,9 +7893,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Carnéade de Cyrène (vers 214 – 129 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "Il serait contraire à la nature que rien ne fût probable. […] Même le sage que vous mettez en scène suit bien des choses probables, qu'il n'a ni saisies, ni perçues, ni reçues par assentiment, mais qui ressemblent au vrai ; s'il ne leur donnait son approbation, toute vie serait abolie. Quand il monte sur un navire, le sage a-t-il saisi et perçu par l'esprit qu'il naviguera comme il le souhaite ? Comment le pourrait-il ? Mais s'il part d'ici pour Pouzzoles, à trente stades, sur un bon navire, avec un bon pilote, par ce temps calme, il lui paraîtra probable qu'il y arrivera sain et sauf.",
+      "source": "Doctrine rapportée par Cicéron, Lucullus (Premiers Académiques, II), 99-100, d'après Clitomaque (trad. adaptée)",
+      "glose": "Le sage de Carnéade ne peut pas savoir qu'il arrivera ; il juge l'arrivée probable sachant le navire, le pilote et le temps. La formule des probabilités totales fait ce travail avec des nombres : elle envisage chaque circonstance possible, multiplie sa probabilité par la chance de succès qu'elle donne, puis additionne."
      }
     ],
     "steles": [
@@ -6904,7 +7931,14 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c8r2-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "plutarque-progres-76c",
+       "texte": "Comme les marins mesurent leur route au temps et à la force du vent, on peut en philosophie prendre pour preuve du progrès la constance et la continuité de la marche, sans haltes ni bonds.",
+       "auteur": "Plutarque",
+       "ref": "Comment s'apercevoir qu'on progresse dans la vertu, 76C",
+       "note": "Traité des Œuvres morales de Plutarque."
+      }
      },
      {
       "exercices": [
@@ -6941,7 +7975,14 @@ var CHAPITRES = [
         "retenir": "« Au moins un succès en $n$ essais indépendants de probabilité $p$ » : $1 - (1-p)^n$, jamais $n \\times p$.",
         "id": "c8r2-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-colere-3-36-1",
+       "texte": "Sextius, la journée finie, interrogeait son âme : « De quel mal t'es-tu guérie aujourd'hui ? À quel défaut as-tu résisté ? En quoi es-tu meilleure ? »",
+       "auteur": "Sénèque",
+       "ref": "De la colère, III, 36, 1",
+       "note": "Sénèque rapporte l'examen du soir que pratiquait le philosophe Quintus Sextius, et le propose en modèle."
+      }
      }
     ],
     "bonus": [
@@ -6986,7 +8027,13 @@ var CHAPITRES = [
         "retenir": "Probabilités totales : on additionne des chemins (des produits), pas des branches. Oublier les poids $P(A)$ et $P(\\overline{A})$ est l'erreur classique.",
         "id": "c8r2-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "aristote-ethique-1094b",
+       "texte": "C'est le propre d'un esprit cultivé de chercher en chaque genre l'exactitude que permet la nature du sujet : accepter d'un mathématicien des vraisemblances, c'est comme exiger d'un orateur des démonstrations.",
+       "auteur": "Aristote",
+       "ref": "Éthique à Nicomaque, I, 3, 1094b23-27"
+      }
      }
     ]
    },
@@ -7013,9 +8060,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Michel de Montaigne (1533 – 1592)",
+      "portrait": "renaissance",
+      "texte": "Qu'il [le précepteur] lui fasse tout passer par l'étamine, et ne loge rien en sa tête par simple autorité et à crédit. Les principes d'Aristote ne lui soient principes, non plus que ceux des stoïciens ou épicuriens. Qu'on lui propose cette diversité de jugements : il choisira s'il peut, sinon il en demeurera en doute. […] Les abeilles pillotent deçà delà les fleurs, mais elles en font après le miel, qui est tout leur ; ce n'est plus thym ni marjolaine : ainsi les pièces empruntées d'autrui, il les transformera et confondra, pour en faire un ouvrage tout sien, à savoir son jugement.",
+      "source": "Montaigne, Essais, I, 26, « De l'institution des enfants » (orthographe modernisée)",
+      "glose": "Montaigne veut que l'élève passe tout « par l'étamine » au lieu de croire « à crédit ». Traite ainsi chaque espérance : écris la loi, vérifie que ses probabilités ont pour somme 1, pèse chaque valeur par sa probabilité ; refaite par toi, la formule cesse d'être un emprunt et devient ton jugement."
      }
     ],
     "steles": [
@@ -7050,7 +8099,14 @@ var CHAPITRES = [
         "retenir": "Jeu équitable : espérance du gain algébrique nulle, c'est-à-dire mise égale à l'espérance de la somme reçue, car $E(S - m) = E(S) - m$.",
         "id": "c8r3-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "leibniz-goldbach-musica",
+       "texte": "La musique est un exercice caché d'arithmétique, d'une âme qui ne sait pas qu'elle compte.",
+       "auteur": "Leibniz",
+       "ref": "Lettre à Christian Goldbach, 17 avril 1712",
+       "note": "En latin : « Musica est exercitium arithmeticae occultum nescientis se numerare animi. »"
+      }
      }
     ],
     "bonus": [
@@ -7095,7 +8151,14 @@ var CHAPITRES = [
         "retenir": "Une somme de termes positifs est nulle si et seulement si chaque terme est nul : un argument clé pour l'espérance et la variance.",
         "id": "c8r3-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epictete-manuel-52",
+       "texte": "Le premier lieu en philosophie, le plus nécessaire, est l'usage des principes ; le deuxième, les démonstrations ; le troisième, leur confirmation et leur analyse. Or nous nous attardons au troisième et négligeons entièrement le premier.",
+       "auteur": "Épictète",
+       "ref": "Manuel, 52, 1-2",
+       "note": "Exemple d'Épictète : le premier lieu, c'est ne pas mentir ; le deuxième, démontrer qu'il ne faut pas mentir. Or nous mentons, tout en sachant démontrer qu'il ne le faut pas."
+      }
      }
     ],
     "acrobaties": [
@@ -7107,6 +8170,13 @@ var CHAPITRES = [
       "indice": "Décris la suite de la partie : A gagne dès qu'il remporte une manche ; B doit en remporter deux de suite. Quelle est la probabilité que A l'emporte ?",
       "explication": "B n'emporte l'enjeu que s'il gagne les deux manches suivantes, avec probabilité $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$ ; A l'emporte donc avec probabilité $\\frac{3}{4}$. La somme reçue par A vaut 64 avec probabilité $\\frac{3}{4}$ et 0 sinon : son espérance est $64 \\times \\frac{3}{4} = 48$ pistoles, et B reçoit 16. C'est le partage proposé par Pascal : on raisonne sur ce qui reste à jouer, non sur les manches passées.",
       "retenir": "Partager équitablement un jeu interrompu, c'est donner à chacun l'espérance de ce qu'il aurait reçu : on regarde l'avenir, pas le passé.",
+      "maxime": {
+       "id": "diogene-dl-6-34",
+       "texte": "À ceux qui lui disaient : « Tu es vieux, repose-toi », il répondit : « Si je courais la course de fond, faudrait-il ralentir près du but, et non plutôt accélérer ? »",
+       "auteur": "Diogène de Sinope",
+       "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 34",
+       "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), environ cinq siècles après Diogène de Sinope."
+      },
       "id": "c8r3-h0",
       "figure": "salto"
      }
@@ -7135,9 +8205,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
+      "nom": "Pyrrhon d'Élis (vers 365 – vers 275 av. J.-C.)",
       "portrait": "grec",
-      "texte": ""
+      "texte": "[Pyrrhon] disait que rien n'est beau ni laid, juste ni injuste ; et de même pour toutes choses, que rien n'est tel en vérité, mais que les hommes font tout par convention et par habitude : car chaque chose n'est pas plus ceci que cela. […] Un jour qu'un chien s'élançait sur lui et qu'il avait pris peur, il répondit à qui le lui reprochait qu'il est difficile de dépouiller entièrement l'homme ; mais qu'il faut lutter contre les choses autant qu'on le peut, d'abord par les actes, et, si l'on n'y parvient pas, du moins par la raison.",
+      "source": "Rapporté par Diogène Laërce, Vies et doctrines des philosophes illustres, IX, 61 et 66 (trad. adaptée)",
+      "glose": "Pyrrhon suspendait son jugement devant des apparences qui se contredisent. Le paradoxe de Simpson en offre un exemple : un collège meilleur dans chaque groupe peut paraître moins bon au total. Toi, ne t'arrête pas au doute : regarde les effectifs, et lutte contre l'impression première, « du moins par la raison »."
      }
     ],
     "steles": [
@@ -7176,7 +8248,14 @@ var CHAPITRES = [
         "retenir": "Effet de structure : comparer des taux globaux sans regarder la composition des populations peut inverser la conclusion (paradoxe de Simpson).",
         "id": "c8r4-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-2-5",
+       "texte": "À chaque heure, applique-toi fermement, en Romain et en homme, à faire ce que tu as en main avec une gravité exacte et sans affectation […], et à te libérer de toute autre pensée.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, II, 5",
+       "note": "La coupure omet la suite de l'énumération : « avec affection, liberté et justice »."
+      }
      },
      {
       "exercices": [
@@ -7209,7 +8288,14 @@ var CHAPITRES = [
         "retenir": "Pour $y = ax + b$ : $\\overline{y} = a\\overline{x} + b$ et $\\sigma_y = |a|\\,\\sigma_x$. Une translation des valeurs ne change pas leur dispersion.",
         "id": "c8r4-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "empedocle-b110",
+       "texte": "Si tu les ancres au fond de ton esprit et les contemples avec bienveillance, par des exercices purs, toutes ces choses te resteront présentes ta vie durant, et tu en acquerras bien d'autres.",
+       "auteur": "Empédocle",
+       "ref": "fr. B 110, v. 1-4 DK (Hippolyte, Réfutation de toutes les hérésies, VII, 29, 25-26)",
+       "note": "Empédocle s'adresse à son disciple, sans doute Pausanias, destinataire du poème De la nature."
+      }
      }
     ],
     "bonus": [
@@ -7254,7 +8340,14 @@ var CHAPITRES = [
         "retenir": "Une moyenne globale dépend des moyennes des groupes et de leurs poids : si la structure change, elle peut évoluer en sens inverse de toutes les moyennes partielles.",
         "id": "c8r4-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "epicure-sv-54",
+       "texte": "Il ne faut pas faire semblant de philosopher, mais philosopher pour de bon : nous n'avons pas besoin de paraître en bonne santé, mais de l'être vraiment.",
+       "auteur": "Épicure",
+       "ref": "Sentences vaticanes, 54",
+       "note": "Recueil de sentences d'Épicure et de ses disciples, conservé par un manuscrit du Vatican et publié pour la première fois en 1888."
+      }
      }
     ]
    },
@@ -7281,9 +8374,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "Pierre-Simon de Laplace (1749 – 1827)",
+      "portrait": "xixe",
+      "texte": "On voit par cet Essai que la théorie des probabilités n'est au fond que le bon sens réduit au calcul ; elle fait apprécier avec exactitude ce que les esprits justes sentent par une sorte d'instinct, sans qu'ils puissent souvent s'en rendre compte. […] Si l'on observe ensuite que, dans les choses mêmes qui ne peuvent être soumises au calcul, elle donne les aperçus les plus sûrs qui puissent nous guider dans nos jugements, et qu'elle apprend à se garantir des illusions qui souvent nous égarent, on verra qu'il n'est point de science plus digne de nos méditations, et qu'il soit plus utile de faire entrer dans le système de l'instruction publique.",
+      "source": "Laplace, Essai philosophique sur les probabilités (1814), conclusion",
+      "glose": "Laplace ne congédie pas l'intuition : il la soumet au calcul, car la théorie des probabilités « apprend à se garantir des illusions ». Face à l'urne de Pólya, décris l'arbre, nomme les probabilités totales et la formule de Bayes : ton impression deviendra un nombre justifié. Laplace voulait cette science dans l'instruction publique ; bientôt, c'est toi qui l'enseigneras."
      }
     ],
     "steles": [
@@ -7337,7 +8432,14 @@ var CHAPITRES = [
       ],
       "boss": "Les oiseaux du lac Stymphale",
       "monstre": "stymphale",
-      "contexte": "D'après CAPES Mayotte 2022 (composition 1, problème 3 : urne de Pólya). Une urne contient au départ une boule verte et trois boules blanches. On répète trois fois l'opération suivante : tirer une boule au hasard, noter sa couleur, la remettre dans l'urne et ajouter une boule de la même couleur. Pour $k \\in \\{1, 2, 3\\}$, on note $V_k$ l'événement « la $k$-ième boule tirée est verte », et $X$ le nombre de boules vertes tirées au cours des trois tirages. L'arbre a trois niveaux ; à chaque nœud, la probabilité de tirer une verte est le nombre de boules vertes divisé par le nombre total de boules présentes à cet instant."
+      "contexte": "D'après CAPES Mayotte 2022 (composition 1, problème 3 : urne de Pólya). Une urne contient au départ une boule verte et trois boules blanches. On répète trois fois l'opération suivante : tirer une boule au hasard, noter sa couleur, la remettre dans l'urne et ajouter une boule de la même couleur. Pour $k \\in \\{1, 2, 3\\}$, on note $V_k$ l'événement « la $k$-ième boule tirée est verte », et $X$ le nombre de boules vertes tirées au cours des trois tirages. L'arbre a trois niveaux ; à chaque nœud, la probabilité de tirer une verte est le nombre de boules vertes divisé par le nombre total de boules présentes à cet instant.",
+      "maxime": {
+       "id": "seneque-lettres-104-26",
+       "texte": "Ce n'est pas parce que les choses sont difficiles que nous n'osons pas ; c'est parce que nous n'osons pas qu'elles sont difficiles.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 104, 26",
+       "note": "En latin : « Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt. »"
+      }
      }
     ],
     "bonus": [
@@ -7382,7 +8484,14 @@ var CHAPITRES = [
         "retenir": "Espérance positive ne signifie pas gain probable : comme la moyenne et la médiane d'une série, $E(X)$ et « le cas le plus fréquent » peuvent être éloignés.",
         "id": "c8b-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "heraclite-b47",
+       "texte": "Ne faisons pas de conjectures au hasard sur les plus grandes choses.",
+       "auteur": "Héraclite",
+       "ref": "fr. B 47 DK (Diogène Laërce, IX, 73)",
+       "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme."
+      }
      }
     ]
    }
@@ -7412,9 +8521,11 @@ var CHAPITRES = [
     ],
     "guides": [
      {
-      "nom": "",
-      "portrait": "grec",
-      "texte": ""
+      "nom": "David Hume (1711 – 1776)",
+      "portrait": "perruque",
+      "texte": "Il existe assurément une probabilité qui naît d'une supériorité des chances d'un côté ; à mesure que cette supériorité augmente […], la probabilité reçoit un accroissement proportionné […]. Si un dé portait une même figure sur quatre faces, et une autre sur les deux restantes, il serait plus probable que la première sorte ; mais s'il avait mille faces marquées de même et une seule différente, la probabilité serait bien plus haute, et notre croyance ou attente de l'événement plus ferme et plus sûre. Ce cheminement de la pensée ou du raisonnement peut sembler banal et évident ; mais, pour qui l'examine de plus près, il offre peut-être matière à de curieuses spéculations.",
+      "source": "Hume, Enquête sur l'entendement humain (1748), section VI, « De la probabilité », § 46 (trad. adaptée)",
+      "glose": "Hume lie la probabilité à la fermeté de l'attente : plus les chances penchent d'un côté, plus la croyance est sûre. Il ajoute que ce raisonnement, banal en apparence, mérite d'être examiné de près. C'est le regard du futur professeur : ce qui te semble évident, l'élève doit le construire, et c'est souvent là que l'erreur se cache."
      }
     ],
     "steles": [
@@ -7449,7 +8560,13 @@ var CHAPITRES = [
         "effet": "passerelle",
         "id": "c8s-s0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "marc-aurele-pensees-7-47",
+       "texte": "Contemple le cours des astres comme si tu courais avec eux, et pense sans cesse aux transformations des éléments les uns dans les autres : ces images lavent la souillure de la vie terre à terre.",
+       "auteur": "Marc Aurèle",
+       "ref": "Pensées, VII, 47"
+      }
      },
      {
       "exercices": [
@@ -7480,7 +8597,14 @@ var CHAPITRES = [
         "retenir": "Pour un temps d'attente tronqué, la dernière valeur regroupe tous les cas restants : vérifier que la somme des probabilités vaut 1.",
         "id": "c8s-s1-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "seneque-lettres-2-2",
+       "texte": "Il faut s'attarder auprès de quelques esprits choisis et s'en nourrir, si l'on veut en tirer quelque chose qui demeure fidèlement dans l'âme. Qui est partout n'est nulle part.",
+       "auteur": "Sénèque",
+       "ref": "Lettres à Lucilius, 2, 2",
+       "note": "Sénèque parle de la lecture : mieux vaut fréquenter longuement quelques auteurs que les parcourir tous. En latin : « Nusquam est qui ubique est. »"
+      }
      },
      {
       "exercices": [
@@ -7529,7 +8653,14 @@ var CHAPITRES = [
         "retenir": "Médiane d'un tableau d'effectifs : chercher le rang central à l'aide des effectifs cumulés croissants, jamais le milieu des valeurs distinctes.",
         "id": "c8s-s2-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "ciceron-tusculanes-2-13",
+       "texte": "Un champ, si fertile soit-il, ne peut porter de fruits sans culture ; il en va de même de l'esprit sans enseignement. Or la culture de l'esprit, c'est la philosophie.",
+       "auteur": "Cicéron",
+       "ref": "Tusculanes, II, 13",
+       "note": "En latin : « cultura autem animi philosophia est »."
+      }
      }
     ],
     "bonus": [
@@ -7574,7 +8705,14 @@ var CHAPITRES = [
         "retenir": "Une valeur égale à la moyenne ne déplace pas la moyenne mais resserre la série : l'écart-type diminue (sauf s'il est nul).",
         "id": "c8s-b0-2"
        }
-      ]
+      ],
+      "maxime": {
+       "id": "pascal-L41",
+       "texte": "Quand on lit trop vite ou trop doucement on n'entend rien.",
+       "auteur": "Pascal",
+       "ref": "Pensées, fr. 41 Lafuma (69 Brunschvicg)",
+       "note": "« Entendre » : comprendre."
+      }
      }
     ]
    }
@@ -7584,6 +8722,94 @@ var CHAPITRES = [
 
 // Le temple de Mnémosyne : le buste et les maximes des salles de révision
 var MNEMOSYNE = {
- "buste": null,
- "maximes": []
+ "buste": {
+  "nom": "Mnémosyne, mère des Muses",
+  "portrait": "chignon",
+  "texte": "Pose donc, pour les besoins du raisonnement, qu'il y a dans nos âmes un bloc de cire, plus grand chez l'un, plus petit chez l'autre, […] d'une cire plus dure chez certains, plus molle chez d'autres. […] Disons que c'est un don de la mère des Muses, Mnémosyne. Tout ce que nous voulons nous rappeler de ce que nous avons vu, entendu ou conçu nous-mêmes, nous l'y imprimons […] comme on imprime la marque des anneaux. Ce qui s'y est empreint, nous nous en souvenons et le savons, tant que son image y demeure ; ce qui s'est effacé, ou n'a pu s'imprimer, nous l'oublions et ne le savons pas.",
+  "source": "Platon, Théétète, 191c-e : Socrate parle à Théétète (trad. adaptée)",
+  "glose": "Socrate imagine en chacun un bloc de cire, don de Mnémosyne : ce qui s'y imprime, on le sait tant que l'empreinte demeure. Ici, chaque exercice revient au moment où son empreinte commence à pâlir. Ne relis pas la correction avant de répondre : c'est l'effort de te souvenir qui creuse la cire."
+ },
+ "maximes": [
+  {
+   "id": "marc-aurele-pensees-5-16",
+   "texte": "Telles sont les choses que tu te représentes souvent, tel sera ton esprit : car l'âme prend la teinture de ses représentations.",
+   "auteur": "Marc Aurèle",
+   "ref": "Pensées, V, 16"
+  },
+  {
+   "id": "zenon-dl-7-37",
+   "texte": "Zénon comparait Cléanthe aux tablettes de cire dure, où l'on a peine à écrire, mais qui gardent ce qu'on y a écrit.",
+   "auteur": "Zénon de Citium",
+   "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 37",
+   "note": "Comparaison rapportée par Diogène Laërce (IIIe siècle apr. J.-C.) ; il dit Cléanthe « laborieux, mais peu doué et excessivement lent » (VII, 170)."
+  },
+  {
+   "id": "platon-menon-81d",
+   "texte": "Rien n'empêche celui qui s'est ressouvenu d'une seule chose […] de retrouver lui-même tout le reste, s'il est courageux et ne se lasse pas de chercher : chercher et apprendre ne sont que réminiscence.",
+   "auteur": "Platon",
+   "ref": "Ménon, 81d",
+   "note": "Paroles de Socrate à Ménon. La coupure omet : « ce que les hommes appellent apprendre »."
+  },
+  {
+   "id": "platon-phedre-275a",
+   "texte": "L'écriture produira l'oubli dans l'âme de ceux qui l'apprendront : se fiant à des marques extérieures, ils ne se ressouviendront plus du dedans, par eux-mêmes. C'est un remède pour le rappel, non pour la mémoire.",
+   "auteur": "Platon",
+   "ref": "Phèdre, 275a",
+   "note": "Le roi égyptien Thamous répond au dieu Theuth, inventeur de l'écriture, dans le mythe que raconte Socrate."
+  },
+  {
+   "id": "platon-lois-747b",
+   "texte": "L'étude des nombres éveille celui qui est par nature somnolent et lent d'esprit ; elle le rend prompt à apprendre, doué de mémoire et vif, et le fait progresser au-delà de sa nature.",
+   "auteur": "Platon",
+   "ref": "Lois, V, 747b",
+   "note": "L'Athénien ajoute que ce progrès se fait « par un art divin »."
+  },
+  {
+   "id": "aristote-analytiques-100a",
+   "texte": "De la sensation naît le souvenir ; du souvenir maintes fois répété d'une même chose naît l'expérience, car beaucoup de souvenirs, par le nombre, font une seule expérience.",
+   "auteur": "Aristote",
+   "ref": "Seconds Analytiques, II, 19, 100a3-6"
+  },
+  {
+   "id": "aristote-memoire-452a3",
+   "texte": "Ce qui possède un certain ordre, comme les mathématiques, se retient aisément ; le reste, mal et difficilement.",
+   "auteur": "Aristote",
+   "ref": "De la mémoire et de la réminiscence, 2, 452a2-4",
+   "note": "Juste avant (451b31), Aristote note que le ressouvenir vient le plus vite et le mieux quand on part du commencement : les choses s'enchaînent, et les mouvements de la mémoire aussi."
+  },
+  {
+   "id": "ciceron-orateur-2-353",
+   "texte": "C'est avant tout l'ordre qui apporte la lumière à la mémoire : il faut donc choisir des lieux et y disposer en esprit les images de ce qu'on veut retenir.",
+   "auteur": "Cicéron",
+   "ref": "De l'orateur, II, 353-354",
+   "note": "Dans le dialogue, c'est l'orateur Marc Antoine qui parle ; selon lui, le poète Simonide de Céos aurait découvert ce principe (« invenisse fertur ») : c'est l'origine de la « méthode des lieux »."
+  },
+  {
+   "id": "ciceron-caton-21",
+   "texte": "« Mais la mémoire diminue. » Sans doute, si on ne l'exerce pas […]. Les vieillards gardent leur esprit, pourvu que demeurent l'ardeur à l'étude et l'application.",
+   "auteur": "Cicéron",
+   "ref": "Caton l'Ancien (De la vieillesse), 21-22",
+   "note": "C'est Caton l'Ancien qui parle dans le dialogue."
+  },
+  {
+   "id": "boece-consolation-3-m11",
+   "texte": "Si la Muse de Platon dit vrai, ce que chacun apprend, il s'en ressouvient après l'avoir oublié.",
+   "auteur": "Boèce",
+   "ref": "Consolation de Philosophie, III, mètre 11, v. 15-16",
+   "note": "Boèce reprend la doctrine platonicienne de la réminiscence (Ménon, Phédon)."
+  },
+  {
+   "id": "augustin-confessions-10-8-15",
+   "texte": "Grande est la puissance de la mémoire […], sanctuaire vaste et infini. […] Et les hommes vont admirer les cimes des montagnes […] et le cours des astres, et se délaissent eux-mêmes.",
+   "auteur": "Augustin",
+   "ref": "Confessions, X, 8, 15"
+  },
+  {
+   "id": "augustin-confessions-10-12-19",
+   "texte": "La mémoire contient aussi les raisons et les lois innombrables des nombres et des dimensions, qu'aucun sens corporel n'y a imprimées : elles n'ont ni couleur, ni son, ni odeur, ni saveur […].",
+   "auteur": "Augustin",
+   "ref": "Confessions, X, 12, 19",
+   "note": "Augustin ajoute : il a vu des lignes tracées par les artisans, fines comme un fil d'araignée, mais les lignes qu'il connaît au-dedans sont d'une autre nature."
+  }
+ ]
 };

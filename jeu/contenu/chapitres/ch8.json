@@ -11,6 +11,15 @@
    "nom": "Le pari de Pascal",
    "notion": "Probabilités conditionnelles, arbres",
    "athena": "Conditionner, c'est changer d'univers : avant tout calcul, demande-toi « sachant quoi ? ».",
+   "guides": [
+    {
+     "nom": "Blaise Pascal (1623 – 1662)",
+     "portrait": "perruque",
+     "texte": "Tout joueur hasarde avec certitude pour gagner avec incertitude ; et néanmoins il hasarde certainement le fini pour gagner incertainement le fini, sans pécher contre la raison. Il n’y a pas infinité de distance entre cette certitude de ce qu’on s’expose et l’incertitude du gain ; cela est faux. Il y a, à la vérité, infinité entre la certitude de gagner et la certitude de perdre. Mais l’incertitude de gagner est proportionnée à la certitude de ce qu’on hasarde, selon la proportion des hasards de gain et de perte.",
+     "source": "Pascal, Pensées, fragment « Infini rien », Lafuma 418 / Brunschvicg 233",
+     "glose": "Le joueur de Pascal ne sait pas s'il gagnera, mais il n'agit pas à l'aveugle : il compare la mise, certaine, au gain, incertain, « selon la proportion des hasards ». Sur un arbre, chaque branche porte une telle proportion ; conditionner, c'est la recalculer dans l'univers réduit que fixe l'information reçue."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,14 @@
        "explication": "L'arbre (aîné, puis cadet) donne quatre issues de probabilité $\\frac{1}{4}$ : fille-fille, fille-garçon, garçon-fille, garçon-garçon. Notons $A$ : « au moins une fille » et $D$ : « deux filles ». Alors $P(A) = \\frac{3}{4}$ et, comme $D \\subset A$, $P(D \\cap A) = P(D) = \\frac{1}{4}$. Donc $P_A(D) = \\frac{1/4}{3/4} = \\frac{1}{3}$. La réponse $\\frac{1}{2}$ serait celle de la question « sachant que l'aînée est une fille » : l'information reçue n'est pas la même.",
        "retenir": "Le conditionnement dépend exactement de l'information reçue : « au moins une fille » et « l'aînée est une fille » ne donnent pas la même probabilité."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-5-reproches",
+      "texte": "Accuser les autres de ses propres échecs est le fait d'un ignorant ; s'en accuser soi-même, de qui commence à s'instruire ; n'accuser ni autrui ni soi-même, de qui est instruit.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 5",
+      "note": "Fin du chapitre qui commence par : « Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses. »"
+     }
     },
     {
      "exercices": [
@@ -66,7 +82,14 @@
        "explication": "Chemins : $P(B \\cap H) = 0{,}5p$ et $P(\\overline{B} \\cap H) = 0{,}2(1 - p)$. L'égalité donne $0{,}5p = 0{,}2 - 0{,}2p$, soit $0{,}7p = 0{,}2$ et $p = \\frac{2}{7}$. On en déduit d'ailleurs $P_H(B) = \\frac{1}{2}$ : la moitié des élèves arrivés avant 7 h viennent en bus, bien que seuls $\\frac{2}{7}$ des élèves le prennent.",
        "retenir": "Un arbre se lit dans les deux sens : avec une inconnue sur une branche, une égalité entre chemins devient une équation."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "poincare-sm-meme-nom",
+      "texte": "La mathématique est l'art de donner le même nom à des choses différentes.",
+      "auteur": "Poincaré",
+      "ref": "Science et méthode, livre I, ch. II (1908)",
+      "note": "Chapitre « L'avenir des mathématiques ». Poincaré amène la formule par : « Je ne sais si je n'ai pas déjà dit quelque part que… »"
+     }
     }
    ],
    "bonus": [
@@ -108,7 +131,14 @@
        "explication": "Faux. Contre-exemple : dé équilibré, $A$ : « obtenir 1 ou 2 », $B$ : « obtenir un nombre pair ». Sachant $B$, seul 2 convient parmi 2, 4, 6 : $P_B(A) = \\frac{1}{3}$ ; sachant $\\overline{B}$, seul 1 convient parmi 1, 3, 5 : $P_{\\overline{B}}(A) = \\frac{1}{3}$. La somme vaut $\\frac{2}{3} \\neq 1$. Ce qui est vrai : $P_B(A) + P_B(\\overline{A}) = 1$, car $P_B$ est une probabilité.",
        "retenir": "$P_B$ est une probabilité : $P_B(A) + P_B(\\overline{A}) = 1$. Mais changer de conditionnement ($B$ puis $\\overline{B}$) ne donne aucune somme connue."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-phedon-91c",
+      "texte": "Souciez-vous peu de Socrate et beaucoup plus de la vérité : si je vous semble dire vrai, accordez-le ; sinon, opposez-moi toutes vos raisons.",
+      "auteur": "Platon",
+      "ref": "Phédon, 91c",
+      "note": "Socrate à Simmias et Cébès, le jour de sa mort."
+     }
     }
    ]
   },
@@ -119,6 +149,15 @@
    "nom": "Le probable de Carnéade",
    "notion": "Probabilités totales, indépendance",
    "athena": "Incompatibles : ils s'excluent. Indépendants : l'un n'apprend rien sur l'autre. Ne confonds jamais ces deux mots.",
+   "guides": [
+    {
+     "nom": "Carnéade de Cyrène (vers 214 – 129 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Il serait contraire à la nature que rien ne fût probable. […] Même le sage que vous mettez en scène suit bien des choses probables, qu’il n’a ni saisies, ni perçues, ni reçues par assentiment, mais qui ressemblent au vrai ; s’il ne leur donnait son approbation, toute vie serait abolie. Quand il monte sur un navire, le sage a-t-il saisi et perçu par l’esprit qu’il naviguera comme il le souhaite ? Comment le pourrait-il ? Mais s’il part d’ici pour Pouzzoles, à trente stades, sur un bon navire, avec un bon pilote, par ce temps calme, il lui paraîtra probable qu’il y arrivera sain et sauf.",
+     "source": "Doctrine rapportée par Cicéron, Lucullus (Premiers Académiques, II), 99-100, d'après Clitomaque (trad. adaptée)",
+     "glose": "Le sage de Carnéade ne peut pas savoir qu'il arrivera ; il juge l'arrivée probable sachant le navire, le pilote et le temps. La formule des probabilités totales fait ce travail avec des nombres : elle envisage chaque circonstance possible, multiplie sa probabilité par la chance de succès qu'elle donne, puis additionne."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -147,7 +186,14 @@
        "retenir": "Bayes « à rebours » : connaître $P_B(U)$ donne $P(B) = \\frac{P(U \\cap B)}{P_B(U)}$, puis l'inconnue par les probabilités totales.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plutarque-progres-76c",
+      "texte": "Comme les marins mesurent leur route au temps et à la force du vent, on peut en philosophie prendre pour preuve du progrès la constance et la continuité de la marche, sans haltes ni bonds.",
+      "auteur": "Plutarque",
+      "ref": "Comment s'apercevoir qu'on progresse dans la vertu, 76C",
+      "note": "Traité des Œuvres morales de Plutarque."
+     }
     },
     {
      "exercices": [
@@ -181,7 +227,14 @@
        "explication": "Par indépendance des lancers, la probabilité de n'obtenir aucun 6 est $\\left(\\frac{5}{6}\\right)^n$, donc celle d'obtenir au moins un 6 est $1 - \\left(\\frac{5}{6}\\right)^n$. Or $\\left(\\frac{5}{6}\\right)^3 = \\frac{125}{216} \\approx 0{,}579 > \\frac{1}{2}$ et $\\left(\\frac{5}{6}\\right)^4 = \\frac{625}{1296} \\approx 0{,}482 < \\frac{1}{2}$. La suite $\\left(\\left(\\frac{5}{6}\\right)^n\\right)$ étant décroissante, le plus petit $n$ est 4 ; la probabilité de gagner vaut alors $\\frac{671}{1296} \\approx 0{,}518$.",
        "retenir": "« Au moins un succès en $n$ essais indépendants de probabilité $p$ » : $1 - (1-p)^n$, jamais $n \\times p$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-colere-3-36-1",
+      "texte": "Sextius, la journée finie, interrogeait son âme : « De quel mal t'es-tu guérie aujourd'hui ? À quel défaut as-tu résisté ? En quoi es-tu meilleure ? »",
+      "auteur": "Sénèque",
+      "ref": "De la colère, III, 36, 1",
+      "note": "Sénèque rapporte l'examen du soir que pratiquait le philosophe Quintus Sextius, et le propose en modèle."
+     }
     }
    ],
    "bonus": [
@@ -223,7 +276,13 @@
        "explication": "Faux. Contre-exemple : on lance un dé équilibré, et $A$ et $B$ sont tous deux l'événement « obtenir 1, 2 ou 3 ». Alors $P_A(B) = 1$ et $P_{\\overline{A}}(B) = 0$, de somme 1, alors que $P(B) = \\frac{1}{2}$. La formule juste pondère : $P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$, qui donne bien $\\frac{1}{2} \\times 1 + \\frac{1}{2} \\times 0 = \\frac{1}{2}$.",
        "retenir": "Probabilités totales : on additionne des chemins (des produits), pas des branches. Oublier les poids $P(A)$ et $P(\\overline{A})$ est l'erreur classique."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-ethique-1094b",
+      "texte": "C'est le propre d'un esprit cultivé de chercher en chaque genre l'exactitude que permet la nature du sujet : accepter d'un mathématicien des vraisemblances, c'est comme exiger d'un orateur des démonstrations.",
+      "auteur": "Aristote",
+      "ref": "Éthique à Nicomaque, I, 3, 1094b23-27"
+     }
     }
    ]
   },
@@ -234,6 +293,15 @@
    "nom": "Le doute de Montaigne",
    "notion": "Variables aléatoires, espérance",
    "athena": "L'espérance n'est pas le gain d'une partie : c'est la moyenne des gains sur un très grand nombre de parties.",
+   "guides": [
+    {
+     "nom": "Michel de Montaigne (1533 – 1592)",
+     "portrait": "renaissance",
+     "texte": "Qu’il [le précepteur] lui fasse tout passer par l’étamine, et ne loge rien en sa tête par simple autorité et à crédit. Les principes d’Aristote ne lui soient principes, non plus que ceux des stoïciens ou épicuriens. Qu’on lui propose cette diversité de jugements : il choisira s’il peut, sinon il en demeurera en doute. […] Les abeilles pillotent deçà delà les fleurs, mais elles en font après le miel, qui est tout leur ; ce n’est plus thym ni marjolaine : ainsi les pièces empruntées d’autrui, il les transformera et confondra, pour en faire un ouvrage tout sien, à savoir son jugement.",
+     "source": "Montaigne, Essais, I, 26, « De l'institution des enfants » (orthographe modernisée)",
+     "glose": "Montaigne veut que l'élève passe tout « par l'étamine » au lieu de croire « à crédit ». Traite ainsi chaque espérance : écris la loi, vérifie que ses probabilités ont pour somme 1, pèse chaque valeur par sa probabilité ; refaite par toi, la formule cesse d'être un emprunt et devient ton jugement."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -263,7 +331,14 @@
        "explication": "Arbre sans remise : deux rouges, $\\frac{2}{5} \\times \\frac{1}{4} = \\frac{1}{10}$ ; exactement une rouge, $\\frac{2}{5} \\times \\frac{3}{4} + \\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{5}$ ; deux vertes, $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{10}$. Donc $E(S) = 20 \\times \\frac{1}{10} + 5 \\times \\frac{3}{5} + 0 = 2 + 3 = 5$. Par linéarité, $E(S - m) = E(S) - m = 5 - m$, qui est nul pour $m = 5$.",
        "retenir": "Jeu équitable : espérance du gain algébrique nulle, c'est-à-dire mise égale à l'espérance de la somme reçue, car $E(S - m) = E(S) - m$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "leibniz-goldbach-musica",
+      "texte": "La musique est un exercice caché d'arithmétique, d'une âme qui ne sait pas qu'elle compte.",
+      "auteur": "Leibniz",
+      "ref": "Lettre à Christian Goldbach, 17 avril 1712",
+      "note": "En latin : « Musica est exercitium arithmeticae occultum nescientis se numerare animi. »"
+     }
     }
    ],
    "bonus": [
@@ -305,7 +380,14 @@
        "explication": "Vrai. $E(X) = \\sum x_i\\,P(X = x_i)$ est une somme de termes positifs ou nuls ; elle n'est nulle que si chaque terme l'est. Pour toute valeur $x_i > 0$, on obtient donc $P(X = x_i) = 0$. Il ne reste que la valeur 0, d'où $P(X = 0) = 1$. Sans l'hypothèse de positivité, c'est faux : si $X$ vaut $-1$ ou $1$ avec probabilité $\\frac{1}{2}$ chacun, $E(X) = 0$ mais $X$ ne prend jamais la valeur 0.",
        "retenir": "Une somme de termes positifs est nulle si et seulement si chaque terme est nul : un argument clé pour l'espérance et la variance."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-52",
+      "texte": "Le premier lieu en philosophie, le plus nécessaire, est l'usage des principes ; le deuxième, les démonstrations ; le troisième, leur confirmation et leur analyse. Or nous nous attardons au troisième et négligeons entièrement le premier.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 52, 1-2",
+      "note": "Exemple d'Épictète : le premier lieu, c'est ne pas mentir ; le deuxième, démontrer qu'il ne faut pas mentir. Or nous mentons, tout en sachant démontrer qu'il ne le faut pas."
+     }
     }
    ],
    "acrobaties": [
@@ -316,7 +398,14 @@
      "unite": "pistoles",
      "indice": "Décris la suite de la partie : A gagne dès qu'il remporte une manche ; B doit en remporter deux de suite. Quelle est la probabilité que A l'emporte ?",
      "explication": "B n'emporte l'enjeu que s'il gagne les deux manches suivantes, avec probabilité $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$ ; A l'emporte donc avec probabilité $\\frac{3}{4}$. La somme reçue par A vaut 64 avec probabilité $\\frac{3}{4}$ et 0 sinon : son espérance est $64 \\times \\frac{3}{4} = 48$ pistoles, et B reçoit 16. C'est le partage proposé par Pascal : on raisonne sur ce qui reste à jouer, non sur les manches passées.",
-     "retenir": "Partager équitablement un jeu interrompu, c'est donner à chacun l'espérance de ce qu'il aurait reçu : on regarde l'avenir, pas le passé."
+     "retenir": "Partager équitablement un jeu interrompu, c'est donner à chacun l'espérance de ce qu'il aurait reçu : on regarde l'avenir, pas le passé.",
+     "maxime": {
+      "id": "diogene-dl-6-34",
+      "texte": "À ceux qui lui disaient : « Tu es vieux, repose-toi », il répondit : « Si je courais la course de fond, faudrait-il ralentir près du but, et non plutôt accélérer ? »",
+      "auteur": "Diogène de Sinope",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 34",
+      "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), environ cinq siècles après Diogène de Sinope."
+     }
     }
    ]
   },
@@ -327,6 +416,15 @@
    "nom": "La suspension de Pyrrhon",
    "notion": "Statistiques : moyenne, médiane, quartiles, écart-type",
    "athena": "Une moyenne sans ses effectifs peut tromper : regarde toujours comment la population se répartit.",
+   "guides": [
+    {
+     "nom": "Pyrrhon d’Élis (vers 365 – vers 275 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "[Pyrrhon] disait que rien n’est beau ni laid, juste ni injuste ; et de même pour toutes choses, que rien n’est tel en vérité, mais que les hommes font tout par convention et par habitude : car chaque chose n’est pas plus ceci que cela. […] Un jour qu’un chien s’élançait sur lui et qu’il avait pris peur, il répondit à qui le lui reprochait qu’il est difficile de dépouiller entièrement l’homme ; mais qu’il faut lutter contre les choses autant qu’on le peut, d’abord par les actes, et, si l’on n’y parvient pas, du moins par la raison.",
+     "source": "Rapporté par Diogène Laërce, Vies et doctrines des philosophes illustres, IX, 61 et 66 (trad. adaptée)",
+     "glose": "Pyrrhon suspendait son jugement devant des apparences qui se contredisent. Le paradoxe de Simpson en offre un exemple : un collège meilleur dans chaque groupe peut paraître moins bon au total. Toi, ne t'arrête pas au doute : regarde les effectifs, et lutte contre l'impression première, « du moins par la raison »."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -360,7 +458,14 @@
        "explication": "Collège A : $90 + 180 = 270$ reçus sur 400, soit 67,5 %. Collège B : $340 + 55 = 395$ reçus sur 500, soit 79 %. A fait mieux dans chaque catégorie, mais B a le meilleur taux global : 80 % de ses élèves sont sans retard, contre 25 % au collège A. C'est un effet de structure (paradoxe de Simpson) : un taux global est une moyenne des taux par catégorie, pondérée par la composition de la population.",
        "retenir": "Effet de structure : comparer des taux globaux sans regarder la composition des populations peut inverser la conclusion (paradoxe de Simpson)."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-2-5",
+      "texte": "À chaque heure, applique-toi fermement, en Romain et en homme, à faire ce que tu as en main avec une gravité exacte et sans affectation […], et à te libérer de toute autre pensée.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, II, 5",
+      "note": "La coupure omet la suite de l'énumération : « avec affection, liberté et justice »."
+     }
     },
     {
      "exercices": [
@@ -390,7 +495,14 @@
        "explication": "$\\overline{x} = \\frac{40}{8} = 5$. Écarts à la moyenne : $-3, -1, -1, -1, 0, 0, 2, 4$, dont les carrés ont pour somme $9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32$ ; donc $\\sigma_x = \\sqrt{\\frac{32}{8}} = 2$. Comme $\\sigma_y = a\\,\\sigma_x$, on obtient $a = \\frac{3}{2}$ ; comme $\\overline{y} = a\\overline{x} + b$, $10 = 7{,}5 + b$, d'où $b = 2{,}5$.",
        "retenir": "Pour $y = ax + b$ : $\\overline{y} = a\\overline{x} + b$ et $\\sigma_y = |a|\\,\\sigma_x$. Une translation des valeurs ne change pas leur dispersion."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "empedocle-b110",
+      "texte": "Si tu les ancres au fond de ton esprit et les contemples avec bienveillance, par des exercices purs, toutes ces choses te resteront présentes ta vie durant, et tu en acquerras bien d'autres.",
+      "auteur": "Empédocle",
+      "ref": "fr. B 110, v. 1-4 DK (Hippolyte, Réfutation de toutes les hérésies, VII, 29, 25-26)",
+      "note": "Empédocle s'adresse à son disciple, sans doute Pausanias, destinataire du poème De la nature."
+     }
     }
    ],
    "bonus": [
@@ -432,7 +544,14 @@
        "explication": "Faux. Contre-exemple : l'année 1, 10 employés à 1 500 € et 10 cadres à 2 500 € : moyenne 2 000 €. L'année 2, 18 employés à 1 600 € et 2 cadres à 2 600 € : moyenne $\\frac{28\\,800 + 5\\,200}{20} = 1\\,700$ €. Les deux moyennes par catégorie ont augmenté de 100 €, mais la moyenne globale baisse, car la part de la catégorie la moins payée a augmenté. C'est un effet de structure.",
        "retenir": "Une moyenne globale dépend des moyennes des groupes et de leurs poids : si la structure change, elle peut évoluer en sens inverse de toutes les moyennes partielles."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-sv-54",
+      "texte": "Il ne faut pas faire semblant de philosopher, mais philosopher pour de bon : nous n'avons pas besoin de paraître en bonne santé, mais de l'être vraiment.",
+      "auteur": "Épicure",
+      "ref": "Sentences vaticanes, 54",
+      "note": "Recueil de sentences d'Épicure et de ses disciples, conservé par un manuscrit du Vatican et publié pour la première fois en 1888."
+     }
     }
    ]
   },
@@ -443,6 +562,15 @@
    "nom": "L'essai de Laplace",
    "notion": "Problème de probabilités (arbre, Bayes, espérance)",
    "athena": "Décris l'arbre avec des mots et nomme chaque formule que tu utilises : chaque question se traite alors seule.",
+   "guides": [
+    {
+     "nom": "Pierre-Simon de Laplace (1749 – 1827)",
+     "portrait": "xixe",
+     "texte": "On voit par cet Essai que la théorie des probabilités n’est au fond que le bon sens réduit au calcul ; elle fait apprécier avec exactitude ce que les esprits justes sentent par une sorte d’instinct, sans qu’ils puissent souvent s’en rendre compte. […] Si l’on observe ensuite que, dans les choses mêmes qui ne peuvent être soumises au calcul, elle donne les aperçus les plus sûrs qui puissent nous guider dans nos jugements, et qu’elle apprend à se garantir des illusions qui souvent nous égarent, on verra qu’il n’est point de science plus digne de nos méditations, et qu’il soit plus utile de faire entrer dans le système de l’instruction publique.",
+     "source": "Laplace, Essai philosophique sur les probabilités (1814), conclusion",
+     "glose": "Laplace ne congédie pas l'intuition : il la soumet au calcul, car la théorie des probabilités « apprend à se garantir des illusions ». Face à l'urne de Pólya, décris l'arbre, nomme les probabilités totales et la formule de Bayes : ton impression deviendra un nombre justifié. Laplace voulait cette science dans l'instruction publique ; bientôt, c'est toi qui l'enseigneras."
+    }
+   ],
    "steles": [
     {
      "boss": "Les oiseaux du lac Stymphale",
@@ -489,7 +617,14 @@
        "explication": "$P(X = 3) = 1 - \\frac{1}{2} - \\frac{3}{10} - \\frac{3}{20} = \\frac{1}{20}$, ce que confirme le chemin $\\frac{1}{4} \\times \\frac{2}{5} \\times \\frac{3}{6} = \\frac{1}{20}$. Donc $E(X) = 0 \\times \\frac{1}{2} + 1 \\times \\frac{3}{10} + 2 \\times \\frac{3}{20} + 3 \\times \\frac{1}{20} = \\frac{6 + 6 + 3}{20} = \\frac{3}{4}$. C'est $3 \\times \\frac{1}{4}$ : chaque tirage donne une verte avec probabilité $\\frac{1}{4}$, malgré la dépendance entre les tirages.",
        "retenir": "Compléter la loi grâce à la somme des probabilités égale à 1, puis $E(X) = \\sum x_i\\,P(X = x_i)$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-104-26",
+      "texte": "Ce n'est pas parce que les choses sont difficiles que nous n'osons pas ; c'est parce que nous n'osons pas qu'elles sont difficiles.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 104, 26",
+      "note": "En latin : « Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt. »"
+     }
     }
    ],
    "bonus": [
@@ -531,7 +666,14 @@
        "explication": "Faux. Contre-exemple : un jeu dont le gain $G$ vaut 10 € avec probabilité $\\frac{1}{4}$ et $-1$ € avec probabilité $\\frac{3}{4}$. Alors $E(G) = \\frac{10}{4} - \\frac{3}{4} = \\frac{7}{4} > 0$, mais $P(G > 0) = \\frac{1}{4} < \\frac{1}{2}$. L'espérance est une moyenne sur un grand nombre de parties ; elle ne dit pas ce qui se produit le plus souvent lors d'une partie.",
        "retenir": "Espérance positive ne signifie pas gain probable : comme la moyenne et la médiane d'une série, $E(X)$ et « le cas le plus fréquent » peuvent être éloignés."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "heraclite-b47",
+      "texte": "Ne faisons pas de conjectures au hasard sur les plus grandes choses.",
+      "auteur": "Héraclite",
+      "ref": "fr. B 47 DK (Diogène Laërce, IX, 73)",
+      "note": "Diogène Laërce cite ce mot parmi ceux qui annoncent le scepticisme."
+     }
     }
    ]
   }
@@ -545,6 +687,15 @@
    "nom": "Le sanctuaire de Hume",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Hume doutait que le passé garantisse l'avenir. Toi, mesure l'incertitude au lieu de la subir, et prépare-toi à l'expliquer.",
+   "guides": [
+    {
+     "nom": "David Hume (1711 – 1776)",
+     "portrait": "perruque",
+     "texte": "Il existe assurément une probabilité qui naît d’une supériorité des chances d’un côté ; à mesure que cette supériorité augmente […], la probabilité reçoit un accroissement proportionné […]. Si un dé portait une même figure sur quatre faces, et une autre sur les deux restantes, il serait plus probable que la première sorte ; mais s’il avait mille faces marquées de même et une seule différente, la probabilité serait bien plus haute, et notre croyance ou attente de l’événement plus ferme et plus sûre. Ce cheminement de la pensée ou du raisonnement peut sembler banal et évident ; mais, pour qui l’examine de plus près, il offre peut-être matière à de curieuses spéculations.",
+     "source": "Hume, Enquête sur l'entendement humain (1748), section VI, « De la probabilité », § 46 (trad. adaptée)",
+     "glose": "Hume lie la probabilité à la fermeté de l'attente : plus les chances penchent d'un côté, plus la croyance est sûre. Il ajoute que ce raisonnement, banal en apparence, mérite d'être examiné de près. C'est le regard du futur professeur : ce qui te semble évident, l'élève doit le construire, et c'est souvent là que l'erreur se cache."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -574,7 +725,13 @@
        "retenir": "La moyenne minimise $\\sum (x - x_i)^2$, et ce minimum vaut $N\\sigma^2$ ; la médiane, elle, minimise $\\sum |x - x_i|$.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-7-47",
+      "texte": "Contemple le cours des astres comme si tu courais avec eux, et pense sans cesse aux transformations des éléments les uns dans les autres : ces images lavent la souillure de la vie terre à terre.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, VII, 47"
+     }
     },
     {
      "exercices": [
@@ -602,7 +759,14 @@
        "explication": "$P(N = 1) = \\frac{1}{6}$ ; $P(N = 2) = \\frac{5}{6} \\times \\frac{1}{6} = \\frac{5}{36}$ ; $P(N = 3) = \\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$, car le troisième lancer a lieu quel que soit son résultat. Vérification : $\\frac{6 + 5 + 25}{36} = 1$. Donc $E(N) = \\frac{6}{36} + 2 \\times \\frac{5}{36} + 3 \\times \\frac{25}{36} = \\frac{6 + 10 + 75}{36} = \\frac{91}{36} \\approx 2{,}53$.",
        "retenir": "Pour un temps d'attente tronqué, la dernière valeur regroupe tous les cas restants : vérifier que la somme des probabilités vaut 1."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-2-2",
+      "texte": "Il faut s'attarder auprès de quelques esprits choisis et s'en nourrir, si l'on veut en tirer quelque chose qui demeure fidèlement dans l'âme. Qui est partout n'est nulle part.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 2, 2",
+      "note": "Sénèque parle de la lecture : mieux vaut fréquenter longuement quelques auteurs que les parcourir tous. En latin : « Nusquam est qui ubique est. »"
+     }
     },
     {
      "exercices": [
@@ -648,7 +812,14 @@
        "explication": "La série rangée compte 15 valeurs ; la médiane est la 8e. Or les 8 premières valeurs valent 0 : la médiane est 0. L'élève a pris la valeur centrale de la liste 0, 1, 2, 3, 4 des valeurs distinctes, comme si chacune avait le même effectif. La moyenne, $\\frac{14}{15} \\approx 0{,}93$, ne vaut pas 2 non plus. Remède : faire calculer les effectifs cumulés croissants (8, 11, 13, 14, 15).",
        "retenir": "Médiane d'un tableau d'effectifs : chercher le rang central à l'aide des effectifs cumulés croissants, jamais le milieu des valeurs distinctes."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-tusculanes-2-13",
+      "texte": "Un champ, si fertile soit-il, ne peut porter de fruits sans culture ; il en va de même de l'esprit sans enseignement. Or la culture de l'esprit, c'est la philosophie.",
+      "auteur": "Cicéron",
+      "ref": "Tusculanes, II, 13",
+      "note": "En latin : « cultura autem animi philosophia est »."
+     }
     }
    ],
    "bonus": [
@@ -690,7 +861,14 @@
        "explication": "Faux. Contre-exemple : la série 0 ; 2 a pour moyenne 1 et pour écart-type $\\sqrt{\\frac{1 + 1}{2}} = 1$. La série 0 ; 1 ; 2 a toujours pour moyenne 1, mais pour écart-type $\\sqrt{\\frac{1 + 0 + 1}{3}} = \\sqrt{\\frac{2}{3}} < 1$. En général, la somme des carrés des écarts est inchangée mais l'effectif passe de $N$ à $N + 1$ : $\\sigma'^2 = \\frac{N}{N+1}\\,\\sigma^2$.",
        "retenir": "Une valeur égale à la moyenne ne déplace pas la moyenne mais resserre la série : l'écart-type diminue (sauf s'il est nul)."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "pascal-L41",
+      "texte": "Quand on lit trop vite ou trop doucement on n'entend rien.",
+      "auteur": "Pascal",
+      "ref": "Pensées, fr. 41 Lafuma (69 Brunschvicg)",
+      "note": "« Entendre » : comprendre."
+     }
     }
    ]
   }

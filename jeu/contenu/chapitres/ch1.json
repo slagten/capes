@@ -11,6 +11,15 @@
    "nom": "Le portique de Chrysippe",
    "notion": "Implication, réciproque, contraposée, équivalence",
    "athena": "Une implication ne promet rien quand son hypothèse est fausse. Avant de conclure, regarde toujours dans quel sens va la flèche.",
+   "guides": [
+    {
+     "nom": "Chrysippe de Soles (vers 280 – vers 206 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Ici Chrysippe, mis en difficulté, espère que les Chaldéens et les autres devins se trompent, et qu'ils n'énonceront pas leurs règles par une conditionnelle : « Si quelqu'un est né au lever de la Canicule, il ne mourra pas en mer », mais qu'ils diront plutôt : « Il n'est pas vrai que quelqu'un soit né au lever de la Canicule et qu'il meure en mer. » […] De même, le géomètre ne dira pas : « Dans la sphère, les grands cercles se coupent mutuellement en deux parties égales », mais plutôt : « Il n'est pas vrai qu'il y ait dans la sphère des grands cercles et qu'ils ne se coupent pas mutuellement en deux parties égales. »",
+     "source": "Rapporté par Cicéron, Du destin, VIII, 15 ; l'exemple du géomètre est de Cicéron (trad. adaptée)",
+     "glose": "La tournure que propose Chrysippe, « il n'est pas vrai que A et non B », est exactement le sens que les mathématiques donnent aujourd'hui à « si A, alors B » : pour réfuter une implication, il te faut et il te suffit d'un cas où A est vrai et B faux. La contraposée, « si non B, alors non A », interdit le même cas : voilà pourquoi elle lui équivaut, alors que la réciproque en interdit un autre."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -44,7 +53,14 @@
        "explication": "Pour $a = 3$ : si $x > 3$, alors $x > 0$ et, la fonction carré étant strictement croissante sur $[0\\,;+\\infty[$, $x^2 > 9$. La proposition est vraie, et elle l'est a fortiori pour tout $a \\geqslant 3$. Pour $a < 3$, $x = 3$ est un contre-exemple : $3 > a$, mais $3^2 = 9$ n'est pas strictement supérieur à $9$. La plus petite valeur est donc $a = 3$.",
        "retenir": "Pour réfuter « pour tout $x$, si $A(x)$, alors $B(x)$ », il suffit d'un $x$ qui vérifie l'hypothèse $A(x)$ sans vérifier la conclusion $B(x)$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "musonius-diatribe-2",
+      "texte": "Nous sommes tous ainsi faits par nature que nous pouvons vivre sans faute et noblement, et non pas l'un de nous oui, l'autre non.",
+      "auteur": "Musonius Rufus",
+      "ref": "Diatribes, II",
+      "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée."
+     }
     },
     {
      "exercices": [
@@ -84,7 +100,14 @@
        "explication": "Si $\\sqrt{x+2} = x$, alors $x + 2 = x^2$, soit $(x - 2)(x + 1) = 0$ : $x = 2$ ou $x = -1$. Ce n'est qu'une implication, il faut vérifier. $\\sqrt{4} = 2$ : $2$ convient. $\\sqrt{1} = 1 \\neq -1$ : $-1$ ne convient pas (une racine carrée est positive). Il y a une seule solution.",
        "retenir": "$A = B \\Rightarrow A^2 = B^2$, mais la réciproque est fausse : après avoir élevé au carré, on vérifie les solutions trouvées."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-entretiens-3-23-30",
+      "texte": "L'école du philosophe est un cabinet de médecin : on ne doit pas en sortir avec plaisir, mais après avoir eu mal.",
+      "auteur": "Épictète",
+      "ref": "Entretiens, III, 23, 30",
+      "note": "Propos d'Épictète notés par son élève Arrien."
+     }
     }
    ],
    "bonus": [
@@ -126,7 +149,14 @@
        "explication": "Vrai. L'implication $P \\Rightarrow Q$ n'est fausse que si $P$ est vraie et $Q$ fausse. Ici $P$ : « $3 < 2$ » est fausse, donc l'implication est vraie, quelle que soit la conclusion.",
        "retenir": "Une implication dont l'hypothèse est fausse est vraie : elle ne promet rien dans ce cas."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "poincare-vds-intuition",
+      "texte": "La logique qui peut seule donner la certitude est l'instrument de la démonstration : l'intuition est l'instrument de l'invention.",
+      "auteur": "Poincaré",
+      "ref": "La Valeur de la science, I, 1",
+      "note": "Chapitre « L'intuition et la logique en mathématiques » (1905)."
+     }
     }
    ]
   },
@@ -137,6 +167,15 @@
    "nom": "L'infini d'Anaxagore",
    "notion": "Fractions, puissances, racines carrées",
    "athena": "Décompose en facteurs premiers, fais sortir les carrés parfaits : le calcul exact récompense la patience, pas la vitesse.",
+   "guides": [
+    {
+     "nom": "Anaxagore de Clazomènes (vers 500 – vers 428 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Toutes choses étaient ensemble, illimitées en nombre et en petitesse. […] Car dans le petit, il n'y a pas de plus petit absolu : il y a toujours plus petit, car ce qui est ne peut pas ne pas être. Mais dans le grand aussi, il y a toujours plus grand. Et le grand est égal au petit en multitude ; et, rapportée à elle-même, chaque chose est à la fois grande et petite.",
+     "source": "Anaxagore, De la nature, fr. B 1 et B 3 DK, cités par Simplicius, Commentaire sur la Physique d'Aristote (trad. adaptée)",
+     "glose": "Ce qu'Anaxagore dit des choses vaut aussi pour les nombres : entre deux fractions, il y en a toujours une autre (leur moyenne, par exemple), et $10^{-n}$ finit par passer sous tout nombre positif donné, comme $10^{n}$ par le dépasser. Une valeur approchée n'est donc qu'une étape : ce que tu écris, c'est la valeur exacte, en fraction irréductible ou en racine simplifiée."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -165,7 +204,14 @@
        "retenir": "Le nombre de zéros finaux d'un entier naturel non nul est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-physique-206b",
+      "texte": "L'infini n'est pas ce en dehors de quoi il n'y a rien, mais ce en dehors de quoi il y a toujours quelque chose.",
+      "auteur": "Aristote",
+      "ref": "Physique, III, 6, 207a1-2",
+      "note": "Aristote vient de dire que l'infini est le contraire de ce qu'on en dit d'ordinaire (206b33)."
+     }
     },
     {
      "exercices": [
@@ -193,7 +239,14 @@
        "explication": "$(2 + \\sqrt{3})^2 = 4 + 4\\sqrt{3} + 3 = 7 + 4\\sqrt{3}$ et $(2 - \\sqrt{3})^2 = 7 - 4\\sqrt{3}$. Donc $\\sqrt{7 + 4\\sqrt{3}} = 2 + \\sqrt{3}$ et $\\sqrt{7 - 4\\sqrt{3}} = |2 - \\sqrt{3}| = 2 - \\sqrt{3}$, car $\\sqrt{3} < 2$. Ainsi $E = 4$.",
        "retenir": "Pour simplifier $\\sqrt{p + q\\sqrt{r}}$, chercher un carré $(a + b\\sqrt{r})^2$ ; et ne jamais oublier que $\\sqrt{u^2} = |u|$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-banquet-210e",
+      "texte": "Celui qui a contemplé les belles choses dans l'ordre et comme il faut apercevra soudain, parvenu au terme, une beauté merveilleuse : celle pour laquelle il avait enduré toutes ses peines.",
+      "auteur": "Platon",
+      "ref": "Banquet, 210e",
+      "note": "Diotime, dont Socrate rapporte les paroles, décrit une ascension qui passe par « la beauté des sciences » (210c)."
+     }
     }
    ],
    "bonus": [
@@ -235,7 +288,14 @@
        "explication": "Vrai. $\\frac{a+1}{b+1} - \\frac{a}{b} = \\frac{b(a+1) - a(b+1)}{b(b+1)} = \\frac{b - a}{b(b+1)}$. Comme $b > a$ et $b > 0$, le numérateur et le dénominateur sont strictement positifs : la différence est strictement positive.",
        "retenir": "Pour comparer deux nombres, étudier le signe de leur différence, écrite sous forme de quotient ou de produit."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plutarque-marcellus-17-5-preuve",
+      "texte": "En cherchant, personne ne trouverait seul la démonstration ; mais dès qu'on l'apprend, on croit qu'on l'aurait trouvée soi-même, tant est lisse et rapide le chemin par lequel il mène au résultat.",
+      "auteur": "Plutarque",
+      "ref": "Vie de Marcellus, 17, 5",
+      "note": "Plutarque parle d'Archimède."
+     }
     }
    ]
   },
@@ -246,6 +306,15 @@
    "nom": "La leçon de Théodore",
    "notion": "Raisonnements : absurde, contre-exemple, disjonction de cas",
    "athena": "Choisis ton arme avant d'écrire : un seul contre-exemple renverse un « pour tout », mais seul un raisonnement général peut l'établir.",
+   "guides": [
+    {
+     "nom": "Platon (428/427 – 348/347 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Théodore que voici nous traçait des figures au sujet des puissances : il nous montrait que celle de trois pieds et celle de cinq pieds ne sont pas commensurables en longueur avec celle d'un pied ; et il les prenait ainsi une par une, jusqu'à celle de dix-sept pieds ; là, je ne sais comment, il s'arrêta. Alors, comme les puissances apparaissaient infinies en nombre, l'idée nous vint d'essayer de les rassembler sous une seule notion, qui nous permettrait de les désigner toutes. — Et vous avez trouvé quelque chose de tel ? — Il me semble que oui ; mais examine, toi aussi.",
+     "source": "Platon, Théétète, 147d-e : Théétète répond à Socrate (trad. adaptée)",
+     "glose": "Théodore montrait l'irrationalité de $\\sqrt{3}$, puis de $\\sqrt{5}$…, un cas après l'autre, et s'arrêta à $\\sqrt{17}$ : aucune liste de cas ne couvre une infinité de nombres. Les jeunes gens cherchent une notion et une preuve qui vaillent pour tous. Quand tu raisonnes par disjonction de cas, vérifie que tes cas, en nombre fini, épuisent toutes les possibilités : c'est à ce prix que la disjonction est une preuve complète."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -285,7 +354,14 @@
        "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. L'implication est vraie quand $a$ et $b$ sont de même signe, fausse quand $a < 0 < b$.",
        "retenir": "Un contre-exemple de « si $P$, alors $Q$ » vérifie $P$ et ne vérifie pas $Q$ : c'est exactement la négation de l'implication."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "heraclite-b40",
+      "texte": "Savoir beaucoup de choses n'enseigne pas à avoir l'intelligence : sinon, cela aurait instruit Hésiode et Pythagore, et aussi Xénophane et Hécatée.",
+      "auteur": "Héraclite",
+      "ref": "Fragments, B 40 DK (cité par Diogène Laërce, IX, 1)",
+      "note": "Héraclite vise des hommes célèbres pour l'étendue de leur savoir."
+     }
     },
     {
      "exercices": [
@@ -323,7 +399,14 @@
        "explication": "On dispose de « 3 divise $p^2$ » et l'on veut conclure « 3 divise $p$ » : il faut l'implication dans ce sens. La première est sa réciproque : vraie, mais inutile ici. La deuxième concerne la parité, pas la divisibilité par 3. La bonne propriété se démontre par contraposée : si $p = 3k + 1$ ou $p = 3k + 2$, alors $p^2 = 3(3k^2 + 2k) + 1$ ou $p^2 = 3(3k^2 + 4k + 1) + 1$, qui n'est pas divisible par 3.",
        "retenir": "Avant d'invoquer une propriété, vérifier son sens : on part de ce que l'on sait pour aller vers ce que l'on veut."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-tusculanes-1-5",
+      "texte": "Chez les Grecs, la géométrie fut tenue en très grand honneur, et rien n'était plus illustre que les mathématiciens ; nous, nous avons borné cet art à l'utilité de mesurer et de calculer.",
+      "auteur": "Cicéron",
+      "ref": "Tusculanes, I, 5",
+      "note": "« Nous » : les Romains, que Cicéron oppose aux Grecs."
+     }
     }
    ],
    "bonus": [
@@ -365,7 +448,14 @@
        "explication": "Vrai. Montrons la contraposée : « si $x$ est rationnel, alors $x^2$ est rationnel ». Si $x = \\frac{p}{q}$ avec $p$, $q$ entiers et $q \\neq 0$, alors $x^2 = \\frac{p^2}{q^2}$ est un quotient d'entiers avec $q^2 \\neq 0$ : il est rationnel. (La réciproque est fausse : $\\sqrt{2}$ est irrationnel, mais $(\\sqrt{2})^2 = 2$ ne l'est pas.)",
        "retenir": "Quand la conclusion est négative (« irrationnel »), la contraposée la rend positive et souvent facile à établir."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "hume-enquete-4-1-euclide",
+      "texte": "Quand il n'y aurait jamais eu dans la nature ni cercle ni triangle, les vérités démontrées par Euclide garderaient pour toujours leur certitude et leur évidence.",
+      "auteur": "Hume",
+      "ref": "Enquête sur l'entendement humain, IV, 1, § 20",
+      "note": "Écrit en anglais (1748). Paragraphe 20 selon Selby-Bigge ; 4.1 dans l'édition Beauchamp."
+     }
     }
    ],
    "acrobaties": [
@@ -381,7 +471,13 @@
      ],
      "indice": "Comme $\\sqrt{4} = 2$, la conclusion est fausse : une étape l'est aussi. Teste chaque implication avec $p = 2$ et $q = 1$.",
      "explication": "L'étape (b) utilise « si 4 divise $p^2$, alors 4 divise $p$ », qui est fausse : $p = 2$ donne $p^2 = 4$, divisible par 4, alors que 4 ne divise pas 2. La propriété analogue est vraie pour un nombre premier comme 2 ou 3, pas pour 4. Les étapes (a), (c) et (d) sont correctes.",
-     "retenir": "« Si $d$ divise $p^2$, alors $d$ divise $p$ » est vrai pour $d$ premier, faux en général ($d = 4$, $p = 2$). Une preuve qui démontre une absurdité contient une faille."
+     "retenir": "« Si $d$ divise $p^2$, alors $d$ divise $p$ » est vrai pour $d$ premier, faux en général ($d = 4$, $p = 2$). Une preuve qui démontre une absurdité contient une faille.",
+     "maxime": {
+      "id": "marc-aurele-pensees-6-21",
+      "texte": "Qu'on me prouve que je pense ou agis mal, je changerai avec joie : je cherche la vérité, qui n'a jamais nui à personne. On se nuit en persistant dans son erreur et son ignorance.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, VI, 21"
+     }
     }
    ]
   },
@@ -392,6 +488,15 @@
    "nom": "Le carré d'Aristote",
    "notion": "Quantificateurs et négation",
    "athena": "Pour nier, change chaque « pour tout » en « il existe » et inversement, garde l'ordre, puis ne nie que la propriété finale.",
+   "guides": [
+    {
+     "nom": "Aristote (384 – 322 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "J'appelle opposées de façon contradictoire l'affirmation et la négation dont l'une signifie l'universel et l'autre, de la même chose, que ce n'est pas universellement : ainsi « tout homme est blanc » et « ce n'est pas tout homme qui est blanc » ; « aucun homme n'est blanc » et « quelque homme est blanc ». J'appelle contraires l'affirmation universelle et la négation universelle : ainsi « tout homme est blanc » et « aucun homme n'est blanc » […]. C'est pourquoi ces dernières ne peuvent être vraies ensemble, alors que leurs opposées peuvent parfois l'être à propos du même sujet, comme « ce n'est pas tout homme qui est blanc » et « quelque homme est blanc ».",
+     "source": "Aristote, De l'interprétation, 7, 17b16-25 (trad. adaptée)",
+     "glose": "« Ce n'est pas tout homme qui est blanc » veut dire « quelque homme n'est pas blanc » : c'est la négation de « tout homme est blanc », alors que « aucun homme n'est blanc » n'en est que le contraire. De même, la négation de « pour tout $x$, $P(x)$ » est « il existe $x$ tel que non $P(x)$ ». Retiens : deux propositions contraires peuvent être fausses ensemble ; de deux contradictoires, une exactement est vraie."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -437,7 +542,14 @@
        "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation de « si $A$, alors $B$ » n'est pas « si $A$, alors non $B$ » : c'est « $A$ et non $B$ ».",
        "retenir": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ » : c'est l'existence d'un contre-exemple, pas une autre implication."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "empedocle-b17",
+      "texte": "Allons, écoute mes paroles : car l'étude fait grandir l'esprit.",
+      "auteur": "Empédocle",
+      "ref": "Fragments, B 17, 14 DK (cité par Simplicius, Commentaire sur la Physique)",
+      "note": "Une partie des manuscrits de Simplicius porte « méthè », l'ivresse ; les éditeurs retiennent « mathè », l'étude."
+     }
     },
     {
      "exercices": [
@@ -471,7 +583,14 @@
        "explication": "On échange $\\forall$ et $\\exists$ sans changer ni l'ordre ni le domaine : « $\\exists \\varepsilon > 0,\\ \\forall n \\in \\mathbb{N},\\ \\frac{1}{n+1} \\geqslant \\varepsilon$ ». Nier « $\\varepsilon > 0$ » est l'erreur classique : c'est le domaine, pas la propriété. Une autre option n'échange pas les quantificateurs, une autre inverse leur ordre. Ici, la proposition de départ est vraie (pour $\\varepsilon$ donné, un entier $n > \\frac{1}{\\varepsilon}$ convient), donc sa négation est fausse.",
        "retenir": "« $\\forall \\varepsilon > 0$ » se nie en « $\\exists \\varepsilon > 0$ » : la condition sur $\\varepsilon$ reste, seule la propriété finale est niée."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-84-7",
+      "texte": "Ce que nous avons puisé, ne le laissons pas intact, pour qu'il ne nous reste pas étranger. Digérons-le : autrement il ira dans la mémoire, non dans l'intelligence.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 84, 6-7",
+      "note": "Lettre des abeilles : ce qu'on lit doit être digéré comme la nourriture."
+     }
     }
    ],
    "bonus": [
@@ -513,7 +632,14 @@
        "explication": "Faux. Contre-exemple : $n = 1$. Il faudrait un entier $m$ tel que $1 < m < 2$, et il n'en existe pas. (Pour $n \\geqslant 2$, $m = n + 1$ convient car $n + 1 < 2n$, mais un seul cas suffit à rendre la proposition fausse.)",
        "retenir": "Pour tester un « pour tout », essayer d'abord les cas limites : la plus petite valeur, 0, 1, les cas d'égalité."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-1-7",
+      "texte": "De Rusticus : lire avec exactitude, sans me contenter d'une compréhension approximative, et ne pas donner trop vite mon assentiment aux bavards.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, I, 7",
+      "note": "Le livre I énumère ce que Marc Aurèle doit à ses maîtres ; Rusticus lui fit connaître les leçons d'Épictète."
+     }
     }
    ]
   },
@@ -524,6 +650,15 @@
    "nom": "Le procès d'Euathle",
    "notion": "Inégalités, valeur absolue, encadrements",
    "athena": "Chaque inégalité se justifie : signe du multiplicateur, sens de variation, carré positif. L'Hydre ne pardonne aucune étape sautée.",
+   "guides": [
+    {
+     "nom": "Protagoras d'Abdère (vers 490 – vers 420 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Euathle, jeune homme riche, désirait apprendre l'éloquence et plaider. Il se mit à l'école de Protagoras, lui paya aussitôt la moitié du salaire, et s'engagea à verser le reste le premier jour où il aurait plaidé devant des juges et gagné. […] Protagoras lui fit un procès pour être payé. Devant les juges, il commença ainsi : « Apprends, jeune insensé, que de toute façon tu me paieras, que le jugement soit rendu contre toi ou pour toi. Si tu perds, le salaire me sera dû par la sentence, parce que j'aurai gagné ; si l'on juge en ta faveur, il me sera dû par le contrat, parce que tu auras gagné. »",
+     "source": "Rapporté par Aulu-Gelle, Nuits attiques, V, 10, 5-10 ; aussi par Diogène Laërce, IX, 56 (trad. adaptée)",
+     "glose": "Protagoras raisonne par cas : perdre ou gagner, il sera payé. Mais il change de règle d'un cas à l'autre, la sentence ici, le contrat là, et Euathle, raconte Aulu-Gelle, n'a eu qu'à l'imiter pour retourner l'argument. Un raisonnement qui gagne à tous les coups mérite qu'on vérifie chaque pas : avant de passer des carrés aux nombres eux-mêmes, assure-toi qu'ils sont positifs."
+    }
+   ],
    "steles": [
     {
      "boss": "L'Hydre de Lerne",
@@ -577,7 +712,13 @@
        "explication": "$a + h = \\frac{25}{10} + \\frac{24}{10} = \\frac{49}{10}$, donc $a' = \\frac{49}{20}$ et $h' = \\frac{2 \\times 6}{49/10} = \\frac{120}{49}$. Alors $a' - h' = \\frac{49 \\times 49 - 120 \\times 20}{980} = \\frac{2401 - 2400}{980} = \\frac{1}{980}$. On obtient $\\frac{120}{49} < \\sqrt{6} < \\frac{49}{20}$, encadrement de longueur environ $0{,}001$, contre $0{,}1$ au départ.",
        "retenir": "Remplacer $a$ et $h$ par leurs moyennes arithmétique et harmonique conserve le produit $ah$ et resserre très vite l'encadrement de $\\sqrt{ah}$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-1-3",
+      "texte": "Tout, Lucilius, nous est étranger ; seul le temps est à nous. C'est de ce seul bien, fugitif et glissant, que la nature nous a mis en possession.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 1, 3"
+     }
     }
    ],
    "bonus": [
@@ -619,7 +760,14 @@
        "explication": "Faux. Contre-exemple : $x = 0$. On a $|0| < 2$, mais $x^2 = 0$ et $2|x| = 0$ : l'inégalité stricte $0 < 0$ est fausse. (Pour $x \\neq 0$, elle est vraie : $x^2 = |x| \\times |x| < 2|x|$ car $|x| > 0$.)",
        "retenir": "Multiplier une inégalité stricte par $|x|$ exige $|x| > 0$ : toujours penser au cas $x = 0$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "chrysippe-dl-7-182",
+      "texte": "À quelqu'un qui lui reprochait de ne pas suivre avec la foule les leçons d'Ariston, Chrysippe répondit : « Si j'avais écouté la foule, je n'aurais pas fait de philosophie. »",
+      "auteur": "Chrysippe",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 182",
+      "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.)."
+     }
     }
    ]
   }
@@ -633,6 +781,15 @@
    "nom": "Le sanctuaire de Parménide",
    "notion": "Problèmes difficiles et regard de futur professeur",
    "athena": "Ici, deviner ne suffit plus : chaque réponse doit pouvoir se démontrer, et chaque erreur d'élève se comprendre.",
+   "guides": [
+    {
+     "nom": "Parménide d'Élée (né vers 515 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Allons, je vais te dire — et toi, recueille la parole que tu auras entendue — quelles sont les seules voies de recherche qui se laissent penser. L'une : qu'il est, et qu'il n'est pas possible qu'il ne soit pas ; c'est le chemin de la Persuasion, car elle accompagne la Vérité. L'autre : qu'il n'est pas, et qu'il est nécessaire qu'il ne soit pas ; ce sentier-là, je te le dis, est entièrement inconnaissable : car tu ne saurais connaître ce qui n'est pas — on n'y parvient pas — ni le dire.",
+     "source": "Parménide, De la nature, fr. B 2 DK, cité par Proclus et Simplicius : la déesse parle au jeune homme (trad. adaptée)",
+     "glose": "La déesse ne laisse que deux voies, qui s'excluent : « est » ou « n'est pas ». On y entend déjà le tiers exclu, ressort du raisonnement par l'absurde : si l'une des voies mène à une contradiction, il ne reste que l'autre. Devant une classe, tu devras rendre ce ressort visible : dire quelle hypothèse tu poses, et ce qu'elle contredit."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -660,7 +817,14 @@
        "explication": "Analyse : $f(f(x)) = m(mx + p) + p = m^2 x + (m + 1)p$. Par identification, $m^2 = 4$ et $(m + 1)p = 9$. Si $m = 2$, $p = 3$ ; si $m = -2$, $-p = 9$, soit $p = -9$. Synthèse : $f(x) = 2x + 3$ donne $2(2x + 3) + 3 = 4x + 9$, et $f(x) = -2x - 9$ donne $-2(-2x - 9) - 9 = 4x + 9$. Il y a deux solutions.",
        "retenir": "Analyse-synthèse : l'analyse fournit des conditions nécessaires (des candidats), la synthèse vérifie qu'ils conviennent vraiment."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-88-13",
+      "texte": "Tu sais ce qu'est une ligne droite : à quoi te sert-il de le savoir, si tu ignores ce qui est droit dans la vie ?",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 88, 13",
+      "note": "Dans une lettre sur les arts libéraux, où Sénèque interroge le géomètre."
+     }
     },
     {
      "exercices": [
@@ -694,7 +858,13 @@
        "retenir": "$\\sqrt{n+1} - \\sqrt{n} = \\frac{1}{\\sqrt{n+1} + \\sqrt{n}}$ : l'expression conjuguée change une différence délicate en un quotient facile à encadrer.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-metaphysique-1078a",
+      "texte": "Ils se trompent, ceux qui prétendent que les mathématiques ne disent rien du beau : ses formes majeures sont l'ordre, la symétrie et le défini, que les mathématiques montrent au plus haut point.",
+      "auteur": "Aristote",
+      "ref": "Métaphysique, M, 3, 1078a31-b1"
+     }
     },
     {
      "exercices": [
@@ -740,7 +910,13 @@
        "explication": "L'égalité « pour tous $a$ et $b$ » est fausse, et un contre-exemple le prouve : $(1 + 1)^2 = 4$ alors que $1^2 + 1^2 = 2$. Mais elle est vraie lorsque $ab = 0$, comme dans l'exemple de l'élève : dire « jamais égal » est donc faux. Quant à « vrai pour les nombres positifs », $a = b = 1$ le réfute.",
        "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité, et une égalité fausse en général peut être vraie pour certaines valeurs : les quantificateurs font la différence."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "pascal-L737",
+      "texte": "On se persuade mieux, pour l'ordinaire, par les raisons qu'on a soi-même trouvées, que par celles qui sont venues dans l'esprit des autres.",
+      "auteur": "Pascal",
+      "ref": "Pensées, fr. 737 Lafuma (10 Brunschvicg)"
+     }
     }
    ],
    "bonus": [
@@ -782,7 +958,14 @@
        "explication": "Vrai. Par l'inégalité triangulaire, $|x| = |(x - y) + y| \\leqslant |x - y| + |y|$, donc $|x| - |y| \\leqslant |x - y|$. En échangeant $x$ et $y$ : $|y| - |x| \\leqslant |y - x| = |x - y|$. Un réel $t$ tel que $t \\leqslant m$ et $-t \\leqslant m$ vérifie $|t| \\leqslant m$ : d'où le résultat.",
        "retenir": "Inégalité triangulaire et sa forme renversée : $\\big||x| - |y|\\big| \\leqslant |x - y| \\leqslant |x| + |y|$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "leibniz-monadologie-33",
+      "texte": "Quand une vérité est nécessaire, on peut en trouver la raison par l'analyse, la résolvant en idées et en vérités plus simples jusqu'à ce qu'on vienne aux primitives.",
+      "auteur": "Leibniz",
+      "ref": "Monadologie, § 33",
+      "note": "Écrit en français (1714)."
+     }
     }
    ]
   }

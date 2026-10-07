@@ -11,6 +11,15 @@
    "nom": "La goutte de Lucrèce",
    "notion": "Définition et propriétés algébriques",
    "athena": "L'exponentielle change les sommes en produits : $e^{a+b} = e^{a}e^{b}$. Toutes ses règles de calcul en découlent, comme pour les puissances du collège.",
+   "guides": [
+    {
+     "nom": "Lucrèce (vers 98 – vers 55 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Au fil des années, avec le retour des soleils, l'anneau s'amincit au doigt qui le porte ; la goutte qui tombe creuse la pierre ; le soc de fer recourbé de la charrue décroît en secret dans les champs. […] Nous voyons donc que ces choses diminuent, puisqu'elles s'usent ; mais quels corps s'en détachent à chaque instant, la nature jalouse nous a fermé la vue. Enfin, tout ce que le temps et la nature ajoutent peu à peu aux choses, en les forçant à croître avec mesure, aucun regard, si perçant soit-il, ne peut le voir.",
+     "source": "Lucrèce, De la nature, I, 311-314 et 319-324 (trad. adaptée)",
+     "glose": "Lucrèce ne voit pas ce qui se détache de l'anneau à chaque instant ; il le déduit de l'usure accumulée. L'exponentielle est définie de même par une loi d'instant en instant : sa vitesse de variation égale sa valeur, $f' = f$, avec $f(0) = 1$. Les propriétés que tu manies ensuite, comme $e^{a+b} = e^{a}e^{b}$ ou $e^{x} > 0$, se démontrent toutes à partir de cette loi."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,14 @@
        "explication": "Avec $a = 1$, $b = 0$ : $f(1) = f(1)f(0)$, et $f(1) = 3 \\neq 0$, donc $f(0) = 1$. Avec $a = 1$, $b = -1$ : $f(0) = f(1)f(-1)$, donc $f(-1) = \\frac{1}{3}$. Enfin, avec $a = b = -1$ : $f(-2) = f(-1)^{2} = \\frac{1}{9}$. C'est la relation fonctionnelle de l'exponentielle : ici $f(n) = 3^{n}$ pour tout entier $n$.",
        "retenir": "Si $f(a+b) = f(a)f(b)$ pour tous réels $a$ et $b$, et si $f$ n'est pas la fonction nulle, alors $f(0) = 1$ et $f(-a) = \\frac{1}{f(a)}$ : c'est le comportement des puissances."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "montaigne-1-26-cent-visages",
+      "texte": "Que ce qu'il viendra d'apprendre, il le lui fasse mettre en cent visages et accommoder à autant de divers sujets, pour voir s'il l'a encore bien pris et bien fait sien.",
+      "auteur": "Montaigne",
+      "ref": "Essais, I, 26, « De l'institution des enfants »",
+      "note": "« Il » désigne le précepteur, « lui » l'élève. Chapitre I, 25 dans l'édition de 1595."
+     }
     },
     {
      "exercices": [
@@ -72,7 +88,14 @@
        "explication": "La dérivée d'un produit et celle de $x \\mapsto f(-x)$ donnent $g'(x) = f'(x)f(-x) - f(x)f'(-x) = f(x)f(-x) - f(x)f(-x) = 0$. Donc $g$ est constante sur $\\mathbb{R}$, égale à $g(0) = f(0)^{2} = 1$ : $f(x)f(-x) = 1$, donc $f(x) \\neq 0$. Les rédactions qui affirment $f > 0$ supposent ce qu'il faut démontrer ; celle qui écrit $+f(x)f'(-x)$ oublie le facteur $-1$.",
        "retenir": "Pour tout réel $x$, $e^{x} \\times e^{-x} = 1$ : l'exponentielle ne s'annule jamais, et $e^{-x} = \\frac{1}{e^{x}}$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-9-29",
+      "texte": "N'espère pas la République de Platon, mais sois content si la moindre chose avance.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, IX, 29",
+      "note": "La fin de la phrase, lue diversement selon les éditions, n'est pas traduite ici."
+     }
     }
    ],
    "bonus": [
@@ -114,7 +137,14 @@
        "explication": "Faux. La fonction nulle vérifie $f' = f$ sans être l'exponentielle ; de même, $f(x) = 2e^{x}$ vérifie $f'(x) = 2e^{x} = f(x)$, mais $f(0) = 2$. Il manque la condition $f(0) = 1$ : les fonctions telles que $f' = f$ sont exactement les fonctions $x \\mapsto Ce^{x}$, $C$ réel (car la dérivée de $x \\mapsto f(x)e^{-x}$ est alors nulle).",
        "retenir": "L'exponentielle est caractérisée par deux conditions : $f' = f$ et $f(0) = 1$. Sans la seconde, il y a une infinité de solutions."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "pascal-esprit-geometrique-methode",
+      "texte": "Cette véritable méthode […] consisterait en deux choses principales : l'une, de n'employer aucun terme dont on n'eût auparavant expliqué nettement le sens ; l'autre, de n'avancer jamais aucune proposition qu'on ne démontrât par des vérités déjà connues.",
+      "auteur": "Pascal",
+      "ref": "De l'esprit géométrique et de l'art de persuader, section I",
+      "note": "Coupure : « qui formerait les démonstrations dans la plus haute excellence, s'il était possible d'y arriver »."
+     }
     }
    ]
   },
@@ -125,6 +155,15 @@
    "nom": "Les leçons de Musonius",
    "notion": "Équations et inéquations",
    "athena": "L'exponentielle est strictement croissante : $e^{a} = e^{b}$ équivaut à $a = b$, et $e^{a} < e^{b}$ à $a < b$. Ramène-toi toujours à cette forme.",
+   "guides": [
+    {
+     "nom": "Musonius Rufus (vers 30 – vers 100)",
+     "portrait": "grec",
+     "texte": "La vertu, disait-il, est une science non seulement théorique, mais aussi pratique, comme la médecine et la musique. Le médecin et le musicien ne doivent pas seulement avoir acquis les principes de leur art, mais aussi s'être exercés à agir selon eux ; de même, celui qui doit devenir homme de bien ne doit pas seulement apprendre à fond les leçons qui mènent à la vertu, mais aussi s'y exercer avec ardeur et sans ménager sa peine. Comment, en effet, deviendrait-on aussitôt tempérant, si l'on savait seulement qu'il ne faut pas se laisser vaincre par les plaisirs, sans être exercé à leur résister ?",
+     "source": "Musonius Rufus, Diatribes, VI, « Sur l'exercice », leçon notée par un élève et conservée par Stobée, Anthologie, III, 29, 78 (trad. adaptée)",
+     "glose": "Savoir que $e^{a} < e^{b}$ équivaut à $a < b$, c'est connaître la théorie ; l'appliquer quand l'équation se déguise (un carré dans l'exposant, un second degré en $e^{x}$) demande de l'exercice. Comme le musicien de Musonius, tu ne possèdes vraiment la règle qu'après l'avoir pratiquée assez pour reconnaître seul la forme à laquelle te ramener."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -153,7 +192,14 @@
        "retenir": "Équation en $e^{2x}$ et $e^{x}$ : poser $X = e^{x}$ (avec $X > 0$), résoudre le second degré, puis revenir à $x$.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "antisthene-dl-6-7",
+      "texte": "Comme on lui demandait quel savoir est le plus nécessaire, il répondit : « Celui qui dispense d'avoir à désapprendre. »",
+      "auteur": "Antisthène",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 7",
+      "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.). Le grec, très elliptique, se comprend de plusieurs façons ; on lit aussi simplement : « Désapprendre. »"
+     }
     },
     {
      "exercices": [
@@ -181,7 +227,14 @@
        "explication": "$x^{2} - 9$ est négatif sur $[-3\\,;3]$ et positif ailleurs ; $e^{x} - 1$ est du signe de $x$, car $e^{x} > 1 \\iff x > 0$. Le produit est négatif ou nul sur $]-\\infty\\,;-3] \\cup [0\\,;3]$. Dans $[-6\\,;6]$, les entiers solutions sont $-6$, $-5$, $-4$, $-3$, $0$, $1$, $2$ et $3$ : il y en a $8$.",
        "retenir": "Un produit se traite par un tableau de signes, une ligne par facteur, sans oublier les valeurs qui l'annulent."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "weil-etudes-attention",
+      "texte": "La formation de la faculté d'attention est le but véritable et presque l'unique intérêt des études.",
+      "auteur": "Simone Weil",
+      "ref": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu, 1942",
+      "note": "Recueilli dans Attente de Dieu (1950). La phrase commence par « Bien qu'aujourd'hui on semble l'ignorer, »."
+     }
     }
    ],
    "bonus": [
@@ -223,7 +276,14 @@
        "explication": "Vrai. Par stricte croissance de l'exponentielle, $e^{1/x} > e^{1}$ équivaut à $\\frac{1}{x} > 1$, avec $x \\neq 0$. Si $x < 0$, alors $\\frac{1}{x} < 0 < 1$ : pas de solution. Si $x > 0$, on multiplie par $x > 0$ : $1 > x$. L'ensemble des solutions est bien $]0\\,;1[$.",
        "retenir": "Avant de multiplier une inégalité par $x$, connaître le signe de $x$ ; sinon, distinguer les cas."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-fins-5-48",
+      "texte": "Si grand est l'amour de la connaissance et du savoir qui est né avec nous, que nul ne peut douter que la nature humaine y soit entraînée sans l'appât d'aucun profit.",
+      "auteur": "Cicéron",
+      "ref": "Des fins des biens et des maux, V, 48",
+      "note": "Dans le dialogue, c'est Pison qui parle, au nom de l'Ancienne Académie."
+     }
     }
    ]
   },
@@ -234,6 +294,15 @@
    "nom": "Le banquet de Plutarque",
    "notion": "Dérivées et études de fonctions",
    "athena": "La règle d'or : la dérivée de $e^{u}$ est $u'e^{u}$. L'exposant ne bouge pas ; sa dérivée vient multiplier.",
+   "guides": [
+    {
+     "nom": "Plutarque (vers 46 – vers 125)",
+     "portrait": "grec",
+     "texte": "Exhortons les paresseux, une fois l'essentiel saisi, à composer par eux-mêmes le reste […] et, recevant la parole d'autrui comme un principe et une semence, à la nourrir et à la faire croître. Car l'esprit n'a pas besoin, comme un vase, d'être rempli : comme le bois, il lui faut seulement de quoi l'allumer, pour faire naître en lui l'élan de la découverte et le désir du vrai. Comme celui qui, venu chercher du feu chez ses voisins, en trouverait un grand et brillant et resterait là jusqu'au bout à se chauffer, ainsi fait celui qui écoute sans croire qu'il doive allumer sa propre lumière et sa propre pensée.",
+     "source": "Plutarque, Comment il faut écouter (Œuvres morales), 18, 48b-d (trad. adaptée, dernière phrase abrégée)",
+     "glose": "Le cours ne te donne qu'une semence : la dérivée de $e^{u}$ est $u'e^{u}$. Une étude de fonction la fait croître : dériver, mettre $e^{x}$ en facteur, étudier le signe de ce qui reste, conclure. Mène ces étapes toi-même avant d'ouvrir une correction ; la lire sans avoir cherché, c'est se chauffer au feu du voisin."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -261,7 +330,14 @@
        "explication": "$f'(x) = a\\,e^{ax}$ et $f''(x) = a^{2}e^{ax}$. La condition s'écrit $(a^{2} + a - 6)e^{ax} = 0$ pour tout réel $x$ ; comme $e^{ax} > 0$, elle équivaut à $a^{2} + a - 6 = 0$, soit $(a - 2)(a + 3) = 0$. Donc $a = 2$ ou $a = -3$ ; la valeur positive est $2$.",
        "retenir": "Pour $f(x) = e^{ax}$, dériver revient à multiplier par $a$ : $f' = af$ et $f'' = a^{2}f$. Une telle équation se ramène au second degré."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-ethique-1103a",
+      "texte": "Ce qu'il faut avoir appris pour le faire, nous l'apprenons en le faisant : c'est en construisant qu'on devient constructeur, et en jouant de la cithare qu'on devient cithariste.",
+      "auteur": "Aristote",
+      "ref": "Éthique à Nicomaque, II, 1, 1103a32-34",
+      "note": "Aristote l'applique aussitôt aux vertus : c'est en accomplissant des actions justes qu'on devient juste."
+     }
     },
     {
      "exercices": [
@@ -289,7 +365,14 @@
        "explication": "$f_k'(x) = e^{x} + (x+k)e^{x} = (x+k+1)e^{x}$, donc $f_k(0) = k$ et $f_k'(0) = k+1$. La tangente a pour équation $y = (k+1)x + k$. Elle passe par $A(-3\\,;0)$ si et seulement si $0 = -3(k+1) + k = -2k - 3$, soit $k = -\\frac{3}{2}$.",
        "retenir": "Tangente en $a$ : $y = f'(a)(x-a) + f(a)$. « Le point est sur la droite » se traduit par une équation d'inconnue le paramètre."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "parmenide-b4",
+      "texte": "Contemple pourtant par l'intelligence les choses absentes comme fermement présentes.",
+      "auteur": "Parménide",
+      "ref": "Fragments, B 4, 1 DK (cité par Clément d'Alexandrie, Stromates, V, 15, 5)",
+      "note": "Fr. 2 dans la 1re édition de Diels (1903). Clément cite ce vers à propos de l'espérance, qui voit par l'esprit ce qui est à venir."
+     }
     }
    ],
    "bonus": [
@@ -331,7 +414,14 @@
        "explication": "Vrai. Pour tout réel $x$, $-x^{2} \\le 0$, donc $e^{-x^{2}} \\le e^{0} = 1$ par croissance de l'exponentielle, avec égalité pour $x = 0$. La dérivée $-2x\\,e^{-x^{2}}$, du signe de $-x$, confirme : la fonction croît sur $]-\\infty\\,;0]$ puis décroît sur $[0\\,;+\\infty[$.",
        "retenir": "Comparer les exposants suffit parfois : $u(x) \\le 0$ entraîne $e^{u(x)} \\le 1$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "lucrece-1-140",
+      "texte": "Ton mérite et le plaisir espéré d'une douce amitié me font endurer toute peine et veiller les nuits sereines, cherchant par quels mots, par quels vers porter devant ton esprit une claire lumière.",
+      "auteur": "Lucrèce",
+      "ref": "De la nature, I, 140-144",
+      "note": "Lucrèce s'adresse à Memmius, dédicataire du poème, et dit la peine de rendre en vers latins les découvertes obscures des Grecs."
+     }
     }
    ],
    "acrobaties": [
@@ -347,7 +437,14 @@
      ],
      "indice": "Teste l'affirmation « $e^{x} \\ge 1$ » pour $x = -1$.",
      "explication": "L'étape (3) est fausse : $e^{x} \\ge 1$ seulement pour $x \\ge 0$ ; par exemple $e^{-1} < 1$. En réalité, $g'(x)$ a le signe de $x$ : $g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$, donc son minimum est $g(0) = 0$, et $g(x) \\ge 0$ pour tout réel $x$. L'étape (4) est d'ailleurs fautive elle aussi : si $g$ est croissante, $g(x) \\le g(0)$ pour $x \\le 0$. La conclusion est vraie, mais la preuve de l'élève ne vaut que pour $x \\ge 0$.",
-     "retenir": "Pour tout réel $x$, $e^{x} \\ge 1 + x$ : la courbe de exp est au-dessus de sa tangente en 0. On le prouve par un minimum, pas par une croissance globale."
+     "retenir": "Pour tout réel $x$, $e^{x} \\ge 1 + x$ : la courbe de exp est au-dessus de sa tangente en 0. On le prouve par un minimum, pas par une croissance globale.",
+     "maxime": {
+      "id": "platon-apologie-21d",
+      "texte": "Il semble que je sois un peu plus sage que lui en ceci même : ce que je ne sais pas, je ne crois pas non plus le savoir.",
+      "auteur": "Platon",
+      "ref": "Apologie de Socrate, 21d",
+      "note": "Socrate parle, après avoir interrogé un homme réputé sage. La formule « je sais que je ne sais rien » ne figure pas telle quelle chez Platon."
+     }
     }
    ]
   },
@@ -358,6 +455,15 @@
    "nom": "Le tonneau de Diogène",
    "notion": "Suites et modèles exponentiels",
    "athena": "À durées égales, facteurs égaux : $e^{(n+1)a} = e^{a} \\times e^{na}$. Une grandeur qui varie proportionnellement à elle-même suit un modèle exponentiel.",
+   "guides": [
+    {
+     "nom": "Diogène de Sinope (vers 413 – vers 323 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Comme il se chauffait au soleil au Cranéion, Alexandre s'arrêta devant lui et lui dit : « Demande-moi ce que tu veux. » Et lui : « Cesse de me faire de l'ombre. » Quelqu'un lisait un long ouvrage ; comme, vers la fin du livre, il montrait un endroit sans écriture : « Courage, mes amis, dit Diogène, je vois la terre ! » À celui qui soutenait que le mouvement n'existe pas, il répondit en se levant et en se mettant à marcher. En plein jour, il allumait une lampe et allait partout en disant : « Je cherche un homme. »",
+     "source": "Anecdotes rapportées par Diogène Laërce (IIIe s. apr. J.-C.), Vies et doctrines des philosophes illustres, VI, 38-39 et 41 (trad. adaptée)",
+     "glose": "À qui niait le mouvement, Diogène répond par un fait : il se lève et marche. Un modèle exponentiel se juge aussi sur pièces : calcule ce qu'il prévoit (une population, une température, une concentration) et confronte-le aux mesures. Une affirmation sur une suite se teste de même sur quelques termes, avant d'être démontrée ou réfutée."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -385,7 +491,14 @@
        "explication": "$f'(x) = 2x\\,e^{-x} - x^{2}e^{-x} = x(2-x)e^{-x}$. Sur $[0\\,;+\\infty[$, $f'$ est positive sur $[0\\,;2]$ et négative sur $[2\\,;+\\infty[$ : $f$ croît strictement puis décroît strictement, avec un maximum en $2$. Comme $u_n = f(n)$ et que $2$ est un entier, le plus grand terme est $u_2 = 4e^{-2} \\approx 0{,}54$.",
        "retenir": "Si $u_n = f(n)$ et si $f$ est monotone sur $[p\\,;+\\infty[$, alors $(u_n)$ a la même monotonie à partir du rang $p$ ; la réciproque est fausse."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "condorcet-esquisse-perfectibilite",
+      "texte": "Montrer, par le raisonnement et par les faits, qu'il n'a été marqué aucun terme au perfectionnement des facultés humaines ; que la perfectibilité de l'homme est réellement indéfinie.",
+      "auteur": "Condorcet",
+      "ref": "Esquisse d'un tableau historique des progrès de l'esprit humain, introduction (1795)",
+      "note": "La phrase continue : ces progrès n'ont « d'autre terme que la durée du globe où la nature nous a jetés »."
+     }
     },
     {
      "exercices": [
@@ -415,7 +528,14 @@
        "explication": "$C(6) = \\frac{C_0}{4}$ donne $e^{-6k} = \\frac{1}{4}$, soit $(e^{-3k})^{2} = \\frac{1}{4}$, donc $e^{-3k} = \\frac{1}{2}$ car $e^{-3k} > 0$ : la concentration est divisée par 2 toutes les 3 heures. Alors $\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3} = e^{-9k}$, et comme $t \\mapsto e^{-kt}$ est strictement décroissante, $C(t) = \\frac{C_0}{8}$ équivaut à $t = 9$.",
        "retenir": "Dans un modèle exponentiel, la durée de division par 2 (demi-vie) est constante : trois demi-vies divisent par $2^{3} = 8$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plutarque-progres-76d",
+      "texte": "Les planètes, disent les mathématiciens, deviennent stationnaires quand leur marche s'arrête ; en philosophie, il n'y a pas de station : notre nature, comme une balance, penche vers le meilleur ou glisse vers le pire.",
+      "auteur": "Plutarque",
+      "ref": "Comment s'apercevoir qu'on progresse dans la vertu (Œuvres morales), 76D-E",
+      "note": "Les astronomes appelaient « station » le moment où une planète semble s'arrêter dans le ciel."
+     }
     }
    ],
    "bonus": [
@@ -457,7 +577,14 @@
        "explication": "Vrai. $u_{n+1} - u_n = e^{na}(e^{a} - 1)$ est du signe de $e^{a} - 1$, c'est-à-dire du signe de $a$, qui ne dépend pas de $n$. Si $a > 0$, la suite est croissante ; si $a < 0$, elle est décroissante ; si $a = 0$, elle est constante.",
        "retenir": "Sens de variation d'une suite : étudier le signe de $u_{n+1} - u_n$ et vérifier qu'il ne dépend pas de $n$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-questions-naturelles-7-25-4",
+      "texte": "Un jour viendra où le temps et l'application d'une durée plus longue mettront en lumière ce qui est aujourd'hui caché. Pour rechercher de si grandes choses, une seule vie ne suffit pas.",
+      "auteur": "Sénèque",
+      "ref": "Questions naturelles, VII, 25, 4",
+      "note": "À propos des comètes, dont on ignorait encore les lois du retour."
+     }
     }
    ]
   },
@@ -468,6 +595,15 @@
    "nom": "La quête de Xénophane",
    "notion": "Problème : étude complète d'une fonction avec exponentielle",
    "athena": "Signe, dérivée, variations, tangente, extremum : une étude complète. N'oublie aucune branche du tableau avant de conclure.",
+   "guides": [
+    {
+     "nom": "Xénophane de Colophon (vers 570 – vers 475 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Les dieux n'ont pas tout dévoilé aux mortels dès l'origine ; mais, en cherchant, ceux-ci trouvent avec le temps ce qui est meilleur. […] Quant à la vérité certaine, aucun homme ne l'a vue, et il n'y aura personne qui la connaisse, sur les dieux et sur tout ce dont je parle : car même s'il lui arrivait, par chance, de dire la chose la plus parfaitement vraie, lui-même pourtant ne le saurait pas ; mais sur toutes choses s'étend l'opinion.",
+     "source": "Xénophane, fr. B 18 DK (cité par Stobée, Choix de textes, I, 8, 2) et fr. B 34 DK (cité par Sextus Empiricus, Contre les savants, VII, 49) (trad. adaptée)",
+     "glose": "Xénophane voit la recherche avancer avec le temps : une étude complète se mène ainsi, question après question, du signe jusqu'au minimum. Il ajoute que l'opinion s'étend sur toutes choses. En mathématiques pourtant, c'est la démonstration qui permet de savoir qu'on a dit vrai : un tableau de variations justifié, non une courbe entrevue."
+    }
+   ],
    "steles": [
     {
      "boss": "Céléno, reine des Harpies",
@@ -520,7 +656,13 @@
        "explication": "Sur $[-3\\,;+\\infty[$, $f$ décroît puis croît : le minimum y est $f(1) = (1-3)e = -2e$. Sur $]-\\infty\\,;-3]$, $x^{2} \\ge 9$, donc $f(x) = (x^{2}-3)e^{x} > 0 > -2e$. Le minimum de $f$ sur $\\mathbb{R}$ est donc $-2e$, atteint en $1$ : $k = -2$. Il ne fallait pas oublier la branche $]-\\infty\\,;-3]$, où $f$ croît : il faut y comparer $f$ à $-2e$.",
        "retenir": "Un minimum local ne devient global qu'après comparaison avec toutes les autres branches du tableau de variations."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-4-49",
+      "texte": "Sois semblable au promontoire contre lequel les flots se brisent sans cesse : lui reste debout, et autour de lui s'apaise le bouillonnement des eaux.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, IV, 49"
+     }
     }
    ],
    "bonus": [
@@ -562,7 +704,14 @@
        "explication": "Faux. La négation de « pour tout $x$, $P(x)$ » est « il existe $x$ tel que non $P(x)$ », et la négation de $e^{x} > x$ est $e^{x} \\le x$. La négation correcte est donc « il existe un réel $x$ tel que $e^{x} \\le x$ ». L'énoncé initial est d'ailleurs vrai, puisque $e^{x} \\ge 1 + x > x$.",
        "retenir": "Nier « pour tout $x$, $f(x) > g(x)$ » donne « il existe $x$ tel que $f(x) \\le g(x)$ » : le cas d'égalité change de camp."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "chrysippe-dl-7-179",
+      "texte": "Chrysippe disait souvent à Cléanthe qu'il n'avait besoin que de l'enseignement des doctrines : les démonstrations, il les trouverait lui-même.",
+      "auteur": "Chrysippe",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 179",
+      "note": "Rapporté par Diogène Laërce (IIIe s. apr. J.-C.), qui ajoute que Chrysippe se repentait chaque fois qu'il s'en était pris à son maître."
+     }
     }
    ]
   }
@@ -576,6 +725,15 @@
    "nom": "Le sanctuaire de Kant",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Ici, les outils de Terminale sont permis, et chaque énoncé qui les utilise le signale. Puis vient le regard du professeur : comprendre l'erreur avant de la corriger.",
+   "guides": [
+    {
+     "nom": "Emmanuel Kant (1724 – 1804)",
+     "portrait": "perruque",
+     "texte": "Je crois que la mathématique a longtemps tâtonné, surtout chez les Égyptiens, et que ce changement est dû à une révolution qu'accomplit l'idée heureuse d'un seul homme, dans un essai après lequel on ne pouvait plus manquer la voie à suivre. […] Pour le premier qui démontra le triangle isocèle (qu'il s'appelât Thalès ou comme on voudra), la lumière se fit : il comprit qu'il ne devait pas épier ce qu'il voyait dans la figure, ni même son simple concept, pour en apprendre pour ainsi dire les propriétés, mais les produire par ce que lui-même, d'après des concepts, y introduisait a priori par la pensée et présentait (par construction).",
+     "source": "Kant, Critique de la raison pure, préface de la 2e éd. (1787), B XI-XII (trad. adaptée ; « isocèle » selon la correction de Kant, lettre à Schütz du 25 juin 1787)",
+     "glose": "Pour Kant, la mathématique sort du tâtonnement le jour où l'on renonce à épier la figure pour en produire les propriétés à partir du concept. L'élève qui « vérifie » $e^{x} > x^{2}$ sur cinq valeurs en est encore à épier ; ton travail de professeur sera de lui montrer qu'une propriété se démontre, et qu'un seul contre-exemple bien choisi suffit à la réfuter."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -605,7 +763,14 @@
        "retenir": "Un extremum se lit sur un changement de signe de $f'$, pas sur la seule annulation de $f'$.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-academie-inscription",
+      "texte": "Que nul ignorant de la géométrie n'entre ici.",
+      "auteur": "Inscription de l'Académie (tradition tardive)",
+      "ref": "Jean Philopon, Commentaire sur le traité De l'âme d'Aristote, p. 117, 26-27 Hayduck",
+      "note": "Rapportée par Jean Philopon (VIe s. apr. J.-C.), près de neuf siècles après la fondation de l'Académie ; rien n'indique que Platon l'ait écrite."
+     }
     },
     {
      "exercices": [
@@ -634,7 +799,14 @@
        "retenir": "« Combien de tangentes passent par $A$ ? » revient à « combien de solutions a l'équation d'inconnue $a$ ? » : c'est une étude de fonction.",
        "temps": 420
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plutarque-marcellus-17-5-travail",
+      "texte": "Les uns attribuent cela au génie naturel de l'homme ; d'autres pensent que c'est à force d'un immense travail que chacun de ses résultats paraît obtenu sans peine et avec aisance.",
+      "auteur": "Plutarque",
+      "ref": "Vie de Marcellus, 17, 5",
+      "note": "Il s'agit d'Archimède, qui résolvait les questions les plus difficiles de la géométrie par les principes les plus simples."
+     }
     },
     {
      "exercices": [
@@ -680,7 +852,14 @@
        "explication": "Pour $x = -1$ : $e^{-1} = \\frac{1}{e} < 1 = (-1)^{2}$, car $e > 1$. L'affirmation est donc fausse. Les autres valeurs vérifient l'inégalité (par exemple $e^{-0{,}1} \\approx 0{,}90 > 0{,}01$) et ne prouvent rien. Leçon pour la classe : des exemples ne démontrent pas un énoncé universel, alors qu'un seul contre-exemple suffit à le réfuter.",
        "retenir": "Énoncé « pour tout » : des exemples ne prouvent rien, un contre-exemple réfute. Le chercher là où l'intuition est la plus fragile."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-7-8",
+      "texte": "Fréquente ceux qui te rendront meilleur, accueille ceux que tu peux rendre meilleurs. Cela se fait dans les deux sens : en enseignant, les hommes apprennent.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 7, 8",
+      "note": "En latin : « homines dum docent discunt »."
+     }
     }
    ],
    "bonus": [
@@ -722,7 +901,14 @@
        "explication": "Faux. Pour $x = -1$ : $1 + x + \\frac{x^{2}}{2} = \\frac{1}{2}$, alors que $e^{-1} = \\frac{1}{e} < \\frac{1}{2}$ car $e > 2$. L'inégalité est vraie pour $x \\ge 0$, mais pas sur $\\mathbb{R}$ tout entier.",
        "retenir": "Une inégalité vraie sur $[0\\,;+\\infty[$ peut être fausse sur $\\mathbb{R}$ : toujours tester des réels négatifs."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-theetete-150d",
+      "texte": "Ceux qui me fréquentent […] font des progrès étonnants ; et il est clair qu'ils n'ont jamais rien appris de moi, mais qu'ils ont trouvé d'eux-mêmes et enfanté beaucoup de belles choses.",
+      "auteur": "Platon",
+      "ref": "Théétète, 150d",
+      "note": "Socrate décrit son art d'accoucheur des esprits ; la coupure omet que ces progrès viennent « à ceux à qui le dieu le permet »."
+     }
     }
    ]
   }

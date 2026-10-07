@@ -11,6 +11,15 @@
    "nom": "L'école d'Épictète",
    "notion": "Taux d'accroissement, nombre dérivé",
    "athena": "Le nombre dérivé n'est pas une formule : c'est la limite d'un taux d'accroissement. Quand les règles de calcul se taisent, reviens à la définition.",
+   "guides": [
+    {
+     "nom": "Épictète (vers 50 – vers 135)",
+     "portrait": "grec",
+     "texte": "Rien de grand ne naît tout d'un coup, pas même la grappe de raisin ni la figue. Si tu me dis maintenant : « Je veux une figue », je te répondrai : « Il faut du temps. » Laisse-la d'abord fleurir, puis porter son fruit, puis mûrir. Le fruit du figuier ne s'achève pas tout d'un coup ni en une heure, et le fruit de l'esprit d'un homme, tu voudrais l'acquérir en si peu de temps et si facilement ? N'y compte pas, même si c'est moi qui te le dis.",
+     "source": "Épictète, Entretiens (leçons notées par Arrien), I, 15, 7-8 (trad. adaptée)",
+     "glose": "Épictète refuse la figue « tout d'un coup » : une croissance se mesure sur une durée. C'est ce que fait le taux d'accroissement, variation de $f$ divisée par l'écart $h$. Le nombre dérivé, vitesse de variation en un seul point, n'est que la limite de ces taux quand $h$ tend vers 0 : tu n'y accèdes qu'en passant par eux."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,13 @@
        "explication": "Pour $h = 0$ : $|f(1) - 2| \\leq 0$, donc $f(1) = 2$. Pour $h \\neq 0$, en divisant par $|h|$ : $\\left|\\frac{f(1+h) - f(1)}{h} - 4\\right| \\leq |h|$. Le taux d'accroissement tend donc vers 4 quand $h$ tend vers 0 : $f$ est dérivable en 1 et $f'(1) = 4$.",
        "retenir": "Pour obtenir un nombre dérivé, il suffit d'encadrer le taux d'accroissement : si $|\\tau(h) - \\ell| \\leq |h|$, alors $\\tau(h)$ tend vers $\\ell$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-5-1",
+      "texte": "À l'aube, quand tu as peine à te lever, aie cette pensée sous la main : je m'éveille pour faire œuvre d'homme.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, V, 1"
+     }
     },
     {
      "exercices": [
@@ -73,7 +88,14 @@
        "explication": "Ici $f(1) = 1^2 = 1$. Pour $h < 0$, le taux vaut $\\frac{(1+h)^2 - 1}{h} = 2 + h$, qui tend vers 2. Pour $h > 0$, il vaut $\\frac{a(1+h) + b - 1}{h} = a + \\frac{a + b - 1}{h}$ : il n'a de limite finie que si $a + b - 1 = 0$, et vaut alors $a$. La dérivabilité en 1 impose donc $a + b = 1$ et $a = 2$, d'où $b = -1$ ; réciproquement, pour $a = 2$ et $b = -1$, les deux taux tendent vers 2. La droite $y = 2x - 1$ est la tangente à la parabole au point d'abscisse 1.",
        "retenir": "Raccord sans « angle » en un point : les taux d'accroissement à gauche et à droite doivent avoir la même limite finie, ce qui raccorde les valeurs, puis les pentes."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "lucrece-1-146",
+      "texte": "Cette terreur de l'esprit et ces ténèbres, ce ne sont pas les rayons du soleil ni les traits lumineux du jour qui doivent les dissiper, mais la vue de la nature et son explication.",
+      "auteur": "Lucrèce",
+      "ref": "De la nature, I, 146-148",
+      "note": "Ces trois vers reviennent comme un refrain en II, 59-61, en III, 91-93 et en VI, 39-41."
+     }
     }
    ],
    "bonus": [
@@ -115,7 +137,14 @@
        "explication": "Vrai. Comme $g$ n'est définie que sur $[0\\,;+\\infty[$, seuls les $h > 0$ interviennent : $\\frac{g(h) - g(0)}{h} = \\frac{h\\sqrt{h}}{h} = \\sqrt{h}$, qui tend vers 0. Donc $g$ est dérivable en 0 et $g'(0) = 0$, bien que la racine carrée ne le soit pas : la formule du produit ne permettait pas de conclure, il fallait revenir à la définition.",
        "retenir": "En un point où un facteur n'est pas dérivable, les formules ne concluent rien : on revient au taux d'accroissement."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-apologie-38a",
+      "texte": "Le plus grand bien pour un homme est de s'entretenir chaque jour de la vertu […] ; une vie sans examen ne vaut pas d'être vécue.",
+      "auteur": "Platon",
+      "ref": "Apologie de Socrate, 38a",
+      "note": "Socrate à ses juges, après le verdict, pour dire pourquoi il ne peut pas se taire."
+     }
     }
    ]
   },
@@ -126,6 +155,15 @@
    "nom": "L'éternité de Plotin",
    "notion": "Tangente à une courbe",
    "athena": "La tangente en $a$ passe par le point $(a\\,;f(a))$ et a pour pente $f'(a)$ : $y = f'(a)(x - a) + f(a)$. Deux nombres suffisent à la tracer.",
+   "guides": [
+    {
+     "nom": "Plotin (205 – 270)",
+     "portrait": "grec",
+     "texte": "Le temps dirait de lui-même à peu près ceci : avant d'avoir engendré cet « avant » et d'avoir eu besoin de l'« après », il reposait avec l'éternité dans l'être ; il n'était pas le temps, mais là, lui aussi se tenait en repos. Mais une nature remuante, qui voulait se gouverner et être à elle-même, et qui choisit de chercher plus que le présent, se mit en mouvement, et le temps avec elle. Nous, toujours en mouvement vers l'« ensuite » et l'« après », vers l'autre et non le même, puis vers un autre encore, avons fait un long chemin et fabriqué le temps, image de l'éternité.",
+     "source": "Plotin, Ennéades, III, 7 (« De l'éternité et du temps »), 11 (trad. adaptée)",
+     "glose": "Chez Plotin, le temps naît quand l'âme, « remuante », veut « plus que le présent » et se tourne vers l'« après ». La tangente répond au même besoin : au point $(a\\,;f(a))$, la seule position ne dit rien du mouvement ; la pente $f'(a)$ donne la direction où la courbe s'en va. Pour tracer une tangente, il te faut toujours ces deux nombres."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -154,7 +192,14 @@
        "retenir": "Pour montrer qu'une quantité « ne dépend pas de $a$ », on calcule avec $a$ quelconque jusqu'au bout : le paramètre doit disparaître.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "proclus-euclide-84",
+      "texte": "« Une figure et une marche, non une figure et trois oboles » : la géométrie digne d'étude est celle qui, à chaque théorème nouveau, dresse une marche pour monter et élève l'âme.",
+      "auteur": "Proclus",
+      "ref": "Commentaire sur le premier livre des Éléments d'Euclide, prologue II, p. 84 Friedlein",
+      "note": "Devise des pythagoriciens, rapportée et commentée par Proclus (Ve siècle apr. J.-C.)."
+     }
     },
     {
      "exercices": [
@@ -182,7 +227,14 @@
        "explication": "La tangente en $a$ est $y = 2a(x - a) + a^2 = 2ax - a^2$. Elle passe par $A$ si $-\\frac{1}{4} = 4a - a^2$, soit $a^2 - 4a - \\frac{1}{4} = 0$. Le discriminant vaut $16 + 1 = 17 > 0$ : deux solutions $a_1$ et $a_2$, de produit $-\\frac{1}{4}$. Les coefficients directeurs $2a_1$ et $2a_2$ ont pour produit $4a_1a_2 = -1$ : les deux tangentes sont perpendiculaires. C'est vrai pour tout point de la droite $y = -\\frac{1}{4}$, directrice de $\\mathcal{P}$.",
        "retenir": "Dans un repère orthonormé, deux droites de coefficients directeurs $m$ et $m'$ sont perpendiculaires si et seulement si $mm' = -1$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-protreptique-jamblique-6",
+      "texte": "Pour philosopher, on n'a besoin ni d'instruments ni de lieux : où que l'on applique sa pensée sur la terre habitée, on touche partout la vérité, comme si elle était présente.",
+      "auteur": "Aristote (attribué)",
+      "ref": "Protreptique, fragment (Jamblique, Protreptique, 6)",
+      "note": "Transmis sans nom d'auteur par Jamblique (vers 300 apr. J.-C.) ; attribué à Aristote par les éditeurs modernes. « Toucher » se dit en latin tangere, d'où « tangente »."
+     }
     }
    ],
    "bonus": [
@@ -224,7 +276,14 @@
        "explication": "Faux. Les tangentes aux points d'abscisses $a$ et $b$ ont pour coefficients directeurs $2a$ et $2b$ ; elles sont parallèles si et seulement si $2a = 2b$, c'est-à-dire $a = b$. Deux points distincts de la parabole ont des abscisses distinctes, donc des tangentes non parallèles.",
        "retenir": "Pour nier « il existe », on démontre un « pour tout » : ici, deux abscisses distinctes donnent toujours deux pentes distinctes."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-brevete-14-2",
+      "texte": "Il nous est permis de discuter avec Socrate, de douter avec Carnéade, de nous reposer avec Épicure, de vaincre la nature humaine avec les stoïciens.",
+      "auteur": "Sénèque",
+      "ref": "De la brièveté de la vie, 14, 2",
+      "note": "Carnéade (IIe siècle av. J.-C.), de la Nouvelle Académie, savait plaider le pour et le contre d'une même thèse."
+     }
     }
    ]
   },
@@ -235,6 +294,15 @@
    "nom": "La méthode de Descartes",
    "notion": "Dérivées usuelles et opérations",
    "athena": "Avant de dériver, nomme la forme : somme, produit, quotient ou $x \\mapsto g(ax + b)$. La forme reconnue dicte la formule.",
+   "guides": [
+    {
+     "nom": "René Descartes (1596 – 1650)",
+     "portrait": "perruque",
+     "texte": "Le premier était de ne recevoir jamais aucune chose pour vraie que je ne la connusse évidemment être telle […]. Le second, de diviser chacune des difficultés que j'examinerais en autant de parcelles qu'il se pourrait, et qu'il serait requis pour les mieux résoudre. Le troisième, de conduire par ordre mes pensées, en commençant par les objets les plus simples et les plus aisés à connaître, pour monter peu à peu, comme par degrés, jusques à la connaissance des plus composés […]. Et le dernier, de faire partout des dénombrements si entiers et des revues si générales, que je fusse assuré de ne rien omettre.",
+     "source": "Descartes, Discours de la méthode (1637), IIe partie (orthographe modernisée)",
+     "glose": "Dériver une expression compliquée, c'est appliquer le deuxième et le troisième précepte : la diviser en sommes, produits, quotients et formes $g(ax + b)$, puis remonter des dérivées usuelles jusqu'à la fonction entière. Le dernier précepte, celui des dénombrements, c'est ta relecture : n'oublie aucun terme, ni le facteur $a$ de $g(ax + b)$."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -262,7 +330,14 @@
        "explication": "Avec $f(x) = (x - 1)g(x)$ : $f'(x) = g(x) + (x - 1)g'(x)$, donc $f'(1) = g(1) = (-1)(-2)(-3) = -6$. Développer le polynôme de degré 4 aurait été long et source d'erreurs.",
        "retenir": "Si $f(x) = (x - a)g(x)$ avec $g$ dérivable, alors $f'(a) = g(a)$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "kant-krv-a133-jugement",
+      "texte": "L'entendement peut être instruit et équipé de règles, mais le jugement est un talent particulier, qui ne veut pas être enseigné, mais seulement exercé.",
+      "auteur": "Kant",
+      "ref": "Critique de la raison pure, A 133 / B 172",
+      "note": "Kant ajoute (A 134 / B 173) : « Telle est la seule et grande utilité des exemples : ils aiguisent le jugement »."
+     }
     },
     {
      "exercices": [
@@ -290,7 +365,14 @@
        "explication": "$f'(x) = \\frac{2x(x - 1) - (x^2 + a)}{(x - 1)^2} = \\frac{x^2 - 2x - a}{(x - 1)^2}$. La condition $f'(3) = 0$ donne $9 - 6 - a = 0$, soit $a = 3$. Vérification : $f'(x) = \\frac{(x - 3)(x + 1)}{(x - 1)^2}$ s'annule bien en 3.",
        "retenir": "Tangente horizontale au point d'abscisse $x_0$ $\\iff$ $f'(x_0) = 0$ ; avec un paramètre, cette condition devient une équation."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "weil-etudes-exercice-manque",
+      "texte": "S'astreindre rigoureusement à regarder en face, à contempler avec attention, pendant longtemps, chaque exercice scolaire manqué, dans toute la laideur de sa médiocrité.",
+      "auteur": "Simone Weil",
+      "ref": "Réflexions sur le bon usage des études scolaires en vue de l'amour de Dieu (1942)",
+      "note": "La phrase continue : « sans se chercher aucune excuse, […] et en essayant de remonter à l'origine de chaque faute »."
+     }
     }
    ],
    "bonus": [
@@ -332,7 +414,13 @@
        "explication": "Vrai. Pour $x > 0$, $\\sqrt{4x} = 2\\sqrt{x}$, de dérivée $2 \\times \\frac{1}{2\\sqrt{x}} = \\frac{1}{\\sqrt{x}}$. On le retrouve avec la règle de $g(ax + b)$ : $4 \\times \\frac{1}{2\\sqrt{4x}} = \\frac{4}{4\\sqrt{x}} = \\frac{1}{\\sqrt{x}}$. La réponse tentante $\\frac{1}{2\\sqrt{4x}}$ oublie le facteur 4.",
        "retenir": "Avant de dériver, simplifier ($\\sqrt{4x} = 2\\sqrt{x}$) ; et contrôler un résultat par une seconde méthode."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-entretiens-2-17-1",
+      "texte": "Quelle est la première tâche de qui philosophe ? Se défaire de la présomption : car il est impossible de commencer à apprendre ce que l'on croit savoir.",
+      "auteur": "Épictète",
+      "ref": "Entretiens, II, 17, 1"
+     }
     }
    ],
    "acrobaties": [
@@ -342,7 +430,14 @@
      "reponse": 80,
      "indice": "Écris 32 comme une puissance de 2, et relis la définition du nombre dérivé.",
      "explication": "Comme $32 = 2^5$, le quotient s'écrit $\\frac{f(x) - f(2)}{x - 2}$ avec $f(x) = x^5$ : c'est le taux d'accroissement de $f$ entre 2 et $x$. Puisque $f$ est dérivable en 2, sa limite est $f'(2) = 5 \\times 2^4 = 80$. La factorisation $x^5 - 32 = (x - 2)(x^4 + 2x^3 + 4x^2 + 8x + 16)$ donne le même résultat, plus laborieusement.",
-     "retenir": "Une limite de la forme $\\frac{f(x) - f(a)}{x - a}$ quand $x$ tend vers $a$ est un nombre dérivé : reconnaître le taux d'accroissement dispense du calcul."
+     "retenir": "Une limite de la forme $\\frac{f(x) - f(a)}{x - a}$ quand $x$ tend vers $a$ est un nombre dérivé : reconnaître le taux d'accroissement dispense du calcul.",
+     "maxime": {
+      "id": "aristote-analytiques-71a",
+      "texte": "Tout enseignement et tout apprentissage intellectuel viennent d'une connaissance préexistante : c'est manifestement ainsi que s'acquièrent les sciences mathématiques, et chacun des autres arts.",
+      "auteur": "Aristote",
+      "ref": "Seconds Analytiques, I, 1, 71a1-4",
+      "note": "Première phrase du traité."
+     }
     }
    ]
   },
@@ -353,6 +448,15 @@
    "nom": "Le calcul de Leibniz",
    "notion": "Variations, extremums",
    "athena": "Le signe de $f'$ sur un intervalle donne les variations. Cherche les extremums là où $f'$ change de signe, et n'oublie jamais les bornes.",
+   "guides": [
+    {
+     "nom": "Gottfried Wilhelm Leibniz (1646 – 1716)",
+     "portrait": "perruque",
+     "texte": "On comprend par là, de façon admirable, comment, dans l'origine même des choses, s'exerce une sorte de mathématique divine ou de mécanisme métaphysique, et comment la détermination du maximum y a lieu. Ainsi, en géométrie, parmi tous les angles, c'est l'angle droit qui est déterminé ; ainsi les liquides placés parmi des corps d'une autre nature prennent la figure la plus capace, c'est-à-dire la sphère ; mais surtout, dans la mécanique ordinaire elle-même, quand plusieurs corps pesants luttent entre eux, il en résulte enfin le mouvement par lequel se fait, au total, la plus grande descente.",
+     "source": "Leibniz, De l'origine radicale des choses (1697), éd. Gerhardt, Philosophische Schriften, t. VII, p. 304 (trad. adaptée)",
+     "glose": "Leibniz lit l'origine même des choses comme un problème de maximum. Son premier mémoire publié sur le calcul différentiel (1684) a d'ailleurs pour titre « Nouvelle méthode pour les maximums et les minimums, ainsi que pour les tangentes… ». La méthode de cette salle en découle : un extremum intérieur se cherche là où la dérivée s'annule, et se confirme par son changement de signe."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -380,7 +484,14 @@
        "explication": "$f'(x) = 3x^2 - 6ax + 3 = 3(x^2 - 2ax + 1)$. Ce trinôme est positif ou nul sur $\\mathbb{R}$ si et seulement si son discriminant $4a^2 - 4$ est négatif ou nul, soit $-1 \\leq a \\leq 1$. Si $a > 1$, $f'$ est strictement négative entre ses deux racines et $f$ y décroît. Pour $a = 1$, $f'(x) = 3(x - 1)^2$ s'annule en 1 sans changer de signe : $f$ est même strictement croissante. Le plus grand $a$ est 1.",
        "retenir": "Sur un intervalle, une dérivée positive qui ne s'annule qu'en des points isolés donne une fonction strictement croissante (exemple : $x \\mapsto x^3$)."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-33-11",
+      "texte": "Nos prédécesseurs en ces matières ne sont pas nos maîtres, mais nos guides. La vérité est ouverte à tous ; elle n'est pas encore occupée ; il en reste beaucoup à ceux qui viendront.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 33, 11",
+      "note": "Juste avant (33, 10) : « Qui suit un autre ne trouve rien ; bien plus, il ne cherche même pas. »"
+     }
     },
     {
      "exercices": [
@@ -409,7 +520,14 @@
        "explication": "$f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$. Elle s'annule en 0 et en 3, mais $4x^2 \\geq 0$ : $f'$ est négative sur $]-\\infty\\,;3[$ (nulle en 0) et positive sur $]3\\,;+\\infty[$. Donc $f$ est décroissante sur $]-\\infty\\,;3]$ et croissante sur $[3\\,;+\\infty[$ : un seul extremum local, le minimum $f(3) = -27$. En 0, $f'(0) = 0$ sans extremum.",
        "retenir": "Un changement de signe de $f'$ en $a$ assure un extremum local en $a$ ; une annulation sans changement de signe (racine double de $f'$) peut n'en donner aucun."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-menecee-135",
+      "texte": "Médite ces choses jour et nuit, en toi-même et avec qui te ressemble : jamais, ni éveillé ni en songe, tu ne seras troublé, et tu vivras comme un dieu parmi les hommes.",
+      "auteur": "Épicure",
+      "ref": "Lettre à Ménécée, 135",
+      "note": "Conclusion de la lettre, conservée par Diogène Laërce (Vies, X, 135)."
+     }
     }
    ],
    "bonus": [
@@ -451,7 +569,14 @@
        "explication": "Faux. La fonction $f : x \\mapsto x$ atteint son maximum sur $[0\\,;1]$ en $c = 1$, mais $f'(1) = 1 \\neq 0$. Le résultat « $f'(c) = 0$ » ne vaut qu'à l'intérieur de l'intervalle : un extremum peut être atteint en une borne.",
        "retenir": "Pour trouver le maximum sur $[a\\,;b]$, comparer les valeurs aux points où $f'$ s'annule ET aux bornes $a$ et $b$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "parmenide-b7",
+      "texte": "Que l'habitude aux mille expériences ne te force pas, sur ce chemin, à promener un œil sans but, une oreille bourdonnante et la langue : juge par la raison l'épreuve disputée que je t'ai proposée.",
+      "auteur": "Parménide",
+      "ref": "Fragments, B 7, 3-6 DK",
+      "note": "La déesse parle au jeune homme. Vers transmis par Sextus Empiricus (Contre les mathématiciens, VII, 111 et 114) et Diogène Laërce (IX, 22)."
+     }
     }
    ]
   },
@@ -462,6 +587,15 @@
    "nom": "Le tombeau d'Archimède",
    "notion": "Problème : optimisation et étude de fonction",
    "athena": "Un problème d'optimisation se gagne en trois temps : choisir la variable, exprimer la grandeur, étudier le signe de la dérivée.",
+   "guides": [
+    {
+     "nom": "Cicéron (106 – 43 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "De cette même ville de Syracuse, je ferai sortir de sa poussière et de sa baguette de géomètre un humble petit homme, qui vécut bien des années plus tard : Archimède. Questeur, j'ai découvert son tombeau, que les Syracusains ignoraient au point d'en nier l'existence, enclos de toutes parts et couvert de ronces. Je savais quelques petits vers gravés, disait-on, sur son monument : ils indiquaient qu'au sommet du tombeau étaient posés une sphère et un cylindre. […] Son esprit se nourrissait à agiter et à approfondir des raisonnements, avec le plaisir de l'ingéniosité, qui est pour l'âme le plus doux des aliments.",
+     "source": "Cicéron, Tusculanes, V, 64-66 (trad. adaptée)",
+     "glose": "Sur la tombe d'Archimède, Cicéron reconnaît une sphère et un cylindre : la sphère occupe les deux tiers du volume du cylindre qui la contient. Le Minotaure renverse la figure : parmi les cylindres inscrits dans une sphère, lequel a le plus grand volume ? Affronte-le en suivant les trois temps d'Athéna, avec ce « plaisir de l'ingéniosité » dont parle Cicéron."
+    }
+   ],
    "steles": [
     {
      "boss": "Le Minotaure de Cnossos",
@@ -517,7 +651,13 @@
        "explication": "Comme $A > 0$ et que la fonction carré est strictement croissante sur $[0\\,;+\\infty[$, $A$ et $A^2$ atteignent leur maximum au même point. Or $A(h)^2 = \\pi^2 u(36 - u)$ avec $u = h^2 \\in\\, ]0\\,;36[$ : ce trinôme en $u$ est maximal en $u = 18$, d'où $h = 3\\sqrt{2}$ et $A = \\pi \\times 3\\sqrt{2} \\times \\sqrt{18} = 18\\pi$. C'est exactement la moitié de l'aire de la sphère, $4\\pi \\times 9 = 36\\pi$.",
        "retenir": "Pour optimiser une quantité positive contenant une racine carrée, on peut optimiser son carré : l'extremum est atteint au même point."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-51-2",
+      "texte": "Souviens-toi : c'est maintenant le combat, les jeux Olympiques sont déjà là, on ne peut plus différer ; d'un seul jour, d'une seule action dépend que le progrès se perde ou se sauve.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 51, 2"
+     }
     }
    ],
    "bonus": [
@@ -559,7 +699,14 @@
        "explication": "Vrai. Soit $g(x) = x - f(x)$. Alors $g'(x) = 1 - f'(x) \\geq 0$ : $g$ est croissante sur $[0\\,;+\\infty[$, donc pour tout $x \\geq 0$, $g(x) \\geq g(0) = 0$, c'est-à-dire $f(x) \\leq x$.",
        "retenir": "Pour comparer deux fonctions qui partent de la même valeur, étudier leur différence à l'aide de sa dérivée."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "spinoza-ethique-1-app-mathesis",
+      "texte": "Ce préjugé aurait caché à jamais la vérité aux hommes, si la mathématique, qui traite non des fins mais seulement des essences et propriétés des figures, ne leur avait montré une autre norme de vérité.",
+      "auteur": "Spinoza",
+      "ref": "Éthique, I, appendice",
+      "note": "Le préjugé : croire que les jugements des dieux dépassent de loin la compréhension humaine."
+     }
     }
    ]
   }
@@ -573,6 +720,15 @@
    "nom": "Le sanctuaire de Spinoza",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Ici, l'étude de fonction devient preuve : un minimum positif démontre une inégalité, et un contre-exemple bien choisi convainc toute une classe.",
+   "guides": [
+    {
+     "nom": "Baruch Spinoza (1632 – 1677)",
+     "portrait": "perruque",
+     "texte": "Le sage, au contraire, en tant qu'on le considère comme tel, n'est guère troublé en son âme ; conscient de lui-même, de Dieu et des choses par une certaine nécessité éternelle, il ne cesse jamais d'être, et possède toujours la vraie satisfaction de l'âme. Si la voie que j'ai montrée pour y conduire paraît très ardue, elle peut cependant être trouvée. Et certes, ce qu'on rencontre si rarement doit être ardu. Comment se pourrait-il, en effet, si le salut était à portée de main et pouvait se trouver sans grand labeur, qu'il fût négligé de presque tous ? Mais tout ce qui est remarquable est aussi difficile que rare.",
+     "source": "Spinoza, Éthique, V, proposition 42, scolie (trad. adaptée)",
+     "glose": "Ce sont les dernières lignes de l'Éthique, un livre démontré « selon l'ordre géométrique » : définitions, axiomes, propositions. Le sanctuaire est fait de ce difficile qui est aussi rare : des inégalités prouvées par l'étude d'une fonction, et des erreurs d'élèves à expliquer avec le regard d'un futur professeur."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -602,7 +758,14 @@
        "explication": "$f(x_0) = \\frac{x_0 - x_0^2}{1 + x_0} = \\frac{x_0 - 1 + 2x_0}{1 + x_0} = \\frac{3x_0 - 1}{1 + x_0}$. Avec $x_0 = \\sqrt{2} - 1$ : $\\frac{3\\sqrt{2} - 4}{\\sqrt{2}} = 3 - \\frac{4}{\\sqrt{2}} = 3 - 2\\sqrt{2} \\approx 0{,}172$. C'est le rayon du cercle inscrit dans le triangle rectangle isocèle de périmètre 2.",
        "retenir": "Pour évaluer une expression en une racine $x_0$ d'un trinôme, utiliser l'équation vérifiée par $x_0$ pour abaisser les degrés."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "zenon-dl-7-2",
+      "texte": "Zénon demanda à l'oracle ce qu'il devait faire pour vivre au mieux ; le dieu répondit : prendre la couleur des morts. Il comprit, et se mit à lire les anciens.",
+      "auteur": "Zénon de Citium",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 2",
+      "note": "Anecdote rapportée par Diogène Laërce (IIIe siècle apr. J.-C.), d'après Hécaton et Apollonios de Tyr."
+     }
     },
     {
      "exercices": [
@@ -631,7 +794,14 @@
        "retenir": "Pour minimiser une distance, minimiser son carré : la racine carrée étant strictement croissante, l'extremum est atteint au même point.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-metaphysique-980a",
+      "texte": "Tous les hommes désirent naturellement savoir ; en témoigne l'amour des sensations : en dehors même de leur utilité, nous les aimons pour elles-mêmes.",
+      "auteur": "Aristote",
+      "ref": "Métaphysique, A, 1, 980a21-23",
+      "note": "Première phrase de la Métaphysique."
+     }
     },
     {
      "exercices": [
@@ -677,7 +847,14 @@
        "explication": "Le théorème « $f' < 0$ sur $I$ entraîne $f$ strictement décroissante sur $I$ » exige que $I$ soit un intervalle. $\\mathbb{R}^*$ n'en est pas un : $f$ est décroissante sur $]-\\infty\\,;0[$ et sur $]0\\,;+\\infty[$, mais pas sur leur réunion, comme le montre $f(-1) < f(1)$. Le calcul de $f'$ est juste.",
        "retenir": "Le signe de $f'$ donne les variations sur un intervalle ; un tableau de variations se découpe aux valeurs interdites."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "condorcet-memoire-1-instruction",
+      "texte": "Le but de l'instruction n'est pas de faire admirer aux hommes une législation toute faite, mais de les rendre capables de l'apprécier et de la corriger.",
+      "auteur": "Condorcet",
+      "ref": "Cinq mémoires sur l'instruction publique, premier mémoire (1791)",
+      "note": "Condorcet (1743-1794), mathématicien, parle ici de l'enseignement des lois et de la constitution."
+     }
     }
    ],
    "bonus": [
@@ -719,7 +896,14 @@
        "explication": "Faux. Pour $f(x) = x + 1$, la dérivée $f'(x) = 1$ est paire, mais $f(0) = 1 \\neq 0$, alors qu'une fonction impaire sur $\\mathbb{R}$ vérifie $f(0) = 0$. (Si $f'$ est paire, c'est $f - f(0)$ qui est impaire : la constante empêche la réciproque.)",
        "retenir": "Une fonction impaire définie en 0 vérifie $f(0) = 0$. Une dérivée ne détermine une fonction qu'à une constante près."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "montaigne-3-8-queter",
+      "texte": "Nous sommes nés à quêter la vérité ; il appartient de la posséder à une plus grande puissance.",
+      "auteur": "Montaigne",
+      "ref": "Essais, III, 8 (« De l'art de conférer »)",
+      "note": "« Conférer » : discuter. Le chapitre fait l'éloge de la contradiction dans la discussion."
+     }
     }
    ]
   }

@@ -1,7 +1,7 @@
 {
  "id": "ch2",
  "titre": "Second degré et fonctions de référence",
- "introduction": "Cette semaine, tu entres dans le royaume de la parabole. Les scribes de Babylone résolvaient déjà ces équations en complétant un carré : derrière chaque formule se cache une figure. Un même trinôme s'écrit sous trois formes, développée, canonique, factorisée, et tout l'art consiste à choisir celle qui répond à la question posée. Les inéquations seront ton épreuve : le signe se voit sur la courbe avant de s'écrire.",
+ "introduction": "Cette semaine, tu entres dans le royaume de la parabole. Les scribes de Babylone résolvaient déjà les équations du second degré en complétant un carré : derrière chaque formule se cache une figure. Un même trinôme s'écrit sous trois formes, développée, canonique, factorisée, et tout l'art consiste à choisir celle qui répond à la question posée. Les inéquations seront ton épreuve : le signe se voit sur la courbe avant de s'écrire.",
  "conclusion": "Emporte trois réflexes : la forme canonique donne le sommet, la forme factorisée donne les racines et le signe, et le signe de $a$ gouverne le reste. Devant une inéquation ou un paramètre, ramène tout à zéro, factorise, distingue les cas et vérifie tes solutions.",
  "salles": [
   {
@@ -11,6 +11,15 @@
    "nom": "La leçon du Ménon",
    "notion": "Fonctions de référence, équations x² = a, comparaisons",
    "athena": "Le carré d'aire double n'a pas un côté double : avant de calculer, demande-toi quelle fonction agit et comment elle range les nombres.",
+   "guides": [
+    {
+     "nom": "Socrate (470/469 – 399 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Vois-tu, Ménon, où il en est déjà de son ressouvenir ? Au début, il ne savait pas quel est le côté du carré de huit pieds, et il ne le sait pas encore ; mais il croyait alors le savoir, il répondait avec assurance comme s'il savait, et ne se sentait pas dans l'embarras. Maintenant, il se sent dans l'embarras, et de même qu'il ne sait pas, il ne croit pas non plus savoir. […] En le mettant dans l'embarras et en l'engourdissant comme fait la torpille, lui avons-nous fait du tort ? […] Nous l'avons aidé, semble-t-il, à trouver ce qu'il en est : maintenant, ne sachant pas, il aurait plaisir à chercher.",
+     "source": "Platon, Ménon, 84a-b : Socrate parle à Ménon, après avoir interrogé le jeune esclave (trad. adaptée)",
+     "glose": "Pour doubler l'aire, l'esclave doublait le côté, comme si l'aire était proportionnelle au côté ; or doubler $x$ multiplie $x^2$ par $4$. Le côté cherché est la solution positive de $x^2 = 8$, soit $2\\sqrt{2}$. Son embarras n'est pas un recul : il a écarté $4$ puis $3$, et c'est maintenant qu'il cherche vraiment."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -43,7 +52,13 @@
        "explication": "Comme $0 \\in [-3\\,;2]$, on a $0 \\leqslant x^2 \\leqslant 9$ (et non $4 \\leqslant x^2 \\leqslant 9$), donc $1 \\leqslant x^2 + 1 \\leqslant 10$. La fonction inverse étant décroissante sur $]0\\,;+\\infty[$ : $\\frac{1}{10} \\leqslant \\frac{1}{x^2+1} \\leqslant 1$. La valeur $1$ est atteinte pour $x = 0$.",
        "retenir": "On ne « met pas au carré » un encadrement qui contient $0$ : on s'appuie sur les variations de la fonction carré, de part et d'autre de $0$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-entretiens-4-12-1",
+      "texte": "Quand tu relâches un peu ton attention, ne t'imagine pas la reprendre quand tu voudras ; garde à l'esprit que, par la faute d'aujourd'hui, tout le reste ira nécessairement plus mal.",
+      "auteur": "Épictète",
+      "ref": "Entretiens, IV, 12, 1"
+     }
     },
     {
      "exercices": [
@@ -82,7 +97,13 @@
        "explication": "En multipliant $x < 1$ par $x > 0$ : $x^2 < x$ ; par $x^2 > 0$ : $x^3 < x^2$. Comme $0 < \\sqrt{x} < 1$, le même argument donne $(\\sqrt{x})^2 < \\sqrt{x}$, soit $x < \\sqrt{x}$. Enfin $\\sqrt{x} < 1 < \\frac{1}{x}$. Contrôle avec $x = \\frac{1}{4}$ : $\\frac{1}{64} < \\frac{1}{16} < \\frac{1}{4} < \\frac{1}{2} < 4$.",
        "retenir": "Sur $]0\\,;1[$, une puissance plus grande diminue le nombre et la racine carrée l'augmente ; sur $]1\\,;+\\infty[$, c'est l'inverse."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-84-5",
+      "texte": "Imitons les abeilles : séparons ce que nous avons amassé de lectures diverses (on conserve mieux ce qui est distinct), puis, avec le soin de notre esprit, fondons ces sucs variés en une seule saveur.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 84, 5"
+     }
     }
    ],
    "bonus": [
@@ -124,7 +145,14 @@
        "explication": "Faux. $1$ et $-1$ sont deux solutions distinctes. Plus précisément $x^3 - x = x(x-1)(x+1)$ : il y a trois solutions, $-1$, $0$ et $1$. La stricte croissance du cube assure l'unicité pour $x^3 = a$ avec $a$ fixé, pas pour $x^3 = x$.",
        "retenir": "Pour résoudre $x^3 = x$, on ne divise pas par $x$ : on factorise $x(x-1)(x+1) = 0$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-sv-27",
+      "texte": "Dans les autres activités, le fruit ne vient qu'au terme, à grand-peine ; en philosophie, le plaisir accompagne la connaissance : on ne jouit pas après avoir appris, on apprend et l'on jouit ensemble.",
+      "auteur": "Épicure",
+      "ref": "Sentences vaticanes, 27",
+      "note": "Recueil de sentences épicuriennes découvert en 1888 dans un manuscrit du Vatican."
+     }
     }
    ]
   },
@@ -135,6 +163,15 @@
    "nom": "Le jardin d'Épicure",
    "notion": "Forme canonique, sommet de la parabole",
    "athena": "Compléter le carré, c'est révéler le sommet : la forme canonique dit d'un regard où la parabole tourne et jusqu'où elle va.",
+   "guides": [
+    {
+     "nom": "Épicure (341 – 270 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Que nul, étant jeune, ne tarde à philosopher, ni, étant vieux, ne se lasse de philosopher : car il n'est pour personne ni trop tôt ni trop tard pour prendre soin de la santé de l'âme. Dire que l'heure de philosopher n'est pas encore venue, ou qu'elle est passée, c'est comme dire que l'heure du bonheur n'est pas encore là, ou qu'elle n'est plus. Il faut donc philosopher, jeune ou vieux : le vieux, pour rester jeune par les biens, grâce à la gratitude envers ce qui a été ; le jeune, pour être à la fois jeune et vieux, par l'absence de crainte devant l'avenir.",
+     "source": "Épicure, Lettre à Ménécée, 122, conservée par Diogène Laërce, Vies, X, 122 (trad. adaptée)",
+     "glose": "Pour Épicure, l'heure de philosopher n'est jamais passée ; celle de revoir le second degré, longtemps après le lycée, ne l'est pas davantage. Dans $a(x-\\alpha)^2 + \\beta$ avec $a > 0$, le terme $a(x-\\alpha)^2$ n'est jamais négatif : $\\beta$ est le minimum, atteint en $\\alpha$. La forme canonique dit d'avance jusqu'où descend la courbe."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -163,7 +200,14 @@
        "retenir": "Pour $a > 0$, le minimum de $x \\mapsto ax^2 + bx + c$ est $f\\left(-\\frac{b}{2a}\\right)$, l'ordonnée du sommet.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "descartes-regulae-10",
+      "texte": "Pour que l'esprit devienne sagace, il faut l'exercer à chercher ce que d'autres ont déjà trouvé, et à parcourir avec méthode même les plus humbles techniques, surtout celles qui expliquent ou supposent un ordre.",
+      "auteur": "Descartes",
+      "ref": "Règles pour la direction de l'esprit, règle X (AT X, 403)",
+      "note": "« Hominum artificia » : les techniques des hommes. Refaire soi-même ce que d'autres ont trouvé, c'est l'exercice même du candidat."
+     }
     },
     {
      "exercices": [
@@ -191,7 +235,13 @@
        "explication": "$S(x) = 3x^2 - 36x + 150 = 3(x-6)^2 + 42$. Le minimum vaut $42$ ; il est atteint en $x = 6$, qui est exactement la moyenne de $2$, $5$ et $11$.",
        "retenir": "La somme des carrés des écarts $\\sum (x - x_i)^2$ est minimale lorsque $x$ est la moyenne des $x_i$ : un trinôme se cache derrière la moyenne."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-colere-2-12-3",
+      "texte": "Rien n'est si difficile ni si ardu que l'esprit humain ne le surmonte, et qu'un exercice assidu ne le rende familier.",
+      "auteur": "Sénèque",
+      "ref": "De la colère, II, 12, 3"
+     }
     }
    ],
    "bonus": [
@@ -233,7 +283,14 @@
        "explication": "Vrai. Posons $f(x) = x^2 + 2x$ et $g(x) = x^2 - 2x$. Pour tout réel $x$, $f(-x) = x^2 - 2x = g(x)$. Donc $M(x\\,;y)$ est sur la courbe de $g$ si et seulement si $M'(-x\\,;y)$ est sur celle de $f$. Contrôle : les sommets $(-1\\,;-1)$ et $(1\\,;-1)$ sont bien symétriques.",
        "retenir": "Les courbes de $x \\mapsto f(x)$ et de $x \\mapsto f(-x)$ sont symétriques par rapport à l'axe des ordonnées."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-caton-26",
+      "texte": "Solon se vante dans ses vers de vieillir en apprenant chaque jour quelque chose ; et moi, j'ai appris le grec étant vieux, avidement, comme pour apaiser une longue soif.",
+      "auteur": "Cicéron",
+      "ref": "Caton l'Ancien (De la vieillesse), 26",
+      "note": "C'est Caton l'Ancien qui parle dans ce dialogue de Cicéron."
+     }
     }
    ]
   },
@@ -244,6 +301,15 @@
    "nom": "Le Portique peint",
    "notion": "Discriminant, racines, factorisation",
    "athena": "Avant de calculer $\\Delta$, écris l'équation sous la forme $ax^2 + bx + c = 0$ ; si une racine saute aux yeux, le produit des racines livre l'autre.",
+   "guides": [
+    {
+     "nom": "Zénon de Citium (vers 334 – vers 262 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Vous niez que quiconque sache quoi que ce soit, hormis le sage. Et cela, Zénon le montrait par un geste. Il présentait sa main ouverte, les doigts tendus : « Voilà, disait-il, ce qu'est la représentation. » Puis il repliait un peu les doigts : « Voilà l'assentiment. » Puis, les serrant tout à fait, il faisait le poing, et disait que c'était la compréhension ; c'est de cette image qu'il tira le nom de katalepsis, « saisie », que la chose n'avait pas avant. Enfin, approchant la main gauche, il serrait ce poing fort et étroitement : telle était, disait-il, la science, que nul ne possède, sinon le sage.",
+     "source": "Rapporté par Cicéron, Premiers Académiques (Lucullus), II, 47, 145 (trad. adaptée)",
+     "glose": "Voir la formule $\\frac{-b \\pm \\sqrt{\\Delta}}{2a}$, c'est la main ouverte ; l'appliquer en lui faisant confiance, les doigts repliés. La saisir, poing fermé, c'est pouvoir la retrouver seul en complétant le carré. La science serre ce poing dans l'autre main : racines, factorisation, somme et produit y tiennent ensemble."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -271,7 +337,14 @@
        "explication": "Si $m = 1$ : l'équation devient $4x + 1 = 0$, qui a exactement une solution, $-\\frac{1}{4}$. Si $m \\neq 1$ : c'est une équation du second degré, de discriminant $\\Delta = 16 - 4(m-1) = 20 - 4m$ ; elle a une seule solution si et seulement si $\\Delta = 0$, soit $m = 5$. Les valeurs cherchées sont $1$ et $5$, de somme $6$.",
        "retenir": "Équation à paramètre : traiter toujours à part le cas où le coefficient de $x^2$ s'annule."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-phedre-237b",
+      "texte": "En toute chose, mon enfant, il n'y a qu'un point de départ pour bien délibérer : il faut savoir sur quoi porte la délibération, sinon l'on se trompe nécessairement sur tout.",
+      "auteur": "Platon",
+      "ref": "Phèdre, 237b-c",
+      "note": "Ouverture du premier discours de Socrate sur l'amour, qu'il prête à un amant rusé."
+     }
     },
     {
      "exercices": [
@@ -299,7 +372,14 @@
        "explication": "Avec $X = x^2 - 2x$ : $X^2 - 2X - 3 = 0 \\iff X = 3$ ou $X = -1$. Puis $x^2 - 2x = 3 \\iff (x-3)(x+1) = 0 \\iff x = 3$ ou $x = -1$ ; et $x^2 - 2x = -1 \\iff (x-1)^2 = 0 \\iff x = 1$. Trois solutions : $-1$, $1$ et $3$ (et non quatre : la racine double ne donne qu'une solution).",
        "retenir": "Après un changement de variable, revenir à l'inconnue de départ et résoudre chaque équation obtenue, en comptant ses solutions."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-dl-5-18",
+      "texte": "Les racines de l'éducation sont amères, mais son fruit est doux.",
+      "auteur": "Aristote",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, V, 18",
+      "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.) ; aucun traité conservé d'Aristote ne le contient."
+     }
     }
    ],
    "bonus": [
@@ -341,7 +421,14 @@
        "explication": "Faux. Pour $x = 0$, le membre de gauche vaut $-3$ et celui de droite $-\\frac{3}{2}$. Les racines $-3$ et $\\frac{1}{2}$ sont justes, mais il manque le coefficient $a = 2$ : $2x^2 + 5x - 3 = 2(x+3)\\left(x - \\frac{1}{2}\\right) = (x+3)(2x-1)$.",
        "retenir": "Deux trinômes de mêmes racines peuvent différer d'un facteur : la forme factorisée est $a(x - x_1)(x - x_2)$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-5",
+      "texte": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 5",
+      "note": "« Jugements » traduit dogmata : pour les stoïciens, juger, c'est donner son assentiment à une représentation, comme dans le geste de Zénon."
+     }
     }
    ],
    "acrobaties": [
@@ -357,7 +444,13 @@
      ],
      "indice": "Remplace $x$ par chacune des deux valeurs dans l'équation de départ.",
      "explication": "Si $\\sqrt{2x+3} = x$, alors $2x + 3 = x^2$ ; mais la réciproque est fausse, car $A^2 = B^2$ n'entraîne pas $A = B$. Vérification : pour $x = -1$, $\\sqrt{1} = 1 \\neq -1$ ; pour $x = 3$, $\\sqrt{9} = 3$. Donc $S = \\{3\\}$. Rédaction correcte : $\\sqrt{2x+3} = x \\iff \\left(x \\geqslant 0 \\text{ et } 2x + 3 = x^2\\right)$.",
-     "retenir": "Élever au carré n'est une équivalence qu'entre deux nombres de même signe : imposer la condition de signe ou vérifier chaque solution."
+     "retenir": "Élever au carré n'est une équivalence qu'entre deux nombres de même signe : imposer la condition de signe ou vérifier chaque solution.",
+     "maxime": {
+      "id": "poincare-sh-douter",
+      "texte": "Douter de tout ou tout croire, ce sont deux solutions également commodes, qui l'une et l'autre nous dispensent de réfléchir.",
+      "auteur": "Poincaré",
+      "ref": "La Science et l'Hypothèse, introduction (1902)"
+     }
     }
    ]
   },
@@ -368,6 +461,15 @@
    "nom": "Le gnomon d'Anaximandre",
    "notion": "Signe du trinôme, inéquations",
    "athena": "Une inéquation ne se divise pas à l'aveugle : tout d'un côté, factorise, puis lis le signe, celui de $a$ à l'extérieur des racines, l'opposé entre elles.",
+   "guides": [
+    {
+     "nom": "Anaximandre de Milet (vers 610 – vers 546 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Il disait que le principe et l'élément est l'illimité, sans préciser s'il s'agit de l'air, de l'eau ou d'autre chose ; que les parties changent, mais que le tout est immuable. […] Il fut le premier à inventer le gnomon ; il le dressa sur les cadrans solaires de Lacédémone, à ce que dit Favorinus, pour marquer les solstices et les équinoxes ; il construisit aussi des horloges. […] On raconte que, comme il chantait, des enfants se moquèrent de lui ; l'ayant appris, il dit : « Il faut donc mieux chanter, à cause des enfants. »",
+     "source": "Rapporté par Diogène Laërce, Vies et doctrines des philosophes illustres, II, 1-2 (trad. adaptée)",
+     "glose": "Avec le gnomon, on lit la course du soleil dans une ombre ; avec l'esquisse de la parabole, on lit le signe du trinôme avant de l'écrire : celui de $a$ à l'extérieur des racines, l'opposé entre elles. Quant à la réponse faite aux enfants, elle vaut pour un futur professeur : chanter mieux, ici rédiger mieux, à cause des élèves."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -407,7 +509,14 @@
        "explication": "$x + \\frac{1}{x} - 2 = \\frac{x^2 - 2x + 1}{x} = \\frac{(x-1)^2}{x}$. Le numérateur est positif ou nul ; le quotient est donc positif ou nul exactement lorsque $x > 0$. Ainsi $S = ]0\\,;+\\infty[$. Pour $x < 0$, on a même $x + \\frac{1}{x} < 0$.",
        "retenir": "Inéquation avec une fraction : tout d'un côté, même dénominateur, puis signe du quotient ; jamais de multiplication par une quantité de signe inconnu."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "anaxagore-b21a",
+      "texte": "Ce qui apparaît est une vue sur ce qui est caché.",
+      "auteur": "Anaxagore",
+      "ref": "fr. B 21a DK, cité par Sextus Empiricus, Contre les mathématiciens, VII, 140",
+      "note": "Sextus Empiricus rapporte, d'après Diotime, que Démocrite louait Anaxagore pour ce mot."
+     }
     },
     {
      "exercices": [
@@ -447,7 +556,14 @@
        "explication": "Si $m = 0$ : $4x > 0$ est faux pour $x = -1$. Si $m \\neq 0$ : il faut $m > 0$ et $\\Delta = 16 - 4m^2 < 0$, soit $m^2 > 4$ ; avec $m > 0$, cela donne $m > 2$. Pour $m < -2$, on a bien $\\Delta < 0$, mais le trinôme est alors négatif partout. Pour $m = 2$, $2(x+1)^2$ s'annule en $-1$. Donc $m \\in ]2\\,;+\\infty[$.",
        "retenir": "Pour $a \\neq 0$ : $ax^2 + bx + c > 0$ pour tout réel $x$ si et seulement si $a > 0$ et $\\Delta < 0$. Les deux conditions sont indispensables."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-phedon-90e",
+      "texte": "Ne croyons pas qu'il n'y a rien de sain dans les raisonnements, mais plutôt que nous ne sommes pas encore sains : il faut du courage et de l'ardeur pour le devenir.",
+      "auteur": "Platon",
+      "ref": "Phédon, 90d-e",
+      "note": "Socrate met en garde contre la « misologie », la haine des raisonnements qui naît des déceptions."
+     }
     }
    ],
    "bonus": [
@@ -489,7 +605,13 @@
        "explication": "Faux. Pour $x = -1$ : $x \\leqslant 2$, mais $x^2 = 1 > -2 = 2x$. En réalité $x^2 \\leqslant 2x \\iff x(x-2) \\leqslant 0 \\iff 0 \\leqslant x \\leqslant 2$. L'erreur vient d'une division par $x$, dont le signe est inconnu.",
        "retenir": "On ne simplifie pas une inéquation par $x$ : on factorise, ici $x(x-2)$, et on étudie le signe."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "heraclite-b22",
+      "texte": "Ceux qui cherchent de l'or creusent beaucoup de terre et en trouvent peu.",
+      "auteur": "Héraclite",
+      "ref": "fr. B 22 DK, cité par Clément d'Alexandrie, Stromates, IV, 4, 2"
+     }
     }
    ]
   },
@@ -500,6 +622,15 @@
    "nom": "Le cratère d'Empédocle",
    "notion": "Problème : trinôme à paramètre, somme et produit des racines",
    "athena": "Le paramètre est un curseur : exprime le discriminant en fonction de lui, puis laisse la somme et le produit parler des racines sans les calculer.",
+   "guides": [
+    {
+     "nom": "Empédocle d'Agrigente (vers 495 – vers 435 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Étroites sont les facultés répandues dans nos membres, et nombreux les maux qui s'abattent sur nous et émoussent la pensée. N'ayant vu de la vie qu'une faible part, promis à une prompte mort, les hommes s'envolent, emportés comme une fumée, persuadés de cela seul que chacun a rencontré, poussés de toutes parts ; et chacun se flatte d'avoir trouvé le tout. Ainsi, ces choses, les hommes ne peuvent ni les voir, ni les entendre, ni les embrasser par l'esprit. Mais toi, puisque tu t'es retiré ici, tu apprendras ; pas plus loin que ne s'élève l'intelligence d'un mortel.",
+     "source": "Empédocle, De la nature, fr. B 2 DK, cité par Sextus Empiricus, Contre les savants, VII, 123-124 (trad. adaptée)",
+     "glose": "Résoudre $(E_7)$, c'est n'avoir vu qu'une faible part : chaque valeur de $m$ donne une équation, et nul ne les parcourt toutes. Le signe de $\\Delta$ en fonction de $m$, puis la somme et le produit des racines, décrivent toute la famille sans traiter les équations une à une : c'est à cette mesure qu'un esprit mortel embrasse une infinité de cas."
+    }
+   ],
    "steles": [
     {
      "boss": "Polyphème le Cyclope",
@@ -558,7 +689,13 @@
        "explication": "$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = 4m^2 - 2m - 12 = g(m)$. Le sommet de $g$ est en $m = \\frac{1}{4}$, valeur interdite (on y trouverait $-12{,}25$, absurde pour une somme de carrés). $g$ est décroissante sur $]-\\infty\\,;-2]$ et croissante sur $[3\\,;+\\infty[$ : minimum $g(-2) = 8$ sur le premier intervalle, $g(3) = 18$ sur le second. Réponse : $8$, obtenu pour $m = -2$ (solution double $-2$ : $4 + 4 = 8$).",
        "retenir": "Sous contrainte, le sommet ne donne l'extremum que s'il est dans le domaine permis ; sinon, l'extremum est atteint en une borne."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "marc-aurele-pensees-6-19",
+      "texte": "Si une chose t'est difficile à accomplir, ne pense pas qu'elle soit impossible à l'homme ; mais si elle est possible à l'homme et lui convient, crois-la aussi à ta portée.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, VI, 19"
+     }
     }
    ],
    "bonus": [
@@ -600,7 +737,14 @@
        "explication": "Vrai. Comme $ac < 0$, l'équation a deux solutions, non nulles puisque $c \\neq 0$. On a $x_1 + x_2 = \\frac{7}{3}$ et $x_1 x_2 = -\\frac{2}{3}$. Donc $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2} = \\frac{7}{3} \\times \\left(-\\frac{3}{2}\\right) = -\\frac{7}{2}$.",
        "retenir": "Toute expression symétrique des racines s'exprime avec $S = -\\frac{b}{a}$ et $P = \\frac{c}{a}$, sans calculer les racines."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "quintilien-11-2-43",
+      "texte": "Chose étonnante, dont la raison n'est pas claire : combien une nuit d'intervalle donne de solidité ! […] Ce qu'on ne pouvait restituer sur-le-champ s'enchaîne le lendemain, et le temps, cause ordinaire de l'oubli, affermit la mémoire.",
+      "auteur": "Quintilien",
+      "ref": "Institution oratoire, XI, 2, 43",
+      "note": "Peu avant (XI, 2, 40), Quintilien fait de l'exercice le grand art de la mémoire : apprendre et réfléchir beaucoup, si possible chaque jour."
+     }
     }
    ]
   }
@@ -614,6 +758,15 @@
    "nom": "Le sanctuaire d'Hypatie",
    "notion": "Problèmes plus difficiles et regard de futur professeur",
    "athena": "Ici, chaque réponse se défend comme devant une classe : la justification compte autant que le résultat.",
+   "guides": [
+    {
+     "nom": "Hypatie d'Alexandrie (vers 360 – 415)",
+     "portrait": "chignon",
+     "texte": "Il y avait à Alexandrie une femme nommée Hypatie. Elle était la fille du philosophe Théon, et elle était allée si loin dans le savoir qu'elle surpassait les philosophes de son temps ; elle reçut la succession de l'école platonicienne issue de Plotin, et elle exposait toutes les sciences philosophiques à qui voulait les apprendre. Aussi, de partout, ceux qui voulaient philosopher accouraient auprès d'elle. […] Et il n'y avait rien d'inconvenant à ce qu'elle parût au milieu des hommes : tous, à cause de sa retenue hors du commun, la respectaient et l'admiraient d'autant plus.",
+     "source": "Rapporté par Socrate le Scolastique, Histoire ecclésiastique, VII, 15 (trad. adaptée)",
+     "glose": "Hypatie exposait les sciences à qui voulait les apprendre ; la Souda, encyclopédie byzantine du Xe siècle, lui attribue des commentaires de Diophante et d'Apollonius, maîtres des équations et des coniques. Dans ce sanctuaire, tu passes de l'autre côté de la table : chaque réponse doit pouvoir s'exposer devant une classe, avec la justification qui la rend sûre."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -643,7 +796,14 @@
        "retenir": "Une condition sur les racines ($x_2 = 2x_1$, $x_2 = -x_1$…) se traduit par la somme et le produit : deux équations, sans discriminant.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "diogene-dl-6-35",
+      "texte": "Il disait imiter les maîtres de chœur : eux aussi donnent la note un peu trop haut, pour que les autres trouvent le ton juste.",
+      "auteur": "Diogène de Sinope",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VI, 35",
+      "note": "Mot rapporté par Diogène Laërce (IIIe s. apr. J.-C.), sans autre contexte ; on y lit d'ordinaire la justification de ses outrances."
+     }
     },
     {
      "exercices": [
@@ -672,7 +832,14 @@
        "explication": "$P(t) = (x^2 + y^2)t^2 - 2(3x + 4y)t + 25 = t^2 - 2(3x + 4y)t + 25$. Comme $P(t) \\geqslant 0$ pour tout réel $t$, ce trinôme n'a pas deux racines distinctes : $\\Delta = 4(3x + 4y)^2 - 100 \\leqslant 0$, d'où $(3x + 4y)^2 \\leqslant 25$ et $3x + 4y \\leqslant 5$. La valeur $5$ est atteinte pour $x = \\frac{3}{5}$ et $y = \\frac{4}{5}$.",
        "retenir": "Un trinôme positif ou nul sur $\\mathbb{R}$ a un discriminant négatif ou nul : c'est la preuve classique de l'inégalité de Cauchy-Schwarz."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-metaphysique-1051a",
+      "texte": "Les constructions géométriques se découvrent par l'acte : c'est en divisant les figures qu'on trouve. Si la parallèle au côté était déjà tracée, on verrait aussitôt pourquoi le triangle vaut deux droits.",
+      "auteur": "Aristote",
+      "ref": "Métaphysique, Θ, 9, 1051a21-26",
+      "note": "« Deux droits » : la somme des angles d'un triangle vaut deux angles droits ; le bon trait, une fois tracé, fait voir la raison."
+     }
     },
     {
      "exercices": [
@@ -718,7 +885,14 @@
        "explication": "On complète le carré : $x^2 - 6x + 5 = (x-3)^2 - 9 + 5 = (x-3)^2 - 2^2$, puis l'identité $A^2 - B^2 = (A - B)(A + B)$ donne $(x - 3 - 2)(x - 3 + 2) = (x-5)(x-1)$. C'est la démonstration de la formule des racines, faite sur un exemple. $x(x-6) + 5$ est une somme, pas un produit ; et $(x - \\sqrt{5})^2 = x^2 - 2\\sqrt{5}\\,x + 5$.",
        "retenir": "Forme canonique puis $A^2 - B^2 = (A-B)(A+B)$ : c'est la preuve des formules du discriminant, à faire refaire sur des exemples."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-manuel-46-2",
+      "texte": "Les brebis ne montrent pas combien elles ont mangé : elles digèrent au-dedans leur pâture et donnent au-dehors laine et lait. N'étale pas les principes devant les profanes : montre les actes qu'ils produisent, une fois digérés.",
+      "auteur": "Épictète",
+      "ref": "Manuel, 46, 2",
+      "note": "θεωρήματα : les principes de la philosophie ; le mot grec a donné « théorème »."
+     }
     }
    ],
    "bonus": [
@@ -760,7 +934,14 @@
        "explication": "Faux. $1$ est racine évidente ($1 - m - 1 + m = 0$) et le produit des racines vaut $m$ : $x^2 - (m+1)x + m = (x-1)(x-m)$. Les solutions sont $1$ et $m$, distinctes sauf si $m = 1$. Contre-exemple : $m = 1$ donne $x^2 - 2x + 1 = (x-1)^2$, une seule solution. D'ailleurs $\\Delta = (m-1)^2$ s'annule en $m = 1$.",
        "retenir": "Un « pour tout $m$ » tombe sur une seule valeur : chercher les valeurs du paramètre qui annulent $\\Delta$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "leibniz-nouveaux-essais-preface",
+      "texte": "Les vérités nécessaires, telles qu'on les trouve dans les mathématiques pures, et particulièrement dans l'arithmétique et dans la géométrie, doivent avoir des principes dont la preuve ne dépende point des exemples.",
+      "auteur": "Leibniz",
+      "ref": "Nouveaux essais sur l'entendement humain, préface",
+      "note": "Écrit en français vers 1704, publié en 1765 ; la phrase continue : « ni par conséquent du témoignage des sens »."
+     }
     }
    ]
   }

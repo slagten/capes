@@ -11,6 +11,15 @@
    "nom": "Le nombre de Philolaos",
    "notion": "Divisibilité, multiples, parité",
    "athena": "Dire que $a$ divise $b$, c'est écrire $b = ka$ avec $k$ entier : pose cet entier avant tout calcul, et la preuve s'écrit presque seule.",
+   "guides": [
+    {
+     "nom": "Philolaos de Crotone (vers 470 – vers 385 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Et assurément, toutes les choses que l'on connaît ont un nombre : car il n'est pas possible de rien penser ni de rien connaître sans lui. Le nombre a deux espèces propres, l'impair et le pair, et une troisième, faite du mélange des deux, le pair-impair. Chacune des deux espèces a de nombreuses formes, que chaque chose manifeste par elle-même.",
+     "source": "Philolaos, De la nature, fr. B 4 et B 5 DK, cités par Stobée, Choix de textes, I, 21, 7b-c (trad. adaptée)",
+     "glose": "Pour Philolaos, rien ne se pense ni ne se connaît sans le nombre, et le nombre se partage d'abord en impair et pair. Ce partage devient un outil de calcul quand tu écris $n = 2k$ ou $n = 2k + 1$, avec $k$ entier : c'est le premier geste d'une preuve de parité, avant de traiter chaque cas."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -38,7 +47,14 @@
        "explication": "$2n + 13 = 2(n + 3) + 7$. Si $n + 3$ divise $2n + 13$, il divise $(2n + 13) - 2(n + 3) = 7$ ; réciproquement, s'il divise 7, il divise $2(n + 3) + 7$. Donc $n + 3 \\in \\{-7, -1, 1, 7\\}$, soit $n \\in \\{-10, -4, -2, 4\\}$ : 4 entiers. Oublier les diviseurs négatifs en fait perdre deux.",
        "retenir": "Si $d$ divise $a$ et $b$, il divise toute combinaison $ua + vb$ ($u$, $v$ entiers). Dans $\\mathbb{Z}$, 7 a quatre diviseurs : $1$, $-1$, $7$, $-7$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "descartes-regulae-9",
+      "texte": "Il faut tourner toute la pointe de l'esprit vers les choses les plus petites et les plus faciles, et s'y arrêter longtemps, jusqu'à ce qu'on s'habitue à voir la vérité distinctement et clairement.",
+      "auteur": "Descartes",
+      "ref": "Règles pour la direction de l'esprit, règle IX (AT X, 400)",
+      "note": "Traité latin posthume (1701)."
+     }
     },
     {
      "exercices": [
@@ -78,7 +94,14 @@
        "explication": "Avec $n = 2k + 1$ : $n^2 - 1 = 4k^2 + 4k = 4k(k + 1)$. Or $k(k + 1)$, produit de deux entiers consécutifs, est pair : $k(k + 1) = 2m$, d'où $n^2 - 1 = 8m$. Donc 8 convient. Et pour $n = 3$, $n^2 - 1 = 8$ : aucun entier plus grand que 8 ne divise tous ces nombres. Donc $d = 8$.",
        "retenir": "Le carré d'un entier impair s'écrit $8m + 1$ : réflexe $n = 2k + 1$, puis « $k(k + 1)$ est pair »."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "musonius-diatribe-1",
+      "texte": "Il ne faut pas chercher beaucoup de preuves pour chaque question, mais des preuves efficaces et claires. […] Plus l'auditeur est intelligent, plus vite il donne son assentiment à l'essentiel d'un raisonnement sain.",
+      "auteur": "Musonius Rufus",
+      "ref": "Diatribes, I",
+      "note": "Propos de Musonius rédigés par son disciple Lucius et conservés par Stobée ; la coupure omet une comparaison avec le médecin."
+     }
     }
    ],
    "bonus": [
@@ -120,7 +143,14 @@
        "explication": "Faux. Contre-exemple : $1 + 2 + 3 + 4 = 10$ n'est pas divisible par 4. En général, $n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 4(n + 1) + 2$ : le reste dans la division par 4 vaut toujours 2.",
        "retenir": "La somme de trois entiers consécutifs est multiple de 3, celle de quatre ne l'est jamais de 4 : vérifier avant de généraliser."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-metaphysique-993a",
+      "texte": "L'étude de la vérité est difficile en un sens, facile en un autre : nul ne peut l'atteindre pleinement, mais tous ne la manquent pas, et de tous les apports réunis naît une grandeur.",
+      "auteur": "Aristote",
+      "ref": "Métaphysique, α, 1, 993a30-b3",
+      "note": "Début du livre α, dit « petit alpha »."
+     }
     }
    ]
   },
@@ -131,6 +161,15 @@
    "nom": "Les nombres parfaits de Nicomaque",
    "notion": "Division euclidienne, restes",
    "athena": "Diviser $a$ par $b$, c'est écrire $a = bq + r$ avec $0 \\leq r < b$ : sans cette inégalité sur le reste, il n'y a pas de division euclidienne.",
+   "guides": [
+    {
+     "nom": "Nicomaque de Gérase (vers 60 – vers 120 apr. J.-C.)",
+     "portrait": "grec",
+     "texte": "On appelle proprement parfait le nombre qui est égal à ses propres parties, comme 6 et 28. […] Or il se trouve que, de même que les belles choses, celles qui relèvent de la vertu, sont rares et faciles à dénombrer, tandis que les choses laides et mauvaises foisonnent, de même les nombres surabondants et déficients sont très nombreux et sans ordre, et on les trouve sans règle, tandis que les parfaits sont faciles à dénombrer et rangés avec l'ordre qui convient : un seul parmi les unités, 6 ; un seul parmi les dizaines, 28 ; un troisième parmi les centaines, 496 ; un quatrième parmi les milliers, 8128.",
+     "source": "Nicomaque de Gérase, Introduction arithmétique, I, 16, éd. Hoche p. 39-40 (trad. adaptée)",
+     "glose": "Les « parties » d'un nombre sont ses diviseurs autres que lui-même ($6 = 1 + 2 + 3$), et $d$ divise $n$ si et seulement si le reste de la division euclidienne de $n$ par $d$ est nul. Nicomaque laisse croire à une loi, un nombre parfait par ordre de grandeur ; or aucun nombre parfait n'a cinq chiffres, et le cinquième, $33\\,550\\,336$, en a huit : quatre exemples ne font pas une règle."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -159,7 +198,14 @@
        "retenir": "Dans $a = bq + r$, la condition $0 \\leq r < b$ fait partie de la définition : ici, elle élimine les diviseurs 1, 2, 3, 4 et 6.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "zenon-dl-7-4",
+      "texte": "Zénon, qu'un naufrage avait conduit à Athènes et à la philosophie, aurait dit : « J'ai fait bonne traversée quand j'ai fait naufrage. »",
+      "auteur": "Zénon de Citium",
+      "ref": "Diogène Laërce, Vies et doctrines des philosophes illustres, VII, 4",
+      "note": "Mot rapporté par Diogène Laërce (IIIe siècle apr. J.-C.), qui en donne plusieurs versions (VII, 4-5) ; le naufrage est raconté en VII, 2."
+     }
     },
     {
      "exercices": [
@@ -193,7 +239,14 @@
        "explication": "Si $n = 5q + r$, alors $n^2 + 2n = 5(5q^2 + 2qr + 2q) + r^2 + 2r$. Pour $r = 0, 1, 2, 3, 4$, $r^2 + 2r$ vaut $0, 3, 8, 15, 24$, de restes $0, 3, 3, 0, 4$. Donc 5 divise $n^2 + 2n$ si et seulement si $n$ a pour reste 0 ou 3. Entre 1 et 100, il y a 20 entiers de chaque sorte : 40 au total.",
        "retenir": "Pour une question « pour quels $n$ ce nombre est-il divisible par $m$ ? », dresser le tableau des restes de $n$, de 0 à $m - 1$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "spinoza-tie-31-instruments",
+      "texte": "De même, l'entendement, par sa force native, se fait des instruments intellectuels, par lesquels il acquiert d'autres forces pour d'autres œuvres […], et ainsi avance par degrés jusqu'à atteindre le sommet de la sagesse.",
+      "auteur": "Spinoza",
+      "ref": "Traité de la réforme de l'entendement, § 31 (numérotation Bruder)",
+      "note": "Suite de l'image du marteau (§ 30) : pour forger le fer, il faut un marteau, mais les hommes ont commencé avec leurs outils naturels."
+     }
     }
    ],
    "bonus": [
@@ -235,7 +288,14 @@
        "explication": "Vrai. Si $n = 2k$, $n^2 = 4k^2$ (reste 0) ; si $n = 2k + 1$, $n^2 = 4(k^2 + k) + 1$ (reste 1). La somme de deux carrés s'écrit donc $4m$, $4m + 1$ ou $4m + 2$ : son reste par 4 vaut 0, 1 ou 2, jamais 3. Par exemple, $2\\,027 = 4 \\times 506 + 3$ n'est pas somme de deux carrés.",
        "retenir": "Un carré a pour reste 0 ou 1 dans la division par 4 : un outil rapide pour prouver une impossibilité."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "plutarque-marcellus-17-4",
+      "texte": "Dans ces recherches, où le beau ne se mêle à aucun besoin, la matière rivalise avec la démonstration : l'une apporte la grandeur et la beauté, l'autre l'exactitude et une puissance prodigieuse.",
+      "auteur": "Plutarque",
+      "ref": "Vie de Marcellus, 17, 4",
+      "note": "Plutarque parle des travaux géométriques d'Archimède, qui dédaignait les applications pratiques."
+     }
     }
    ]
   },
@@ -246,6 +306,15 @@
    "nom": "La tétractys de Pythagore",
    "notion": "Nombres premiers, décomposition, diviseurs",
    "athena": "Tout entier au moins égal à 2 se décompose de façon unique en facteurs premiers : c'est là que se lisent ses diviseurs.",
+   "guides": [
+    {
+     "nom": "Pythagore de Samos (vers 570 – vers 495 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Ceux qu'on appelle pythagoriciens s'attachèrent les premiers aux mathématiques et les firent progresser ; nourris de ces sciences, ils pensèrent que leurs principes étaient les principes de tous les êtres. Puisque, parmi ces principes, les nombres sont par nature les premiers, et qu'ils croyaient voir dans les nombres beaucoup de ressemblances avec ce qui est et ce qui devient, […] ils supposèrent que les éléments des nombres sont les éléments de tous les êtres, et que le ciel tout entier est harmonie et nombre.",
+     "source": "Rapporté par Aristote, Métaphysique, A, 5, 985b23-986a3, à propos des pythagoriciens (trad. adaptée)",
+     "glose": "Pythagore n'a rien écrit : Aristote parle de « ceux qu'on appelle pythagoriciens », pour qui les éléments des nombres sont ceux de tous les êtres. Les entiers ont, eux, des éléments au sens propre : les nombres premiers, dont tout entier au moins égal à 2 est le produit, de façon unique à l'ordre près. C'est sur cette décomposition que tu lis les diviseurs, leur nombre et les carrés."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -273,7 +342,13 @@
        "explication": "$n^2 - 6n + 8 = (n - 2)(n - 4)$. Un nombre premier ne s'écrit comme produit de deux entiers relatifs que si l'un des facteurs vaut $1$ ou $-1$. $n - 4 = 1$ donne $n = 5$ et le produit $3$, premier ; $n - 2 = -1$ donne $n = 1$ et $(-1) \\times (-3) = 3$, premier ; $n - 2 = 1$ et $n - 4 = -1$ donnent $n = 3$ et le produit $-1$. Les solutions sont 1 et 5 : leur somme vaut 6.",
        "retenir": "Si un produit d'entiers $ab$ est premier, l'un des facteurs vaut $1$ ou $-1$ : ne pas oublier les facteurs négatifs."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "ciceron-orateur-1-18",
+      "texte": "Que dire de la mémoire, trésor de toutes choses ? Si elle n'est pas gardienne des idées et des mots qu'on a trouvés et médités, tout, même le plus brillant chez l'orateur, périra.",
+      "auteur": "Cicéron",
+      "ref": "De l'orateur, I, 18"
+     }
     },
     {
      "exercices": [
@@ -301,7 +376,13 @@
        "explication": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a 10 diviseurs, alors $(a_1 + 1) \\cdots (a_k + 1) = 10$, d'où $n = p^9$ ou $n = p^4 q$ ($p$, $q$ premiers distincts). Le plus petit $p^9$ est $2^9 = 512$ ; le plus petit $p^4 q$ est $2^4 \\times 3 = 48$. Donc 48, dont les diviseurs sont 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.",
        "retenir": "$p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a $(a_1 + 1) \\cdots (a_k + 1)$ diviseurs positifs ; pour un $n$ minimal, placer les plus grands exposants sur les plus petits nombres premiers."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-lettres-76-6",
+      "texte": "Qu'attends-tu ? Personne n'est devenu sage par hasard. La vertu ne te tombera pas dessus : on ne parvient pas à la connaître par un travail léger ni au prix d'un petit effort.",
+      "auteur": "Sénèque",
+      "ref": "Lettres à Lucilius, 76, 6"
+     }
     }
    ],
    "bonus": [
@@ -343,7 +424,14 @@
        "explication": "Faux. Pour $n = 11$, premier, $2^{11} - 1 = 2\\,047 = 23 \\times 89$ n'est pas premier. La propriété est vraie pour $n = 2, 3, 5, 7$ (on obtient 3, 7, 31, 127), d'où l'illusion. C'est la réciproque qui est vraie : si $2^n - 1$ est premier, alors $n$ est premier.",
        "retenir": "Ne pas confondre une implication et sa réciproque : « $2^n - 1$ premier $\\Rightarrow$ $n$ premier » est vraie, l'implication inverse est fausse."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "platon-gorgias-458a",
+      "texte": "Je suis de ceux qui ont plaisir à être réfutés quand ils disent quelque chose de faux, autant qu'à réfuter : être délivré soi-même du plus grand mal vaut mieux qu'en délivrer autrui.",
+      "auteur": "Platon",
+      "ref": "Gorgias, 458a-b",
+      "note": "Paroles de Socrate à Gorgias ; ce plus grand mal, précise-t-il, c'est une opinion fausse sur les sujets dont on discute."
+     }
     }
    ],
    "acrobaties": [
@@ -353,7 +441,13 @@
      "reponse": 10,
      "indice": "Le casier $n$ change d'état autant de fois que $n$ a de diviseurs. Quand ce nombre est-il impair ?",
      "explication": "Le casier $n$ est manipulé par chaque élève $k$ qui divise $n$ ; il finit ouvert si $n$ a un nombre impair de diviseurs. Les diviseurs vont par paires $(d, \\frac{n}{d})$, distinctes sauf si $d = \\frac{n}{d}$, c'est-à-dire $n = d^2$. Seuls les carrés ont donc un nombre impair de diviseurs : 1, 4, 9, …, 100, soit 10 casiers.",
-     "retenir": "Un entier $n \\geq 1$ a un nombre impair de diviseurs positifs si et seulement si c'est un carré parfait."
+     "retenir": "Un entier $n \\geq 1$ a un nombre impair de diviseurs positifs si et seulement si c'est un carré parfait.",
+     "maxime": {
+      "id": "marc-aurele-pensees-5-20",
+      "texte": "L'intelligence retourne et fait servir à son but tout obstacle à son action : ce qui retenait l'ouvrage le fait avancer, ce qui barrait la route fait avancer sur la route.",
+      "auteur": "Marc Aurèle",
+      "ref": "Pensées, V, 20"
+     }
     }
    ]
   },
@@ -364,6 +458,15 @@
    "nom": "L'hymne de Cléanthe",
    "notion": "PGCD, PPCM, algorithme d'Euclide",
    "athena": "Les diviseurs communs à $a$ et $b$ sont ceux de $b$ et du reste $r$ : l'algorithme d'Euclide n'est que cette phrase, répétée jusqu'au reste nul.",
+   "guides": [
+    {
+     "nom": "Cléanthe d'Assos (vers 330 – vers 230 av. J.-C.)",
+     "portrait": "grec",
+     "texte": "Rien ne se fait sans toi, ô dieu, ni sur la terre, ni dans la voûte divine de l'éther, ni sur la mer, sinon ce que font les méchants dans leur folie. Mais toi, tu sais rendre pair ce qui est impair, ordonner ce qui est sans ordre, et ce qui ne t'est pas cher t'est cher. Car tu as ainsi ajusté ensemble, en un tout, les biens avec les maux, de sorte qu'il naît de toutes choses une raison unique, éternelle.",
+     "source": "Cléanthe, Hymne à Zeus, v. 15-21, conservé par Stobée, Choix de textes, I, 1, 12 (trad. adaptée)",
+     "glose": "Cléanthe chante un dieu qui ajuste ensemble ce qui semblait discordant, d'où naît une raison unique ; chez les géomètres grecs, ce mot, logos, désigne aussi le rapport de deux grandeurs. Deux entiers ont une plus grande commune mesure, leur PGCD : l'algorithme d'Euclide la trouve en remplaçant $(a\\,;b)$ par $(b\\,;r)$ jusqu'au reste nul. Leurs multiples, eux, se rejoignent pour la première fois au PPCM."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -391,7 +494,14 @@
        "explication": "$d_n$ divise $5(3n + 4) - 3(5n + 1) = 17$, et 17 est premier, donc $d_n = 1$ ou $d_n = 17$. La valeur 17 est atteinte : pour $n = 10$, $3n + 4 = 34 = 2 \\times 17$ et $5n + 1 = 51 = 3 \\times 17$. La plus grande valeur est 17.",
        "retenir": "Pour un PGCD qui dépend de $n$ : éliminer $n$ par une combinaison, puis vérifier sur un exemple que la valeur maximale est atteinte."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "lucrece-1-1114",
+      "texte": "Avec un léger effort, tu connaîtras cela : une chose éclairera l'autre, la nuit aveugle ne te barrera pas la route jusqu'au fond de la nature ; les choses allumeront la lumière pour les choses.",
+      "auteur": "Lucrèce",
+      "ref": "De la nature, I, 1114-1117",
+      "note": "Derniers vers du livre I."
+     }
     },
     {
      "exercices": [
@@ -420,7 +530,14 @@
        "explication": "On pose $a = 6a'$ et $b = 6b'$ ; alors $a' + b' = 14$ et $\\mathrm{PGCD}(a'\\,;b') = 1$ (sinon le PGCD de $a$ et $b$ dépasserait 6). Avec $a' \\leq b'$ : $(1\\,;13)$, $(3\\,;11)$ et $(5\\,;9)$ conviennent ; $(0\\,;14)$, $(2\\,;12)$, $(4\\,;10)$, $(6\\,;8)$ et $(7\\,;7)$ non. D'où 3 couples : $(6\\,;78)$, $(18\\,;66)$, $(30\\,;54)$.",
        "retenir": "Si $\\mathrm{PGCD}(a\\,;b) = d$, alors $a = da'$ et $b = db'$ avec $\\mathrm{PGCD}(a'\\,;b') = 1$ : c'est le premier réflexe dans un problème de PGCD."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epicure-sv-14",
+      "texte": "Nous ne naissons qu'une fois […]. Toi qui n'es pas maître du lendemain, tu remets à plus tard le moment favorable ; mais la vie se perd à attendre, et chacun de nous meurt affairé.",
+      "auteur": "Épicure",
+      "ref": "Sentences vaticanes, 14",
+      "note": "Recueil anonyme de sentences épicuriennes (manuscrit du Vatican) : l'attribution à Épicure lui-même n'est pas certaine. Le mot « maître » est un ajout des éditeurs."
+     }
     }
    ],
    "bonus": [
@@ -462,7 +579,14 @@
        "explication": "Vrai. Si $d$ divise $n$ et $n + 2$, il divise $(n + 2) - n = 2$ ; le PGCD est donc un diviseur positif de 2 : 1 ou 2. Plus précisément, il vaut 2 si $n$ est pair (y compris $n = 0$) et 1 si $n$ est impair.",
        "retenir": "Le PGCD de deux entiers divise leur différence : $\\mathrm{PGCD}(a\\,;b) = \\mathrm{PGCD}(a\\,;b - a)$."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "laplace-essai-efforts",
+      "texte": "Tous ses efforts dans la recherche de la vérité tendent à le rapprocher sans cesse de l'intelligence que nous venons de concevoir, mais dont il restera toujours infiniment éloigné.",
+      "auteur": "Laplace",
+      "ref": "Essai philosophique sur les probabilités, « De la probabilité »",
+      "note": "« Ses », « le » : l'esprit humain. « L'intelligence » : celle qui, connaissant toutes les forces de la nature, verrait l'avenir comme le passé."
+     }
     }
    ]
   },
@@ -473,6 +597,15 @@
    "nom": "Le commentaire de Proclus",
    "notion": "Restes dans la division par 9, critères de divisibilité, preuve par neuf",
    "athena": "La preuve par neuf compare des restes : elle peut révéler une erreur, jamais garantir une exactitude.",
+   "guides": [
+    {
+     "nom": "Proclus (412 – 485)",
+     "portrait": "grec",
+     "texte": "Euclide n'est pas beaucoup plus jeune que ceux-là. Il rassembla les Éléments : il mit en ordre beaucoup de théorèmes d'Eudoxe, acheva beaucoup de ceux de Théétète, et ramena à des démonstrations irréfutables ce que ses prédécesseurs n'avaient démontré que de façon trop lâche. Il vécut au temps du premier Ptolémée. […] On raconte que Ptolémée lui demanda un jour s'il existait, pour la géométrie, un chemin plus court que les Éléments ; il répondit qu'il n'y a pas de route royale vers la géométrie.",
+     "source": "Proclus, Commentaire sur le premier livre des Éléments d'Euclide, prologue, p. 68 (éd. Friedlein) ; la réplique d'Euclide est une tradition qu'il rapporte (trad. adaptée)",
+     "glose": "Selon Proclus, Euclide a donné des démonstrations irréfutables à ce que d'autres n'avaient prouvé que de façon lâche. Fais de même avec la preuve par neuf : fonde-la sur une démonstration (un entier et la somme de ses chiffres ont le même reste par 9), et tu sauras exactement ce qu'elle garantit et ce qu'elle ne garantit pas. Quant à la route royale, il n'y en a pas : les cinq questions de la Chimère se prennent une à une."
+    }
+   ],
    "steles": [
     {
      "boss": "La Chimère de Lycie",
@@ -531,7 +664,13 @@
        "explication": "La propriété donne $r(2\\,027^{k+1}) = r\\big(r(2\\,027^k) \\times 2\\big)$ et $r(2^{k+1}) = r\\big(r(2^k) \\times 2\\big)$, car $r(2\\,027) = r(2) = 2$ : de proche en proche, $r(2\\,027^k) = r(2^k)$ pour tout $k \\geq 1$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$, puis $r(2^{6(m+1)}) = r\\big(r(2^{6m}) \\times r(2^6)\\big) = 1$ : $r(2^{6m}) = 1$ pour tout $m \\geq 1$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2\\,027}) = r\\big(r(2^{6 \\times 337}) \\times r(2^5)\\big) = r(1 \\times 5) = 5$.",
        "retenir": "Pour le reste d'une grande puissance : chercher un exposant qui donne le reste 1, puis effectuer la division euclidienne de l'exposant."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "seneque-providence-2-4",
+      "texte": "Sans adversaire, la vertu s'engourdit : on ne voit sa grandeur et sa force que lorsque l'endurance montre ce qu'elle peut.",
+      "auteur": "Sénèque",
+      "ref": "De la providence, 2, 4"
+     }
     }
    ],
    "bonus": [
@@ -573,7 +712,14 @@
        "explication": "Vrai. Tout entier naturel s'écrit $A = 100q + u$ avec $0 \\leq u \\leq 99$, où $u$ est le nombre formé par ses deux derniers chiffres. Comme $100 = 4 \\times 25$ : si 4 divise $u$, il divise $A = 100q + u$ ; si 4 divise $A$, il divise $u = A - 100q$.",
        "retenir": "$A$ et ses deux derniers chiffres diffèrent d'un multiple de 100, donc de 4 et de 25 : d'où les critères de divisibilité par 4 et par 25."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "kant-lumieres-sapere-aude",
+      "texte": "Sapere aude ! Aie le courage de te servir de ton propre entendement ! Voilà donc la devise des Lumières.",
+      "auteur": "Kant",
+      "ref": "Réponse à la question : Qu'est-ce que les Lumières ? (1784), premier paragraphe (AA VIII, 35)",
+      "note": "« Sapere aude » (« ose savoir ») vient d'Horace, Épîtres, I, 2, 40."
+     }
     }
    ]
   }
@@ -587,6 +733,15 @@
    "nom": "Le sanctuaire de Boèce",
    "notion": "Nombres parfaits, diviseurs, restes ; regard de futur professeur",
    "athena": "Ici, les nombres parfaits d'Euclide et les erreurs d'élèves : on n'enseigne bien que ce que l'on a soi-même démontré.",
+   "guides": [
+    {
+     "nom": "Boèce (vers 480 – 524)",
+     "portrait": "grec",
+     "texte": "Ses vêtements étaient faits de fils très fins, d'un art subtil, dans une matière indestructible ; elle les avait, comme je l'appris ensuite de sa bouche, tissés de ses propres mains. Une sorte de brume, celle d'un long abandon, en avait voilé l'éclat, comme il arrive aux portraits noircis par la fumée. Sur la bordure du bas, on lisait, tissé, un Π grec, et tout en haut un Θ. Et entre les deux lettres on voyait marqués, à la façon d'une échelle, des degrés par lesquels on pouvait monter de la lettre d'en bas à celle d'en haut.",
+     "source": "Boèce, Consolation de Philosophie, I, prose 1, 3-4 (trad. adaptée)",
+     "glose": "Sur la robe de Philosophie, des degrés mènent de Π à Θ : selon la lecture habituelle, de la pratique à la théorie. Ce sanctuaire te fait monter d'un degré avec des problèmes plus exigeants, puis redescendre vers la classe : un futur professeur doit savoir dire pourquoi la rédaction d'un élève est fausse, et choisir le contre-exemple qui convainc."
+    }
+   ],
    "steles": [
     {
      "exercices": [
@@ -614,7 +769,13 @@
        "explication": "$k = 3$ : $2^4 - 1 = 15 = 3 \\times 5$, rejeté. $k = 4$ : 31 est premier, d'où $16 \\times 31 = 496$, le troisième. $k = 5$ : $63 = 7 \\times 9$, rejeté. $k = 6$ : 127 est premier (ni 2, ni 3, ni 5, ni 7, ni 11 ne le divisent, et $13^2 > 127$), d'où $2^6 \\times 127 = 64 \\times 127 = 8\\,128$, le quatrième.",
        "retenir": "Les nombres parfaits pairs sont exactement les $2^k(2^{k+1} - 1)$ avec $2^{k+1} - 1$ premier (Euclide, puis Euler pour la réciproque)."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "aristote-physique-184a",
+      "texte": "Le chemin naturel va de ce qui est plus connaissable et plus clair pour nous vers ce qui est plus clair et plus connaissable par nature.",
+      "auteur": "Aristote",
+      "ref": "Physique, I, 1, 184a16-18"
+     }
     },
     {
      "exercices": [
@@ -643,7 +804,14 @@
        "retenir": "Les diviseurs de $N$ vont par paires $(d, \\frac{N}{d})$ de part et d'autre de $\\sqrt{N}$ : ce regroupement simplifie bien des dénombrements.",
        "effet": "passerelle"
       }
-     ]
+     ],
+     "maxime": {
+      "id": "epictete-entretiens-1-2-37",
+      "texte": "Je ne serai pas Milon, et pourtant je ne néglige pas mon corps ; ni Crésus, et pourtant je ne néglige pas mes biens. On n'abandonne aucun soin par désespoir d'atteindre les sommets.",
+      "auteur": "Épictète",
+      "ref": "Entretiens, I, 2, 37",
+      "note": "Milon de Crotone, athlète légendaire ; Crésus, roi proverbialement riche."
+     }
     },
     {
      "exercices": [
@@ -689,7 +857,13 @@
        "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ ont les facteurs premiers 2 et 3 en commun. $216 = 2^3 \\times 3^3$ a $(3 + 1)(3 + 1) = 16$ diviseurs. Le nombre de diviseurs d'un produit est le produit des nombres de diviseurs seulement si les facteurs n'ont aucun premier commun (exemple : $36 = 4 \\times 9$ a $3 \\times 3 = 9$ diviseurs).",
        "retenir": "Le nombre de diviseurs se calcule sur la décomposition en facteurs premiers du produit, jamais en multipliant à l'aveugle."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "democrite-b242",
+      "texte": "Plus nombreux sont ceux qui deviennent bons par l'exercice que par la nature.",
+      "auteur": "Démocrite",
+      "ref": "Fragment B 242 DK (Stobée, Anthologie, III, 29, 66)"
+     }
     }
    ],
    "bonus": [
@@ -731,7 +905,14 @@
        "explication": "Faux. Si $n$ a pour reste 0, 1 ou 2 dans la division par 3, alors respectivement $n$, $n + 2$ ou $n + 4$ est multiple de 3. Pour que les trois soient premiers, ce multiple de 3 doit valoir 3 : $n = 3$, ou $n + 2 = 3$ (alors $n = 1$, non premier), ou $n + 4 = 3$ (impossible). Seul le triplet $(3, 5, 7)$ convient.",
        "retenir": "Pour nier « il existe une infinité de… », il faut une preuve générale (ici par les restes) : un exemple ne suffit pas."
       }
-     ]
+     ],
+     "maxime": {
+      "id": "heraclite-b18",
+      "texte": "Qui n'espère pas ne trouvera pas l'inespéré : il est inexplorable et sans chemin.",
+      "auteur": "Héraclite",
+      "ref": "Fragment B 18 DK (Clément d'Alexandrie, Stromates, II, 17, 4)",
+      "note": "Clément, qui cite la phrase, y voit une paraphrase du mot d'Isaïe (7, 9) : « si vous ne croyez pas, vous ne comprendrez pas »."
+     }
     }
    ]
   }

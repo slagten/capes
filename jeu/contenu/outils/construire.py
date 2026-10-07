@@ -108,6 +108,17 @@ entete = """// =================================================================
 //  « glose », formules LaTeX entre $…$ (KaTeX).
 // =====================================================================
 """
+# Une seule apostrophe dans tout le jeu (les extraits avaient la typographique)
+def apostrophes(o):
+    if isinstance(o, str):
+        return o.replace("\u2019", "'")
+    if isinstance(o, list):
+        return [apostrophes(x) for x in o]
+    if isinstance(o, dict):
+        return {k: apostrophes(v) for k, v in o.items()}
+    return o
+chapitres = apostrophes(chapitres)
+mnemo = apostrophes(mnemo)
 js = entete + "var CHAPITRES = " + json.dumps(chapitres, ensure_ascii=False, indent=1) + ";\n\n"
 js += "// Le temple de Mnémosyne : le buste et les maximes des salles de révision\n"
 js += "var MNEMOSYNE = " + json.dumps(mnemo, ensure_ascii=False, indent=1) + ";\n"
