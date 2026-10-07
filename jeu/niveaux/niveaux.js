@@ -278,7 +278,7 @@ var CHAPITRES = [
         ],
         "indice": "La contraposée de « si $P$, alors $Q$ » part de la négation de la conclusion : « si non $Q$, alors… ».",
         "explication": "La contraposée de $P \\Rightarrow Q$ est $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$ : « si les rues ne sont pas mouillées, alors il ne pleut pas ». Elle est équivalente à l'implication de départ. La première option est la réciproque $Q \\Rightarrow P$, qui peut être fausse (un camion-citerne peut mouiller les rues) ; la deuxième est la contraposée de la réciproque ; la dernière est la négation de l'implication.",
-        "retenir": "Contraposée de $P \\Rightarrow Q$ : $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$, toujours équivalente. Réciproque : $Q \\Rightarrow P$, sans lien de vérité.",
+        "retenir": "Contraposée de $P \\Rightarrow Q$ : $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$, toujours équivalente. Réciproque : $Q \\Rightarrow P$, qui peut être fausse même si l'implication est vraie.",
         "id": "c1r1-s0-0"
        },
        {
@@ -357,21 +357,21 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Cherche une implication vraie dont la réciproque est vraie aussi.",
-        "explication": "Faux. Contre-exemple : pour un réel $x$, « si $x = 2$, alors $2x = 4$ » est vraie, et sa réciproque « si $2x = 4$, alors $x = 2$ » est vraie aussi. La réciproque d'une implication vraie peut être vraie ou fausse : il n'y a aucun lien.",
-        "retenir": "La valeur de vérité de la réciproque ne se déduit pas de celle de l'implication : il faut l'étudier.",
+        "explication": "Faux. Contre-exemple : pour un réel $x$, « si $x = 2$, alors $2x = 4$ » est vraie, et sa réciproque « si $2x = 4$, alors $x = 2$ » est vraie aussi. La réciproque d'une implication vraie peut donc être vraie, comme ici, ou fausse : « si $x = -2$, alors $x^2 = 4$ » est vraie, mais sa réciproque ne l'est pas ($x = 2$).",
+        "retenir": "Qu'une implication soit vraie ne dit rien de sa réciproque : il faut étudier celle-ci à part.",
         "id": "c1r1-b0-0"
        },
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Pour tout entier $n$, si $n^2$ est un multiple de 4, alors $n$ est un multiple de 4. »",
+        "enonce": "Proposition : « Soient $a$ et $b$ deux réels. Pour que $a + b > 0$, il faut que $a > 0$ et $b > 0$. »",
         "reponse": 2,
         "choix": [
          "Vrai",
          "Faux"
         ],
-        "indice": "Essaie de petits entiers pairs.",
-        "explication": "Faux. Contre-exemple : $n = 2$. On a $n^2 = 4$, multiple de 4, mais $2$ n'est pas un multiple de 4. (La réciproque, elle, est vraie : si $n = 4k$, alors $n^2 = 4 \\times 4k^2$.)",
-        "retenir": "Un seul contre-exemple suffit à réfuter une proposition « pour tout » : tester d'abord les petites valeurs.",
+        "indice": "« Pour que $Q$, il faut $P$ » se traduit par $Q \\Rightarrow P$. Une somme strictement positive impose-t-elle le signe de chacun de ses termes ?",
+        "explication": "Faux. « Il faut que $a > 0$ et $b > 0$ » signifie : si $a + b > 0$, alors $a > 0$ et $b > 0$. Contre-exemple : $a = 3$ et $b = -1$. On a $a + b = 2 > 0$, mais $b > 0$ est faux. La condition est suffisante (si $a > 0$ et $b > 0$, alors $a + b > 0$ : c'est la réciproque, qui est vraie), mais elle n'est pas nécessaire.",
+        "retenir": "Réfuter « pour que $Q$, il faut $P$ », c'est-à-dire $Q \\Rightarrow P$, c'est exhiber un cas où $Q$ est vraie et $P$ fausse.",
         "id": "c1r1-b0-1"
        },
        {
@@ -446,7 +446,7 @@ var CHAPITRES = [
         "reponse": 6,
         "indice": "Décompose en facteurs premiers, puis regroupe les facteurs $2 \\times 5 = 10$.",
         "explication": "$8^3 = 2^9$, $125^2 = 5^6$ et $6 = 2 \\times 3$, donc $N = 2^{10} \\times 3 \\times 5^6 = 2^4 \\times 3 \\times (2 \\times 5)^6 = 48 \\times 10^6 = 48\\,000\\,000$. Comme $48$ ne se termine pas par 0, $N$ se termine par exactement 6 zéros.",
-        "retenir": "Le nombre de zéros finaux d'un entier est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
+        "retenir": "Le nombre de zéros finaux d'un entier naturel non nul est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
         "effet": "passerelle",
         "id": "c1r2-s0-2"
        }
@@ -573,7 +573,7 @@ var CHAPITRES = [
         ],
         "indice": "Un contre-exemple est un réel tel que $x^2 < x$. Que devient un nombre compris entre 0 et 1 quand on l'élève au carré ?",
         "explication": "Pour $x = \\frac{1}{2}$ : $x^2 = \\frac{1}{4} < \\frac{1}{2}$, donc la proposition est fausse. Les autres valeurs vérifient l'inégalité ($1 \\geqslant -1$, $0 \\geqslant 0$, $4 \\geqslant 2$) : ce sont des exemples, et des exemples ne prouvent rien sur un « pour tout ».",
-        "retenir": "Entre 0 et 1, un nombre est strictement plus grand que son carré : c'est là qu'il faut chercher les contre-exemples.",
+        "retenir": "Pour $0 < x < 1$, on a $x^2 < x$ : c'est là qu'il faut chercher les contre-exemples.",
         "id": "c1r3-s0-0"
        },
        {
@@ -596,7 +596,7 @@ var CHAPITRES = [
          "$a = -2$ et $b = -1$"
         ],
         "indice": "Un contre-exemple doit vérifier l'hypothèse $a < b$ et contredire la conclusion. Pense aux signes de $a$ et $b$.",
-        "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. La proposition n'est vraie que si $a$ et $b$ ont le même signe.",
+        "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. L'implication est vraie quand $a$ et $b$ sont de même signe, fausse quand $a < 0 < b$.",
         "retenir": "Un contre-exemple de « si $P$, alors $Q$ » vérifie $P$ et ne vérifie pas $Q$ : c'est exactement la négation de l'implication.",
         "id": "c1r3-s0-2"
        }
@@ -750,8 +750,8 @@ var CHAPITRES = [
          "« $-1 > x > 4$ »"
         ],
         "indice": "« $-1 \\leqslant x \\leqslant 4$ » signifie « $x \\geqslant -1$ et $x \\leqslant 4$ ». La négation de « $P$ et $Q$ » est « non $P$ ou non $Q$ ».",
-        "explication": "« $-1 \\leqslant x \\leqslant 4$ » est la conjonction « $x \\geqslant -1$ et $x \\leqslant 4$ ». Sa négation est « $x < -1$ ou $x > 4$ » : le « et » devient « ou », et chaque inégalité large devient une inégalité stricte dans l'autre sens. La version avec « et » n'est vérifiée par aucun réel ; celle avec des inégalités larges contient à tort $-1$ et $4$, qui vérifient la proposition de départ.",
-        "retenir": "non($P$ et $Q$) = (non $P$) ou (non $Q$). La négation de $x \\leqslant b$ est $x > b$.",
+        "explication": "« $-1 \\leqslant x \\leqslant 4$ » est la conjonction « $x \\geqslant -1$ et $x \\leqslant 4$ ». Sa négation est « $x < -1$ ou $x > 4$ » : le « et » devient « ou », et chaque inégalité large devient une inégalité stricte dans l'autre sens. La version avec « et », comme « $-1 > x > 4$ » qui lui équivaut, n'est vérifiée par aucun réel ; celle avec des inégalités larges contient à tort $-1$ et $4$, qui vérifient la proposition de départ.",
+        "retenir": "non($P$ et $Q$) équivaut à (non $P$) ou (non $Q$). La négation de $x \\leqslant b$ est $x > b$.",
         "id": "c1r4-s0-0"
        },
        {
@@ -780,7 +780,7 @@ var CHAPITRES = [
          "La négation de $P$ est « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ », et c'est elle qui est vraie."
         ],
         "indice": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ ». Ensuite, teste un réel négatif.",
-        "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation d'une implication n'est jamais une implication.",
+        "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation de « si $A$, alors $B$ » n'est pas « si $A$, alors non $B$ » : c'est « $A$ et non $B$ ».",
         "retenir": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ » : c'est l'existence d'un contre-exemple, pas une autre implication.",
         "id": "c1r4-s0-2"
        }
@@ -931,7 +931,7 @@ var CHAPITRES = [
          "$a$ et $g$ sont positifs, et deux réels positifs sont rangés dans le même ordre que leurs carrés."
         ],
         "indice": "Une seule de ces justifications est un énoncé vrai. Teste les autres avec $u = -3$ et $v = 1$.",
-        "explication": "$a > 0$ et $g > 0$ car $x$ et $y$ sont strictement positifs. Pour $u, v \\geqslant 0$ : $u^2 > v^2 \\Leftrightarrow u > v$, car la fonction racine carrée est strictement croissante sur $[0\\,;+\\infty[$. Donc $g < a$. La fonction carré n'est pas croissante sur $\\mathbb{R}$, et $u = -3$, $v = 1$ vérifient $u^2 > v^2$ sans vérifier $u > v$ : les autres justifications sont fausses.",
+        "explication": "$a > 0$ et $g > 0$ car $x$ et $y$ sont strictement positifs. Pour $u, v \\geqslant 0$, $u^2 > v^2$ entraîne $\\sqrt{u^2} > \\sqrt{v^2}$, c'est-à-dire $u > v$, car la fonction racine carrée est strictement croissante sur $[0\\,;+\\infty[$. Donc $g < a$. La fonction carré n'est pas croissante sur $\\mathbb{R}$, et $u = -3$, $v = 1$ vérifient $u^2 > v^2$ sans vérifier $u > v$ : les autres justifications sont fausses.",
         "retenir": "Passer des carrés aux nombres exige des nombres positifs : écrire « $a$ et $g$ sont positifs » avant de conclure.",
         "id": "c1b-s0-2"
        },
@@ -956,7 +956,7 @@ var CHAPITRES = [
       ],
       "boss": "L'Hydre de Lerne",
       "monstre": "hydre",
-      "contexte": "D'après CAPES Mayotte 2022 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$."
+      "contexte": "D'après CAPES Mayotte 2022, composition 2 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$."
      }
     ],
     "bonus": [
@@ -1108,18 +1108,18 @@ var CHAPITRES = [
      {
       "exercices": [
        {
-        "titre": "Ce que l'élève a démontré",
-        "enonce": "On demande de démontrer : « pour tout entier $n$, si $n^2$ est un multiple de 3, alors $n$ est un multiple de 3 ». Un élève écrit : « Soit $n = 3k$ avec $k$ entier. Alors $n^2 = 9k^2 = 3 \\times 3k^2$ est un multiple de 3. » Que lui répondre ?",
+        "titre": "Le théorème ou sa réciproque ?",
+        "enonce": "Dans un triangle $ABC$, on a $AB = 3$, $AC = 4$ et $BC = 5$. Un élève écrit : « $AB^2 + AC^2 = 9 + 16 = 25 = BC^2$, donc, d'après le théorème de Pythagore, le triangle $ABC$ est rectangle en $A$. » Que lui répondre ?",
         "reponse": 2,
         "choix": [
-         "« Ta preuve est juste : tu as démontré la contraposée, qui est équivalente. »",
-         "« Tu as démontré la réciproque, qui ne permet pas de conclure. Démontre plutôt la contraposée : si $n$ n'est pas multiple de 3, alors $n^2$ non plus. »",
-         "« Ta preuve est juste, mais il faut aussi la vérifier sur quelques exemples. »",
-         "« Ta preuve est fausse, car $9k^2$ n'est pas un multiple de 3. »"
+         "« Ta preuve est juste : tu as utilisé la contraposée du théorème de Pythagore. »",
+         "« Ta conclusion est juste, mais il faut citer la réciproque du théorème de Pythagore : le théorème suppose le triangle déjà rectangle. »",
+         "« Ta conclusion est fausse : une égalité entre carrés de longueurs ne prouve pas qu'un triangle est rectangle. »",
+         "« Il faut d'abord démontrer que l'angle en $A$ est droit, puis appliquer le théorème de Pythagore. »"
         ],
-        "indice": "Repère l'hypothèse et la conclusion utilisées par l'élève, et compare-les à celles de l'énoncé.",
-        "explication": "L'élève part de « $n$ multiple de 3 » et arrive à « $n^2$ multiple de 3 » : il a démontré la réciproque, qui est vraie mais ne dit rien de l'énoncé demandé. Ce n'est pas la contraposée, qui serait « si $n$ n'est pas multiple de 3, alors $n^2$ n'est pas multiple de 3 ». Pour l'établir, on distingue $n = 3k + 1$ et $n = 3k + 2$, et l'on montre que $n^2$ s'écrit alors $3m + 1$ avec $m$ entier.",
-        "retenir": "Devant une copie, souligner l'hypothèse de départ et la conclusion atteinte : on voit aussitôt si l'élève a démontré la réciproque.",
+        "indice": "Écris le théorème de Pythagore sous la forme « si …, alors … », puis compare avec ce que l'élève sait et ce qu'il conclut.",
+        "explication": "Le théorème de Pythagore affirme : si $ABC$ est rectangle en $A$, alors $AB^2 + AC^2 = BC^2$. L'élève part de l'égalité pour conclure que le triangle est rectangle : il utilise la réciproque, un autre théorème (vrai lui aussi), qu'il doit citer. Sa conclusion est juste ; seule la justification est à corriger. La contraposée (si $AB^2 + AC^2 \\neq BC^2$, alors $ABC$ n'est pas rectangle en $A$) sert à prouver qu'un triangle n'est pas rectangle en $A$, et supposer l'angle droit pour le démontrer serait un cercle vicieux.",
+        "retenir": "Le théorème de Pythagore calcule une longueur dans un triangle rectangle ; sa réciproque prouve qu'un triangle est rectangle ; sa contraposée, appliquée au plus grand côté, qu'il ne l'est pas.",
         "id": "c1s-s2-0"
        },
        {
@@ -1149,7 +1149,7 @@ var CHAPITRES = [
         ],
         "indice": "La réponse doit être mathématiquement exacte : l'égalité est-elle vraiment fausse pour toutes les valeurs de $a$ et $b$ ?",
         "explication": "L'égalité « pour tous $a$ et $b$ » est fausse, et un contre-exemple le prouve : $(1 + 1)^2 = 4$ alors que $1^2 + 1^2 = 2$. Mais elle est vraie lorsque $ab = 0$, comme dans l'exemple de l'élève : dire « jamais égal » est donc faux. Quant à « vrai pour les nombres positifs », $a = b = 1$ le réfute.",
-        "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité ; une identité fausse peut être vraie pour certaines valeurs. Les quantificateurs font la différence.",
+        "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité, et une égalité fausse en général peut être vraie pour certaines valeurs : les quantificateurs font la différence.",
         "id": "c1s-s2-2"
        }
       ]
@@ -1259,7 +1259,7 @@ var CHAPITRES = [
          "$[-\\sqrt{5}\\,;\\sqrt{5}]$"
         ],
         "indice": "Les solutions de $x^2 = 5$ sont $-\\sqrt{5}$ et $\\sqrt{5}$. Où la parabole $y = x^2$ est-elle au-dessus de la droite $y = 5$ ?",
-        "explication": "$x^2 \\geqslant 5 \\iff (x-\\sqrt{5})(x+\\sqrt{5}) \\geqslant 0$. Ce produit est positif ou nul à l'extérieur des racines : $x \\leqslant -\\sqrt{5}$ ou $x \\geqslant \\sqrt{5}$. Par exemple $-3$ est solution, car $9 \\geqslant 5$ : la réponse $[\\sqrt{5}\\,;+\\infty[$ oublie les négatifs.",
+        "explication": "$x^2 \\geqslant 5 \\iff (x-\\sqrt{5})(x+\\sqrt{5}) \\geqslant 0$. Ce produit est strictement positif à l'extérieur des racines et nul en elles : $x \\leqslant -\\sqrt{5}$ ou $x \\geqslant \\sqrt{5}$. Par exemple $-3$ est solution, car $9 \\geqslant 5$ : la réponse $[\\sqrt{5}\\,;+\\infty[$ oublie les négatifs.",
         "retenir": "Pour $a > 0$ : $x^2 \\geqslant a \\iff x \\leqslant -\\sqrt{a}$ ou $x \\geqslant \\sqrt{a}$ ; $x^2 \\leqslant a \\iff -\\sqrt{a} \\leqslant x \\leqslant \\sqrt{a}$.",
         "id": "c2r1-s0-1"
        },
@@ -1286,16 +1286,16 @@ var CHAPITRES = [
         "id": "c2r1-s1-0"
        },
        {
-        "titre": "L'inverse sous 2",
-        "enonce": "Déterminer l'ensemble des solutions de l'inéquation $\\dfrac{1}{x} < 2$, d'inconnue $x$ réelle non nulle.",
+        "titre": "Un inverse minoré",
+        "enonce": "Déterminer l'ensemble des solutions de l'inéquation $\\dfrac{1}{x} > -2$, d'inconnue $x$ réelle non nulle.",
         "reponse": 3,
         "choix": [
-         "$]\\frac{1}{2}\\,;+\\infty[$",
-         "$]0\\,;\\frac{1}{2}[$",
-         "$]-\\infty\\,;0[\\,\\cup\\,]\\frac{1}{2}\\,;+\\infty[$"
+         "$]-\\frac{1}{2}\\,;0[\\,\\cup\\,]0\\,;+\\infty[$",
+         "$]-\\infty\\,;-\\frac{1}{2}[$",
+         "$]-\\infty\\,;-\\frac{1}{2}[\\,\\cup\\,]0\\,;+\\infty[$"
         ],
         "indice": "Distingue $x < 0$ et $x > 0$ : multiplier par $x$ change le sens de l'inégalité quand $x$ est négatif.",
-        "explication": "Si $x < 0$, alors $\\frac{1}{x} < 0 < 2$ : tout réel strictement négatif est solution. Si $x > 0$ : $\\frac{1}{x} < 2 \\iff 1 < 2x \\iff x > \\frac{1}{2}$. Donc $S = ]-\\infty\\,;0[\\,\\cup\\,]\\frac{1}{2}\\,;+\\infty[$. Autre voie : $\\frac{1}{x} - 2 = \\frac{1-2x}{x}$ et un tableau de signes.",
+        "explication": "Si $x > 0$, alors $\\frac{1}{x} > 0 > -2$ : tout réel strictement positif est solution. Si $x < 0$, multiplier par $x$ change le sens : $\\frac{1}{x} > -2 \\iff 1 < -2x \\iff x < -\\frac{1}{2}$. Donc $S = ]-\\infty\\,;-\\frac{1}{2}[\\,\\cup\\,]0\\,;+\\infty[$. Sans changer le sens, on trouverait $x > -\\frac{1}{2}$ : faux pour $x = -\\frac{1}{4}$, car $\\frac{1}{x} = -4$. Autre voie : $\\frac{1}{x} + 2 = \\frac{2x+1}{x}$ et un tableau de signes.",
         "retenir": "On ne multiplie pas une inéquation par une expression de signe inconnu : on passe tout d'un côté et on étudie le signe d'un quotient.",
         "id": "c2r1-s1-1"
        },
@@ -1335,15 +1335,15 @@ var CHAPITRES = [
        },
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Pour tout réel $x$, si $x^2 < 4$, alors $x < 2$. »",
+        "enonce": "Proposition : « Pour tout réel $x$, si $-3 < x < -1$, alors $1 < x^2 < 9$. »",
         "reponse": 1,
         "choix": [
          "Vrai",
          "Faux"
         ],
-        "indice": "Résous complètement l'inéquation $x^2 < 4$. Attention : la réciproque est une autre proposition.",
-        "explication": "Vrai. $x^2 < 4 \\iff (x-2)(x+2) < 0 \\iff -2 < x < 2$, donc en particulier $x < 2$. La réciproque est fausse : $x = -3$ vérifie $x < 2$ mais $x^2 = 9 \\geqslant 4$.",
-        "retenir": "Pour juger une implication, résoudre entièrement l'hypothèse ; ne pas la confondre avec sa réciproque.",
+        "indice": "Dans quel intervalle se trouve $x$, et quel y est le sens de variation de la fonction carré ?",
+        "explication": "Vrai. La fonction carré est strictement décroissante sur $]-\\infty\\,;0]$ : elle y renverse l'ordre. Si $-3 < x < -1$, les nombres $-3$, $x$ et $-1$ sont dans $]-\\infty\\,;0]$, donc $(-3)^2 > x^2 > (-1)^2$, soit $1 < x^2 < 9$. La réciproque est fausse : $x = 2$ vérifie $1 < x^2 < 9$, mais pas $-3 < x < -1$.",
+        "retenir": "Sur un intervalle où elle est croissante, une fonction conserve l'ordre ; là où elle est décroissante, elle le renverse : la fonction carré renverse l'ordre sur $]-\\infty\\,;0]$.",
         "id": "c2r1-b0-1"
        },
        {
@@ -1642,16 +1642,16 @@ var CHAPITRES = [
     "acrobaties": [
      {
       "titre": "La faille du carré",
-      "enonce": "Pour résoudre $\\sqrt{x+2} = x$, un élève écrit : « J'élève au carré : $x + 2 = x^2$, soit $x^2 - x - 2 = 0$. Comme $\\Delta = 9$, on trouve $S = \\{-1\\,;2\\}$. » Que penser de sa réponse ?",
+      "enonce": "Pour résoudre $\\sqrt{2x+3} = x$, un élève écrit : « J'élève au carré : $2x + 3 = x^2$, soit $x^2 - 2x - 3 = 0$. Comme $\\Delta = 16$, on trouve $S = \\{-1\\,;3\\}$. » Que penser de sa réponse ?",
       "reponse": 3,
       "choix": [
        "Elle est juste : les deux valeurs vérifient l'équation de départ.",
-       "Elle est fausse : le discriminant vaut $-7$, il n'y a aucune solution.",
-       "Elle est fausse : élever au carré donne seulement une implication ; $-1$ ne vérifie pas l'équation, donc $S = \\{2\\}$.",
+       "Elle est fausse : le discriminant vaut $-8$, il n'y a aucune solution.",
+       "Elle est fausse : élever au carré donne seulement une implication ; $-1$ ne vérifie pas l'équation, donc $S = \\{3\\}$.",
        "Elle est fausse : on n'a jamais le droit d'élever au carré une équation."
       ],
       "indice": "Remplace $x$ par chacune des deux valeurs dans l'équation de départ.",
-      "explication": "Si $\\sqrt{x+2} = x$, alors $x + 2 = x^2$ ; mais la réciproque est fausse, car $A^2 = B^2$ n'entraîne pas $A = B$. Vérification : pour $x = -1$, $\\sqrt{1} = 1 \\neq -1$ ; pour $x = 2$, $\\sqrt{4} = 2$. Donc $S = \\{2\\}$. Rédaction correcte : $\\sqrt{x+2} = x \\iff \\left(x \\geqslant 0 \\text{ et } x + 2 = x^2\\right)$.",
+      "explication": "Si $\\sqrt{2x+3} = x$, alors $2x + 3 = x^2$ ; mais la réciproque est fausse, car $A^2 = B^2$ n'entraîne pas $A = B$. Vérification : pour $x = -1$, $\\sqrt{1} = 1 \\neq -1$ ; pour $x = 3$, $\\sqrt{9} = 3$. Donc $S = \\{3\\}$. Rédaction correcte : $\\sqrt{2x+3} = x \\iff \\left(x \\geqslant 0 \\text{ et } 2x + 3 = x^2\\right)$.",
       "retenir": "Élever au carré n'est une équivalence qu'entre deux nombres de même signe : imposer la condition de signe ou vérifier chaque solution.",
       "id": "c2r3-h0",
       "figure": "salto"
@@ -1919,14 +1919,14 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Il existe deux réels dont la somme vaut $5$ et le produit vaut $7$. »",
+        "enonce": "Proposition : « Il existe deux réels dont la somme vaut $4$ et le produit vaut $5$. »",
         "reponse": 2,
         "choix": [
          "Vrai",
          "Faux"
         ],
         "indice": "Deux réels de somme $S$ et de produit $P$ sont les solutions de $X^2 - SX + P = 0$.",
-        "explication": "Faux. Si $u + v = 5$ et $uv = 7$, alors $(X - u)(X - v) = X^2 - 5X + 7$ pour tout réel $X$, donc $u$ et $v$ sont solutions de $X^2 - 5X + 7 = 0$. Or $\\Delta = 25 - 28 = -3 < 0$ : cette équation n'a aucune solution réelle. De tels réels n'existent donc pas.",
+        "explication": "Faux. Si $u + v = 4$ et $uv = 5$, alors $(X - u)(X - v) = X^2 - 4X + 5$ pour tout réel $X$, donc $u$ et $v$ sont solutions de $X^2 - 4X + 5 = 0$. Or $\\Delta = 16 - 20 = -4 < 0$ : cette équation n'a aucune solution réelle. De tels réels n'existent donc pas.",
         "retenir": "Il existe deux réels de somme $S$ et de produit $P$ si et seulement si $S^2 - 4P \\geqslant 0$.",
         "id": "c2b-b0-0"
        },
@@ -1999,7 +1999,7 @@ var CHAPITRES = [
         "enonce": "D'après CAPES Mayotte 2022. On admet que les réels $\\alpha = 2\\cos\\left(\\frac{2\\pi}{5}\\right)$ et $\\beta = 2\\cos\\left(\\frac{4\\pi}{5}\\right)$ vérifient $\\alpha + \\beta = -1$ et $\\alpha\\beta = -1$. Entrer la valeur de $\\cos\\left(\\frac{2\\pi}{5}\\right)$ arrondie au millième.",
         "reponse": 0.309,
         "tolerance": 0.0005,
-        "indice": "$\\alpha$ et $\\beta$ sont les solutions d'une équation $X^2 - SX + P = 0$. Lequel des deux est positif ?",
+        "indice": "$\\alpha$ et $\\beta$ sont les solutions d'une équation $X^2 - SX + P = 0$. Pour identifier $\\alpha$ parmi elles : comme $0 < \\frac{2\\pi}{5} < \\frac{\\pi}{2}$, le réel $\\cos\\left(\\frac{2\\pi}{5}\\right)$ est strictement positif.",
         "explication": "$\\alpha$ et $\\beta$ sont les solutions de $X^2 + X - 1 = 0$, soit $\\frac{-1 \\pm \\sqrt{5}}{2}$. Comme $0 < \\frac{2\\pi}{5} < \\frac{\\pi}{2}$, on a $\\alpha > 0$, donc $\\alpha = \\frac{\\sqrt{5} - 1}{2}$ et $\\cos\\left(\\frac{2\\pi}{5}\\right) = \\frac{\\sqrt{5} - 1}{4} \\approx 0{,}309$.",
         "retenir": "Deux nombres de somme $S$ et de produit $P$ sont les solutions de $X^2 - SX + P = 0$ : c'est ainsi qu'on les calcule.",
         "id": "c2s-s0-0"
@@ -2207,7 +2207,7 @@ var CHAPITRES = [
         "reponse": 4,
         "indice": "Un multiple de 12 est multiple de 3 et de 4 : utilise le critère de divisibilité par 3 (somme des chiffres) et celui par 4 (nombre formé par les deux derniers chiffres).",
         "explication": "Si 12 divise ce nombre, 3 et 4 le divisent. Par 3 : $5 + 2 + x + 4 = 11 + x$ est multiple de 3, donc $x \\in \\{1, 4, 7\\}$. Par 4 : $\\overline{x4}$ est multiple de 4, donc $x$ est pair. Seul $x = 4$ convient et, réciproquement, $5\\,244 = 12 \\times 437$.",
-        "retenir": "Être divisible par 12 entraîne être divisible par 3 et par 4. Attention : être divisible par 2 et par 6 ne suffit pas (6 lui-même n'est pas multiple de 12).",
+        "retenir": "Si 12 divise un entier, alors 3 et 4 le divisent. Attention : la divisibilité par 2 et par 6 n'entraîne pas celle par 12 (6 n'est pas multiple de 12).",
         "id": "c3r1-s0-1"
        },
        {
@@ -2384,18 +2384,18 @@ var CHAPITRES = [
         "id": "c3r2-s1-0"
        },
        {
-        "titre": "La faille de la preuve",
-        "enonce": "Pour démontrer « si $n^2$ est divisible par 3, alors $n$ est divisible par 3 », un candidat écrit : « Si $n = 3k$, alors $n^2 = 9k^2 = 3(3k^2)$ est divisible par 3. » Quel jugement porter sur cette preuve ?",
+        "titre": "Même reste",
+        "enonce": "Deux entiers $a$ et $b$ ont le même reste dans la division euclidienne par 11. Quelle affirmation est toujours vraie ?",
         "reponse": 4,
         "choix": [
-         "Elle est correcte et complète.",
-         "Elle est correcte, mais il faut aussi traiter le cas $n$ négatif.",
-         "Il suffit de la compléter par l'exemple $n = 6$ : 36 est divisible par 3, et 6 aussi.",
-         "Elle démontre la réciproque. Il faut prouver la contraposée : si $n = 3k + 1$ ou $n = 3k + 2$, alors $n^2$ a pour reste 1 dans la division par 3."
+         "$a = b$.",
+         "$a$ et $b$ ont le même quotient dans la division euclidienne par 11.",
+         "$a + b$ est divisible par 11.",
+         "$a - b$ est divisible par 11."
         ],
-        "indice": "Repère l'hypothèse et la conclusion de la proposition, puis celles de la preuve.",
-        "explication": "La proposition part de « 3 divise $n^2$ », la preuve part de « 3 divise $n$ » : elle établit la réciproque. On démontre la contraposée : si $n = 3k + 1$, $n^2 = 3(3k^2 + 2k) + 1$ ; si $n = 3k + 2$, $n^2 = 3(3k^2 + 4k + 1) + 1$. Dans les deux cas le reste est 1, donc $n^2$ n'est pas divisible par 3.",
-        "retenir": "Avant de rédiger, repérer hypothèse et conclusion : démontrer la réciproque à la place de la proposition est l'erreur de logique la plus fréquente.",
+        "indice": "Écris les deux divisions euclidiennes avec le même reste $r$ : quelle opération sur $a$ et $b$ fait disparaître $r$ ?",
+        "explication": "Si $a = 11q + r$ et $b = 11q' + r$, alors $a - b = 11(q - q')$, avec $q - q'$ entier : 11 divise $a - b$. Les trois autres affirmations tombent avec $a = 1$ et $b = 12 = 11 \\times 1 + 1$, qui ont tous deux pour reste 1 : $a \\neq b$, les quotients 0 et 1 diffèrent, et $a + b = 13$ n'est pas divisible par 11. Réciproquement, si 11 divise $a - b$, alors $a$ et $b$ ont le même reste.",
+        "retenir": "Deux entiers ont le même reste dans la division euclidienne par $b$ si et seulement si leur différence est un multiple de $b$.",
         "id": "c3r2-s1-1"
        },
        {
@@ -2519,30 +2519,30 @@ var CHAPITRES = [
      {
       "exercices": [
        {
-        "titre": "Les diviseurs de 360",
-        "enonce": "Entrer le nombre de diviseurs positifs de 360.",
-        "reponse": 24,
-        "indice": "Décompose 360 en facteurs premiers : un diviseur positif s'écrit $2^a \\times 3^b \\times 5^c$ avec des exposants bornés.",
-        "explication": "$360 = 2^3 \\times 3^2 \\times 5$. Les diviseurs positifs sont les $2^a \\times 3^b \\times 5^c$ avec $0 \\leq a \\leq 3$, $0 \\leq b \\leq 2$ et $0 \\leq c \\leq 1$ : il y en a $4 \\times 3 \\times 2 = 24$.",
-        "retenir": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$, alors $n$ a $(a_1 + 1)(a_2 + 1) \\cdots (a_k + 1)$ diviseurs positifs.",
+        "titre": "Les diviseurs de 200",
+        "enonce": "Dresser la liste des diviseurs positifs de $200 = 2^3 \\times 5^2$, puis entrer leur nombre.",
+        "reponse": 12,
+        "indice": "Tout diviseur positif de 200 s'écrit $2^a \\times 5^b$ avec $a \\leq 3$ et $b \\leq 2$ : range-les dans un tableau à double entrée.",
+        "explication": "Un diviseur positif de $200 = 2^3 \\times 5^2$ s'écrit $2^a \\times 5^b$ avec $0 \\leq a \\leq 3$ et $0 \\leq b \\leq 2$. Le tableau qui croise 1, 2, 4, 8 et 1, 5, 25 donne : 1, 2, 4, 8 ; 5, 10, 20, 40 ; 25, 50, 100, 200. Il y a $4 \\times 3 = 12$ diviseurs positifs.",
+        "retenir": "Les diviseurs positifs de $p^a \\times q^b$ ($p$, $q$ premiers distincts) sont les $p^i \\times q^j$ avec $0 \\leq i \\leq a$ et $0 \\leq j \\leq b$ : un tableau à double entrée les donne tous.",
         "id": "c3r3-s1-0"
        },
        {
         "titre": "Compléter en carré",
         "enonce": "Entrer le plus petit entier naturel non nul $k$ tel que $360k$ soit le carré d'un entier.",
         "reponse": 10,
-        "indice": "Un entier est un carré si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs.",
+        "indice": "Décompose 360 en facteurs premiers ; un entier est un carré si et seulement si tous les exposants de sa décomposition sont pairs.",
         "explication": "$360 = 2^3 \\times 3^2 \\times 5$ : les exposants de 2 et de 5 sont impairs. Il faut donc que $k$ soit multiple de $2 \\times 5 = 10$, et $k = 10$ convient : $360 \\times 10 = 3\\,600 = 60^2$.",
         "retenir": "Un entier est un carré parfait si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs.",
         "id": "c3r3-s1-1"
        },
        {
         "titre": "Dix diviseurs",
-        "enonce": "Entrer le plus petit entier naturel ayant exactement 10 diviseurs positifs.",
+        "enonce": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ est la décomposition de $n$ en facteurs premiers, ses diviseurs positifs sont les $p_1^{b_1} \\times \\dots \\times p_k^{b_k}$ avec $0 \\leq b_i \\leq a_i$ pour chaque $i$ : il y en a donc $(a_1 + 1)(a_2 + 1) \\cdots (a_k + 1)$. Entrer le plus petit entier naturel ayant exactement 10 diviseurs positifs.",
         "reponse": 48,
         "indice": "Écris 10 comme produit de facteurs $(a_1 + 1)(a_2 + 1) \\cdots$ : $10 = 10$ ou $10 = 5 \\times 2$.",
         "explication": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a 10 diviseurs, alors $(a_1 + 1) \\cdots (a_k + 1) = 10$, d'où $n = p^9$ ou $n = p^4 q$ ($p$, $q$ premiers distincts). Le plus petit $p^9$ est $2^9 = 512$ ; le plus petit $p^4 q$ est $2^4 \\times 3 = 48$. Donc 48, dont les diviseurs sont 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.",
-        "retenir": "Pour rendre $n$ minimal à nombre de diviseurs fixé : factoriser ce nombre, puis placer les plus grands exposants sur les plus petits nombres premiers.",
+        "retenir": "$p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a $(a_1 + 1) \\cdots (a_k + 1)$ diviseurs positifs ; pour un $n$ minimal, placer les plus grands exposants sur les plus petits nombres premiers.",
         "id": "c3r3-s1-2"
        }
       ]
@@ -2647,11 +2647,11 @@ var CHAPITRES = [
         "id": "c3r4-s0-0"
        },
        {
-        "titre": "Les bouquets d'ylang-ylang",
-        "enonce": "Une fleuriste dispose de 252 fleurs d'ylang-ylang et de 180 fleurs de frangipanier. Elle veut composer le plus grand nombre possible de bouquets identiques en utilisant toutes les fleurs. Entrer le nombre de fleurs de chaque bouquet.",
+        "titre": "Les assiettes de la fête",
+        "enonce": "Pour la fête du collège, on dispose de 252 samoussas et de 180 beignets. On veut préparer le plus grand nombre possible d'assiettes identiques (même nombre de samoussas et même nombre de beignets sur chacune) en utilisant tout. Entrer le nombre total de samoussas et de beignets sur chaque assiette.",
         "reponse": 12,
-        "indice": "Le nombre de bouquets divise 252 et 180, et on le veut le plus grand possible.",
-        "explication": "Le nombre de bouquets est le plus grand diviseur commun de 252 et 180 : $252 = 180 + 72$, $180 = 2 \\times 72 + 36$, $72 = 2 \\times 36$, donc $\\mathrm{PGCD}(252\\,;180) = 36$. Chaque bouquet contient $252 \\div 36 = 7$ ylang-ylang et $180 \\div 36 = 5$ frangipaniers, soit 12 fleurs.",
+        "indice": "Le nombre d'assiettes divise 252 et 180, et on le veut le plus grand possible.",
+        "explication": "Le nombre d'assiettes est le plus grand diviseur commun de 252 et 180 : $252 = 180 + 72$, $180 = 2 \\times 72 + 36$, $72 = 2 \\times 36$, donc $\\mathrm{PGCD}(252\\,;180) = 36$. Chaque assiette porte $252 \\div 36 = 7$ samoussas et $180 \\div 36 = 5$ beignets, soit 12 en tout.",
         "retenir": "« Le plus grand nombre de parts identiques » : PGCD ; « la première coïncidence de deux cycles » : PPCM.",
         "id": "c3r4-s0-1"
        },
@@ -2704,15 +2704,15 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Pour tout entier $n$, si 4 divise $n$ et 6 divise $n$, alors 24 divise $n$. »",
+        "enonce": "Proposition : « Pour tous entiers naturels non nuls $a$, $b$ et $c$, si $\\mathrm{PGCD}(a\\,;b) = 1$ et $\\mathrm{PGCD}(b\\,;c) = 1$, alors $\\mathrm{PGCD}(a\\,;c) = 1$. »",
         "reponse": 2,
         "choix": [
          "Vrai",
          "Faux"
         ],
-        "indice": "Cherche le plus petit entier strictement positif divisible à la fois par 4 et par 6.",
-        "explication": "Faux. Contre-exemple : $n = 12$ est divisible par 4 et par 6, mais pas par 24. Ce que l'on peut affirmer : $n$ est divisible par $\\mathrm{PPCM}(4\\,;6) = 12$.",
-        "retenir": "Si $a$ et $b$ divisent $n$, alors $\\mathrm{PPCM}(a\\,;b)$ divise $n$ ; mais le produit $ab$, en général, ne le divise pas.",
+        "indice": "Rien n'empêche $a$ et $c$ d'avoir un facteur premier commun que $b$ ne possède pas.",
+        "explication": "Faux. Contre-exemple : $a = 2$, $b = 3$, $c = 4$. On a $\\mathrm{PGCD}(2\\,;3) = 1$ et $\\mathrm{PGCD}(3\\,;4) = 1$, mais $\\mathrm{PGCD}(2\\,;4) = 2$. Les hypothèses ne disent rien des facteurs communs à $a$ et à $c$.",
+        "retenir": "« Avoir un PGCD égal à 1 » n'est pas une relation transitive : $a$ et $c$ peuvent partager un facteur premier absent de $b$.",
         "id": "c3r4-b0-0"
        },
        {
@@ -2829,7 +2829,7 @@ var CHAPITRES = [
         "enonce": "On admet que $r(A \\times B) = r\\big(r(A) \\times r(B)\\big)$ pour tous entiers naturels $A$ et $B$. Entrer le reste de la division euclidienne de $2027^{2027}$ par 9.",
         "reponse": 5,
         "indice": "$r(2027) = 2$ ; cherche une puissance de 2 dont le reste par 9 vaut 1.",
-        "explication": "En appliquant la propriété de proche en proche, $r(2\\,027^k) = r(2^k)$, car $r(2\\,027) = 2$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$ et, de même, $r(2^{6m}) = 1$ pour tout entier $m$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2027}) = r(2^{6 \\times 337} \\times 2^5) = r(1 \\times 32) = 5$.",
+        "explication": "La propriété donne $r(2\\,027^{k+1}) = r\\big(r(2\\,027^k) \\times 2\\big)$ et $r(2^{k+1}) = r\\big(r(2^k) \\times 2\\big)$, car $r(2\\,027) = r(2) = 2$ : de proche en proche, $r(2\\,027^k) = r(2^k)$ pour tout $k \\geq 1$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$, puis $r(2^{6(m+1)}) = r\\big(r(2^{6m}) \\times r(2^6)\\big) = 1$ : $r(2^{6m}) = 1$ pour tout $m \\geq 1$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2\\,027}) = r\\big(r(2^{6 \\times 337}) \\times r(2^5)\\big) = r(1 \\times 5) = 5$.",
         "retenir": "Pour le reste d'une grande puissance : chercher un exposant qui donne le reste 1, puis effectuer la division euclidienne de l'exposant.",
         "id": "c3b-s0-4"
        }
@@ -2970,7 +2970,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Diviseurs d'un carré",
-        "enonce": "Soit $n = 2^5 \\times 3^2 = 288$. Entrer le nombre de diviseurs positifs de $n^2$ qui sont strictement inférieurs à $n$ et qui ne divisent pas $n$.",
+        "enonce": "Soit $n = 2^5 \\times 3^2 = 288$. On rappelle qu'un entier $2^a \\times 3^b$ a $(a + 1)(b + 1)$ diviseurs positifs. Entrer le nombre de diviseurs positifs de $n^2$ qui sont strictement inférieurs à $n$ et qui ne divisent pas $n$.",
         "reponse": 10,
         "indice": "Associe chaque diviseur $d$ de $n^2$ au diviseur $\\frac{n^2}{d}$ : l'un des deux est inférieur à $n$, sauf si $d = n$.",
         "explication": "$n^2 = 2^{10} \\times 3^4$ a $11 \\times 5 = 55$ diviseurs. Ils s'associent par paires $(d, \\frac{n^2}{d})$ avec $d < n < \\frac{n^2}{d}$, sauf $d = n$ : il y a donc $\\frac{55 - 1}{2} = 27$ diviseurs de $n^2$ inférieurs à $n$. Parmi eux, ceux qui divisent $n$ sont les diviseurs de $n$ autres que $n$ : $6 \\times 3 - 1 = 17$. Réponse : $27 - 17 = 10$.",
@@ -3022,7 +3022,7 @@ var CHAPITRES = [
          "12 n'a que 5 diviseurs positifs.",
          "Il fallait additionner : 216 a $6 + 6 = 12$ diviseurs."
         ],
-        "indice": "Décompose 216 en facteurs premiers et compte ses diviseurs avec la formule.",
+        "indice": "Décompose 216 en facteurs premiers : ses diviseurs positifs sont les $2^a \\times 3^b$, avec quels exposants ?",
         "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ ont les facteurs premiers 2 et 3 en commun. $216 = 2^3 \\times 3^3$ a $(3 + 1)(3 + 1) = 16$ diviseurs. Le nombre de diviseurs d'un produit est le produit des nombres de diviseurs seulement si les facteurs n'ont aucun premier commun (exemple : $36 = 4 \\times 9$ a $3 \\times 3 = 9$ diviseurs).",
         "retenir": "Le nombre de diviseurs se calcule sur la décomposition en facteurs premiers du produit, jamais en multipliant à l'aveugle.",
         "id": "c3s-s2-2"
@@ -3173,11 +3173,11 @@ var CHAPITRES = [
        },
        {
         "titre": "La course d'Achille",
-        "enonce": "Achille court à 10 m/s ; la tortue avance à 1 m/s, mais part avec 100 m d'avance. Le programme Python suivant suit leurs positions seconde après seconde. Entrer la valeur affichée.\n\na = 0\nt = 100\nn = 0\nwhile a < t:\n    a = a + 10\n    t = t + 1\n    n = n + 1\nprint(n)",
+        "enonce": "Achille court à 10 m/s ; la tortue avance à 1 m/s, mais part avec 100 m d'avance. Le programme Python suivant suit leurs positions seconde après seconde. Entrer la valeur affichée.\n\n```\na = 0\nt = 100\nn = 0\nwhile a < t:\n    a = a + 10\n    t = t + 1\n    n = n + 1\nprint(n)\n```",
         "reponse": 12,
         "indice": "Après $n$ tours de boucle, $a = 10n$ et $t = 100 + n$. La boucle s'arrête dès que $a \\geqslant t$.",
         "explication": "Les positions forment deux suites arithmétiques : $a_n = 10n$ et $t_n = 100 + n$. La boucle tourne tant que $10n < 100 + n$, c'est-à-dire $n < \\frac{100}{9} \\approx 11{,}1$. Elle s'arrête au premier $n$ tel que $10n \\geqslant 100 + n$, soit $n = 12$ (alors $a = 120$ et $t = 112$) : le programme affiche 12.",
-        "retenir": "Une boucle « while » s'arrête au premier rang où sa condition devient fausse : le programme renvoie ce rang, le plus petit qui convient.",
+        "retenir": "Une boucle « while » s'arrête au premier rang où sa condition devient fausse : le programme affiche ce rang, le plus petit qui convient.",
         "id": "c4r1-s1-2"
        }
       ]
@@ -3314,7 +3314,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Le capital double",
-        "enonce": "Le programme Python suivant modélise un capital placé à 5 % par an. Entrer la valeur affichée.\n\nu = 1000\nn = 0\nwhile u < 2000:\n    u = u * 1.05\n    n = n + 1\nprint(n)",
+        "enonce": "Le programme Python suivant modélise un capital placé à 5 % par an. Entrer la valeur affichée.\n\n```\nu = 1000\nn = 0\nwhile u < 2000:\n    u = u * 1.05\n    n = n + 1\nprint(n)\n```",
         "reponse": 15,
         "indice": "Le programme cherche le plus petit entier $n$ tel que $1000 \\times 1{,}05^n \\geqslant 2000$. Teste $n = 14$ et $n = 15$ à la calculatrice.",
         "explication": "Après $n$ tours de boucle, $u = 1000 \\times 1{,}05^n$. La boucle s'arrête au premier $n$ tel que $1{,}05^n \\geqslant 2$. Or $1{,}05^{14} \\approx 1{,}980 < 2$ et $1{,}05^{15} \\approx 2{,}079 \\geqslant 2$ : le programme affiche 15. Le capital double en 15 ans.",
@@ -3494,8 +3494,8 @@ var CHAPITRES = [
        "La conclusion est vraie, mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, la suite décroît."
       ],
       "indice": "Calcule quelques termes avec $u_0 = 2$, puis avec $u_0 = 8$.",
-      "explication": "Avec $u_0 = 2$ : $u_1 = 4$, $u_2 = 5$, $u_3 = 5{,}5$ ; la suite est bien croissante. Mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, on obtient $8, 7, 6{,}5, \\dots$, qui décroît. Quand $f$ est croissante, la suite est monotone, et son sens se lit en comparant $u_0$ et $u_1$ ; la preuve complète est un raisonnement par récurrence.",
-      "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas le sens de variation : il faut aussi comparer $u_0$ et $u_1$, puis raisonner par récurrence.",
+      "explication": "Avec $u_0 = 2$ : $u_1 = 4$, $u_2 = 5$, $u_3 = 5{,}5$. La conclusion est vraie : $v_n = u_n - 6$ définit une suite géométrique de raison $\\frac{1}{2}$, d'où $u_n = 6 - 4 \\times 0{,}5^n$ et $u_{n+1} - u_n = 2 \\times 0{,}5^n > 0$. Mais l'argument ne suffit pas : avec la même fonction $f$ et $u_0 = 8$, on obtient $8, 7, 6{,}5, \\dots$, qui décroît. Pour une suite définie par récurrence, $u_{n+1} = f(u_n)$ avec $f$ croissante, le sens de variation se lit en comparant $u_0$ et $u_1$ ; ce résultat général se démontre par un raisonnement par récurrence, vu en Terminale.",
+      "retenir": "Pour $u_{n+1} = f(u_n)$, « $f$ croissante » ne donne pas, à lui seul, le sens de variation : il faut aussi comparer $u_0$ et $u_1$.",
       "id": "c4r3-h0",
       "figure": "salto"
      }
@@ -3700,7 +3700,7 @@ var CHAPITRES = [
         "titre": "La suite auxiliaire",
         "enonce": "On pose, pour tout entier naturel $n$, $v_n = u_n - 4000$. Démontrer que la suite $(v_n)$ est géométrique, en déduire $u_n$ en fonction de $n$, puis entrer $u_{10}$ arrondi à l'unité.",
         "reponse": 2954,
-        "tolerance": 0.5,
+        "tolerance": 0.01,
         "indice": "Exprime $v_{n+1} = u_{n+1} - 4000$ à l'aide de $u_n$, puis fais apparaître $u_n - 4000$.",
         "explication": "$v_{n+1} = 0{,}9\\,u_n + 400 - 4000 = 0{,}9\\,u_n - 3600 = 0{,}9\\,(u_n - 4000) = 0{,}9\\,v_n$ : $(v_n)$ est géométrique de raison $0{,}9$ et de premier terme $v_0 = -3000$. Donc $v_n = -3000 \\times 0{,}9^n$ et $u_n = 4000 - 3000 \\times 0{,}9^n$. Ainsi $u_{10} = 4000 - 3000 \\times 0{,}9^{10} \\approx 2953{,}96$, soit environ 2954 palétuviers.",
         "retenir": "Méthode de la suite auxiliaire : montrer que $(v_n)$ est géométrique, écrire $v_n$ en fonction de $n$, puis revenir à $u_n$.",
@@ -3708,7 +3708,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Le seuil",
-        "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On considère la fonction Python ci-dessous. Entrer la valeur renvoyée par seuil(3000).\n\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n",
+        "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On considère la fonction Python ci-dessous. Entrer la valeur renvoyée par seuil(3000).\n\n```\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n\n```",
         "reponse": 11,
         "indice": "seuil(3000) renvoie le plus petit $n$ tel que $u_n \\geqslant 3000$, c'est-à-dire tel que $0{,}9^n \\leqslant \\frac{1}{3}$.",
         "explication": "La fonction renvoie le plus petit $n$ tel que $u_n \\geqslant 3000$, soit $3000 \\times 0{,}9^n \\leqslant 1000$, c'est-à-dire $0{,}9^n \\leqslant \\frac{1}{3}$. Or $0{,}9^{10} \\approx 0{,}349 > \\frac{1}{3}$ et $0{,}9^{11} \\approx 0{,}314 \\leqslant \\frac{1}{3}$ : seuil(3000) renvoie 11. La baie comptera au moins 3 000 palétuviers en 2036.",
@@ -3717,7 +3717,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Une boucle sans fin",
-        "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On reprend la fonction Python ci-dessous. Entrer le plus petit entier $s$ pour lequel l'appel seuil(s) ne se termine jamais.\n\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n",
+        "enonce": "On admet que $u_n = 4000 - 3000 \\times 0{,}9^n$ pour tout $n$. On reprend la fonction Python ci-dessous. Entrer le plus petit entier $s$ pour lequel l'appel seuil(s) ne se termine jamais.\n\n```\ndef seuil(s):\n    u = 1000\n    n = 0\n    while u < s:\n        u = 0.9 * u + 400\n        n = n + 1\n    return n\n```",
         "reponse": 4000,
         "indice": "Les termes $u_n$ peuvent-ils atteindre 4 000 ? Peuvent-ils atteindre 3 999 ?",
         "explication": "Pour tout $n$, $3000 \\times 0{,}9^n > 0$, donc $u_n < 4000$ : si $s \\geqslant 4000$, la condition $u < s$ reste vraie et la boucle ne s'arrête jamais. Si $s \\leqslant 3999$, il suffit que $3000 \\times 0{,}9^n \\leqslant 1$, ce qui arrive dès $n = 76$ : alors $u_n \\geqslant 3999 \\geqslant s$ et la boucle s'arrête. Le plus petit entier cherché est 4000.",
@@ -3735,7 +3735,7 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Le programme Python ci-dessous affiche 5. »\n\nn = 0\ns = 0\nwhile s < 20:\n    n = n + 1\n    s = s + n\nprint(n)",
+        "enonce": "Proposition : « Le programme Python ci-dessous affiche 5. »\n\n```\nn = 0\ns = 0\nwhile s < 20:\n    n = n + 1\n    s = s + n\nprint(n)\n```",
         "reponse": 2,
         "choix": [
          "Vrai",
@@ -3862,7 +3862,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Deux propositions de salaire",
-        "enonce": "Contrat A : un salaire annuel de 30 000 € la première année, puis 1 500 € de plus chaque année. Contrat B : 30 000 € la première année, puis une hausse de 4 % par an. Entrer la valeur affichée par le programme Python ci-dessous.\n\na = 30000\nb = 30000\nn = 0\nwhile b <= a:\n    a = a + 1500\n    b = b * 1.04\n    n = n + 1\nprint(n)",
+        "enonce": "Contrat A : un salaire annuel de 30 000 € la première année, puis 1 500 € de plus chaque année. Contrat B : 30 000 € la première année, puis une hausse de 4 % par an. Entrer la valeur affichée par le programme Python ci-dessous.\n\n```\na = 30000\nb = 30000\nn = 0\nwhile b <= a:\n    a = a + 1500\n    b = b * 1.04\n    n = n + 1\nprint(n)\n```",
         "reponse": 12,
         "indice": "Le programme cherche le plus petit $n \\geqslant 1$ tel que $30\\,000 \\times 1{,}04^n > 30\\,000 + 1500n$. Compare les deux salaires pour $n = 11$ et $n = 12$.",
         "explication": "Au départ $a = b$, donc on entre dans la boucle. Après $n$ tours, $a = 30\\,000 + 1500n$ (suite arithmétique) et $b = 30\\,000 \\times 1{,}04^n$ (suite géométrique). On a $b \\leqslant a$ pour $n$ de 1 à 11 (pour $n = 11$ : $b \\approx 46\\,184$ et $a = 46\\,500$), puis, pour $n = 12$ : $b \\approx 48\\,031 > a = 48\\,000$. Le programme affiche 12.",
@@ -3933,7 +3933,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Si $u_i = 1$, alors $2 = q^m$ et $3 = q^p$ pour des entiers $m$ et $p$ non nuls. Élimine $q$ en élevant à des puissances.",
-        "explication": "Faux. Supposons $u_i = 1$, $u_j = 2$ et $u_k = 3$. Alors $q^m = 2$ et $q^p = 3$, avec $m = j - i$ et $p = k - i$ entiers non nuls, d'où $2^p = q^{mp} = 3^m$. Si $m$ et $p$ sont positifs, $2^p$ est pair et $3^m$ impair ; s'ils sont négatifs, on passe aux inverses ; s'ils sont de signes contraires, l'un des deux nombres est supérieur à 1 et l'autre inférieur à 1. Contradiction dans tous les cas.",
+        "explication": "Faux. Par l'absurde, soit $(u_n)$ géométrique de raison $q$, avec $u_i = 1$, $u_j = 2$ et $u_k = 3$.\n1) $q \\neq 0$ : sinon, tous les termes après $u_0$ sont nuls.\n2) Comme $u_j = u_i\\,q^{j-i}$ et $u_k = u_i\\,q^{k-i}$ : $q^m = 2$ et $q^p = 3$, où $m = j - i$ et $p = k - i$ sont des entiers non nuls (indices distincts).\n3) Donc $2^p = (q^m)^p = (q^p)^m = 3^m$.\n4) Si $m > 0$ et $p > 0$ : $2^p$ est pair et $3^m$ impair. Impossible.\n5) Si $m < 0$ et $p < 0$ : $2^{-p} = 3^{-m}$, même contradiction.\n6) Si $m$ et $p$ sont de signes contraires : l'un des nombres $2^p$, $3^m$ est supérieur à 1, l'autre inférieur à 1. Impossible.\nAucune suite géométrique ne contient 1, 2 et 3.",
         "retenir": "Pour prouver une impossibilité, raisonner par l'absurde jusqu'à une contradiction arithmétique simple : parité, décomposition en facteurs premiers.",
         "id": "c4s-b0-0"
        },
@@ -3973,7 +3973,7 @@ var CHAPITRES = [
   "niveau": "Semaine 5",
   "titre": "Dérivation",
   "introduction": "Dériver, c'est regarder une courbe de si près qu'elle se confond avec une droite : sa tangente. Le nombre dérivé en donne la pente ; la dérivée, lue sur tout un intervalle, raconte les variations. Cette semaine, tu apprends à lire le mouvement d'une fonction : c'est le cœur de toute étude de fonction aux écrits.",
-  "conclusion": "Emporte le chemin entier : taux d'accroissement, nombre dérivé, tangente, dérivée, signe, variations, extremums. Et garde la prudence du géomètre : une dérivée nulle n'annonce pas toujours un extremum, et une fonction continue n'est pas toujours dérivable.",
+  "conclusion": "Emporte le chemin entier : taux d'accroissement, nombre dérivé, tangente, dérivée, signe, variations, extremums. Et garde la prudence du géomètre : une dérivée nulle n'annonce pas toujours un extremum, et une fonction n'est pas toujours dérivable là où elle est définie.",
   "salles": [
    {
     "nom": "L'école d'Épictète",
@@ -4053,22 +4053,22 @@ var CHAPITRES = [
         "reponse": 3,
         "choix": [
          "$f$ est dérivable en 2 et $f'(2) = 0$, car $f$ atteint son minimum en 2.",
-         "$f$ est dérivable en 2, car $f$ est continue en 2.",
+         "$f$ est dérivable en 2, car le taux $\\frac{|h|}{h}$ est défini pour tout $h \\neq 0$.",
          "$f$ n'est pas dérivable en 2 : le taux vaut 1 si $h > 0$ et $-1$ si $h < 0$, il n'a pas de limite en 0.",
          "$f$ est dérivable en 2 et $f'(2) = 1$, car $\\frac{|h|}{h} = 1$."
         ],
         "indice": "Distingue $h > 0$ et $h < 0$ : que vaut $|h|$ dans chaque cas ?",
-        "explication": "Si $h > 0$, $\\frac{|h|}{h} = 1$ ; si $h < 0$, $\\frac{|h|}{h} = -1$. Le taux n'a pas de limite quand $h$ tend vers 0 : $f$ n'est pas dérivable en 2. La courbe présente un point anguleux, avec deux demi-tangentes de pentes 1 et $-1$. Pourtant $f$ est continue en 2 et y atteint son minimum : ni l'un ni l'autre n'entraîne la dérivabilité.",
-        "retenir": "Continue n'entraîne pas dérivable : $x \\mapsto |x|$ est continue en 0 sans y être dérivable (point anguleux).",
+        "explication": "Si $h > 0$, $\\frac{|h|}{h} = 1$ ; si $h < 0$, $\\frac{|h|}{h} = -1$. Le taux n'a pas de limite quand $h$ tend vers 0 : $f$ n'est pas dérivable en 2. La courbe présente un point anguleux, avec deux demi-tangentes de pentes 1 et $-1$. Que le taux soit défini pour tout $h \\neq 0$ ne suffit pas, c'est sa limite qui compte ; et un minimum atteint en 2 n'entraîne pas la dérivabilité.",
+        "retenir": "Dérivable en $a$ : le taux d'accroissement a une limite finie quand $h$ tend vers 0. Pour $x \\mapsto |x|$ en 0, il vaut 1 ou $-1$ selon le signe de $h$ : pas de limite.",
         "id": "c5r1-s1-1"
        },
        {
         "titre": "Un raccord sans angle",
         "enonce": "Soient $a$ et $b$ deux réels, et $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^2$ si $x \\leq 1$, et $f(x) = ax + b$ si $x > 1$. On veut que $f$ soit dérivable en 1. Entrer la valeur de $b$.",
         "reponse": -1,
-        "indice": "Une fonction dérivable en 1 y est continue : cela donne une première relation entre $a$ et $b$. Compare ensuite les taux d'accroissement à gauche et à droite de 1.",
-        "explication": "Dérivable en 1 entraîne continue en 1 : $a + b = f(1) = 1$. Pour $h > 0$, le taux vaut $\\frac{a(1+h) + b - 1}{h} = a$ (puisque $a + b = 1$) ; pour $h < 0$, il vaut $\\frac{(1+h)^2 - 1}{h} = 2 + h$, qui tend vers 2. Les deux limites doivent coïncider : $a = 2$, puis $b = -1$. La droite $y = 2x - 1$ est la tangente à la parabole au point d'abscisse 1.",
-        "retenir": "Pour raccorder deux formules en un point sans « angle », on exige la continuité, puis l'égalité des limites des taux à gauche et à droite.",
+        "indice": "Écris le taux d'accroissement de $f$ en 1 pour $h < 0$, puis pour $h > 0$, sachant que $f(1) = 1$. Pour $h > 0$, un terme en $\\frac{1}{h}$ doit disparaître.",
+        "explication": "Ici $f(1) = 1^2 = 1$. Pour $h < 0$, le taux vaut $\\frac{(1+h)^2 - 1}{h} = 2 + h$, qui tend vers 2. Pour $h > 0$, il vaut $\\frac{a(1+h) + b - 1}{h} = a + \\frac{a + b - 1}{h}$ : il n'a de limite finie que si $a + b - 1 = 0$, et vaut alors $a$. La dérivabilité en 1 impose donc $a + b = 1$ et $a = 2$, d'où $b = -1$ ; réciproquement, pour $a = 2$ et $b = -1$, les deux taux tendent vers 2. La droite $y = 2x - 1$ est la tangente à la parabole au point d'abscisse 1.",
+        "retenir": "Raccord sans « angle » en un point : les taux d'accroissement à gauche et à droite doivent avoir la même limite finie, ce qui raccorde les valeurs, puis les pentes.",
         "id": "c5r1-s1-2"
        }
       ]
@@ -4079,15 +4079,15 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Si une fonction $f$ est dérivable en un réel $a$, alors $f$ est continue en $a$. »",
+        "enonce": "Proposition : « Si une fonction $f$ est dérivable en un réel $a$, alors $f(a+h)$ tend vers $f(a)$ quand $h$ tend vers 0. »",
         "reponse": 1,
         "choix": [
          "Vrai",
          "Faux"
         ],
         "indice": "Écris $f(a+h) - f(a) = h \\times \\frac{f(a+h) - f(a)}{h}$ et fais tendre $h$ vers 0.",
-        "explication": "Vrai. Pour $h \\neq 0$, $f(a+h) - f(a) = h \\times \\frac{f(a+h) - f(a)}{h}$. Quand $h$ tend vers 0, le second facteur tend vers $f'(a)$ et le premier vers 0 : le produit tend vers $0 \\times f'(a) = 0$, donc $f(a+h)$ tend vers $f(a)$ et $f$ est continue en $a$. La réciproque est fausse ($x \\mapsto |x|$ en 0).",
-        "retenir": "Dérivable entraîne continue ; la réciproque est fausse (valeur absolue en 0).",
+        "explication": "Vrai. Pour $h \\neq 0$, $f(a+h) - f(a) = h \\times \\frac{f(a+h) - f(a)}{h}$. Quand $h$ tend vers 0, le second facteur tend vers $f'(a)$ et le premier vers 0 : le produit tend vers $0 \\times f'(a) = 0$, donc $f(a+h)$ tend vers $f(a)$. La réciproque est fausse : $|0 + h| = |h|$ tend vers $|0| = 0$, mais $x \\mapsto |x|$ n'est pas dérivable en 0.",
+        "retenir": "Si $f$ est dérivable en $a$, alors $f(a+h)$ tend vers $f(a)$ : la courbe n'a pas de saut en $a$. La réciproque est fausse (valeur absolue en 0).",
         "id": "c5r1-b0-0"
        },
        {
@@ -4112,7 +4112,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "La formule du produit ne s'applique pas en 0, puisque la racine carrée n'y est pas dérivable : reviens au taux d'accroissement.",
-        "explication": "Vrai. Pour $h > 0$, $\\frac{g(h) - g(0)}{h} = \\frac{h\\sqrt{h}}{h} = \\sqrt{h}$, qui tend vers 0. Donc $g$ est dérivable en 0 et $g'(0) = 0$, bien que la racine carrée ne le soit pas : la formule du produit ne permettait pas de conclure, il fallait revenir à la définition.",
+        "explication": "Vrai. Comme $g$ n'est définie que sur $[0\\,;+\\infty[$, seuls les $h > 0$ interviennent : $\\frac{g(h) - g(0)}{h} = \\frac{h\\sqrt{h}}{h} = \\sqrt{h}$, qui tend vers 0. Donc $g$ est dérivable en 0 et $g'(0) = 0$, bien que la racine carrée ne le soit pas : la formule du produit ne permettait pas de conclure, il fallait revenir à la définition.",
         "retenir": "En un point où un facteur n'est pas dérivable, les formules ne concluent rien : on revient au taux d'accroissement.",
         "id": "c5r1-b0-2"
        }
@@ -4721,7 +4721,7 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Le rayon du cercle inscrit",
-        "enonce": "D'après CAPES Mayotte 2021. Dans un triangle rectangle de périmètre 2, le rayon du cercle inscrit vaut $f(x) = \\frac{x(1 - x)}{1 + x}$, où $x \\in\\, ]0\\,;1[$ est un paramètre lié à un angle du triangle. Calculer $f'(x)$, puis entrer $f'\\left(\\frac{1}{2}\\right)$ sous forme de fraction.",
+        "enonce": "D'après CAPES Mayotte 2021. Soit $f$ la fonction définie sur $]0\\,;1[$ par $f(x) = \\frac{x(1 - x)}{1 + x}$ (dans le sujet, elle sert à exprimer le rayon du cercle inscrit dans un triangle rectangle de périmètre 2). Calculer $f'(x)$, puis entrer $f'\\left(\\frac{1}{2}\\right)$ sous forme de fraction.",
         "reponse": -0.1111111111111111,
         "indice": "Écris $f(x) = \\frac{x - x^2}{1 + x}$ et applique la formule du quotient ; réduis le numérateur avant de remplacer.",
         "explication": "$f'(x) = \\frac{(1 - 2x)(1 + x) - (x - x^2)}{(1 + x)^2} = \\frac{1 - 2x - x^2}{(1 + x)^2}$. En $\\frac{1}{2}$ : le numérateur vaut $1 - 1 - \\frac{1}{4} = -\\frac{1}{4}$ et le dénominateur $\\frac{9}{4}$, d'où $f'\\left(\\frac{1}{2}\\right) = -\\frac{1}{9}$.",
@@ -4729,7 +4729,7 @@ var CHAPITRES = [
         "id": "c5s-s0-0"
        },
        {
-        "titre": "Le meilleur angle",
+        "titre": "Le meilleur paramètre",
         "enonce": "D'après CAPES Mayotte 2021. Soit $f$ la fonction définie sur $]0\\,;1[$ par $f(x) = \\frac{x(1 - x)}{1 + x}$. On admet que $f'(x) = \\frac{1 - 2x - x^2}{(1 + x)^2}$. La fonction $f$ admet un maximum en un réel $x_0$. Entrer $x_0$, arrondi au centième.",
         "reponse": 0.41,
         "tolerance": 0.005,
@@ -4763,7 +4763,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Compter les solutions",
-        "enonce": "Entrer le nombre de solutions réelles de l'équation $x^3 - 3x + 1 = 0$.",
+        "enonce": "Programme de Terminale (théorème des valeurs intermédiaires). Entrer le nombre de solutions réelles de l'équation $x^3 - 3x + 1 = 0$.",
         "reponse": 3,
         "indice": "Étudie les variations de $f(x) = x^3 - 3x + 1$ et le signe de ses extremums locaux.",
         "explication": "$f'(x) = 3(x - 1)(x + 1)$ : $f$ croît sur $]-\\infty\\,;-1]$, décroît sur $[-1\\,;1]$, croît sur $[1\\,;+\\infty[$, avec $f(-1) = 3 > 0$ et $f(1) = -1 < 0$. Comme $f(-2) = -1$ et $f(2) = 3$, le théorème des valeurs intermédiaires, appliqué sur chaque intervalle où $f$ est continue et strictement monotone, donne exactement une solution dans $]-2\\,;-1[$, une dans $]-1\\,;1[$ et une dans $]1\\,;2[$ ; il n'y en a pas d'autre, car $f(x) \\leq -1$ pour $x \\leq -2$ et $f(x) \\geq 3$ pour $x \\geq 2$. Donc 3 solutions.",
@@ -4801,7 +4801,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Le bon contre-exemple",
-        "enonce": "Pour convaincre une classe qu'une fonction continue en un point n'est pas forcément dérivable en ce point, quel exemple choisir ?",
+        "enonce": "Programme de Terminale (continuité). Pour convaincre une classe qu'une fonction continue en un point n'est pas forcément dérivable en ce point, quel exemple choisir ?",
         "reponse": 4,
         "choix": [
          "La fonction $x \\mapsto x^2$ en 0.",
@@ -4844,7 +4844,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Fixe $a$ et étudie les variations de la différence entre $f(x)$ et l'ordonnée du point d'abscisse $x$ de la tangente en $a$.",
-        "explication": "Vrai. Soit $a$ un réel et $g(x) = f(x) - f'(a)(x - a) - f(a)$. Alors $g'(x) = f'(x) - f'(a)$, négative ou nulle pour $x \\leq a$ et positive ou nulle pour $x \\geq a$, car $f'$ est croissante. Donc $g$ est décroissante sur $]-\\infty\\,;a]$, croissante sur $[a\\,;+\\infty[$, et $g(x) \\geq g(a) = 0$ : la courbe est au-dessus de sa tangente en $a$.",
+        "explication": "Vrai. Soit $a$ un réel et $g(x) = f(x) - f'(a)(x - a) - f(a)$. Alors $g'(x) = f'(x) - f'(a)$, négative ou nulle pour $x \\leq a$ et positive ou nulle pour $x \\geq a$, car $f'$ est croissante. Donc $g$ est décroissante sur $]-\\infty\\,;a]$, croissante sur $[a\\,;+\\infty[$, et $g(x) \\geq g(a) = 0$ : la courbe est au-dessus de sa tangente en $a$. En Terminale, une telle fonction est dite convexe.",
         "retenir": "Position courbe-tangente : étudier $g(x) = f(x) - [f'(a)(x - a) + f(a)]$, qui s'annule en $a$, à l'aide de sa dérivée.",
         "id": "c5s-b0-0"
        },
@@ -4941,7 +4941,7 @@ var CHAPITRES = [
         "reponse": 0.1111111111111111,
         "indice": "Choisis d'abord $a = 1$ et $b = 0$ pour obtenir $f(0)$, puis $a = 1$ et $b = -1$.",
         "explication": "Avec $a = 1$, $b = 0$ : $f(1) = f(1)f(0)$, et $f(1) = 3 \\neq 0$, donc $f(0) = 1$. Avec $a = 1$, $b = -1$ : $f(0) = f(1)f(-1)$, donc $f(-1) = \\frac{1}{3}$. Enfin, avec $a = b = -1$ : $f(-2) = f(-1)^{2} = \\frac{1}{9}$. C'est la relation fonctionnelle de l'exponentielle : ici $f(n) = 3^{n}$ pour tout entier $n$.",
-        "retenir": "Si $f(a+b) = f(a)f(b)$ et $f$ n'est pas nulle, alors $f(0) = 1$ et $f(-a) = \\frac{1}{f(a)}$ : c'est le comportement des puissances.",
+        "retenir": "Si $f(a+b) = f(a)f(b)$ pour tous réels $a$ et $b$, et si $f$ n'est pas la fonction nulle, alors $f(0) = 1$ et $f(-a) = \\frac{1}{f(a)}$ : c'est le comportement des puissances.",
         "id": "c6r1-s0-2"
        }
       ]
@@ -5022,7 +5022,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Cherche une fonction très simple égale à sa dérivée, ou multiplie l'exponentielle par une constante.",
-        "explication": "Faux. La fonction nulle vérifie $f' = f$ sans être l'exponentielle ; de même, $f(x) = 2e^{x}$ vérifie $f'(x) = 2e^{x} = f(x)$, mais $f(0) = 2$. Il manque la condition $f(0) = 1$ : les fonctions telles que $f' = f$ sont exactement les fonctions $x \\mapsto Ce^{x}$, $C$ réel.",
+        "explication": "Faux. La fonction nulle vérifie $f' = f$ sans être l'exponentielle ; de même, $f(x) = 2e^{x}$ vérifie $f'(x) = 2e^{x} = f(x)$, mais $f(0) = 2$. Il manque la condition $f(0) = 1$ : les fonctions telles que $f' = f$ sont exactement les fonctions $x \\mapsto Ce^{x}$, $C$ réel (car la dérivée de $x \\mapsto f(x)e^{-x}$ est alors nulle).",
         "retenir": "L'exponentielle est caractérisée par deux conditions : $f' = f$ et $f(0) = 1$. Sans la seconde, il y a une infinité de solutions.",
         "id": "c6r1-b0-2"
        }
@@ -5135,7 +5135,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Raisonne par contraposée : que se passe-t-il si $a \\ge b$ ?",
-        "explication": "Vrai. Par contraposée : si $a \\ge b$, alors $e^{a} \\ge e^{b}$, car l'exponentielle est croissante, ce qui contredit $e^{a} < e^{b}$. Donc $e^{a} < e^{b}$ entraîne $a < b$ ; la réciproque est vraie aussi, par stricte croissance.",
+        "explication": "Vrai. Par contraposée : si $a \\ge b$, alors $e^{a} \\ge e^{b}$ car l'exponentielle est croissante, donc on n'a pas $e^{a} < e^{b}$. Ainsi, $e^{a} < e^{b}$ entraîne $a < b$ ; la réciproque est vraie aussi, par stricte croissance.",
         "retenir": "Une fonction strictement croissante conserve l'ordre dans les deux sens : $e^{a} < e^{b} \\iff a < b$.",
         "id": "c6r2-b0-0"
        },
@@ -5318,7 +5318,7 @@ var CHAPITRES = [
        "Aucune : la démonstration est correcte"
       ],
       "indice": "Teste l'affirmation « $e^{x} \\ge 1$ » pour $x = -1$.",
-      "explication": "L'étape (3) est fausse : $e^{x} \\ge 1$ seulement pour $x \\ge 0$ ; par exemple $e^{-1} < 1$. En réalité, $g'(x)$ a le signe de $x$ : $g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$, donc son minimum est $g(0) = 0$, et $g(x) \\ge 0$ pour tout réel $x$. La conclusion est vraie, mais la preuve de l'élève ne vaut que pour $x \\ge 0$.",
+      "explication": "L'étape (3) est fausse : $e^{x} \\ge 1$ seulement pour $x \\ge 0$ ; par exemple $e^{-1} < 1$. En réalité, $g'(x)$ a le signe de $x$ : $g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$, donc son minimum est $g(0) = 0$, et $g(x) \\ge 0$ pour tout réel $x$. L'étape (4) est d'ailleurs fautive elle aussi : si $g$ est croissante, $g(x) \\le g(0)$ pour $x \\le 0$. La conclusion est vraie, mais la preuve de l'élève ne vaut que pour $x \\ge 0$.",
       "retenir": "Pour tout réel $x$, $e^{x} \\ge 1 + x$ : la courbe de exp est au-dessus de sa tangente en 0. On le prouve par un minimum, pas par une croissance globale.",
       "id": "c6r3-h0",
       "figure": "salto"
@@ -5398,7 +5398,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Le mataba refroidit",
-        "enonce": "On retire du feu une marmite de mataba. Sa température, en degrés Celsius, est modélisée par $T(t) = 25 + 75\\,e^{-0{,}1t}$, où $t$ est le temps en minutes. Entrer $T'(0)$, vitesse de variation de la température à l'instant $0$, en degrés par minute.",
+        "enonce": "On sert du mataba bouillant dans une assiette. Sa température, en degrés Celsius, est modélisée par $T(t) = 25 + 75\\,e^{-0{,}1t}$, où $t$ est le temps en minutes. Entrer $T'(0)$, vitesse de variation de la température à l'instant $0$, en degrés par minute.",
         "reponse": -7.5,
         "unite": "°C/min",
         "indice": "La dérivée de la constante 25 est nulle, et la dérivée de $t \\mapsto e^{-0{,}1t}$ est $t \\mapsto -0{,}1\\,e^{-0{,}1t}$.",
@@ -5605,7 +5605,7 @@ var CHAPITRES = [
    "salle": {
     "nom": "Le sanctuaire de Kant",
     "fond": "sanctuaire",
-    "athena": "Ici, les outils de Terminale sont permis, et chaque énoncé le signale. Puis vient le regard du professeur : comprendre l'erreur avant de la corriger.",
+    "athena": "Ici, les outils de Terminale sont permis, et chaque énoncé qui les utilise le signale. Puis vient le regard du professeur : comprendre l'erreur avant de la corriger.",
     "notion": "Problèmes plus difficiles et regard de futur professeur",
     "plan": [
      "############################",
@@ -5653,7 +5653,7 @@ var CHAPITRES = [
        },
        {
         "titre": "La crue d'une rivière",
-        "enonce": "Après une forte averse sur Grande-Terre, le débit supplémentaire d'une rivière, en m³/s, est modélisé par $D(t) = 0{,}1\\,t^{3}e^{-t/3}$ pour $t \\ge 0$, où $t$ est le temps en heures. Au bout de combien d'heures ce débit est-il maximal ? Entrer ce nombre d'heures.",
+        "enonce": "Pendant le passage d'une dépression tropicale sur Grande-Terre, le débit supplémentaire d'une rivière, en m³/s, est modélisé par $D(t) = 0{,}1\\,t^{3}e^{-t/3}$ pour $t \\ge 0$, où $t$ est le temps en heures écoulé depuis le début des pluies. Au bout de combien d'heures ce débit est-il maximal ? Entrer ce nombre d'heures.",
         "reponse": 9,
         "unite": "h",
         "indice": "Dérive le produit $t^{3} \\times e^{-t/3}$, puis factorise par $t^{2}e^{-t/3}$.",
@@ -5686,11 +5686,12 @@ var CHAPITRES = [
        },
        {
         "titre": "Tangentes issues d'un point",
-        "enonce": "Programme de Terminale (limites, théorème des valeurs intermédiaires). Combien de tangentes à la courbe de la fonction exponentielle passent par le point $A\\left(0\\,;\\frac{1}{2}\\right)$ ? Entrer ce nombre.",
+        "enonce": "Programme de Terminale (théorème des valeurs intermédiaires). Combien de tangentes à la courbe de la fonction exponentielle passent par le point $A\\left(0\\,;\\frac{1}{2}\\right)$ ? Entrer ce nombre.",
         "reponse": 2,
-        "indice": "La tangente au point d'abscisse $a$ coupe l'axe des ordonnées en $(1-a)e^{a}$. Étudie la fonction $g : a \\mapsto (1-a)e^{a}$.",
-        "explication": "La tangente en $a$ a pour équation $y = e^{a}(x - a) + e^{a}$ ; elle passe par $A$ si et seulement si $g(a) = (1-a)e^{a} = \\frac{1}{2}$. Or $g'(a) = -a\\,e^{a}$ : $g$ croît strictement sur $]-\\infty\\,;0]$, de $0$ (limite en $-\\infty$) à $g(0) = 1$, puis décroît strictement sur $[0\\,;+\\infty[$ vers $-\\infty$. Comme $0 < \\frac{1}{2} < 1$, le théorème des valeurs intermédiaires donne une solution sur chaque intervalle : il y a 2 tangentes.",
+        "indice": "La tangente au point d'abscisse $a$ coupe l'axe des ordonnées en $(1-a)e^{a}$. Étudie les variations de $g : a \\mapsto (1-a)e^{a}$, puis compare $g(-2)$, $g(0)$ et $g(1)$ à $\\frac{1}{2}$.",
+        "explication": "La tangente en $a$ a pour équation $y = e^{a}(x - a) + e^{a}$ ; elle passe par $A$ si et seulement si $g(a) = (1-a)e^{a} = \\frac{1}{2}$. Or $g'(a) = -a\\,e^{a}$ : $g$ est strictement croissante sur $]-\\infty\\,;0]$, strictement décroissante sur $[0\\,;+\\infty[$, et $g(0) = 1$. Comme $g(-2) = 3e^{-2} < \\frac{1}{2}$ (car $e^{2} > 6$) et $g(1) = 0$, le théorème des valeurs intermédiaires donne une unique solution dans $]-2\\,;0[$ et une unique solution dans $]0\\,;1[$ ; ailleurs, $g(a) < \\frac{1}{2}$. Il y a donc 2 tangentes.",
         "retenir": "« Combien de tangentes passent par $A$ ? » revient à « combien de solutions a l'équation d'inconnue $a$ ? » : c'est une étude de fonction.",
+        "temps": 420,
         "id": "c6s-s1-2"
        }
       ]
@@ -5750,7 +5751,7 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "D'après CAPES Mayotte 2022. Proposition : « $\\displaystyle \\lim_{n \\to +\\infty} n\\left(e^{\\frac{1}{n}} - 1\\right) = 1$. »",
+        "enonce": "D'après CAPES Mayotte 2022. Programme de Terminale (limite d'une suite). Proposition : « $\\displaystyle \\lim_{n \\to +\\infty} n\\left(e^{\\frac{1}{n}} - 1\\right) = 1$. »",
         "reponse": 1,
         "choix": [
          "Vrai",
@@ -5940,7 +5941,7 @@ var CHAPITRES = [
    {
     "nom": "L'Académie de Platon",
     "fond": "jardin",
-    "athena": "Dans $ax+by+c=0$, lis sans calcul : $(-b\\,;a)$ dirige la droite, $(a\\,;b)$ lui est normal. Un vecteur normal suffit pour écrire une perpendiculaire.",
+    "athena": "Dans $ax+by+c=0$, lis sans calcul : $(-b\\,;a)$ dirige la droite et, en repère orthonormé, $(a\\,;b)$ lui est normal. Un vecteur normal suffit pour écrire une perpendiculaire.",
     "notion": "Équations de droites, vecteurs directeur et normal",
     "plan": [
      "############################",
@@ -6121,13 +6122,13 @@ var CHAPITRES = [
         "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\|=3$, $\\|\\vec{v}\\|=5$ et $\\|\\vec{u}+\\vec{v}\\|=7$. Entrer $\\vec{u}\\cdot\\vec{v}$, sous forme de fraction ou de décimal.",
         "reponse": 7.5,
         "indice": "Développe $\\|\\vec{u}+\\vec{v}\\|^2=(\\vec{u}+\\vec{v})\\cdot(\\vec{u}+\\vec{v})$.",
-        "explication": "$\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2$, donc $49=9+2\\,\\vec{u}\\cdot\\vec{v}+25$ et $\\vec{u}\\cdot\\vec{v}=\\frac{15}{2}$. On en déduit $\\cos(\\vec{u},\\vec{v})=\\frac{7{,}5}{15}=\\frac{1}{2}$ : les vecteurs forment un angle de $60°$.",
+        "explication": "$\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2$, donc $49=9+2\\,\\vec{u}\\cdot\\vec{v}+25$ et $\\vec{u}\\cdot\\vec{v}=\\frac{15}{2}$. On en déduit $\\cos(\\vec{u},\\vec{v})=\\frac{7{,}5}{15}=\\frac{1}{2}$ : les vecteurs forment un angle de $60^\\circ$.",
         "retenir": "$\\vec{u}\\cdot\\vec{v}=\\frac{1}{2}\\left(\\|\\vec{u}+\\vec{v}\\|^2-\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2\\right)$ : les normes suffisent.",
         "id": "c7r3-s0-1"
        },
        {
         "titre": "Le minimum caché",
-        "enonce": "Deux vecteurs vérifient $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$ et $\\vec{u}\\cdot\\vec{v}=-1$. Pour tout réel $t$, on pose $f(t)=\\|\\vec{u}+t\\,\\vec{v}\\|^2$. Entrer la valeur de $t$ pour laquelle $f(t)$ est minimal, sous forme de fraction.",
+        "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$ et $\\vec{u}\\cdot\\vec{v}=-1$. Pour tout réel $t$, on pose $f(t)=\\|\\vec{u}+t\\,\\vec{v}\\|^2$. Entrer la valeur de $t$ pour laquelle $f(t)$ est minimal, sous forme de fraction.",
         "reponse": 0.1111111111111111,
         "indice": "Développe $f(t)$ : c'est un trinôme du second degré en $t$.",
         "explication": "$f(t)=\\|\\vec{u}\\|^2+2t\\,\\vec{u}\\cdot\\vec{v}+t^2\\|\\vec{v}\\|^2=9t^2-2t+4$, minimal en $t=\\frac{2}{18}=\\frac{1}{9}$. Pour cette valeur, $(\\vec{u}+t\\vec{v})\\cdot\\vec{v}=-1+9t=0$ : le vecteur le plus court de la famille est orthogonal à $\\vec{v}$. C'est l'idée du projeté orthogonal.",
@@ -6140,10 +6141,10 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Avec le cosinus",
-        "enonce": "Dans un triangle $ABC$, on a $AB=4$, $AC=6$ et $\\widehat{BAC}=60°$. Entrer $\\vec{AB}\\cdot\\vec{AC}$.",
+        "enonce": "Dans un triangle $ABC$, on a $AB=4$, $AC=6$ et $\\widehat{BAC}=60^\\circ$. Entrer $\\vec{AB}\\cdot\\vec{AC}$.",
         "reponse": 12,
         "indice": "$\\vec{AB}\\cdot\\vec{AC}=AB\\times AC\\times\\cos\\widehat{BAC}$.",
-        "explication": "$\\vec{AB}\\cdot\\vec{AC}=4\\times6\\times\\cos60°=24\\times\\frac{1}{2}=12$.",
+        "explication": "$\\vec{AB}\\cdot\\vec{AC}=4\\times6\\times\\cos60^\\circ=24\\times\\frac{1}{2}=12$.",
         "retenir": "$\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|\\times\\cos(\\vec{u},\\vec{v})$ : le signe du produit scalaire est celui du cosinus.",
         "id": "c7r3-s1-0"
        },
@@ -6152,7 +6153,7 @@ var CHAPITRES = [
         "enonce": "$ABCD$ est un carré de côté 4 et $I$ est le milieu de $[CD]$. Entrer $\\vec{AB}\\cdot\\vec{AI}$.",
         "reponse": 8,
         "indice": "Projette orthogonalement le point $I$ sur la droite $(AB)$.",
-        "explication": "Le projeté orthogonal de $I$ sur $(AB)$ est le milieu $J$ de $[AB]$, et $\\vec{AJ}$ a le même sens que $\\vec{AB}$. Donc $\\vec{AB}\\cdot\\vec{AI}=\\vec{AB}\\cdot\\vec{AJ}=4\\times2=8$. Contrôle dans le repère orthonormé d'origine $A$ : $\\vec{AB}(4\\,;0)$ et $\\vec{AI}(2\\,;4)$.",
+        "explication": "Le projeté orthogonal de $I$ sur $(AB)$ est le milieu $J$ de $[AB]$, et $\\vec{AJ}$ a le même sens que $\\vec{AB}$. Donc $\\vec{AB}\\cdot\\vec{AI}=\\vec{AB}\\cdot\\vec{AJ}=4\\times2=8$. Contrôle dans le repère orthonormé d'origine $A$ où $B(4\\,;0)$ et $D(0\\,;4)$ : $\\vec{AB}(4\\,;0)$ et $\\vec{AI}(2\\,;4)$.",
         "retenir": "Si $H$ est le projeté orthogonal de $C$ sur $(AB)$, alors $\\vec{AB}\\cdot\\vec{AC}=\\vec{AB}\\cdot\\vec{AH}$ : positif si même sens, négatif sinon.",
         "id": "c7r3-s1-1"
        },
@@ -6225,7 +6226,7 @@ var CHAPITRES = [
        "Que $\\|\\vec{v}\\|=\\|\\vec{w}\\|$."
       ],
       "indice": "Fais tout passer dans le même membre et factorise : quelle propriété géométrique obtiens-tu ?",
-      "explication": "L'hypothèse équivaut à $\\vec{u}\\cdot(\\vec{v}-\\vec{w})=0$, c'est-à-dire à $\\vec{u}\\perp(\\vec{v}-\\vec{w})$, et rien de plus. Contre-exemple à la « simplification » : $\\vec{u}(1\\,;0)$, $\\vec{v}(1\\,;0)$ et $\\vec{w}(1\\,;5)$ donnent $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}=1$, alors que $\\vec{v}$ et $\\vec{w}$ ne sont ni égaux, ni colinéaires, ni de même norme.",
+      "explication": "L'hypothèse équivaut à $\\vec{u}\\cdot(\\vec{v}-\\vec{w})=0$, c'est-à-dire à $\\vec{u}\\perp(\\vec{v}-\\vec{w})$, et rien de plus. Contre-exemple à la « simplification », dans un repère orthonormé : $\\vec{u}(1\\,;0)$, $\\vec{v}(1\\,;0)$ et $\\vec{w}(1\\,;5)$ donnent $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}=1$, alors que $\\vec{v}$ et $\\vec{w}$ ne sont ni égaux, ni colinéaires, ni de même norme.",
       "retenir": "On ne divise jamais par un vecteur : $\\vec{u}\\cdot\\vec{v}=\\vec{u}\\cdot\\vec{w}$ signifie seulement $\\vec{u}\\perp(\\vec{v}-\\vec{w})$.",
       "id": "c7r3-h0",
       "figure": "double"
@@ -6265,7 +6266,7 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "La traversée du lagon",
-        "enonce": "Depuis un ponton $P$ de Petite-Terre, un kayak rejoint un îlot $I$ situé à 5 km, un autre rejoint un récif $R$ situé à 8 km. L'angle $\\widehat{IPR}$ mesure $60°$. Entrer la distance $IR$, en km.",
+        "enonce": "Depuis un ponton $P$ de Petite-Terre, un kayak rejoint un îlot $I$ situé à 5 km, un autre rejoint un récif $R$ situé à 8 km. L'angle $\\widehat{IPR}$ mesure $60^\\circ$. Entrer la distance $IR$, en km.",
         "reponse": 7,
         "unite": "km",
         "indice": "Formule d'Al-Kashi : $IR^2=PI^2+PR^2-2\\,PI\\times PR\\times\\cos\\widehat{IPR}$.",
@@ -6337,7 +6338,7 @@ var CHAPITRES = [
          "Faux"
         ],
         "indice": "Exprime $\\cos\\widehat{BAC}$ à l'aide de la formule d'Al-Kashi.",
-        "explication": "Vrai. Al-Kashi donne $\\cos\\widehat{BAC}=\\dfrac{AB^2+AC^2-BC^2}{2\\,AB\\times AC}$. L'hypothèse rend le numérateur strictement négatif et le dénominateur est positif : $\\cos\\widehat{BAC}<0$. Comme $\\widehat{BAC}$ est strictement compris entre $0°$ et $180°$, l'angle est obtus. La réciproque est vraie aussi.",
+        "explication": "Vrai. Al-Kashi donne $\\cos\\widehat{BAC}=\\dfrac{AB^2+AC^2-BC^2}{2\\,AB\\times AC}$. L'hypothèse rend le numérateur strictement négatif et le dénominateur est positif : $\\cos\\widehat{BAC}<0$. Comme $\\widehat{BAC}$ est strictement compris entre $0^\\circ$ et $180^\\circ$, l'angle est obtus. La réciproque est vraie aussi.",
         "retenir": "Comparer $a^2$ à $b^2+c^2$ dit si l'angle opposé au côté $a$ est aigu, droit ou obtus.",
         "id": "c7r4-b0-0"
        },
@@ -6438,10 +6439,10 @@ var CHAPITRES = [
        },
        {
         "titre": "La corde commune",
-        "enonce": "On admet que $B\\left(-\\frac{1}{2}\\,;0\\right)$, $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$ et que les deux points communs à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ sont sur la droite $\\Delta : x+\\sqrt{7}\\,y-\\frac{3}{2}=0$ (obtenue en soustrayant les équations des deux cercles). Entrer le carré de la distance du point $B$ à la droite $\\Delta$, sous forme de fraction.",
+        "enonce": "On admet que $B\\left(-\\frac{1}{2}\\,;0\\right)$, $E\\left(0\\,;\\frac{\\sqrt{7}}{2}\\right)$ et que les deux points communs à $\\mathcal{C}_1$ et $\\mathcal{C}_5$ sont sur la droite $\\Delta : x+\\sqrt{7}\\,y-\\frac{3}{2}=0$ (obtenue en soustrayant les équations des deux cercles). On note $\\delta$ la distance du point $B$ à la droite $\\Delta$. Entrer $\\delta^2$, le carré de cette distance, sous forme de fraction.",
         "reponse": 0.5,
         "indice": "Compare un vecteur normal de $\\Delta$ au vecteur $\\vec{BE}$ : $\\Delta$ est une droite bien connue associée au segment $[BE]$.",
-        "explication": "$\\vec{n}(1\\,;\\sqrt{7})=2\\,\\vec{BE}$ est normal à $\\Delta$, et le milieu $\\left(-\\frac{1}{4}\\,;\\frac{\\sqrt{7}}{4}\\right)$ de $[BE]$ vérifie l'équation de $\\Delta$ : $\\Delta$ est la médiatrice de $[BE]$. Le projeté orthogonal de $B$ sur $\\Delta$ est ce milieu, donc la distance vaut $\\frac{BE}{2}=\\frac{\\sqrt{2}}{2}$, de carré $\\frac{1}{2}$. Contrôle par la formule : $\\frac{\\left|-\\frac{1}{2}-\\frac{3}{2}\\right|}{\\sqrt{1+7}}=\\frac{2}{2\\sqrt{2}}$.",
+        "explication": "$\\vec{n}(1\\,;\\sqrt{7})=2\\,\\vec{BE}$ est normal à $\\Delta$, et le milieu $\\left(-\\frac{1}{4}\\,;\\frac{\\sqrt{7}}{4}\\right)$ de $[BE]$ vérifie l'équation de $\\Delta$ : $\\Delta$ est la médiatrice de $[BE]$. Le projeté orthogonal de $B$ sur $\\Delta$ est ce milieu, donc $\\delta=\\frac{BE}{2}=\\frac{\\sqrt{2}}{2}$ et $\\delta^2=\\frac{1}{2}$. Contrôle par la formule : $\\frac{\\left|-\\frac{1}{2}-\\frac{3}{2}\\right|}{\\sqrt{1+7}}=\\frac{2}{2\\sqrt{2}}$.",
         "retenir": "Deux cercles de même rayon se coupent sur la médiatrice de leurs centres ; une distance à une droite se lit sur un projeté orthogonal.",
         "id": "c7b-s0-3"
        },
@@ -6606,16 +6607,16 @@ var CHAPITRES = [
       "exercices": [
        {
         "titre": "Le signe oublié",
-        "enonce": "En Première, on donne un triangle $ABC$ tel que $AB=4$, $AC=5$ et $\\widehat{BAC}=120°$. Un élève note $H$ le projeté orthogonal de $C$ sur $(AB)$, calcule $AH=5\\cos60°=2{,}5$ et conclut : $\\vec{AB}\\cdot\\vec{AC}=AB\\times AH=10$. Quel diagnostic poser ?",
+        "enonce": "En Première, on donne un triangle $ABC$ tel que $AB=4$, $AC=5$ et $\\widehat{BAC}=120^\\circ$. Un élève note $H$ le projeté orthogonal de $C$ sur $(AB)$, calcule $AH=5\\cos60^\\circ=2{,}5$ et conclut : $\\vec{AB}\\cdot\\vec{AC}=AB\\times AH=10$. Quel diagnostic poser ?",
         "reponse": 4,
         "choix": [
          "Le calcul est juste : par projection, un produit scalaire est un produit de deux longueurs.",
          "Il fallait projeter $B$ sur $(AC)$ : la projection de $C$ sur $(AB)$ ne convient pas.",
-         "Il fallait encore multiplier par $\\cos120°$, ce qui donne $-5$.",
+         "Il fallait encore multiplier par $\\cos120^\\circ$, ce qui donne $-5$.",
          "$H$ n'est pas sur la demi-droite $[AB)$ : $\\vec{AH}$ et $\\vec{AB}$ sont de sens contraires, donc $\\vec{AB}\\cdot\\vec{AC}=-AB\\times AH=-10$."
         ],
         "indice": "L'angle $\\widehat{BAC}$ est obtus : de quel côté de $A$ tombe le projeté de $C$ sur la droite $(AB)$ ?",
-        "explication": "L'angle en $A$ étant obtus, $H$ est sur la droite $(AB)$, du côté de $A$ opposé à $B$ : $\\vec{AB}\\cdot\\vec{AC}=\\vec{AB}\\cdot\\vec{AH}=-AB\\times AH=-10$. Contrôle : $4\\times5\\times\\cos120°=-10$. La longueur $AH=2{,}5$ était juste ; projeter $B$ sur $(AC)$ marcherait aussi, à condition de tenir compte du sens.",
+        "explication": "L'angle en $A$ étant obtus, $H$ est sur la droite $(AB)$, du côté de $A$ opposé à $B$ : $\\vec{AB}\\cdot\\vec{AC}=\\vec{AB}\\cdot\\vec{AH}=-AB\\times AH=-10$. Contrôle : $4\\times5\\times\\cos120^\\circ=-10$. La longueur $AH=2{,}5$ était juste ; projeter $B$ sur $(AC)$ marcherait aussi, à condition de tenir compte du sens.",
         "retenir": "Produit scalaire par projection : $\\vec{AB}\\cdot\\vec{AC}=\\pm AB\\times AH$, le signe dépendant du sens de $\\vec{AH}$ par rapport à $\\vec{AB}$.",
         "id": "c7s-s2-0"
        },
@@ -6625,12 +6626,12 @@ var CHAPITRES = [
         "reponse": 2,
         "choix": [
          "Dans un repère orthonormé, $\\vec{u}(1\\,;0)$ et $\\vec{v}(0\\,;1)$ : la formule donne 0 et les vecteurs sont bien orthogonaux.",
-         "Dans un repère où $\\vec{\\imath}$ et $\\vec{\\jmath}$ sont unitaires et forment un angle de $60°$ : pour $\\vec{\\imath}(1\\,;0)$ et $\\vec{\\jmath}(0\\,;1)$, la formule donne 0, or $\\vec{\\imath}\\cdot\\vec{\\jmath}=\\frac{1}{2}$.",
+         "Dans un repère où $\\vec{\\imath}$ et $\\vec{\\jmath}$, unitaires, forment un angle de $60^\\circ$ : pour $\\vec{\\imath}(1\\,;0)$ et $\\vec{\\jmath}(0\\,;1)$, la formule donne 0, or $\\vec{\\imath}\\cdot\\vec{\\jmath}=\\frac{1}{2}$.",
          "Dans un repère orthonormé, $\\vec{u}(2\\,;0)$ et $\\vec{v}(3\\,;0)$ : la formule donne $6=\\|\\vec{u}\\|\\times\\|\\vec{v}\\|$.",
          "Dans un repère où $\\vec{\\imath}\\perp\\vec{\\jmath}$, $\\|\\vec{\\imath}\\|=2$ et $\\|\\vec{\\jmath}\\|=1$ : la formule donne $\\vec{\\imath}\\cdot\\vec{\\jmath}=0$, ce qui est exact."
         ],
         "indice": "Un exemple convaincant doit mettre la formule en défaut, pas la confirmer.",
-        "explication": "Les exemples 1, 3 et 4 donnent tous un résultat juste : ils ne prouvent rien. Dans le repère à $60°$, $\\vec{\\imath}$ et $\\vec{\\jmath}$ ont pour coordonnées $(1\\,;0)$ et $(0\\,;1)$ ; la formule donnerait 0, alors que $\\vec{\\imath}\\cdot\\vec{\\jmath}=1\\times1\\times\\cos60°=\\frac{1}{2}$. En général, $\\vec{u}\\cdot\\vec{v}=xx'\\|\\vec{\\imath}\\|^2+(xy'+yx')\\,\\vec{\\imath}\\cdot\\vec{\\jmath}+yy'\\|\\vec{\\jmath}\\|^2$ : on ne retrouve $xx'+yy'$ que si la base est orthonormée.",
+        "explication": "Les exemples 1, 3 et 4 donnent tous un résultat juste : ils ne prouvent rien. Dans le repère à $60^\\circ$, $\\vec{\\imath}$ et $\\vec{\\jmath}$ ont pour coordonnées $(1\\,;0)$ et $(0\\,;1)$ ; la formule donnerait 0, alors que $\\vec{\\imath}\\cdot\\vec{\\jmath}=1\\times1\\times\\cos60^\\circ=\\frac{1}{2}$. En général, $\\vec{u}\\cdot\\vec{v}=xx'\\|\\vec{\\imath}\\|^2+(xy'+yx')\\,\\vec{\\imath}\\cdot\\vec{\\jmath}+yy'\\|\\vec{\\jmath}\\|^2$ : on ne retrouve $xx'+yy'$ que si la base est orthonormée.",
         "retenir": "Une formule fausse se réfute par un seul exemple où elle échoue ; des exemples où elle marche ne prouvent rien.",
         "id": "c7s-s2-1"
        },
@@ -6683,15 +6684,15 @@ var CHAPITRES = [
        },
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Pour tous vecteurs $\\vec{u}$, $\\vec{v}$, $\\vec{w}$ du plan, $(\\vec{u}\\cdot\\vec{v})\\,\\vec{w}=\\vec{u}\\,(\\vec{v}\\cdot\\vec{w})$. »",
+        "enonce": "Soit $A$ et $B$ deux points du plan tels que $AB=2$. Proposition : « Pour tout réel $k$, l'ensemble des points $M$ du plan tels que $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle. »",
         "reponse": 2,
         "choix": [
          "Vrai",
          "Faux"
         ],
-        "indice": "Le membre de gauche est colinéaire à $\\vec{w}$, celui de droite à $\\vec{u}$.",
-        "explication": "Faux. En repère orthonormé, avec $\\vec{u}=\\vec{v}=(1\\,;0)$ et $\\vec{w}=(0\\,;1)$ : $(\\vec{u}\\cdot\\vec{v})\\,\\vec{w}=1\\times\\vec{w}$ a pour coordonnées $(0\\,;1)$, alors que $\\vec{v}\\cdot\\vec{w}=0$ donne $\\vec{u}\\,(\\vec{v}\\cdot\\vec{w})=\\vec{0}$. Le produit scalaire de deux vecteurs est un nombre : l'écriture $\\vec{u}\\cdot\\vec{v}\\cdot\\vec{w}$ n'a pas de sens.",
-        "retenir": "Le produit scalaire n'est pas associatif : $\\vec{u}\\cdot\\vec{v}\\cdot\\vec{w}$ n'a pas de sens, et l'on ne simplifie jamais par un vecteur.",
+        "indice": "Introduis le milieu $I$ de $[AB]$ : $\\vec{MA}=\\vec{MI}+\\vec{IA}$ et $\\vec{MB}=\\vec{MI}-\\vec{IA}$. Développe, puis essaie une valeur de $k$ très négative.",
+        "explication": "Faux. Avec $I$ milieu de $[AB]$, $\\vec{IB}=-\\vec{IA}$, donc $\\vec{MA}\\cdot\\vec{MB}=(\\vec{MI}+\\vec{IA})\\cdot(\\vec{MI}-\\vec{IA})=MI^2-IA^2=MI^2-1$. Pour $k=-2$, la condition devient $MI^2=-1$ : aucun point ne la vérifie, l'ensemble est vide, ce n'est pas un cercle. Pour $k=-1$, on obtient le seul point $I$ ; pour $k>-1$, le cercle de centre $I$ et de rayon $\\sqrt{k+1}$ (pour $k=0$, le cercle de diamètre $[AB]$).",
+        "retenir": "$\\vec{MA}\\cdot\\vec{MB}=MI^2-\\frac{AB^2}{4}$ ($I$ milieu de $[AB]$) : l'ensemble $\\vec{MA}\\cdot\\vec{MB}=k$ est un cercle de centre $I$, un point ou l'ensemble vide.",
         "id": "c7s-b0-2"
        }
       ]
@@ -6748,18 +6749,18 @@ var CHAPITRES = [
        },
        {
         "titre": "Le retard de la barge",
-        "enonce": "Dans un lycée de Mamoudzou, 40 % des élèves habitent en Petite-Terre (événement $A$) et 30 % de ces élèves arrivent en retard (événement $R$). Sur l'ensemble du lycée, 20 % des élèves arrivent en retard. Un élève choisi au hasard est en retard. Entrer la probabilité qu'il habite en Petite-Terre, sous forme décimale.",
+        "enonce": "Dans une entreprise de Mamoudzou, 40 % des salariés habitent en Petite-Terre et viennent par la barge. Un matin, 30 % de ces salariés arrivent en retard ; sur l'ensemble de l'entreprise, 20 % des salariés arrivent en retard ce matin-là. On choisit un salarié au hasard et l'on note $A$ : « il habite en Petite-Terre » et $R$ : « il est arrivé en retard ce matin-là ». Sachant qu'il est arrivé en retard, entrer la probabilité qu'il habite en Petite-Terre, sous forme décimale.",
         "reponse": 0.6,
         "indice": "On demande $P_R(A)$, pas $P_A(R)$. Calcule d'abord $P(A \\cap R)$.",
         "explication": "$P(A \\cap R) = P(A) \\times P_A(R) = 0{,}4 \\times 0{,}3 = 0{,}12$, d'où $P_R(A) = \\frac{P(A \\cap R)}{P(R)} = \\frac{0{,}12}{0{,}2} = 0{,}6$. La réponse 0,3 confond $P_R(A)$ et $P_A(R)$.",
-        "retenir": "$P_A(R)$ et $P_R(A)$ ont le même numérateur $P(A \\cap R)$ mais pas le même dénominateur : elles diffèrent dès que $P(A) \\neq P(R)$.",
+        "retenir": "$P_A(R)$ et $P_R(A)$ ont le même numérateur $P(A \\cap R)$ mais pas le même dénominateur : si $P(A \\cap R) \\neq 0$, elles diffèrent dès que $P(A) \\neq P(R)$.",
         "id": "c8r1-s0-1"
        },
        {
         "titre": "Deux enfants",
-        "enonce": "On admet que chaque enfant est une fille avec probabilité $\\frac{1}{2}$, indépendamment de ses frères et sœurs. On choisit au hasard une famille de deux enfants. Sachant que cette famille compte au moins une fille, entrer la probabilité que ses deux enfants soient des filles.",
+        "enonce": "On choisit une famille au hasard parmi les familles de deux enfants. On admet que les quatre compositions possibles, l'aîné étant cité en premier (fille-fille, fille-garçon, garçon-fille, garçon-garçon), sont équiprobables. Sachant que la famille choisie compte au moins une fille, entrer la probabilité que ses deux enfants soient des filles, sous forme de fraction.",
         "reponse": 0.3333333333333333,
-        "indice": "Décris l'arbre : aîné, puis cadet ; quatre issues équiprobables. Lesquelles réalisent « au moins une fille » ?",
+        "indice": "Parmi les quatre compositions équiprobables, lesquelles réalisent « au moins une fille » ? Sachant cela, l'univers se réduit à celles-là.",
         "explication": "L'arbre (aîné, puis cadet) donne quatre issues de probabilité $\\frac{1}{4}$ : fille-fille, fille-garçon, garçon-fille, garçon-garçon. Notons $A$ : « au moins une fille » et $D$ : « deux filles ». Alors $P(A) = \\frac{3}{4}$ et, comme $D \\subset A$, $P(D \\cap A) = P(D) = \\frac{1}{4}$. Donc $P_A(D) = \\frac{1/4}{3/4} = \\frac{1}{3}$. La réponse $\\frac{1}{2}$ serait celle de la question « sachant que l'aînée est une fille » : l'information reçue n'est pas la même.",
         "retenir": "Le conditionnement dépend exactement de l'information reçue : « au moins une fille » et « l'aînée est une fille » ne donnent pas la même probabilité.",
         "id": "c8r1-s0-2"
@@ -7229,7 +7230,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "On considère une série d'au moins trois valeurs. Proposition : « Si l'on remplace une valeur égale au maximum de la série par un nombre strictement plus grand, alors la moyenne et l'étendue augmentent, et la médiane ne change pas. »",
+        "enonce": "On considère une série statistique d'effectif $n \\geqslant 3$ ; pour un effectif pair, la médiane est la demi-somme des deux valeurs centrales de la série rangée. Proposition : « Si l'on remplace une valeur égale au maximum de la série par un nombre strictement plus grand, alors la moyenne et l'étendue augmentent, et la médiane ne change pas. »",
         "reponse": 1,
         "choix": [
          "Vrai",
@@ -7430,7 +7431,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Écart-type d'une transformée",
-        "enonce": "Une variable aléatoire $X$ vérifie $E(X) = 3$ et $E(X^2) = 13$. On pose $Y = 5 - 3X$. Entrer l'écart-type $\\sigma(Y)$.",
+        "enonce": "Programme de Terminale (variance de $aX + b$). Une variable aléatoire $X$ vérifie $E(X) = 3$ et $E(X^2) = 13$. On pose $Y = 5 - 3X$. Entrer l'écart-type $\\sigma(Y)$.",
         "reponse": 6,
         "indice": "Calcule $V(X)$ par la formule de König-Huygens, puis utilise $V(aX + b) = a^2\\,V(X)$.",
         "explication": "$V(X) = E(X^2) - \\big(E(X)\\big)^2 = 13 - 9 = 4$. Comme $V(aX + b) = a^2\\,V(X)$, on a $V(Y) = (-3)^2 \\times 4 = 36$, donc $\\sigma(Y) = 6$. Le signe de $a$ disparaît, $\\sigma(aX + b) = |a|\\,\\sigma(X)$, et la constante $b$ ne change pas la dispersion. Réponse fausse classique : $-3 \\times 2 = -6$, alors qu'un écart-type est positif.",
@@ -7443,7 +7444,7 @@ var CHAPITRES = [
         "reponse": 9,
         "unite": "km",
         "indice": "Développe $f(x)$ : c'est un trinôme $ax^2 + bx + c$ avec $a > 0$, minimal en $-\\frac{b}{2a}$.",
-        "explication": "$f(x) = 5x^2 - 2(1 + 4 + 6 + 14 + 20)x + c = 5x^2 - 90x + c$, où $c$ est une constante : trinôme de coefficient dominant positif, minimal en $x = \\frac{90}{10} = 9$, qui est la moyenne des abscisses. Le minimum $f(9) = 64 + 25 + 9 + 25 + 121 = 244$ vaut $5\\sigma^2$, où $\\sigma$ est l'écart-type de la série. Piège : la médiane, 6, minimise la somme des distances, pas celle de leurs carrés.",
+        "explication": "$f(x) = 5x^2 - 2(1 + 4 + 6 + 14 + 20)x + c = 5x^2 - 90x + c$, où $c$ est une constante : trinôme de coefficient dominant positif, minimal en $x = \\frac{90}{10} = 9$, qui est la moyenne des abscisses. Le minimum $f(9) = 64 + 25 + 9 + 25 + 121 = 244$ vaut $5\\sigma^2$, où $\\sigma$ est l'écart-type de la série (division par l'effectif 5). Piège : la médiane, 6, minimise la somme des distances, pas celle de leurs carrés.",
         "retenir": "La moyenne minimise $\\sum (x - x_i)^2$, et ce minimum vaut $N\\sigma^2$ ; la médiane, elle, minimise $\\sum |x - x_i|$.",
         "effet": "passerelle",
         "id": "c8s-s0-2"
@@ -7463,7 +7464,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Les trois portes",
-        "enonce": "Un jeu télévisé propose trois portes : une voiture est cachée au hasard derrière l'une d'elles, une chèvre derrière chacune des deux autres. Le candidat choisit une porte au hasard. L'animateur, qui sait où est la voiture, ouvre alors toujours une autre porte cachant une chèvre, puis propose au candidat de changer pour la porte restée fermée. Le candidat change toujours. Entrer la probabilité qu'il gagne la voiture.",
+        "enonce": "Un jeu télévisé propose trois portes : une voiture est cachée au hasard derrière l'une d'elles, une chèvre derrière chacune des deux autres. Le candidat choisit une porte au hasard. L'animateur, qui sait où est la voiture, ouvre alors toujours une porte non choisie par le candidat et cachant une chèvre (si deux portes conviennent, il en ouvre une au hasard), puis propose au candidat de changer pour la porte restée fermée. Le candidat change toujours. Entrer la probabilité qu'il gagne la voiture, sous forme de fraction.",
         "reponse": 0.6666666666666666,
         "indice": "Premier niveau de l'arbre : le premier choix est-il la bonne porte ? Que se passe-t-il ensuite, en changeant, dans chacun des deux cas ?",
         "explication": "Premier niveau : le candidat a d'abord choisi la voiture (probabilité $\\frac{1}{3}$) ou une chèvre ($\\frac{2}{3}$). S'il a choisi la voiture, changer le fait perdre à coup sûr. S'il a choisi une chèvre, l'animateur ouvre l'autre porte à chèvre, et la porte restante cache la voiture : changer le fait gagner à coup sûr. Donc la probabilité de gagner est $\\frac{1}{3} \\times 0 + \\frac{2}{3} \\times 1 = \\frac{2}{3}$. L'intuition « une chance sur deux » oublie que le choix de l'animateur dépend de la position de la voiture.",
@@ -7562,7 +7563,7 @@ var CHAPITRES = [
        },
        {
         "titre": "Vrai ou faux ?",
-        "enonce": "Proposition : « Si l'on ajoute à une série statistique une nouvelle valeur égale à sa moyenne, ni la moyenne ni l'écart-type de la série ne changent. »",
+        "enonce": "L'écart-type d'une série de $N$ valeurs est $\\sigma = \\sqrt{\\frac{1}{N}\\sum (x_i - \\overline{x})^2}$. Proposition : « Si l'on ajoute à une série statistique une nouvelle valeur égale à sa moyenne, ni la moyenne ni l'écart-type de la série ne changent. »",
         "reponse": 2,
         "choix": [
          "Vrai",

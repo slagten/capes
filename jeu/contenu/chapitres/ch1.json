@@ -26,7 +26,7 @@
        ],
        "indice": "La contraposée de « si $P$, alors $Q$ » part de la négation de la conclusion : « si non $Q$, alors… ».",
        "explication": "La contraposée de $P \\Rightarrow Q$ est $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$ : « si les rues ne sont pas mouillées, alors il ne pleut pas ». Elle est équivalente à l'implication de départ. La première option est la réciproque $Q \\Rightarrow P$, qui peut être fausse (un camion-citerne peut mouiller les rues) ; la deuxième est la contraposée de la réciproque ; la dernière est la négation de l'implication.",
-       "retenir": "Contraposée de $P \\Rightarrow Q$ : $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$, toujours équivalente. Réciproque : $Q \\Rightarrow P$, sans lien de vérité."
+       "retenir": "Contraposée de $P \\Rightarrow Q$ : $\\text{non}\\,Q \\Rightarrow \\text{non}\\,P$, toujours équivalente. Réciproque : $Q \\Rightarrow P$, qui peut être fausse même si l'implication est vraie."
       },
       {
        "titre": "Trois flèches",
@@ -99,20 +99,20 @@
        ],
        "reponse": 2,
        "indice": "Cherche une implication vraie dont la réciproque est vraie aussi.",
-       "explication": "Faux. Contre-exemple : pour un réel $x$, « si $x = 2$, alors $2x = 4$ » est vraie, et sa réciproque « si $2x = 4$, alors $x = 2$ » est vraie aussi. La réciproque d'une implication vraie peut être vraie ou fausse : il n'y a aucun lien.",
-       "retenir": "La valeur de vérité de la réciproque ne se déduit pas de celle de l'implication : il faut l'étudier."
+       "explication": "Faux. Contre-exemple : pour un réel $x$, « si $x = 2$, alors $2x = 4$ » est vraie, et sa réciproque « si $2x = 4$, alors $x = 2$ » est vraie aussi. La réciproque d'une implication vraie peut donc être vraie, comme ici, ou fausse : « si $x = -2$, alors $x^2 = 4$ » est vraie, mais sa réciproque ne l'est pas ($x = 2$).",
+       "retenir": "Qu'une implication soit vraie ne dit rien de sa réciproque : il faut étudier celle-ci à part."
       },
       {
        "titre": "Vrai ou faux ?",
-       "enonce": "Proposition : « Pour tout entier $n$, si $n^2$ est un multiple de 4, alors $n$ est un multiple de 4. »",
+       "enonce": "Proposition : « Soient $a$ et $b$ deux réels. Pour que $a + b > 0$, il faut que $a > 0$ et $b > 0$. »",
        "choix": [
         "Vrai",
         "Faux"
        ],
        "reponse": 2,
-       "indice": "Essaie de petits entiers pairs.",
-       "explication": "Faux. Contre-exemple : $n = 2$. On a $n^2 = 4$, multiple de 4, mais $2$ n'est pas un multiple de 4. (La réciproque, elle, est vraie : si $n = 4k$, alors $n^2 = 4 \\times 4k^2$.)",
-       "retenir": "Un seul contre-exemple suffit à réfuter une proposition « pour tout » : tester d'abord les petites valeurs."
+       "indice": "« Pour que $Q$, il faut $P$ » se traduit par $Q \\Rightarrow P$. Une somme strictement positive impose-t-elle le signe de chacun de ses termes ?",
+       "explication": "Faux. « Il faut que $a > 0$ et $b > 0$ » signifie : si $a + b > 0$, alors $a > 0$ et $b > 0$. Contre-exemple : $a = 3$ et $b = -1$. On a $a + b = 2 > 0$, mais $b > 0$ est faux. La condition est suffisante (si $a > 0$ et $b > 0$, alors $a + b > 0$ : c'est la réciproque, qui est vraie), mais elle n'est pas nécessaire.",
+       "retenir": "Réfuter « pour que $Q$, il faut $P$ », c'est-à-dire $Q \\Rightarrow P$, c'est exhiber un cas où $Q$ est vraie et $P$ fausse."
       },
       {
        "titre": "Vrai ou faux ?",
@@ -162,7 +162,7 @@
        "reponse": 6,
        "indice": "Décompose en facteurs premiers, puis regroupe les facteurs $2 \\times 5 = 10$.",
        "explication": "$8^3 = 2^9$, $125^2 = 5^6$ et $6 = 2 \\times 3$, donc $N = 2^{10} \\times 3 \\times 5^6 = 2^4 \\times 3 \\times (2 \\times 5)^6 = 48 \\times 10^6 = 48\\,000\\,000$. Comme $48$ ne se termine pas par 0, $N$ se termine par exactement 6 zéros.",
-       "retenir": "Le nombre de zéros finaux d'un entier est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
+       "retenir": "Le nombre de zéros finaux d'un entier naturel non nul est le plus petit des exposants de 2 et de 5 dans sa décomposition en facteurs premiers.",
        "effet": "passerelle"
       }
      ]
@@ -261,7 +261,7 @@
        ],
        "indice": "Un contre-exemple est un réel tel que $x^2 < x$. Que devient un nombre compris entre 0 et 1 quand on l'élève au carré ?",
        "explication": "Pour $x = \\frac{1}{2}$ : $x^2 = \\frac{1}{4} < \\frac{1}{2}$, donc la proposition est fausse. Les autres valeurs vérifient l'inégalité ($1 \\geqslant -1$, $0 \\geqslant 0$, $4 \\geqslant 2$) : ce sont des exemples, et des exemples ne prouvent rien sur un « pour tout ».",
-       "retenir": "Entre 0 et 1, un nombre est strictement plus grand que son carré : c'est là qu'il faut chercher les contre-exemples."
+       "retenir": "Pour $0 < x < 1$, on a $x^2 < x$ : c'est là qu'il faut chercher les contre-exemples."
       },
       {
        "titre": "Une série trompeuse",
@@ -282,7 +282,7 @@
         "$a = -2$ et $b = -1$"
        ],
        "indice": "Un contre-exemple doit vérifier l'hypothèse $a < b$ et contredire la conclusion. Pense aux signes de $a$ et $b$.",
-       "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. La proposition n'est vraie que si $a$ et $b$ ont le même signe.",
+       "explication": "Pour $a = -1$ et $b = 2$ : $a < b$, mais $\\frac{1}{a} = -1 < \\frac{1}{2} = \\frac{1}{b}$. Le couple $a = 2$, $b = 1$ ne vérifie pas l'hypothèse $a < b$ : il ne contredit rien. Les couples $(1\\,;2)$ et $(-2\\,;-1)$ vérifient la conclusion, car la fonction inverse est décroissante sur $]0\\,;+\\infty[$ et sur $]-\\infty\\,;0[$ ; elle ne l'est pas sur la réunion de ces intervalles. L'implication est vraie quand $a$ et $b$ sont de même signe, fausse quand $a < 0 < b$.",
        "retenir": "Un contre-exemple de « si $P$, alors $Q$ » vérifie $P$ et ne vérifie pas $Q$ : c'est exactement la négation de l'implication."
       }
      ]
@@ -406,8 +406,8 @@
         "« $-1 > x > 4$ »"
        ],
        "indice": "« $-1 \\leqslant x \\leqslant 4$ » signifie « $x \\geqslant -1$ et $x \\leqslant 4$ ». La négation de « $P$ et $Q$ » est « non $P$ ou non $Q$ ».",
-       "explication": "« $-1 \\leqslant x \\leqslant 4$ » est la conjonction « $x \\geqslant -1$ et $x \\leqslant 4$ ». Sa négation est « $x < -1$ ou $x > 4$ » : le « et » devient « ou », et chaque inégalité large devient une inégalité stricte dans l'autre sens. La version avec « et » n'est vérifiée par aucun réel ; celle avec des inégalités larges contient à tort $-1$ et $4$, qui vérifient la proposition de départ.",
-       "retenir": "non($P$ et $Q$) = (non $P$) ou (non $Q$). La négation de $x \\leqslant b$ est $x > b$."
+       "explication": "« $-1 \\leqslant x \\leqslant 4$ » est la conjonction « $x \\geqslant -1$ et $x \\leqslant 4$ ». Sa négation est « $x < -1$ ou $x > 4$ » : le « et » devient « ou », et chaque inégalité large devient une inégalité stricte dans l'autre sens. La version avec « et », comme « $-1 > x > 4$ » qui lui équivaut, n'est vérifiée par aucun réel ; celle avec des inégalités larges contient à tort $-1$ et $4$, qui vérifient la proposition de départ.",
+       "retenir": "non($P$ et $Q$) équivaut à (non $P$) ou (non $Q$). La négation de $x \\leqslant b$ est $x > b$."
       },
       {
        "titre": "Nier « pour tout… il existe… »",
@@ -434,7 +434,7 @@
         "La négation de $P$ est « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ », et c'est elle qui est vraie."
        ],
        "indice": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ ». Ensuite, teste un réel négatif.",
-       "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation d'une implication n'est jamais une implication.",
+       "explication": "La négation de « pour tout $x$, si $A(x)$, alors $B(x)$ » est « il existe $x$ tel que $A(x)$ et non $B(x)$ » : ici « il existe un réel $x$ tel que $x^2 > 4$ et $x \\leqslant 2$ ». Elle est vraie : $x = -3$ donne $x^2 = 9 > 4$ et $-3 \\leqslant 2$. Donc $P$ est fausse. La négation de « si $A$, alors $B$ » n'est pas « si $A$, alors non $B$ » : c'est « $A$ et non $B$ ».",
        "retenir": "La négation de « si $A$, alors $B$ » est « $A$ et non $B$ » : c'est l'existence d'un contre-exemple, pas une autre implication."
       }
      ]
@@ -528,7 +528,7 @@
     {
      "boss": "L'Hydre de Lerne",
      "monstre": "hydre",
-     "contexte": "D'après CAPES Mayotte 2022 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$.",
+     "contexte": "D'après CAPES Mayotte 2022, composition 2 (problème « moyennes »). Soient $x$ et $y$ deux réels tels que $0 < x < y$. On note $a = \\frac{x + y}{2}$ leur moyenne arithmétique, $g = \\sqrt{xy}$ leur moyenne géométrique et $h = \\frac{2xy}{x + y}$ leur moyenne harmonique. On a $g^2 = ah$. On veut établir l'encadrement $h < g < a$, puis s'en servir pour encadrer $\\sqrt{6}$.",
      "exercices": [
       {
        "titre": "L'aller-retour de la vedette",
@@ -558,7 +558,7 @@
         "$a$ et $g$ sont positifs, et deux réels positifs sont rangés dans le même ordre que leurs carrés."
        ],
        "indice": "Une seule de ces justifications est un énoncé vrai. Teste les autres avec $u = -3$ et $v = 1$.",
-       "explication": "$a > 0$ et $g > 0$ car $x$ et $y$ sont strictement positifs. Pour $u, v \\geqslant 0$ : $u^2 > v^2 \\Leftrightarrow u > v$, car la fonction racine carrée est strictement croissante sur $[0\\,;+\\infty[$. Donc $g < a$. La fonction carré n'est pas croissante sur $\\mathbb{R}$, et $u = -3$, $v = 1$ vérifient $u^2 > v^2$ sans vérifier $u > v$ : les autres justifications sont fausses.",
+       "explication": "$a > 0$ et $g > 0$ car $x$ et $y$ sont strictement positifs. Pour $u, v \\geqslant 0$, $u^2 > v^2$ entraîne $\\sqrt{u^2} > \\sqrt{v^2}$, c'est-à-dire $u > v$, car la fonction racine carrée est strictement croissante sur $[0\\,;+\\infty[$. Donc $g < a$. La fonction carré n'est pas croissante sur $\\mathbb{R}$, et $u = -3$, $v = 1$ vérifient $u^2 > v^2$ sans vérifier $u > v$ : les autres justifications sont fausses.",
        "retenir": "Passer des carrés aux nombres exige des nombres positifs : écrire « $a$ et $g$ sont positifs » avant de conclure."
       },
       {
@@ -699,18 +699,18 @@
     {
      "exercices": [
       {
-       "titre": "Ce que l'élève a démontré",
-       "enonce": "On demande de démontrer : « pour tout entier $n$, si $n^2$ est un multiple de 3, alors $n$ est un multiple de 3 ». Un élève écrit : « Soit $n = 3k$ avec $k$ entier. Alors $n^2 = 9k^2 = 3 \\times 3k^2$ est un multiple de 3. » Que lui répondre ?",
+       "titre": "Le théorème ou sa réciproque ?",
+       "enonce": "Dans un triangle $ABC$, on a $AB = 3$, $AC = 4$ et $BC = 5$. Un élève écrit : « $AB^2 + AC^2 = 9 + 16 = 25 = BC^2$, donc, d'après le théorème de Pythagore, le triangle $ABC$ est rectangle en $A$. » Que lui répondre ?",
        "reponse": 2,
        "choix": [
-        "« Ta preuve est juste : tu as démontré la contraposée, qui est équivalente. »",
-        "« Tu as démontré la réciproque, qui ne permet pas de conclure. Démontre plutôt la contraposée : si $n$ n'est pas multiple de 3, alors $n^2$ non plus. »",
-        "« Ta preuve est juste, mais il faut aussi la vérifier sur quelques exemples. »",
-        "« Ta preuve est fausse, car $9k^2$ n'est pas un multiple de 3. »"
+        "« Ta preuve est juste : tu as utilisé la contraposée du théorème de Pythagore. »",
+        "« Ta conclusion est juste, mais il faut citer la réciproque du théorème de Pythagore : le théorème suppose le triangle déjà rectangle. »",
+        "« Ta conclusion est fausse : une égalité entre carrés de longueurs ne prouve pas qu'un triangle est rectangle. »",
+        "« Il faut d'abord démontrer que l'angle en $A$ est droit, puis appliquer le théorème de Pythagore. »"
        ],
-       "indice": "Repère l'hypothèse et la conclusion utilisées par l'élève, et compare-les à celles de l'énoncé.",
-       "explication": "L'élève part de « $n$ multiple de 3 » et arrive à « $n^2$ multiple de 3 » : il a démontré la réciproque, qui est vraie mais ne dit rien de l'énoncé demandé. Ce n'est pas la contraposée, qui serait « si $n$ n'est pas multiple de 3, alors $n^2$ n'est pas multiple de 3 ». Pour l'établir, on distingue $n = 3k + 1$ et $n = 3k + 2$, et l'on montre que $n^2$ s'écrit alors $3m + 1$ avec $m$ entier.",
-       "retenir": "Devant une copie, souligner l'hypothèse de départ et la conclusion atteinte : on voit aussitôt si l'élève a démontré la réciproque."
+       "indice": "Écris le théorème de Pythagore sous la forme « si …, alors … », puis compare avec ce que l'élève sait et ce qu'il conclut.",
+       "explication": "Le théorème de Pythagore affirme : si $ABC$ est rectangle en $A$, alors $AB^2 + AC^2 = BC^2$. L'élève part de l'égalité pour conclure que le triangle est rectangle : il utilise la réciproque, un autre théorème (vrai lui aussi), qu'il doit citer. Sa conclusion est juste ; seule la justification est à corriger. La contraposée (si $AB^2 + AC^2 \\neq BC^2$, alors $ABC$ n'est pas rectangle en $A$) sert à prouver qu'un triangle n'est pas rectangle en $A$, et supposer l'angle droit pour le démontrer serait un cercle vicieux.",
+       "retenir": "Le théorème de Pythagore calcule une longueur dans un triangle rectangle ; sa réciproque prouve qu'un triangle est rectangle ; sa contraposée, appliquée au plus grand côté, qu'il ne l'est pas."
       },
       {
        "titre": "Une inéquation mal résolue",
@@ -738,7 +738,7 @@
        ],
        "indice": "La réponse doit être mathématiquement exacte : l'égalité est-elle vraiment fausse pour toutes les valeurs de $a$ et $b$ ?",
        "explication": "L'égalité « pour tous $a$ et $b$ » est fausse, et un contre-exemple le prouve : $(1 + 1)^2 = 4$ alors que $1^2 + 1^2 = 2$. Mais elle est vraie lorsque $ab = 0$, comme dans l'exemple de l'élève : dire « jamais égal » est donc faux. Quant à « vrai pour les nombres positifs », $a = b = 1$ le réfute.",
-       "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité ; une identité fausse peut être vraie pour certaines valeurs. Les quantificateurs font la différence."
+       "retenir": "Une égalité vérifiée sur un exemple n'est pas une identité, et une égalité fausse en général peut être vraie pour certaines valeurs : les quantificateurs font la différence."
       }
      ]
     }

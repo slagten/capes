@@ -581,7 +581,7 @@
      "exercices": [
       {
        "titre": "Un nombre dérivé déguisé",
-       "enonce": "Programme de Terminale (limites). Déterminer $\\displaystyle \\lim_{x \\to 0} \\frac{e^{3x} - 1}{x}$. Entrer cette limite.",
+       "enonce": "Déterminer $\\displaystyle \\lim_{x \\to 0} \\frac{e^{3x} - 1}{x}$. Entrer cette limite.",
        "reponse": 3,
        "indice": "Reconnais le taux d'accroissement en $0$ de la fonction $g : x \\mapsto e^{3x}$.",
        "explication": "Avec $g(x) = e^{3x}$, on a $g(0) = 1$, donc $\\frac{e^{3x}-1}{x} = \\frac{g(x) - g(0)}{x - 0}$ est le taux d'accroissement de $g$ en $0$. Comme $g$ est dérivable en $0$, il tend vers $g'(0) = 3e^{0} = 3$.",

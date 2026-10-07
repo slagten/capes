@@ -28,7 +28,7 @@
        "reponse": 4,
        "indice": "Un multiple de 12 est multiple de 3 et de 4 : utilise le critère de divisibilité par 3 (somme des chiffres) et celui par 4 (nombre formé par les deux derniers chiffres).",
        "explication": "Si 12 divise ce nombre, 3 et 4 le divisent. Par 3 : $5 + 2 + x + 4 = 11 + x$ est multiple de 3, donc $x \\in \\{1, 4, 7\\}$. Par 4 : $\\overline{x4}$ est multiple de 4, donc $x$ est pair. Seul $x = 4$ convient et, réciproquement, $5\\,244 = 12 \\times 437$.",
-       "retenir": "Être divisible par 12 entraîne être divisible par 3 et par 4. Attention : être divisible par 2 et par 6 ne suffit pas (6 lui-même n'est pas multiple de 12)."
+       "retenir": "Si 12 divise un entier, alors 3 et 4 le divisent. Attention : la divisibilité par 2 et par 6 n'entraîne pas celle par 12 (6 n'est pas multiple de 12)."
       },
       {
        "titre": "Un diviseur à trouver",
@@ -172,18 +172,18 @@
        "retenir": "Le reste de $n^2$ ne dépend que du reste de $n$ : on élève ce reste au carré, puis on divise à nouveau le résultat."
       },
       {
-       "titre": "La faille de la preuve",
-       "enonce": "Pour démontrer « si $n^2$ est divisible par 3, alors $n$ est divisible par 3 », un candidat écrit : « Si $n = 3k$, alors $n^2 = 9k^2 = 3(3k^2)$ est divisible par 3. » Quel jugement porter sur cette preuve ?",
-       "reponse": 4,
+       "titre": "Même reste",
+       "enonce": "Deux entiers $a$ et $b$ ont le même reste dans la division euclidienne par 11. Quelle affirmation est toujours vraie ?",
        "choix": [
-        "Elle est correcte et complète.",
-        "Elle est correcte, mais il faut aussi traiter le cas $n$ négatif.",
-        "Il suffit de la compléter par l'exemple $n = 6$ : 36 est divisible par 3, et 6 aussi.",
-        "Elle démontre la réciproque. Il faut prouver la contraposée : si $n = 3k + 1$ ou $n = 3k + 2$, alors $n^2$ a pour reste 1 dans la division par 3."
+        "$a = b$.",
+        "$a$ et $b$ ont le même quotient dans la division euclidienne par 11.",
+        "$a + b$ est divisible par 11.",
+        "$a - b$ est divisible par 11."
        ],
-       "indice": "Repère l'hypothèse et la conclusion de la proposition, puis celles de la preuve.",
-       "explication": "La proposition part de « 3 divise $n^2$ », la preuve part de « 3 divise $n$ » : elle établit la réciproque. On démontre la contraposée : si $n = 3k + 1$, $n^2 = 3(3k^2 + 2k) + 1$ ; si $n = 3k + 2$, $n^2 = 3(3k^2 + 4k + 1) + 1$. Dans les deux cas le reste est 1, donc $n^2$ n'est pas divisible par 3.",
-       "retenir": "Avant de rédiger, repérer hypothèse et conclusion : démontrer la réciproque à la place de la proposition est l'erreur de logique la plus fréquente."
+       "reponse": 4,
+       "indice": "Écris les deux divisions euclidiennes avec le même reste $r$ : quelle opération sur $a$ et $b$ fait disparaître $r$ ?",
+       "explication": "Si $a = 11q + r$ et $b = 11q' + r$, alors $a - b = 11(q - q')$, avec $q - q'$ entier : 11 divise $a - b$. Les trois autres affirmations tombent avec $a = 1$ et $b = 12 = 11 \\times 1 + 1$, qui ont tous deux pour reste 1 : $a \\neq b$, les quotients 0 et 1 diffèrent, et $a + b = 13$ n'est pas divisible par 11. Réciproquement, si 11 divise $a - b$, alors $a$ et $b$ ont le même reste.",
+       "retenir": "Deux entiers ont le même reste dans la division euclidienne par $b$ si et seulement si leur différence est un multiple de $b$."
       },
       {
        "titre": "Entre 1 et 100",
@@ -278,28 +278,28 @@
     {
      "exercices": [
       {
-       "titre": "Les diviseurs de 360",
-       "enonce": "Entrer le nombre de diviseurs positifs de 360.",
-       "reponse": 24,
-       "indice": "Décompose 360 en facteurs premiers : un diviseur positif s'écrit $2^a \\times 3^b \\times 5^c$ avec des exposants bornés.",
-       "explication": "$360 = 2^3 \\times 3^2 \\times 5$. Les diviseurs positifs sont les $2^a \\times 3^b \\times 5^c$ avec $0 \\leq a \\leq 3$, $0 \\leq b \\leq 2$ et $0 \\leq c \\leq 1$ : il y en a $4 \\times 3 \\times 2 = 24$.",
-       "retenir": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$, alors $n$ a $(a_1 + 1)(a_2 + 1) \\cdots (a_k + 1)$ diviseurs positifs."
+       "titre": "Les diviseurs de 200",
+       "enonce": "Dresser la liste des diviseurs positifs de $200 = 2^3 \\times 5^2$, puis entrer leur nombre.",
+       "reponse": 12,
+       "indice": "Tout diviseur positif de 200 s'écrit $2^a \\times 5^b$ avec $a \\leq 3$ et $b \\leq 2$ : range-les dans un tableau à double entrée.",
+       "explication": "Un diviseur positif de $200 = 2^3 \\times 5^2$ s'écrit $2^a \\times 5^b$ avec $0 \\leq a \\leq 3$ et $0 \\leq b \\leq 2$. Le tableau qui croise 1, 2, 4, 8 et 1, 5, 25 donne : 1, 2, 4, 8 ; 5, 10, 20, 40 ; 25, 50, 100, 200. Il y a $4 \\times 3 = 12$ diviseurs positifs.",
+       "retenir": "Les diviseurs positifs de $p^a \\times q^b$ ($p$, $q$ premiers distincts) sont les $p^i \\times q^j$ avec $0 \\leq i \\leq a$ et $0 \\leq j \\leq b$ : un tableau à double entrée les donne tous."
       },
       {
        "titre": "Compléter en carré",
        "enonce": "Entrer le plus petit entier naturel non nul $k$ tel que $360k$ soit le carré d'un entier.",
        "reponse": 10,
-       "indice": "Un entier est un carré si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs.",
+       "indice": "Décompose 360 en facteurs premiers ; un entier est un carré si et seulement si tous les exposants de sa décomposition sont pairs.",
        "explication": "$360 = 2^3 \\times 3^2 \\times 5$ : les exposants de 2 et de 5 sont impairs. Il faut donc que $k$ soit multiple de $2 \\times 5 = 10$, et $k = 10$ convient : $360 \\times 10 = 3\\,600 = 60^2$.",
        "retenir": "Un entier est un carré parfait si et seulement si tous les exposants de sa décomposition en facteurs premiers sont pairs."
       },
       {
        "titre": "Dix diviseurs",
-       "enonce": "Entrer le plus petit entier naturel ayant exactement 10 diviseurs positifs.",
+       "enonce": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ est la décomposition de $n$ en facteurs premiers, ses diviseurs positifs sont les $p_1^{b_1} \\times \\dots \\times p_k^{b_k}$ avec $0 \\leq b_i \\leq a_i$ pour chaque $i$ : il y en a donc $(a_1 + 1)(a_2 + 1) \\cdots (a_k + 1)$. Entrer le plus petit entier naturel ayant exactement 10 diviseurs positifs.",
        "reponse": 48,
        "indice": "Écris 10 comme produit de facteurs $(a_1 + 1)(a_2 + 1) \\cdots$ : $10 = 10$ ou $10 = 5 \\times 2$.",
        "explication": "Si $n = p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a 10 diviseurs, alors $(a_1 + 1) \\cdots (a_k + 1) = 10$, d'où $n = p^9$ ou $n = p^4 q$ ($p$, $q$ premiers distincts). Le plus petit $p^9$ est $2^9 = 512$ ; le plus petit $p^4 q$ est $2^4 \\times 3 = 48$. Donc 48, dont les diviseurs sont 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.",
-       "retenir": "Pour rendre $n$ minimal à nombre de diviseurs fixé : factoriser ce nombre, puis placer les plus grands exposants sur les plus petits nombres premiers."
+       "retenir": "$p_1^{a_1} \\times \\dots \\times p_k^{a_k}$ a $(a_1 + 1) \\cdots (a_k + 1)$ diviseurs positifs ; pour un $n$ minimal, placer les plus grands exposants sur les plus petits nombres premiers."
       }
      ]
     }
@@ -376,11 +376,11 @@
        "retenir": "Si $a = bq + r$, alors $\\mathrm{PGCD}(a\\,;b) = \\mathrm{PGCD}(b\\,;r)$ : le PGCD est le dernier reste non nul de l'algorithme d'Euclide."
       },
       {
-       "titre": "Les bouquets d'ylang-ylang",
-       "enonce": "Une fleuriste dispose de 252 fleurs d'ylang-ylang et de 180 fleurs de frangipanier. Elle veut composer le plus grand nombre possible de bouquets identiques en utilisant toutes les fleurs. Entrer le nombre de fleurs de chaque bouquet.",
+       "titre": "Les assiettes de la fête",
+       "enonce": "Pour la fête du collège, on dispose de 252 samoussas et de 180 beignets. On veut préparer le plus grand nombre possible d'assiettes identiques (même nombre de samoussas et même nombre de beignets sur chacune) en utilisant tout. Entrer le nombre total de samoussas et de beignets sur chaque assiette.",
        "reponse": 12,
-       "indice": "Le nombre de bouquets divise 252 et 180, et on le veut le plus grand possible.",
-       "explication": "Le nombre de bouquets est le plus grand diviseur commun de 252 et 180 : $252 = 180 + 72$, $180 = 2 \\times 72 + 36$, $72 = 2 \\times 36$, donc $\\mathrm{PGCD}(252\\,;180) = 36$. Chaque bouquet contient $252 \\div 36 = 7$ ylang-ylang et $180 \\div 36 = 5$ frangipaniers, soit 12 fleurs.",
+       "indice": "Le nombre d'assiettes divise 252 et 180, et on le veut le plus grand possible.",
+       "explication": "Le nombre d'assiettes est le plus grand diviseur commun de 252 et 180 : $252 = 180 + 72$, $180 = 2 \\times 72 + 36$, $72 = 2 \\times 36$, donc $\\mathrm{PGCD}(252\\,;180) = 36$. Chaque assiette porte $252 \\div 36 = 7$ samoussas et $180 \\div 36 = 5$ beignets, soit 12 en tout.",
        "retenir": "« Le plus grand nombre de parts identiques » : PGCD ; « la première coïncidence de deux cycles » : PPCM."
       },
       {
@@ -428,15 +428,15 @@
      "exercices": [
       {
        "titre": "Vrai ou faux ?",
-       "enonce": "Proposition : « Pour tout entier $n$, si 4 divise $n$ et 6 divise $n$, alors 24 divise $n$. »",
+       "enonce": "Proposition : « Pour tous entiers naturels non nuls $a$, $b$ et $c$, si $\\mathrm{PGCD}(a\\,;b) = 1$ et $\\mathrm{PGCD}(b\\,;c) = 1$, alors $\\mathrm{PGCD}(a\\,;c) = 1$. »",
        "choix": [
         "Vrai",
         "Faux"
        ],
        "reponse": 2,
-       "indice": "Cherche le plus petit entier strictement positif divisible à la fois par 4 et par 6.",
-       "explication": "Faux. Contre-exemple : $n = 12$ est divisible par 4 et par 6, mais pas par 24. Ce que l'on peut affirmer : $n$ est divisible par $\\mathrm{PPCM}(4\\,;6) = 12$.",
-       "retenir": "Si $a$ et $b$ divisent $n$, alors $\\mathrm{PPCM}(a\\,;b)$ divise $n$ ; mais le produit $ab$, en général, ne le divise pas."
+       "indice": "Rien n'empêche $a$ et $c$ d'avoir un facteur premier commun que $b$ ne possède pas.",
+       "explication": "Faux. Contre-exemple : $a = 2$, $b = 3$, $c = 4$. On a $\\mathrm{PGCD}(2\\,;3) = 1$ et $\\mathrm{PGCD}(3\\,;4) = 1$, mais $\\mathrm{PGCD}(2\\,;4) = 2$. Les hypothèses ne disent rien des facteurs communs à $a$ et à $c$.",
+       "retenir": "« Avoir un PGCD égal à 1 » n'est pas une relation transitive : $a$ et $c$ peuvent partager un facteur premier absent de $b$."
       },
       {
        "titre": "Vrai ou faux ?",
@@ -528,7 +528,7 @@
        "enonce": "On admet que $r(A \\times B) = r\\big(r(A) \\times r(B)\\big)$ pour tous entiers naturels $A$ et $B$. Entrer le reste de la division euclidienne de $2027^{2027}$ par 9.",
        "reponse": 5,
        "indice": "$r(2027) = 2$ ; cherche une puissance de 2 dont le reste par 9 vaut 1.",
-       "explication": "En appliquant la propriété de proche en proche, $r(2\\,027^k) = r(2^k)$, car $r(2\\,027) = 2$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$ et, de même, $r(2^{6m}) = 1$ pour tout entier $m$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2027}) = r(2^{6 \\times 337} \\times 2^5) = r(1 \\times 32) = 5$.",
+       "explication": "La propriété donne $r(2\\,027^{k+1}) = r\\big(r(2\\,027^k) \\times 2\\big)$ et $r(2^{k+1}) = r\\big(r(2^k) \\times 2\\big)$, car $r(2\\,027) = r(2) = 2$ : de proche en proche, $r(2\\,027^k) = r(2^k)$ pour tout $k \\geq 1$. Or $2^6 = 64 = 9 \\times 7 + 1$, donc $r(2^6) = 1$, puis $r(2^{6(m+1)}) = r\\big(r(2^{6m}) \\times r(2^6)\\big) = 1$ : $r(2^{6m}) = 1$ pour tout $m \\geq 1$. Comme $2\\,027 = 6 \\times 337 + 5$, $r(2^{2\\,027}) = r\\big(r(2^{6 \\times 337}) \\times r(2^5)\\big) = r(1 \\times 5) = 5$.",
        "retenir": "Pour le reste d'une grande puissance : chercher un exposant qui donne le reste 1, puis effectuer la division euclidienne de l'exposant."
       }
      ]
@@ -636,7 +636,7 @@
       },
       {
        "titre": "Diviseurs d'un carré",
-       "enonce": "Soit $n = 2^5 \\times 3^2 = 288$. Entrer le nombre de diviseurs positifs de $n^2$ qui sont strictement inférieurs à $n$ et qui ne divisent pas $n$.",
+       "enonce": "Soit $n = 2^5 \\times 3^2 = 288$. On rappelle qu'un entier $2^a \\times 3^b$ a $(a + 1)(b + 1)$ diviseurs positifs. Entrer le nombre de diviseurs positifs de $n^2$ qui sont strictement inférieurs à $n$ et qui ne divisent pas $n$.",
        "reponse": 10,
        "indice": "Associe chaque diviseur $d$ de $n^2$ au diviseur $\\frac{n^2}{d}$ : l'un des deux est inférieur à $n$, sauf si $d = n$.",
        "explication": "$n^2 = 2^{10} \\times 3^4$ a $11 \\times 5 = 55$ diviseurs. Ils s'associent par paires $(d, \\frac{n^2}{d})$ avec $d < n < \\frac{n^2}{d}$, sauf $d = n$ : il y a donc $\\frac{55 - 1}{2} = 27$ diviseurs de $n^2$ inférieurs à $n$. Parmi eux, ceux qui divisent $n$ sont les diviseurs de $n$ autres que $n$ : $6 \\times 3 - 1 = 17$. Réponse : $27 - 17 = 10$.",
@@ -685,7 +685,7 @@
         "12 n'a que 5 diviseurs positifs.",
         "Il fallait additionner : 216 a $6 + 6 = 12$ diviseurs."
        ],
-       "indice": "Décompose 216 en facteurs premiers et compte ses diviseurs avec la formule.",
+       "indice": "Décompose 216 en facteurs premiers : ses diviseurs positifs sont les $2^a \\times 3^b$, avec quels exposants ?",
        "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ ont les facteurs premiers 2 et 3 en commun. $216 = 2^3 \\times 3^3$ a $(3 + 1)(3 + 1) = 16$ diviseurs. Le nombre de diviseurs d'un produit est le produit des nombres de diviseurs seulement si les facteurs n'ont aucun premier commun (exemple : $36 = 4 \\times 9$ a $3 \\times 3 = 9$ diviseurs).",
        "retenir": "Le nombre de diviseurs se calcule sur la décomposition en facteurs premiers du produit, jamais en multipliant à l'aveugle."
       }
