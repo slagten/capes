@@ -150,6 +150,11 @@ details.sol summary { cursor: pointer; font-family: var(--f-display); text-trans
 details.sol > div { display: grid; gap: 10px; padding-top: 10px; }
 .retenir { padding: 10px 14px; background: var(--stone-2); border-block: 3px double var(--stone-edge); font-style: italic; }
 .retenir b { margin-right: .5em; font-family: var(--f-display); font-style: normal; font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: 13.5px; color: var(--gold); }
+.filtres { display: flex; flex-wrap: wrap; gap: 8px; }
+.filtres .btn { padding: 7px 12px; font-size: 12.5px; }
+.filtres .btn[aria-pressed="true"] { color: var(--stone); background: var(--ink); border-color: var(--ink); }
+.exo[hidden] { display: none; }
+.niv { color: var(--gold); letter-spacing: .05em; }
 .done { display: inline-flex; align-items: center; gap: 10px; width: fit-content; font-size: 16px; color: var(--muted); cursor: pointer; }
 .done input { width: 20px; height: 20px; margin: 0; accent-color: var(--sig-green); }
 .exo.got .done { color: var(--ink); }
@@ -330,7 +335,7 @@ const CHAPITRES = [{
   id: "ch1",
   n: 1,
   sig: "--sig-green",
-  porte: ["AACCCFFFFJJ", "ABDCEGGHHKJ", "ABDDEGHHIKJ", "BBDEEGIIIKK"],
+  porte: ["AADHHHOOOVVVabbbhhhnnnnt", "ADDHKKKPORRVaaabiihooott", "ABDIIIKPRRXXXcccikkppout", "BBBGINNPPWWWXddcijkmppuu", "CEGGGNNQSSSWYYddjjkmrrru", "CEEJJJLQTTSYYeeeejmmrssv", "CFEJLLLQQTTZZZffglllqssv", "CFFFMMMMUUUUZffggglqqqvv"],
   titre: "Calcul et logique",
   semaine: "Semaine 1",
   objectif: String.raw`Rédiger une implication, nier une phrase avec quantificateurs, et calculer sans faute sur les fractions, puissances, racines et inégalités.`,
@@ -376,39 +381,150 @@ const CHAPITRES = [{
       <div class="box thm"><span class="tag">Méthode · comparer A et B</span>Étudier le signe de \(A - B\) : factoriser, puis tableau de signes.</div>` }
   ],
   exercices: [
-    { titre: "Réciproque et contre-exemple", source: "", enonce: String.raw`Dire si chaque phrase est vraie, puis étudier sa réciproque. a) Pour tout réel \(x\), si \(x > 3\) alors \(x^2 > 9\). b) Pour tout entier \(n\), si \(6\) divise \(n\) alors \(3\) divise \(n\).`,
+    { titre: "Réciproque et contre-exemple", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Dire si chaque phrase est vraie, puis étudier sa réciproque. a) Pour tout réel \(x\), si \(x > 3\) alors \(x^2 > 9\). b) Pour tout entier \(n\), si \(6\) divise \(n\) alors \(3\) divise \(n\).`,
       corrige: String.raw`a) Vraie : \(x > 3 > 0\) et la fonction carré est croissante sur \([0;+\infty[\), donc \(x^2 > 9\). Réciproque fausse : \(x = -4\) donne \(x^2 = 16 > 9\) mais \(-4 < 3\).<br>b) Vraie : \(n = 6k = 3(2k)\). Réciproque fausse : \(n = 3\).`,
       retenir: "Une implication vraie peut avoir une réciproque fausse. Un seul contre-exemple suffit." },
-    { titre: "Nier avec deux quantificateurs", source: "Question 4 du diagnostic", enonce: String.raw`Écrire la négation de « pour tout réel \(x\), il existe un entier \(n\) tel que \(n > x\) ». Laquelle est vraie ?`,
+    { titre: "Nier avec deux quantificateurs", genre: "Logique", niveau: 2, source: "Question 4 du diagnostic", enonce: String.raw`Écrire la négation de « pour tout réel \(x\), il existe un entier \(n\) tel que \(n > x\) ». Laquelle est vraie ?`,
       corrige: String.raw`Phrase : \(\forall x \in \mathbb{R},\ \exists n \in \mathbb{Z},\ n > x\). Négation : \(\exists x \in \mathbb{R},\ \forall n \in \mathbb{Z},\ n \leqslant x\). La phrase de départ est vraie : \(n = \lfloor x \rfloor + 1\) convient. Sa négation est fausse.`,
       retenir: "On échange ∀ et ∃ sans changer leur ordre, puis on nie la fin : > devient ⩽." },
-    { titre: "Pour tout ou il existe", source: "", enonce: String.raw`Nier, puis dire laquelle est vraie : a) \(\forall n \in \mathbb{N},\ n^2 \geqslant n\). b) \(\exists x \in \mathbb{R},\ x^2 + 1 = 0\).`,
+    { titre: "Pour tout ou il existe", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Nier, puis dire laquelle est vraie : a) \(\forall n \in \mathbb{N},\ n^2 \geqslant n\). b) \(\exists x \in \mathbb{R},\ x^2 + 1 = 0\).`,
       corrige: String.raw`a) Négation : \(\exists n \in \mathbb{N},\ n^2 < n\). Le départ est vrai : pour \(n \geqslant 1\), \(n^2 = n \times n \geqslant n\) ; et \(0 \geqslant 0\).<br>b) Négation : \(\forall x,\ x^2 + 1 \neq 0\). C’est elle qui est vraie : \(x^2 + 1 \geqslant 1\).`,
       retenir: "Un « pour tout » se prouve par un raisonnement général ; un « il existe » par un exemple." },
-    { titre: "n impair ⇒ n² impair", source: "Question 5 du diagnostic", enonce: String.raw`Démontrer que si \(n\) est un entier impair, alors \(n^2\) est impair.`,
+    { titre: "n impair ⇒ n² impair", genre: "Preuve", niveau: 1, source: "Question 5 du diagnostic", enonce: String.raw`Démontrer que si \(n\) est un entier impair, alors \(n^2\) est impair.`,
       corrige: String.raw`Il existe \(k \in \mathbb{Z}\) tel que \(n = 2k + 1\). Alors \(n^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\), avec \(2k^2 + 2k\) entier : \(n^2\) est impair.`,
       retenir: "Pair : n = 2k. Impair : n = 2k + 1, avec « il existe un entier k tel que »." },
-    { titre: "Contraposée", source: "", enonce: String.raw`Démontrer que si \(n^2\) est pair, alors \(n\) est pair.`,
+    { titre: "Contraposée", genre: "Preuve", niveau: 1, source: "", enonce: String.raw`Démontrer que si \(n^2\) est pair, alors \(n\) est pair.`,
       corrige: String.raw`Contraposée : « si \(n\) est impair, alors \(n^2\) est impair », démontrée à l’exercice 4. Les deux énoncés sont équivalents.`,
       retenir: "Quand la conclusion est difficile à atteindre, on retourne la phrase." },
-    { titre: "Disjonction de cas", source: "", enonce: String.raw`Démontrer que pour tout entier \(n\), \(n(n+1)\) est pair.`,
+    { titre: "Disjonction de cas", genre: "Preuve", niveau: 1, source: "", enonce: String.raw`Démontrer que pour tout entier \(n\), \(n(n+1)\) est pair.`,
       corrige: String.raw`Si \(n = 2k\) : \(n(n+1) = 2\,k(2k+1)\). Si \(n = 2k+1\) : \(n + 1 = 2(k+1)\) et \(n(n+1) = 2\,(2k+1)(k+1)\). Dans tous les cas, c’est pair.`,
       retenir: "De deux entiers consécutifs, l’un est pair." },
-    { titre: "Fractions, puissances, racines", source: "Question 1 du diagnostic", enonce: String.raw`Simplifier \(A = \frac{2}{3} - \frac{3}{4} \times \frac{2}{9}\), \(B = \frac{2^5 \times 6^{-2}}{4^3 \times 3^{-1}}\), \(C = \sqrt{50} - 3\sqrt{8} + \sqrt{18}\).`,
+    { titre: "Fractions, puissances, racines", genre: "Calcul", niveau: 1, source: "Question 1 du diagnostic", enonce: String.raw`Simplifier \(A = \frac{2}{3} - \frac{3}{4} \times \frac{2}{9}\), \(B = \frac{2^5 \times 6^{-2}}{4^3 \times 3^{-1}}\), \(C = \sqrt{50} - 3\sqrt{8} + \sqrt{18}\).`,
       corrige: String.raw`\(A = \frac{4}{6} - \frac{1}{6} = \frac{1}{2}\).<br>\(B = \frac{2^5 \cdot 2^{-2} \cdot 3^{-2}}{2^6 \cdot 3^{-1}} = 2^{-3} \cdot 3^{-1} = \frac{1}{24}\).<br>\(C = 5\sqrt{2} - 6\sqrt{2} + 3\sqrt{2} = 2\sqrt{2}\).`,
       retenir: "Puissances : tout en nombres premiers. Racines : sortir les carrés parfaits." },
-    { titre: "Expression conjuguée", source: "", enonce: String.raw`Écrire \(\frac{1}{\sqrt{3} - 1}\) sans racine au dénominateur.`,
+    { titre: "Expression conjuguée", genre: "Calcul", niveau: 1, source: "", enonce: String.raw`Écrire \(\frac{1}{\sqrt{3} - 1}\) sans racine au dénominateur.`,
       corrige: String.raw`\(\frac{1}{\sqrt{3}-1} = \frac{\sqrt{3}+1}{(\sqrt{3}-1)(\sqrt{3}+1)} = \frac{\sqrt{3}+1}{2}\).`,
       retenir: "(√a − b)(√a + b) = a − b² fait disparaître la racine." },
-    { titre: "Pourcentages successifs", source: "Vrai–Faux 2026, question 1", enonce: String.raw`Un prix augmente de \(20\,\%\) puis baisse de \(20\,\%\) : évolution globale ? Avec \(+19\,\%\) par an pendant 4 ans, a-t-il plus que doublé ?`,
+    { titre: "Pourcentages successifs", genre: "Situation concrète", niveau: 1, source: "Vrai–Faux 2026, question 1", enonce: String.raw`Un prix augmente de \(20\,\%\) puis baisse de \(20\,\%\) : évolution globale ? Avec \(+19\,\%\) par an pendant 4 ans, a-t-il plus que doublé ?`,
       corrige: String.raw`\(1{,}2 \times 0{,}8 = 0{,}96\) : baisse de \(4\,\%\).<br>\(1{,}19^2 = 1{,}4161\) et \(1{,}4161^2 \approx 2{,}005 > 2\) : oui, de peu.`,
       retenir: "Les pourcentages successifs se multiplient." },
-    { titre: "Inégalités piégées", source: "Vrai–Faux 2026, questions 5 et 6", enonce: String.raw`Vrai ou faux ? a) Les réels tels que \(4 \leqslant x^2 \leqslant 9\) sont ceux de \([2;3]\). b) Pour \(a, b\) non nuls, si \(a \geqslant 2b\) alors \(a^2 \geqslant 2ab\).`,
+    { titre: "Inégalités piégées", genre: "Vrai–Faux", niveau: 2, source: "Vrai–Faux 2026, questions 5 et 6", enonce: String.raw`Vrai ou faux ? a) Les réels tels que \(4 \leqslant x^2 \leqslant 9\) sont ceux de \([2;3]\). b) Pour \(a, b\) non nuls, si \(a \geqslant 2b\) alors \(a^2 \geqslant 2ab\).`,
       corrige: String.raw`a) Faux : \(x = -2{,}5\) convient. L’ensemble est \([-3;-2] \cup [2;3]\).<br>b) Faux : \(a = b = -2\) donne \(a \geqslant 2b\), mais \(a^2 = 4 < 8 = 2ab\). Multiplier par \(a < 0\) change le sens.`,
       retenir: "Vérifier le signe du multiplicateur. Penser aux négatifs pour un contre-exemple." },
-    { titre: "Un carré est positif", source: "", enonce: String.raw`Démontrer que \(a^2 + b^2 \geqslant 2ab\), puis que \(x + \frac{1}{x} \geqslant 2\) pour \(x > 0\).`,
+    { titre: "Un carré est positif", genre: "Preuve", niveau: 2, source: "", enonce: String.raw`Démontrer que \(a^2 + b^2 \geqslant 2ab\), puis que \(x + \frac{1}{x} \geqslant 2\) pour \(x > 0\).`,
       corrige: String.raw`\(a^2 + b^2 - 2ab = (a-b)^2 \geqslant 0\).<br>\(x + \frac{1}{x} - 2 = \frac{(x-1)^2}{x} \geqslant 0\) car \(x > 0\).`,
-      retenir: "Beaucoup d’inégalités viennent d’un carré positif." }
+      retenir: "Beaucoup d’inégalités viennent d’un carré positif." },
+    { titre: "Table de vérité de l’implication", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Dresser la table de vérité de « (non \(P\)) ou \(Q\) » et la comparer à celle de \(P \Rightarrow Q\). En déduire, sans table, la négation de \(P \Rightarrow Q\).`,
+      corrige: String.raw`« (non \(P\)) ou \(Q\) » n’est fausse que si non \(P\) et \(Q\) sont toutes deux fausses, c’est-à-dire \(P\) vraie et \(Q\) fausse. Les quatre lignes (VV : V ; VF : F ; FV : V ; FF : V) coïncident avec celles de \(P \Rightarrow Q\) : les deux propositions sont équivalentes.<br>Négation : non((non \(P\)) ou \(Q\)) ≡ \(P\) et (non \(Q\)). Nier une implication donne une conjonction, pas une autre implication.`,
+      retenir: "P ⇒ Q ≡ (non P) ou Q ; sa négation est « P et non Q »." },
+    { titre: "Le règlement des retards", genre: "Situation concrète", niveau: 1, source: "", enonce: String.raw`Le règlement d’un collège dit : « Si un élève a plus de trois retards dans le mois, alors il est convoqué. » En octobre : Ali a 5 retards et n’est pas convoqué ; Bina a 1 retard et est convoquée ; Chaïma n’a aucun retard et n’est pas convoquée ; Dayan a 4 retards et est convoqué. a) Quel cas contredit le règlement ? b) Écrire la réciproque et la contraposée en français. Laquelle dit la même chose que le règlement ?`,
+      corrige: String.raw`a) Seul Ali contredit la règle : hypothèse vraie (5 > 3), conclusion fausse. Bina n’est pas en faute vis-à-vis de la règle : elle peut être convoquée pour une autre raison (hypothèse fausse, l’implication reste vraie).<br>b) Réciproque : « si un élève est convoqué, alors il a plus de trois retards » (Bina montre qu’elle peut être fausse). Contraposée : « si un élève n’est pas convoqué, alors il a au plus trois retards ». C’est la contraposée qui équivaut au règlement.`,
+      retenir: "Une règle « si…, alors… » n’est violée que par un cas « hypothèse vraie, conclusion fausse »." },
+    { titre: "Condition nécessaire, condition suffisante", genre: "Logique", niveau: 2, source: "", enonce: String.raw`Compléter par « nécessaire », « suffisante » ou « nécessaire et suffisante », en justifiant. a) \(x > 2\) est une condition … pour que \(x^2 > 4\). b) Être un rectangle est une condition … pour qu’un quadrilatère soit un carré. c) Pour un entier \(n\), être divisible par \(6\) est une condition … pour être pair et divisible par \(3\). d) \(a = 0\) est une condition … pour que \(ab = 0\).`,
+      corrige: String.raw`a) Suffisante : \(x > 2 \Rightarrow x^2 > 4\) ; pas nécessaire : \(x = -3\).<br>b) Nécessaire : tout carré est un rectangle ; pas suffisante : un rectangle \(2 \times 1\) n’est pas un carré.<br>c) Nécessaire et suffisante : si \(6 \mid n\), alors \(n = 6k\) est pair et multiple de \(3\). Réciproquement, si \(n = 2a\) et \(3 \mid n\), alors \(3 \mid 2a\) ; comme \(3\) est premier et ne divise pas \(2\), \(3 \mid a\), donc \(a = 3b\) et \(n = 6b\).<br>d) Suffisante : \(a = 0 \Rightarrow ab = 0\) ; pas nécessaire : \(a = 1\), \(b = 0\).`,
+      retenir: "« P suffit pour Q » : P ⇒ Q. « P est nécessaire pour Q » : Q ⇒ P." },
+    { titre: "On ne divise pas par x", genre: "Erreur d’élève", niveau: 1, source: "", enonce: String.raw`Un élève résout \(x^2 = 3x\) ainsi : « je divise par \(x\), donc \(x = 3\) ». Repérer l’erreur, résoudre correctement, puis proposer une phrase à dire à l’élève.`,
+      corrige: String.raw`Diviser par \(x\) suppose \(x \neq 0\) : on perd la solution \(0\). Correct : \(x^2 - 3x = 0 \iff x(x - 3) = 0 \iff x = 0\) ou \(x = 3\). \(S = \{0 ; 3\}\).<br>À dire : « Tu as le droit de diviser seulement par un nombre dont tu es sûr qu’il n’est pas nul. Ici, regroupe tout d’un côté et factorise : un produit est nul si et seulement si l’un des facteurs est nul. »`,
+      retenir: "Avant de diviser par une expression, vérifier qu’elle n’est pas nulle ; sinon, factoriser." },
+    { titre: "Somme de deux impairs : deux copies", genre: "Erreur d’élève", niveau: 1, source: "", enonce: String.raw`On demande de démontrer que la somme de deux entiers impairs est paire. Copie 1 : « \(3 + 5 = 8\), \(7 + 9 = 16\), \(11 + 1 = 12\) : c’est toujours pair. » Copie 2 : « \(n = 2k + 1\) et \(p = 2k + 1\), donc \(n + p = 4k + 2 = 2(2k + 1)\) : pair. » Dire ce qui ne va pas dans chaque copie et rédiger une preuve correcte.`,
+      corrige: String.raw`Copie 1 : des exemples ne prouvent pas un « pour tout » ; ils ne servent qu’à conjecturer.<br>Copie 2 : en prenant le même \(k\), elle ne traite que le cas \(n = p\).<br>Preuve : il existe des entiers \(k\) et \(m\) tels que \(n = 2k + 1\) et \(p = 2m + 1\). Alors \(n + p = 2k + 2m + 2 = 2(k + m + 1)\), avec \(k + m + 1\) entier : \(n + p\) est pair.`,
+      retenir: "Deux nombres quelconques : deux lettres différentes (k et m)." },
+    { titre: "Nier des phrases du quotidien", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Écrire la négation de chaque phrase, sans commencer par « il est faux que ». a) « Dans chaque classe du collège, un élève au moins parle shimaoré. » b) « Il existe un professeur qui connaît le prénom de tous ses élèves. » c) « S’il pleut, le match est annulé. » d) « Tous les bus partent à l’heure et arrivent à l’heure. »`,
+      corrige: String.raw`a) Il existe une classe du collège dans laquelle aucun élève ne parle shimaoré.<br>b) Chaque professeur a au moins un élève dont il ne connaît pas le prénom.<br>c) Il pleut et le match n’est pas annulé.<br>d) Au moins un bus part en retard ou arrive en retard (non(\(A\) et \(B\)) ≡ non \(A\) ou non \(B\)).`,
+      retenir: "« Chaque » devient « il existe », « et » devient « ou », « si P alors Q » devient « P et non Q »." },
+    { titre: "L’ordre des quantificateurs : être majorée", genre: "Logique", niveau: 3, source: "", enonce: String.raw`Soit \(f\) une fonction définie sur \(\mathbb{R}\). On considère (A) : \(\exists M \in \mathbb{R},\ \forall x \in \mathbb{R},\ f(x) \leqslant M\) et (B) : \(\forall x \in \mathbb{R},\ \exists M \in \mathbb{R},\ f(x) \leqslant M\). a) Traduire chaque phrase en français. b) Montrer que (B) est vraie pour toute fonction \(f\). c) Montrer que \(f(x) = x\) ne vérifie pas (A).`,
+      corrige: String.raw`a) (A) : un même nombre \(M\) est au-dessus de toutes les valeurs de \(f\) : \(f\) est majorée. (B) : chaque valeur \(f(x)\) est inférieure à un nombre qui peut dépendre de \(x\).<br>b) Pour \(x\) donné, \(M = f(x)\) convient.<br>c) Négation de (A) : \(\forall M \in \mathbb{R},\ \exists x \in \mathbb{R},\ f(x) > M\). Soit \(M\) réel ; \(x = M + 1\) donne \(f(x) = M + 1 > M\). Donc (A) est fausse pour \(f(x) = x\).`,
+      retenir: "Dans « ∃M ∀x », M ne dépend pas de x ; dans « ∀x ∃M », il peut en dépendre." },
+    { titre: "Absurde et parité", genre: "Preuve", niveau: 1, source: "", enonce: String.raw`Démontrer par l’absurde qu’il n’existe pas d’entiers \(a\) et \(b\) tels que \(2a + 4b = 7\). Application : des gâteaux sont vendus en boîtes de \(2\) et de \(4\). Peut-on en acheter exactement \(7\) ?`,
+      corrige: String.raw`Supposons qu’il existe des entiers \(a, b\) tels que \(2a + 4b = 7\). Alors \(7 = 2(a + 2b)\) avec \(a + 2b\) entier : \(7\) serait pair. Contradiction : de tels entiers n’existent pas.<br>Application : non, avec \(a\) boîtes de \(2\) et \(b\) boîtes de \(4\) on a \(2a + 4b\) gâteaux, nombre pair.`,
+      retenir: "Absurde : supposer le contraire, dérouler, tomber sur une phrase fausse." },
+    { titre: "Rationnel plus irrationnel", genre: "Preuve", niveau: 2, source: "", enonce: String.raw`Soit \(r\) un rationnel et \(x\) un irrationnel. a) Démontrer que \(r + x\) est irrationnel. b) Si de plus \(r \neq 0\), démontrer que \(rx\) est irrationnel. c) En déduire que \(3 + 2\sqrt{2}\) est irrationnel.`,
+      corrige: String.raw`a) Par l’absurde : si \(r + x = q\) rationnel, alors \(x = q - r\) est une différence de rationnels, donc rationnel. Contradiction.<br>b) Si \(rx = q\) rationnel, alors \(x = \frac{q}{r}\) (possible car \(r \neq 0\)) est rationnel. Contradiction.<br>c) \(\sqrt{2}\) est irrationnel (cours), donc \(2\sqrt{2}\) aussi par b), puis \(3 + 2\sqrt{2}\) par a).`,
+      retenir: "Les rationnels sont stables par +, −, ×, ÷ (non nul) : c’est le moteur de ces absurdes." },
+    { titre: "Treize personnes, douze mois", genre: "Situation concrète", niveau: 1, source: "", enonce: String.raw`a) Démontrer que dans un groupe de \(13\) personnes, deux au moins sont nées le même mois. b) Combien d’élèves faut-il au minimum dans une classe pour être sûr que deux d’entre eux ont la même initiale de prénom (26 lettres) ?`,
+      corrige: String.raw`a) Par l’absurde : si les \(13\) personnes étaient nées des mois deux à deux différents, il faudrait \(13\) mois distincts, or il n’y en a que \(12\).<br>b) \(27\). Avec \(26\) élèves, les initiales peuvent être toutes différentes (un élève par lettre) ; avec \(27\), le même raisonnement qu’en a) s’applique.`,
+      retenir: "Principe des tiroirs : n + 1 objets dans n tiroirs, un tiroir en contient au moins deux." },
+    { titre: "n³ − n est multiple de 3", genre: "Preuve", niveau: 2, source: "", enonce: String.raw`Démontrer que pour tout entier \(n\), \(n^3 - n\) est divisible par \(3\), de deux façons : a) en factorisant ; b) en distinguant les restes de \(n\) dans la division par \(3\).`,
+      corrige: String.raw`a) \(n^3 - n = (n - 1)n(n + 1)\) : produit de trois entiers consécutifs. L’un d’eux est multiple de \(3\), donc le produit aussi.<br>b) Si \(n = 3k\) : \(n\) est un facteur, multiple de \(3\). Si \(n = 3k + 1\) : \(n - 1 = 3k\). Si \(n = 3k + 2\) : \(n + 1 = 3(k + 1)\). Dans chaque cas un facteur de \((n-1)n(n+1)\) est multiple de \(3\).`,
+      retenir: "Divisibilité par 3 : trois cas, n = 3k, 3k + 1 ou 3k + 2." },
+    { titre: "Somme de deux distances", genre: "Calcul", niveau: 3, source: "", enonce: String.raw`Résoudre dans \(\mathbb{R}\) : \(|x - 2| + |x + 1| = 5\). Interpréter sur une droite graduée.`,
+      corrige: String.raw`Cas \(x < -1\) : \((2 - x) + (-x - 1) = 1 - 2x = 5\), soit \(x = -2\), qui vérifie \(x < -1\).<br>Cas \(-1 \leqslant x \leqslant 2\) : \((2 - x) + (x + 1) = 3 \neq 5\) : pas de solution.<br>Cas \(x > 2\) : \((x - 2) + (x + 1) = 2x - 1 = 5\), soit \(x = 3\), qui vérifie \(x > 2\).<br>\(S = \{-2 ; 3\}\). Interprétation : la somme des distances de \(x\) à \(2\) et à \(-1\) vaut \(5\) ; entre \(-1\) et \(2\) elle vaut toujours \(3\), il faut sortir de \(1\) de chaque côté.`,
+      retenir: "Valeurs absolues : découper selon le signe de chaque expression, et vérifier que la solution est dans le cas." },
+    { titre: "Distances et intervalles", genre: "Calcul", niveau: 1, source: "", enonce: String.raw`a) Écrire \(x \in [1 ; 7]\) avec une valeur absolue. b) Résoudre \(|2x + 3| < 5\). c) Résoudre \(|x + 1| \geqslant 2\).`,
+      corrige: String.raw`a) Centre \(4\), rayon \(3\) : \(|x - 4| \leqslant 3\).<br>b) \(-5 < 2x + 3 < 5 \iff -8 < 2x < 2 \iff -4 < x < 1\) : \(S = ]-4 ; 1[\).<br>c) La distance de \(x\) à \(-1\) est au moins \(2\) : \(x \leqslant -3\) ou \(x \geqslant 1\). \(S = ]-\infty ; -3] \cup [1 ; +\infty[\).`,
+      retenir: "|x − a| ⩽ r : intervalle de centre a et de rayon r. « ⩾ » donne une réunion de deux intervalles." },
+    { titre: "Factoriser avec les identités", genre: "Calcul", niveau: 1, source: "", enonce: String.raw`Factoriser \(A = (2x + 1)^2 - (x - 3)^2\), \(B = x^3 - 4x\), \(C = 9x^2 - 12x + 4\). Résoudre ensuite \(A = 0\).`,
+      corrige: String.raw`\(A = \big[(2x + 1) - (x - 3)\big]\big[(2x + 1) + (x - 3)\big] = (x + 4)(3x - 2)\).<br>\(B = x(x^2 - 4) = x(x - 2)(x + 2)\).<br>\(C = (3x)^2 - 2 \times 3x \times 2 + 2^2 = (3x - 2)^2\).<br>\(A = 0 \iff x = -4\) ou \(x = \frac{2}{3}\).`,
+      retenir: "Une différence de deux carrés se factorise toujours : a² − b² = (a − b)(a + b)." },
+    { titre: "Calcul mental avec les identités", genre: "Calcul", niveau: 1, source: "", enonce: String.raw`Sans poser d’opération : \(101^2\), \(99 \times 101\), \(1001^2 - 999^2\), \(48 \times 52\).`,
+      corrige: String.raw`\(101^2 = (100 + 1)^2 = 10\,000 + 200 + 1 = 10\,201\).<br>\(99 \times 101 = (100 - 1)(100 + 1) = 10\,000 - 1 = 9\,999\).<br>\(1001^2 - 999^2 = (1001 - 999)(1001 + 999) = 2 \times 2000 = 4000\).<br>\(48 \times 52 = (50 - 2)(50 + 2) = 2500 - 4 = 2496\).`,
+      retenir: "Les identités remarquables sont aussi des outils de calcul mental, utiles pour les motiver en classe." },
+    { titre: "Une somme qui se télescope", genre: "Calcul", niveau: 2, source: "", enonce: String.raw`a) Pour \(x \notin \{0 ; -1\}\), réduire \(\frac{1}{x} - \frac{1}{x+1}\). b) En déduire \(S = \frac{1}{1 \times 2} + \frac{1}{2 \times 3} + \cdots + \frac{1}{99 \times 100}\).`,
+      corrige: String.raw`a) \(\frac{1}{x} - \frac{1}{x+1} = \frac{(x + 1) - x}{x(x+1)} = \frac{1}{x(x+1)}\).<br>b) \(S = \left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{99} - \frac{1}{100}\right)\). Les termes intermédiaires s’annulent deux à deux : \(S = 1 - \frac{1}{100} = \frac{99}{100}\).`,
+      retenir: "Écrire chaque terme comme une différence a(k) − a(k+1) : la somme vaut a(premier) − a(dernier + 1)." },
+    { titre: "Comparer des puissances", genre: "Calcul", niveau: 2, source: "", enonce: String.raw`Sans calculatrice, comparer : a) \(2^{30}\) et \(3^{20}\) ; b) \(2^{40}\) et \(10^{12}\) ; c) \(5^{300}\) et \(3^{500}\).`,
+      corrige: String.raw`a) \(2^{30} = (2^3)^{10} = 8^{10}\) et \(3^{20} = (3^2)^{10} = 9^{10}\). Comme \(0 < 8 < 9\), \(2^{30} < 3^{20}\).<br>b) \(2^{40} = (2^{10})^4 = 1024^4\) et \(10^{12} = 1000^4\) : \(2^{40} > 10^{12}\).<br>c) \(5^{300} = (5^3)^{100} = 125^{100}\) et \(3^{500} = (3^5)^{100} = 243^{100}\) : \(5^{300} < 3^{500}\).`,
+      retenir: "Ramener à un même exposant, puis comparer les bases positives (x ↦ xⁿ est croissante sur [0 ; +∞[)." },
+    { titre: "Racines emboîtées", genre: "Calcul", niveau: 2, source: "", enonce: String.raw`Démontrer que \(\sqrt{3 + 2\sqrt{2}} = 1 + \sqrt{2}\) et que \(\sqrt{7 - 4\sqrt{3}} = 2 - \sqrt{3}\). Pourquoi faut-il vérifier un signe ?`,
+      corrige: String.raw`\((1 + \sqrt{2})^2 = 1 + 2\sqrt{2} + 2 = 3 + 2\sqrt{2}\) et \(1 + \sqrt{2} > 0\) : c’est donc la racine carrée de \(3 + 2\sqrt{2}\).<br>\((2 - \sqrt{3})^2 = 4 - 4\sqrt{3} + 3 = 7 - 4\sqrt{3}\) et \(2 - \sqrt{3} > 0\) car \(\sqrt{3} < \sqrt{4} = 2\).<br>Le signe compte : \(\sqrt{a}\) est le nombre <b>positif</b> dont le carré vaut \(a\). Par exemple \((\sqrt{3} - 2)^2\) vaut aussi \(7 - 4\sqrt{3}\), mais \(\sqrt{3} - 2 < 0\).`,
+      retenir: "√a = b ⇔ (b ⩾ 0 et b² = a)." },
+    { titre: "Quatre erreurs de calcul en classe", genre: "Erreur d’élève", niveau: 1, source: "", enonce: String.raw`Des élèves écrivent : (1) \((x + 3)^2 = x^2 + 9\) ; (2) \(\frac{1}{2 + 3} = \frac{1}{2} + \frac{1}{3}\) ; (3) \(-3^2 = 9\) ; (4) \(2^3 \times 2^4 = 4^7\). Pour chacune, donner le résultat juste et une vérification numérique qui convainc l’élève.`,
+      corrige: String.raw`(1) \((x + 3)^2 = x^2 + 6x + 9\). Test \(x = 1\) : \(16 \neq 10\).<br>(2) \(\frac{1}{5} = 0{,}2\) alors que \(\frac{1}{2} + \frac{1}{3} = \frac{5}{6}\). On ne « coupe » pas un dénominateur.<br>(3) \(-3^2 = -(3^2) = -9\) : le carré porte sur \(3\) seul ; \((-3)^2 = 9\).<br>(4) \(2^3 \times 2^4 = 2^7 = 128\), alors que \(4^7 = 16\,384\). On ajoute les exposants, on ne multiplie pas les bases.`,
+      retenir: "Un test sur une valeur simple suffit à réfuter une « règle » inventée." },
+    { titre: "Encadrer une somme, un produit, un quotient", genre: "Calcul", niveau: 2, source: "", enonce: String.raw`On sait que \(2 \leqslant x \leqslant 3\) et \(1 \leqslant y \leqslant 4\). Encadrer \(x + y\), \(x - y\), \(xy\) et \(\frac{x}{y}\). Quelle erreur fréquente commet-on pour \(x - y\) ?`,
+      corrige: String.raw`\(x + y \in [3 ; 7]\) (on additionne).<br>\(-4 \leqslant -y \leqslant -1\), donc \(-2 \leqslant x - y \leqslant 2\).<br>Tout est positif : \(2 \leqslant xy \leqslant 12\).<br>\(\frac{1}{4} \leqslant \frac{1}{y} \leqslant 1\) (inverse décroissante sur \(]0 ; +\infty[\)), puis \(\frac{1}{2} \leqslant \frac{x}{y} \leqslant 3\).<br>Erreur : soustraire bornes à bornes, ce qui donne « \(1 \leqslant x - y \leqslant -1\) », absurde.`,
+      retenir: "Pour une différence, encadrer −y puis additionner ; pour un quotient, encadrer 1/y puis multiplier (tout positif)." },
+    { titre: "Un élève de plus a la moyenne", genre: "Situation concrète", niveau: 2, source: "", enonce: String.raw`Dans une classe, \(12\) élèves sur \(25\) ont la moyenne. Un nouvel élève arrive, et il a la moyenne. a) La proportion augmente-t-elle ? b) Démontrer que pour \(0 < a < b\), \(\frac{a+1}{b+1} > \frac{a}{b}\).`,
+      corrige: String.raw`a) \(\frac{12}{25} = 0{,}48\) et \(\frac{13}{26} = 0{,}5\) : oui.<br>b) \(\frac{a+1}{b+1} - \frac{a}{b} = \frac{b(a+1) - a(b+1)}{b(b+1)} = \frac{b - a}{b(b+1)}\). Le numérateur est positif car \(a < b\), le dénominateur aussi : la différence est strictement positive.`,
+      retenir: "Comparer deux quotients : étudier le signe de leur différence, réduite au même dénominateur." },
+    { titre: "Vitesse moyenne d’un aller-retour", genre: "Situation concrète", niveau: 2, source: "", enonce: String.raw`Un enseignant fait l’aller de Mamoudzou à son collège à \(60\) km/h de moyenne, et le retour, sur la même route, à \(40\) km/h. a) Sa vitesse moyenne sur l’aller-retour est-elle \(50\) km/h ? b) Pour des vitesses \(a, b > 0\), montrer que la vitesse moyenne vaut \(\frac{2ab}{a+b}\) et qu’elle est inférieure ou égale à \(\frac{a+b}{2}\).`,
+      corrige: String.raw`a) Soit \(d\) la distance. Durée totale : \(\frac{d}{60} + \frac{d}{40} = \frac{2d + 3d}{120} = \frac{d}{24}\). Vitesse moyenne : \(\frac{2d}{d/24} = 48\) km/h, pas \(50\).<br>b) Durée : \(\frac{d}{a} + \frac{d}{b} = \frac{d(a+b)}{ab}\), donc vitesse \(\frac{2d\,ab}{d(a+b)} = \frac{2ab}{a+b}\). Puis \(\frac{a+b}{2} - \frac{2ab}{a+b} = \frac{(a+b)^2 - 4ab}{2(a+b)} = \frac{(a-b)^2}{2(a+b)} \geqslant 0\).`,
+      retenir: "Une vitesse moyenne est une distance totale sur une durée totale, pas la moyenne des vitesses." },
+    { titre: "TVA et retour au prix de départ", genre: "Situation concrète", niveau: 1, source: "", enonce: String.raw`a) Un article coûte \(120\) € TTC, avec une TVA de \(20\,\%\). Un élève dit : « le prix hors taxe est \(120 - 24 = 96\) € ». A-t-il raison ? b) Après une hausse de \(25\,\%\), quelle baisse ramène au prix initial ? c) Généraliser à une hausse de \(t\,\%\).`,
+      corrige: String.raw`a) Non : \(\text{TTC} = 1{,}2 \times \text{HT}\), donc \(\text{HT} = \frac{120}{1{,}2} = 100\) €. Les \(20\,\%\) portent sur le prix HT, pas sur le TTC.<br>b) Il faut \(1{,}25 \times c = 1\), soit \(c = 0{,}8\) : une baisse de \(20\,\%\).<br>c) \(c = \frac{1}{1 + t/100} = 1 - \frac{t}{100 + t}\) : baisse de \(\frac{100t}{100 + t}\,\%\), toujours inférieure à \(t\,\%\).`,
+      retenir: "Revenir en arrière, c’est diviser par le coefficient multiplicateur, pas soustraire le même pourcentage." },
+    { titre: "Points ou pourcents ?", genre: "Situation concrète", niveau: 1, source: "", enonce: String.raw`a) Le taux de réussite d’un collège au brevet passe de \(40\,\%\) à \(50\,\%\). Augmentation en points ? en pourcentage ? b) \(60\,\%\) des élèves sont demi-pensionnaires et, parmi eux, \(45\,\%\) sont des filles. Quelle part de l’ensemble des élèves représentent les filles demi-pensionnaires ?`,
+      corrige: String.raw`a) \(+10\) points ; en pourcentage : \(\frac{50 - 40}{40} = 0{,}25\), soit \(+25\,\%\).<br>b) Proportion de proportion : \(0{,}6 \times 0{,}45 = 0{,}27\), soit \(27\,\%\) des élèves.`,
+      retenir: "Différence de deux taux : en points. Proportion d’une sous-population : on multiplie les proportions." },
+    { titre: "Vrai–Faux justifié, série 1", genre: "Vrai–Faux", niveau: 2, source: "Format des Vrai–Faux Mayotte", enonce: String.raw`Vrai ou faux ? Justifier. a) Pour tous réels \(a\) et \(b\), si \(a^2 = b^2\) alors \(a = b\). b) La somme de deux nombres irrationnels est irrationnelle. c) Pour tous réels \(a\) et \(b\), \(|a + b| \leqslant |a| + |b|\). d) Pour tout réel \(x\), si \(x < 1\) alors \(x^2 < 1\).`,
+      corrige: String.raw`a) Faux : \(a = 1\), \(b = -1\). On a seulement \(a = b\) ou \(a = -b\).<br>b) Faux : \(\sqrt{2} + (-\sqrt{2}) = 0\), rationnel.<br>c) Vrai : les deux membres sont positifs et \((|a| + |b|)^2 - (a + b)^2 = 2(|ab| - ab) \geqslant 0\) ; comme \(t \mapsto \sqrt{t}\) est croissante, \(|a + b| \leqslant |a| + |b|\).<br>d) Faux : \(x = -2\) donne \(x^2 = 4\).`,
+      retenir: "Faux : un contre-exemple explicite. Vrai : une preuve générale." },
+    { titre: "Vrai–Faux justifié, série 2", genre: "Vrai–Faux", niveau: 3, source: "Format des Vrai–Faux Mayotte", enonce: String.raw`Vrai ou faux ? Justifier. a) Le produit de deux irrationnels est irrationnel. b) Pour tous entiers \(a, b, c, d\) avec \(b\), \(d\) et \(b + d\) non nuls, \(\frac{a + c}{b + d} = \frac{a}{b} + \frac{c}{d}\). c) Pour tout \(x \in \,]0 ; 1[\), \(\sqrt{x} > x\). d) Pour tout entier \(n\), si \(n^2\) est multiple de \(3\), alors \(n\) est multiple de \(3\).`,
+      corrige: String.raw`a) Faux : \(\sqrt{2} \times \sqrt{2} = 2\).<br>b) Faux : \(a = b = c = d = 1\) donne \(1\) d’un côté, \(2\) de l’autre.<br>c) Vrai : \(\sqrt{x} - x = \sqrt{x}(1 - \sqrt{x})\), produit de deux facteurs strictement positifs car \(0 < \sqrt{x} < 1\).<br>d) Vrai, par contraposée. Si \(n = 3k + 1\), \(n^2 = 3(3k^2 + 2k) + 1\) ; si \(n = 3k + 2\), \(n^2 = 3(3k^2 + 4k + 1) + 1\). Dans les deux cas \(n^2\) n’est pas multiple de \(3\).`,
+      retenir: "Pour « n² multiple de 3 ⇒ n multiple de 3 » : contraposée et restes modulo 3, comme pour la parité." },
+    { titre: "Pythagore, réciproque et contraposée", genre: "Regard de prof", niveau: 2, source: "", enonce: String.raw`Un élève de Quatrième écrit : « D’après le théorème de Pythagore, comme \(5^2 + 12^2 = 13^2\), le triangle est rectangle. » a) Énoncer le théorème de Pythagore sous forme d’implication, puis sa réciproque et sa contraposée. b) Quelle propriété fallait-il citer ? c) Le triangle de côtés \(6\), \(8\) et \(11\) est-il rectangle ? Quelle propriété utiliser ?`,
+      corrige: String.raw`a) Théorème : si \(ABC\) est rectangle en \(C\), alors \(AB^2 = AC^2 + BC^2\). Réciproque : si \(AB^2 = AC^2 + BC^2\), alors \(ABC\) est rectangle en \(C\) (vraie aussi, c’est un autre théorème). Contraposée : si \(AB^2 \neq AC^2 + BC^2\), alors \(ABC\) n’est pas rectangle en \(C\).<br>b) La réciproque : on part de l’égalité pour conclure à l’angle droit.<br>c) Le plus grand côté est \(11\) : \(11^2 = 121\) et \(6^2 + 8^2 = 100\). Par la contraposée du théorème, le triangle n’est pas rectangle (seul l’angle opposé au plus grand côté pourrait être droit).`,
+      retenir: "Prouver un angle droit : réciproque. Prouver qu’il n’y en a pas : contraposée. C’est la logique vue en Seconde." },
+    { titre: "Fonction croissante : définir et nier", genre: "Logique", niveau: 3, source: "", enonce: String.raw`a) Écrire avec des quantificateurs « \(f\) est croissante sur \(I\) ». b) Écrire sa négation. c) Montrer que \(x \mapsto x^2\) n’est pas croissante sur \(\mathbb{R}\). Est-elle décroissante sur \(\mathbb{R}\) ?`,
+      corrige: String.raw`a) \(\forall a \in I,\ \forall b \in I,\ a \leqslant b \Rightarrow f(a) \leqslant f(b)\).<br>b) \(\exists a \in I,\ \exists b \in I,\ a \leqslant b\) et \(f(a) > f(b)\).<br>c) \(a = -2 \leqslant b = 1\) et \(f(-2) = 4 > 1 = f(1)\). Elle n’est pas non plus décroissante : \(0 \leqslant 1\) et \(f(0) = 0 < 1 = f(1)\).<br>« Non croissante » ne veut donc pas dire « décroissante ».`,
+      retenir: "La négation d’un « pour tout … implique … » se prouve avec un couple (a, b) explicite." },
+    { titre: "Qui a cassé la vitre ?", genre: "Situation concrète", niveau: 1, source: "", enonce: String.raw`Un seul élève parmi Anli, Bacar et Chamsia a cassé une vitre. Anli : « C’est Bacar. » Bacar : « Ce n’est pas moi. » Chamsia : « Ce n’est pas moi. » On sait qu’un seul des trois dit la vérité. Qui a cassé la vitre ?`,
+      corrige: String.raw`Disjonction de cas sur le coupable.<br>Si c’est Anli : Bacar et Chamsia disent vrai (deux vérités). Impossible.<br>Si c’est Bacar : Anli et Chamsia disent vrai. Impossible.<br>Si c’est Chamsia : Anli ment, Bacar dit vrai, Chamsia ment : une seule vérité. C’est Chamsia.`,
+      retenir: "Quand les cas sont en nombre fini, on les teste tous, sans en oublier." },
+    { titre: "Intervalles : et, ou, sauf", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Soient \(A = [-2 ; 3[\) et \(B = \,]1 ; 5]\). Déterminer \(A \cap B\), \(A \cup B\) et l’ensemble des réels de \(A\) qui ne sont pas dans \(B\). Relier chaque opération à un mot logique.`,
+      corrige: String.raw`\(A \cap B = \,]1 ; 3[\) (« \(x \in A\) <b>et</b> \(x \in B\) »).<br>\(A \cup B = [-2 ; 5]\) (« \(x \in A\) <b>ou</b> \(x \in B\) »).<br>\(A \setminus B = [-2 ; 1]\) (« \(x \in A\) <b>et non</b> \(x \in B\) ») : \(1\) est dans \(A\) et pas dans \(B\) car \(B\) est ouvert en \(1\).`,
+      retenir: "∩ ↔ et ; ∪ ↔ ou ; « privé de » ↔ et non. Soigner les crochets aux bornes." },
+    { titre: "Élever au carré n’est pas une équivalence", genre: "Erreur d’élève", niveau: 2, source: "", enonce: String.raw`Un élève résout \(\sqrt{x + 2} = x\) : « J’élève au carré : \(x + 2 = x^2\), donc \(x^2 - x - 2 = 0\), \((x - 2)(x + 1) = 0\), \(S = \{-1 ; 2\}\). » Trouver l’erreur et corriger.`,
+      corrige: String.raw`Élever au carré donne seulement une implication : \(\sqrt{x + 2} = x \Rightarrow x + 2 = x^2\). Il faut vérifier les candidats. \(x = 2\) : \(\sqrt{4} = 2\), convient. \(x = -1\) : \(\sqrt{1} = 1 \neq -1\), ne convient pas. \(S = \{2\}\).<br>Version par équivalence : \(\sqrt{x + 2} = x \iff (x \geqslant 0\) et \(x + 2 = x^2)\).`,
+      retenir: "a = b ⇒ a² = b², mais pas l’inverse : vérifier les solutions, ou imposer le signe." },
+    { titre: "Ordres de grandeur", genre: "Calcul", niveau: 1, source: "", enonce: String.raw`a) Un disque de \(2\) To (\(2 \times 10^{12}\) octets) peut-il stocker un million de photos de \(4 \times 10^{6}\) octets ? b) La lumière parcourt \(3 \times 10^{8}\) m/s et la distance Terre–Soleil vaut environ \(1{,}5 \times 10^{11}\) m. Combien de temps met la lumière du Soleil pour nous arriver ?`,
+      corrige: String.raw`a) \(\frac{2 \times 10^{12}}{4 \times 10^{6}} = 0{,}5 \times 10^{6} = 5 \times 10^{5}\) photos : seulement un demi-million. Non.<br>b) \(\frac{1{,}5 \times 10^{11}}{3 \times 10^{8}} = 0{,}5 \times 10^{3} = 500\) s, soit \(8\) min \(20\) s.`,
+      retenir: "Diviser les mantisses, soustraire les exposants, puis remettre en écriture scientifique." },
+    { titre: "Une somme de carrés nulle", genre: "Preuve", niveau: 2, source: "", enonce: String.raw`Démontrer que pour tous réels \(a\) et \(b\) : \(a^2 + b^2 = 0 \iff a = b = 0\). Application : résoudre \((x - 1)^2 + (y + 2)^2 = 0\).`,
+      corrige: String.raw`(⇐) Si \(a = b = 0\), alors \(a^2 + b^2 = 0\).<br>(⇒) Si \(a^2 + b^2 = 0\) : \(0 \leqslant a^2 = -b^2 \leqslant 0\), donc \(a^2 = 0\) et \(a = 0\) ; de même \(b = 0\).<br>Application : \(x = 1\) et \(y = -2\), un seul couple solution.`,
+      retenir: "Une équivalence se prouve dans les deux sens, en le disant." },
+    { titre: "Entiers consécutifs", genre: "Preuve", niveau: 1, source: "", enonce: String.raw`a) Démontrer que la somme de trois entiers consécutifs est divisible par \(3\). b) Démontrer que la somme de quatre entiers consécutifs n’est jamais divisible par \(4\).`,
+      corrige: String.raw`a) \((n - 1) + n + (n + 1) = 3n\).<br>b) \(n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 4(n + 1) + 2\) : le reste dans la division par \(4\) est \(2\), jamais \(0\).`,
+      retenir: "Bien choisir l’inconnue (le milieu) simplifie le calcul." },
+    { titre: "Inéquation avec un quotient", genre: "Calcul", niveau: 2, source: "", enonce: String.raw`Résoudre \(\frac{2x - 1}{x + 3} \leqslant 1\). Pourquoi ne peut-on pas « multiplier par \(x + 3\) » directement ?`,
+      corrige: String.raw`Pour \(x \neq -3\) : \(\frac{2x - 1}{x + 3} - 1 = \frac{2x - 1 - x - 3}{x + 3} = \frac{x - 4}{x + 3} \leqslant 0\).<br>Tableau de signes : \(x - 4\) s’annule en \(4\), \(x + 3\) en \(-3\) (valeur interdite). Le quotient est négatif ou nul pour \(-3 < x \leqslant 4\). \(S = \,]-3 ; 4]\).<br>Le signe de \(x + 3\) dépend de \(x\) : multiplier par lui changerait le sens de l’inégalité pour \(x < -3\).`,
+      retenir: "Inéquation avec quotient : tout passer d’un côté, réduire, tableau de signes, valeurs interdites exclues." },
+    { titre: "Une racine sous une droite", genre: "Preuve", niveau: 2, source: "", enonce: String.raw`Démontrer que pour tout \(x \geqslant 0\), \(\sqrt{1 + x} \leqslant 1 + \frac{x}{2}\). En déduire une valeur approchée par excès de \(\sqrt{1{,}02}\) et l’erreur commise.`,
+      corrige: String.raw`Les deux membres sont positifs, donc l’inégalité équivaut à celle des carrés : \(\left(1 + \frac{x}{2}\right)^2 = 1 + x + \frac{x^2}{4} \geqslant 1 + x\). Elle est vraie.<br>Avec \(x = 0{,}02\) : \(\sqrt{1{,}02} \leqslant 1{,}01\). L’écart est petit : \(1{,}01^2 - 1{,}02 = 0{,}0001\), et \(1{,}01 - \sqrt{1{,}02} = \frac{0{,}0001}{1{,}01 + \sqrt{1{,}02}} < 0{,}0001\).`,
+      retenir: "Pour A, B ⩾ 0 : A ⩽ B ⇔ A² ⩽ B². Vérifier les signes avant de passer au carré." },
+    { titre: "Le « ou » des mathématiciens", genre: "Logique", niveau: 1, source: "", enonce: String.raw`Au restaurant scolaire, le menu dit « fromage ou dessert ». a) En mathématiques, « \(P\) ou \(Q\) » est-elle vraie quand \(P\) et \(Q\) sont toutes les deux vraies ? b) Nier « fromage ou dessert ». c) Nier « \(x \leqslant -1\) ou \(x \geqslant 3\) » et l’écrire avec un intervalle.`,
+      corrige: String.raw`a) Oui : le « ou » mathématique est inclusif. « \(ab = 0 \iff a = 0\) ou \(b = 0\) » inclut le cas \(a = b = 0\). Le menu, lui, utilise un « ou » exclusif.<br>b) Ni fromage ni dessert : non(\(P\) ou \(Q\)) ≡ (non \(P\)) et (non \(Q\)).<br>c) \(x > -1\) et \(x < 3\), soit \(x \in \,]-1 ; 3[\).`,
+      retenir: "Le « ou » mathématique est inclusif ; sa négation est un « et »." }
   ],
   qcm: [
     { q: String.raw`\(P \Rightarrow Q\) est fausse lorsque…`, choix: ["P et Q sont fausses", "P est fausse et Q est vraie", "P est vraie et Q est fausse", "P et Q sont vraies"], ok: 2, expl: "C’est le seul cas où une implication est fausse." },
@@ -746,7 +862,7 @@ const Scene = (() => {
 
 /* ============ Sigils ============ */
 function cellsOf(c, k) {
-  const L = String.fromCharCode(65 + k), out = [];
+  const L = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"[k], out = [];
   c.porte.forEach((row, r) => [...row].forEach((x, col) => { if (x === L) out.push([r, col]); }));
   return out;
 }
@@ -811,7 +927,7 @@ function renderAccueil() {
       </div>
       <p class="lead">${ch.objectif}</p>
       <div class="doorway">${gateSvg(ch)}</div>
-      <p class="${open ? "open-msg" : "muted"}">${open ? "Porte ouverte : l’étage 1 de la tour est allumé, la semaine 2 t’attend." : "Chaque exercice que tu sais refaire sans aide allume un sigil. Les onze ouvrent la porte et allument l’étage 1 de la tour."}${star ? "" : " L’étoile s’obtient avec 9/10 au QCM."}</p>
+      <p class="${open ? "open-msg" : "muted"}">${open ? "Porte ouverte : l’étage 1 de la tour est allumé, la semaine 2 t’attend." : `Chaque exercice que tu sais refaire sans aide allume un sigil. Les ${tot} ouvrent la porte et allument l’étage 1 de la tour.`}${star ? "" : " L’étoile s’obtient avec 9/10 au QCM."}</p>
       <div class="row"><button class="btn" data-go="cours">Ouvrir le cours</button><button class="btn ghost" data-go="exos">Exercices</button><button class="btn ghost" data-go="qcm">QCM</button><button class="btn ghost" data-go="vf">Vrai–Faux</button></div>
     </article>
     <article class="tablet">
@@ -821,6 +937,7 @@ function renderAccueil() {
 }
 function goExo(k) {
   show("exos");
+  if (document.getElementById("exo-" + k)?.hidden) { exoFiltre = { g: "", n: 0 }; applyFiltre(); }
   const el = document.getElementById("exo-" + k);
   if (el) el.scrollIntoView({ block: "start", behavior: reduceMotion.matches ? "auto" : "smooth" });
 }
@@ -845,15 +962,32 @@ function renderExos() {
       <div class="head"><span class="eyebrow">Semaine ${ch.n} · ${ch.exercices.length} exercices corrigés</span><h2>Exercices</h2></div>
       <p class="lead">Cherche d’abord sur papier, puis ouvre le corrigé. Coche « Je sais le refaire » seulement quand tu le refais sans aide : son sigil s’allume dans la porte du chapitre.</p>
       <p class="muted" id="exos-count">${plural(n, "sigil")} allumé${n > 1 ? "s" : ""} sur ${ch.exercices.length}</p>
+      <div class="filtres" role="group" aria-label="Filtrer par type">${["", ...new Set(ch.exercices.map(x => x.genre))].map(g => `<button class="btn ghost" type="button" data-fg="${g}">${g || "Tous"}</button>`).join("")}</div>
+      <div class="filtres" role="group" aria-label="Filtrer par niveau">${[0, 1, 2, 3].map(v => `<button class="btn ghost" type="button" data-fn="${v}">${v ? "★".repeat(v) : "Tous niveaux"}</button>`).join("")}</div>
+      <p class="muted" id="exos-vus"></p>
     </article>
     ${ch.exercices.map((x, k) => { const on = !!state.done[ch.id + "-" + k]; return `
       <article class="tablet exo${on ? " got" : ""}" id="exo-${k}">
-        <div class="exo-head"><div class="head"><span class="eyebrow">Exercice ${k + 1}${x.source ? " · " + x.source : ""}</span><h3>${x.titre}</h3></div>${sigilSvg(ch, k, on)}</div>
+        <div class="exo-head"><div class="head"><span class="eyebrow">Exercice ${k + 1} · ${x.genre} · <span class="niv" aria-label="niveau ${x.niveau} sur 3">${"★".repeat(x.niveau)}${"☆".repeat(3 - x.niveau)}</span>${x.source ? " · " + x.source : ""}</span><h3>${x.titre}</h3></div>${sigilSvg(ch, k, on)}</div>
         <p>${x.enonce}</p>
         <details class="sol"><summary>Voir le corrigé</summary><div><p>${x.corrige}</p><p class="retenir"><b>À retenir</b>${x.retenir}</p></div></details>
         <label class="done"><input type="checkbox" id="done-${ch.id}-${k}" data-k="${k}"${on ? " checked" : ""}> Je sais le refaire</label>
       </article>`; }).join("")}`;
   $("#exos").querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => toggleDone(+cb.dataset.k, cb.checked)));
+  $("#exos").querySelectorAll("[data-fg]").forEach(b => b.addEventListener("click", () => { exoFiltre.g = b.dataset.fg; applyFiltre(); }));
+  $("#exos").querySelectorAll("[data-fn]").forEach(b => b.addEventListener("click", () => { exoFiltre.n = +b.dataset.fn; applyFiltre(); }));
+  applyFiltre();
+}
+let exoFiltre = { g: "", n: 0 };
+function applyFiltre() {
+  let vus = 0;
+  ch.exercices.forEach((x, k) => {
+    const ok = (!exoFiltre.g || x.genre === exoFiltre.g) && (!exoFiltre.n || x.niveau === exoFiltre.n);
+    const el = document.getElementById("exo-" + k); if (el) el.hidden = !ok; if (ok) vus++;
+  });
+  $("#exos").querySelectorAll("[data-fg]").forEach(b => b.setAttribute("aria-pressed", b.dataset.fg === exoFiltre.g));
+  $("#exos").querySelectorAll("[data-fn]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.fn === exoFiltre.n));
+  const v = $("#exos-vus"); if (v) v.textContent = vus === ch.exercices.length ? "" : `${vus} exercice${vus > 1 ? "s" : ""} affiché${vus > 1 ? "s" : ""}`;
 }
 function toggleDone(k, on) {
   const wasOpen = isOpen(ch);
