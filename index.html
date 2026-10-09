@@ -693,7 +693,37 @@ const CHAPITRES = [{
     { q: "Une hausse de 10 % suivie d’une hausse de 10 % donne une hausse de…", choix: ["20 %", "21 %", "19 %", "10 %"], ok: 1, expl: String.raw`\(1{,}1^2 = 1{,}21\).` },
     { q: String.raw`Si \(-3 \leqslant x \leqslant 1\), alors \(x^2\) est dans…`, choix: [String.raw`\([1;9]\)`, String.raw`\([0;9]\)`, String.raw`\([-9;1]\)`, String.raw`\([0;1]\)`], ok: 1, expl: "La fonction carré n’est pas monotone sur [−3 ; 1] : le minimum 0 est atteint en x = 0, le maximum 9 en x = −3." },
     { q: String.raw`\(|x - 1| < 3\) équivaut à…`, choix: [String.raw`\(x < 4\)`, String.raw`\(-2 < x < 4\)`, String.raw`\(-4 < x < 2\)`, String.raw`\(x > -2\)`], ok: 1, expl: "x est à distance strictement moins de 3 de 1." },
-    { q: "Pour démontrer « si n² est pair, alors n est pair », le plus simple est…", choix: ["un raisonnement direct", "la contraposée", "un exemple", "la récurrence"], ok: 1, expl: "On montre « n impair ⇒ n² impair », qui se fait en une ligne." }
+    { q: "Pour démontrer « si n² est pair, alors n est pair », le plus simple est…", choix: ["un raisonnement direct", "la contraposée", "un exemple", "la récurrence"], ok: 1, expl: "On montre « n impair ⇒ n² impair », qui se fait en une ligne." },
+    { q: "La réciproque de « si un quadrilatère est un carré, alors c’est un losange » est…", choix: ["si un quadrilatère n’est pas un losange, alors ce n’est pas un carré", "si un quadrilatère est un losange, alors c’est un carré", "si un quadrilatère n’est pas un carré, alors ce n’est pas un losange", "un quadrilatère est un carré si et seulement si c’est un losange"], ok: 1, expl: "La réciproque de P ⇒ Q est Q ⇒ P. Ici elle est fausse : un losange sans angle droit n’est pas un carré. La première proposition est la contraposée." },
+    { q: String.raw`Si \(P\) est fausse, alors l’implication \(P \Rightarrow Q\) est…`, choix: ["toujours vraie", "toujours fausse", "vraie si et seulement si Q est vraie", "ni vraie ni fausse"], ok: 0, expl: "Une implication n’est fausse que si P est vraie et Q fausse. Avec P fausse, elle est vraie quelle que soit Q." },
+    { q: "La négation de « il existe un élève qui a réussi toutes les épreuves » est…", choix: ["il existe un élève qui a raté toutes les épreuves", "tout élève a raté au moins une épreuve", "tout élève a raté toutes les épreuves", "il existe un élève qui a raté au moins une épreuve"], ok: 1, expl: "« Il existe » devient « pour tout », et « toutes les épreuves réussies » devient « au moins une épreuve ratée »." },
+    { q: String.raw`La négation de « \(x \geqslant 2\) et \(y < 1\) » est…`, choix: [String.raw`\(x < 2\) et \(y \geqslant 1\)`, String.raw`\(x < 2\) ou \(y \geqslant 1\)`, String.raw`\(x \leqslant 2\) ou \(y > 1\)`, String.raw`\(x > 2\) et \(y \geqslant 1\)`], ok: 1, expl: "non(A et B) ≡ (non A) ou (non B), puis on nie chaque inégalité : ⩾ devient <, < devient ⩾." },
+    { q: String.raw`La proposition « \(\exists x \in \mathbb{R},\ \forall y \in \mathbb{R},\ x + y = 0\) » est…`, choix: [String.raw`vraie, avec \(x = 0\)`, String.raw`vraie, avec \(x = -y\)`, "fausse", "ni vraie ni fausse"], ok: 2, expl: String.raw`Le même \(x\) devrait convenir pour tous les \(y\) : \(y = 0\) impose \(x = 0\), \(y = 1\) impose \(x = -1\). Contradiction. « \(x = -y\) » ferait dépendre \(x\) de \(y\), ce que l’ordre ∃ puis ∀ interdit.` },
+    { q: String.raw`Pour démontrer « \(\exists n \in \mathbb{N},\ n^2 > 100\,n\) », il suffit…`, choix: [String.raw`de raisonner par récurrence sur \(n\)`, String.raw`d’exhiber un entier qui convient, par exemple \(n = 101\)`, String.raw`de montrer que \(n^2 > 100\,n\) pour tout \(n\)`, "de raisonner par l’absurde obligatoirement"], ok: 1, expl: String.raw`Un « il existe » se prouve par un exemple : \(101^2 = 101 \times 101 > 100 \times 101\).` },
+    { q: String.raw`Parmi ces conditions, laquelle est <b>nécessaire</b> pour qu’un entier \(n\) soit divisible par \(4\) ?`, choix: [String.raw`\(n\) est divisible par \(8\)`, String.raw`\(n\) est pair`, String.raw`\(n\) est impair`, String.raw`\(n\) est divisible par \(3\)`], ok: 1, expl: String.raw`Nécessaire : « \(4 \mid n \Rightarrow\) condition ». Si \(n = 4k\), alors \(n = 2(2k)\) est pair. « Divisible par 8 » est suffisante, pas nécessaire (\(n = 4\)).` },
+    { q: "Un raisonnement par l’absurde consiste à…", choix: ["vérifier la propriété sur plusieurs exemples", "supposer la négation de ce que l’on veut démontrer et aboutir à une contradiction", "démontrer la réciproque", "trouver un contre-exemple à la propriété"], ok: 1, expl: "On suppose le contraire de la conclusion, on déduit, et on tombe sur une proposition fausse : la supposition était donc fausse." },
+    { q: String.raw`La contraposée de « si \(n\) est multiple de \(4\), alors \(n\) est pair » est…`, choix: [String.raw`si \(n\) est pair, alors \(n\) est multiple de \(4\)`, String.raw`si \(n\) est impair, alors \(n\) n’est pas multiple de \(4\)`, String.raw`si \(n\) n’est pas multiple de \(4\), alors \(n\) est impair`, String.raw`\(n\) est multiple de \(4\) et impair`], ok: 1, expl: "Contraposée de P ⇒ Q : non Q ⇒ non P. « Non pair » signifie « impair »." },
+    { q: "Une seule de ces implications est vraie pour tout réel x. Laquelle ?", choix: [String.raw`\(x^2 = 9 \Rightarrow x = 3\)`, String.raw`\(x > -1 \Rightarrow x^2 > 1\)`, String.raw`\(x < -3 \Rightarrow x^2 > 9\)`, String.raw`\(x^2 > x \Rightarrow x > 1\)`], ok: 2, expl: String.raw`Si \(x < -3\), alors \(-x > 3 > 0\) et \(x^2 = (-x)^2 > 9\). Contre-exemples pour les autres : \(x = -3\), \(x = 0\), \(x = -1\).` },
+    { q: String.raw`\((-2)^3 \times (-2)^{-5}\) vaut…`, choix: [String.raw`\(-\dfrac{1}{4}\)`, String.raw`\(\dfrac{1}{4}\)`, String.raw`\(4\)`, String.raw`\(-4\)`], ok: 1, expl: String.raw`\((-2)^{3 - 5} = (-2)^{-2} = \frac{1}{(-2)^2} = \frac{1}{4}\) : un exposant pair rend le résultat positif.` },
+    { q: String.raw`\((3 \times 10^{4}) \times (5 \times 10^{-7})\) s’écrit en notation scientifique…`, choix: [String.raw`\(1{,}5 \times 10^{-2}\)`, String.raw`\(15 \times 10^{-3}\)`, String.raw`\(1{,}5 \times 10^{-3}\)`, String.raw`\(1{,}5 \times 10^{-28}\)`], ok: 0, expl: String.raw`\(15 \times 10^{-3} = 1{,}5 \times 10^{1} \times 10^{-3} = 1{,}5 \times 10^{-2}\). L’écriture \(15 \times 10^{-3}\) est juste mais pas scientifique (mantisse entre 1 et 10).` },
+    { q: String.raw`\(\sqrt{0{,}09}\) vaut…`, choix: [String.raw`\(0{,}03\)`, String.raw`\(0{,}3\)`, String.raw`\(0{,}9\)`, String.raw`\(0{,}0081\)`], ok: 1, expl: String.raw`\(0{,}3^2 = 0{,}09\) et \(0{,}3 \geqslant 0\). Piège : \(0{,}03^2 = 0{,}0009\).` },
+    { q: String.raw`\((\sqrt{5} - \sqrt{3})(\sqrt{5} + \sqrt{3})\) vaut…`, choix: [String.raw`\(2\)`, String.raw`\(\sqrt{2}\)`, String.raw`\(8\)`, String.raw`\(2\sqrt{15}\)`], ok: 0, expl: String.raw`\((a - b)(a + b) = a^2 - b^2 = 5 - 3 = 2\).` },
+    { q: String.raw`\(2^{100} + 2^{100}\) vaut…`, choix: [String.raw`\(2^{200}\)`, String.raw`\(4^{100}\)`, String.raw`\(2^{101}\)`, String.raw`\(4^{200}\)`], ok: 2, expl: String.raw`\(2^{100} + 2^{100} = 2 \times 2^{100} = 2^{101}\). Ajouter deux puissances égales ne double pas l’exposant.` },
+    { q: String.raw`\(\dfrac{2/3}{4/9}\) vaut…`, choix: [String.raw`\(\dfrac{8}{27}\)`, String.raw`\(\dfrac{3}{2}\)`, String.raw`\(\dfrac{2}{3}\)`, String.raw`\(\dfrac{27}{8}\)`], ok: 1, expl: String.raw`Diviser, c’est multiplier par l’inverse : \(\frac{2}{3} \times \frac{9}{4} = \frac{18}{12} = \frac{3}{2}\).` },
+    { q: String.raw`\((2x - 3)^2\) est égal à…`, choix: [String.raw`\(4x^2 - 9\)`, String.raw`\(4x^2 - 6x + 9\)`, String.raw`\(4x^2 - 12x + 9\)`, String.raw`\(2x^2 - 12x + 9\)`], ok: 2, expl: String.raw`\((a - b)^2 = a^2 - 2ab + b^2\) avec \(a = 2x\), \(b = 3\) : \(4x^2 - 12x + 9\).` },
+    { q: String.raw`Si \(x \geqslant 3\), alors \(\frac{1}{x}\) appartient à…`, choix: [String.raw`\([3 ; +\infty[\)`, String.raw`\(]0 ; \dfrac{1}{3}]\)`, String.raw`\([\dfrac{1}{3} ; +\infty[\)`, String.raw`\(]-\infty ; \dfrac{1}{3}]\)`], ok: 1, expl: String.raw`La fonction inverse est décroissante et strictement positive sur \(]0 ; +\infty[\) : \(0 < \frac{1}{x} \leqslant \frac{1}{3}\).` },
+    { q: String.raw`Si \(-2 \leqslant x \leqslant 5\), alors \(-x\) appartient à…`, choix: [String.raw`\([-5 ; 2]\)`, String.raw`\([-2 ; 5]\)`, String.raw`\([-5 ; -2]\)`, String.raw`\([2 ; 5]\)`], ok: 0, expl: String.raw`Multiplier par \(-1\) change le sens : \(-5 \leqslant -x \leqslant 2\).` },
+    { q: String.raw`L’équation \(|x + 2| = 5\) a pour ensemble de solutions…`, choix: [String.raw`\(\{3\}\)`, String.raw`\(\{-7 ; 3\}\)`, String.raw`\(\{-3 ; 7\}\)`, String.raw`\(\{7\}\)`], ok: 1, expl: String.raw`\(x + 2 = 5\) ou \(x + 2 = -5\) : les réels à distance \(5\) de \(-2\).` },
+    { q: String.raw`L’inéquation \(|x| \leqslant -1\) a pour ensemble de solutions…`, choix: [String.raw`\([-1 ; 1]\)`, String.raw`\(\varnothing\)`, String.raw`\(\mathbb{R}\)`, String.raw`\(]-\infty ; -1]\)`], ok: 1, expl: "Une valeur absolue est toujours positive ou nulle : elle ne peut pas être inférieure à −1." },
+    { q: String.raw`L’ensemble des réels \(x\) tels que \(\frac{1}{x} > 2\) est…`, choix: [String.raw`\(]-\infty ; \dfrac{1}{2}[\)`, String.raw`\(]0 ; \dfrac{1}{2}[\)`, String.raw`\(]\dfrac{1}{2} ; +\infty[\)`, String.raw`\(]0 ; 2[\)`], ok: 1, expl: String.raw`Il faut \(x > 0\) (sinon \(\frac{1}{x} < 0\)). Pour \(x > 0\), on peut multiplier par \(x\) : \(1 > 2x\), soit \(x < \frac{1}{2}\).` },
+    { q: "Après une remise de 30 %, un article coûte 42 €. Son prix avant la remise était…", choix: ["54,60 €", "60 €", "54 €", "72 €"], ok: 1, expl: String.raw`Prix initial \(\times 0{,}7 = 42\), donc prix initial \(= \frac{42}{0{,}7} = 60\) €. Ajouter 30 % de 42 € est faux.` },
+    { q: "Le coefficient multiplicateur associé à une baisse de 3 % est…", choix: ["0,7", "0,97", "1,03", "−0,03"], ok: 1, expl: String.raw`\(1 - \frac{3}{100} = 0{,}97\).` },
+    { q: "« Aucun nombre premier n’est pair » est…", choix: ["vraie", "fausse, car 2 est premier et pair", "fausse, car 9 est impair et non premier", "impossible à décider"], ok: 1, expl: "Un seul contre-exemple suffit : 2. Le nombre 9 ne contredit pas la phrase." },
+    { q: "Lequel de ces nombres est irrationnel ?", choix: [String.raw`\(\sqrt{\dfrac{9}{4}}\)`, String.raw`\(0{,}333\ldots\) (période 3)`, String.raw`\(\dfrac{\sqrt{8}}{\sqrt{2}}\)`, String.raw`\(\sqrt{12}\)`], ok: 3, expl: String.raw`\(\sqrt{12} = 2\sqrt{3}\), irrationnel. Les autres valent \(\frac{3}{2}\), \(\frac{1}{3}\) et \(\sqrt{4} = 2\).` },
+    { q: String.raw`Si \(n\) est un entier impair, alors \(n^2 - 1\) est toujours…`, choix: ["impair", "multiple de 8", "multiple de 3", "premier"], ok: 1, expl: String.raw`\(n = 2k + 1\) donne \(n^2 - 1 = 4k(k + 1)\), et \(k(k + 1)\) est pair : \(n^2 - 1\) est multiple de \(8\). Pour \(n = 3\), \(n^2 - 1 = 8\) n’est pas multiple de \(3\).` },
+    { q: String.raw`Pour \(0 < x < 1\), le plus petit des nombres suivants est…`, choix: [String.raw`\(x\)`, String.raw`\(x^2\)`, String.raw`\(x^3\)`, String.raw`\(\sqrt{x}\)`], ok: 2, expl: String.raw`Multiplier par \(x \in \,]0 ; 1[\) fait diminuer : \(x^3 < x^2 < x\). Et \(\sqrt{x} > x\) sur \(]0 ; 1[\).` },
+    { q: String.raw`Entre \(\frac{3}{7}\) et \(\frac{4}{9}\), le plus grand est…`, choix: [String.raw`\(\dfrac{3}{7}\)`, String.raw`\(\dfrac{4}{9}\)`, "ils sont égaux", "on ne peut pas conclure sans calculatrice"], ok: 1, expl: String.raw`Au même dénominateur : \(\frac{27}{63} < \frac{28}{63}\). Ou : \(3 \times 9 = 27 < 28 = 4 \times 7\).` },
+    { q: String.raw`Si un réel \(a\) vérifie \(|a| < \varepsilon\) pour tout réel \(\varepsilon > 0\), alors…`, choix: [String.raw`\(a = 0\)`, String.raw`\(a > 0\)`, String.raw`\(a\) est « très petit » sans être nul`, "on ne peut rien conclure"], ok: 0, expl: String.raw`Par l’absurde : si \(a \neq 0\), le choix \(\varepsilon = |a| > 0\) donne \(|a| < |a|\), contradiction.` }
   ],
   vf: [
     { p: String.raw`La réciproque d’une implication vraie est toujours vraie.`, v: false, j: String.raw`Faux : « si \(x = 2\) alors \(x^2 = 4\) » est vraie, sa réciproque est fausse (\(x = -2\)).` },
@@ -1162,47 +1192,55 @@ function toggleDone(k, on) {
 }
 
 /* ============ QCM ============ */
-let qi = 0, qscore = 0, qanswered = false;
+let qOrder = [], qPerm = [], qi = 0, qscore = 0, qanswered = false, qLen = 10;
+function startQcm(n) {
+  qLen = n; qOrder = shuffle(ch.qcm.map((_, k) => k)).slice(0, n); qi = 0; qscore = 0; renderQcm();
+}
 function qcmHead() {
-  const best = state.qcm[ch.id];
+  const best = state.qcm[ch.id], N = ch.qcm.length;
   return `<article class="tablet">
-      <div class="head"><span class="eyebrow">Semaine ${ch.n} · ${ch.qcm.length} questions</span><h2>QCM</h2></div>
-      <p class="lead">Réponds sans le cours. Avec 9/10 ou plus, l’étoile du chapitre s’allume.</p>
-      <p class="keys">Clavier : <kbd>1</kbd> à <kbd>4</kbd> pour répondre, <kbd>Entrée</kbd> pour continuer.${best != null ? ` Meilleur score : ${best}/${ch.qcm.length}.` : ""}</p>
+      <div class="head"><span class="eyebrow">Semaine ${ch.n} · banque de ${N} questions</span><h2>QCM</h2></div>
+      <p class="lead">Réponds sans le cours. Chaque série tire ses questions au hasard dans la banque, et l’ordre des réponses change à chaque fois. Avec au moins 90 % de bonnes réponses, l’étoile du chapitre s’allume.</p>
+      <div class="row">${[10, 20, N].map(n => `<button class="btn${qLen === n ? "" : " ghost"}" type="button" data-qn="${n}">${n === N ? "Les " + N + " questions" : "Série de " + n}</button>`).join("")}</div>
+      <p class="keys">Clavier : <kbd>1</kbd> à <kbd>4</kbd> pour répondre, <kbd>Entrée</kbd> pour continuer.${best != null ? ` Meilleur score ramené sur 10 : ${best}/10.` : ""}</p>
     </article>`;
 }
+function bindQcmHead(el) { el.querySelectorAll("[data-qn]").forEach(b => b.onclick = () => startQcm(+b.dataset.qn)); }
 function renderQcm() {
-  const el = $("#qcm");
-  if (qi >= ch.qcm.length) {
-    const had = hasStar(ch);
-    state.qcm[ch.id] = Math.max(state.qcm[ch.id] || 0, qscore); save();
+  const el = $("#qcm"), T = qOrder.length;
+  if (qi >= T) {
+    const had = hasStar(ch), sur10 = Math.floor(10 * qscore / T + 1e-9), r = qscore / T;
+    state.qcm[ch.id] = Math.max(state.qcm[ch.id] || 0, sur10); save();
     renderAccueil(); typeset($("#accueil"));
     el.innerHTML = qcmHead() + `<div class="term">
       <div class="term-bar"><span>QCM · SEMAINE ${ch.n}</span><span>FIN</span></div>
       <div class="term-body">
         <p class="dim">&gt; calcul du score</p>
-        <p class="big">${qscore}/${ch.qcm.length}</p>
-        <p>${qscore >= 9 ? "Excellent : l’étoile du chapitre est allumée." : qscore >= 7 ? "Bien. Relis les explications des questions ratées, puis vise 9/10." : qscore >= 5 ? "Correct. Relis les « À retenir » des notions ratées, puis recommence." : "Reprends le cours notion par notion, puis recommence."}</p>
-        <div><button class="tbtn" id="qcm-restart" type="button">Recommencer</button><span class="cursor" aria-hidden="true"></span></div>
+        <p class="big">${qscore}/${T}</p>
+        <p>${r >= 0.9 ? "Excellent : l’étoile du chapitre est allumée." : r >= 0.7 ? "Bien. Relis les explications des questions ratées, puis vise 90 %." : r >= 0.5 ? "Correct. Relis les « À retenir » des notions ratées, puis recommence." : "Reprends le cours notion par notion, puis recommence."}</p>
+        <div><button class="tbtn" id="qcm-restart" type="button">Nouvelle série</button><span class="cursor" aria-hidden="true"></span></div>
       </div></div>`;
-    $("#qcm-restart").onclick = () => { qi = 0; qscore = 0; renderQcm(); };
-    if (!had && hasStar(ch)) toast("Étoile allumée : 9/10 au QCM.");
+    bindQcmHead(el);
+    $("#qcm-restart").onclick = () => startQcm(qLen);
+    if (!had && hasStar(ch)) toast("Étoile allumée : 90 % au QCM.");
     return;
   }
-  const q = ch.qcm[qi]; qanswered = false;
-  el.innerHTML = qcmHead() + `<div class="term" role="group" aria-label="Question ${qi + 1} sur ${ch.qcm.length}">
-      <div class="term-bar"><span>QCM · SEMAINE ${ch.n}</span><span>Q ${String(qi + 1).padStart(2, "0")}/${ch.qcm.length} · SCORE <b>${qscore}</b></span></div>
+  const q = ch.qcm[qOrder[qi]]; qanswered = false;
+  qPerm = shuffle(q.choix.map((_, k) => k));
+  el.innerHTML = qcmHead() + `<div class="term" role="group" aria-label="Question ${qi + 1} sur ${T}">
+      <div class="term-bar"><span>QCM · SEMAINE ${ch.n}</span><span>Q ${String(qi + 1).padStart(2, "0")}/${T} · SCORE <b>${qscore}</b></span></div>
       <div class="term-body">
         <p class="dim">&gt; question ${qi + 1}</p>
         <p class="qtext">${q.q}</p>
-        <div class="opts">${q.choix.map((c, k) => `<button class="opt" type="button" data-k="${k}"><span class="k">[${k + 1}]</span><span>${c}</span></button>`).join("")}</div>
+        <div class="opts">${qPerm.map((c, k) => `<button class="opt" type="button" data-k="${k}" data-c="${c}"><span class="k">[${k + 1}]</span><span>${q.choix[c]}</span></button>`).join("")}</div>
         <p class="out" id="qcm-expl" hidden></p>
-        <div><button class="tbtn" id="qcm-next" type="button" hidden>${qi + 1 < ch.qcm.length ? "Suite" : "Voir le score"}</button><span class="cursor" aria-hidden="true"></span></div>
+        <div><button class="tbtn" id="qcm-next" type="button" hidden>${qi + 1 < T ? "Suite" : "Voir le score"}</button><span class="cursor" aria-hidden="true"></span></div>
       </div></div>`;
+  bindQcmHead(el);
   el.querySelectorAll(".opt").forEach(b => b.onclick = () => {
     if (qanswered) return; qanswered = true;
-    const k = +b.dataset.k, ok = k === q.ok; if (ok) qscore++;
-    el.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (+x.dataset.k === q.ok) x.classList.add("good"); });
+    const ok = +b.dataset.c === q.ok; if (ok) qscore++;
+    el.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (+x.dataset.c === q.ok) x.classList.add("good"); });
     if (!ok) b.classList.add("bad");
     const ex = $("#qcm-expl"); ex.innerHTML = (ok ? "<b>Exact.</b> " : "<b>Non.</b> ") + q.expl; ex.hidden = false; typeset(ex);
     const nx = $("#qcm-next"); nx.hidden = false; nx.focus({ preventScroll: true });
@@ -1328,12 +1366,12 @@ document.addEventListener("keydown", e => {
   if (onControl && (k === "enter" || k === " ")) return;
   const press = sel => { const b = $(sel); if (b && !b.disabled && !b.hidden) { e.preventDefault(); b.click(); } };
   const tab = TABS.find(t => !$("#" + t).hidden);
-  if (tab === "qcm") { if (/^[1-4]$/.test(k)) press(`#qcm .opt[data-k="${+k - 1}"]`); else if (k === "enter") press(qi >= ch.qcm.length ? "#qcm-restart" : "#qcm-next"); }
+  if (tab === "qcm") { if (/^[1-4]$/.test(k)) press(`#qcm .opt[data-k="${+k - 1}"]`); else if (k === "enter") press(qi >= qOrder.length ? "#qcm-restart" : "#qcm-next"); }
   if (tab === "vf") { if (k === "v" || k === "f") press(`#vf .vfb[data-v="${k === "v" ? 1 : 0}"]`); else if (k === "enter") press(vfPos >= vfOrder.length ? "#vf-again" : "#vf-next"); }
 });
 
 /* ============ Démarrage ============ */
-renderReadouts(); renderAccueil(); renderCours(); renderExos(); renderFiche(); renderQcm(); startVf(); paintThemer();
+renderReadouts(); renderAccueil(); renderCours(); renderExos(); renderFiche(); startQcm(10); startVf(); paintThemer();
 let first = "accueil";
 const h = (location.hash || "").slice(1);
 if (TABS.includes(h)) first = h; else { try { const t = localStorage.getItem(KEY + "-tab"); if (TABS.includes(t)) first = t; } catch (e) {} }
